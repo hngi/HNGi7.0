@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*  ============== General configuration */
+
+:root{
+	--primary-font: 'Open Sans', sans-serif;
+}
+
+/* ======================== Header ====================================== */
+
+.menus {
+	float: right;
+	padding-top: 20px;
+}
+
+a {
+	color: #474747;
+	font-family: var(--primary-font);
+	text-decoration: none;
+	padding-left: 50px;
+
+
+}
+
+.active {
+	background: #00AEFF;
+	border-radius: 4px;
+	padding: 8px 10px;
+	margin-left: 40px;
+	color: white
+}
+
+header {
+	background: #D1F0F6;
+	height: 400px;
+	padding-top: 20px;
+	position: relative;
+}
+
+.brand {
+	margin-left: 10%;
+}
+
+.brand img {
+	margin-top: 2%
+}
+
+.menus {
+	margin-right: 10%;
+
+}
+
+h1 {
+	color: #084482;
+	font-family: var(--primary-font);
+	text-align: center
+}
+
+p {
+	font-family: var(--primary-font);
+
+	text-align: center;
+	color: #474747;
+	margin-top: 25px;
+}
+
+.hero-text {
+	position: absolute;
+	top: 200px;
+	left: 450px;
+	text-align: center
+}
+
+/* ========================== End of header ==================================== */
