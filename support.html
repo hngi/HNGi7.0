@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>SUPPORT AND SPONSOR PAGE</title>
+ <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+ 
+</head>
+<style>
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+ font-family: "Open Sans", sans-serif;
+ box-sizing: border-box;
+}
+
+.text-light {
+  color: #ffffff;
+}
+
+.support {
+  background-color: #3c6b9c;
+  padding: 2.5rem 0;
+  width: 100%;
+  text-align: center;
+}
+.support__header {
+  width: 100%;
+  text-align: center;
+  font-size: 1.3rem;
+}
+.support__items {
+  display: inline-flex;
+  align-items: center;
+  width: 99%;
+  margin: 0;
+  padding: 3rem 0;
+}
+.support__items .support__item {
+  flex-basis: 50%;
+}
+.support__items .support__item-icon {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 67px;
+  height: 67px;
+  background-color: white;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+.support__items .support__item-icon .fas {
+  font-size: 1.8rem;
+  color: #00aeff;
+  position: absolute;
+  z-index: 2;
+}
+.support__items .support__item-icon .donate {
+  top: 19px;
+  left: 19px;
+}
+.support__items .support__item-icon .help {
+  top: 19px;
+  left: 16px;
+}
+.support__items .support__item-icon .card {
+  top: 19px;
+  left: 18px;
+}
+.support__items .support__item-body {
+  margin-top: 2rem;
+}
+.support__items .support__item-text {
+  font-size: 1rem;
+}
+.support__items .support__item-link {
+  display: block;
+  margin-top: 0.6rem;
+}
+.support__items .support__item-link a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #8ddbff;
+}
+.support__items .support__item-link a:hover {
+  color: #c0ebff;
+}
+.support__items .support__item-link .fa {
+  color: #8ddbff;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 750px) {
+  .support__items {
+    flex-direction: column;
+  }
+
+  .support__item:not(:first-child) {
+    margin-top: 4rem;
+  }
+}
+
+ /* SPONSOR STYLING */
+ .sponsors {
+  background-color: #FFFFFF;
+  padding-top: 57px;
+  padding-bottom: 118.76px;
+ }
+
+ .sponsors__header {
+  color: #3C6B9C;
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 34px;
+  font-style: normal;
+  text-align: center;
+  font-family: "Open Sans";
+ }
+
+ .sponsors__images {
+  padding-left: 15.83%;
+  padding-right: 15.83%;
+  margin-top: 94px;
+  display: flex;
+  justify-content: space-between
+ }
+
+ .hng_logo {
+  /* width: 167.12px; */
+  height: 52.89px;
+ }
+
+ .akwa_logo {
+  height: 55px;
+  width: 55px;
+ }
+
+ .verifi_logo {
+  width: 115.4px;
+  height: 52.89px;
+ }
+
+ .sponsors__images2 {
+  padding-left: 23.68%;
+  padding-right: 23.68%;
+  margin-top: 66px;
+  display: flex;
+  justify-content: space-between
+ }
+
+ .figma_logo {
+  line-height: 26.84px;
+  font-size: 30px;
+ }
+
+ .bluechip_logo {
+  /* height: 55px; */
+  width: 153.8px;
+ }
+
+ .flutter_logo {
+  width: 298.16px;
+ }
+
+
+ .sponsors_button {
+  text-align: center;
+  margin-top: 79px;
+ }
+
+ .sponsors_button button {
+  background-color: #00AEFF;
+  width: 181.47px;
+  height: 40.24px;
+  border-radius: 4px;
+  border: none;
+  color: #FFFFFF;
+  line-height: 19px;
+  font-size: 14px;
+  font-weight: bold;
+
+ }
+
+ .sponsors_button button:hover {
+  background: #51add8;
+  }
+
+
+
+ @media screen and (max-width: 1200px) {
+  .sponsors__images2 {
+   padding-left: 19%;
+   padding-right: 19%
+  }
+ }
+
+ @media screen and (max-width: 1000px) {
+  .sponsors__images {
+   padding-left: 12%;
+   padding-right: 12%;
+  }
+
+  .sponsors__images2 {
+   padding-left: 15%;
+   padding-right: 15%;
+  }
+ }
+
+ @media screen and (max-width: 950px) {
+  .sponsors__images {
+   padding-left: 9%;
+   padding-right: 9%;
+  }
+
+  .sponsors__images2 {
+   padding-left: 12%;
+   padding-right: 12%;
+  }
+ }
+
+ @media screen and (max-width: 800px) {
+
+  .sponsors__images {
+   flex-wrap: wrap;
+  }
+
+  .sponsors__images2 {
+   display: flex;
+   flex-wrap: wrap;
+   margin-top: 0;
+  }
+
+
+  .col-2 {
+   width: 50%;
+   text-align: center;
+   margin-bottom: 40px;
+
+  }
+
+  .col-3 {
+   width: 100%;
+   text-align: center;
+  }
+
+
+ }
+
+ @media screen and (max-width: 400px) {
+  .col-1 {
+   width: 100%;
+   text-align: center;
+   margin-bottom: 40px;
+  }
+
+ }
+
+
+ /* FOOTER STYLING */
+ .footer {
+width: 100%;
+background-color: #FAFAFA;
+padding: 30px 50px;}
+
+footer .footer-header {
+width: 100%;
+font-size: 1.4rem;
+font-weight: bold;}
+
+.hng-logo {
+color: #00AEFF;
+font-weight: 800;
+font-size: 3rem;}
+
+.footer-header p {
+padding-left: 37px;
+font-size: .6em;
+font-weight: 300;}
+
+.footer-content {
+display: flex;
+margin-top: 2rem;
+flex: 1;}
+
+.footer-content p{
+font-weight: 400;
+font-size: .9rem;}
+
+footer .footer-content-item {
+flex-basis: 50%; }
+
+.footer-content-item p{
+margin-bottom: 10px;}
+
+.footer-content-item i {
+display: inline-block;
+border: 1px solid #00AEFF;
+border-radius: 50%;
+padding: 3px 4px;
+margin-right: 5px;
+font-size: .8em;
+font-weight: lighter;}
+
+.contact p span {
+font-weight: bold;
+display: block; }
+
+.contact p{
+font-weight: 300; }
+
+
+.socialMedia i {
+border: none;
+-webkit-box-shadow: 1px 1px 1px #7e7c7c;
+box-shadow: 1px 1px 1px #7e7c7c;
+font-size: 1.2em;
+padding: 10px;
+margin-right: 25px;}
+
+.footer-footer {
+color: #00AEFF;
+opacity: .6;
+padding: 1rem 0;
+text-align: center;
+font-size: 1.1rem;}
+
+.footer a {
+color: #00AEFF;
+text-decoration: none;}
+
+.footer h3 {
+font-size: 1.7rem;
+margin-bottom: 10px;
+color: #00AEFF;}
+
+.footer a:hover {
+color #51add8;
+text-decoration: none;}
+
+@media (min-width: 450px) and (max-width: 950px) {
+
+ .footer-content {
+flex-direction: column;
+}
+
+.footer-content-item {
+ width: 250px;
+ margin: 0 auto;
+ margin-bottom: 1.5rem;
+}
+
+}
+
+@media (max-width: 499px) {
+
+ .footer-content {
+flex-direction: column;
+}
+
+.footer-content-item {
+ width: 80%;
+ margin: 0 auto;
+ margin-bottom: 1.5rem;
+}
+
+.footer-header h2 {
+ font-size: 1.3rem;
+}
+
+.footer-content-item h3 {
+ font-size: 1.2rem;
+}
+
+}
+
+</style>
+
+<body>
+
+ <!--SUPPORT SECTION-->
+ <section id="support" class="support">
+  <div class="support__header">
+   <h3 class="support__header-text text-light">Support the Movement</h3>
+  </div>
+  <div class="support__items">
+   <div class="support__item">
+    <span class="support__item-icon"> <i class="fas fa-donate donate"></i> </span>
+    <div class="support__item-body">
+     <h4 class="support__item-text text-light">
+      Donate to the Program
+     </h4>
+     <span class="support__item-link">
+      <i class="fa fa-chevron-circle-right"></i>
+      <a href="#" class="text-light">Get Started</a>
+     </span>
+    </div>
+   </div>
+   <div class="support__item">
+    <span class="support__item-icon">
+     <i class="fas fa-hands-helping help"></i>
+    </span>
+    <div class="support__item-body">
+     <h4 class="support__item-text text-light">
+      Become a Partner
+     </h4>
+     <span class="support__item-link">
+      <i class="fa fa-chevron-circle-right"></i>
+      <a href="#" class="text-light">Get Started</a>
+     </span>
+    </div>
+   </div>
+   <div class="support__item">
+    <span class="support__item-icon">
+     <i class="fas fa-credit-card card"></i>
+    </span>
+    <div class="support__item-body">
+     <h4 class="support__item-text text-light">
+      Sponsor via software or tool
+     </h4>
+     <span class="support__item-link">
+      <i class="fa fa-chevron-circle-right"></i>
+      <a href="#" class="text-light">Get Started</a>
+     </span>
+    </div>
+   </div>
+  </div>
+ </section>
+ <section class="sponsors">
+   <h3 class="sponsors__header">HNG 6.0 Internship Sponsors</h3>
+   <div class="sponsors_images_container">
+    <div class="sponsors__images">
+     <div class="col-2 col-1">
+      <img src="images/hotels.svg" class="hng_logo">
+     </div>
+     <div class="col-2 col-1">
+      <img src="images/akwa-ibom.png" class="akwa_logo">
+     </div>
+     <div class="col-2 col-1">
+      <img src="images/imo.png" class="akwa_logo">
+     </div>
+     <div class="col-2 col-1">
+      <img src="images/verifi.png" class="verifi_logo">
+     </div>
+ 
+    </div>
+    <div class="sponsors__images2">
+     <div class="col-2 col-1">
+      <h4 class="figma_logo">Figma</h4>
+     </div>
+     <div class="col-2 col-1">
+      <img src="images/bluechip.png" class="bluechip_logo">
+     </div>
+     <div class="col-3">
+      <img src="images/flutter.png" class="flutter_logo">
+     </div>
+ 
+    </div>
+   </div>
+ 
+   <div class="sponsors_button">
+    <button>
+     Become a Sponsor
+    </button>
+   </div>
+  </section>
+
+ <footer class="footer">
+  <section class="footer-header col-sm-12">
+   <h2><span class="hng-logo">[]</span> HNG Internship</h2>
+   <p>Changing the world, one intern at a time</p>
+  </section>
+  <section class="footer-content col-sm-12">
+   <div class="footer-content-item col-sm-3">
+    <h3>Quick Links</h3>
+    <p><a href="#"><i class="fa fa-chevron-right"></i>Join HNG</a></p>
+    <p><a href="#"><i class="fa fa-chevron-right"></i>ABout HNG</a></p>
+    <p><a href="#"><i class="fa fa-chevron-right"></i>Become a partner</a></p>
+    <p><a href="#"><i class="fa fa-chevron-right"></i>Signup as a mentor</a></p>
+   </div>
+   <div class="footer-content-item col-sm-3 contact">
+    <h3><a href="#">Contact Us</a></h3>
+    <p><span>Phone: </span> +234 (0) 8123456789</p>
+    <p><span>Email: </span> interns@hng.tech</p>
+   </div>
+   <div class="footer-content-item col-sm-3 address">
+    <h3>Office Address</h3>
+    <p>Birrel Avenue, <br> Sabo, Yaba,<br> Lagos State</p>
+   </div>
+   <div class="footer-content-item col-sm-3 socialMedia">
+    <h3>Follow Us</h3>
+    <p><a href="#"><i class="fa fa-twitter"></i></a>
+     <a href="#"><i class="fa fa-facebook"></i></a>
+     <a href="#"><i class="fa fa-globe"></i></p></a>
+   </div>
+  </section>
+  <section class="footer-footer text-center">
+  <small>&copy; 2019, HNG Internship. All rights reserved</small>
+  </section>
+ </footer>
+</body>
+
+</html>
