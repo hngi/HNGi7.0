@@ -10,6 +10,45 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <style>
+         .para-text{
+            font-size: 20px;
+            text-align: justify;
+         }
+         .onboard-container > h3, .scalable-container > h3{
+            color: #084482;
+         }
+         
+         @media (min-width: 768px){
+            .para-text{
+            font-size: 18px;
+            }
+            .first-container, .second-container{
+               display:flex;
+               flex-wrap: no-wrap;
+            }
+            .first-container,.onboard-container,.second-container, .scalable-container{
+               width:90%;
+               height:50%;
+            }
+            .onboard-container,.scalable-container{
+               margin-left: 4%;
+            }
+            .onboard-container > h3, .scalable-container > h3{
+            font-size: 25px;
+         }
+         }
+         @media (min-width: 992px){
+            .para-text{
+            font-size: 19px;
+            padding: 20px 0px 33px 0px;
+            }
+            .onboard-container,.scalable-container{
+               margin: -6px 0px 0px 7%;
+            }
+            .laptop-image{
+               width:600px;
+            }
+         }
 
       </style>
    </head>
@@ -17,13 +56,13 @@
       <!--[if lt IE 7]>
          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
-      <div>
+      <div class="first-container container mt-4">
          <div class="onboard-image">
-            <img src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1570554236/laptop.png" alt="people pressing laptop">
+            <img class="laptop-image img-fluid" src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1570554236/laptop.png" alt="people pressing laptop">
          </div>
          <div class="onboard-container">
             <h3>Onboard and Connect with Teammates</h3>
-            <p>
+            <p class="para-text">
                The HNG internship is a 3-month remote
                internship designed to find and develop 
                the most talented software developers.
@@ -32,18 +71,18 @@
                the internship using their laptop. Each week, 
                we give tasks.
             </p>
-            <div class="get-started btn">
+            <div class="get-started">
                <a class="btn btn-primary" href="#">Get Started</a>
             </div>
          </div>
       </div>
-      <div>
+      <div class="second-container container mt-4">
          <div class="product-image">
-            <img src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1570554238/new_product.png" alt="laptop beside a coffee">
+            <img class="laptop-image img-fluid" src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1570554238/new_product.png" alt="laptop beside a coffee">
          </div>
          <div class="scalable-container">
             <h3>Build Scalable Products & Grow</h3>
-            <p>The HNG internship is a 3-month remote
+            <p class="para-text">The HNG internship is a 3-month remote
                internship designed to find and develop 
                the most talented software developers.
                Everyone is welcome to participate (there 
@@ -51,7 +90,7 @@
                the internship using their laptop. Each week, 
                we give tasks.
             </p>
-            <div class="get-started btn">
+            <div class="get-started">
                <a class="btn btn-primary" href="#">Get Started</a>
             </div>
          </div>
