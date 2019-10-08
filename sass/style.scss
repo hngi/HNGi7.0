@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.text-light {
+ color: #ffffff;
+}
+
+.support {
+ background-color: #3C6B9C;
+ padding: 4rem;
+ width: 100%;
+ font-family: 'Open Sans', sans-serif;
+ &__header {
+   width: 100%;
+   text-align: center;
+   font-size: 1.1rem;
+ }
+}
+
+.fas {
+ font-size: 3rem;
+}
