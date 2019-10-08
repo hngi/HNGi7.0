@@ -144,7 +144,7 @@
     
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
     .col-1 {
         width: 100%;
         text-align: center;
