@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box
+}
+
+.sponsors {
+    background-color: #FFFFFF;
+    padding-top: 57px;
+    padding-bottom: 118.76px;
+}
+
+.sponsors__header {
+    color: #3C6B9C;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 34px;
+    font-style: normal;
+    text-align: center;
+    font-family: "Open Sans";
+}
+
+.sponsors__images {
+    padding-left: 15.83%;
+    padding-right: 15.83%;
+    margin-top: 94px;
+    display: flex;
+    justify-content: space-between
+}
+
+.hng_logo {
+    /* width: 167.12px; */
+    height: 52.89px;
+}
+
+.akwa_logo {
+    height: 55px;
+    width: 55px;
+}
+
+.verifi_logo {
+    width: 115.4px;
+    height: 52.89px;
+}
+
+.sponsors__images2 {
+    padding-left: 23.68%;
+    padding-right: 23.68%;
+    margin-top: 66px;
+    display: flex;
+    justify-content: space-between
+}
+
+.figma_logo {
+    line-height: 26.84px;
+    font-size: 30px;
+}
+
+.bluechip_logo {
+    /* height: 55px; */
+    width: 153.8px;
+}
+
+.flutter_logo {
+    width: 298.16px;
+}
+
+
+.sponsors_button {
+    text-align: center;
+    margin-top: 79px;
+}
+
+.sponsors_button button {
+    background-color: #00AEFF;
+    width: 181.47px;
+    height: 40.24px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 6px rgba(50, 50, 93, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08);
+    color: #FFFFFF;
+    line-height: 19px;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-family: "Open Sans"
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .sponsors__images2 {
+        padding-left: 19%;
+        padding-right: 19%
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .sponsors__images {
+        padding-left: 12%;
+        padding-right: 12%;
+    }
+
+    .sponsors__images2 {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .sponsors__images {
+        padding-left: 9%;
+        padding-right: 9%;
+    }
+
+    .sponsors__images2 {
+        padding-left: 12%;
+        padding-right: 12%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .sponsors__images {
+        flex-wrap: wrap;
+    } 
+
+    .sponsors__images2 {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 0;
+    } 
+
+
+    .col-2 {
+        width: 50%;
+        text-align: center;
+        margin-bottom: 40px;
+        
+    }
+
+    .col-3 {
+        width: 100%;
+        text-align: center;
+    }
+
+    
+}
+
+@media screen and (max-width: 400px) {
+    .col-1 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
