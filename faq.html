@@ -10,91 +10,33 @@
 	<link rel="apple-touch-icon" href="./logo.png">
     <meta name="theme-color" content="#011B33">
     <link rel="icon"  href="./logo.png">
-    <style>
-        section#faq .accordion-item-text-container {
-            display: none;
-            padding: 1rem 3rem;
-            margin: 0;
-        }
-
-        section#faq .accordion-item-text-container, button.accordion-item-title {
-            padding: 1.5rem;
-        }
-
-        section#faq .accordion-item-text-container p{
-            font-family: "Gilroy-Medium", san-serif;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 24px;
-            line-height: 29px;
-            margin: 0;
-            padding: 0;
-        }
-
-        section#faq div.accordion-item {
-            width: 100%;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            padding: 0;
-            margin: 0.5rem auto;
-            padding: 0;
-            border-radius: .4rem .4rem 0 0;
-        }
-
-        section#faq button.accordion-item-title {
-            background-color: #011B33;
-            border-radius: .4rem .4rem 0 0;
-            /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
-            margin:0;
-            color: #fff;
-            width: 100%;
-            text-align: left;
-            min-height: 54px;
-            font-family: "Gilroy-Medium", san-serif;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 28px;
-            line-height: 34px;
-        }
-
-        section#faq div#faq-container {
-            width: 90%;
-            max-width: 941px;
-            margin: auto;
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        button.accordion-item-title {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        span.btn-text {
-            width: calc(100% - 40px);
-            max-width: calc(100% - 40px);
-        }
-
-        button span.btn-icon {
-            float: right;
-            margin: auto 5px;
-            background: white;
-            width: 30px;
-            height: 30px;
-            text-align: center;
-            border-radius: 50%;
-            color: #011B33;
-            font-family: "Gilroy", sans-serif;
-            font-style: normal;
-            font-weight: 800;
-            font-size: 26px;
-        }
-        span.btn-icon.open-accordion {
-            transform: rotate(180deg);
-        }
-    </style>
+    <link rel="stylesheet" href="./stylesheet.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 
-<body>
+<body id="faq-page">
+    <header>
+        <img src="./images/brand-logo.png" alt="HNG6 Logo. It stands for changing the world. One intern at a time"  id="logo">
+        <nav>
+            <ul>
+                <li class="nav-item">
+                    <a href="" class="nav-item-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-item-link">HNG6</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-item-link">Mentors</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-item-link">Contacts</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-item-link">Join HNG</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 	<main>
         <section id="faq">
             <div class="text-center">
@@ -102,11 +44,97 @@
                 <p>Here are some of the most frequently asked questions on HNG 7.0</p>
             </div>
             <div id="faq-container" class="container-fluid"></div>
-            <form action="">
-                
-            </form>
+            <div id="faqForm-container">
+                <form action="">
+                    <p class="form-title"></p>
+                    <div class="field">
+                        <label for="faqFormName"></label>
+                        <input id="faqFormName" type="text" placeholder="Name" autocomplete="name">
+                    </div>
+                    <div class="field">
+                        <label for="faqFormEmail"></label>
+                        <input id="faqFormEmail" type="email" placeholder="Email" autocomplete="email">
+                    </div>
+                    <div class="field">
+                        <label for="faqFormSubject"></label>
+                        <input id="faqFormSubject" type="text" placeholder="Subject">
+                    </div>
+                    <div class="field">
+                        <label for="faqFormMsg"></label>
+                        <textarea name="faqFormMsg" id="faqFormMsg" placeholder="Write a message"></textarea>
+                    </div>
+                    <input id="submitFaqForm" type="submit" value="send message">
+                </form>
+            </div>
         </section>
-	</main>
+    </main>
+    <footer>
+        <img src="./images/brand-logo.png" alt="HNG6 Logo. It stands for changing the world. One intern at a time" id="footerLog">
+        <div class="footerWidgets">
+            <div class="footerWidget-container">
+                <p class="footerWidget-title">Quick Links</p>
+                <ul class="footerWidget-links-list quick-links">
+                    <li class="footerWidget-links">
+                        <a href="">Join HNG</a>
+                    </li>
+                    <li class="footerWidget-links">
+                        <a href="">About HNG</a>
+                    </li>
+                    <li class="footerWidget-links">
+                        <a href="">Become a Sponsor</a>
+                    </li>
+                    <li class="footerWidget-links">
+                        <a href="">Signup as a mentor</a>
+                    </li>
+                </ul>  
+            </div>
+            <div class="footerWidget-container">
+                <p class="footerWidget-title">Contact Us</p>
+                <ul class="footerWidget-links-list">
+                    <li class="footerWidget-links">
+                        <p>
+                            <strong>Phone:</strong>
+                            <a title="Call HNG" href="tel:+2348123456789">+234 (0) 812 345 6789</a>
+                        </p>
+                    </li>
+                    <li class="footerWidget-links">
+                        <p>
+                            <strong>Email:</strong><a title="Email HNG" href="mailto:interns@hng.tech">interns@hng.tech</a>
+                        </p>
+                    </li>
+                </ul> 
+            </div>
+            <div class="footerWidget-container">
+                <p class="footerWidget-title">Office Address</p>
+                <address>
+                    3 Birrel Avenue<br> 
+                    Sabo,Yaba,<br> 
+                    Lagos State.
+                </address>
+            </div>
+            <div class="footerWidget-container">
+                <p class="footerWidget-title">Follow us</p>
+                <ul class="footerWidget-links-list social-media-links">
+                    <li class="footerWidget-links">
+                        <a href="" target="_blank" title="Follow HNG on Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="footerWidget-links">
+                        <a href="" target="_blank" title="Follow HNG on Facebook">
+                            <i class="fab fa-facebook-square"></i>
+                        </a>
+                    </li>
+                    <li class="footerWidget-links">
+                        <a href="" target="_blank" title="Follow HNG on Dribble">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                    </li>
+                </ul> 
+            </div>
+        </div>
+        <p class="footer-copyright">&copy; 2019, HNG Internship. All rights reserved.</p>
+    </footer>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
@@ -136,22 +164,22 @@
 			const button = document.createElement("button");
 			const p = document.createElement("p");
 			const spanText = document.createElement("span");
-			const spanIcon = document.createElement("span");
+			const imgIcon = document.createElement("img");
 
 			//Adding classes
 			div.classList.add('accordion-item');
 			button.classList.add('accordion-item-title');
 			p.classList.add('accordion-item-text');
 			divAccText.classList.add('accordion-item-text-container');
-			spanIcon.classList.add('btn-icon');
+			imgIcon.classList.add('btn-icon');
 			spanText.classList.add('btn-text');
 
 			spanText.innerHTML = faq.title;
-			spanIcon.innerHTML = "˅";
+			imgIcon.src = "./images/dashicons-arrow-down-alt2.png";
 			p.innerHTML = faq.text;
 
 			button.append(spanText);
-			button.append(spanIcon);
+			button.append(imgIcon);
 
 			divAccText.append(p);
 
