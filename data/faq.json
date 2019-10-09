@@ -1,0 +1,24 @@
+{
+    "faq": [
+        {
+            "title": "What is Circe?",
+            "text":"Circe is an app that allows you to calculate how much power you need to run your home."
+        },
+        {
+            "title": "Do i need to pay to use the platform?",
+            "text":"No, circe is a completely free app and no payment is required."
+        },
+        {
+            "title": "Do i need to signup?",
+            "text":"circe does require any registration, just open calculator and you are ready to go."
+        },
+        {
+            "title": "Do we sell solar panels?",
+            "text":"No, we currently do not sell."
+        },
+        {
+            "title": "How often can i use Circe?",
+            "text":"Anyday, Anytime."
+        }
+    ]
+}

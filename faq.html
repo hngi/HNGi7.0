@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HNG</title>
+	<meta name="description" content="FAQ page for HNG Page">
+	<link rel='manifest' href='./manifest.json'>
+	<link rel="apple-touch-icon" href="./logo.png">
+    <meta name="theme-color" content="#011B33">
+    <link rel="icon"  href="./logo.png">
+    <style>
+        section#faq .accordion-item-text-container {
+            display: none;
+            padding: 1rem 3rem;
+            margin: 0;
+        }
+
+        section#faq .accordion-item-text-container, button.accordion-item-title {
+            padding: 1.5rem;
+        }
+
+        section#faq .accordion-item-text-container p{
+            font-family: "Gilroy-Medium", san-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 29px;
+            margin: 0;
+            padding: 0;
+        }
+
+        section#faq div.accordion-item {
+            width: 100%;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            padding: 0;
+            margin: 0.5rem auto;
+            padding: 0;
+            border-radius: .4rem .4rem 0 0;
+        }
+
+        section#faq button.accordion-item-title {
+            background-color: #011B33;
+            border-radius: .4rem .4rem 0 0;
+            /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+            margin:0;
+            color: #fff;
+            width: 100%;
+            text-align: left;
+            min-height: 54px;
+            font-family: "Gilroy-Medium", san-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 28px;
+            line-height: 34px;
+        }
+
+        section#faq div#faq-container {
+            width: 90%;
+            max-width: 941px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        button.accordion-item-title {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        span.btn-text {
+            width: calc(100% - 40px);
+            max-width: calc(100% - 40px);
+        }
+
+        button span.btn-icon {
+            float: right;
+            margin: auto 5px;
+            background: white;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            color: #011B33;
+            font-family: "Gilroy", sans-serif;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 26px;
+        }
+        span.btn-icon.open-accordion {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+	<main>
+        <section id="faq">
+            <div class="text-center">
+                <h1>Frequently Asked Questions</h1>
+                <p>Here are some of the most frequently asked questions on HNG 7.0</p>
+            </div>
+            <div id="faq-container" class="container-fluid"></div>
+            <form action="">
+                
+            </form>
+        </section>
+	</main>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+	const getFaqData = () =>{
+		//Fetch data from, for now a json
+		//Then using promise to complete other actions
+		fetch('/data/faq.json')
+		  .then(res=>res.json())
+		  .then(getFaqs)
+		  .then(()=>{btnListener()})
+		  .catch(err=> console.log(err));
+	}
+
+	const getFaqs = (data) =>{
+		const faqs = data.faq;
+		// console.log('faqs', faqs);
+		makeFaqHTML(faqs);
+	}
+
+	const makeFaqHTML = (faqs) =>{
+		const divFaq = document.querySelector('div#faq-container');
+		const frag = document.createDocumentFragment(); //savin some performance cost with Fragment
+		faqs.forEach(faq => {
+			//Create Elements
+			const div = document.createElement("div");
+			const divAccText = document.createElement("div");
+			const button = document.createElement("button");
+			const p = document.createElement("p");
+			const spanText = document.createElement("span");
+			const spanIcon = document.createElement("span");
+
+			//Adding classes
+			div.classList.add('accordion-item');
+			button.classList.add('accordion-item-title');
+			p.classList.add('accordion-item-text');
+			divAccText.classList.add('accordion-item-text-container');
+			spanIcon.classList.add('btn-icon');
+			spanText.classList.add('btn-text');
+
+			spanText.innerHTML = faq.title;
+			spanIcon.innerHTML = "˅";
+			p.innerHTML = faq.text;
+
+			button.append(spanText);
+			button.append(spanIcon);
+
+			divAccText.append(p);
+
+			div.append(button);
+			div.append(divAccText);
+
+			frag.append(div);
+		});
+
+		//Now append to FAQ div
+		divFaq.append(frag);
+	}
+
+	const btnListener = () =>{
+		$("button.accordion-item-title").click(function(){
+			// ES6 class doesnt work with jQ
+			// console.log($(this));
+			
+			$(this).next().toggle("slow");
+			if($(this).children(".btn-icon").hasClass("open-accordion")){
+				$(this).children(".btn-icon").removeClass("open-accordion");
+			}else{
+				$(this).children(".btn-icon").addClass("open-accordion");
+			}
+		})
+	}
+
+	document.addEventListener("DOMContentLoaded", () =>{
+		getFaqData();
+	});
+</script>
+</html>
