@@ -4,6 +4,16 @@
   padding: 0;
 }
 
+body, main, header, section, footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  max-width: 100%;
+}
+
 body#faq-page {
   font-family: 'Open Sans', sans-serif;
   font-weight: normal;

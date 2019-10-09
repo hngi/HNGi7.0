@@ -5,6 +5,26 @@
     padding: 0;
 }
 
+//Blue Colors
+$lightBlue : #D1F0F6;
+$blue : #00AEFF;
+$darkBlue : #084482;
+
+//Text Colors
+$navItemTextColor: #474747; //Doubles as body color
+$faqItemTextColor: #7B7C7D;
+$inputPlaceholderTextColor: #868686;
+$footerWidgetTextColor: #737373;
+$footerCopyRightTextColor: #8898AA;
+
+
+body, main,header, section, footer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+}
+
 body#faq-page{
     font-family: 'Open Sans', sans-serif;
     font-weight: normal;
