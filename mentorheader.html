@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+    <!-- <link rel="stylesheet" href="css/fontawesome-all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+body {
+    color: #000000 !important;
+}
+.nav-item {
+    color: #000000 !important;
+    font-family: Open Sans;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+.join {
+    border: 1px solid #00AEFF;
+    border-radius: 4%;
+    background-color: #00AEFF;
+}
+.navbar {
+    color: #474747;
+}
+
+header {
+    /* width: 1440px; */
+    height: 530px;
+    left: 0px;
+    top: 0px;
+    background: #D1F0F6;
+}
+.mb-4 {
+    font-family: Open Sans SemiBold;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 54px;
+    text-align: center;
+    color: #084482;
+}
+.par {
+    margin-top: 130px;
+}
+.lead {
+    text-align: center;
+    font-family: Open Sans;
+    font-weight: normal;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+@media (max-width: 990px) {
+        .nav-item {
+        color: #000000 !important;
+        font-family: Open Sans;
+        font-weight: normal;
+        font-size: 15px;
+        text-transform: capitalize;
+    }
+    .join {
+        border: 1px solid #00AEFF;
+        border-radius: 4%;
+        background-color: #00AEFF;
+    }
+    .navbar {
+        color: #474747;
+    }
+
+    header {
+        /* width: 1440px; */
+        height: 530px;
+        left: 0px;
+        top: 0px;
+        background: #D1F0F6;
+    }
+    .mb-4 {
+        font-family: Open Sans SemiBold;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 40px;
+        text-align: center;
+        color: #084482;
+    }
+    .par {
+        margin-top: 100px;
+    }
+    .lead {
+        text-align: center;
+        font-family: Open Sans;
+        font-weight: normal;
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+    .logo {
+        width: 70%;
+        height: auto;
+    }
+
+}
+@media (max-width: 770px) {
+        .nav-item {
+        color: #000000 !important;
+        font-family: Open Sans;
+        font-weight: normal;
+        font-size: 12px;
+        text-transform: capitalize;
+    }
+    .join {
+        border: 1px solid #00AEFF;
+        border-radius: 4%;
+        background-color: #00AEFF;
+    }
+    .navbar {
+        color: #474747;
+    }
+
+    header {
+        height: 530px;
+        left: 0px;
+        top: 0px;
+        background: #D1F0F6;
+    }
+    .mb-4 {
+        font-family: Open Sans SemiBold;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 25px;
+        text-align: center;
+        color: #084482;
+    }
+    .par {
+        margin-top: 100px;
+    }
+    .lead {
+        text-align: center;
+        font-family: Open Sans;
+        font-weight: normal;
+        font-size: 15px;
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+    .logo {
+        width: 50%;
+        height: auto;
+    }
+
+}
+@media (max-width: 412px) {
+        .nav-item {
+        color: #000000 !important;
+        font-family: Open Sans;
+        font-weight: bold;
+        font-size: 10px;
+        text-transform: capitalize;
+    }
+    .join {
+        border: 1px solid #00AEFF;
+        border-radius: 4%;
+        background-color: #00AEFF;
+    }
+    .navbar {
+        color: #474747;
+    }
+
+    header {
+        height: 530px;
+        left: 0px;
+        top: 0px;
+        background: #D1F0F6;
+    }
+    .mb-4 {
+        font-family: Open Sans SemiBold;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 25px;
+        text-align: center;
+        color: #084482;
+    }
+    .par {
+        margin-top: 100px;
+    }
+    .lead {
+        text-align: center;
+        font-family: Open Sans;
+        font-weight: normal;
+        font-size: 15px;
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+    .logo {
+        width: 30%;
+        height: auto;
+    }
+    .fa-lg {
+        font-size: .7em;
+        line-height: .5em;
+        vertical-align: -10%;
+        margin: -5px;
+    }
+
+}
+
+</style>
+<body>
+    <!--Main Navigation-->
+<header>
+
+    <!-- <a href="#main" class="sr-only sr-only-focusable">Skip to main content</a> -->
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light py-3" aria-label="Main navigation">
+
+            <a class="navbar-brand text-dark" href="#">
+                <img src="brand-logo.png" alt="HNG Internship" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars fa-lg"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav align-items-lg-center text-uppercase pt-3 pt-lg-0 ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="text-transform:uppercase;">HNG6</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Mentors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item join">
+                        <a class="nav-link " href="#">Join HNG</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <section class="container">
+        <div class="justify-content-lg-between align-items-lg-center py-5">
+            <div class="text-center par">
+                <h1 class="display-4 mb-4">Mentor Account Set Up</h1>
+                <p class="col-cg-6 lead text-secondary">Thanks for your interest in becoming a HNG mentor. Kindly fill out this form.</p>
+            </div>
+        </div>
+    </section>
+</header>
+  
+  <!--Main Navigation-->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
+
