@@ -88,9 +88,7 @@ header .wrap .logo{
     text-transform: capitalize;
     color: #084482;
     font-weight: 600;
-    font-size: 30px;
-    
-    
+    font-size: 30px;  
 }
 .freq-n .header{
     padding: 50px 0px;
@@ -179,7 +177,16 @@ footer .img div{
 .img img{
     width: 20px;
 }
-
+.wrap p {
+    margin-top: 2%;
+}
+.wrap .fa {
+    transition: .3s transform ease-in-out;
+    /* transform: rotate(180deg); */
+  }
+.wrap .collapsed .fa {
+    transform: rotate(0deg);
+}
 
 
 

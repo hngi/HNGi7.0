@@ -1,0 +1,246 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+.text-light {
+  color: #ffffff;
+}
+
+.support {
+  background-color: #3c6b9c;
+  padding: 2.5rem 0;
+  width: 100%;
+  text-align: center;
+}
+.support__header {
+  width: 100%;
+  text-align: center;
+  font-size: 1.3rem;
+}
+.support__items {
+  display: inline-flex;
+  align-items: center;
+  width: 99%;
+  margin: 0;
+  padding: 3rem 0;
+}
+.support__items .support__item {
+  flex-basis: 50%;
+}
+.support__items .support__item-icon {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 67px;
+  height: 67px;
+  background-color: white;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+.support__items .support__item-icon .fas {
+  font-size: 1.8rem;
+  color: #00aeff;
+  position: absolute;
+  z-index: 2;
+}
+.support__items .support__item-icon .donate {
+  top: 19px;
+  left: 19px;
+}
+.support__items .support__item-icon .help {
+  top: 19px;
+  left: 16px;
+}
+.support__items .support__item-icon .card {
+  top: 19px;
+  left: 18px;
+}
+.support__items .support__item-body {
+  margin-top: 2rem;
+}
+.support__items .support__item-text {
+  font-size: 1rem;
+}
+.support__items .support__item-link {
+  display: block;
+  margin-top: 0.6rem;
+}
+.support__items .support__item-link a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #8ddbff;
+}
+.support__items .support__item-link a:hover {
+  color: #c0ebff;
+}
+.support__items .support__item-link .fa {
+  color: #8ddbff;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 750px) {
+  .support__items {
+    flex-direction: column;
+  }
+
+  .support__item:not(:first-child) {
+    margin-top: 4rem;
+  }
+}
+
+/* SPONSOR STYLING */
+.sponsors {
+  background-color: #ffffff;
+  padding-top: 57px;
+  padding-bottom: 118.76px;
+}
+
+.sponsors__header {
+  color: #3c6b9c;
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 34px;
+  font-style: normal;
+  text-align: center;
+  font-family: "Open Sans";
+}
+
+.sponsors__images {
+  padding-left: 15.83%;
+  padding-right: 15.83%;
+  margin-top: 94px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hng_logo {
+  /* width: 167.12px; */
+  height: 52.89px;
+}
+
+.akwa_logo {
+  height: 55px;
+  width: 55px;
+}
+
+.verifi_logo {
+  width: 115.4px;
+  height: 52.89px;
+}
+
+.sponsors__images2 {
+  padding-left: 23.68%;
+  padding-right: 23.68%;
+  margin-top: 66px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.figma_logo {
+  line-height: 26.84px;
+  font-size: 30px;
+}
+
+.bluechip_logo {
+  /* height: 55px; */
+  width: 153.8px;
+}
+
+.flutter_logo {
+  width: 298.16px;
+}
+
+.sponsors_button {
+  text-align: center;
+  margin-top: 79px;
+}
+
+.sponsors_button button {
+  background-color: #00aeff;
+  width: 181.47px;
+  height: 40.24px;
+  border-radius: 4px;
+  border: none;
+  color: #ffffff;
+  line-height: 19px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.sponsors_button button:hover {
+  background: #51add8;
+}
+
+@media screen and (max-width: 1200px) {
+  .sponsors__images2 {
+    padding-left: 19%;
+    padding-right: 19%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .sponsors__images {
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+
+  .sponsors__images2 {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .sponsors__images {
+    padding-left: 9%;
+    padding-right: 9%;
+  }
+
+  .sponsors__images2 {
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .sponsors__images {
+    flex-wrap: wrap;
+  }
+
+  .sponsors__images2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
+
+  .col-2 {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .col-3 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .col-1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
