@@ -230,6 +230,9 @@ body#faq-page main article div#faqForm-container form input, body#faq-page main 
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 13px auto;
+  padding-left: 27px;
+  padding-top: 16px;
+  padding-bottom: 12px;
 }
 
 body#faq-page main article div#faqForm-container form input::-webkit-input-placeholder, body#faq-page main article div#faqForm-container form textarea::-webkit-input-placeholder {
@@ -238,9 +241,6 @@ body#faq-page main article div#faqForm-container form input::-webkit-input-place
   font-size: 16px;
   line-height: 22px;
   color: #868686;
-  padding-left: 27px;
-  padding-top: 16px;
-  padding-bottom: 12px;
 }
 
 body#faq-page main article div#faqForm-container form input:-ms-input-placeholder, body#faq-page main article div#faqForm-container form textarea:-ms-input-placeholder {
@@ -249,9 +249,6 @@ body#faq-page main article div#faqForm-container form input:-ms-input-placeholde
   font-size: 16px;
   line-height: 22px;
   color: #868686;
-  padding-left: 27px;
-  padding-top: 16px;
-  padding-bottom: 12px;
 }
 
 body#faq-page main article div#faqForm-container form input::-ms-input-placeholder, body#faq-page main article div#faqForm-container form textarea::-ms-input-placeholder {
@@ -260,9 +257,6 @@ body#faq-page main article div#faqForm-container form input::-ms-input-placehold
   font-size: 16px;
   line-height: 22px;
   color: #868686;
-  padding-left: 27px;
-  padding-top: 16px;
-  padding-bottom: 12px;
 }
 
 body#faq-page main article div#faqForm-container form input::placeholder, body#faq-page main article div#faqForm-container form textarea::placeholder {
@@ -271,9 +265,6 @@ body#faq-page main article div#faqForm-container form input::placeholder, body#f
   font-size: 16px;
   line-height: 22px;
   color: #868686;
-  padding-left: 27px;
-  padding-top: 16px;
-  padding-bottom: 12px;
 }
 
 body#faq-page main article div#faqForm-container form textarea {
