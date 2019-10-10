@@ -6,7 +6,7 @@
 This is for frontend of HNG6.0 project<br />
 HTML, CSS were used for this page<br />
 with Johnson Ubaezuonu slack username@Johnson, Esq as the sub-team leader <br />
-and members include olaoluwa salami slack username@o
+and members include olaoluwa salami slack username@o<br />
 Gloria Chinedu   slack username@Glocutey<br />
-Olaoluwa Soladoye slack username@doye<br /><br />
+Olaoluwa Soladoye slack username@doye<br />
 Ogonna Eli   slack username@ogoeli<br />
