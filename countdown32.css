@@ -335,7 +335,7 @@ footer #socials img
 {
 	body > *
 	{
-		width: 98vw;
+		width: 100vw;
 		overflow-x: hidden;
 	}
 	#sponsor-flex-top img, #sponsor-flex-bottom img
