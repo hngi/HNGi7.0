@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-body, main, header, section, footer {
+body, main, header, section, footer, article {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,5 +17,311 @@ body, main, header, section, footer {
 body#faq-page {
   font-family: 'Open Sans', sans-serif;
   font-weight: normal;
+  color: #474747;
+  background-color: #D1F0F6;
+}
+
+body#faq-page header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+body#faq-page header img#logo {
+  width: 281px;
+  height: 56.43px;
+}
+
+body#faq-page header nav ul {
+  list-style: none;
+}
+
+body#faq-page header nav ul li.nav-item {
+  display: inline-block;
+  margin: 20px auto;
+}
+
+body#faq-page header nav ul li.nav-item a.nav-item-link {
+  text-decoration: none;
+  color: #474747;
+  text-transform: capitalize;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  mix-blend-mode: normal;
+  opacity: 0.95;
+}
+
+body#faq-page header nav ul li.nav-item.join-hng {
+  background: #00AEFF;
+  border-radius: 4px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+body#faq-page header nav ul li.nav-item.join-hng a.nav-item-link {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height */
+  letter-spacing: 0.31px;
+  color: #FFFFFF;
+  padding: 12px 18px;
+}
+
+body#faq-page main div.text-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 173.57px;
+  margin-bottom: 5px;
+  width: 100%;
+  max-width: 683px;
+}
+
+body#faq-page main div.text-center h1, body#faq-page main div.text-center p {
+  width: 100%;
+  text-align: center;
+}
+
+body#faq-page main div.text-center h1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 54px;
+  color: #084482;
+}
+
+body#faq-page main div.text-center p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 33px;
+  height: 154px;
+}
+
+body#faq-page main article {
+  background-color: #fff;
+}
+
+body#faq-page main article div#faq-container, body#faq-page main article div#faqForm-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 90%;
+}
+
+body#faq-page main article div#faq-container {
+  padding: 20px;
+  margin: 0px auto;
+}
+
+body#faq-page main article div#faq-container div.accordion-item {
+  margin-bottom: 24px;
+}
+
+body#faq-page main article div#faq-container div.accordion-item div.accordion-item-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  cursor: pointer;
+}
+
+body#faq-page main article div#faq-container div.accordion-item div.accordion-item-title span.btn-text {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 39px;
+  line-height: 53px;
+  color: #00AEFF;
+  border: none;
+  background: transparent;
+}
+
+body#faq-page main article div#faq-container div.accordion-item div.accordion-item-title img {
+  margin-left: 14px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+body#faq-page main article div#faq-container div.accordion-item div.accordion-item-title img.open-accordion {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+body#faq-page main article div#faq-container div.accordion-item div.accordion-item-text-container {
+  display: none;
+  margin-top: 39px;
+}
+
+body#faq-page main article div#faq-container div.accordion-item div.accordion-item-text-container p.accordion-item-text {
+  width: 100%;
+  max-width: 100%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 152.3%;
+  color: #7B7C7D;
+}
+
+body#faq-page main article div#faqForm-container {
+  max-width: 1110px;
+  margin: 20px auto;
+}
+
+body#faq-page main article div#faqForm-container form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body#faq-page main article div#faqForm-container form p.form-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 39px;
+  line-height: 53px;
+  text-align: center;
+  color: #084482;
+  max-width: 640px;
+  margin: auto;
+  margin-bottom: 71px;
+}
+
+body#faq-page main article div#faqForm-container form label, body#faq-page main article div#faqForm-container form input, body#faq-page main article div#faqForm-container form textarea {
+  width: 100%;
+}
+
+body#faq-page main article div#faqForm-container form input, body#faq-page main article div#faqForm-container form textarea {
+  background: #FFFFFF;
+  border: 1px solid #868686;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 13px auto;
+}
+
+body#faq-page main article div#faqForm-container form input::-webkit-input-placeholder, body#faq-page main article div#faqForm-container form textarea::-webkit-input-placeholder {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #868686;
+  padding-left: 27px;
+  padding-top: 16px;
+  padding-bottom: 12px;
+}
+
+body#faq-page main article div#faqForm-container form input:-ms-input-placeholder, body#faq-page main article div#faqForm-container form textarea:-ms-input-placeholder {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #868686;
+  padding-left: 27px;
+  padding-top: 16px;
+  padding-bottom: 12px;
+}
+
+body#faq-page main article div#faqForm-container form input::-ms-input-placeholder, body#faq-page main article div#faqForm-container form textarea::-ms-input-placeholder {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #868686;
+  padding-left: 27px;
+  padding-top: 16px;
+  padding-bottom: 12px;
+}
+
+body#faq-page main article div#faqForm-container form input::placeholder, body#faq-page main article div#faqForm-container form textarea::placeholder {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #868686;
+  padding-left: 27px;
+  padding-top: 16px;
+  padding-bottom: 12px;
+}
+
+body#faq-page main article div#faqForm-container form textarea {
+  height: 297px;
+  resize: none;
+}
+
+body#faq-page main article div#faqForm-container form input {
+  height: 50px;
+}
+
+body#faq-page main article div#faqForm-container form input[type="submit"] {
+  color: #fff;
+  background-color: #00AEFF;
+  padding-left: 0;
+  text-align: center;
+  letter-spacing: 0.315px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 57px;
+}
+
+body#faq-page footer {
+  background-color: #FAFAFA;
+}
+
+@media screen and (min-width: 900px) {
+  body#faq-page header div.nav-cover {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 90%;
+    max-width: 1108px;
+    margin: 0px auto;
+  }
+  body#faq-page header nav {
+    margin-left: auto;
+  }
+  body#faq-page header nav ul {
+    list-style: none;
+  }
+  body#faq-page header nav ul li.nav-item {
+    display: inline-block;
+    margin: auto 25px;
+  }
+  body#faq-page header nav ul li.nav-item.join-hng {
+    margin-left: 36px;
+    margin-right: 0px;
+  }
+  body#faq-page main article {
+    background-color: #fff;
+  }
+  body#faq-page main article div#faq-container {
+    margin: 83px 118px 83px 165px;
+    max-width: 1157px;
+    padding: 0;
+  }
+  body#faq-page main article div#faq-container div.accordion-item {
+    margin-bottom: 54px;
+  }
+  body#faq-page main article div#faq-container div.accordion-item button.accordion-item-title img {
+    margin-left: 54.06px;
+  }
+  body#faq-page main article div#faqForm-container {
+    margin-top: 92px;
+    margin-bottom: 188px;
+  }
 }
 /*# sourceMappingURL=stylesheet.css.map */

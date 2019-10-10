@@ -5,37 +5,38 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HNG</title>
-	<meta name="description" content="FAQ page for HNG Page">
-	<link rel='manifest' href='./manifest.json'>
-	<link rel="apple-touch-icon" href="./logo.png">
-    <meta name="theme-color" content="#011B33">
-    <link rel="icon"  href="./logo.png">
+	<meta name="description" content="FAQ page for HNG6 Page">
+	<link rel="apple-touch-icon" href="./images/brand-logo.png">
+    <meta name="theme-color" content="#00AEFF">
+    <link rel="icon"  href="./images/">
     <link rel="stylesheet" href="./stylesheet.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 
 <body id="faq-page">
     <header>
-        <img src="./images/brand-logo.png" alt="HNG6 Logo. It stands for changing the world. One intern at a time"  id="logo">
-        <nav>
-            <ul>
-                <li class="nav-item">
-                    <a href="" class="nav-item-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-item-link">HNG6</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-item-link">Mentors</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-item-link">Contacts</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-item-link">Join HNG</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="nav-cover">
+            <img src="./images/brand-logo.png" alt="HNG6 Logo. It stands for changing the world. One intern at a time"  id="logo">
+            <nav>
+                <ul>
+                    <li class="nav-item">
+                        <a href="" class="nav-item-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-item-link">HNG6</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-item-link">Mentors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-item-link">Contacts</a>
+                    </li>
+                    <li class="nav-item join-hng">
+                        <a href="" class="nav-item-link">Join HNG</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 	<main>
         <section id="faq">
@@ -43,29 +44,27 @@
                 <h1>Frequently Asked Questions</h1>
                 <p>Here are some of the most frequently asked questions on HNG 7.0</p>
             </div>
-            <div id="faq-container" class="container-fluid"></div>
-            <div id="faqForm-container">
-                <form action="">
-                    <p class="form-title"></p>
-                    <div class="field">
-                        <label for="faqFormName"></label>
-                        <input id="faqFormName" type="text" placeholder="Name" autocomplete="name">
-                    </div>
-                    <div class="field">
-                        <label for="faqFormEmail"></label>
-                        <input id="faqFormEmail" type="email" placeholder="Email" autocomplete="email">
-                    </div>
-                    <div class="field">
-                        <label for="faqFormSubject"></label>
-                        <input id="faqFormSubject" type="text" placeholder="Subject">
-                    </div>
-                    <div class="field">
-                        <label for="faqFormMsg"></label>
-                        <textarea name="faqFormMsg" id="faqFormMsg" placeholder="Write a message"></textarea>
-                    </div>
-                    <input id="submitFaqForm" type="submit" value="send message">
-                </form>
-            </div>
+            <article>
+                <div id="faq-container"></div>
+                <div id="faqForm-container">
+                    <form action="">
+                        <p class="form-title">Not a Frequently Asked Question?<br>Contact us below</p>
+                        <label for="faqFormName" class="field">
+                            <input id="faqFormName" type="text" placeholder="Name" autocomplete="name">
+                        </label>
+                        <label for="faqFormEmail" class="field">
+                            <input id="faqFormEmail" type="email" placeholder="Email" autocomplete="email">
+                        </label>
+                        <label for="faqFormSubject" class="field">
+                            <input id="faqFormSubject" type="text" placeholder="Subject">
+                        </label>
+                        <label for="faqFormMsg" class="field">
+                            <textarea name="faqFormMsg" id="faqFormMsg" placeholder="Write a message"></textarea>
+                        </label>
+                        <input id="submitFaqForm" type="submit" value="send message">
+                    </form>
+                </div>
+            </article>
         </section>
     </main>
     <footer>
@@ -161,14 +160,14 @@
 			//Create Elements
 			const div = document.createElement("div");
 			const divAccText = document.createElement("div");
-			const button = document.createElement("button");
+			const divAccoTitle = document.createElement("div");
 			const p = document.createElement("p");
 			const spanText = document.createElement("span");
 			const imgIcon = document.createElement("img");
 
 			//Adding classes
 			div.classList.add('accordion-item');
-			button.classList.add('accordion-item-title');
+            divAccoTitle.classList.add('accordion-item-title');
 			p.classList.add('accordion-item-text');
 			divAccText.classList.add('accordion-item-text-container');
 			imgIcon.classList.add('btn-icon');
@@ -178,12 +177,12 @@
 			imgIcon.src = "./images/dashicons-arrow-down-alt2.png";
 			p.innerHTML = faq.text;
 
-			button.append(spanText);
-			button.append(imgIcon);
+			divAccoTitle.append(spanText);
+			divAccoTitle.append(imgIcon);
 
 			divAccText.append(p);
 
-			div.append(button);
+			div.append(divAccoTitle);
 			div.append(divAccText);
 
 			frag.append(div);
@@ -194,7 +193,7 @@
 	}
 
 	const btnListener = () =>{
-		$("button.accordion-item-title").click(function(){
+		$("div.accordion-item-title").click(function(){
 			// ES6 class doesnt work with jQ
 			// console.log($(this));
 			

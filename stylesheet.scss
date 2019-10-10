@@ -11,16 +11,25 @@ $blue : #00AEFF;
 $darkBlue : #084482;
 
 //Text Colors
+$bodyTextColor: #474747;
 $navItemTextColor: #474747; //Doubles as body color
 $faqItemTextColor: #7B7C7D;
 $inputPlaceholderTextColor: #868686;
 $footerWidgetTextColor: #737373;
 $footerCopyRightTextColor: #8898AA;
 
+//Backgrounds
+$bodybg: $lightBlue;
+$footerBg: #FAFAFA;
 
-body, main,header, section, footer{
+//mixin fo r flex display and wrap
+@mixin flexDisplay{
     display: flex;
     flex-wrap: wrap;
+}
+
+body, main,header, section, footer, article{
+    @include flexDisplay();
     width: 100%;
     max-width: 100%;
 }
@@ -28,4 +37,290 @@ body, main,header, section, footer{
 body#faq-page{
     font-family: 'Open Sans', sans-serif;
     font-weight: normal;
+    color: $bodyTextColor;
+    background-color: $bodybg;
+
+    header{
+        padding-top: 24px;
+        padding-bottom: 24px;
+
+        img#logo{
+            //Assurance
+            width: 281px;
+            height: 56.43px;
+        }
+
+        nav{
+            ul{
+                list-style: none;
+
+                li.nav-item{
+                    display: inline-block;
+                    margin: 20px auto;
+
+                    a.nav-item-link{
+                        text-decoration: none;
+                        color: $navItemTextColor;
+                        text-transform: capitalize;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 16px;
+                        line-height: 22px;
+                        mix-blend-mode: normal;
+                        opacity: 0.95;
+                    }
+
+                    &.join-hng{
+                        background: $blue;
+                        border-radius: 4px;
+                        display: inline-flex;
+
+                        a.nav-item-link{
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 14px;
+                            line-height: 19px;
+                            /* identical to box height */
+                            letter-spacing: 0.31px;
+                            color: #FFFFFF;
+
+                            padding: 12px 18px; //This ensure the link covers the whole button
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    main{
+        div.text-center{
+            @include flexDisplay();
+            margin-right: auto;
+            margin-left: auto;            
+            margin-top: 173.57px; //That's the difference from logo (197.57) minus 24px padding
+            margin-bottom: 5px;
+            width: 100%;
+            max-width: 683px;
+
+
+            h1, p{
+                width: 100%;
+                text-align: center;
+            }
+
+            h1{
+                font-style: normal;
+                font-weight: 600;
+                font-size: 40px;
+                line-height: 54px;
+                color: $darkBlue;
+            }
+
+            p{
+                font-style: normal;
+                font-weight: normal;
+                font-size: 24px;
+                line-height: 33px;
+                height: 154px;
+            }
+        }
+
+        article{
+            background-color: #fff;
+
+            div#faq-container, div#faqForm-container{
+                @include flexDisplay();
+                width: 90%;
+            }
+
+            div#faq-container{
+                padding: 20px;
+                margin: 0px auto;
+
+                div.accordion-item{
+                    margin-bottom: 24px;
+
+                    div.accordion-item-title{
+                        @include flexDisplay();
+                        cursor: pointer;
+
+                        span.btn-text{
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 39px;
+                            line-height: 53px;
+                            color:$blue;
+                            border: none;
+                            background: transparent;
+                        }
+
+                        img{
+                            margin-left: 14px;
+                            margin-top: auto;
+                            margin-bottom: auto;
+                            // height: 100%;
+                            // width: 100%;
+
+                            &.open-accordion {
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+
+                    div.accordion-item-text-container{
+                        display: none;
+                        margin-top: 39px;
+                        p.accordion-item-text{
+                            width: 100%;
+                            max-width: 100%;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 24px;
+                            line-height: 152.3%;
+                            color: $faqItemTextColor;
+                        }
+                    }
+                }
+            }
+
+            div#faqForm-container{
+                max-width: 1110px;
+                margin: 20px auto;
+
+                form{
+                    width: 100%;
+                    @include flexDisplay();
+                    
+                    p.form-title{
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 39px;
+                        line-height: 53px;
+                        text-align: center;
+                        color: $darkBlue;
+                        max-width: 640px;
+                        margin: auto;
+                        margin-bottom: 71px; //71px + 13px == 84px => Figma
+                    }
+
+                    label, input, textarea{
+                        width: 100%;
+                    }
+
+                    input, textarea{
+                        background: #FFFFFF;
+                        border: 1px solid #868686;
+                        box-sizing: border-box;
+                        margin: 13px auto;
+
+                        &::placeholder{
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 16px;
+                            line-height: 22px;
+                            color: $inputPlaceholderTextColor;
+
+                            //Padding
+                            padding-left: 27px;
+                            padding-top: 16px;
+                            padding-bottom: 12px;
+                        }
+                    }
+
+                    textarea{
+                        height: 297px;
+                        resize: none;
+                    }
+
+                    input{
+                        height: 50px;
+
+                        &[type="submit"]{
+                            color: #fff;
+                            background-color: $blue;
+                            padding-left: 0;
+                            text-align: center;
+                            letter-spacing: 0.315px;
+                            font-weight: bold;
+                            cursor: pointer;
+                            text-transform: uppercase;
+                            margin-top: 57px; //57px + 13px == 70px => Figma
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer{
+        background-color: $footerBg;
+    }
+}
+
+@media screen and (min-width: 900px){
+    body#faq-page{
+        header{
+            div.nav-cover{
+                @include flexDisplay();
+                width: 90%;
+                max-width: 1108px; //Calculated from 1440 - (164 + 168) => paddings
+                margin: 0px auto;
+            }
+            
+            nav{
+                margin-left: auto;
+                ul{
+                    list-style: none;
+    
+                    li.nav-item{
+                        display: inline-block;
+                        margin: auto 25px;
+
+    
+                        &.join-hng{
+                            margin-left: 36px;
+                            margin-right: 0px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        main{
+            article{
+                background-color: #fff;
+    
+                div#faq-container{
+                    //Based on Figma
+                    $mTop: 83px;
+                    $mBottom: 83px;
+                    $mRight: 118px;
+                    $mLeft: 165px;
+
+                    //Don't look good on less than 1440px
+                    margin: $mTop $mRight $mBottom $mLeft;
+
+                    max-width: 1157px;
+                    padding: 0;
+                    // margin: $mTop auto $mBottom;
+
+                    div.accordion-item{
+                        margin-bottom: 54px;
+
+                        button.accordion-item-title{    
+                            img{
+                                margin-left: 54.06px;
+                            }
+                        }
+                    }
+                }
+
+                div#faqForm-container{
+                    margin-top: 92px; //92px + 54px + 54px == 200px => Figma
+                    margin-bottom: 188px; //188px + 13px (form) == 201px => Figma
+                }
+            }
+        }
+    }
 }
