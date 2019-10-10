@@ -1,0 +1,230 @@
+html
+{
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+body
+{
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+	font-family: "Open Sans", segoe UI, sans-serif;
+	background-color: #fff;
+	color: rgba(0, 0, 0, 0.8);
+}
+a
+{
+	text-decoration: none;
+	cursor: pointer;
+}
+section
+{
+	margin-bottom: 6rem;
+}
+header
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0.5rem 3rem;
+	padding-left: 8rem;
+}
+h1
+{
+	font-size: 40px;
+}
+header nav
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+header a
+{
+	color: rgba(0, 0, 0, 0.7);
+	margin: 0.5rem 1rem;
+	align-self: center;
+}
+header #join-hng
+{
+	align-self: center;
+}
+.def-button
+{
+	color: white;
+	border-radius: 3px;
+	padding: 0.5rem 1rem;
+	background-color: #00AEFF;
+	outline: none;
+	border: none;
+}
+.shadowed
+{
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+.center-text
+{
+	text-align: center;
+}
+.skyblue-text
+{
+	color: #00AEFF;
+}
+.blue-text
+{
+	color: #084482;
+}
+.darkblue-text
+{
+	color: #8898AA;
+}
+#about-container
+{
+	display: flex;
+	flex-direction: row;
+}
+#home-about
+{
+	padding-left: 15vw;
+}
+#about-container article
+{
+	width: 50vw;
+	padding-right: 3vw;
+	font-size: 20px;
+}
+#about-container img
+{
+	width: 50vw;
+}
+#gallery-grid
+{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-gap: 2vw;
+	width: 82%;
+	margin: 3rem auto;
+}
+#participate-section
+{
+	display: flex;
+	flex-direction: row;
+	padding: 0 8rem;
+	font-size: 17px;
+}
+#participate-section article
+{
+	width: 40vw;
+	padding-right: 12rem;
+}
+#participate-section img
+{
+	width: 40vw;
+}
+#curriculum-flex
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 70vw;
+	margin: 1rem auto;
+	font-size: 18px;
+}
+#curriculum-flex p
+{
+	width: 50%;
+}
+#curriculum-flex #track-list
+{
+	align-self: center;
+}
+#curriculum-flex #track-list a
+{
+	color: #00AEFF;
+	text-align: right;
+	display: block;
+	margin-bottom: 0.5rem;
+}
+#mentor-section
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	background-color: rgb(245, 245, 245);
+	padding: 5rem 4rem 3rem;
+}
+#mentor-section article
+{
+	width: 35%;
+}
+#mentor-section #mentor-wrapper
+{
+	width: 35%;
+}
+#mentor-section #mentor-flex
+{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-between;
+	margin-bottom: 2.5rem;
+}
+#mentor-flex img
+{
+	border-radius: 50%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#mentor-flex .mentor-name
+{
+	font-size: 20px;
+	font-weight: bolder;
+	margin-bottom: 0;
+}
+#mentor-flex .mentor-desc
+{
+	font-size: 17px;
+	color: rgba(0, 0, 0, 0.5);
+	margin-top: 0.4rem;
+}
+#slack-channels #slack-title
+{
+	position: relative;
+	padding: 0.5rem;
+}
+#slack-channels #slack-logo
+{
+	position: absolute;
+}
+#slack-channels span
+{
+	padding: 0.5rem;
+}
+#slack-channels #channel-list
+{
+	width: 65%;
+	margin: 1rem auto;
+}
+#slack-channels #channel-list *
+{
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	padding-top: 1.5rem;
+	font-size: 17px;
+}
+#sponsor-grid-top
+{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 2vw;
+	width: 82%;
+	padding-left: 10vw;
+	margin: 5rem auto 3rem;
+}
+#sponsor-grid-bottom
+{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 2vw;
+	margin: 3rem auto;
+	margin-bottom: 8rem;
+	width: 60vw;
+}
