@@ -395,6 +395,9 @@ body#faq-page footer div.footerWidgets div.footerWidget-container ul.footerWidge
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: auto;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
 }
 
 body#faq-page footer div.footerWidgets div.footerWidget-container ul.footerWidget-links-list.social-media-links li a i.fab {
@@ -404,6 +407,14 @@ body#faq-page footer div.footerWidgets div.footerWidget-container ul.footerWidge
   line-height: 16px;
   color: #00AEFF;
   margin: auto;
+}
+
+body#faq-page footer div.footerWidgets div.footerWidget-container ul.footerWidget-links-list.social-media-links li a:hover {
+  background: #00AEFF;
+}
+
+body#faq-page footer div.footerWidgets div.footerWidget-container ul.footerWidget-links-list.social-media-links li a:hover i.fab {
+  color: #fff;
 }
 
 body#faq-page footer p.footer-copyright {

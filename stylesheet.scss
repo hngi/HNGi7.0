@@ -354,6 +354,9 @@ body#faq-page{
                                 display: flex;
                                 flex-wrap: wrap;
                                 margin: auto;
+                                width: 100%;
+                                height: 100%;
+                                border-radius: 100%;
 
                                 i.fab{
                                     font-style: normal;
@@ -362,6 +365,14 @@ body#faq-page{
                                     line-height: 16px;
                                     color: $blue;
                                     margin: auto;
+                                }
+
+                                &:hover{
+                                    background: $blue;
+
+                                    i.fab{
+                                        color: #fff;
+                                    }
                                 }
                             }
                         }
