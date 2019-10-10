@@ -26,18 +26,39 @@ body#faq-page header {
   padding-bottom: 24px;
 }
 
+body#faq-page header div.nav-cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin: 0px auto;
+}
+
 body#faq-page header img#logo {
   width: 281px;
   height: 56.43px;
+  margin: auto;
+}
+
+body#faq-page header nav {
+  width: 100%;
 }
 
 body#faq-page header nav ul {
   list-style: none;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 body#faq-page header nav ul li.nav-item {
   display: inline-block;
-  margin: 20px auto;
+  margin: 15px auto;
 }
 
 body#faq-page header nav ul li.nav-item a.nav-item-link {
@@ -140,7 +161,7 @@ body#faq-page main article div#faq-container div.accordion-item div.accordion-it
 body#faq-page main article div#faq-container div.accordion-item div.accordion-item-title span.btn-text {
   font-style: normal;
   font-weight: 600;
-  font-size: 39px;
+  font-size: 24px;
   line-height: 53px;
   color: #00AEFF;
   border: none;
@@ -278,6 +299,129 @@ body#faq-page main article div#faqForm-container form input[type="submit"] {
 
 body#faq-page footer {
   background-color: #FAFAFA;
+  padding: 20px;
+}
+
+body#faq-page footer img#footerLogo, body#faq-page footer div.footerWidgets, body#faq-page footer p.footer-copyright, body#faq-page footer div.logo-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body#faq-page footer div.logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+body#faq-page footer div.logo-container img#footerLogo {
+  width: 281px;
+  height: 56.43px;
+}
+
+body#faq-page footer div.footerWidgets {
+  width: 100%;
+  max-width: 100%;
+}
+
+body#faq-page footer div.footerWidgets div.footerWidget-container {
+  margin: 15px auto;
+}
+
+body#faq-page footer div.footerWidgets div.footerWidget-container:nth-child(odd) {
+  text-align: right;
+}
+
+body#faq-page footer div.footerWidgets div.footerWidget-container a, body#faq-page footer div.footerWidgets div.footerWidget-container p {
+  color: #737373;
+}
+
+body#faq-page footer div.footerWidgets div.footerWidget-container p, body#faq-page footer div.footerWidgets div.footerWidget-container address {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+body#faq-page footer div.footerWidgets div.footerWidget-container p.footerWidget-title {
+  width: 100%;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 34px;
+  color: #00AEFF;
+}
+
+body#faq-page footer div.footerWidgets div.footerWidget-container ul.footerWidget-links-list {
+  list-style: none;
+  width: 100%;
+}
+
+body#faq-page footer div.footerWidgets div.footerWidget-container ul.footerWidget-links-list li a {
+  text-decoration: none;
+}
+
+body#faq-page footer div.footerWidgets div.footerWidget-container ul.footerWidget-links-list li p strong {
+  font-weight: 600;
+}
+
+body#faq-page footer div.footerWidgets div.footerWidget-container ul.footerWidget-links-list.quick-links li a {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  color: #00AEFF;
+  line-height: 27px;
+}
+
+body#faq-page footer div.footerWidgets div.footerWidget-container ul.footerWidget-links-list.social-media-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body#faq-page footer div.footerWidgets div.footerWidget-container ul.footerWidget-links-list.social-media-links li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background: #FFFFFF;
+  margin: 25px 21px 25px 0px;
+  -webkit-box-shadow: 0px 4px 4px rgba(50, 50, 93, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 4px 4px rgba(50, 50, 93, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08);
+  border-radius: 100%;
+  width: 45px;
+  height: 45px;
+}
+
+body#faq-page footer div.footerWidgets div.footerWidget-container ul.footerWidget-links-list.social-media-links li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: auto;
+}
+
+body#faq-page footer div.footerWidgets div.footerWidget-container ul.footerWidget-links-list.social-media-links li a i.fab {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #00AEFF;
+  margin: auto;
+}
+
+body#faq-page footer p.footer-copyright {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  color: #8898AA;
 }
 
 @media screen and (min-width: 900px) {
@@ -293,9 +437,12 @@ body#faq-page footer {
   }
   body#faq-page header nav {
     margin-left: auto;
+    width: auto;
   }
   body#faq-page header nav ul {
     list-style: none;
+    display: block;
+    padding: 0;
   }
   body#faq-page header nav ul li.nav-item {
     display: inline-block;
@@ -316,12 +463,47 @@ body#faq-page footer {
   body#faq-page main article div#faq-container div.accordion-item {
     margin-bottom: 54px;
   }
-  body#faq-page main article div#faq-container div.accordion-item button.accordion-item-title img {
+  body#faq-page main article div#faq-container div.accordion-item div.accordion-item-title span.btn-text {
+    font-size: 39px;
+  }
+  body#faq-page main article div#faq-container div.accordion-item div.accordion-item-title img {
     margin-left: 54.06px;
   }
   body#faq-page main article div#faqForm-container {
     margin-top: 92px;
     margin-bottom: 188px;
+  }
+  body#faq-page footer {
+    background-color: #FAFAFA;
+  }
+  body#faq-page footer div.footerWidgets, body#faq-page footer p.footer-copyright, body#faq-page footer div.logo-container {
+    max-width: 1014px;
+  }
+  body#faq-page footer div.logo-container img#footerLogo {
+    margin-left: 0;
+  }
+  body#faq-page footer div.footerWidgets {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  body#faq-page footer div.footerWidgets div.footerWidget-container {
+    margin: 57.57px auto;
+    width: calc((100% - 50px)/4);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body#faq-page footer div.footerWidgets div.footerWidget-container:nth-child(odd) {
+    text-align: left;
   }
 }
 /*# sourceMappingURL=stylesheet.css.map */

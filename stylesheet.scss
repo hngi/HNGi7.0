@@ -44,19 +44,30 @@ body#faq-page{
         padding-top: 24px;
         padding-bottom: 24px;
 
+        div.nav-cover{
+            @include flexDisplay();
+            width: 100%;
+            margin: 0px auto;
+        }
+
         img#logo{
             //Assurance
             width: 281px;
             height: 56.43px;
+            margin: auto;
         }
 
         nav{
+            width: 100%;
+
             ul{
                 list-style: none;
+                padding: 20px;
+                @include flexDisplay();
 
                 li.nav-item{
                     display: inline-block;
-                    margin: 20px auto;
+                    margin: 15px auto;
 
                     a.nav-item-link{
                         text-decoration: none;
@@ -147,7 +158,7 @@ body#faq-page{
                         span.btn-text{
                             font-style: normal;
                             font-weight: 600;
-                            font-size: 39px;
+                            font-size: 24px;
                             line-height: 53px;
                             color:$blue;
                             border: none;
@@ -254,6 +265,119 @@ body#faq-page{
 
     footer{
         background-color: $footerBg;
+        padding: 20px;
+
+        img#footerLogo, div.footerWidgets, p.footer-copyright, div.logo-container{
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        div.logo-container{
+            @include flexDisplay();
+            width: 100%;
+
+            img#footerLogo{
+                //Assurance
+                width: 281px;
+                height: 56.43px;
+            }
+        }
+
+        div.footerWidgets{
+            width: 100%;
+            max-width: 100%;
+            div.footerWidget-container{
+                &:nth-child(odd){
+                    text-align: right;
+                }
+                margin: 15px auto;
+
+                a, p{
+                    color: $footerWidgetTextColor;
+                }
+
+                p, address{
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 20px;
+                }
+
+                p.footerWidget-title{
+                    width: 100%;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 25px;
+                    line-height: 34px;
+                    color: $blue;
+                }
+
+                ul.footerWidget-links-list{
+                    list-style: none;
+                    width: 100%;
+                    li{
+                        a{
+                            text-decoration: none;
+                        }
+
+                        p {
+                            strong{
+                                font-weight: 600;
+                            }
+                        }
+                    }
+
+                    &.quick-links{
+                        li{
+                            a{
+                                font-style: normal;
+                                font-weight: normal;
+                                font-size: 20px;
+                                color: $blue;
+                                line-height: 27px;
+                            }
+                        }
+                    }
+
+                    &.social-media-links{
+                        @include flexDisplay();
+                        li{
+                            @include flexDisplay();
+                            background: #FFFFFF;
+                            margin: 25px 21px 25px 0px;
+                            box-shadow: 0px 4px 4px rgba(50, 50, 93, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08);
+                            border-radius: 100%;
+                            width: 45px;
+                            height: 45px;
+                            
+                            a{
+                                // padding: 12px; //NB Figma padding was skewwed
+                                display: flex;
+                                flex-wrap: wrap;
+                                margin: auto;
+
+                                i.fab{
+                                    font-style: normal;
+                                    font-weight: normal;
+                                    font-size: 14px;
+                                    line-height: 16px;
+                                    color: $blue;
+                                    margin: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        p.footer-copyright{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 27px;
+            text-align: center;
+            color: $footerCopyRightTextColor;
+        }
     }
 }
 
@@ -269,8 +393,12 @@ body#faq-page{
             
             nav{
                 margin-left: auto;
+                width: auto;
+
                 ul{
                     list-style: none;
+                    display: block;
+                    padding: 0;
     
                     li.nav-item{
                         display: inline-block;
@@ -286,8 +414,7 @@ body#faq-page{
             }
         }
 
-
-        main{
+        main{      
             article{
                 background-color: #fff;
     
@@ -308,7 +435,9 @@ body#faq-page{
                     div.accordion-item{
                         margin-bottom: 54px;
 
-                        button.accordion-item-title{    
+                        div.accordion-item-title{      span.btn-text{
+                                font-size: 39px;
+                            }
                             img{
                                 margin-left: 54.06px;
                             }
@@ -319,6 +448,40 @@ body#faq-page{
                 div#faqForm-container{
                     margin-top: 92px; //92px + 54px + 54px == 200px => Figma
                     margin-bottom: 188px; //188px + 13px (form) == 201px => Figma
+                }
+            }
+        }
+
+        footer{
+            background-color: $footerBg;
+            // padding-left: 2px; instead of padding, I will use width and margin to set center.
+
+            div.footerWidgets, p.footer-copyright, div.logo-container{
+                max-width: 1014px;//1440px - (2 * 213px) +> Figma
+            }
+
+            div.logo-container{
+                img#footerLogo{
+                    margin-left: 0;
+                }
+            }
+
+    
+            div.footerWidgets{
+                @include flexDisplay();
+                width: 100%;
+                margin: auto;
+
+                align-content: center;
+
+                div.footerWidget-container{
+                    margin: 57.57px auto;
+                    width: calc((100% - 50px)/4);
+                    @include flexDisplay();
+
+                    &:nth-child(odd){
+                        text-align: left;
+                    }
                 }
             }
         }
