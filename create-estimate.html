@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create Estimate</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            overflow: auto;
+        }
+
+        h1 {
+            margin-top: 5%;
+            margin-left: 18%;
+            color: #262626;
+        }
+
+        h5 {
+            font-weight: bold;
+            color: #262626;
+        }
+
+        p {
+            padding-bottom: 40px;
+        }
+
+        .box {
+            margin-top: 5%;
+
+        }
+
+        .card-body:hover {
+            border: 3px solid #0ABAB5;
+            box-sizing: border-box;
+        }
+        
+        #right-card:hover{
+            border: 3px solid #0ABAB5;
+        }
+
+        .btn-on {
+            width: 100%;
+            background: #E4E4E4;
+            border: 1px solid rgba(145, 145, 145, 0.4);
+            box-sizing: border-box;
+
+            text-align: left;
+            color: #091429;
+            height: 60px;
+            
+        }
+
+        .btn-on:hover {
+            background: #E4E4E4;
+            color: #091429;
+        }
+
+        .btn-dark {
+            margin-top: 40px;
+            margin-left: 42%;
+            width: 15%;
+            height: 60px;
+
+            background: #091429 !important;
+    
+            background: rgba(145, 145, 145, 0.4) !important;
+
+
+        }
+
+        .btn-dark:hover {
+
+            background:#0ABAB5  !important;
+
+        }
+
+        #name {
+            width: 100%;
+            height: 60px;
+            border: 1px solid rgba(145, 145, 145, 0.4);
+        }
+
+
+
+
+        #container {
+            display: grid;
+            grid-template-columns: 1fr 5fr 1fr;
+
+        }
+
+        #container div {
+            border: 1px solid black;
+            height: 50px;
+        }
+
+        #container p {
+            justify-content: center;
+            margin-top: 15px;
+            font-style: normal;
+            font-weight: bold;
+
+
+            color: #323A43;
+        }
+
+        #ext {
+            justify-content: center;
+            border: none;
+            background: rgba(196, 196, 196, 0.4) !important;
+            color: white;
+            width: 100%;
+            height: 50px;
+        }
+
+
+        #ext:hover {
+
+            background: #0ABAB5 !important;
+
+        }
+
+        #cnc {
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <div class="contaner">
+
+        <div id="container">
+
+            <div>
+                <p class="nav" id="cnc"> x </p>
+            </div>
+            <div>
+                <p class="nav" id="cre">Create Estimate</p>
+            </div>
+            <div>
+                <input class="nav" id="ext" type="button" value="NEXT">
+            </div>
+
+        </div>
+
+
+
+        <h1 class="">What project are you estimating?</h1>
+        <div class="row ml-auto mr-auto box justify-content-center">
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">A previously created project</h5>
+                        <p class="card-text">Find estimate for a previously created project, by doing so the
+                            estimate
+                            gets populated with some of the data. </p>
+                        <!-- <div class="d-flex"> -->
+                        <div class="dropdown mr-1">
+                            <button type="button" class="btn btn-on btn-default dropdown-toggle"
+                                id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" data-offset="10,20">
+                                Select Project
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+                                <a class="dropdown-item" href="#">Glacier Fintech App</a>
+                                <a class="dropdown-item" href="#">AB Technology Solutions Branding</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div id="right-card" class="card-body">
+                        <h5 class="card-title">A new project</h5>
+                        <p class="card-text">Create a new estimate and set up a new project based on the
+                            information.
+                        </p>
+                        <input type="text" name="Project Name" id="name" placeholder="Project Name">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="btn btn-dark">NEXT</button>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

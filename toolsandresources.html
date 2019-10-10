@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <title>Lancers :: Tools and Resources</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="icon" type="images/jpg" href="#"> <!--icon image here-->
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Open%20Sans" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <style>
+            body{
+                background-color: white;
+                font-family: Ubuntu;
+            }
+            section{
+                display: flex;
+            }
+            #main-body{
+                position: absolute;
+                display: flex;
+                left: 25%;
+                top: 15%;
+            }
+            .side-panel{
+                background-color: black;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                color: #FFFFFF;
+                font-size: 30px;
+                min-height: 150%;
+                padding: 0.1%;
+                width: 120%;
+                font-family: Open Sans;
+
+            }
+            li{
+                list-style: none;
+            }
+            #homeLogo{
+                background-color: black;
+                font-family: Pacifico;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 36px;
+                line-height: 63px;
+                width: 20.45%;
+                color: #FFFFFF;
+            }
+            nav{
+                display: flex;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+            .pjinfo{
+                position: absolute;
+                font-family: Ubuntu;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 30px;
+                line-height: 34px;
+                opacity: 0.8;
+                width: 164px;
+                height: 25%;
+                left: 25%;
+                top: 3%;
+                color: #000000;
+            }
+            .clinfo{
+                position: absolute;
+                font-family: Ubuntu;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 30px;
+                line-height: 34px;
+                opacity: 0.8;
+                width: 147px;
+                height: 25%;
+                left: 40%;
+                top: 3%;
+                color: #000000;
+
+            }
+            .setting{
+                position: absolute;
+                font-family: Ubuntu;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 30px;
+                line-height: 34px;
+                opacity: 0.8;
+                width: 116px;
+                height: 25%;
+                left: 55%;
+                top: 3%;
+                color: #000000;
+        
+            }
+            nav>a.active{
+                position: absolute;
+                font-family: Ubuntu;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 30px;
+                line-height: 34px;
+                opacity: 0.8;
+                color: #0ABAB5;
+                width: 252px;
+                height: 25%;
+                left: 68%;
+                top: 3%;
+            }
+            a{
+                text-decoration: none;
+            }
+            nav>a:hover{
+                color: sienna;
+            }
+            b{
+                color:#0ABAB5;
+            }
+            h3>i.fa{
+                font-size: 300px;
+            }
+            #main-body>h3{
+                padding-left: 15%;
+            }
+            ul>li>i{
+                margin-right: 10%;
+                margin-bottom: 20%;
+                
+            }
+            .side-panel>ul>li>a{
+                text-align: justify;
+            }
+            .side-panel>ul>li{
+                margin:5%;
+            }
+            .side-panel>ul>li>a{
+                color: white;
+            }
+            #homeLogo>i{
+                position: relative;
+                left: 21%;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+                
+            <nav>
+                <div id="homeLogo"><i>Lan<b>c</b>ers</i></div>
+                <a href="#" class="pjinfo">Project Info</a>
+                <a href="#" class="clinfo"> Client Info</a>
+                <a href="#" class="setting">Settings</a>
+                <a href="#" class="active"> Tools & Resources</a>
+            </nav>
+        </header>
+        <section>
+        <aside>
+        <div class="side-panel">
+            <ul>
+                <li><i class="fa fa-home"></i><a href="#">Dashboard</a></li>
+                <li><i class="fa fa-users"></i><a href="#">Client</a></li>
+                <li><i class="fa fa-lightbulb-o"></i>Project <i class="fa fa-angle-down dropdown"></i> </li>
+                <li><i class="fa fa-file-pdf-o"></i><a href="#">Invoice</a></li>
+                <li><i class="fa fa-file"></i><a href="#">Contract</a></li>
+                <li><i class="fa fa-suitcase"></i><a href="#">Proposals</a></li>
+            </ul>
+        </div>
+        </aside>
+        
+            <div id="main-body">
+                <h3><i class="fa fa-file-text"></i><br><br />Generate an NDA</h3>
+                <h3><i class="fa fa-file-text"></i><br><br /> Generate a Contract</h3>
+            </div>
+        </section>
+    </body>
+</html>

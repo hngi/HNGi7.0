@@ -1,0 +1,110 @@
+body{
+    font-family: Open Sans, sans-serif;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+.navbar-brand{
+    font-family: Pacifico,cursive;
+    color: #FFFFFF !important;
+    font-size: 36px !important;
+    line-height: 63px !important;
+    padding-left: 4rem;
+}
+b{
+    color: #0ABAB5;
+}
+.container-fluid{
+    width: 100% !important;
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+}
+.navbar{
+    background-color: #091429;
+    height: 98px;
+}
+.nav-link{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: right;
+    color: #FFFFFF !important;
+}
+h1{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.5rem !important;
+    text-align: center;
+    color: #000000;
+
+}
+h2{
+    font-size: 48px !important;
+    font-weight: normal;
+}
+p{
+    font-size: 1em !important;
+    color: #262626;
+}
+span{
+    font-family: Ubuntu,sans-serif;
+}
+.col-sm-3{
+    width: 424px;
+    height: 500px;
+    border: 1px solid #000000;
+    border-radius: 6px;
+}
+.col-md-12{
+    position: relative;
+}
+.btn{    
+    background-color:  #0ABAB5 !important;
+    color: #FFFFFF !important;
+    border-radius: 3px;
+    height: 45px;
+
+    margin-bottom: 10px !important;
+}
+.enterprise{
+    background-color: #091429;
+    text-align: center;
+    color: #FFFFFF;
+    font-size:18px;
+    line-height: 25px;
+
+}
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+ul{
+    list-style-type: none;
+    margin-top: 
+}
+.mailform li{
+ 
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 25px;
+
+color: #000000;
+
+}
+#starter{
+    margin-top: 50%;
+}
+#pro{
+    margin-top: 40%;
+}
+#proplus{
+    margin-top: 26%;
+}
+img{
+    padding-right: 10px;
+
+}
