@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Mentor Setup Page | 2</title>
+        <meta name="description" content="mentors">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu|Pacifico&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <style>
+        *{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family:  Open Sans, sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #F4F5F7 !important;
+}
+/*Header*/
+body {
+    color: #000000 !important;
+}
+.nav-item {
+    color: #000000 !important;
+    font-family: Open Sans,sans-serif;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+.join {
+    border: 1px solid #00AEFF;
+    border-radius: 4%;
+    background-color: #00AEFF;
+}
+.navbar {
+    color: #474747;
+}
+
+header {
+    /* width: 1440px; */
+    height: 530px;
+    left: 0px;
+    top: 0px;
+    background-color: #D1F0F6;
+    padding: 0;
+}
+.mb-4 {
+    font-family: Open Sans,sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 54px;
+    text-align: center;
+    color: #084482;
+}
+.par {
+    margin-top: 130px;
+}
+.lead {
+    text-align: center;
+    font-family: Open Sans;
+    font-weight: normal;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+@media (max-width: 990px) {
+        .nav-item {
+        color: #000000 !important;
+        font-family: Open Sans;
+        font-weight: normal;
+        font-size: 15px;
+        text-transform: capitalize;
+    }
+    .join {
+        border: 1px solid #00AEFF;
+        border-radius: 4%;
+        background-color: #00AEFF;
+    }
+    .navbar {
+        color: #474747;
+    }
+
+    header {
+        /* width: 1440px; */
+        height: 530px;
+        left: 0px;
+        top: 0px;
+        background: #D1F0F6;
+    }
+    .mb-4 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 40px;
+        text-align: center;
+        color: #084482;
+    }
+    .par {
+        margin-top: 100px;
+    }
+    .lead {
+        text-align: center;
+        font-family: Open Sans;
+        font-weight: normal;
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+    .logo {
+        width: 70%;
+        height: auto;
+    }
+
+}
+@media (max-width: 770px) {
+        .nav-item {
+        color: #000000 !important;
+        font-family: Open Sans;
+        font-weight: normal;
+        font-size: 12px;
+        text-transform: capitalize;
+    }
+    .join {
+        border: 1px solid #00AEFF;
+        border-radius: 4%;
+        background-color: #00AEFF;
+    }
+    .navbar {
+        color: #474747;
+    }
+
+    header {
+        height: 530px;
+        left: 0px;
+        top: 0px;
+        background: #D1F0F6;
+    }
+    .mb-4 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 25px;
+        text-align: center;
+        color: #084482;
+    }
+    .par {
+        margin-top: 100px;
+    }
+    .lead {
+        text-align: center;
+        font-family: Open Sans;
+        font-weight: normal;
+        font-size: 15px;
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+    .logo {
+        width: 50%;
+        height: auto;
+    }
+
+}
+@media (max-width: 412px) {
+        .nav-item {
+        color: #000000 !important;
+        font-family: Open Sans;
+        font-weight: bold;
+        font-size: 10px;
+        text-transform: capitalize;
+    }
+    .join {
+        border: 1px solid #00AEFF;
+        border-radius: 4%;
+        background-color: #00AEFF;
+    }
+    .navbar {
+        color: #474747;
+    }
+
+    header {
+        height: 530px;
+        left: 0px;
+        top: 0px;
+        background: #D1F0F6;
+    }
+    .mb-4 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 25px;
+        text-align: center;
+        color: #084482;
+    }
+    .par {
+        margin-top: 100px;
+    }
+    .lead {
+        text-align: center;
+        font-family: Open Sans;
+        font-weight: normal;
+        font-size: 15px;
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+    .logo {
+        width: 30%;
+        height: auto;
+    }
+    .fa-lg {
+        font-size: .7em;
+        line-height: .5em;
+        vertical-align: -10%;
+        margin: -5px;
+    }
+
+}
+/*Form*/
+.form {
+    background-color: #F4F5F7 !important;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.expertise-text{
+    height: 100px;
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-weight: normal;
+    color: #333333;
+    font-size: 24px;
+    line-height: 33px;
+}
+ .expertise-body{
+    height: 250px;
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    color:#525F7F;
+    font-size: 14px;
+    line-height: 19px;
+}
+.image-upload > input
+{
+    display: none;
+}
+
+.image-upload img
+{
+    width: 80px;
+    cursor: pointer;
+}
+
+ul{
+    list-style-type: none;
+}
+.checkbox{
+   margin: 10px;
+   border: 10px solid #CAD1D7 ;
+   background: #ffffff;
+}
+ .input{
+width: 350px;
+
+}
+/*input[type="checkbox"]{
+    margin: 10px;
+    border: 1px solid  #CAD1D7;
+}*/
+.fa-chevron-down{
+margin-right: 120px;
+margin-top: 8px;
+float: right;
+color:  #00AEFF;
+}
+.fa-camera{
+    margin-top: 25px;
+    color: #8898AA;
+
+}
+.second{
+    
+    height: 600px;
+    margin: 10px;
+    margin-top: 20px;
+   
+}
+.circle{
+    border:2px dotted #8898AA;
+    height: 70px;
+    width: 70px;
+    border-radius: 100px;
+    background: #ffffff;
+}
+.click{
+    text-align: center;
+    font-weight: normal;
+    color: #333333;
+    font-size: 14px;
+}
+.jpg{
+    text-align: center;
+    font-weight: normal;
+    color: #333333;
+    font-size: 14px;
+}
+.form-control{
+   margin: 20px !important;
+   color: #ADB5BD !important;
+   font-size: 16px;
+   border-radius: 0;
+}
+
+    body {
+        color: #000000 !important;
+    }
+    .nav-item {
+        color: #000000 !important;
+        font-family: Open Sans;
+        font-weight: normal;
+        text-transform: capitalize;
+    }
+    .join {
+        border: 1px solid #00AEFF;
+        border-radius: 4%;
+        background-color: #00AEFF;
+    }
+    .navbar {
+        color: #474747;
+    }
+    
+    header {
+        /* width: 1440px; */
+        height: 530px;
+        left: 0px;
+        top: 0px;
+        background: #D1F0F6;
+    }
+    .mb-4 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 54px;
+        text-align: center;
+        color: #084482;
+    }
+    .par {
+        margin-top: 130px;
+    }
+    .lead {
+        text-align: center;
+        font-family: Open Sans;
+        font-weight: normal;
+        margin-left: 250px;
+        margin-right: 250px;
+    }
+    
+    @media (max-width: 990px) {
+            .nav-item {
+            color: #000000 !important;
+            font-family: Open Sans;
+            font-weight: normal;
+            font-size: 15px;
+            text-transform: capitalize;
+        }
+        .join {
+            border: 1px solid #00AEFF;
+            border-radius: 4%;
+            background-color: #00AEFF;
+        }
+        .navbar {
+            color: #474747;
+        }
+    
+        header {
+            /* width: 1440px; */
+            height: 530px;
+            left: 0px;
+            top: 0px;
+            background: #D1F0F6;
+        }
+        .mb-4 {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 40px;
+            text-align: center;
+            color: #084482;
+        }
+        .par {
+            margin-top: 100px;
+        }
+        .lead {
+            text-align: center;
+            font-family: Open Sans;
+            font-weight: normal;
+            margin-left: 150px;
+            margin-right: 150px;
+        }
+        .logo {
+            width: 70%;
+            height: auto;
+        }
+    
+    }
+    @media (max-width: 770px) {
+            .nav-item {
+            color: #000000 !important;
+            font-family: Open Sans;
+            font-weight: normal;
+            font-size: 12px;
+            text-transform: capitalize;
+        }
+        .join {
+            border: 1px solid #00AEFF;
+            border-radius: 4%;
+            background-color: #00AEFF;
+        }
+        .navbar {
+            color: #474747;
+        }
+    
+        header {
+            height: 530px;
+            left: 0px;
+            top: 0px;
+            background: #D1F0F6;
+        }
+        .mb-4 {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 25px;
+            text-align: center;
+            color: #084482;
+        }
+        .par {
+            margin-top: 100px;
+        }
+        .lead {
+            text-align: center;
+            font-family: Open Sans;
+            font-weight: normal;
+            font-size: 15px;
+            margin-left: 70px;
+            margin-right: 70px;
+        }
+        .logo {
+            width: 50%;
+            height: auto;
+        }
+    
+    }
+    @media (max-width: 412px) {
+            .nav-item {
+            color: #000000 !important;
+            font-family: Open Sans;
+            font-weight: bold;
+            font-size: 10px;
+            text-transform: capitalize;
+        }
+        .join {
+            border: 1px solid #00AEFF;
+            border-radius: 4%;
+            background-color: #00AEFF;
+        }
+        .navbar {
+            color: #474747;
+        }
+    
+        header {
+            height: 530px;
+            left: 0px;
+            top: 0px;
+            background: #D1F0F6;
+        }
+        .mb-4 {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 25px;
+            text-align: center;
+            color: #084482;
+        }
+        .par {
+            margin-top: 100px;
+        }
+        .lead {
+            text-align: center;
+            font-family: Open Sans;
+            font-weight: normal;
+            font-size: 15px;
+            margin-left: 70px;
+            margin-right: 70px;
+        }
+        .logo {
+            width: 30%;
+            height: auto;
+        }
+        .fa-lg {
+            font-size: .7em;
+            line-height: .5em;
+            vertical-align: -10%;
+            margin: -5px;
+        }
+    
+    }
+    .btn{
+        width: 100px;
+        font-size: 10px;
+        background-color: #00AEFF !important;
+        border-radius: 0;
+        color: #ffffff !important;
+        box-shadow: 0px 4px 6px rgba(50, 50, 93, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08);
+    }
+ /*footer style*/
+#footer {
+    min-height: 400px;
+    margin-top: 10%;
+    padding-top: 25%;
+}
+footer li{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 27px;
+    color: #8898AA;
+}
+footer, .card, .list-group-item {
+    background: #FAFAFA;
+    border-radius: 0;
+}
+footer .card-title, .colored {
+    color: #00AEFF;
+}
+.card-title {
+    font-weight: 600;
+}
+p.text-center {
+    margin-top: 20vh;
+    color: #8898AA;
+}
+i.fab{
+    color: #00AEFF;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: #8898AA 0px 4px 7px;
+    margin-right: 20px;
+}
+    </style>
+    <body>
+
+        <!--Header-->
+        <header>
+
+            <!-- <a href="#main" class="sr-only sr-only-focusable">Skip to main content</a> -->
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light py-3" aria-label="Main navigation">
+        
+                    <a class="navbar-brand text-dark" href="#">
+                        <img src="https://res.cloudinary.com/kuic/image/upload/v1570690973/HNG/brand-logo_nbp2ci.png" alt="HNG Internship" class="logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars fa-lg"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav align-items-lg-center text-uppercase pt-3 pt-lg-0 ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" style="text-transform:uppercase;">HNG6</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Mentors</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                            <li class="nav-item join">
+                                <a class="nav-link " href="#">Join HNG</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!--Welcome Section-->
+                <div class="text-center mt-5">
+                    <div class="text-center">
+                        <h1 class="display-4 mb-4 mt-5">Mentor Account Set Up</h1>
+                        <p class="col-cg-6 lead text-secondary">Thanks for your interest in becoming a HNG mentor. Kindly fill out this form.</p>
+                    </div>
+                </div>  
+            </div>
+        </header>
+        
+        <!--Form1-->
+        <div class="container form mt-5">
+            <div class="row d-flex">
+                <div class="col-lg-8 m-auto "> 
+                    <div class="expertise">
+                       <center> <span class="expertise-text ">Choose an area of expertise</span> </center>  
+                        <div class="expertise-body">
+                            <div class="input"><input type="checkbox" class="checkbox "><span id="span-text">Frontend Development</span><i class="fas fa-chevron-down"></i></div>
+                            <div class="input"><input type="checkbox" class="checkbox"><span id="span-text">Backend Development</span><i class="fas fa-chevron-down"></i></div>
+                            <div class="input"><input type="checkbox" class="checkbox"><span id="span-text">Machine Learning</span><i class="fas fa-chevron-down"></i></div>
+                            <div class="input"><input type="checkbox" class="checkbox"><span id="span-text">UI/UX Design</span><i class="fas fa-chevron-down"></i></div>
+                            <div class="input"><input type="checkbox" class="checkbox"><span id="span-text">Mobile Development</span><i class="fas fa-chevron-down"></i></div>
+                            <div class="input"><input type="checkbox" class="checkbox"><span id="span-text"> Digital Marketing</span><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Form2-->
+            <div class="row d-flex mt-5 mb-5">
+                <div class="col-lg-8 m-auto"> 
+                    <div class="second">
+                        <center>
+                        <div class="image-upload">
+                                <label for="file-input"><div class="circle"><i class="fas fa-camera"></i></div></label>
+                                <input id="file-input" type="file"/>
+                        </div>
+                        <div class="click text-center">Click the image above to upload a profile photo</div>
+                        <div class="jpg">JPG or PNG. Max size of 400k</div>
+                        </center>
+                        <div class="form-group">
+                            <input type="text" class="form-control" required placeholder="Name" aria-label="Username" aria-describedby="addon-wrapping">
+                            <input type="email" class="form-control" required placeholder="Email" aria-label="Username" aria-describedby="addon-wrapping">
+                            <input type="number" class="form-control" required placeholder="Phone number" aria-label="Username" aria-describedby="addon-wrapping">
+                            <input type="text" class="form-control" required placeholder="What do you do" aria-label="Username" aria-describedby="addon-wrapping">
+                            <input type="text" class="form-control" required placeholder="Link to you portfolio" aria-label="Username" aria-describedby="addon-wrapping">
+                            <input type="text" class="form-control" required placeholder="Link to your Linkedin profile" aria-label="Username" aria-describedby="addon-wrapping">
+                            <input type="text" class="form-control" required placeholder="Link to your cv" aria-label="Username" aria-describedby="addon-wrapping">
+                            <input type="text" class="form-control" required placeholder="Why are you interested in mentoring with HNG?" aria-label="Username" aria-describedby="addon-wrapping">
+                            <input type="text" class="form-control" required placeholder="What state are you currently in?" aria-label="Username" aria-describedby="addon-wrapping">
+                            <input type="text" class="form-control" required placeholder="What is your current employment status?" aria-label="Username" aria-describedby="addon-wrapping">
+                            <center><button class="btn">Submit</button></center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--FooterSection-->
+<footer class="d-flex flex-column align-items-center justify-content-center" id="footer">
+    <div class="row col-10" >
+        <div class="card col-sm-12 col-lg-12 border-0">
+            <figure class="mb-5 align-self-start">
+                <img src="https://res.cloudinary.com/kuic/image/upload/v1570690973/HNG/brand-logo_nbp2ci.png" alt="HNG-logo">
+            </figure>
+        </div>
+        <div class="card col-sm-6 col-lg border-0">
+            <ul class="list-group list-group-flush colored">
+            <li class="list-group-item"><h4 class="card-title">Quick Links</h4></li>
+                <li class="list-group-item border-0">Join HNG</li>
+                <li class="list-group-item border-0">About HNG</li>
+                <li class="list-group-item border-0">Become a Sponsor</li>
+                <li class="list-group-item border-0">Signup as a mentor</li>
+            </ul>
+        </div>
+        <div class="card col-sm-6 col-lg border-0">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h4 class="card-title">Contact Us</h4></li>
+                <li class="list-group-item border-0">Phone: </li>
+                <li class="list-group-item border-0">+234 (0) 812 345 6789</li>
+                <li class="list-group-item border-0">Email:</li>
+                <li class="list-group-item border-0">interns@hng.tech</li>
+            </ul>
+        </div>
+        <div class="card col-sm-6 col-lg border-0">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h4 class="card-title">Office Address</h4></li>
+                <li class="list-group-item border-0">3 Birrel Avenue</li>
+                <li class="list-group-item border-0"> 
+                        Sabo,Yaba, </li>
+                <li class="list-group-item border-0">
+                        Lagos State</li>
+                <li class="list-group-item border-0"></li>
+            </ul>
+        </div>
+        <div class="card col-sm-6 col-lg border-0 colored">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h4 class="card-title">Follow us</h4></li>
+                <li><i class="fab fa-twitter mr-3"></i>
+                    <i class="fab fa-facebook-square mr-3"></i>
+                    <i class="fab fa-dribbble"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <p class="text-center" >
+            &copy; 2019, HNG Internship. All rights reserved.
+    </p>
+</footer>
+
+
+
+
+
+        <script src="https://kit.fontawesome.com/85682eb992.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
