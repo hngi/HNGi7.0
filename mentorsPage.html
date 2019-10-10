@@ -60,6 +60,11 @@
       text-align: center;
     }
 
+    .navbar-toggler-icon {
+      border-radius: none;
+      box-shadow: none;
+    }
+
     i {
       color: #ffffff;
     }
@@ -97,6 +102,11 @@
       font-weight: bold;
      }
 
+     .navbar-toggler {
+       border: none !important;
+       outline: none !important;
+     }
+
      #landing-page h2 {
        margin-top: 5rem;
        font-weight: bold;
@@ -114,10 +124,12 @@
      
      footer {
          text-align: center;
+         position: relative;
+         bottom: 0;
      }
      
      .footer-brand {
-         margin-top: 2rem;
+         margin-top: 5rem;
      }
      
      #sections {
@@ -161,7 +173,9 @@
      }
      
      #footer {
-         background: none !important;
+        /* background: none !important; */
+        min-height: 100vh;
+        padding: 1rem;
      }
      
      footer {
@@ -180,14 +194,34 @@
 
 
 
-    @media (min-width: 640px) {
+    @media (min-width: 700px) {
       .wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
       }
+
+      .collapse {
+        display: flex;
+        justify-content:flex-end;
+      }
+
+      li {
+        padding: 0 1.5rem;
+      }
+
+      ul {
+        margin-right: 3rem;
+      }
     }
 
-    @media (min-width: 740px) {
+    /* @media (min-width: 739px) {
+      .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    } */
+
+    @media (min-width: 1000px) {
       .wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -202,8 +236,8 @@
       }
 
       .collapse {
-      display: flex;
-      justify-content:flex-end;
+        display: flex;
+        justify-content:flex-end;
       }
 
       #img {
@@ -300,7 +334,7 @@
 
   
   <footer>
-      <div class="jumbotron" id="footer">
+      <div id="footer">
           <div class="footer-brand">
               <img src="https://res.cloudinary.com/chidi6ix/image/upload/v1570716504/brand-logo_cmbyi8.svg" id="img">
           </div>
@@ -343,15 +377,21 @@
               <br>
               <div class="bottom-icons">
                   <span>
-                      <i class="fab fa-twitter"></i>
+                      <a href="#">
+                        <i class="fab fa-twitter"></i>
+                      </a>
                   </span>
                   
                   <span>
-                      <i class="fab fa-facebook"></i>
+                      <a href="#">
+                        <i class="fab fa-facebook-square"></i>
+                      </a>
                   </span>
                   
                   <span>
-                      <i class="fab fa-dribbble"></i>
+                      <a href="#">
+                        <i class="fab fa-dribbble"></i>
+                      </a>
                   </span>
               </div>
           </section>
