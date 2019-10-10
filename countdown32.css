@@ -49,6 +49,45 @@ header #join-hng
 {
 	align-self: center;
 }
+footer
+{
+	background-color: rgb(245, 245, 245);
+	padding: 4rem 8rem;
+}
+footer > nav
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+footer #contact-section a, footer #address
+{
+	color: rgba(0, 0, 0, 0.5);
+}
+footer #link-list
+{
+	display: flex;
+	flex-direction: column;
+}
+footer #link-list > *
+{
+	font-weight: 500;
+	font-size: 17px;
+	padding: 0.5rem;
+}
+footer #socials a
+{
+	padding: 0.5rem;
+	background-color: #fff;
+	border-radius: 50%;
+	margin-right: 0.8rem;
+	box-shadow: -3px 3px 3px 1px rgba(0, 0, 0, 0.07);
+}
+footer #socials img
+{
+	height: 13px;
+	width: 25px;
+}
 .def-button
 {
 	color: white;
@@ -77,6 +116,27 @@ header #join-hng
 .darkblue-text
 {
 	color: #8898AA;
+}
+.countdown-symbol
+{
+	border-radius: 50%;
+	border: 8px solid rgba(0, 0, 0, 0.1);
+	padding: 1rem 1.5rem;
+	font-size: 50px;
+	font-weight: bolder;
+}
+.countdown-symbol + p
+{
+	font-weight: bolder;
+	font-size: 20px;
+}
+#countdown-container
+{
+	width: 45vw;
+	margin: 1rem auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 }
 #about-container
 {
@@ -210,21 +270,31 @@ header #join-hng
 	padding-top: 1.5rem;
 	font-size: 17px;
 }
-#sponsor-grid-top
+#sponsor-grid-top, #sponsor-grid-bottom
 {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	grid-gap: 2vw;
-	width: 82%;
-	padding-left: 10vw;
-	margin: 5rem auto 3rem;
+	margin-top: 2.5rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 }
 #sponsor-grid-bottom
 {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	grid-gap: 2vw;
-	margin: 3rem auto;
-	margin-bottom: 8rem;
-	width: 60vw;
+	width: 80vw;
+	margin: 2.5rem auto 5rem;
+}
+#sponsor-grid-top img, #sponsor-grid-bottom img
+{
+	max-width: 15vw;
+}
+
+
+
+
+
+@media (max-width: 800px)
+{
+	#sponsor-grid-top img, #sponsor-grid-bottom img
+	{
+		max-width: 20vw;
+	}
 }
