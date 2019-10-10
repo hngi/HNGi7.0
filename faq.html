@@ -1,728 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HNG</title>
-	<meta name="description" content="FAQ page for HNG6 Page">
-	<link rel="apple-touch-icon" href="./images/brand-logo.png">
-    <meta name="theme-color" content="#00AEFF">
-    <link rel="icon"  href="./images/">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
-    <style>
-        @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap");
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        body, main, header, section, footer, article {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
-            width: 100%;
-            max-width: 100%;
-        }
-
-        body#faq-page {
-            font-family: 'Open Sans', sans-serif;
-            font-weight: normal;
-            color: #474747;
-            background-color: #D1F0F6;
-        }
-
-        body#faq-page header {
-            padding-top: 24px;
-            padding-bottom: 24px;
-        }
-
-        body#faq-page header div.nav-cover {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
-            width: 100%;
-            margin: 0px auto;
-        }
-
-        body#faq-page header img#logo {
-            width: 281px;
-            height: 56.43px;
-            margin: auto;
-        }
-
-        body#faq-page header nav {
-            width: 100%;
-        }
-
-        body#faq-page header nav ul {
-            list-style: none;
-            padding: 20px;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
-        }
-
-        body#faq-page header nav ul li.nav-item {
-            display: inline-block;
-            margin: 15px auto;
-        }
-
-        body#faq-page header nav ul li.nav-item a.nav-item-link {
-            text-decoration: none;
-            color: #474747;
-            text-transform: capitalize;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 16px;
-            line-height: 22px;
-            mix-blend-mode: normal;
-            opacity: 0.95;
-        }
-
-        body#faq-page header nav ul li.nav-item.join-hng {
-            background: #00AEFF;
-            border-radius: 4px;
-            display: -webkit-inline-box;
-            display: -ms-inline-flexbox;
-            display: inline-flex;
-        }
-
-        body#faq-page header nav ul li.nav-item.join-hng a.nav-item-link {
-            font-style: normal;
-            font-weight: bold;
-            font-size: 14px;
-            line-height: 19px;
-            /* identical to box height */
-            letter-spacing: 0.31px;
-            color: #FFFFFF;
-            padding: 12px 18px;
-        }
-
-        body#faq-page main div.text-center {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
-            margin-right: auto;
-            margin-left: auto;
-            margin-top: 173.57px;
-            margin-bottom: 5px;
-            width: 100%;
-            max-width: 683px;
-        }
-
-        body#faq-page main div.text-center h1, body#faq-page main div.text-center p {
-            width: 100%;
-            text-align: center;
-        }
-
-        body#faq-page main div.text-center h1 {
-            font-style: normal;
-            font-weight: 600;
-            font-size: 40px;
-            line-height: 54px;
-            color: #084482;
-        }
-
-        body#faq-page main div.text-center p {
-            font-style: normal;
-            font-weight: normal;
-            font-size: 24px;
-            line-height: 33px;
-            height: 154px;
-        }
-
-        body#faq-page main article {
-            background-color: #fff;
-        }
-
-        body#faq-page main article div#faq-container, body#faq-page main article div#faqForm-container {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
-            width: 90%;
-        }
-
-        body#faq-page main article div#faq-container {
-            padding: 20px;
-            margin: 0px auto;
-        }
-
-        body#faq-page main article div#faq-container div.accordion-item {
-            margin-bottom: 24px;
-        }
-
-        body#faq-page main article div#faq-container div.accordion-item div.accordion-item-title {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
-            cursor: pointer;
-        }
-
-        body#faq-page main article div#faq-container div.accordion-item div.accordion-item-title span.btn-text {
-            font-style: normal;
-            font-weight: 600;
-            font-size: 24px;
-            line-height: 53px;
-            color: #00AEFF;
-            border: none;
-            background: transparent;
-        }
-
-        body#faq-page main article div#faq-container div.accordion-item div.accordion-item-title img {
-            margin-left: 14px;
-            margin-top: auto;
-            margin-bottom: auto;
-        }
-
-        body#faq-page main article div#faq-container div.accordion-item div.accordion-item-title img.open-accordion {
-            -webkit-transform: rotate(180deg);
-                    transform: rotate(180deg);
-        }
-
-        body#faq-page main article div#faq-container div.accordion-item div.accordion-item-text-container {
-            display: none;
-            margin-top: 39px;
-        }
-
-        body#faq-page main article div#faq-container div.accordion-item div.accordion-item-text-container p.accordion-item-text {
-            width: 100%;
-            max-width: 100%;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 24px;
-            line-height: 152.3%;
-            color: #7B7C7D;
-        }
-
-        body#faq-page main article div#faqForm-container {
-            max-width: 1110px;
-            margin: 20px auto;
-        }
-
-        body#faq-page main article div#faqForm-container form {
-            width: 100%;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
-        }
-
-        body#faq-page main article div#faqForm-container form p.form-title {
-            font-style: normal;
-            font-weight: 600;
-            font-size: 39px;
-            line-height: 53px;
-            text-align: center;
-            color: #084482;
-            max-width: 640px;
-            margin: auto;
-            margin-bottom: 71px;
-        }
-
-        body#faq-page main article div#faqForm-container form label, body#faq-page main article div#faqForm-container form input, body#faq-page main article div#faqForm-container form textarea {
-            width: 100%;
-        }
-
-        body#faq-page main article div#faqForm-container form input, body#faq-page main article div#faqForm-container form textarea {
-            background: #FFFFFF;
-            border: 1px solid #868686;
-            -webkit-box-sizing: border-box;
-                    box-sizing: border-box;
-            margin: 13px auto;
-            padding-left: 27px;
-            padding-top: 16px;
-            padding-bottom: 12px;
-        }
-
-        body#faq-page main article div#faqForm-container form input::-webkit-input-placeholder, body#faq-page main article div#faqForm-container form textarea::-webkit-input-placeholder {
-            font-style: normal;
-            font-weight: normal;
-            font-size: 16px;
-            line-height: 22px;
-            color: #868686;
-        }
-
-        body#faq-page main article div#faqForm-container form input:-ms-input-placeholder, body#faq-page main article div#faqForm-container form textarea:-ms-input-placeholder {
-            font-style: normal;
-            font-weight: normal;
-            font-size: 16px;
-            line-height: 22px;
-            color: #868686;
-        }
-
-        body#faq-page main article div#faqForm-container form input::-ms-input-placeholder, body#faq-page main article div#faqForm-container form textarea::-ms-input-placeholder {
-            font-style: normal;
-            font-weight: normal;
-            font-size: 16px;
-            line-height: 22px;
-            color: #868686;
-        }
-
-        body#faq-page main article div#faqForm-container form input::placeholder, body#faq-page main article div#faqForm-container form textarea::placeholder {
-            font-style: normal;
-            font-weight: normal;
-            font-size: 16px;
-            line-height: 22px;
-            color: #868686;
-        }
-
-        body#faq-page main article div#faqForm-container form textarea {
-            height: 297px;
-            resize: none;
-        }
-
-        body#faq-page main article div#faqForm-container form input {
-            height: 50px;
-        }
-
-        body#faq-page main article div#faqForm-container form input[type="submit"] {
-            color: #fff;
-            border: 0;
-            background-color: #00AEFF;
-            padding-left: 0;
-            text-align: center;
-            letter-spacing: 0.315px;
-            font-weight: bold;
-            cursor: pointer;
-            text-transform: uppercase;
-            margin-top: 57px;
-        }
-
-        body#faq-page footer {
-            background-color: #FAFAFA;
-            padding: 20px;
-        }
-
-        body#faq-page footer img#footerLogo, body#faq-page footer div.footerWidgets, body#faq-page footer p.footer-copyright, body#faq-page footer div.logo-container {
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        body#faq-page footer div.logo-container {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
-            width: 100%;
-        }
-
-        body#faq-page footer div.logo-container img#footerLogo {
-            width: 281px;
-            height: 56.43px;
-        }
-
-        body#faq-page footer div.footerWidgets {
-            width: 100%;
-            max-width: 100%;
-        }
-
-        body#faq-page footer div.footerWidgets div.footerWidget-container {
-            margin: 15px auto;
-        }
-
-        body#faq-page footer div.footerWidgets div.footerWidget-container:nth-child(odd) {
-            text-align: right;
-        }
-
-        body#faq-page footer div.footerWidgets div.footerWidget-container a, body#faq-page footer div.footerWidgets div.footerWidget-container p {
-            color: #737373;
-        }
-
-        body#faq-page footer div.footerWidgets div.footerWidget-container p, body#faq-page footer div.footerWidgets div.footerWidget-container address {
-            font-style: normal;
-            font-weight: normal;
-            font-size: 20px;
-        }
-
-        body#faq-page footer div.footerWidgets div.footerWidget-container p.footerWidget-title {
-            width: 100%;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 25px;
-            line-height: 34px;
-            color: #00AEFF;
-        }
-
-        body#faq-page footer div.footerWidgets div.footerWidget-container ul.footerWidget-links-list {
-            list-style: none;
-            width: 100%;
-        }
-
-        body#faq-page footer div.footerWidgets div.footerWidget-container ul.footerWidget-links-list li a {
-            text-decoration: none;
-        }
-
-        body#faq-page footer div.footerWidgets div.footerWidget-container ul.footerWidget-links-list li p strong {
-            font-weight: 600;
-        }
-
-        body#faq-page footer div.footerWidgets div.footerWidget-container ul.footerWidget-links-list.quick-links li a {
-            font-style: normal;
-            font-weight: normal;
-            font-size: 20px;
-            color: #00AEFF;
-            line-height: 27px;
-        }
-
-        body#faq-page footer div.footerWidgets div.footerWidget-container ul.footerWidget-links-list.social-media-links {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
-        }
-
-        body#faq-page footer div.footerWidgets div.footerWidget-container ul.footerWidget-links-list.social-media-links li {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
-            background: #FFFFFF;
-            margin: 25px 21px 25px 0px;
-            -webkit-box-shadow: 0px 4px 4px rgba(50, 50, 93, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08);
-                    box-shadow: 0px 4px 4px rgba(50, 50, 93, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08);
-            border-radius: 100%;
-            width: 45px;
-            height: 45px;
-        }
-
-        body#faq-page footer div.footerWidgets div.footerWidget-container ul.footerWidget-links-list.social-media-links li a {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
-            margin: auto;
-            width: 100%;
-            height: 100%;
-            border-radius: 100%;
-        }
-
-        body#faq-page footer div.footerWidgets div.footerWidget-container ul.footerWidget-links-list.social-media-links li a i.fab {
-            font-style: normal;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 16px;
-            color: #00AEFF;
-            margin: auto;
-        }
-
-        body#faq-page footer div.footerWidgets div.footerWidget-container ul.footerWidget-links-list.social-media-links li a:hover {
-            background: #00AEFF;
-        }
-
-        body#faq-page footer div.footerWidgets div.footerWidget-container ul.footerWidget-links-list.social-media-links li a:hover i.fab {
-            color: #fff;
-        }
-
-        body#faq-page footer p.footer-copyright {
-            font-style: normal;
-            font-weight: normal;
-            font-size: 20px;
-            line-height: 27px;
-            text-align: center;
-            color: #8898AA;
-        }
-
-        @media screen and (min-width: 900px) {
-            body#faq-page header div.nav-cover {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -ms-flex-wrap: wrap;
-                    flex-wrap: wrap;
-                width: 90%;
-                max-width: 1108px;
-                margin: 0px auto;
-            }
-            body#faq-page header nav {
-                margin-left: auto;
-                width: auto;
-            }
-            body#faq-page header nav ul {
-                list-style: none;
-                display: block;
-                padding: 0;
-            }
-            body#faq-page header nav ul li.nav-item {
-                display: inline-block;
-                margin: auto 25px;
-            }
-            body#faq-page header nav ul li.nav-item.join-hng {
-                margin-left: 36px;
-                margin-right: 0px;
-            }
-            body#faq-page main article {
-                background-color: #fff;
-            }
-            body#faq-page main article div#faq-container {
-                margin: 83px 118px 83px 165px;
-                max-width: 1157px;
-                padding: 0;
-            }
-            body#faq-page main article div#faq-container div.accordion-item {
-                margin-bottom: 54px;
-            }
-            body#faq-page main article div#faq-container div.accordion-item div.accordion-item-title span.btn-text {
-                font-size: 39px;
-            }
-            body#faq-page main article div#faq-container div.accordion-item div.accordion-item-title img {
-                margin-left: 54.06px;
-            }
-            body#faq-page main article div#faqForm-container {
-                margin-top: 92px;
-                margin-bottom: 188px;
-            }
-            body#faq-page footer {
-                background-color: #FAFAFA;
-            }
-            body#faq-page footer div.footerWidgets, body#faq-page footer p.footer-copyright, body#faq-page footer div.logo-container {
-                max-width: 1014px;
-            }
-            body#faq-page footer div.logo-container img#footerLogo {
-                margin-left: 0;
-            }
-            body#faq-page footer div.footerWidgets {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -ms-flex-wrap: wrap;
-                    flex-wrap: wrap;
-                width: 100%;
-                margin: auto;
-                -ms-flex-line-pack: center;
-                    align-content: center;
-            }
-            body#faq-page footer div.footerWidgets div.footerWidget-container {
-                margin: 57.57px auto;
-                width: calc((100% - 50px)/4);
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -ms-flex-wrap: wrap;
-                    flex-wrap: wrap;
-            }
-            body#faq-page footer div.footerWidgets div.footerWidget-container:nth-child(odd) {
-                text-align: left;
-            }
-        }
-    </style>
+    <title>FAQ2</title>
+    <link rel="stylesheet" href="faq.css">
 </head>
-
-<body id="faq-page">
-    <header>
-        <div class="nav-cover">
-            <img src="./images/brand-logo.png" alt="HNG6 Logo. It stands for changing the world. One intern at a time"  id="logo">
-            <nav>
-                <ul>
-                    <li class="nav-item">
-                        <a href="" class="nav-item-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-item-link">HNG6</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-item-link">Mentors</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="nav-item-link">Contacts</a>
-                    </li>
-                    <li class="nav-item join-hng">
-                        <a href="" class="nav-item-link">Join HNG</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-	<main>
-        <section id="faq">
-            <div class="text-center">
-                <h1>Frequently Asked Questions</h1>
-                <p>Here are some of the most frequently asked questions on HNG 7.0</p>
-            </div>
-            <article>
-                <div id="faq-container"></div>
-                <div id="faqForm-container">
-                    <form action="">
-                        <p class="form-title">Not a Frequently Asked Question?<br>Contact us below</p>
-                        <label for="faqFormName" class="field">
-                            <input id="faqFormName" type="text" placeholder="Name" autocomplete="name" required>
-                        </label>
-                        <label for="faqFormEmail" class="field">
-                            <input id="faqFormEmail" type="email" placeholder="Email" autocomplete="email" required>
-                        </label>
-                        <label for="faqFormSubject" class="field">
-                            <input id="faqFormSubject" type="text" placeholder="Subject" required>
-                        </label>
-                        <label for="faqFormMsg" class="field">
-                            <textarea name="faqFormMsg" id="faqFormMsg" placeholder="Write a message" required></textarea>
-                        </label>
-                        <input id="submitFaqForm" type="submit" value="send message">
-                    </form>
+<body>
+        <header>
+            <div class="container">
+             <div class="wrap">
+                <div class="logo">
+                    <img src="images/brand-logo.png" alt="brand">
                 </div>
-            </article>
+                <div class="nav">
+                    <a href="">Home</a>
+                    <a href="">HNG6</a>
+                    <a href="">Mentors</a>
+                    <a href="">Contact</a>
+                    <a href="" class="nav-btn">
+                        Join HNG
+                    </a>
+                 </div>
+             </div>
+            </div>
+        </header>
+        <section class="hero">
+            <div class="container">
+                <div class="wrap">
+                    <h1>frequently asked questions
+                    </h1>
+                    <p>Here are some of the most frequently asked questions on HNG 7.0</p>
+                </div>
+            </div>
         </section>
-    </main>
-    <footer>
-        <div class="logo-container">
-            <img src="./images/brand-logo.png" alt="HNG6 Logo. It stands for changing the world. One intern at a time" id="footerLogo">
+        <section class="freq">
+            <div class="container">
+                <div class="wrap">
+                    <a href="">when will the internship start?</a>
+                    <a href="">when will the internship start?</a>
+                    <a href="">when will the internship start?</a>
+                    <a href="">when will the internship start?</a>
+                </div>
+            </div>
+        </section>
+        <section class="freq-n">
+            <div class="container">
+                <div class="wrap" style="width: 100%;">
+                    <div class="header">
+                        <h1>not a frequently asked question?
+                            contact us below
+                        </h1>
+                    </div>
+                    <div class="inputs-wrap" style="width: 100%;">
+                        <input type="text" placeholder="Name">
+                        <input type="email" placeholder="Email">
+                        <input type="text" placeholder="Subject">
+                        <textarea name="text" id="" cols="" rows="10"></textarea>
+                        <input type="submit" value="SEND MESSAGE">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+<footer>
+    <div class="container">
+        <div class="wrap">
+            <div class="footer-logo">
+                <img src="./images/brand-logo.png" alt="">
+            </div>
+            <section class="final">
+                <div class="quick">
+                    <h2>quick links</h2>
+                    <a href="">Join HNG</a>
+                    <a href="">About HNG</a>
+                    <a href="">Become a Sponsor</a>
+                    <a href="">Signup as a mentor</a>
+                </div>
+                <div class="contact">
+                    <h2>Contact Us</h2>
+                    <p>Phone: <span>+234 (0) 812 345 6789</span></p>
+                    <p>Email: <span>interns@hng.tech</span></p>
+                </div>
+                <div class="office">
+                    <h2>Office Address</h2>
+                    <p>
+                        3 Birrel Avenue Sabo, Yaba, Lagos State
+                    </p>
+                </div>
+                <div class="follow">
+                    <h2>Follow Us</h2>
+                    <div class="img">
+                        <div>
+                            <img src="./images/FACEBOOK (1).png" alt="">
+                        </div>
+                        <div>
+                            <img src="./images/TWITTER.png" alt="">
+                        </div>
+                        <div>
+                            <img src="/images/DRIBBBLE.png" alt="">
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </section>
+            <p class="rights">2019, HNG Internship. All rights reserved.</p>
         </div>
-        <div class="footerWidgets">
-            <div class="footerWidget-container">
-                <p class="footerWidget-title">Quick Links</p>
-                <ul class="footerWidget-links-list quick-links">
-                    <li class="footerWidget-links">
-                        <a href="">Join HNG</a>
-                    </li>
-                    <li class="footerWidget-links">
-                        <a href="">About HNG</a>
-                    </li>
-                    <li class="footerWidget-links">
-                        <a href="">Become a Sponsor</a>
-                    </li>
-                    <li class="footerWidget-links">
-                        <a href="">Signup as a mentor</a>
-                    </li>
-                </ul>  
-            </div>
-            <div class="footerWidget-container">
-                <p class="footerWidget-title">Contact Us</p>
-                <ul class="footerWidget-links-list">
-                    <li class="footerWidget-links">
-                        <p>
-                            <strong>Phone:</strong>
-                            <a title="Call HNG" href="tel:+2348123456789">+234 (0) 812 345 6789</a>
-                        </p>
-                    </li>
-                    <li class="footerWidget-links">
-                        <p>
-                            <strong>Email:</strong><a title="Email HNG" href="mailto:interns@hng.tech">interns@hng.tech</a>
-                        </p>
-                    </li>
-                </ul> 
-            </div>
-            <div class="footerWidget-container">
-                <p class="footerWidget-title">Office Address</p>
-                <address>
-                    3 Birrel Avenue<br> 
-                    Sabo,Yaba,<br> 
-                    Lagos State.
-                </address>
-            </div>
-            <div class="footerWidget-container">
-                <p class="footerWidget-title">Follow us</p>
-                <ul class="footerWidget-links-list social-media-links">
-                    <li class="footerWidget-links">
-                        <a href="" target="_blank" title="Follow HNG on Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li class="footerWidget-links">
-                        <a href="" target="_blank" title="Follow HNG on Facebook">
-                            <i class="fab fa-facebook-square"></i>
-                        </a>
-                    </li>
-                    <li class="footerWidget-links">
-                        <a href="" target="_blank" title="Follow HNG on Dribble">
-                            <i class="fab fa-dribbble"></i>
-                        </a>
-                    </li>
-                </ul> 
-            </div>
-        </div>
-        <p class="footer-copyright">&copy; 2019, HNG Internship. All rights reserved.</p>
-    </footer>
+    </div>
+</footer>                    
+               
+
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-	const getFaqData = () =>{
-		//Fetch data from, for now a json
-		//Then using promise to complete other actions
-		fetch('/data/faq.json')
-		  .then(res=>res.json())
-		  .then(getFaqs)
-		  .then(()=>{btnListener()})
-		  .catch(err=> console.log(err));
-	}
-
-	const getFaqs = (data) =>{
-		const faqs = data.faq;
-		// console.log('faqs', faqs);
-		makeFaqHTML(faqs);
-	}
-
-	const makeFaqHTML = (faqs) =>{
-		const divFaq = document.querySelector('div#faq-container');
-		const frag = document.createDocumentFragment(); //savin some performance cost with Fragment
-		faqs.forEach(faq => {
-			//Create Elements
-			const div = document.createElement("div");
-			const divAccText = document.createElement("div");
-			const divAccoTitle = document.createElement("div");
-			const p = document.createElement("p");
-			const spanText = document.createElement("span");
-			const imgIcon = document.createElement("img");
-
-			//Adding classes
-			div.classList.add('accordion-item');
-            divAccoTitle.classList.add('accordion-item-title');
-			p.classList.add('accordion-item-text');
-			divAccText.classList.add('accordion-item-text-container');
-			imgIcon.classList.add('btn-icon');
-			spanText.classList.add('btn-text');
-
-			spanText.innerHTML = faq.title;
-			imgIcon.src = "./images/dashicons-arrow-down-alt2.png";
-			p.innerHTML = faq.text;
-
-			divAccoTitle.append(spanText);
-			divAccoTitle.append(imgIcon);
-
-			divAccText.append(p);
-
-			div.append(divAccoTitle);
-			div.append(divAccText);
-
-			frag.append(div);
-		});
-
-		//Now append to FAQ div
-		divFaq.append(frag);
-	}
-
-	const btnListener = () =>{
-		$("div.accordion-item-title").click(function(){
-			// ES6 class doesnt work with jQ
-			// console.log($(this));
-			
-			$(this).next().toggle("slow");
-			if($(this).children(".btn-icon").hasClass("open-accordion")){
-				$(this).children(".btn-icon").removeClass("open-accordion");
-			}else{
-				$(this).children(".btn-icon").addClass("open-accordion");
-			}
-		})
-	}
-
-	document.addEventListener("DOMContentLoaded", () =>{
-		getFaqData();
-	});
-</script>
 </html>
