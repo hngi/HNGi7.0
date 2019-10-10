@@ -124,11 +124,13 @@ footer #socials img
 	padding: 1rem 1.5rem;
 	font-size: 50px;
 	font-weight: bolder;
+	font-family: Oswald, segoe UI, sans-serif;
 }
 .countdown-symbol + p
 {
 	font-weight: bolder;
 	font-size: 20px;
+	font-family: Oswald, segoe UI, sans-serif;
 }
 #countdown-container
 {
@@ -145,7 +147,7 @@ footer #socials img
 }
 #home-about
 {
-	padding-left: 15vw;
+	padding-left: 10vw;
 }
 #about-container article
 {
@@ -155,7 +157,7 @@ footer #socials img
 }
 #about-container img
 {
-	width: 50vw;
+	width: 55vw;
 }
 #gallery-grid
 {
@@ -203,7 +205,7 @@ footer #socials img
 	color: #00AEFF;
 	text-align: right;
 	display: block;
-	margin-bottom: 0.5rem;
+	margin-bottom: 1rem;
 }
 #mentor-section
 {
@@ -270,19 +272,19 @@ footer #socials img
 	padding-top: 1.5rem;
 	font-size: 17px;
 }
-#sponsor-grid-top, #sponsor-grid-bottom
+#sponsor-flex-top, #sponsor-flex-bottom
 {
-	margin-top: 2.5rem;
+	margin-top: 3rem;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 }
-#sponsor-grid-bottom
+#sponsor-flex-bottom
 {
 	width: 80vw;
-	margin: 2.5rem auto 5rem;
+	margin: 4rem auto 6rem;
 }
-#sponsor-grid-top img, #sponsor-grid-bottom img
+#sponsor-flex-top img, #sponsor-flex-bottom img
 {
 	max-width: 15vw;
 }
@@ -293,7 +295,7 @@ footer #socials img
 
 @media (max-width: 800px)
 {
-	#sponsor-grid-top img, #sponsor-grid-bottom img
+	#sponsor-flex-top img, #sponsor-flex-bottom img
 	{
 		max-width: 20vw;
 	}
