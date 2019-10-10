@@ -38,6 +38,7 @@ header nav
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	transition: 0.5s ease-out;
 }
 header img
 {
@@ -69,7 +70,7 @@ header #mobile-bars
 	cursor: pointer;
 	display: none;	
 }
-header #check 
+header #mobile-bars-check 
 {
     display: none;
 }
@@ -332,6 +333,11 @@ footer #socials img
 
 @media (max-width: 860px)
 {
+	body > *
+	{
+		width: 98vw;
+		overflow-x: hidden;
+	}
 	#sponsor-flex-top img, #sponsor-flex-bottom img
 	{
 		max-width: 20vw;
@@ -350,7 +356,9 @@ footer #socials img
 	}
     header
     {
-    	padding: 0.5rem 1rem;
+    	padding: 0.5rem;
+    	width: 100vw;
+		overflow-x: hidden;
     }
     header img
     {
@@ -358,11 +366,31 @@ footer #socials img
     }
     header nav
     {
-    	display: none;
+    	top: -30vh;
+    	left: 10vw;
+    	background-color: white;
+    	padding: 1rem;
+    	width: 75vw;
+    	z-index: 100;
+    	position: absolute;
+    	flex-direction: column;
     }
+    header nav a, header nav .header-links
+    {
+    	font-size: 20px;
+    	align-self: flex-end;
+    }
+    header #join-hng
+	{
+		align-self: flex-end;
+	}
     header #mobile-bars
     {
     	display: block;
+    }
+    #mobile-bars-check:checked ~ nav
+    {
+    	top: 10vh;
     }
     footer
     {
