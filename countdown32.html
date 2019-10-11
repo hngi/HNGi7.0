@@ -166,7 +166,6 @@
 	.countdown-symbol
 	{
 		border-radius: 50%;
-		border: 8px solid rgba(0, 0, 0, 0.1);
 		position: relative;
 		height: 6rem;
 		width: 6rem;
@@ -185,6 +184,31 @@
 		font-weight: bolder;
 		font-size: 20px;
 		font-family: Oswald, segoe UI, sans-serif;
+	}
+	.arc, .arcs-background 
+	{
+	    position: absolute;
+	    top: -0.4rem;
+	    left: -0.4rem;
+	    width: 100%;
+	    height: 100%;
+	    border-radius: 100%;
+	    border: 8px solid;
+	    border-color: #00AEFF #00AEFF transparent transparent;
+	}
+	.arcs-background
+	{
+		border-color: rgba(240, 240, 240);
+		border-width: 9px;
+	}
+	.arc_start 
+	{
+	    transform: rotate(45deg);
+	}
+	.arc_end 
+	{
+		z-index: 10;
+	    transform: rotate(-135deg);
 	}
 	#countdown-section
 	{
@@ -422,7 +446,6 @@
 	    }
 	    .countdown-symbol
 		{
-			border: 5px solid rgba(0, 0, 0, 0.1);
 			height: 3.5rem;
 			width: 3.5rem;
 			font-size: 2.5rem;
@@ -573,23 +596,43 @@
 		</nav>
 	</header>
 	<section id="countdown-section">
-		<h2 class="darkblue-text center-text">Countdown to HNG 7.0</h2>
+		<h2 class="darkblue-text center-text">Countdown to HNG 7.0 <span class="blue-text">- 1st January, 2020</span></h2>
 
 		<section id="countdown-container">
 			<div id="day-div">
-				<div class="countdown-symbol" id="day-symbol"><span>05</span></div>
+				<div class="countdown-symbol" id="day-symbol">
+					<div class="arcs-background"></div>
+				    <div id="day-start" class="arc arc_start"></div>    
+				    <div id="day-end" class="arc arc_end"></div>
+					<span id="day-text">05</span>
+				</div>
 				<p class="center-text">DAYS</p>
 			</div>
 			<div id="hour-div">
-				<div class="countdown-symbol" id="hour-symbol"><span>24</span></div>
+				<div class="countdown-symbol" id="hour-symbol">
+					<div class="arcs-background"></div>
+				    <div id="hour-start" class="arc arc_start"></div>    
+				    <div id="hour-end" class="arc arc_end"></div>
+					<span id="hour-text">24</span>
+				</div>
 				<p class="center-text">HOURS</p>
 			</div>
 			<div id="minute-div">
-				<div class="countdown-symbol" id="minute-symbol"><span>52</span></div>
+				<div class="countdown-symbol" id="minute-symbol">
+					<div class="arcs-background"></div>
+				    <div id="minute-start" class="arc arc_start"></div>    
+				    <div id="minute-end" class="arc arc_end"></div>
+					<span id="minute-text">52</span>
+				</div>
 				<p class="center-text">MINUTES</p>
 			</div>
 			<div id="second-div">
-				<div class="countdown-symbol" id="second-symbol"><span>41</span></div>
+				<div class="countdown-symbol" id="second-symbol">
+					<div class="arcs-background"></div>
+				    <div id="second-start" class="arc arc_start"></div>    
+				    <div id="second-end" class="arc arc_end"></div>
+					<span id="second-text">41</span>
+				</div>
 				<p class="center-text">SECONDS</p>
 			</div>
 		</section>
@@ -754,38 +797,114 @@
 		</nav>
 		<p class="center-text darkblue-text">&copy 2019, HGN Internship. All rights reserved.</p>
 	</footer>
-<script>
-var countDownDate = new Date("March 1,2020 15:37:25").getTime();
-var x = setInterval(function() {
-	var now = new Date().getTime();
-	var distance = countDownDate - now;
-	var days = Math.floor(distance / (1000 * 60 *60 * 24));
-	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) /(1000 * 60 * 60));
-	var minutes = Math.floor((distance % (1000 * 60 * 60)) /(1000 * 60));
-	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-	document.querySelector("#day-symbol span").innerHTML = days;
-	document.querySelector("#hour-symbol span").innerHTML = hours;
-	document.querySelector("#minute-symbol span").innerHTML = minutes;
-	document.querySelector("#second-symbol span").innerHTML = seconds;
-	if (distance < 0) {
-		clearInterval(x);
-		document.getElementById("countdown-section").innerHTML = "You can go to the official page to register"
-	}
-}, 1000)
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 </html>
+
+<script>
+	const countDownDate = new Date("January 1,2020 22:0:0").getTime(); // Change later
+	const defaultDegStart = 45;
+	const activeColor = "#00AEFF";
+	const backColor = "rgba(240, 240, 240)";
+
+	const daySymbol = document.getElementById("day-symbol");
+	const hourSymbol = document.getElementById("hour-symbol");
+	const minuteSymbol = document.getElementById("minute-symbol");
+	const secondSymbol = document.getElementById("second-symbol");
+
+	const dayText = document.getElementById("day-text");
+	const hourText = document.getElementById("hour-text");
+	const minuteText = document.getElementById("minute-text");
+	const secondText = document.getElementById("second-text");
+
+	const startArcDays = document.getElementById("day-start");
+	const startArcHours = document.getElementById("hour-start");
+	const startArcMinutes = document.getElementById("minute-start");
+	const startArcSeconds = document.getElementById("second-start");
+
+	const endArcDays = document.getElementById("day-end");
+	const endArcHours = document.getElementById("hour-end");
+	const endArcMinutes = document.getElementById("minute-end");
+	const endArcSeconds = document.getElementById("second-end");
+
+
+	let x = setInterval(() => 
+	{
+		let timeLeft = countDownDate - new Date().getTime();
+		let days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+		let hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) /(1000 * 60 * 60));
+		let minutes = Math.floor((timeLeft % (1000 * 60 * 60)) /(1000 * 60));
+		let seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+		if (timeLeft <= 0) 
+		{
+			clearInterval(x);
+			document.getElementById("countdown-section").innerHTML = "HNG 7.0 is Here! You can go to the official page to register"
+		}
+
+		if (daySymbol.getAttribute("data-remainder") != days)
+			showDay(days);
+		if (hourSymbol.getAttribute("data-remainder") != hours)
+			showHour(hours);
+		if (minuteSymbol.getAttribute("data-remainder") != minutes)
+			showMinute(minutes);
+		if (secondSymbol.getAttribute("data-remainder") != seconds)
+			showSecond(seconds);
+	}, 1000);
+
+	const showDay = days =>
+	{
+		const totalWaitDays = 90; // Change later
+		daySymbol.setAttribute("data-remainder", days);
+		if (days <= totalWaitDays / 2)
+			endArcDays.style.borderColor = `transparent transparent ${backColor} ${backColor}`;
+		else
+			endArcDays.style.borderColor = `${activeColor} ${activeColor} transparent transparent`;
+
+		startArcDays.style.transform = `rotate(${defaultDegStart + ((totalWaitDays - days) * 4)}deg)`;
+		dayText.style.left = days < 10 ? "2rem" : "1rem";
+		dayText.textContent = days;
+	}
+	const showHour = hours =>
+	{
+		hourSymbol.setAttribute("data-remainder", hours);
+		if (hours <= 12)
+			endArcHours.style.borderColor = `transparent transparent ${backColor} ${backColor}`;
+		else
+			endArcHours.style.borderColor = `${activeColor} ${activeColor} transparent transparent`;
+
+		startArcHours.style.transform = `rotate(${defaultDegStart + ((24 - hours) * 15)}deg)`;
+
+		hourText.style.left = hours < 10 ? "2rem" : "1rem";
+		hourText.textContent = hours;
+	}
+	const showMinute = minutes =>
+	{
+		minuteSymbol.setAttribute("data-remainder", minutes);
+		if (minutes <= 30)
+  			endArcMinutes.style.borderColor = `transparent transparent ${backColor} ${backColor}`;
+		else
+			endArcMinutes.style.borderColor = `${activeColor} ${activeColor} transparent transparent`;
+
+		startArcMinutes.style.transform = `rotate(${defaultDegStart + ((60 - minutes) * 6)}deg)`;
+		minuteText.style.left = minutes < 10 ? "2rem" : "1rem";
+		minuteText.textContent = minutes;
+	}
+	const showSecond = seconds =>
+	{
+		secondSymbol.setAttribute("data-remainder", seconds);
+		if (seconds <= 30)
+			endArcSeconds.style.borderColor = `transparent transparent ${backColor} ${backColor}`;
+		else
+			endArcSeconds.style.borderColor = `${activeColor} ${activeColor} transparent transparent`;
+
+		startArcSeconds.style.transform = `rotate(${defaultDegStart + ((60 - seconds) * 6)}deg)`;
+		secondText.style.left = seconds < 10 ? "2rem" : "1rem";
+		secondText.textContent = seconds;
+	}
+	
+
+	let timeLeft = countDownDate - new Date().getTime();
+	showDay(Math.floor(timeLeft / (1000 * 60 * 60 * 24)));
+	showHour(Math.floor((timeLeft % (1000 * 60 * 60 * 24)) /(1000 * 60 * 60)));
+	showMinute(Math.floor((timeLeft % (1000 * 60 * 60)) /(1000 * 60)));
+	showSecond(Math.floor((timeLeft % (1000 * 60)) / 1000));
+</script>
