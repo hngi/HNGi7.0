@@ -70,7 +70,7 @@
 	}
 	header .header-links:hover
 	{
-		transform: scale(1.1);
+		transform: scale(1.2);
 	}
 	header #join-hng
 	{
@@ -193,13 +193,13 @@
 	    width: 100%;
 	    height: 100%;
 	    border-radius: 100%;
-	    border: 8px solid;
+	    border: 0.6rem solid;
 	    border-color: #00AEFF #00AEFF transparent transparent;
 	}
 	.arcs-background
 	{
 		border-color: rgba(240, 240, 240);
-		border-width: 9px;
+		border-width: 0.6rem;
 	}
 	.arc_start 
 	{
@@ -217,10 +217,23 @@
 	#countdown-container
 	{
 		width: 50vw;
-		margin: 3rem auto 4rem;
+		margin: 3rem auto 4.5rem;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
+	}
+	#countdown-register
+	{
+		border-radius: 3px;
+		border: 1px solid #00AEFF;
+		padding: 0.3rem 1rem;
+		transition: 0.4s ease-out;
+		font-weight: lighter;
+	}
+	#countdown-register:hover
+	{
+		color: white;
+		background-color: #00AEFF;
 	}
 	#about-container
 	{
@@ -446,9 +459,9 @@
 	    }
 	    .countdown-symbol
 		{
-			height: 3.5rem;
-			width: 3.5rem;
-			font-size: 2.5rem;
+			height: 3rem;
+			width: 3rem;
+			font-size: 2.1rem;
 		}
 		.countdown-symbol > span
 		{
@@ -459,6 +472,27 @@
 		{
 			font-size: 16px;
 		}
+		.arc, .arcs-background 
+		{
+		    top: -0.6rem;
+		    left: 0.1rem;
+		    border: 0.4rem solid;
+		    border-color: #00AEFF #00AEFF transparent transparent;
+		}
+		.arcs-background
+		{
+			border-color: rgba(240, 240, 240);
+			border-width: 0.4rem;
+		}
+		.arc_start 
+		{
+		    transform: rotate(45deg);
+		}
+		.arc_end 
+		{
+			z-index: 10;
+		    transform: rotate(-135deg);
+		}
 		#countdown-section
 		{
 			margin: 2rem auto;
@@ -466,6 +500,10 @@
 		#countdown-container
 		{
 			width: 80vw;
+		}
+		#countdown-intro
+		{
+			font-size: 14px;
 		}
 		#countdown-register
 		{
@@ -596,7 +634,7 @@
 		</nav>
 	</header>
 	<section id="countdown-section">
-		<h2 class="darkblue-text center-text">Countdown to HNG 7.0 <span class="blue-text">- 1st January, 2020</span></h2>
+		<h2 class="darkblue-text center-text" id="countdown-intro">Countdown to HNG 7.0 <span class="blue-text">- 1st January, 2020</span></h2>
 
 		<section id="countdown-container">
 			<div id="day-div">
@@ -637,7 +675,7 @@
 			</div>
 		</section>
 
-		<a href="#" id="countdown-register"><h2 class="skyblue-text center-text">REGISTER FOR HNG 7.0 NOW</h2></a>
+		<h2 class="center-text"><a href="#" class="skyblue-text" id="countdown-register">REGISTER FOR HNG 7.0 NOW</a></h2>
 	</section>
 	<section id="home-about">
 		<h1 class="blue-text">HNG 6.0 Internship</h1>
@@ -860,7 +898,7 @@
 			endArcDays.style.borderColor = `${activeColor} ${activeColor} transparent transparent`;
 
 		startArcDays.style.transform = `rotate(${defaultDegStart + ((totalWaitDays - days) * 4)}deg)`;
-		dayText.style.left = days < 10 ? "2rem" : "1rem";
+		dayText.style.left = days < 10 ? (screen.width > 860 ? "2rem" : "1.4rem") : "1rem";
 		dayText.textContent = days;
 	}
 	const showHour = hours =>
@@ -873,7 +911,7 @@
 
 		startArcHours.style.transform = `rotate(${defaultDegStart + ((24 - hours) * 15)}deg)`;
 
-		hourText.style.left = hours < 10 ? "2rem" : "1rem";
+		hourText.style.left = hours < 10 ? (screen.width > 860 ? "2rem" : "1.4rem") : "1rem";
 		hourText.textContent = hours;
 	}
 	const showMinute = minutes =>
@@ -885,7 +923,7 @@
 			endArcMinutes.style.borderColor = `${activeColor} ${activeColor} transparent transparent`;
 
 		startArcMinutes.style.transform = `rotate(${defaultDegStart + ((60 - minutes) * 6)}deg)`;
-		minuteText.style.left = minutes < 10 ? "2rem" : "1rem";
+		minuteText.style.left = minutes < 10 ? (screen.width > 860 ? "2rem" : "1.4rem") : "1rem";
 		minuteText.textContent = minutes;
 	}
 	const showSecond = seconds =>
@@ -897,10 +935,19 @@
 			endArcSeconds.style.borderColor = `${activeColor} ${activeColor} transparent transparent`;
 
 		startArcSeconds.style.transform = `rotate(${defaultDegStart + ((60 - seconds) * 6)}deg)`;
-		secondText.style.left = seconds < 10 ? "2rem" : "1rem";
+		secondText.style.left = seconds < 10 ? (screen.width > 860 ? "2rem" : "1.4rem") : "1rem";
 		secondText.textContent = seconds;
 	}
 	
+
+	window.addEventListener("resize", e =>
+	{
+		let timeLeft = countDownDate - new Date().getTime();
+		showDay(Math.floor(timeLeft / (1000 * 60 * 60 * 24)));
+		showHour(Math.floor((timeLeft % (1000 * 60 * 60 * 24)) /(1000 * 60 * 60)));
+		showMinute(Math.floor((timeLeft % (1000 * 60 * 60)) /(1000 * 60)));
+		showSecond(Math.floor((timeLeft % (1000 * 60)) / 1000));		
+	})
 
 	let timeLeft = countDownDate - new Date().getTime();
 	showDay(Math.floor(timeLeft / (1000 * 60 * 60 * 24)));
