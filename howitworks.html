@@ -1,0 +1,247 @@
+ <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      
+      <link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+   
+      <title>Homepage Content</title>
+
+      <style>
+
+body {
+  margin: 0;
+  padding: 30px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header__heading {
+  text-align: center;
+  margin: auto;
+width: 238px;
+height: 34px;
+font-family: Open Sans;
+font-weight: bold;
+font-size: 25px;
+line-height: 34px;
+color: #084482;
+}
+
+.content {
+  width: 100%;
+}
+
+.content__heading {
+  font-family: Open Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 25px;
+line-height: 34px;
+color: #084482;
+}
+
+.content p {
+  font-family: Open Sans;
+font-size: 16px;
+line-height: 153.2%;
+color: #333333;
+ width: 80%;
+}
+
+.content--button {
+  border: none;
+  margin-top: 1rem;
+  padding: .5rem;
+  font-family: Open Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 19px;
+letter-spacing: 0.315px;
+  color: #FFFFFF;
+  background: #00AEFF;
+box-shadow: 0px 4px 6px rgba(50, 50, 93, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08);
+border-radius: 4px;
+}
+
+.container {
+  display: flex;
+  margin: 3rem;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+
+.calendar-container ul {
+  list-style: none;
+}
+
+.calendar-content--white {
+  line-height: 27px;
+  width: 40vw;
+  height: 76px;
+  background-color: #3C6B9C;
+  border-radius: 4px;
+  font-family: Open Sans;
+  font-size: 20px;
+  line-height: 27px;
+  color: #FFFFFF;
+  padding: 2rem 0 0 1rem;
+  letter-spacing: .1rem;
+}
+
+.calendar-content--grey {
+ width: 40vw;
+height: 76px;
+padding: .8rem;
+background: #FFFFFF;
+border-top: 0.5px solid #D3CCCC;
+border-bottom: 0.5px solid #D3CCCC;
+box-sizing: border-box;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 4px;
+
+}
+
+.vl {
+  border-left: 1px solid #D3CCCC;
+  height: 305px;
+  position: absolute;
+  left: 70%;
+  margin-left: -3px;
+  top: 10;
+}
+
+
+
+@media screen and (max-width: 700px) {
+  body{
+    padding: 0;
+  }
+  
+  .container {
+    flex-direction: column;
+    margin: 0;
+  }
+  
+  .header__heading {
+    margin-bottom: -.4rem;
+  }
+  
+  .content {
+    margin-left: 1.8rem;
+    width: 100%;
+    padding: -1rem 0 0 0;
+ }
+  
+  .content p {
+    width: 90%;
+  }
+
+  div.calendar-container {
+    margin-top: 3rem;
+    margin-left: -.7rem;
+  }
+  
+  
+  .calendar-content--grey {
+    width: 90vw;
+  }
+  
+  .calendar-content--white {
+    width: 90vw;
+  }
+  
+  .vl {
+    left: 40%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+   
+  .vl {
+    left: 45%;
+  }
+}
+
+
+@media screen and (max-width: 488px) {
+   
+  .vl {
+    left: 50%;
+  }
+  
+   .content p {
+    width: 90%;
+  }
+  
+  div.calendar-container {
+    margin-top: 2rem;
+    margin-left: -1.2rem;
+  }
+  
+}
+
+@media screen and (max-width: 410px) {
+   
+  .vl {
+    left: 55%;
+  }
+  
+  div.calendar-container {
+    margin-top: 2rem;
+    margin-left: -1.4rem;
+  }
+  
+  .content__heading {
+  font-size: 24px;
+  }
+ .content p {
+    width: 87%;
+  }
+ 
+}
+
+@media screen and (max-width: 332px) {
+   
+  .vl {
+    left: 65%;
+  }
+
+      </style>
+  </head>
+  <body>
+    <header class="heading">
+    <h1 class="header__heading">How does it work?</h1>
+      </header>  
+      
+    <div class="container">
+        <div class="content">
+             <h2 class="content__heading">Apply to become an intern</h2>
+              <p>The HNG inetrnship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcome to participate(there is no entrance exam). Anyone can log into the internship using their laptop.Each week, we give tasks.</p>
+          
+          <a href="#"><button class="content--button">Get Started</button></a>
+      </div>
+            <div class="calendar-container">
+              <ul>
+              <li class="calendar-content--white">Event Calendar</li> 
+              <div class="vl"></div>
+              <li class="calendar-content--grey">Registration</li>
+              <li class="calendar-content--grey">Internship Starts</li>
+              <li class="calendar-content--grey">Stage 1 to Stage 10</li>
+              <li class="calendar-content--grey">Internship Ends</li>
+              </ul>
+      </div>
+     
+    </div>
+    </body>
+</html>
+    
