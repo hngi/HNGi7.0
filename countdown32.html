@@ -7,7 +7,6 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
 	<title>Countdown</title>
-	<link rel="stylesheet" type="text/css" href="countdown32.css">
 	<link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
@@ -71,7 +70,7 @@
 	}
 	header .header-links:hover
 	{
-		transform: scale(1.1);
+		transform: scale(1.2);
 	}
 	header #join-hng
 	{
@@ -167,7 +166,6 @@
 	.countdown-symbol
 	{
 		border-radius: 50%;
-		border: 8px solid rgba(0, 0, 0, 0.1);
 		position: relative;
 		height: 6rem;
 		width: 6rem;
@@ -187,13 +185,55 @@
 		font-size: 20px;
 		font-family: Oswald, segoe UI, sans-serif;
 	}
+	.arc, .arcs-background 
+	{
+	    position: absolute;
+	    top: -0.4rem;
+	    left: -0.4rem;
+	    width: 100%;
+	    height: 100%;
+	    border-radius: 100%;
+	    border: 0.6rem solid;
+	    border-color: #00AEFF #00AEFF transparent transparent;
+	}
+	.arcs-background
+	{
+		border-color: rgba(240, 240, 240);
+		border-width: 0.6rem;
+	}
+	.arc_start 
+	{
+	    transform: rotate(45deg);
+	}
+	.arc_end 
+	{
+		z-index: 10;
+	    transform: rotate(-135deg);
+	}
+	#countdown-section
+	{
+		margin: 8rem auto;
+	}
 	#countdown-container
 	{
 		width: 50vw;
-		margin: 1rem auto;
+		margin: 3rem auto 4.5rem;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
+	}
+	#countdown-register
+	{
+		border-radius: 3px;
+		border: 1px solid #00AEFF;
+		padding: 0.3rem 1rem;
+		transition: 0.4s ease-out;
+		font-weight: lighter;
+	}
+	#countdown-register:hover
+	{
+		color: white;
+		background-color: #00AEFF;
 	}
 	#about-container
 	{
@@ -208,11 +248,11 @@
 	{
 		width: 50vw;
 		padding-right: 3vw;
-		font-size: 20px;
+		font-size: 18px;
 	}
 	#about-container img
 	{
-		width: 55vw;
+		width: 50vw;
 	}
 	#gallery-grid
 	{
@@ -226,13 +266,13 @@
 	{
 		display: flex;
 		flex-direction: row;
-		padding: 0 8rem;
+		padding: 0 8vw;
 		font-size: 17px;
 	}
 	#participate-section article
 	{
 		width: 40vw;
-		padding-right: 12rem;
+		padding-right: 5vw;
 	}
 	#participate-section img
 	{
@@ -352,7 +392,6 @@
 	{
 		body > *
 		{
-			width: 100vw;
 			overflow-x: hidden;
 		}
 		#sponsor-flex-top img, #sponsor-flex-bottom img
@@ -373,13 +412,13 @@
 		}
 	    header
 	    {
-	    	padding: 0.5rem;
-	    	width: 100vw;
+	    	padding: 0.5rem 1rem;
+	    	width: 90vw;
 			overflow-x: hidden;
 	    }
 	    header img
 	    {
-	    	width: 35vw;
+	    	width: 40vw;
 	    }
 	    header nav
 	    {
@@ -404,6 +443,7 @@
 	    header #mobile-bars
 	    {
 	    	display: block;
+	    	margin-left: 40vw;
 	    }
 	    #mobile-bars-check:checked ~ nav
 	    {
@@ -420,19 +460,59 @@
 	    }
 	    .countdown-symbol
 		{
-			border: 5px solid rgba(0, 0, 0, 0.1);
-			height: 3.5rem;
-			width: 3.5rem;
-			font-size: 2.5rem;
+			height: 3rem;
+			width: 3rem;
+			font-size: 2.1rem;
 		}
 		.countdown-symbol > span
 		{
 			left: 0.6rem;
 			top: -0.4rem;
 		}
+		.countdown-symbol + p
+		{
+			font-size: 16px;
+		}
+		.arc, .arcs-background 
+		{
+		    top: -0.6rem;
+		    left: 0.1rem;
+		    border: 0.4rem solid;
+		    border-color: #00AEFF #00AEFF transparent transparent;
+		}
+		.arcs-background
+		{
+			border-color: rgba(240, 240, 240);
+			border-width: 0.4rem;
+		}
+		.arc_start 
+		{
+		    transform: rotate(45deg);
+		}
+		.arc_end 
+		{
+			z-index: 10;
+		    transform: rotate(-135deg);
+		}
+		#countdown-section
+		{
+			margin: 2rem auto;
+		}
 		#countdown-container
 		{
 			width: 80vw;
+		}
+		#countdown-intro
+		{
+			font-size: 14px;
+		}
+		#countdown-register
+		{
+			font-size: 12px;
+		}
+		#home-about h1
+		{
+			text-align: center;
 		}
 		#about-container
 		{
@@ -453,7 +533,12 @@
 		}
 		#gallery-grid
 		{
-			margin: 1rem auto;
+			margin: 1rem auto 2rem;
+			width: 95vw;
+		}
+		#gallery-grid > *
+		{
+			margin: 0.5rem auto;
 		}
 		#participate-section
 		{
@@ -550,28 +635,48 @@
 		</nav>
 	</header>
 	<section id="countdown-section">
-		<h2 class="darkblue-text center-text">Countdown to HNG 7.0</h2>
+		<h2 class="darkblue-text center-text" id="countdown-intro">Countdown to HNG 7.0 <span class="blue-text">- 1st January, 2020</span></h2>
 
 		<section id="countdown-container">
 			<div id="day-div">
-				<div class="countdown-symbol" id="day-symbol"><span>05</span></div>
+				<div class="countdown-symbol" id="day-symbol">
+					<div class="arcs-background"></div>
+				    <div id="day-start" class="arc arc_start"></div>    
+				    <div id="day-end" class="arc arc_end"></div>
+					<span id="day-text">05</span>
+				</div>
 				<p class="center-text">DAYS</p>
 			</div>
 			<div id="hour-div">
-				<div class="countdown-symbol" id="hour-symbol"><span>24</span></div>
+				<div class="countdown-symbol" id="hour-symbol">
+					<div class="arcs-background"></div>
+				    <div id="hour-start" class="arc arc_start"></div>    
+				    <div id="hour-end" class="arc arc_end"></div>
+					<span id="hour-text">24</span>
+				</div>
 				<p class="center-text">HOURS</p>
 			</div>
 			<div id="minute-div">
-				<div class="countdown-symbol" id="minute-symbol"><span>52</span></div>
+				<div class="countdown-symbol" id="minute-symbol">
+					<div class="arcs-background"></div>
+				    <div id="minute-start" class="arc arc_start"></div>    
+				    <div id="minute-end" class="arc arc_end"></div>
+					<span id="minute-text">52</span>
+				</div>
 				<p class="center-text">MINUTES</p>
 			</div>
 			<div id="second-div">
-				<div class="countdown-symbol" id="second-symbol"><span>41</span></div>
+				<div class="countdown-symbol" id="second-symbol">
+					<div class="arcs-background"></div>
+				    <div id="second-start" class="arc arc_start"></div>    
+				    <div id="second-end" class="arc arc_end"></div>
+					<span id="second-text">41</span>
+				</div>
 				<p class="center-text">SECONDS</p>
 			</div>
 		</section>
 
-		<a href="#"><h2 class="skyblue-text center-text">REGISTER FOR HNG 7.0 NOW</h2></a>
+		<h2 class="center-text"><a href="#" class="skyblue-text" id="countdown-register">REGISTER FOR HNG 7.0 NOW</a></h2>
 	</section>
 	<section id="home-about">
 		<h1 class="blue-text">HNG 6.0 Internship</h1>
@@ -733,3 +838,121 @@
 	</footer>
 </body>
 </html>
+
+<script>
+	const countDownDate = new Date("January 1,2020 22:0:0").getTime(); // Change later
+	const defaultDegStart = 45;
+	const activeColor = "#00AEFF";
+	const backColor = "rgba(240, 240, 240)";
+
+	const daySymbol = document.getElementById("day-symbol");
+	const hourSymbol = document.getElementById("hour-symbol");
+	const minuteSymbol = document.getElementById("minute-symbol");
+	const secondSymbol = document.getElementById("second-symbol");
+
+	const dayText = document.getElementById("day-text");
+	const hourText = document.getElementById("hour-text");
+	const minuteText = document.getElementById("minute-text");
+	const secondText = document.getElementById("second-text");
+
+	const startArcDays = document.getElementById("day-start");
+	const startArcHours = document.getElementById("hour-start");
+	const startArcMinutes = document.getElementById("minute-start");
+	const startArcSeconds = document.getElementById("second-start");
+
+	const endArcDays = document.getElementById("day-end");
+	const endArcHours = document.getElementById("hour-end");
+	const endArcMinutes = document.getElementById("minute-end");
+	const endArcSeconds = document.getElementById("second-end");
+
+
+	let x = setInterval(() => 
+	{
+		let timeLeft = countDownDate - new Date().getTime();
+		let days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+		let hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) /(1000 * 60 * 60));
+		let minutes = Math.floor((timeLeft % (1000 * 60 * 60)) /(1000 * 60));
+		let seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+		if (timeLeft <= 0) 
+		{
+			clearInterval(x);
+			document.getElementById("countdown-section").innerHTML = "HNG 7.0 is Here! You can go to the official page to register"
+		}
+
+		if (daySymbol.getAttribute("data-remainder") != days)
+			showDay(days);
+		if (hourSymbol.getAttribute("data-remainder") != hours)
+			showHour(hours);
+		if (minuteSymbol.getAttribute("data-remainder") != minutes)
+			showMinute(minutes);
+		if (secondSymbol.getAttribute("data-remainder") != seconds)
+			showSecond(seconds);
+	}, 1000);
+
+	const showDay = days =>
+	{
+		const totalWaitDays = 90; // Change later
+		daySymbol.setAttribute("data-remainder", days);
+		if (days <= totalWaitDays / 2)
+			endArcDays.style.borderColor = `transparent transparent ${backColor} ${backColor}`;
+		else
+			endArcDays.style.borderColor = `${activeColor} ${activeColor} transparent transparent`;
+
+		startArcDays.style.transform = `rotate(${defaultDegStart + ((totalWaitDays - days) * 4)}deg)`;
+		dayText.style.left = days < 10 ? (screen.width > 860 ? "2rem" : "1.4rem") : "1rem";
+		dayText.textContent = days;
+	}
+	const showHour = hours =>
+	{
+		hourSymbol.setAttribute("data-remainder", hours);
+		if (hours <= 12)
+			endArcHours.style.borderColor = `transparent transparent ${backColor} ${backColor}`;
+		else
+			endArcHours.style.borderColor = `${activeColor} ${activeColor} transparent transparent`;
+
+		startArcHours.style.transform = `rotate(${defaultDegStart + ((24 - hours) * 15)}deg)`;
+
+		hourText.style.left = hours < 10 ? (screen.width > 860 ? "2rem" : "1.4rem") : "1rem";
+		hourText.textContent = hours;
+	}
+	const showMinute = minutes =>
+	{
+		minuteSymbol.setAttribute("data-remainder", minutes);
+		if (minutes <= 30)
+  			endArcMinutes.style.borderColor = `transparent transparent ${backColor} ${backColor}`;
+		else
+			endArcMinutes.style.borderColor = `${activeColor} ${activeColor} transparent transparent`;
+
+		startArcMinutes.style.transform = `rotate(${defaultDegStart + ((60 - minutes) * 6)}deg)`;
+		minuteText.style.left = minutes < 10 ? (screen.width > 860 ? "2rem" : "1.4rem") : "1rem";
+		minuteText.textContent = minutes;
+	}
+	const showSecond = seconds =>
+	{
+		secondSymbol.setAttribute("data-remainder", seconds);
+		if (seconds <= 30)
+			endArcSeconds.style.borderColor = `transparent transparent ${backColor} ${backColor}`;
+		else
+			endArcSeconds.style.borderColor = `${activeColor} ${activeColor} transparent transparent`;
+
+		startArcSeconds.style.transform = `rotate(${defaultDegStart + ((60 - seconds) * 6)}deg)`;
+		secondText.style.left = seconds < 10 ? (screen.width > 860 ? "2rem" : "1.4rem") : "1rem";
+		secondText.textContent = seconds;
+	}
+	
+
+	window.addEventListener("resize", e =>
+	{
+		let timeLeft = countDownDate - new Date().getTime();
+		showDay(Math.floor(timeLeft / (1000 * 60 * 60 * 24)));
+		showHour(Math.floor((timeLeft % (1000 * 60 * 60 * 24)) /(1000 * 60 * 60)));
+		showMinute(Math.floor((timeLeft % (1000 * 60 * 60)) /(1000 * 60)));
+		showSecond(Math.floor((timeLeft % (1000 * 60)) / 1000));		
+	})
+
+	let timeLeft = countDownDate - new Date().getTime();
+	showDay(Math.floor(timeLeft / (1000 * 60 * 60 * 24)));
+	showHour(Math.floor((timeLeft % (1000 * 60 * 60 * 24)) /(1000 * 60 * 60)));
+	showMinute(Math.floor((timeLeft % (1000 * 60 * 60)) /(1000 * 60)));
+	showSecond(Math.floor((timeLeft % (1000 * 60)) / 1000));
+</script>
