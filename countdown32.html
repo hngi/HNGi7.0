@@ -377,7 +377,7 @@
 	    {
 	    	padding: 0.5rem;
 	    	width: 90vw;
-			overflow-x: hidden;
+			  overflow-x: hidden;
 	    }
 	    header img
 	    {
@@ -754,5 +754,38 @@
 		</nav>
 		<p class="center-text darkblue-text">&copy 2019, HGN Internship. All rights reserved.</p>
 	</footer>
+<script>
+var countDownDate = new Date("March 1,2020 15:37:25").getTime();
+var x = setInterval(function() {
+	var now = new Date().getTime();
+	var distance = countDownDate - now;
+	var days = Math.floor(distance / (1000 * 60 *60 * 24));
+	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) /(1000 * 60 * 60));
+	var minutes = Math.floor((distance % (1000 * 60 * 60)) /(1000 * 60));
+	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+	document.querySelector("#day-symbol span").innerHTML = days;
+	document.querySelector("#hour-symbol span").innerHTML = hours;
+	document.querySelector("#minute-symbol span").innerHTML = minutes;
+	document.querySelector("#second-symbol span").innerHTML = seconds;
+	if (distance < 0) {
+		clearInterval(x);
+		document.getElementById("countdown-section").innerHTML = "You can go to the official page to register"
+	}
+}, 1000)
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
