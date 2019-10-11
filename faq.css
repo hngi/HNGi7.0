@@ -177,10 +177,21 @@ footer .img div{
     font-size: 14px;
 }
 .img img{
-    width: 20px;
+    width: 29px;
+    border-radius: 14px;
 }
-
-
+.wrap p {
+    margin-top: 2%;
+}
+.wrap p:first-child {
+    margin-top: 5%;
+}
+.wrap .fa {
+    transition: .3s transform ease-in-out;
+}
+.wrap .collapsed .fa {
+    transform: rotate(180deg);
+}
 
 
 
@@ -211,5 +222,11 @@ footer .img div{
     }
     footer .footer-logo img{
         width: 100%;
+    }
+    .wrap .fa {
+        margin-top: 0.5rem;
+    }
+    .wrap .collapsed .fa {
+        /* padding-top: 1rem; */
     }
 }
