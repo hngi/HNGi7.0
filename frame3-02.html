@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Frame3.02</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            overflow-x: hidden;
+        }
+        
+        .frame302-countdown-timer>h3 {
+            font-family: 'Open Sans', 'Sans';
+            line-height: 27px;
+            font-size: 19px;
+            color: #8898aa;
+            font-weight: 600;
+        }
+        
+        div#frame302-countdown-timer {
+            margin: 2em auto;
+        }
+        
+        .countd {
+            display: inline-block;
+            font-family: 'Open Sans', 'sans';
+            margin: 7px;
+        }
+        
+        .count {
+            border: 2px solid #000;
+            text-align: center;
+            border-radius: 50%;
+            width: 280px;
+            height: 280px;
+            margin: 0px;
+            padding: 10px;
+            font-size: 27px;
+            font-weight: 650;
+        }
+        
+        .count>p {
+            padding-top: 5em;
+        }
+        
+        .text-center>a {
+            color: #00aeff;
+            border: none;
+            border-radius: 5px;
+            border: thin;
+            user-select: none;
+            padding: 7px;
+            font-family: 'Open Sans';
+            width: 300px;
+            font-size: 19px;
+        }
+        
+        section.row {
+            margin: 2em 1em 1em 1em;
+        }
+        
+        .frame302-hng-intro>h2 {
+            font-family: 'Open Sans';
+            font-weight: 600;
+            font-size: 34px;
+            line-height: 54px;
+            color: #084482;
+        }
+        
+        div.texting-intern {
+            margin-top: 4em;
+        }
+        
+        div.texting-intern>p {
+            text-align: justify;
+        }
+        
+        .center-button>button.btn-hng {
+            width: 200px;
+        }
+        
+        .btn-hng {
+            background-color: rgba(0, 174, 255, 1);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            border: thin;
+            user-select: none;
+            padding: 7px;
+            font-family: 'Open Sans';
+        }
+        
+        .center-button {
+            text-align: center;
+        }
+        
+        .frame302-images {
+            margin-top: 4em;
+        }
+        
+        .frame302-images>img {
+            width: 300px;
+            height: 180px;
+            margin: 15px;
+        }
+        
+        .frame302-images>h2 {
+            text-align: center;
+            color: rgba(8, 68, 130, 1);
+            font-size: 20px;
+        }
+        
+        button.btn-hng {
+            width: 95px;
+        }
+        
+        .col-md-6>h2 {
+            color: rgba(8, 68, 130, 1);
+            font-size: 22px;
+        }
+        
+        section.frame302-participation {
+            margin-top: 4em;
+        }
+        
+        .head1 {
+            color: #084482;
+            text-align: center;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            font-family: 'Open Sans', sans-serif;
+            position: absolute;
+            width: 456px;
+            height: 34px;
+            left: 508px;
+            top: 3538px;
+            line-height: 34px;
+        }
+        
+        .para1 {
+            font-size: 16px;
+            font-family: 'open sans', sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            position: absolute;
+            top: 3622px;
+            left: 329px;
+            height: 216px;
+            width: 465px;
+            line-height: 151.2%;
+        }
+        
+        .para2 {
+            font-size: 16px;
+            font-family: 'open sans', sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            position: absolute;
+            top: 3624px;
+            left: 1011px;
+            height: 22px;
+            width: 131px;
+            line-height: 22px;
+            color: #00AEFF;
+        }
+        
+        .para3 {
+            font-size: 16px;
+            font-family: 'open sans', sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            position: absolute;
+            top: 3658px;
+            left: 976px;
+            height: 22px;
+            width: 166px;
+            line-height: 22px;
+            color: #00AEFF;
+        }
+        
+        .para4 {
+            font-size: 16px;
+            font-family: 'open sans', sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            position: absolute;
+            top: 3696px;
+            left: 935px;
+            height: 22px;
+            width: 207px;
+            line-height: 22px;
+            color: #00AEFF;
+        }
+        
+        .para5 {
+            font-size: 16px;
+            font-family: 'open sans', sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            position: absolute;
+            top: 3735px;
+            left: 1000px;
+            height: 22px;
+            width: 142px;
+            line-height: 22px;
+            color: #00AEFF;
+        }
+        
+        .para6 {
+            font-size: 16px;
+            font-family: 'open sans', sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            position: absolute;
+            top: 3774px;
+            left: 935px;
+            height: 22px;
+            width: 207px;
+            line-height: 22px;
+            color: #00AEFF;
+        }
+        
+        .para7 {
+            font-size: 16px;
+            font-family: 'open sans', sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            position: absolute;
+            top: 3815px;
+            left: 912px;
+            height: 22px;
+            width: 230px;
+            line-height: 22px;
+            color: #00AEFF;
+        }
+        
+        .ment2 {
+            position: absolute;
+            width: 1591px;
+            height: 392px;
+            left: -11px;
+            top: 3969px;
+            background: rgba(196, 196, 196, 0.1);
+        }
+        
+        .ment4 {
+            font-size: 20px;
+            font-family: 'open sans', sans-serif;
+            font-weight: bold;
+            font-style: normal;
+            position: absolute;
+            top: 50px;
+            left: 176px;
+            height: 34px;
+            width: 327px;
+            line-height: 34px;
+            color: #084482;
+        }
+        
+        .ment5 {
+            font-size: 14px;
+            font-family: 'open sans', sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            position: absolute;
+            top: 100px;
+            left: 176px;
+            height: 80px;
+            width: 432px;
+            line-height: 151.2%;
+            color: #333333;
+        }
+        
+        .img1 {
+            position: absolute;
+            width: 152px;
+            height: 152px;
+            left: 846px;
+            top: 60px;
+            border-radius: 50%;
+        }
+        
+        .img2 {
+            position: absolute;
+            width: 152px;
+            height: 152px;
+            left: 1076px;
+            top: 60px;
+            border-radius: 50%;
+        }
+        
+        .fig1 {
+            font-size: 16px;
+            font-family: 'open sans', sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            position: absolute;
+            top: 220px;
+            left: 53.8%;
+            right: 34.49%;
+            height: 27px;
+            line-height: 27px;
+            color: #32325D;
+        }
+        
+        .fig2 {
+            font-size: 13px;
+            font-family: 'open sans', sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            position: absolute;
+            top: 255px;
+            left: 54%;
+            right: 32%;
+            height: 27px;
+            line-height: 22px;
+            color: #88989A;
+            letter-spacing: 0.12px;
+        }
+        
+        .fig3 {
+            font-size: 16px;
+            font-family: 'open sans', sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            position: absolute;
+            top: 220px;
+            left: 69%;
+            right: 22.49%;
+            height: 27px;
+            line-height: 22px;
+            color: #32325D;
+        }
+        
+        .fig4 {
+            font-size: 13px;
+            font-family: 'open sans', sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            position: absolute;
+            top: 255px;
+            left: 69%;
+            right: 20%;
+            height: 27px;
+            line-height: 22px;
+            color: #88989A;
+            letter-spacing: 0.12px;
+        }
+        
+        .ment6 {
+            position: absolute;
+            width: 150px;
+            left: 60.9%;
+            right: 23.71%;
+            top: 310px;
+            font-family: 'open sans';
+            font-weight: bold;
+            font-style: normal;
+            font-size: 13px;
+            line-height: 19px;
+            color: #FFFFFF;
+            background-color: #00AEFF;
+            text-align: center;
+            border-radius: 5px;
+            padding-top: 5px;
+            padding-bottom: 8px;
+        }
+        
+        .slack1 {
+            font-size: 23px;
+            font-family: 'open sans', sans-serif;
+            font-weight: bold;
+            font-style: normal;
+            position: absolute;
+            top: 450px;
+            left: 428px;
+            height: 34px;
+            width: 540px;
+            line-height: 34px;
+            color: #3C6B9C;
+        }
+        
+        .img3 {
+            position: absolute;
+            top: 475px;
+            height: 35px;
+            width: 35px;
+            left: 899px;
+        }
+        
+        .slack2 {
+            font-size: 16px;
+            font-family: 'open sans', sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            position: absolute;
+            top: 4550px;
+            left: 300px;
+            height: 22px;
+            width: 207px;
+            line-height: 22px;
+            color: #00AEFF;
+        }
+        
+        .slack3 {
+            font-size: 16px;
+            font-family: 'open sans', sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            position: absolute;
+            top: 4610px;
+            left: 300px;
+            height: 22px;
+            width: 207px;
+            line-height: 22px;
+            color: #00AEFF;
+        }
+        
+        .slack4 {
+            font-size: 16px;
+            font-family: 'open sans', sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            position: absolute;
+            top: 4670px;
+            left: 300px;
+            height: 22px;
+            width: 207px;
+            line-height: 22px;
+            color: #00AEFF;
+        }
+        
+        .slack5 {
+            font-size: 16px;
+            font-family: 'open sans', sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            position: absolute;
+            top: 4740px;
+            left: 300px;
+            height: 22px;
+            width: 207px;
+            line-height: 22px;
+            color: #00AEFF;
+        }
+        
+        .slack6 {
+            font-size: 16px;
+            font-family: 'open sans', sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            position: absolute;
+            top: 4810px;
+            left: 300px;
+            height: 22px;
+            width: 207px;
+            line-height: 22px;
+            color: #00AEFF;
+        }
+        
+        .slack7 {
+            font-size: 16px;
+            font-family: 'open sans', sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            position: absolute;
+            top: 4880px;
+            left: 300px;
+            height: 22px;
+            width: 207px;
+            line-height: 22px;
+            color: #00AEFF;
+        }
+        
+        .slack8 {
+            font-size: 16px;
+            font-family: 'open sans', sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            position: absolute;
+            top: 4950px;
+            left: 300px;
+            height: 22px;
+            width: 207px;
+            line-height: 22px;
+            color: #00AEFF;
+        }
+        
+        .slack9 {
+            font-size: 16px;
+            font-family: 'open sans', sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            position: absolute;
+            top: 5020px;
+            left: 300px;
+            height: 22px;
+            width: 207px;
+            line-height: 22px;
+            color: #00AEFF;
+        }
+        
+        .line1 {
+            width: 862px;
+            top: 4587px;
+            position: absolute;
+            left: 300px;
+        }
+        
+        .line2 {
+            width: 862px;
+            top: 4647px;
+            position: absolute;
+            left: 300px;
+        }
+        
+        .line3 {
+            width: 862px;
+            top: 4707px;
+            position: absolute;
+            left: 300px;
+        }
+        
+        .line4 {
+            width: 862px;
+            top: 4777px;
+            position: absolute;
+            left: 300px;
+        }
+        
+        .line5 {
+            width: 862px;
+            top: 4847px;
+            position: absolute;
+            left: 300px;
+        }
+        
+        .line6 {
+            width: 862px;
+            top: 4917px;
+            position: absolute;
+            left: 300px;
+        }
+        
+        .line7 {
+            width: 862px;
+            top: 4987px;
+            position: absolute;
+            left: 300px;
+        }
+        
+        .line8 {
+            width: 862px;
+            top: 5057px;
+            position: absolute;
+            left: 300px;
+        }
+        
+        .sponsor1 {
+            font-size: 25px;
+            font-family: 'open sans', sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            position: absolute;
+            top: 5120px;
+            left: 535px;
+            height: 34px;
+            width: 367px;
+            line-height: 34px;
+            color: #3C6B9C;
+        }
+        
+        .img4 {
+            position: absolute;
+            left: 16.58%;
+            right: 72.07%;
+            top: 5250px;
+            bottom: 50px;
+            height: 40px;
+            width: 120px;
+        }
+        
+        .img5 {
+            position: absolute;
+            left: 36.58%;
+            right: 72.07%;
+            top: 5250px;
+            bottom: 50px;
+            height: 40px;
+            width: 40px;
+        }
+        
+        .img6 {
+            position: absolute;
+            left: 51.58%;
+            right: 72.07%;
+            top: 5250px;
+            bottom: 50px;
+            height: 40px;
+            width: 40px;
+        }
+        
+        .img7 {
+            position: absolute;
+            left: 68.58%;
+            right: 72.07%;
+            top: 5250px;
+            bottom: 50px;
+            height: 40px;
+            width: 75px;
+        }
+        
+        .img8 {
+            position: absolute;
+            left: 22.58%;
+            right: 73.42%;
+            top: 5350px;
+            bottom: 50px;
+            height: 20px;
+            width: 13px;
+        }
+        
+        .img9 {
+            position: absolute;
+            left: 23.58%;
+            right: 73.42%;
+            top: 5356px;
+            bottom: 50px;
+            height: 15px;
+            width: 4px;
+        }
+        
+        .img10 {
+            position: absolute;
+            left: 23.58%;
+            right: 73.42%;
+            top: 5350px;
+            bottom: 50px;
+            height: 5px;
+            width: 4px;
+        }
+        
+        .img11 {
+            position: absolute;
+            left: 23.98%;
+            right: 73.42%;
+            top: 5356px;
+            bottom: 50px;
+            height: 22px;
+            width: 13.05px;
+        }
+        
+        .img12 {
+            position: absolute;
+            left: 24.98%;
+            right: 73.42%;
+            top: 5356px;
+            bottom: 50px;
+            height: 13px;
+            width: 19px;
+        }
+        
+        .img13 {
+            position: absolute;
+            left: 26.35%;
+            right: 73.42%;
+            top: 5356px;
+            bottom: 50px;
+            height: 14px;
+            width: 15px;
+        }
+        
+        .img14 {
+            position: absolute;
+            left: 34.18%;
+            right: 73.42%;
+            top: 5334px;
+            bottom: 50px;
+            height: 42px;
+            width: 125px;
+        }
+        
+        .img15 {
+            position: absolute;
+            left: 50.18%;
+            right: 73.42%;
+            top: 5334px;
+            bottom: 50px;
+            height: 42px;
+            width: 179px;
+        }
+        
+        .sponsor2 {
+            background-color: #00AEFF;
+            color: white;
+            left: 42.29%;
+            right: 48.29%;
+            position: absolute;
+            top: 5420px;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 12px;
+            line-height: 06px;
+            height: 28px;
+            font-family: 'open sans';
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="frame302-main container">
+        <section class="frame302-countdown-timer text-center">
+            <h3>Countdown to HNG 7.0</h3>
+            <div id="frame302-counting-timer">
+                <div class="countd"><span id="days" class="count">45</span>
+                    <p>Days</p>
+                </div>
+                <div class="countd"><span id="hrs" class="count">15</span>
+                    <p>Hours</p>
+                </div>
+                <div class="countd"><span id="min" class="count">30</span>
+                    <p>Minutes</p>
+                </div>
+                <div class="countd"><span id="sec" class="count">24</span>
+                    <p>Seconds</div>
+            </div>
+            <div class="text-center">
+                <a href="#" target="_blank">REGISTER FOR HNG 7.0 NOW</a>
+            </div>
+        </section>
+        <section class="row">
+            <div class="frame302-hng-intro col-md-6 sm-12">
+                <h2>HNG 6.0 Internship</h2>
+                <div class="texting-intern">
+                    <p>The HNG 6.0 Internship commenced 23rd April, 2019 and ended 58th October, 2020.</p>
+                    <p>
+                        A well-planned, coordinated event where young talented folks from across the globe participated remotely and were involved in learning key skills needed to becoming the best globally in programming, design thinking, machine learning and digital marketing.
+                    </p>
+                    <p>
+                        The HNG 6.0 Internship programme comprised of 10 stages. Tasks were given to participants and deadlines for submission was set. Those who were late in submitting tasks and also those who didn’t follow instructions to complete task as required were eliminated
+                        at every stage of the event.
+                    </p>
+                    <p>
+                        The programme was directed by Mark Essien, (founder-CEO hotels.ng) and some of the participants from the previous HNG Internship edition were brought on board as Mentors, their job was to guide and inspire participatants when needed and also to properly
+                        coordinate the event.
+                    </p>
+                </div>
+
+            </div>
+            <div class="col-md-6 sm-12">
+                <img src="https://res.cloudinary.com/abisalde/image/upload/v1570757552/Rectangle_5.1.png" alt="hotels.ng">
+            </div>
+            <div class="clearfix">
+
+            </div>
+        </section>
+
+        <section class="frame302-images">
+            <h2>How it all happened</h2>
+            <img src="https://res.cloudinary.com/abisalde/image/upload/v1570722277/download_20_1.png">
+            <img src="https://res.cloudinary.com/abisalde/image/upload/v1570722439/download.png">
+            <img src="https://res.cloudinary.com/abisalde/image/upload/v1570722387/download_20_2.png"><br>
+            <img src="https://res.cloudinary.com/abisalde/image/upload/v1570722277/download_20_1.png">
+            <img src="https://res.cloudinary.com/abisalde/image/upload/v1570722439/download.png">
+            <img src="https://res.cloudinary.com/abisalde/image/upload/v1570722387/download_20_2.png"><br>
+            <div class="center-button">
+                <button type="button" class="btn-hng">View More Photos</button>
+            </div>
+        </section>
+
+        <section class="frame302-participation row">
+            <div class="col-md-6 sm-12">
+                <h2>Participation</h2>
+                <p>More than 5000 intellectuals participated in the HNG 6.0<br> internship programme.</p>
+                <p>We had people living in Africa, Europe and Asia sign up<br> for the programme.</p>
+                <p>Participation was achieved remotely via popular <br>collaboration tool called Slack</p>
+                <div>
+                    <button type="button" class="btn-hng">Join HNG</button>
+                </div>
+            </div>
+
+            <div class="col-md-6 sm-12">
+                <img src="https://res.cloudinary.com/abisalde/image/upload/v1570722248/Rectangle_204.6.png">
+            </div>
+        </section>
+
+        <section class="frame302-curriculum">
+            <div class="ment1">
+                <h2 class="head1">HNG 6 Internship Track (Curriculum)</h2>
+
+                <div class="para1">
+                    <p>Those who participated in HNG 6 Internship Programme were divided into groups according to their interests.</p>
+                    <P>The groups are popularly known as Tracks in HNG 6 internship and each of the following curriculums defines the activity for the track they get featured in.</P>
+                    <p>At some point in the programme, collaboration of participants from different tracks is achieved.</p>
+                </div>
+                <div>
+                    <p class="para2">BACK END TRACK</p>
+                    <p class="para3">UI / UX DESIGN TRACK</p>
+                    <p class="para4">MACHINE LEARNING TRACK</p>
+                    <p class="para5">FRONT END TRACK</p>
+                    <p class="para6">DIGITAL MARKETING TRACK</p>
+                    <p class="para7">MOBILE DEVELOPMENT TRACK</p>
+                </div>
+
+                <div class="ment2">
+                    <div class="ment3">
+                        <h3 class="ment4">HNG 6 Internship Mentors</h3>
+                        <div class="ment5">
+                            <p>Mentors are responsible for day to day running of HNG Internship Programme.</p>
+                            <p>They are usually recruited from past editions of HNG Internship Programmes.</p>
+                            <p>They oversee activities in the programme and make sure interns adhere to the rules and regulations of the programme.</p>
+                        </div>
+                        <div>
+                            <img class="img1" src="https://res.cloudinary.com/romoke1/image/upload/v1570699438/kkw3ggzt90g2baaa0kx9.png">
+                            <figcaption>
+                                <p class="fig1">Ryan Tompson</p>
+                                <p class="fig2">Mentor, HNG 5.0</p>
+                            </figcaption>
+                        </div>
+
+                        <div>
+                            <img class="img2" src="https://res.cloudinary.com/romoke1/image/upload/v1570700222/ghkoxfuihrhbryoyczrl.png">
+                            <figcaption>
+                                <p class="fig3">Romina Hadid</p>
+                                <p class="fig4">Mentor, HNG 6.0</p>
+                            </figcaption>
+
+                            <p class="ment6" a href="">See all Mentors</p>
+                        </div>
+                    </div>
+                    <h3 class="slack1">HNG 6 Internship Popular Channels - SLACK </h3>
+                    <img class="img3" src=https://res.cloudinary.com/romoke1/image/upload/v1570705549/inand3ijddjwploy85sp.png>
+
+                </div>
+                <div>
+                    <p class="slack2">#announcement</p>
+                    <img class="line1" src=https://res.cloudinary.com/romoke1/image/upload/v1570706486/nww6mcisbsvp4rwy3lif.png>
+                    <p class="slack3">#game</p>
+                    <img class="line2" src=https://res.cloudinary.com/romoke1/image/upload/v1570706486/nww6mcisbsvp4rwy3lif.png>
+                    <p class="slack4">#random</p>
+                    <img class="line3" src=https://res.cloudinary.com/romoke1/image/upload/v1570708511/jhxwzpqqresazttfppiv.png>
+                    <p class="slack5">#things-learnt</p>
+                    <img class="line4" src=https://res.cloudinary.com/romoke1/image/upload/v1570708511/jhxwzpqqresazttfppiv.png>
+                    <p class="slack6">#help</p>
+                    <img class="line5" src=https://res.cloudinary.com/romoke1/image/upload/v1570708511/jhxwzpqqresazttfppiv.png>
+                    <p class="slack7">#resources</p>
+                    <img class="line6" src=https://res.cloudinary.com/romoke1/image/upload/v1570706486/nww6mcisbsvp4rwy3lif.png>
+                    <p class="slack8">#opportunities</p>
+                    <img class="line7" src=https://res.cloudinary.com/romoke1/image/upload/v1570706486/nww6mcisbsvp4rwy3lif.png>
+                    <p class="slack9">#underworld</p>
+                    <img class="line8" src=https://res.cloudinary.com/romoke1/image/upload/v1570708511/jhxwzpqqresazttfppiv.png>
+                </div>
+
+                <div>
+                    <h3 class="sponsor1">HNG 6.0 Internship Sponsors</h3>
+                    <img class="img4" src="https://res.cloudinary.com/romoke1/image/upload/v1570709544/taqicyem5ejgbknv7oeb.png">
+                    <img class="img5" src="https://res.cloudinary.com/romoke1/image/upload/v1570709909/bmlfnlslhvkbostftoel.png">
+                    <img class="img6" src="https://res.cloudinary.com/romoke1/image/upload/v1570710054/ybfykqosl27sevkq8qmu.png">
+                    <img class="img7" src="https://res.cloudinary.com/romoke1/image/upload/v1570710351/ny6rodimw7kscgxmmv56.png">
+                    <img class="img8" src="https://res.cloudinary.com/romoke1/image/upload/v1570711029/hhvbq1nkxxskvpaxdzjd.png">
+                    <img class="img9" src="https://res.cloudinary.com/romoke1/image/upload/v1570711386/smbh8id6usdqbjv3owsd.png">
+                    <img class="img10" src="https://res.cloudinary.com/romoke1/image/upload/v1570711904/ggtjcyso0dxf1irkyp0t.png">
+                    <img class="img11" src="https://res.cloudinary.com/romoke1/image/upload/v1570712124/ty0xcd6gyoopvhydvgbc.png">
+                    <img class="img12" src="https://res.cloudinary.com/romoke1/image/upload/v1570712436/f5eufplmbzzrrmpnqfa8.png">
+                    <img class="img13" src="https://res.cloudinary.com/romoke1/image/upload/v1570712679/j6b5mjcpfotaf3mm815d.png">
+                    <img class="img14" src="https://res.cloudinary.com/romoke1/image/upload/v1570712884/ijievzst8uozrg89aalu.png">
+                    <img class="img15" src="https://res.cloudinary.com/romoke1/image/upload/v1570713342/jvwwjsge2gzjuifmswdt.png">
+
+                </div>
+                <div class="sponsor2">
+                    <button type="button" class="btn-hng">Become a Sponsor</button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <script>
+        function countDown() {
+            var currentDate = new Date().getTime();
+            var eventDate = new Date("Nov 19, 2019 15:37:25").getTime();
+            var remTime = eventDate - currentDate;
+            var s = Math.floor(remTime / 1000);
+            var m = Math.floor(s / 60);
+            var h = Math.floor(m / 60);
+            var d = Math.floor(h / 24);
+            h %= 24;
+            m %= 60;
+            s %= 60;
+            h = (h < 10) ? "0" + h : h;
+            m = (m < 10) ? "0" + m : m;
+            s = (s < 10) ? "0" + s : s;
+            document.getElementById('days').textContent = d;
+            document.getElementById('days').innerText = d;
+            document.getElementById('hrs').textContent = h;
+            document.getElementById('min').textContent = m;
+            document.getElementById('sec').textContent = s;
+            setInterval(countDown, 1000);
+        }
+        countDown();
+    </script>
+</body>
+
+</html>
