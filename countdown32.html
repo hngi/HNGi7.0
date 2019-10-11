@@ -7,7 +7,6 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
 	<title>Countdown</title>
-	<link rel="stylesheet" type="text/css" href="countdown32.css">
 	<link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
@@ -187,10 +186,14 @@
 		font-size: 20px;
 		font-family: Oswald, segoe UI, sans-serif;
 	}
+	#countdown-section
+	{
+		margin: 8rem auto;
+	}
 	#countdown-container
 	{
 		width: 50vw;
-		margin: 1rem auto;
+		margin: 3rem auto 4rem;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
@@ -208,11 +211,11 @@
 	{
 		width: 50vw;
 		padding-right: 3vw;
-		font-size: 20px;
+		font-size: 18px;
 	}
 	#about-container img
 	{
-		width: 55vw;
+		width: 50vw;
 	}
 	#gallery-grid
 	{
@@ -352,7 +355,6 @@
 	{
 		body > *
 		{
-			width: 100vw;
 			overflow-x: hidden;
 		}
 		#sponsor-flex-top img, #sponsor-flex-bottom img
@@ -374,8 +376,8 @@
 	    header
 	    {
 	    	padding: 0.5rem;
-	    	width: 100vw;
-			overflow-x: hidden;
+	    	width: 90vw;
+			  overflow-x: hidden;
 	    }
 	    header img
 	    {
@@ -430,9 +432,25 @@
 			left: 0.6rem;
 			top: -0.4rem;
 		}
+		.countdown-symbol + p
+		{
+			font-size: 16px;
+		}
+		#countdown-section
+		{
+			margin: 2rem auto;
+		}
 		#countdown-container
 		{
 			width: 80vw;
+		}
+		#countdown-register
+		{
+			font-size: 12px;
+		}
+		#home-about h1
+		{
+			text-align: center;
 		}
 		#about-container
 		{
@@ -454,6 +472,11 @@
 		#gallery-grid
 		{
 			margin: 1rem auto;
+			width: 95vw;
+		}
+		#gallery-grid > *
+		{
+			margin: 0 auto;
 		}
 		#participate-section
 		{
@@ -571,7 +594,7 @@
 			</div>
 		</section>
 
-		<a href="#"><h2 class="skyblue-text center-text">REGISTER FOR HNG 7.0 NOW</h2></a>
+		<a href="#" id="countdown-register"><h2 class="skyblue-text center-text">REGISTER FOR HNG 7.0 NOW</h2></a>
 	</section>
 	<section id="home-about">
 		<h1 class="blue-text">HNG 6.0 Internship</h1>
