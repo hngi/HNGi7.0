@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,10 +22,6 @@
 
     a {
       text-decoration: none;
-    }
-    
-    header {
-      background-color: #D1F0F6 !important;
     }
 
     .image {
@@ -95,19 +92,18 @@
     }
      #landing-page {
       text-align: center;
-      min-height: 55vh;
+      min-height: 30vh;
       background-color: #D1F0F6;
       position: relative;
-      margin: 1.5rem;
      }
      
      .land {
          position: absolute;
-         bottom: 10rem;
+         bottom: 1rem;
          left: 50%;
          transform: translateX(-50%);
          width: 100%;
-         
+         padding: 0 0.7rem;
          margin-top: 1rem;
      }
 
@@ -123,14 +119,13 @@
      }
 
      #landing-page h2 {
-       /*margin-top: 5rem;*/
        font-weight: bold;
        color: #084482 !important;
-       margin-bottom: 1rem
+       font-size: 1.5rem;
      }
 
      #landing-page p {
-       /*margin-top: 1rem;*/
+       font-size: 1.1rem;
      }
 
      #img {
@@ -168,12 +163,23 @@
      ul {
          list-style: none;
      }
+
+     #section-one,
+     #section-two {
+       text-align: left;
+     }
      
      #section-one,
      #section-two,
      #section-three,
      #section-four {
          margin: 3rem 0;
+     }
+
+     #sections {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-evenly;
      }
      
      h4 {
@@ -222,7 +228,11 @@
       }
       
      #landing-page {
-         min-height: 55vh;
+         min-height: 30vh;
+     }
+
+     #landing-page h2 {
+       font-size: 1.6rem;
      }
 
       li {
@@ -233,10 +243,13 @@
         margin-right: 3rem;
       }
     }
-    
-  /*  .land {
-        bottom: 6rem;
-    }*/
+
+    /* @media (min-width: 739px) {
+      .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    } */
 
     @media (min-width: 1000px) {
       .wrapper {
@@ -263,13 +276,16 @@
      }
      
      #landing-page {
-         min-height: 68vh;
+         min-height: 40vh;
+     }
+
+     #landing-page h2 {
+       font-size: 1.7rem;
      }
      
      .land {
          margin: 0 auto;
          width: 650px !important;
-         bottom: 5rem;
      }
      
      footer {
@@ -331,7 +347,7 @@
       </ul>
     </div>
   </nav>
-
+  </header>
   <div class="jumbotron" id="landing-page">
       <div class="land">
       <h2>Our Mentors</h2>
@@ -341,7 +357,6 @@
       </div>
 
   </div>
-  </header>
   <main>
     <section class="mentors-section">
       <div class="wrapper">
