@@ -97,11 +97,15 @@
         .page-footer{
             background-color:  #FAFAFA;
         }
+        
         h5,.fab{
             color: #00AEFF;
         }
-        .py-3 a,.footer-copyright,p,a{
+        .py-3 a, p {
             color: #8898AA;
+        }
+        .footer-copyright, a {
+            color: #00AEFF;
         }
         a:hover{
             text-decoration: none;
@@ -118,5 +122,6 @@
         @media only screen and (max-width: 400px){
           input::placeholder{
           font-size: 70%;
+          width: 60%;
         }
     }
