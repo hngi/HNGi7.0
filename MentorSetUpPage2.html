@@ -8,16 +8,185 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu|Pacifico&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/mentorSetuppage.css">
     </head>
-            
+            <style>
+                *{
+            box-sizing: border-box;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            font-family:  Open Sans, sans-serif;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            padding: 0;
+            background-color: #F4F5F7 !important;
+        }
+        /*Header*/
+        .hero{
+            background-color:#D1F0F6;
+        } 
+        
+        .navbar-brand img{
+          width: 100%;
+          height: 100;
+          margin: 0 auto;
+        }
+        .join button{
+          background-color: #00AEFF;
+          border: none;
+          border-radius: 4px;
+        }
+        .join button:hover{
+          background: #5E72E4;
+          box-shadow: 0px 7px 14px rgba(50, 50, 93, 0.11), 0px 3px 6px rgba(0, 0, 0, 0.08);
+        }
+        .join button:active{
+          background: #3B4ADE;
+        }
+       
+        /*welcome*/
+        .welcome{
+          background-color: #D1F0F6;
+          height: 425px;
+        }
+        .mentor{
+         padding-top: 10%;
+         color: #084482;
+         font-weight: bold;
+         font-size: 40px;
+         line-height: 54px; 
+        }
+        .welcome p{
+          font-size: 24px;
+          line-height: 33px;
+          color: #474747;
+        }
+        /*Form*/
+       
+        .dropdownMain{
+          background-color: #FAFAFA;
+        }
+        .dropdown button,.dropdown-item{
+          width: 100% !important;
+          border: none;
+          outline: none;
+          background-color:#FAFAFA;
+        }
+        .dropdown-menu{
+          width: 80%;
+        }
+        .dropdown-item{
+          font-size: 12px;
+        }
+        .expertise p{
+         color: #333333;
+         font-size: 24px;
+         line-height: 33px;
+       }
+       .fa-chevron-down{
+        float:right;
+        color:  #00AEFF;
+        }
+        .area{
+          font-size: 18px;
+          color: #333333;
+        }
+        .image-upload > input
+        {
+            display: none;
+        }
+
+        .image-upload img
+        {
+            width: 80px;
+            cursor: pointer;
+        }
+        .fa-camera{
+            margin-top: 25px;
+            color: #8898AA;
+        
+        }
+        .circle{
+            border:2px dotted #8898AA;
+            height: 70px;
+            width: 70px;
+            border-radius: 100px;
+            background: #ffffff;
+        }
+        .click{
+            text-align: center;
+            font-weight: normal;
+            color: #333333;
+            font-size: 14px;
+        }
+        .jpg{
+            text-align: center;
+            font-weight: normal;
+            color: #333333;
+            font-size: 14px;
+        }
+        input::placeholder{
+          font-size: 100%;
+        }
+        .btn{
+            background-color: #00AEFF;
+            color: #FAFAFA;
+            border: none;
+            font-size: 1rem;
+            box-shadow: 0px 4px 6px rgba(50, 50, 93, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08);
+        }
+        .btn:hover{
+            font-weight: bold;
+            background-color: #084482;
+        }
+
+        /*Footer*/
+        .page-footer{
+            background-color:  #FAFAFA;
+        }
+        h5,.fab{
+            color: #00AEFF;
+        }
+        .py-3 a,.footer-copyright,p,a{
+            color: #8898AA;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+        .fab{
+          border-radius: 50%;
+          background-color: #ffffff;
+          box-shadow: #8898AA 0px 4px 7px;
+        }
+        .fab:hover{
+          color: #084482;
+          font-weight: bold;
+        }
+        @media only screen and (max-width: 500px){
+          input::placeholder{
+          font-size: 70%;
+        }
+        .navbar-brand{
+          width: 70%;
+          padding-top: 10%;
+        }
+        .footer-copyright{
+          width: 80%;
+          text-align: center;
+          margin: 0 auto;
+        }
+        }
+            </style>
     <body>
         <div class="hero">
         <!--Header-->
         <header>
             <div class="container">
                 <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
-                    <a class="navbar-brand text-center mt-2" href="index.html">
+                    <a class="navbar-brand text-center mt-2" href="#">
                         <img src="https://res.cloudinary.com/kuic/image/upload/v1570690973/HNG/brand-logo_nbp2ci.png" alt="HNG Internship" class="logo">
                     </a>
                     <button class="navbar-toggler mt-3" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,19 +194,19 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav list-unstyled text-uppercase pt-3 pt-lg-0 ml-auto text-center">
-                            <li class="nav-item  text-center mr-3">
+                            <li class="nav-item  text-center mr-4">
                                 <a class="nav-link" href="index.html">Home</a>
                             </li>
-                            <li class="nav-item mr-3">
-                                <a class="nav-link" href="hng6.html" style="text-transform:uppercase;">HNG6</a>
+                            <li class="nav-item mr-4">
+                                <a class="nav-link" href="hng6.html">HNG6</a>
                             </li>
-                            <li class="nav-item mr-3">
+                            <li class="nav-item mr-4">
                                 <a class="nav-link" href="mentorpage.html">Mentors</a>
                             </li>
-                            <li class="nav-item mr-3">
+                            <li class="nav-item mr-4">
                                 <a class="nav-link" href="contactform.html">Contact</a>
                             </li>
-                            <li class="nav-item join mr-3">
+                            <li class="nav-item join mr-4">
                                 <a class="nav-link"href="join-intern.html"><button class="btn btn-primary text-center" type="submit">Join HNG</button></a>
                             </li>
                         </ul>
@@ -45,34 +214,86 @@
                 </nav> 
             </div> 
         </header>
-
         <!--Welcome Section-->
         <div class="text-center mt-3 p-2 welcome">
             <div class="text-center">
                 <h1 class="text-center mentor">Mentor Account Set Up</h1>
-                <p class="text-center">Thanks for your interest in becoming a HNG mentor.<br> Kindly fill out this form.</p>
+                <p class="text-center mt-5">Thanks for your interest in becoming a HNG mentor.<br> Kindly fill out this form.</p>
             </div>
             <!--<a href="#form"><i class="fas fa-arrow-circle-down mt-5"></i></a>-->
         </div>
         </div>  
         <!--Form1-->
-        <div class="container form mt-3">
-            <div class="container-fluid">
-                <div class="row expertise"> 
-                       <p class=" col-12 text-center area p-2">Choose an area of expertise</p>
-                        <div class="col-sm-4"></div>  
-                        <div class="text-justify col-sm-4 mb-3 mt-2">
-                            <div><input type="checkbox" class="checkbox mr-1"><span id="span-text">Frontend Development</span><i class="fas fa-chevron-down" aria-hidden="true"></i></div>
-                            <div><input type="checkbox" class="checkbox mr-1"><span id="span-text">Backend Development</span><i class="fas fa-chevron-down" aria-hidden="true"></i></div>
-                            <div><input type="checkbox" class="checkbox mr-1"><span id="span-text">Machine Learning</span><i class="fas fa-chevron-down" aria-hidden="true"></i></div>
-                            <div><input type="checkbox" class="checkbox mr-1"><span id="span-text">UI/UX Design</span><i class="fas fa-chevron-down" aria-hidden="true"></i></div>
-                            <div><input type="checkbox" class="checkbox mr-1"><span id="span-text">Mobile Development</span><i class="fas fa-chevron-down" aria-hidden="true"></i></div>
-                            <div><input type="checkbox" class="checkbox mr-1"><span id="span-text">Digital Marketing</span><i class="fas fa-chevron-down" aria-hidden="true"></i></div>
-                        </div>
-                        <div class="col-sm-4"></div>
-                </div>
+        <div class="container form mt-3 mb-5">
+            <div class="container">
+                <div class="row expertise">
+                  <p class=" col-sm-12 text-center area mt-5">Choose an area of expertise</p>
+                  <div class="maindropdown col-12">
+                    <div class="dropdown text-center col-12">
+                      <button class="text-justify" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <input type="checkbox" class="checkbox mr-1">Frontend Development<i class="fas fa-chevron-down p-2 ml-4" aria-hidden="true"></i>
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">HTML,CSS,JavaScript</a>
+                        <a class="dropdown-item" href="#">React</a>
+                        <a class="dropdown-item" href="#">Angular</a>
+                      </div>
+                    </div>
+                    
+                    <div class="dropdown text-center col-12">
+                      <button class="text-justify" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <input type="checkbox" class="checkbox mr-1">Backend Development<i class="fas fa-chevron-down p-2" aria-hidden="true"></i>
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">PHP,NOde JS</a>
+                        <a class="dropdown-item" href="#">Ruby,Python</a>
+                        <a class="dropdown-item" href="#">SQL</a>
+                      </div>
+                    </div>
+                    <div class="dropdown text-center col-12">
+                      <button class="text-justify" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <input type="checkbox" class="checkbox mr-1">Machine Learning<i class="fas fa-chevron-down p-2" aria-hidden="true"></i>
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Artificial Intelligence</a>
+                        <a class="dropdown-item" href="#">Deep Learning</a>
+                      </div>
+                    </div>
+                    <div class="dropdown text-center col-12">
+                      <button class="text-justify" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <input type="checkbox" class="checkbox mr-1">UI/UX Design<i class="fas fa-chevron-down p-2" aria-hidden="true"></i>
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">User Research</a>
+                        <a class="dropdown-item" href="#">Design</a>
+                        <a class="dropdown-item" href="#"></a>
+                      </div>
+                    </div>
+                    <div class="dropdown text-center col-12">
+                      <button class="text-justify" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <input type="checkbox" class="checkbox mr-1">Mobile Development<i class="fas fa-chevron-down p-2" aria-hidden="true"></i>
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Andriod Development</a>
+                        <a class="dropdown-item" href="#">Flutter</a>
+                        <a class="dropdown-item" href="#">Java</a>
+                      </div>
+                    </div>
+                    <div class="dropdown text-center col-12">
+                      <button class="text-justify" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <input type="checkbox" class="checkbox mr-1">Digital Marketing<i class="fas fa-chevron-down p-2" aria-hidden="true"></i>
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Email Marketing</a>
+                        <a class="dropdown-item" href="#">Social Marketing</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>          
             </div>
-           
+            
+
+          
             <!--Form2-->
             <div class="row d-flex mt-5 mb-5">
                 <div class="col-lg-8 m-auto"> 
@@ -85,31 +306,58 @@
                         <div class="click text-center">Click the image above to upload a profile photo</div>
                         <div class="jpg">JPG or PNG. Max size of 400k</div>
                         </center>
-                        <form method="POST" action="">
-                            <div class="col-sm-12">
-                                    <label for="validationCustom01"></label>
-                                <input type="text" class="form-control mt-2" id="validationCustom01"  placeholder="Name" required></div>
-                                <div class="invalid-feedback">
-                                    Please Enter Your Name
-                                </div>
-                            <div class="col-sm-12">
-                                <input type="email" class="form-control mt-2" id="validationCustom02" placeholder="Email"required></div>
-                            <div class="col-sm-12">
-                                <input type="number" class="form-control mt-2" id="validationCustom03" placeholder="Phone number"required></div>
-                            <div class="col-sm-12">
-                                <input type="text" class="form-control mt-2" id="validationCustom04" placeholder="What do you do"required></div>
-                            <div class="col-sm-12">
-                                <input type="url" class="form-control mt-2"  id="validationCustom05" placeholder="Link to you portfolio"required></div>
-                            <div class="col-sm-12">
-                                <input type="url" class="form-control mt-2" id="validationCustom06" placeholder="Link to your Linkedin profile"required></div>
-                            <div class="col-sm-12">
-                                <input type="url" class="form-control mt-2"  id="validationCustom07" placeholder="Link to your cv"required></div>
-                            <div class="col-sm-12">
-                                <input type="text" class="form-control mt-2"  id="validationCustom08" placeholder="Why are you interested in mentoring with HNG?"required></div>
-                            <div class="col-sm-12">
-                                <input type="text" class="form-control mt-2"  id="validationCustom09" placeholder="What state are you currently in?"required></div>
-                            <div class="col-sm-12">
-                                <input type="text" class="form-control mt-2"  id="validationCustom10" placeholder="What is your current employment status?"required></div>
+                        <form class="col text-center needs-validation mt-5" method="POST" action="" novalidate>
+                            <div class="col-md-12 mb-3 input-group">
+                              <label for="validationCustom01"></label>
+                              <input type="text" class="form-control" id="validationCustom01" placeholder="Name" value="" title="Enter Your Name" minlength="3" maxlength="20" name="fullname" required>
+                              <div class="invalid-feedback">Please enter your Name</div>
+                            </div>  
+                            <div class="col-md-12 mb-3 input-group">
+                              <label for="validationCustom01"></label>
+                              <input type="email" class="form-control" id="validationCustom01" placeholder="Email" value="" title="Enter Your Email" minlength="3" maxlength="20" name="fullname" required>
+                              <div class="invalid-feedback">Please enter your Email</div>
+                            </div>
+                            <div class="col-md-12 mb-3 input-group">                              
+                              <label for="validationCustom01"></label>
+                              <input type="number" class="form-control" id="validationCustom01" placeholder="Phone Number" value="" title="Enter Your Name" maxlength="11" name="fullname" required>
+                              <div class="invalid-feedback">Phone Number not entered</div>
+                            </div>
+                          
+                            <div class="col-md-12 mb-3 input-group">
+                              <label for="validationCustom01"></label>
+                              <input type="text" class="form-control" id="validationCustom01" placeholder="What do you do" value="" title="What do you do" name="fullname" required>
+                              <div class="invalid-feedback">Field is empty</div>
+                            </div>
+                            <div class="col-md-12 mb-3 input-group">
+                              <label for="validationCustom01"></label>
+                              <input type="text" class="form-control" id="validationCustom01" placeholder="Link to your portfolio" value="" title="Link to your portfolio" minlength="3" maxlength="20" name="fullname" required>
+                              <div class="invalid-feedback">Please enter portfolio link</div>
+                            </div>
+                            <div class="col-md-12 mb-3 input-group">
+                              <label for="validationCustom01"></label>
+                              <input type="text" class="form-control" id="validationCustom01" placeholder="Link to your Linkedin profile" value="" title="Link to your Linkedin profile" minlength="3" maxlength="20" name="fullname" required>
+                              <div class="invalid-feedback">Please enter your LinkedIn Profile link+</div>
+                            </div>
+                            <div class="col-md-12 mb-3 input-group">
+                              <label for="validationCustom01"></label>
+                              <input type="text" class="form-control" id="validationCustom01" placeholder="Link to your CV" value="" title="Link to your CV" required>
+                              <div class="invalid-feedback">Please enter your CV link</div>
+                            </div>
+                            <div class="col-md-12 mb-3 input-group">
+                              <label for="validationCustom01"></label>
+                              <input type="text" class="form-control" id="validationCustom01" placeholder="Why are you interested in mentoring with HNG?" value="" title="Why are you interested in mentoring with HNG?"required>
+                              <div class="invalid-feedback">Field is Empty</div>
+                            </div>
+                            <div class="col-md-12 mb-3 input-group">
+                              <label for="validationCustom01"></label>
+                              <input type="text" class="form-control" id="validationCustom01" placeholder="What state are you currently in?" value="" title="What state are you currently in?" minlength="3" maxlength="20" name="fullname" required>
+                              <div class="invalid-feedback">Field is Empty</div>
+                            </div>
+                            <div class="col-md-12 mb-3 input-group">
+                              <label for="validationCustom01"></label>
+                              <input type="text" class="form-control" id="validationCustom01" placeholder="What is your current employment status?" value="" title=""required>
+                              <div class="invalid-feedback">Field is Empty</div>
+                            </div>
                             <center><button class="btn btn-primary mt-3" type="submit">Submit</button></center>
                         </form>
                     </div>
@@ -144,12 +392,12 @@
             </li>
             <li>
               <p>
-                <a href="#">Become a Sponsor</a>
+                <a href="#!">Become a Sponsor</a>
               </p>
             </li>
             <li>
               <p>
-                <a href="#">Signup as a mentor</a>
+                <a href="#!">Signup as a mentor</a>
               </p>
             </li>
           </ul>
@@ -193,7 +441,7 @@
         <hr class="clearfix w-100 d-md-none">
         <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
           <h5 class="font-weight-bold mb-4">Follow Us</h5>
-           <a href="https://twitter.com">
+          <a href="https://twitter.com">
             <i class="fab fa-twitter p-2"></i>
           </a>
           <a href="https://facebook.com">
@@ -206,7 +454,7 @@
       </div>
     </div>
     <div class="footer-copyright text-center py-3">© 2018 Copyright:
-      <span> HNG Internship. All rights reserved.</span>
+      <a href="#"> HNG Internship. All rights reserved.</a>
     </div>
   </footer>
 
