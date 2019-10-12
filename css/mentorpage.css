@@ -128,6 +128,9 @@
        text-align: center;
        position: relative;
        bottom: 0;
+       background-color: rgb(245, 245, 245);
+       padding: 4rem 8rem;
+       box-sizing: border-box;
    }
    
    .footer-brand {
@@ -191,10 +194,6 @@
       padding: 1rem;
    }
    
-   footer {
-       background: #F8F8F8;
-       box-sizing: border-box;
-   }
    
    footer p,
    footer h3 {
@@ -303,5 +302,7 @@
    #section-four {
        padding: 0 1rem;
    }
+
+  
 
   }
