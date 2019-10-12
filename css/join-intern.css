@@ -72,10 +72,12 @@
       form.form-container > button {
         margin: 30px auto;
         display: block;
-        padding: 5px 30px;
+        width: 30%;
+        padding: 15px 25px;
         background: #00aeff;
         border: 0px;
         color: #fff;
+        border-radius: 0.5rem;
       }
       section.jumbo {
         background: #d1f0f6;
@@ -110,14 +112,13 @@
       .footer-container {
         background: #fafafa;
         margin-top: 10rem;
-        font-size: 0.93rem;
       }
       .footer-items {
         display: flex;
         justify-content: space-between;
         vertical-align: middle;
         flex-wrap: wrap;
-        margin: 3rem 6rem;
+        margin: 3rem 5rem;
       }
       .footer-logo {
         width: 12.5rem;
@@ -151,7 +152,6 @@
         font-size: 15px;
       }
       .social-icon {
-        margin-right: 1rem;
         color: #00aeff;
         background: white;
         padding: 0.5rem;
@@ -176,7 +176,7 @@
         }
       }
 
-      @media (max-width: 858px) {
+      @media (max-width: 900px) {
         .checkbtn {
           display: block;
         }
