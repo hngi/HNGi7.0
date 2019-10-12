@@ -185,6 +185,10 @@
             padding: 0.2em 0.5em;
             margin-bottom: 0.5em;
         }
+       
+        .countdown__item {
+          margin-right: 1em;
+      }
 
         .countdown__subText {
             color: #676767;
@@ -284,6 +288,10 @@
             .card1-text {
                 font-size: 1.05em;
             }
+   
+            .countdown__item {
+          margin-right: 1em;
+      }
 
             #welcome-story {
                 font-size: 1.2em;
