@@ -15,6 +15,7 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -609,7 +610,7 @@ tr {
   font-size: 24px;
 }
 .support__items {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   width: 99%;
   margin: 0;
@@ -847,16 +848,12 @@ tr {
   padding-bottom: 3em;
 }
 
-footer {
-  padding: 50px 0px;
-  background-color: #fafafa;
-  position: relative;
-}
+
 
 .footer__go-up {
  position: absolute;
  right: 10px;
- bottom: 20px;
+ bottom: 100px;
  z-index: 20;
  border-radius: 50%;
  -webkit-border-radius: 50%;
@@ -870,74 +867,142 @@ footer {
  .footer__go-up .arrow-up {
    position: relative;
    top: 8px;
+   left: 8px;
    color: white;
    font-size: 1.5rem; }
 
 
-.final {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
+    footer {
+     padding: 50px 0px;
+     background-color: #fafafa;
+     position: relative;
+     width: 100%;
+     padding-left: .9rem;
+     padding-right: .9rem;
+   }
 
-.quick {
-  display: flex;
-  flex-flow: column;
-}
+   footer .footer-logo {
+    width: 200px;
+    cursor: pointer;
+  }
+    
+    footer .footer-header {
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: bold;}
+    
+    .hng-logo {
+    color: #00AEFF;
+    font-weight: 800;
+    font-size: 3rem;}
+    
+    .footer-header p {
+    padding-left: 37px;
+    font-size: .6em;
+    font-weight: 300;}
+    
+    .footer-content {
+    display: grid;
+  grid-template-columns: repeat(auto-fit , minmax(20% , 1fr));
+    margin-top: 2rem;
+    gap: 10px;
+    row-gap: 30px;
+    justify-items: center;
+   }
+    
+    .footer-content p{
+    font-weight: 400;
+    font-size: .9rem;}
+    
+    .footer-content-item p{
+    margin-bottom: 10px;}
+    
+    .footer-content-item i {
+    display: inline-block;
+    border: 1px solid #00AEFF;
+    border-radius: 50%;
+    padding: 3px 4px;
+    margin-right: 5px;
+    font-size: .8em;
+    font-weight: lighter;}
+    
+    .contact p span {
+    font-weight: bold;
+    display: block; }
+    
+    .contact p{
+    font-weight: 300; }
+    
+    
+    .socialMedia i {
+    border: none;
+    -webkit-box-shadow: 1px 1px 1px #7e7c7c;
+    box-shadow: 1px 1px 1px #7e7c7c;
+    font-size: 1.2em;
+    padding: 10px;
+    margin-right: 10px;}
+    
+    .footer-footer {
+    opacity: .6;
+    padding: 1rem 0;
+    margin-bottom: 0;
+    color: #8898aa;
+    font-size: 18px;
+   
+   }
+    
+    .footer a {
+    color: #00AEFF;
+    text-decoration: none;}
+    
+    .footer h3 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+    color: #00AEFF;}
+    
+    .footer a:hover {
+    color #51add8;
+    text-decoration: none;}
+    
+    @media (min-width: 450px) and (max-width: 822px) {
+    
+     .footer-content {
+      grid-template-columns: repeat(auto-fit , minmax(45%, 1fr));
+    }
 
-.final h2 {
-  text-transform: capitalize;
-  color: #00aeff;
-}
+    .footer-content-item {
+     width: 100%;
+    }
 
-.final div {
-  flex-basis: 22%;
-}
-
-.quick a {
-  color: #00aeff;
-  padding: 10px 0px;
-}
-
-footer span {
-  display: block;
-}
-
-footer p {
-  color: #737373;
-}
-
-footer .img {
-  display: flex;
-  justify-content: space-between;
-}
-
-footer .img div {
-  background: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 45%;
-  flex-basis: 30px;
-  height: 30px;
-  box-shadow: 0px 4px 4px rgba(50, 50, 93, 0.11),
-    0px 1px 3px rgba(0, 0, 0, 0.08);
-}
-
-.rights {
-  margin-bottom: 0;
-  color: #8898aa;
-  text-align: center;
-  font-size: 14px;
-}
-
-.img img {
-  width: 20px;
-}
-footer .footer-logo {
-  width: 200px;
-  cursor: pointer;
-}
+    
+    .footer-content-item {
+     margin: 0 auto;
+     margin-bottom: 1.5rem;
+    }
+    
+    }
+    
+    @media (max-width: 499px) {
+    
+     .footer-content {
+     grid-template-columns: 1fr;
+    }
+    
+    .footer-content-item {
+     width: 200px;
+     margin: 0 auto;
+     margin-bottom: 1.5rem;
+    }
+    
+    .footer-header h2 {
+     font-size: 1.3rem;
+    }
+    
+    .footer-content-item h3 {
+     font-size: 1.2rem;
+    }
+    
+    }
 
 @media (max-width: 776px) {
   header .nav a {
