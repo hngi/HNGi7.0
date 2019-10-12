@@ -862,7 +862,7 @@ tr {
  -o-border-radius: 50%;
  width: 40px;
  height: 40px;
- opacity: .9;
+ opacity: .8;
  background: #3c6b9c;}
  .footer__go-up .arrow-up {
    position: relative;
@@ -993,6 +993,7 @@ tr {
      width: 200px;
      margin: 0 auto;
      margin-bottom: 1.5rem;
+     text-align-last: center;
     }
     
     .footer-header h2 {
