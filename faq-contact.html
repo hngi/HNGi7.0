@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FAQ2</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/64ab2a0281.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+    text-decoration: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+
+}
+header, .hero{
+    background-color: #d1f0f6;
+    height: 40vh;
+}
+.container{
+    max-width: 75vw;
+    padding: 10px;
+    margin: auto;
+}
+header .wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+header .wrap a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+header .wrap .logo img{
+    width: 100%;
+}
+header .wrap .nav{
+    flex-basis: 45%;
+    display: flex;
+    justify-content: space-between;
+}
+header .wrap .logo{
+    flex-basis: 30%;
+}
+.nav .nav-btn{
+    padding: 9px 9px;
+    background: #00AEFF;
+    border: 1px solid #00AEFF;
+    border-radius: 4px;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+}
+
+.nav a {
+    transition: all 0.3s ease;
+}
+
+.nav a:hover {
+    background-color: #084482;
+    border-radius: 4px;
+    color: #fff;
+}
+
+
+.hero .wrap{
+    text-align: center;
+
+}
+.hero .wrap h1{
+    text-transform: capitalize;
+    color: #084482;
+    font-size: 40px;
+    margin-top: -19px;
+}
+.hero .wrap p{
+    margin-top: 30px;
+    max-width: 650px;
+    color: #474747;
+    line-height: 33px;
+    font-size: 24px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.freq .wrap{
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 2rem;
+}
+
+
+.wrap-link{
+    padding: 20px 0px;
+    text-decoration: none;
+    color: #00AEFF;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    position: relative;
+}
+
+.fa-chevron-up,
+.fa-chevron-down {
+    color: #00AEFF;
+    padding: 0.5rem;
+    position: absolute;
+    left: 50%;
+    transition: all 0.3s ease-in-out;
+}
+
+.fa-chevron-up:hover,
+.fa-chevron-down:hover {
+    color: #084482;
+}
+
+.fa-chevron-down {
+    display: none;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 650ms;
+}
+
+.answer::before {
+    content: "";
+    position: absolute;
+    width: 0.6rem;
+    background-color: #af6460;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.answer p {
+    font-size: 1.1rem;
+    color:  #7B7C7D;
+    padding: 2rem;
+    text-align: justify;
+    margin-left: -2rem;
+    line-height: 1.4;
+}
+
+.wrap-item:target .answer {
+    max-height: 20rem;
+}
+
+.wrap-item:target .wrap-link .fa-chevron-up {
+    display: none;
+}
+
+.wrap-item:target .wrap-link .fa-chevron-down {
+    display: block;
+}
+
+.freq-n h1{
+    text-align: center;
+    max-width: 400px;
+    margin: auto;
+    text-transform: capitalize;
+    color: #084482;
+    font-weight: 600;
+    font-size: 30px;
+    
+    
+}
+.freq-n .header{
+    padding: 50px 0px;
+}
+.freq-n .wrap{
+    display: flex;
+    flex-flow: column;
+}
+.freq-n .wrap .inputs-wrap{
+    display: flex;
+    flex-flow: column;
+
+}
+/* .inputs-wrap input{
+    padding: 10px 16px;
+    margin-bottom: 20px;
+    flex-basis: 100%;
+  
+} */
+/* .inputs-wrap textarea{
+   
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  
+} */
+/* .inputs-wrap input:nth-last-child(1){
+    color: white;
+    background: #00AEFF;
+    box-shadow: 0px 4px 6px rgba(50, 50, 93, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    border: 1px solid #00AEFF;
+} */
+
+/* .form-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 100%;
+    border: 1px solid #868686;
+}
+.form-field input,
+.form-field textarea {
+    flex: 1;
+    height: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    margin-bottom:  20px;
+}
+
+.form-field i, 
+.form-field img {
+    padding: 10px;
+} */
+
+.form-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 100%;
+    border: 1px solid #868686;
+    flex-grow: 1;
+    margin-bottom: 20px;
+
+}
+
+.form-field input,
+.form-field textarea {
+    flex: 1;
+    height: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    margin-bottom:  20px;
+    box-sizing: border-box;
+    flex-basis: 100%;
+    margin-top: 20px;
+}
+
+.form-field i, 
+.form-field img {
+    padding: 10px;
+}
+
+
+.fa-edit {
+    position: relative;
+    top:-5.5rem;
+}
+
+input[type="submit"] {
+    color: #fff;
+    font-weight: bold;
+    line-height: 22px;
+    cursor: pointer;
+}
+
+.submit-btn {
+    background: #00AEFF;
+    box-shadow: 0px 4px 6px rgba(50, 50, 93, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 4px; 
+    height: 100%;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.submit-btn:hover{
+    background-color: #084482;
+}
+
+
+
+
+
+
+footer{
+    padding: 50px 0px;
+    background-color: #fafafa;
+}
+.final{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+.quick{
+    display: flex;
+    flex-flow: column;
+}
+.final h2{
+    text-transform: capitalize;
+    color: #00AEFF;
+    font-size: 25px;
+    line-height: 34px;
+}
+.final div{
+    flex-basis: 22%;
+}
+
+footer span{
+    display: block;
+
+}
+footer p{
+    color: #737373;
+    font-size: 15px;
+}
+
+.phone-call,
+.email-reach {
+    font-weight: bold;
+}
+
+.fa-chevron-right {
+    color: #00AEFF;
+    font-size: 0.8rem;
+    border-radius: 50%;
+    padding: 1rem;
+    margin-right: 0.5rem;
+    border: 1px solid #00AEFF;
+}
+
+.quick-link {
+    color: #00AEFF;
+    padding: 10px 0px;
+    transition: all 0.3s ease-in-out;
+}
+
+.quick-link:hover {
+    color: #084482;
+}
+
+
+footer .img{
+    display: flex;
+    justify-content: space-between;
+}
+footer .img div{
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 45%;
+    flex-basis: 30px;
+    height: 30px;
+    box-shadow: 0px 4px 4px rgba(50, 50, 93, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.tw,
+.fb,
+.dr {
+    padding: 0.7rem;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin-right: 0.4rem;
+    box-shadow: 0px 4px 4px rgba(50, 50, 93, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+}
+
+.tw:hover,
+.fb:hover,
+.dr:hover {
+    background-color: #084482;
+}
+
+.rights{
+    margin-bottom: 0;
+    color: #8898AA;
+    text-align: center;
+    font-size: 14px;
+}
+.img img{
+    width: 20px;
+}
+
+
+
+
+
+
+@media(max-width:776px){
+    header .nav a{
+        font-size: 10px;
+    }
+    .final{
+        flex-wrap: wrap;
+    }
+    .final div{
+        flex-basis: 45%;
+        font-size: 14px;
+    }
+    .final a{
+        font-size: 14px;
+    }
+    .freq .wrap a{
+        font-size: 15px;
+    }
+    .freq .wrap a::after{
+        content: url(./images/Vector.png);
+        margin-left: 5px;
+    }
+    footer .footer-logo{
+        width: 200px;
+    }
+    footer .footer-logo img{
+        width: 100%;
+    }
+
+    .answer p {
+        font-size: 0.8rem;
+        color:  #7B7C7D;
+        padding: 2rem;
+        text-align: justify;
+        margin-left: -2rem;
+        line-height: 2;
+    }
+
+    .final h2{
+        text-transform: capitalize;
+        color: #00AEFF;
+        font-size: 18px;
+        line-height: 34px;
+    }
+
+    .phone-call,
+    .email-reach {
+        font-weight: bold;
+    }
+
+    .fa-chevron-right {
+        color: #00AEFF;
+        font-size: 0.6rem;
+        border-radius: 50%;
+        padding: 1rem;
+        margin-right: 0.5rem;
+        border: 1px solid #00AEFF;
+    }
+
+    .quick-link {
+        color: #00AEFF;
+        padding: 10px 0px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .fa-chevron-up,
+    .fa-chevron-down {
+        left: 70%;
+    }
+}
+    </style>
+
+</head>
+<body>
+        <header>
+            <div class="container">
+             <div class="wrap">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="https://res.cloudinary.com/dx1a98ntu/image/upload/v1570907991/brand-logo_3_ln0tzi.png" alt="HNG">
+                    </a>
+                </div>
+                <div class="nav">
+                    <a href="index.html">Home</a>
+                    <a href="hng6.html">HNG6</a>
+                    <a href="mentorpage.html">Mentors</a>
+                    <a href="contactform.html">Contact</a>
+                    <a href="join-intern.html" class="nav-btn">
+                        Join HNG
+                    </a>
+                 </div>
+             </div>
+            </div>
+        </header>
+        <section class="hero">
+            <div class="container">
+                <div class="wrap">
+                    <h1>frequently asked questions
+                    </h1>
+                    <p>Here are some of the most frequently asked questions on HNG 7.0</p>
+                </div>
+            </div>
+        </section>
+        <section class="freq">
+            <div class="container">
+                <div class="wrap wrap-item" id="question-1">
+                    <a href="#question-1" class="wrap-link">when will the internship start?
+                        <i class="fas fa-chevron-up"></i>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="answer">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        <br>
+                            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing . 
+                        </p>
+                    </div>
+
+                </div>
+                <div class="wrap wrap-item" id="question-2">
+                    <a href="#question-2" class="wrap-link">when will the internship start?
+                        <i class="fas fa-chevron-up"></i>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="answer">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        <br>
+                            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing . 
+                        </p>
+                    </div>
+                </div>
+                <div class="wrap wrap-item" id="question-3">
+                    <a href="#question-3" class="wrap-link">when will the internship start?
+                        <i class="fas fa-chevron-up"></i>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="answer">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        <br>
+                            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing . 
+                        </p>
+                    </div>
+
+                </div>
+                <div class="wrap wrap-item" id="question-4">
+                    <a href="#question-4" class="wrap-link">when will the internship start?
+                        <i class="fas fa-chevron-up"></i>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="answer">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                        <br>
+                            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing . 
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="freq-n">
+            <div class="container">
+                <div class="wrap" style="width: 100%;">
+                    <div class="header">
+                        <h1>not a frequently asked question?
+                            contact us below
+                        </h1>
+                    </div>
+                    <!-- <div class="inputs-wrap" style="width: 100%;">
+                        <input type="text" placeholder="Name">
+                        <input type="email" placeholder="Email">
+                        <input type="text" placeholder="Subject">
+                        <textarea name="text" id="" cols="" rows="10"></textarea>
+                        <input type="submit" value="SEND MESSAGE">    
+                    </div> -->
+
+                    <div class="inputs-wrap" style="width: 100%;">
+                        <div class="form-field">
+                                <i class="far fa-user"></i>
+                            <input type="text" placeholder="Name" required title="Enter your Name">
+                        </div>
+                        <div class="form-field">
+                            <i class="far fa-envelope"></i>
+                            <input type="email" name="email" id="" placeholder="Email" required title="Enter your Email">
+                        </div>
+                        <div class="form-field">
+                            <img src="https://res.cloudinary.com/dx1a98ntu/image/upload/v1570908023/Vector_4_x4rp7a.png" alt="">
+                            <input type="text" name="subject" id="" placeholder="Subject" required title="Enter the Title of your message">
+                        </div>
+                        <div class="form-field edit">
+                            <i class="far fa-edit"></i>
+                            <textarea name="text" id="" cols="" rows="13" placeholder="Write a message" required title="Enter your message here"></textarea>
+                        </div>
+                        <div class="form-field submit-btn">
+                            <input type="submit" value="SEND MESSAGE">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- FOOTER -->
+    <footer>
+    <div class="container">
+        <div class="wrap">
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="https://res.cloudinary.com/dx1a98ntu/image/upload/v1570908270/brand-logo_4_z5elcu.png" alt="">
+                </a>
+            </div>
+            <section class="final">
+                <div class="quick">
+                    <h2>quick links</h2>
+                    <a href="join-intern.html" class="quick-link"><i class="fas fa-chevron-right"></i>Join HNG</a>
+                    <a href="how-it-works.html" class="quick-link" ><i class="fas fa-chevron-right"></i>About HNG</a>
+                    <a href="" class="quick-link"><i class="fas fa-chevron-right"></i>Become a Sponsor</a>
+                    <a href="mentorsignuppage.html" class="quick-link"><i class="fas fa-chevron-right"></i>Signup as a mentor</a>
+                </div>
+                <div class="contact">
+                    <h2>Contact Us</h2>
+                    <p> <strong> Phone: </strong> <span>+234 (0) 812 345 6789</span></p>
+                    <p> <strong> Email: </strong> <span>interns@hng.tech</span></p>
+                </div>
+                <div class="office">
+                    <h2>Office Address</h2>
+                    <p class="office-address">
+                        3 Birrel Avenue,<br> 
+                        Sabo, Yaba, <br>
+                        Lagos State
+                    </p>
+                </div>
+                <div class="follow">
+                    <h2>Follow Us</h2>
+                    <div id="socials">
+                            <a href="https://twitter.com" title="Follow on Twitter!"><img src="https://res.cloudinary.com/dx1a98ntu/image/upload/v1570907736/TWITTER_klpicu.png" class="tw"></a>
+                            <a href="https://facebook.com"><img title="Follow on Facebook!" src="https://res.cloudinary.com/dx1a98ntu/image/upload/v1570907751/FACEBOOK_yvzcyh.png" class="fb"></a>
+                            <a href="https://dribble.com"><img title="Follow on Dribble!" src="https://res.cloudinary.com/dx1a98ntu/image/upload/v1570907778/DRIBBBLE_a6ux6f.png" class="dr"></a>
+                    </div>                
+                </div>
+                
+            </section>
+            <p class="rights">2019, HNG Internship. All rights reserved.</p>
+        </div>
+    </div>
+</footer>                    
+               
+
+</body>
+</html>
