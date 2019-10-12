@@ -73,7 +73,7 @@
         margin: 30px auto;
         display: block;
         width: 30%;
-        padding: 20px 30px;
+        padding: 15px 25px;
         background: #00aeff;
         border: 0px;
         color: #fff;
@@ -112,14 +112,13 @@
       .footer-container {
         background: #fafafa;
         margin-top: 10rem;
-        font-size: 0.93rem;
       }
       .footer-items {
         display: flex;
         justify-content: space-between;
         vertical-align: middle;
         flex-wrap: wrap;
-        margin: 3rem 6rem;
+        margin: 3rem 5rem;
       }
       .footer-logo {
         width: 12.5rem;
@@ -177,7 +176,7 @@
         }
       }
 
-      @media (max-width: 858px) {
+      @media (max-width: 900px) {
         .checkbtn {
           display: block;
         }
