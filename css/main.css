@@ -767,8 +767,12 @@ tr {
   }
 
   .image3 img{
-    width: 100%;
+    width: 55%;
     max-width: 100%;
+  }
+  .image3{
+   text-align: center;
+   width: 100%;
   }
 }
 
