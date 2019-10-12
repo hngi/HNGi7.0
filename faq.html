@@ -114,7 +114,7 @@
                 flex-wrap: wrap;
             margin-right: auto;
             margin-left: auto;
-            margin-top: 173.57px;
+            margin-top: 20px;
             margin-bottom: 5px;
             width: 100%;
             max-width: 683px;
@@ -175,7 +175,7 @@
         body#faq-page main article div#faq-container div.accordion-item div.accordion-item-title span.btn-text {
             font-style: normal;
             font-weight: 600;
-            font-size: 24px;
+            font-size: 16px;
             line-height: 53px;
             color: #00AEFF;
             border: none;
@@ -308,6 +308,11 @@
             padding: 20px;
         }
 
+        body#faq-page footer div.footer-wrapper {
+            max-width: 1014px;
+            margin: auto;
+        }
+
         body#faq-page footer img#footerLogo, body#faq-page footer div.footerWidgets, body#faq-page footer p.footer-copyright, body#faq-page footer div.logo-container {
             margin-left: auto;
             margin-right: auto;
@@ -322,6 +327,12 @@
             width: 100%;
         }
 
+        a.footerLogo-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+        }
+
         body#faq-page footer div.logo-container img#footerLogo {
             width: 281px;
             height: 56.43px;
@@ -334,10 +345,7 @@
 
         body#faq-page footer div.footerWidgets div.footerWidget-container {
             margin: 15px auto;
-        }
-
-        body#faq-page footer div.footerWidgets div.footerWidget-container:nth-child(odd) {
-            text-align: right;
+            text-align: center;
         }
 
         body#faq-page footer div.footerWidgets div.footerWidget-container a, body#faq-page footer div.footerWidgets div.footerWidget-container p {
@@ -381,6 +389,8 @@
         }
 
         body#faq-page footer div.footerWidgets div.footerWidget-container ul.footerWidget-links-list.social-media-links {
+            width: 200px;
+            margin: auto;
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -395,7 +405,7 @@
             -ms-flex-wrap: wrap;
                 flex-wrap: wrap;
             background: #FFFFFF;
-            margin: 25px 21px 25px 0px;
+            margin: 10px auto;
             -webkit-box-shadow: 0px 4px 4px rgba(50, 50, 93, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08);
                     box-shadow: 0px 4px 4px rgba(50, 50, 93, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08);
             border-radius: 100%;
@@ -469,6 +479,9 @@
                 margin-left: 36px;
                 margin-right: 0px;
             }
+            body#faq-page main div.text-center {
+                margin-top: 173.57px;
+            }
             body#faq-page main article {
                 background-color: #fff;
             }
@@ -496,7 +509,7 @@
             body#faq-page footer div.footerWidgets, body#faq-page footer p.footer-copyright, body#faq-page footer div.logo-container {
                 max-width: 1014px;
             }
-            body#faq-page footer div.logo-container img#footerLogo {
+            body#faq-page footer div.logo-container a.footerLogo-container {
                 margin-left: 0;
             }
             body#faq-page footer div.footerWidgets {
@@ -519,9 +532,16 @@
                 -ms-flex-wrap: wrap;
                     flex-wrap: wrap;
             }
-            body#faq-page footer div.footerWidgets div.footerWidget-container:nth-child(odd) {
+            body#faq-page footer div.footerWidgets div.footerWidget-container{
                 text-align: left;
             }
+            body#faq-page footer div.footerWidgets div.footerWidget-container ul.footerWidget-links-list.social-media-links {
+                margin-left: 0px;
+            }
+            body#faq-page footer div.footerWidgets div.footerWidget-container ul.footerWidget-links-list.social-media-links li {
+                margin: 25px 21px 25px 0px;
+            }
+
         }
     </style>
 </head>
@@ -533,19 +553,19 @@
             <nav>
                 <ul>
                     <li class="nav-item">
-                        <a href="" class="nav-item-link">Home</a>
+                        <a href="./index.html" class="nav-item-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-item-link">HNG6</a>
+                        <a href="./hng6.html" class="nav-item-link">HNG6</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-item-link">Mentors</a>
+                        <a href="./mentorpage.html" class="nav-item-link">Mentors</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-item-link">Contacts</a>
+                        <a href="./contactform.html" class="nav-item-link">Contacts</a>
                     </li>
                     <li class="nav-item join-hng">
-                        <a href="" class="nav-item-link">Join HNG</a>
+                        <a href="./join-intern.html" class="nav-item-link">Join HNG</a>
                     </li>
                 </ul>
             </nav>
@@ -581,73 +601,78 @@
         </section>
     </main>
     <footer>
-        <div class="logo-container">
-            <img src="./images/brand-logo.png" alt="HNG6 Logo. It stands for changing the world. One intern at a time" id="footerLogo">
+        <div class="footer-wrapper">
+            <div class="logo-container">
+                <a class="footerLogo-container" href="./index.html">
+                    <img src="./images/brand-logo.png" alt="HNG6 Logo. It stands for changing the world. One intern at a time" id="footerLogo">
+                </a>
+            </div>
+            <div class="footerWidgets">
+                <div class="footerWidget-container">
+                    <p class="footerWidget-title">Quick Links</p>
+                    <ul class="footerWidget-links-list quick-links">
+                        <li class="footerWidget-links">
+                            <a href="./join-intern.html">Join HNG</a>
+                        </li>
+                        <li class="footerWidget-links">
+                            <a href="./hng6.html">About HNG</a>
+                        </li>
+                        <li class="footerWidget-links">
+                            <a href="./index.html">Become a Sponsor</a>
+                        </li>
+                        <li class="footerWidget-links">
+                            <a href="./mentorpage.html">Signup as a mentor</a>
+                        </li>
+                    </ul>  
+                </div>
+                <div class="footerWidget-container">
+                    <p class="footerWidget-title">Contact Us</p>
+                    <ul class="footerWidget-links-list">
+                        <li class="footerWidget-links">
+                            <p>
+                                <strong>Phone:</strong>
+                                <a title="Call HNG" href="tel:+2348123456789">+234 (0) 812 345 6789</a>
+                            </p>
+                        </li>
+                        <li class="footerWidget-links">
+                            <p>
+                                <strong>Email:</strong><a title="Email HNG" href="mailto:interns@hng.tech">interns@hng.tech</a>
+                            </p>
+                        </li>
+                    </ul> 
+                </div>
+                <div class="footerWidget-container">
+                    <p class="footerWidget-title">Office Address</p>
+                    <address>
+                        3 Birrel Avenue<br> 
+                        Sabo,Yaba,<br> 
+                        Lagos State.
+                    </address>
+                </div>
+                <div class="footerWidget-container">
+                    <p class="footerWidget-title">Follow us</p>
+                    <ul class="footerWidget-links-list social-media-links">
+                        <li class="footerWidget-links">
+                            <a href="" target="_blank" title="Follow HNG on Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="footerWidget-links">
+                            <a href="" target="_blank" title="Follow HNG on Facebook">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                        </li>
+                        <li class="footerWidget-links">
+                            <a href="" target="_blank" title="Follow HNG on Dribble">
+                                <i class="fab fa-dribbble"></i>
+                            </a>
+                        </li>
+                    </ul> 
+                </div>
+            </div>
+            <p class="footer-copyright">&copy; 2019, HNG Internship. All rights reserved.</p>
         </div>
-        <div class="footerWidgets">
-            <div class="footerWidget-container">
-                <p class="footerWidget-title">Quick Links</p>
-                <ul class="footerWidget-links-list quick-links">
-                    <li class="footerWidget-links">
-                        <a href="">Join HNG</a>
-                    </li>
-                    <li class="footerWidget-links">
-                        <a href="">About HNG</a>
-                    </li>
-                    <li class="footerWidget-links">
-                        <a href="">Become a Sponsor</a>
-                    </li>
-                    <li class="footerWidget-links">
-                        <a href="">Signup as a mentor</a>
-                    </li>
-                </ul>  
-            </div>
-            <div class="footerWidget-container">
-                <p class="footerWidget-title">Contact Us</p>
-                <ul class="footerWidget-links-list">
-                    <li class="footerWidget-links">
-                        <p>
-                            <strong>Phone:</strong>
-                            <a title="Call HNG" href="tel:+2348123456789">+234 (0) 812 345 6789</a>
-                        </p>
-                    </li>
-                    <li class="footerWidget-links">
-                        <p>
-                            <strong>Email:</strong><a title="Email HNG" href="mailto:interns@hng.tech">interns@hng.tech</a>
-                        </p>
-                    </li>
-                </ul> 
-            </div>
-            <div class="footerWidget-container">
-                <p class="footerWidget-title">Office Address</p>
-                <address>
-                    3 Birrel Avenue<br> 
-                    Sabo,Yaba,<br> 
-                    Lagos State.
-                </address>
-            </div>
-            <div class="footerWidget-container">
-                <p class="footerWidget-title">Follow us</p>
-                <ul class="footerWidget-links-list social-media-links">
-                    <li class="footerWidget-links">
-                        <a href="" target="_blank" title="Follow HNG on Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li class="footerWidget-links">
-                        <a href="" target="_blank" title="Follow HNG on Facebook">
-                            <i class="fab fa-facebook-square"></i>
-                        </a>
-                    </li>
-                    <li class="footerWidget-links">
-                        <a href="" target="_blank" title="Follow HNG on Dribble">
-                            <i class="fab fa-dribbble"></i>
-                        </a>
-                    </li>
-                </ul> 
-            </div>
-        </div>
-        <p class="footer-copyright">&copy; 2019, HNG Internship. All rights reserved.</p>
+        
     </footer>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -725,4 +750,3 @@
 		getFaqData();
 	});
 </script>
-</html>
