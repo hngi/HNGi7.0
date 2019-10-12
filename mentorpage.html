@@ -9,298 +9,9 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Mentors Page</title>
-    <style>
-      * {
-      padding: 0;
-      margin: 0;
-    } 
-
-    body {
-      font-family: 'Open Sans', sans-serif;
-    }
-
-    a {
-      text-decoration: none;
-    }
-    
-    header {
-      background-color: #D1F0F6 !important;
-    }
-
-    .image {
-      border-radius: 50%;
-      width: 170px;
-      height: 170px;
-      margin: 1rem 0;
-    }
-
-    .mentors-section {
-      text-align: center;
-    }
-
-    .wrapper {
-      margin: 100px 0 19.13px 0;
-    }
-
-    .wrapper-child {
-      margin-bottom: 4rem;
-    }
-
-    .wrapper-child h4 {
-      margin: 19px 0 11px 0;
-    }
-
-    .social-icons {
-      margin-top: 46.75px;
-    }
-
-    span {
-      color: #ffffff;
-      padding: 1rem 1.2rem;
-      /* //background: #FB6340; */
-      box-shadow: 0px 4px 4px rgba(50, 50, 93, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08);
-      margin: 0 14.5px;
-      border-radius: 50%;
-      text-align: center;
-    }
-
-    .navbar-toggler-icon {
-      border-radius: none;
-      box-shadow: none;
-    }
-
-    i {
-      color: #ffffff;
-    }
-
-    .fa-facebook-square {
-      position: relative;
-      left: 2px;
-    }
-
-    .first-color {
-      background: #FB6340;
-    }
-
-    .second-color {
-      background: #5E72E4;
-    }
-
-    .third-color {
-      background: #11CDEF;
-    }
-
-    .fourth-color {
-      background: rgb(98, 255, 98);
-    }
-     #landing-page {
-      text-align: center;
-      min-height: 45vh;
-      background-color: #D1F0F6;
-      position: relative;
-      margin: 1.5rem;
-     }
-     
-     .land {
-         position: absolute;
-         bottom: 2rem;
-         left: 50%;
-         top: 20px;
-         transform: translateX(-50%);
-         width: 100%;
-         
-         margin-top: 1rem;
-     }
-
-     #nav {
-      background-color: #D1F0F6 !important;
-      color: #474747 !important;
-      font-weight: bold;
-     }
-
-     .navbar-toggler {
-       border: none !important;
-       outline: none !important;
-     }
-
-     #landing-page h2 {
-       
-       font-weight: bold;
-       color: #084482 !important;
-       margin-bottom: 1rem
-     }
-
-     
-
-     #img {
-       margin-left: 1rem !important;
-       width: 150px;
-     }
-     
-     footer {
-         text-align: center;
-         position: relative;
-         bottom: 0;
-     }
-     
-     .footer-brand {
-         margin-top: 1rem;
-     }
-     
-     #sections {
-         margin-top: 1rem;
-     }
-     
-     .blue{
-         color: #3BB9FF;
-     }
-     
-     footer h4 {
-         color: #3BB9FF;
-     }
-     
-     
-     .btn {
-         Background: #3BB9FF !important;
-         Border: #3Bb9ff !important;
-     }
-     ul {
-         list-style: none;
-     }
-     
-     #section-one,
-     #section-two,
-     #section-three,
-     #section-four {
-         margin: 3rem 0;
-     }
-     
-     h4 {
-         font-weight: bold;
-     }
-     
-     .bottom-icons span {
-         background:#3BB9FF;
-     }
-     
-      #bottom {
-         margin-top: 1rem;
-     }
-     
-     #footer {
-        /* background: none !important; */
-        min-height: 60vh;
-        padding: 1rem;
-     }
-     
-     footer {
-         background: #F8F8F8;
-         box-sizing: border-box;
-     }
-     
-     footer p {
-         color: #474747;
-     }
-     
-     footer a {
-         color: #3BB9FF;
-     }
-
-
-
-    @media (min-width: 700px) {
-      .wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .collapse {
-        display: flex;
-        justify-content:flex-end;
-      }
-      
-     #landing-page {
-         min-height: 55vh;
-     }
-
-      li {
-        padding: 0 1.5rem;
-      }
-
-      ul {
-        margin-right: 3rem;
-      }
-    }
-    
-  /*  .land {
-        bottom: 6rem;
-    }*/
-
-    @media (min-width: 1000px) {
-      .wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-      }
-
-      li {
-        padding: 0 1.5rem;
-      }
-
-      ul {
-        margin-right: 3rem;
-      }
-
-      .collapse {
-        display: flex;
-        justify-content:flex-end;
-      }
-
-      #img {
-       margin-left: 4rem !important;
-       width: 200px;
-     }
-     
-     #landing-page {
-         min-height: 45vh;
-     }
-     
-     .land {
-         margin: 0 auto;
-         width: 650px !important;
-         bottom: 1rem;
-     }
-     
-     footer {
-         text-align: left;
-     }
-     
-     .footer-brand {
-         margin-left: -2.2rem;
-     }
-     
-     #sections {
-         display: flex;
-         justify-content: space-evenly;
-         text-align: left;
-     }
-     
-     #bottom {
-         text-align: center;
-     }
-     
-     #section-one,
-     #section-two,
-     #section-three,
-     #section-four {
-         padding: 0 1rem;
-     }
-
-    }
-
-    
-
-</style>
-</head>
+    <link rel="stylesheet" href="css/mentorpage.css">
+    <link rel="stylesheet" href="css/mentorSetuppage.css">
+  </head>
 <body>
     <header>
   <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
@@ -351,79 +62,172 @@
   </main>
 
 
-  
-  <footer>
-      <div id="footer">
-          <div class="footer-brand">
-              <img src="https://res.cloudinary.com/chidi6ix/image/upload/v1570716504/brand-logo_cmbyi8.svg" id="img">
-          </div>
-          <div id="sections">
-          <section id="section-one">
-              <h4 class="blue">Quick Links</h4>
-              <br>
-              <ul class="blue" class="ul">
-                 <li>
+<!-- Footer -->
+<footer class="page-footer font-small mdb-color lighten-3 pt-4">
+  <div class="container text-center text-md-left">
+      <a class="navbar-brand text-dark" href="#">
+          <img src="https://res.cloudinary.com/kuic/image/upload/v1570690973/HNG/brand-logo_nbp2ci.png" alt="HNG Internship" class="logo">
+      </a>
+    <div class="row">
+      <hr class="clearfix w-100 d-md-none">
+      <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+        <h5 class="font-weight-bold text-uppercase mb-4">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li>
+            <p>
+              <a href="join-intern.html">Join HNG</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="how-it-works.html">About HNG</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="#">Become a Sponsor</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="#">Signup as a mentor</a>
+            </p>
+          </li>
+        </ul>
 
-                     <a href="join-intern.html">Join HNG</a>
-                 </li>
-                 <li>
-                     <a href="how-it-works.html">About HNG</a>
-                 </li>
-                 <li>
-                     <a href="MentorSetUpPage2.html">Become a Sponsor</a>
-                 </li>
-                 <li>
-                     <a href="MentorSetUpPage2.html">Signup as a Mentor</a>
-                 </li>
-              </ul>
-          </section>
-          <section id="section-two">
-              <h4>Contact Us</h4>
-              <br>
-              <p>Phone</p>
-              <p>+234 (0) 812 345 6789</p>
-              <p>Email</p>
-              <p>interns@hng.tech</p>
-          </section>
-          <section id="section-three">
-              <h4>Office Address</h4>
-              <br>
-              <p>3 Birrel Avenue</p>
-              <p>Sabo Yaba,</p>
-              <p>Lagos State</p>
-          </section>
-          <section id="section-four">
-              <h4>Follow Us</h4>
-              <br>
-              <div class="bottom-icons">
-                  <span>
-
-                      <a href="https://twitter.com">
-                        <i class="fab fa-twitter"></i>
-                      </a>
-                  </span>
-                  <span>
-  
-                    <a href="https://facebook.com">
-                      <i class="fab fa-facebook-square"></i>
-                    </a>
-                </span>
-                
-                  <span>
-  
-                      <a href="https://dribble.com">
-                        <i class="fab fa-dribbble"></i>
-                      </a>
-                  </span>
-              </div>
-          </section>
-          </div>
-
-          <p id="bottom">
-              &copy; 2019, HNG Internship All rights reserved.
-          </p>
       </div>
-  </footer>
+      <hr class="clearfix w-100 d-md-none">
+      <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+        <h5 class="font-weight-bold  mb-4">Contact Us</h5>
+        <ul class="list-unstyled">
+          <li>
+            <p>Phone: </p>
+          </li>
+          <li>
+            <p>+234 (0) 812 345 6789</p>
+          </li>
+          <li>
+            <p>Email:</p>
+              <li>
+                  <p>interns@hng.tech</p>
+                </li>
+                
+          </li>
+          
+        </ul>
+
+      </div>
+      <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+          <h5 class="font-weight-bold  mb-4">Office Address</h5>
+          <ul class="list-unstyled">
+            <li>
+              <p>3 Birrel Avenue</p>
+            </li>
+            <li>
+              <p>Sabo,Yaba,</p>
+            </li>
+            <li>
+              <p>Lagos State</p>
+            </li>
+          </ul>
+        </div>
+      <hr class="clearfix w-100 d-md-none">
+      <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+        <h5 class="font-weight-bold mb-4">Follow Us</h5>
+         <a href="https://twitter.com">
+          <i class="fab fa-twitter p-2"></i>
+        </a>
+        <a href="https://facebook.com">
+          <i class="fab fa-facebook-f ml-3 p-2"></i>
+        </a>
+        <a href="https://dribble.com">
+          <i class="fab fa-dribbble ml-3 p-2"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright text-center py-3">© 2018 Copyright:
+    <span> HNG Internship. All rights reserved.</span>
+  </div>
+</footer>
+
+
+<!--
+
+<footer>
+<div id="footer">
+    <div class="footer-brand">
+        <img src="https://res.cloudinary.com/chidi6ix/image/upload/v1570716504/brand-logo_cmbyi8.svg" id="img">
+    </div>
+    <div id="sections">
+    <section id="section-one">
+        <h4 class="blue">Quick Links</h4>
+        <br>
+        <ul class="blue" class="ul">
+           <li>
+
+               <a href="join-intern.html">Join HNG</a>
+           </li>
+           <li>
+               <a href="how-it-works.html">About HNG</a>
+           </li>
+           <li>
+               <a href="MentorSetUpPage2.html">Become a Sponsor</a>
+           </li>
+           <li>
+               <a href="MentorSetUpPage2.html">Signup as a Mentor</a>
+           </li>
+        </ul>
+    </section>
+    <section id="section-two">
+        <h4>Contact Us</h4>
+        <br>
+        <h3>Phone</h3>
+        <p>+234 (0) 812 345 6789</p>
+        <h3>Email</h3>
+        <p>interns@hng.tech</p>
+    </section>
+    <section id="section-three">
+        <h4>Office Address</h4>
+        <br>
+        <p>3 Birrel Avenue</p>
+        <p>Sabo Yab,</p>
+        <p>Lagos State</p>
+    </section>
+    <section id="section-four">
+        <h4>Follow Us</h4>
+        <br>
+        <div class="bottom-icons">
+            <span>
+
+                <a href="https://twitter.com">
+                  <i class="fab fa-twitter"></i>
+                </a>
+            </span>
+            
+            <span>
+
+                <a href="https://facebook.com">
+                  <i class="fab fa-facebook-square"></i>
+                </a>
+            </span>
+            
+            <span>
+
+                <a href="https://dribble.com">
+                  <i class="fab fa-dribbble"></i>
+                </a>
+            </span>
+        </div>
+    </section>
+    </div>
+
+    <p id="bottom">
+        &copy; 2019, HNG Internship All rights reserved.
+    </p>
+</div>
+</footer>
+-->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
