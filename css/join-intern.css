@@ -72,7 +72,8 @@
       form.form-container > button {
         margin: 30px auto;
         display: block;
-        padding: 5px 30px;
+        width: 20%;
+        padding: 20px 30px;
         background: #00aeff;
         border: 0px;
         color: #fff;
