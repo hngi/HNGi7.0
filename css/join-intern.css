@@ -72,11 +72,12 @@
       form.form-container > button {
         margin: 30px auto;
         display: block;
-        width: 20%;
+        width: 30%;
         padding: 20px 30px;
         background: #00aeff;
         border: 0px;
         color: #fff;
+        border-radius: 0.5rem;
       }
       section.jumbo {
         background: #d1f0f6;
