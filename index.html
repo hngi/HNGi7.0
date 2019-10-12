@@ -14,7 +14,7 @@
 </head>
 
 <body>
- <main>
+ <main id="home">
   <img src="https://bit.ly/2OC3tWo" id="corner-circle" alt="Graphic at the top right corner">
   <div class="containerGrid">
    <header id="header">
@@ -338,9 +338,8 @@
         <br>Founder and CEO</p>
       </div>
      </div>
-     <div style="text-align: center; padding-top: 20px;">
-      <button
-       style="color: white; background-color:  #00AEFF; font-weight: light; border:none; width:9em; height: 45px; border-radius: 4px; ">
+     <div style="text-align: center;  padding-top: 20px;">
+      <button style="border:none; display: inline-block" class="cta-button button--midBlue">
        <a href="mentorPage.html">See
         more</a> </button>
      </div>
@@ -377,7 +376,7 @@
    </div>
   </div>
 
-  <section id="support" class="support">
+  <div id="support" class="support">
    <div class="support__header">
     <h3 class="support__header-text text-light">Support the Movement</h3>
    </div>
@@ -423,8 +422,8 @@
      </div>
     </div>
    </div>
-  </section>
-  <section class="sponsors">
+  <div>
+  <div class="sponsors">
    <h3 class="sponsors__header">HNG 6.0 Internship Sponsors</h3>
    <div class="sponsors_images_container">
     <div class="sponsors__images">
@@ -462,10 +461,15 @@
      Become a Sponsor
     </button>
    </div>
-  </section>
+  </div>
 
   <footer>
    <div class="container">
+     <a href="#home">
+       <span class="footer__go-up">
+        <i class="fas fa-arrow-up arrow-up"></i>
+       </span>
+      </a>
     <div class="wrap">
      <div class="footer-logo">
       <img src="./images/brand-logo.png" alt="">
