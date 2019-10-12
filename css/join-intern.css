@@ -171,6 +171,7 @@ section.jumbo > p.para2 > a {
     margin-top: 15px;
   }
 
+
   .footer-items {
     display: flex;
     flex-direction: column;
@@ -220,3 +221,4 @@ section.jumbo > p.para2 > a {
     }
   }
 }
+
