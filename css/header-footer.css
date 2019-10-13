@@ -1,7 +1,10 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
 body 
 {
-  padding: 0;
-  margin: 0;
+	font-size: "Open Sans", segoe UI, sans-serif;
+	padding: 0;
+	margin: 0;
 }
 header
 {
@@ -23,7 +26,6 @@ header
 header a, footer a
 {
 	text-decoration: none;
-
 }
 header .def-button
 {
@@ -97,6 +99,12 @@ footer
 	background-color: rgb(245, 245, 245);
 	padding: 4rem 8rem;
 }
+footer h2
+{
+  font-size: 25px;
+  margin: 1rem auto;
+  font-weight: bolder;
+}
 footer > nav
 {
 	display: flex;
@@ -124,6 +132,10 @@ footer #link-list > *
 footer .skyblue-text
 {
 	color: #00AEFF;
+}
+footer .darkblue-text
+{
+	color: #8898AA;
 }
 footer .center-text
 {
@@ -213,7 +225,7 @@ footer #socials img
     }
 	header #mobile-bars-check:checked ~ nav
     {
-    	height: 30vh;
+    	height: 22vh;
     }
 
     footer

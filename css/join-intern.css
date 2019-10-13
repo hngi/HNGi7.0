@@ -12,14 +12,6 @@ header {
   background: #d1f0f6;
   width: 100%;
 }
-
-img {
-  height: 57px;
-  width: 200px;
-  line-height: 80px;
-  margin-left: 100px;
-  margin-top: 10px;
-}
 nav ul {
   float: right;
   margin-right: 20px;
@@ -60,22 +52,33 @@ nav ul li a:hover {
   align-items: center;
   justify-content: center;
   padding-top: 50px;
+  width: 40vw;
+  margin: 1rem auto;
 }
 .form-container input,
 textarea {
   width: 80%;
   padding: 10px 20px;
   margin: 10px auto;
+  font-family: inherit;
+  font-size: 16px;
 }
 
 form.form-container > button {
   margin: 30px auto;
   display: block;
-  padding: 5px 30px;
+  width: 60%;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
   border-radius: 4px;
   background: #00aeff;
   border: 0px;
   color: #fff;
+  transition: 0.4s ease-out;
+}
+form.form-container > button:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 section.jumbo {
   background: #d1f0f6;
@@ -162,15 +165,18 @@ section.jumbo > p.para2 > a {
     0px 1px 3px rgba(0, 0, 0, 0.08);
   border-radius: 50%;
 }
-@media (min-width: 320px) and (max-width: 480px) {
-  img {
-    height: 45px;
-    width: 130px;
-    line-height: 80px;
-    margin-left: 20px;
-    margin-top: 15px;
+@media (max-width: 860px) {
+  .form-container
+  {
+    width: 90%;
   }
-
+  .form-container input, textarea {
+      width: 90%;
+    }
+  .form-container button
+  {
+    width: 100%;
+  }
 
   .footer-items {
     display: flex;
@@ -190,6 +196,7 @@ section.jumbo > p.para2 > a {
   }
 
   @media (max-width: 858px) {
+
     .checkbtn {
       display: block;
     }
