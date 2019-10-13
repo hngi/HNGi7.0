@@ -171,6 +171,11 @@ footer #socials img
 
 @media (max-width: 860px)
 {
+	body > *
+	{
+		width: auto;
+		overflow-x: hidden;
+	}
 	header
     {
     	flex-direction: column;
@@ -225,7 +230,7 @@ footer #socials img
     }
 	header #mobile-bars-check:checked ~ nav
     {
-    	height: 22vh;
+    	height: 16rem;
     }
 
     footer
@@ -252,11 +257,15 @@ footer #socials img
 		padding: 0.5rem;
 	}
 }
-@media (max-width: 500px)
+@media (max-width: 500px) /*Smaller screens*/
 {
 	header nav a, header nav .header-links, header nav #join-hng
     {
     	font-size: 4.5vw;
     	align-self: flex-end;
+    }
+    header #mobile-bars-check:checked ~ nav
+    {
+    	height: 15rem;
     }
 }
