@@ -141,14 +141,15 @@ header .wrap .logo {
 
 footer {
     background-color: rgb(245, 245, 245);
-    padding: 20px 40px;
+    padding: 20px 0px;
 }
 
 footer>nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%
+    width: 100%;
+    top: 20px;
 }
 
 footer #contact-section a,
@@ -179,18 +180,6 @@ footer #socials img {
     height: 13px;
     width: 25px;
 }
-
-
-/*.rights {
-    margin-bottom: 0;
-    color: #8898AA;
-    text-align: center;
-    font-size: 14px;
-}
-
-.img img {
-    width: 20px;
-}*/
 
 @media (min-width: 320px) and (max-width: 480px) {
     img {
