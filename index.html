@@ -12,6 +12,7 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
  <link rel="stylesheet" href="css/main.css">
+ <link rel="stylesheet" href="css/footer.css">
 </head>
 
 <body>
@@ -467,14 +468,14 @@
  <footer class="footer">
    <a href="#home">
      <span class="footer__go-up">
-      <i class="fas fa-arrow-up arrow-up"></i>
+      <i class="arrow-up">&ShortUpArrow;</i>
      </span>
     </a>
    
       <div class="footer-logo">
        <img src="./images/brand-logo.png" alt="">
       </div>
-  <section class="footer-content">
+  <div class="footer-content">
    <div class="footer-content-item ">
     <h3>Quick Links</h3>
     <p><a href="join-intern.html"><i class="fa fa-chevron-right"></i>Join HNG</a></p>
@@ -497,10 +498,10 @@
      <a href="#"><i class="fa fa-facebook"></i></a>
      <a href="#"><i class="fa fa-dribbble"></i></p></a>
    </div>
-  </section>
-  <section class="footer-footer text-center">
+  </div>
+  <div class="footer-footer text-center">
   <small>&copy; 2019, HNG Internship. All rights reserved</small>
-  </section>
+  </div>
  </footer>
 
  <aside class="show">
@@ -521,65 +522,64 @@
 
 </body>
 
-
-
-
-
 <script>
- const hamburger = document.getElementById("hamburger");
- const aside = document.getElementsByTagName("aside")[0];
- const hide_aside = document.getElementsByClassName("hide-aside")[0];
- let mediaQuery = window.matchMedia("(max-width: 960px)");
- let slideIndex = 0;
+    const hamburger = document.getElementById("hamburger");
+    const aside = document.getElementsByTagName("aside")[0];
+    const hide_aside = document.getElementsByClassName("hide-aside")[0];
+    let mediaQuery = window.matchMedia("(max-width: 960px)");
+    let slideIndex = 0;
 
- showSlides(mediaQuery);
- mediaQuery.addListener(showSlides);
-
-
- //const cards = document.getElementsByClassName("card1");
- window.onload = () => {
-  hamburger.addEventListener("click", () => {
-   aside.classList.toggle("show");
-  });
-  hide_aside.addEventListener("click", () => {
-   aside.classList.toggle("show");;
-  });
- }
- function showSlides(mediaQueryx) {
-  let i;
-
-  let cards = document.getElementsByClassName("card1");
-  if (mediaQuery.matches) {
-
-   //var dots = document.getElementsByClassName("dot");
-   for (i = 0; i < cards.length; i++) {
-    cards[i].style.display = "none";
-   }
-   slideIndex++;
-   if (slideIndex > cards.length) { slideIndex = 1 }
-
-   cards[slideIndex - 1].style.display = "block";
-   //dots[slideIndex - 1].className += " active";
-   setTimeout(showSlides, 2000);// Change image every 2 seconds*/
-  }
-  else {
-   for (i = 0; i < cards.length; i++) {
-    cards[i].style.display = "block";
-   }
-
-  }
+    showSlides(mediaQuery);
+    mediaQuery.addListener(showSlides);
 
 
- }
+    //const cards = document.getElementsByClassName("card1");
+    window.onload = () => {
+        hamburger.addEventListener("click", () => {
+            aside.classList.toggle("show");
+        });
+        hide_aside.addEventListener("click", () => {
+            aside.classList.toggle("show");;
+        });
+    }
+    function showSlides(mediaQueryx) {
+        let i;
+
+        let cards = document.getElementsByClassName("card1");
+        if (mediaQuery.matches) {
+
+            //var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < cards.length; i++) {
+                cards[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > cards.length) { slideIndex = 1 }
+
+            cards[slideIndex - 1].style.display = "block";
+            //dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000);// Change image every 2 seconds*/
+        }
+        else {
+            for (i = 0; i < cards.length; i++) {
+                cards[i].style.display = "block";
+            }
+
+        }
+
+
+    }
 
 
 </script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
- integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
- integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
- integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
