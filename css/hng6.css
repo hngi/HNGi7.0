@@ -27,6 +27,16 @@ h1
 }
 header
 {
+	/* Uncomment the below to make the header fixed */
+	/*
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 200;
+	background-color: white;
+	width: 93%;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
+
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -99,10 +109,11 @@ footer #link-list > *
 	font-size: 17px;
 	align-self: flex-start;
 	padding: 0.5rem;
+	transition: 0.4s ease-out;
 }
 footer #link-list > a:hover
 {
-	text-decoration: underline;
+	color: rgb(120, 120, 120);
 }
 footer #socials a
 {
