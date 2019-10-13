@@ -389,10 +389,6 @@ footer #socials img
 	{
 		font-size: 30px;
 	}
-	h2
-	{
-		font-size: 21px;
-	}
 	section
 	{
 		margin-bottom: 4rem;
@@ -446,9 +442,17 @@ footer #socials img
     	justify-content: space-between;
     	height: auto;
     }
+    footer h2
+	{
+		font-size: 21px;
+	}
+    footer nav > *
+    {
+    	margin-bottom: 2rem;
+    }
     footer #link-list > *
 	{
-		font-size: 14px;
+		font-size: 15px;
 		padding: 0.5rem;
 	}
     .countdown-symbol
