@@ -389,6 +389,12 @@
        section {
            margin-bottom: 4rem;
        }
+       h1 {
+           font-size: 30px;
+       }
+       section {
+           margin-bottom: 4rem;
+       }
        header {
            padding: 0.5rem 1rem;
            width: 90vw;
