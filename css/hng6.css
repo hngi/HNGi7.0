@@ -71,6 +71,8 @@ header #join-hng
 }
 header #mobile-bars 
 {
+	position: absolute;
+	left: 45vw;
 	font-size: 25px;
 	color: rgba(0, 0, 0, 0.7);
 	line-height: 80px;
@@ -426,34 +428,35 @@ footer #socials img
 	}
     header
     {
+    	flex-direction: column;
+    	margin-top: 10px;
     	padding: 1rem;
     	width: 90vw;
+    	height: auto;
 		overflow-x: hidden;
     }
     header #hng-logo
     {
-    	width: 40vw;
+    	width: 50vw;
     }
     header nav
     {
-    	top: -50vh;
-    	left: 10vw;
     	background-color: white;
-    	padding: 1rem;
-    	width: 75vw;
-    	z-index: 100;
-    	position: absolute;
+    	transition: 0.4s ease-out;
+    	height: 0;
+    	justify-content: flex-start;
+    	padding: 0.5rem;
     	flex-direction: column;
     }
-    header nav a, header nav .header-links
+    header nav > *
     {
-    	font-size: 20px;
+    	display: none;
+    }
+    header nav a, header nav .header-links, header nav #join-hng
+    {
+    	font-size: 3vw;
     	align-self: flex-end;
     }
-    header #join-hng
-	{
-		align-self: flex-end;
-	}
     header #mobile-bars
     {
     	display: block;
@@ -472,9 +475,13 @@ footer #socials img
 	{
 		transform: rotate(-45deg) translateY(-8px) translateX(5px);
 	}
+	header #mobile-bars-check:checked ~ nav > *
+    {
+    	display: block;
+    }
 	header #mobile-bars-check:checked ~ nav
     {
-    	top: 10vh;
+    	height: 30vh;
     }
     footer
     {
@@ -537,7 +544,7 @@ footer #socials img
 	}
 	#countdown-section
 	{
-		margin: 2rem auto;
+		margin: 0 auto 2rem;
 	}
 	#countdown-container
 	{
@@ -657,4 +664,14 @@ footer #socials img
 		font-size: 15px;
 		margin-top: 0.4rem;
 	}
+}
+
+
+@media (max-width: 500px)
+{
+	header nav a, header nav .header-links, header nav #join-hng
+    {
+    	font-size: 4.5vw;
+    	align-self: flex-end;
+    }
 }
