@@ -1,125 +1,366 @@
-<!DOCTYPE html>
-<html class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Mentor Setup Page | 2</title>
-        <meta name="description" content="mentors">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu|Pacifico&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/mentorSetuppage.css">
-    </head>
-            
-    <body>
-        <div class="hero">
-        <!--Header-->
-        <header>
-            <div class="container">
-                <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
-                    <a class="navbar-brand text-center mt-2" href="index.html">
-                        <img src="https://res.cloudinary.com/kuic/image/upload/v1570690973/HNG/brand-logo_nbp2ci.png" alt="HNG Internship" class="logo">
-                    </a>
-                    <button class="navbar-toggler mt-3" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fa fa-bars fa-lg"></i>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav list-unstyled text-uppercase pt-3 pt-lg-0 ml-auto text-center">
-                            <li class="nav-item  text-center mr-3">
-                                <a class="nav-link" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item mr-3">
-                                <a class="nav-link" href="hng6.html" style="text-transform:uppercase;">HNG6</a>
-                            </li>
-                            <li class="nav-item mr-3">
-                                <a class="nav-link" href="mentorpage.html">Mentors</a>
-                            </li>
-                            <li class="nav-item mr-3">
-                                <a class="nav-link" href="contactform.html">Contact</a>
-                            </li>
-                            <li class="nav-item join mr-3">
-                                <a class="nav-link"href="join-intern.html"><button class="btn btn-primary text-center" type="submit">Join HNG</button></a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav> 
-            </div> 
-        </header>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!--Welcome Section-->
-        <div class="text-center mt-3 p-2 welcome">
-            <div class="text-center">
-                <h1 class="text-center mentor">Mentor Account Set Up</h1>
-                <p class="text-center">Thanks for your interest in becoming a HNG mentor.<br> Kindly fill out this form.</p>
-            </div>
-            <!--<a href="#form"><i class="fas fa-arrow-circle-down mt-5"></i></a>-->
-        </div>
-        </div>  
-        <!--Form1-->
-        <div class="container form mt-3">
-            <div class="container-fluid">
-                <div class="row expertise"> 
-                       <p class=" col-12 text-center area p-2">Choose an area of expertise</p>
-                        <div class="col-sm-4"></div>  
-                        <div class="text-justify col-sm-4 mb-3 mt-2">
-                            <div><input type="checkbox" class="checkbox mr-1"><span id="span-text">Frontend Development</span><i class="fas fa-chevron-down" aria-hidden="true"></i></div>
-                            <div><input type="checkbox" class="checkbox mr-1"><span id="span-text">Backend Development</span><i class="fas fa-chevron-down" aria-hidden="true"></i></div>
-                            <div><input type="checkbox" class="checkbox mr-1"><span id="span-text">Machine Learning</span><i class="fas fa-chevron-down" aria-hidden="true"></i></div>
-                            <div><input type="checkbox" class="checkbox mr-1"><span id="span-text">UI/UX Design</span><i class="fas fa-chevron-down" aria-hidden="true"></i></div>
-                            <div><input type="checkbox" class="checkbox mr-1"><span id="span-text">Mobile Development</span><i class="fas fa-chevron-down" aria-hidden="true"></i></div>
-                            <div><input type="checkbox" class="checkbox mr-1"><span id="span-text">Digital Marketing</span><i class="fas fa-chevron-down" aria-hidden="true"></i></div>
-                        </div>
-                        <div class="col-sm-4"></div>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Mentor Setup Page</title>
+
+    <!-- Styles start here -->
+
+<style>
+  /*Header*/
+  .hero{
+            background-color:#D1F0F6;
+        } 
+        .navbar-brand img{
+          width: 100%;
+          height: 100;
+          margin: 0 auto;
+        }
+       
+        /*welcome*/
+        .welcome{
+          background-color: #D1F0F6;
+        }
+        .mentor{
+         color: #084482;
+         font-weight: bold;
+         font-size: 30px;
+         line-height: 54px; 
+        }
+
+  /*Form CSS*/
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+      body {
+        font-family: "Open Sans" , sans-serif;
+        background-color: #F4F5F7;
+      }
+      #header-bg {
+        background-color: #D1F0F6;
+      }
+      #row-tab {
+        padding-top: 2%;
+      }
+      .nav-item {
+        color: #474747 !important;
+      }
+      #nav-btn {
+        color: #FFFFFF;
+        background: #00AEFF;
+        border-radius: 4px;
+      }
+      #page-title {
+        font-style: normal;
+        line-height: 54px;
+        text-align: center;
+        padding-top: 20%;
+      }
+      #main-title {
+        font-weight: 600;
+        font-size: 40px;
+        color: #084482;
+      }
+      #text-title-1 {
+        color: #474747;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        padding-top: 1%;
+      }
+      #text-title-2 {
+        color: #474747;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+      }
+      #area-container {
+        color: #474747;
+        padding-top: 5%;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        padding-bottom: 3%;
+      }
+      #checkbox-container {
+        background-color: #FFFFFF;
+        padding-top: 3%;
+        padding-left: 2%;
+      }
+      #toggleText , #toggleText1 , #toggleText2 , #toggleText3 , #toggleText4 , #toggleText5 {
+        display: none;
+      }
+   /*New checkbox*/
+      /* The container */
+      .cont {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      /* Hide the browser's default checkbox */
+      .cont input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+      /* Create a custom checkbox */
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+      }
+      /* On mouse-over, add a grey background color */
+      .cont:hover input ~ .checkmark {
+        background-color: #ccc;
+      }
+      /* When the checkbox is checked, add a blue background */
+      .cont input:checked ~ .checkmark {
+        background-color: #2196F3;
+      }
+      /* Create the checkmark/indicator (hidden when not checked) */
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      /* Show the checkmark when checked */
+      .cont input:checked ~ .checkmark:after {
+        display: block;
+      }
+      /* Style the checkmark/indicator */
+      .cont .checkmark:after {
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      .expertise-text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        letter-spacing: 0.04px;
+        color: #525F7F
+      }
+      .label-text {
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.04px;
+        color: #525F7F;
+      }
+      #insert-img-block {
+        padding-top: 1%;
+        align-content: center;
+        text-align: center;
+      }
+      #input-form {
+        align-content: center;
+        text-align: center;
+      }
+      #file-input {
+        display: none;
+      }
+      #quicklink-text {
+        font-weight: 600;
+        font-size: 23px;
+        color: #00AEFF;
+        padding-top: -2%;
+      }
+
+ /*Footer CSS*/
+
+ .page-footer{
+            background-color:  #FAFAFA;
+        }
+        h5,.fab{
+            color: #00AEFF;
+        }
+        .py-3 a,.footer-copyright,p,a{
+            color: #8898AA;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+        .fab{
+          border-radius: 50%;
+          background-color: #ffffff;
+          box-shadow: #8898AA 0px 4px 7px;
+        }
+        .fab:hover{
+          color: #084482;
+          font-weight: bold;
+        }
+        @media only screen and (max-width: 400px){
+          input::placeholder{
+          font-size: 70%;
+        }
+    } 
+</style>   
+</head>
+<body>
+
+<div class="hero">
+    <!--Header-->
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+                <a class="navbar-brand text-center mt-2" href="index.html">
+                    <img src="https://res.cloudinary.com/kuic/image/upload/v1570690973/HNG/brand-logo_nbp2ci.png" alt="HNG Internship" class="logo">
+                </a>
+                <button class="navbar-toggler mt-3" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars fa-lg"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav list-unstyled text-uppercase pt-3 pt-lg-0 ml-auto text-center">
+                        <li class="nav-item  text-center mr-3">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item mr-3">
+                            <a class="nav-link" href="hng6.html" style="text-transform:uppercase;">HNG6</a>
+                        </li>
+                        <li class="nav-item mr-3">
+                            <a class="nav-link" href="mentorpage.html">Mentors</a>
+                        </li>
+                        <li class="nav-item mr-3">
+                            <a class="nav-link" href="contactform.html">Contact</a>
+                        </li>
+                        <li class="nav-item join mr-3">
+                            <a class="nav-link"href="join-intern.html"><button class="btn btn-primary text-center" type="submit">Join HNG</button></a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-           
-            <!--Form2-->
-            <div class="row d-flex mt-5 mb-5">
-                <div class="col-lg-8 m-auto"> 
-                    <div class="second">
-                        <center>
-                        <div class="image-upload">
-                                <label for="file-input"><div class="circle"><i class="fas fa-camera"></i></div></label>
-                                <input id="file-input" type="file"/>
-                        </div>
-                        <div class="click text-center">Click the image above to upload a profile photo</div>
-                        <div class="jpg">JPG or PNG. Max size of 400k</div>
-                        </center>
-                        <form method="POST" action="">
-                            <div class="col-sm-12">
-                                    <label for="validationCustom01"></label>
-                                <input type="text" class="form-control mt-2" id="validationCustom01"  placeholder="Name" required></div>
-                                <div class="invalid-feedback">
-                                    Please Enter Your Name
-                                </div>
-                            <div class="col-sm-12">
-                                <input type="email" class="form-control mt-2" id="validationCustom02" placeholder="Email"required></div>
-                            <div class="col-sm-12">
-                                <input type="number" class="form-control mt-2" id="validationCustom03" placeholder="Phone number"required></div>
-                            <div class="col-sm-12">
-                                <input type="text" class="form-control mt-2" id="validationCustom04" placeholder="What do you do"required></div>
-                            <div class="col-sm-12">
-                                <input type="url" class="form-control mt-2"  id="validationCustom05" placeholder="Link to you portfolio"required></div>
-                            <div class="col-sm-12">
-                                <input type="url" class="form-control mt-2" id="validationCustom06" placeholder="Link to your Linkedin profile"required></div>
-                            <div class="col-sm-12">
-                                <input type="url" class="form-control mt-2"  id="validationCustom07" placeholder="Link to your cv"required></div>
-                            <div class="col-sm-12">
-                                <input type="text" class="form-control mt-2"  id="validationCustom08" placeholder="Why are you interested in mentoring with HNG?"required></div>
-                            <div class="col-sm-12">
-                                <input type="text" class="form-control mt-2"  id="validationCustom09" placeholder="What state are you currently in?"required></div>
-                            <div class="col-sm-12">
-                                <input type="text" class="form-control mt-2"  id="validationCustom10" placeholder="What is your current employment status?"required></div>
-                            <center><button class="btn btn-primary mt-3" type="submit">Submit</button></center>
-                        </form>
-                    </div>
-                </div>
-            </div>
+            </nav> 
+        </div> 
+    </header>
+
+    <!--Welcome Section-->
+    <div class="text-center mt-3 p-2 welcome">
+        <div class="text-center">
+            <h1 class="text-center mentor">Mentor Account Set Up</h1>
+            <p class="text-center">Thanks for your interest in becoming a HNG mentor.<br> Kindly fill out this form.</p>
         </div>
+        <!--<a href="#form"><i class="fas fa-arrow-circle-down mt-5"></i></a>-->
+    </div>
+    </div>  
+    <!--Form1-->
+</div>    
 
-
-
-        <!--FooterSection-->
+<div  class = "container">
+    <div class = "text-center" id = "area-container">Choose an area of expertise</div>
+    <div class = "justify-content-center" id = "checkbox-container">
+      <label class="cont form-check-label label-text">Frontend Development
+        <input type="checkbox" checked="checked">
+          <span class="checkmark"><i class="icon ion-ios-arrow-down"></i></span>
+          <span><button type="" onclick="toggleFun()" style="background-color: transparent; border-color: transparent;">
+            <img src="https://res.cloudinary.com/yutee/image/upload/v1570922279/Vectorarrow_rev_kpwnex.png">
+              </button>
+          </span> <!-- For Arrow -->
+      </label>
+      <span id = "toggleText" style = "padding-bottom: 1%; font-size: 14px:">Preferred skills: HTML, CSS, Javascript, Boostrap, JQuery</span>
+      <br>
+      <label class="cont form-check-label label-text">Backend Development
+          <input type="checkbox">
+          <span class="checkmark"></span>
+          <span><button type="" onclick="toggleFun1()" style="background-color: transparent; border-color: transparent;">
+            <img src="https://res.cloudinary.com/yutee/image/upload/v1570922279/Vectorarrow_rev_kpwnex.png">
+              </button>
+          </span> <!-- For Arrow -->
+      </label>
+      <span id = "toggleText1" style = "padding-bottom: 1%; font-size: 14px:">Preferred skills:</span>
+      <br>
+      <label class="cont form-check-label label-text">Machine Learning
+          <input type="checkbox">
+          <span class="checkmark"></span>
+          <span><button type="" onclick="toggleFun2()" style="background-color: transparent; border-color: transparent;">
+            <img src="https://res.cloudinary.com/yutee/image/upload/v1570922279/Vectorarrow_rev_kpwnex.png">
+              </button>
+          </span> <!-- For Arrow -->
+      </label>
+      <span id = "toggleText2" style = "padding-bottom: 1%; font-size: 14px:">Preferred skills:</span>
+      <br>
+      <label class="cont form-check-label label-text">UX/UI Design
+          <input type="checkbox">
+          <span class="checkmark"></span>
+          <span><button type="" onclick="toggleFun3()" style="background-color: transparent; border-color: transparent;">
+            <img src="https://res.cloudinary.com/yutee/image/upload/v1570922279/Vectorarrow_rev_kpwnex.png">
+              </button></span> <!-- For Arrow -->
+      </label>
+      <span id = "toggleText3" style = "padding-bottom: 1%; font-size: 14px:">Preferred skills:</span>
+      <br>
+      <label class="cont form-check-label label-text">Mobile Development
+          <input type="checkbox">
+          <span class="checkmark"></span>
+          <span><button type="" onclick="toggleFun4()" style="background-color: transparent; border-color: transparent;">
+            <img src="https://res.cloudinary.com/yutee/image/upload/v1570922279/Vectorarrow_rev_kpwnex.png">
+              </button>
+          </span> <!-- For Arrow -->
+      </label>
+      <span id = "toggleText4" style = "padding-bottom: 1%; font-size: 14px:">Preferred skills:</span>
+      <br>
+      <label class="cont form-check-label label-text">Digital Marketing
+          <input type="checkbox">
+          <span class="checkmark"></span>
+          <span><button type="" onclick="toggleFun5()" style="background-color: transparent; border-color: transparent;">
+            <img src="https://res.cloudinary.com/yutee/image/upload/v1570922279/Vectorarrow_rev_kpwnex.png">
+              </button>
+          </span> <!-- For Arrow -->
+      </label>
+      <span id = "toggleText5" style = "padding-bottom: 1%; font-size: 14px:">Preferred skills:</span>
+      <br>
+    </div> <!-- Checkbox -->
+  </div> <!-- Area of expertise -->
+  <div class = "container"> 
+    <div class="col-md-12 inner1 mt-5" id = "insert-img-block">
+      <label for="file-input" class="attach">
+      <img src="https://res.cloudinary.com/onamusia/image/upload/v1570664123/hng%20website/Group_96_zxm5gs.png">
+      </label>
+      <input class="none " id="file-input" type="file"/>
+      <p class="text-center">Click the image above to upload a profile photo</p>
+      <p class="text-center">JPG or PNG. Max size of 400k</p> <br>
+    </div>
+  </div> <!-- Image Insert block -->
+  <div class = "container">
+    <div class = "justify-content-center" id = "input-form">
+      <form>
+          <input class="form-control" type="text" placeholder="Name"> <br>
+          <input class="form-control" type="text" placeholder="Email" inputmode="email"> <br>
+          <input class="form-control" type="text" placeholder="Phone Number" inputmode="tel"> <br>
+          <input class="form-control" type="text" placeholder="What do you do?"> <br>
+          <input class="form-control" type="url" placeholder="Link to your portfolio"> <br>
+          <input class="form-control" type="url" placeholder="Link to your LinkedIn profile"> <br>
+          <input class="form-control" type="url" placeholder="Link to your CV"> <br>
+          <input class="form-control" type="text" placeholder="Why are interested in mentoring with HNG?"> <br>
+          <input class="form-control" type="text" placeholder="What state are you currently located in?"> <br>
+          <input class="form-control" type="text" placeholder="What is your current employment status?"> <br>
+          <button class="btn btn-primary submitform" type="submit"> Submit</button>
+      </form>
+    </div>
+  </div> <!-- Form input field -->
+  <br> <br> <br> <br> <br>
+  <!--FooterSection-->
 
 <!-- Footer -->
 <footer class="page-footer font-small mdb-color lighten-3 pt-4">
@@ -192,15 +433,18 @@
           </div>
         <hr class="clearfix w-100 d-md-none">
         <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
-          <h5 class="font-weight-bold mb-4">Follow Us</h5>
+          <h5 class="font-weight-bold mb-4">Follow Us</h5>                          
            <a href="https://twitter.com">
-            <i class="fab fa-twitter p-2"></i>
+            <img src="https://res.cloudinary.com/dqcsk8rsc/image/upload/v1570731646/TWITTER_mg1deo.svg"
+                                            alt="Twitter">
           </a>
           <a href="https://facebook.com">
-            <i class="fab fa-facebook-f ml-3 p-2"></i>
+            <img src="https://res.cloudinary.com/dqcsk8rsc/image/upload/v1570731646/FACEBOOK_qkehwl.svg"
+                                            alt="Facebook">
           </a>
           <a href="https://dribble.com">
-            <i class="fab fa-dribbble ml-3 p-2"></i>
+            <img src="https://res.cloudinary.com/dqcsk8rsc/image/upload/v1570731646/DRIBBBLE_laibcp.svg"
+                                            alt="Dribble">
           </a>
         </div>
       </div>
@@ -209,34 +453,66 @@
       <span> HNG Internship. All rights reserved.</span>
     </div>
   </footer>
+  
 
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-
+  <!-- Toggle checkbox options script -->
   <script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function() {
-      'use strict';
-      window.addEventListener('load', function() {
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.getElementsByClassName('needs-validation');
-        // Loop over them and prevent submission
-        var validation = Array.prototype.filter.call(forms, function(form) {
-          form.addEventListener('submit', function(event) {
-            if (form.checkValidity() === false) {
-              event.preventDefault();
-              event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-          }, false);
-        });
-      }, false);
-    })();
-    
+    function toggleFun() {
+      var x = document.getElementById("toggleText");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    function toggleFun1() {
+      var x = document.getElementById("toggleText1");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    function toggleFun2() {
+      var x = document.getElementById("toggleText2");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    function toggleFun3() {
+      var x = document.getElementById("toggleText3");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    function toggleFun4() {
+      var x = document.getElementById("toggleText4");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    function toggleFun5() {
+      var x = document.getElementById("toggleText5");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  </script>
 
-    </script>
-        <script src="https://kit.fontawesome.com/85682eb992.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </body>
+</body>
 </html>
+
