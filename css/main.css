@@ -263,6 +263,153 @@ aside a {
 color: #fff;
 }*/
 
+.emtpy {
+	width: 50px;
+}
+.table-container thead {
+	background-color: #3c6b9c;
+	width: 503px;
+	height: 76px;
+	color: #fff;
+	border-radius: 4px;
+}
+
+.table-container th {
+	width: 146px;
+	height: 27px;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-size: 20px;
+	line-height: 27px;
+}
+
+.table-container td {
+	width: 503px;
+	height: 76px;
+	background: #ffffff;
+	border: 0.5px solid #d3cccc;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 4px;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-size: 20px;
+	line-height: 27px;
+	color: #737373;
+}
+
+#wrapper {
+	background-color: #3c6b9c;
+	color: #f2f5f9;
+}
+#headingOne {
+	background-color: #00aeff;
+}
+#headingOne button {
+	color: #f8fdff;
+}
+#collapseOne li {
+	color: #737373;
+	list-style-type: none;
+}
+.buttonTwo,
+.buttonThree,
+.buttonFour,
+.buttonFive {
+	color: #737373;
+}
+.para-text {
+	font-size: 20px;
+	padding: 15px 0px;
+	text-align: justify;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.onboard-container,
+.scalable-container {
+	margin-top: 5px;
+}
+.onboard-container > h3,
+.apply-container > h3,
+.h2-head,
+.scalable-container > h3 {
+	color: #084482;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.get-started-btn {
+	font-family: 'Open Sans', sans-serif;
+	height: 42px;
+	line-height: 30px;
+	background-color: #00aeff;
+	font-weight: lighter;
+}
+
+.inside-card {
+	font-size: 14.8px;
+}
+@media (min-width: 768px) {
+	.para-text {
+		font-size: 18px;
+		width: 300px;
+	}
+	.first-container,
+	.second-container,
+	.firs-container {
+		display: flex;
+		padding: 10px;
+	}
+	.second-container {
+		flex-direction: row-reverse;
+	}
+	.onboard-image,
+	.onboard-container,
+	.product-image,
+	.scalable-container,
+	.apply-container,
+	.table-container {
+		width: 50%;
+		height: 50%;
+		margin: 10px;
+	}
+	.onboard-container > h3,
+	.scalable-container > h3 {
+		font-size: 20px;
+	}
+	.inside-card {
+		font-size: 18px;
+	}
+}
+
+@media (min-width: 992px) {
+	.para-text {
+		font-size: 19px;
+		padding: 20px 0px 33px 0px;
+		width: 400px;
+	}
+	.first-container,
+	.second-container,
+	.firs-container {
+		padding: 20px;
+	}
+	.second-container {
+		margin-top: 6%;
+	}
+	.laptop-image {
+		width: 600px;
+	}
+	.onboard-image,
+	.onboard-container,
+	.product-image,
+	.scalable-container {
+		margin: 20px;
+	}
+	.onboard-container > h3,
+	.scalable-container > h3 {
+		font-size: 24px;
+	}
+}
+
 /*Tablets*/
 @media only screen and (min-width: 768px) {
 	.cta-button {
