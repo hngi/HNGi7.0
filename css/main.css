@@ -21,7 +21,6 @@ button > a {
 	position: absolute;
 	top: 0;
 	right: 0;
-	/*height: 100%;*/
 	width: 55%;
 
 	z-index: -1;
@@ -258,10 +257,6 @@ aside a {
 	right: 0.3em;
 	cursor: pointer;
 }
-
-/*#join-hng-text{
-color: #fff;
-}*/
 
 .emtpy {
 	width: 50px;
@@ -522,7 +517,6 @@ p {
 .section-2 {
 	height: 100%;
 	margin: 2em 0;
-	/*padding: 20px 80px;*/
 	display: grid;
 	grid-template-columns: 1fr;
 }
@@ -616,19 +610,6 @@ tr {
 	border-radius: 4px;
 	box-sizing: border-box;
 }
-
-/*.click {
-width: 120px;
-display: block;
-margin-top: 20px;
-height: 30px;
-box-sizing: border-box;
-background: #00AEFF;
-box-shadow: 0px 4px 6px rgba(50, 50, 93, 0.11);
-border-radius: 4px;
-color: #FFFFFF;
-
-}*/
 
 .intern-meet {
 	max-width: 100%;
