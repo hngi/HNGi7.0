@@ -8,9 +8,8 @@
 body {
   font-family: "Open Sans", sans-serif;
 }
-nav {
+header {
   background: #d1f0f6;
-  height: 80px;
   width: 100%;
 }
 
@@ -91,6 +90,7 @@ section.jumbo {
 section.jumbo > h2.heading {
   margin-top: 100px;
   margin-bottom: 30px;
+  font-size: 40px;
   color: #084482;
 }
 

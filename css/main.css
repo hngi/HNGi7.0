@@ -39,17 +39,6 @@ grid-template-areas:
 "main";
 }
 
-header {
-grid-area: header;
-padding: 0 10%;
-}
-
-nav {
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-
 logo-container {
 
 height: 100%;
@@ -65,30 +54,6 @@ width: 90%;
 list-style-type: none;
 display: inline-block;
 margin-left: 2em;
-}
-
-nav a {
-text-decoration: none;
-font-size: 0.95em;
-color: #474747;
-mix-blend-mode: normal;
-opacity: 0.95;
-}
-
-#join-hng {
-margin: 0;
-padding: 0.5em 1em;
-}
-
-#join-hng a {
-color: #fff;
-font-weight: 500;
-
-}
-
-a:hover {
-text-decoration: none;
-font-weight: bold;
 }
 
 #hamburger {
