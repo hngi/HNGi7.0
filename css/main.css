@@ -230,10 +230,11 @@ right: 0;
 top: 0;
 z-index: 2;
 background: #CCF5FC;
-height: 100%;
-width: 45%;
+height: auto;
+width: auto;
 padding: 5em 2em;
 text-align: right;
+box-shadow: 1px 1px 1px #0088C7;
 }
 
 aside>nav {
@@ -243,6 +244,7 @@ justify-content: flex-end;
 .nav-link-1-vertical {
 list-style-type: none;
 margin-bottom: 2em;
+text-align: center;
 
 }
 
@@ -291,7 +293,7 @@ font-size: 1.2em;
 }
 
 /*Desktop*/
-@media only screen and (min-width: 960px) {
+@media screen and (min-width: 960px) {
 header {
 
 padding: 0 8%;
@@ -605,16 +607,21 @@ background-color: #fafafa;
 }
 
 .final {
-display: flex;
-justify-content: space-between;
-align-items: flex-start;
+  margin-top: 20px;
+  display: grid;
+  text-align: center;
+}
 
+.final div {
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 .quick {
 display: flex;
 flex-flow: column;
 }
+
 
 .final h2 {
 text-transform: capitalize;
@@ -641,20 +648,14 @@ color: #737373;
 }
 
 footer .img {
-display: flex;
-justify-content: space-between;
+display: inline-block;
 }
 
-footer .img div {
-background: #FFFFFF;
-display: flex;
-justify-content: center;
-align-items: center;
-border-radius: 45%;
-flex-basis: 30px;
-height: 30px;
-box-shadow: 0px 4px 4px rgba(50, 50, 93, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08);
+footer .img img {
+  margin-right: 20px;
+  width: 20px;
 }
+
 
 .rights {
 margin-bottom: 0;
@@ -663,15 +664,21 @@ text-align: center;
 font-size: 14px;
 }
 
-.img img {
-width: 20px;
-}
 
 footer .footer-logo {
 width: 200px;
 cursor: pointer;
 }
+@media screen and (min-width: 800px){
+  .final {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 
+  .final > div {
+    width: 100%;
+  }
+}
 
 
 
@@ -1066,5 +1073,46 @@ width: 100%;
     .onboard-container>h3,
     .scalable-container>h3 {
       font-size: 24px;
+    }
+  }
+
+
+  footer {
+    width: 100%;
+    padding: 10px 30px;
+  }
+
+  footer a {
+    text-decoration: none;
+  }
+
+  .myfooter-logo {
+    width: 100%;
+  }
+
+  .footer-body {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .footer-body h2 {
+    color: #084482;
+  }
+
+  .footer-body a {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .copyright {
+    width: 100%;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 700px)
+  {
+    .footer-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
     }
   }
