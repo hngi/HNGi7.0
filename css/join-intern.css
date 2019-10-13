@@ -156,7 +156,8 @@ section.jumbo > p.para2 > a {
   margin-right: 1rem;
   color: #00aeff;
   background: white;
-  padding: 0.5rem;
+  margin: 5px 2px;
+  padding: 0.2rem;
   border: 5px solid white;
   box-shadow: 0px 4px 4px rgba(50, 50, 93, 0.11),
     0px 1px 3px rgba(0, 0, 0, 0.08);
@@ -170,7 +171,6 @@ section.jumbo > p.para2 > a {
     margin-left: 20px;
     margin-top: 15px;
   }
-
 
   .footer-items {
     display: flex;
@@ -221,4 +221,3 @@ section.jumbo > p.para2 > a {
     }
   }
 }
-
