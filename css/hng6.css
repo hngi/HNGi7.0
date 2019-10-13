@@ -78,6 +78,15 @@ header #mobile-bars
 	cursor: pointer;
 	display: none;	
 }
+header .stix
+{
+	border-radius: 3px;
+	height: 3px;
+	width: 30px;
+	background-color: dimgray;
+	margin: 5px 0;
+	transition: 0.4s ease;
+}
 header #mobile-bars-check 
 {
     display: none;
@@ -417,7 +426,7 @@ footer #socials img
 	}
     header
     {
-    	padding: 0.5rem 1rem;
+    	padding: 1rem;
     	width: 90vw;
 		overflow-x: hidden;
     }
@@ -450,7 +459,20 @@ footer #socials img
     	display: block;
     	margin-left: 40vw;
     }
-    #mobile-bars-check:checked ~ nav
+    header #mobile-bars-check:checked ~ #mobile-bars > #stik1
+	{
+		transform: rotate(45deg) translateY(7px) translateX(5px);
+	}
+	header #mobile-bars-check:checked ~ #mobile-bars > #stik2
+	{
+		width: 0;
+		opacity: 0;
+	}
+	header #mobile-bars-check:checked ~ #mobile-bars > #stik3
+	{
+		transform: rotate(-45deg) translateY(-8px) translateX(5px);
+	}
+	header #mobile-bars-check:checked ~ nav
     {
     	top: 10vh;
     }
