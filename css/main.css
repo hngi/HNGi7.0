@@ -256,10 +256,11 @@ right: 0;
 top: 0;
 z-index: 2;
 background: #CCF5FC;
-height: 100%;
-width: 45%;
+height: auto;
+width: auto;
 padding: 5em 2em;
 text-align: right;
+box-shadow: 1px 1px 1px #0088C7;
 }
 
 aside>nav {
@@ -269,6 +270,7 @@ justify-content: flex-end;
 .nav-link-1-vertical {
 list-style-type: none;
 margin-bottom: 2em;
+text-align: center;
 
 }
 
@@ -317,7 +319,7 @@ font-size: 1.2em;
 }
 
 /*Desktop*/
-@media only screen and (min-width: 960px) {
+@media screen and (min-width: 960px) {
 header {
 
 padding: 0 8%;
@@ -961,5 +963,49 @@ padding-bottom: 3em;
     .onboard-container>h3,
     .scalable-container>h3 {
       font-size: 24px;
+    }
+  }
+
+
+  footer {
+    width: 100%;
+    padding: 10px 30px;
+  }
+
+  footer a {
+    text-decoration: none;
+  }
+
+  .myfooter-logo {
+    width: 100%;
+  }
+
+  .footer-body {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .footer-body h2 {
+    color: #0088C7;
+  }
+
+  .footer-body a {
+    display: block;
+    margin-bottom: 5px;
+    color: #0088C7
+  }
+
+  .copyright {
+    width: 100%;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 700px)
+  {
+    .footer-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      text-align: left;
     }
   }
