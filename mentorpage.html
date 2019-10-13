@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./styles/Mentors.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="icon" type="img/png" href="images/hng-favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <title>Mentors Page</title>
     <style>
       * {
@@ -95,10 +96,9 @@
     }
      #landing-page {
       text-align: center;
-      min-height: 45vh;
       background-color: #D1F0F6;
       position: relative;
-      margin: 1.5rem;
+      min-height: 40vh;
      }
      
      .land {
@@ -127,20 +127,14 @@
        
        font-weight: bold;
        color: #084482 !important;
+       margin-top: 1rem;
        margin-bottom: 1rem
      }
 
      
-
      #img {
        margin-left: 1rem !important;
        width: 150px;
-     }
-     
-     footer {
-         text-align: center;
-         position: relative;
-         bottom: 0;
      }
      
      .footer-brand {
@@ -155,9 +149,6 @@
          color: #3BB9FF;
      }
      
-     footer h4 {
-         color: #3BB9FF;
-     }
      
      
      .btn {
@@ -192,26 +183,6 @@
         min-height: 60vh;
         padding: 1rem;
      }
-     
-     footer {
-         background: #F8F8F8;
-         box-sizing: border-box;
-     }
-     
-     footer p {
-         color: #474747;
-     }
-     
-     footer a {
-         color: #3BB9FF;
-     }
-    
-    @media (max-width: 420px){
-        .lead{
-          font-size: 1rem;
-        }
-    }
-
 
 
     @media (min-width: 700px) {
@@ -224,9 +195,13 @@
         display: flex;
         justify-content:flex-end;
       }
-      
-     #landing-page {
-         min-height: 55vh;
+     
+     #landing-page  h2 {
+        font-size: 45px;
+     } 
+     #landing-page  p {
+        padding: 25px;
+        font-size: 25px;
      }
 
       li {
@@ -275,11 +250,6 @@
          width: 650px !important;
          bottom: 1rem;
      }
-     
-     footer {
-         text-align: left;
-     }
-     
      .footer-brand {
          margin-left: -2.2rem;
      }
@@ -308,7 +278,7 @@
 </style>
 </head>
 <body>
-    <header>
+    <!--header>
   <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
     <a class="navbar-brand" href="index.html">
       <img src="https://res.cloudinary.com/chidi6ix/image/upload/v1570716504/brand-logo_cmbyi8.svg" id="img">
@@ -346,7 +316,35 @@
       </div>
 
   </div>
-</header>
+</header-->
+
+<header>
+    <a href="index.html"><img id="hng-logo" src="https://res.cloudinary.com/jaycodist/image/upload/v1570722444/hng-brand-logo_gnplmq.svg"></a>
+    <input type="checkbox" id="mobile-bars-check" />
+        <label for="mobile-bars-check" id="mobile-bars">
+          <!--img src="images/bars-icon.png" height="23px"-->
+    <div class="stix" id="stik1"></div>
+    <div class="stix" id="stik2"></div>
+    <div class="stix" id="stik3"></div>
+        </label>
+    <nav>
+      <a href="index.html" class="header-links">Home</a>
+      <a href="hng6.html" class="header-links">HNG 6</a>
+      <a href="mentorpage.html" class="header-links">Mentors</a>
+      <a href="contactform.html" class="header-links">Contact</a>
+      <a href="join-intern.html" id="join-hng" class="def-button">Join HNG</a>
+    </nav>
+  </header>
+
+<div class="jumbotron" id="landing-page">
+      <div class="land">
+      <h2>Our Mentors</h2>
+      <p class="lead">Our mentors who are experienced in various sector contributes their
+          time and knowledge in making sure the interns get the best guide as 
+        they begin their journey into the tech industry</p>
+      </div>
+
+  </div>
 
   <main>
     <section class="mentors-section">
@@ -359,76 +357,51 @@
 
   
   <footer>
-      <div id="footer">
-          <div class="footer-brand">
-              <img src="https://res.cloudinary.com/chidi6ix/image/upload/v1570716504/brand-logo_cmbyi8.svg" id="img">
-          </div>
-          <div id="sections">
-          <section id="section-one">
-              <h4 class="blue">Quick Links</h4>
-              <br>
-              <ul class="blue" class="ul">
-                 <li>
-
-                     <a href="join-intern.html">Join HNG</a>
-                 </li>
-                 <li>
-                     <a href="how-it-works.html">About HNG</a>
-                 </li>
-                 <li>
-                     <a href="MentorSetUpPage2.html">Become a Sponsor</a>
-                 </li>
-                 <li>
-                     <a href="MentorSetUpPage2.html">Signup as a Mentor</a>
-                 </li>
-              </ul>
-          </section>
-          <section id="section-two">
-              <h4>Contact Us</h4>
-              <br>
-              <p>Phone</p>
-              <p>+234 (0) 812 345 6789</p>
-              <p>Email</p>
-              <p>interns@hng.tech</p>
-          </section>
-          <section id="section-three">
-              <h4>Office Address</h4>
-              <br>
-              <p>3 Birrel Avenue</p>
-              <p>Sabo Yaba,</p>
-              <p>Lagos State</p>
-          </section>
-          <section id="section-four">
-              <h4>Follow Us</h4>
-              <br>
-              <div class="bottom-icons">
-                  <span>
-
-                      <a href="https://twitter.com">
-                        <i class="fab fa-twitter"></i>
-                      </a>
-                  </span>
-                  <span>
-  
-                    <a href="https://facebook.com">
-                      <i class="fab fa-facebook-square"></i>
-                    </a>
-                </span>
-                
-                  <span>
-  
-                      <a href="https://dribble.com">
-                        <i class="fab fa-dribbble"></i>
-                      </a>
-                  </span>
-              </div>
-          </section>
-          </div>
-
-          <p id="bottom">
-              &copy; 2019, HNG Internship All rights reserved.
-          </p>
-      </div>
+    <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722444/hng-brand-logo_gnplmq.svg">
+    <nav>
+      <section>
+        <h2 class="skyblue-text">Quick Links</h2>
+        <div id="link-list">
+          <a href="join-intern.html" class="skyblue-text">Join HNG</a>
+          <a href="index.html" class="skyblue-text">About HNG</a>
+          <a href="MentorSetUpPage2.html" class="skyblue-text">Become a Sponsor</a>
+          <a href="MentorSetUpPage2.html" class="skyblue-text">Sign up as Mentor</a>
+        </div>
+      </section>
+      <section id="contact-section">
+        <h2 class="skyblue-text">Contact Us</h2>
+        <div>
+          <a href="tel:+2348123456789">
+            <strong>
+              Phone: <br />
+            </strong>
+            +234 812 345 6789           
+          </a>
+          <br />
+          <a href="mailto:interns@hng.tech">
+            <strong>
+              Email: <br />
+            </strong>
+            interns@hng.tech
+          </a>
+        </div>
+      </section>
+      <section>
+        <h2 class="skyblue-text">Office Address</h2>
+        <p id="address">
+          3 Birrel Avenue <br /> Sabo, Yaba, <br /> Lagos state
+        </p>
+      </section>
+      <section>
+        <h2 class="skyblue-text">Follow Us</h2>
+        <div id="socials">
+          <a href="https://twitter.com" title="Follow on Twitter!"><img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/twitter-logo_m1mgzi.svg"></a>
+          <a href="https://facebook.com"><img title="Follow on Facebook!" src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/facebook-logo_bw1hal.svg"></a>
+          <a href="https://dribble.com"><img title="Follow on Dribble!" src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/dribble-logo_w4vwuz.svg"></a>
+        </div>
+      </section>
+    </nav>
+    <p class="center-text darkblue-text">&copy 2019, HGN Internship. All rights reserved.</p>
   </footer>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

@@ -1,12 +1,12 @@
 * {
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', segoeUI, sans-serif;
 }
 .form1 {
   text-align: center;
 }
 form {
-  padding: 12px 16px;
+  padding: 12px 16px 50px;
   max-width: 500px;
   border-radius: 5px;
   display: inline-block;
@@ -24,7 +24,7 @@ input {
   padding: 8px;
   border: 1px solid #3f3f3f;
   padding-left: 25px;
-
+  font-size: inherit;
 }
 textarea {
   min-height: 200px;
@@ -40,10 +40,12 @@ textarea {
   color: white;
 font-style: normal;
 font-weight: bold;
-font-size: 10px;
+font-size: 15px;
 line-height: 22px;
-padding: 2px;
+padding: 5px;
+font-family: 'Open Sans', sans-serif;
 border-radius: 4px;
+border: none;
 outline: none;
 }
 .material-icons {

@@ -46,8 +46,7 @@
     margin: 0 14.5px;
     border-radius: 50%;
     text-align: center;
-  }
-
+  } 
   .navbar-toggler-icon {
     border-radius: none;
     box-shadow: none;
@@ -124,15 +123,6 @@
      width: 150px;
    }
    
-   footer {
-       text-align: center;
-       position: relative;
-       bottom: 0;
-       background-color: rgb(245, 245, 245);
-       padding: 4rem 8rem;
-       box-sizing: border-box;
-   }
-   
    .footer-brand {
        margin-top: 5rem;
    }
@@ -142,10 +132,6 @@
    }
    
    .blue{
-       color: #3BB9FF;
-   }
-   
-   footer h4 {
        color: #3BB9FF;
    }
    
@@ -194,15 +180,6 @@
       padding: 1rem;
    }
    
-   
-   footer p,
-   footer h3 {
-       color: #474747;
-   }
-   
-   footer a {
-       color: #3BB9FF;
-   }
 
 
 
@@ -276,10 +253,6 @@
    .land {
        margin: 0 auto;
        width: 650px !important;
-   }
-   
-   footer {
-       text-align: left;
    }
    
    .footer-brand {
