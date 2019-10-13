@@ -125,11 +125,14 @@ grid-template-areas:
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 main>div {
 padding: 0 10%;
 }
 >>>>>>> a0fc664f4905ea9d65a21a65e4743733ac049577
+=======
+>>>>>>> fabcfe66a2c7161ce12c835a90bb4b7bd78b7cc1
 
 .main-first-row {
 grid-area: row1;
@@ -1045,6 +1048,7 @@ width: 100%;
   }
 >>>>>>> a0fc664f4905ea9d65a21a65e4743733ac049577
 
+<<<<<<< HEAD
   #headingOne button {
     color: #F8FDFF;
   }
@@ -1124,6 +1128,22 @@ width: 100%;
       font-size: 20px;
     }
 >>>>>>> a0fc664f4905ea9d65a21a65e4743733ac049577
+=======
+.Neche {
+  padding-top: 3em;
+  text-align: center;
+  padding-bottom: 3em;
+}
+
+
+@media (max-width: 776px) {
+  header .nav a {
+    font-size: 10px;
+  }
+
+  footer .footer-logo img {
+    width: 100%;
+>>>>>>> fabcfe66a2c7161ce12c835a90bb4b7bd78b7cc1
   }
 
   @media (min-width: 992px) {
