@@ -14,8 +14,9 @@
  background: #3c6b9c;}
  .footer__go-up .arrow-up {
    position: relative;
-   top: -1px;
-   left: 13px;
+   top: 7px;
+   left: 8px;
+   opacity: .9;
    color: white;
    font-size: 1.5rem; }
 
