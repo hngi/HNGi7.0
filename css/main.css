@@ -94,7 +94,7 @@ font-weight: bold;
 #hamburger {
 float: right;
 cursor: pointer;
-margin: auto 0;
+margin: auto 10px;
 }
 
 main {
