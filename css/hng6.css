@@ -77,13 +77,14 @@
 	footer
 	{
 		background-color: rgb(245, 245, 245);
-		padding: 4rem 8rem;
+		padding: 20px 40px;
 	}
 	footer > nav
 	{
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		width: 100%;
 	}
 	footer #contact-section a, footer #address
 	{
@@ -117,7 +118,7 @@
 	{
 		color: white;
 		border-radius: 3px;
-		padding: 0.5rem 1rem;
+		padding: 20px;
 		background-color: #00AEFF;
 		outline: none;
 		border: none;

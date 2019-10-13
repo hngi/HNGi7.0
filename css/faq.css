@@ -46,12 +46,8 @@ header .wrap .logo{
     color: white;
     font-weight: 500;
 }
-.nav-item {
-    margin: 0 0.8rem;
-}
 .hero .wrap{
     text-align: center;
-    margin-top: 10rem;
 
 }
 .hero .wrap h1{
@@ -61,7 +57,7 @@ header .wrap .logo{
     margin-top: 50px;
 }
 .hero .wrap p{
-    padding-top: 40px;
+    margin-top: 30px;
     max-width: 650px;
     color: #474747;
     line-height: 33px;
@@ -78,10 +74,9 @@ header .wrap .logo{
     text-decoration: none;
     color: #00AEFF;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 20px;
     text-transform: capitalize;
 }
-
 .freq .wrap a::after{
     content: url(./images/Vector.png);
     margin-left: 50px;
@@ -182,28 +177,10 @@ footer .img div{
     font-size: 14px;
 }
 .img img{
-    width: 29px;
-    border-radius: 14px;
+    width: 20px;
 }
-.wrap p {
-    margin-top: 2%;
-}
-.wrap p:first-child {
-    margin-top: 5%;
-}
-.wrap .fa {
-    transition: .3s transform ease-in-out;
-}
-.wrap .collapsed .fa {
-    transform: rotate(180deg);
-}
-.mobile-arrow {
-    display: none;
-}
-.desktop-arrow {
-    margin-left: 6rem;
-    font-size: 1.3rem;
-}
+
+
 
 
 
@@ -234,21 +211,5 @@ footer .img div{
     }
     footer .footer-logo img{
         width: 100%;
-    }
-    footer h2 {
-        font-size: 1.5rem;
-    }
-    .wrap .fa {
-        margin-top: 0.5rem;
-    }
-    .navbar-image{
-        width: 145px;
-        height: 45px;
-    }
-    .desktop-arrow {
-        display: none;
-    }
-    .mobile-arrow {
-        display: block;
     }
 }
