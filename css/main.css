@@ -1093,15 +1093,17 @@ width: 100%;
   .footer-body {
     width: 100%;
     padding: 20px 0;
+    text-align: center;
   }
 
   .footer-body h2 {
-    color: #084482;
+    color: #0088C7;
   }
 
   .footer-body a {
     display: block;
     margin-bottom: 5px;
+    color: #0088C7
   }
 
   .copyright {
@@ -1114,5 +1116,6 @@ width: 100%;
     .footer-body {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
+      text-align: left;
     }
   }
