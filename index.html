@@ -23,7 +23,7 @@
 <body>
     <img src="https://bit.ly/2OC3tWo" id="corner-circle" alt="Graphic at the top right corner">
     <div class="containerGrid">
-        <header>
+        <header id="header">
             <a href="index.html"><img id="hng-logo"
                     src="https://res.cloudinary.com/jaycodist/image/upload/v1570722444/hng-brand-logo_gnplmq.svg"></a>
             <input type="checkbox" id="mobile-bars-check" />
@@ -473,7 +473,7 @@
 
                         <div class="mb-3" style="padding-top: 35px;"><a style="color:#00AEFF;" href="hng6.html"><i
                                     class="fa fa-angle-right px-1"
-                                    style="color:#00AEFF; border:2px solid #00AEFF; background-color: white; width: 40px height:7px; border-radius: 50%; "></i>
+                                    style="color:#00AEFF; border:2px solid #00AEFF; background-color: white; width: 40px; height:7px; border-radius: 50%; "></i>
                                 Learn more</a></div>
                     </div>
 
@@ -624,6 +624,8 @@
                     </section>
                 </nav>
                 <p class="center-text darkblue-text">&copy 2019, HGN Internship. All rights reserved.</p>
+                
+                <div class="center-text"><a href="#header" id="top">Jump to Top<span></span></a></div>
             </footer>
         </main>
 
@@ -686,7 +688,20 @@
 
 
     }
-
+    //handle sroll to top arrow
+    $(document).ready(function(){ 
+    $(window).scroll(function(){ 
+        if ($(this).scrollTop() > 100) { 
+            $('#top').fadeIn(); 
+        } else { 
+            $('#top').fadeOut(); 
+        } 
+    }); 
+    $('#top').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 600); 
+        return false; 
+    }); 
+});
 
 </script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
