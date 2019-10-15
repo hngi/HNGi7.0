@@ -115,6 +115,7 @@ footer > nav
 footer #contact-section a, footer #address
 {
 	color: rgba(0, 0, 0, 0.5);
+	text-decoration: none;
 }
 footer #link-list
 {
@@ -128,6 +129,7 @@ footer #link-list > *
 	align-self: flex-start;
 	padding: 0.5rem;
 	transition: 0.4s ease-out;
+	text-decoration: none;
 }
 footer .skyblue-text
 {
