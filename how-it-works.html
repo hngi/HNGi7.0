@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>How it works</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/header-footer.css">
+  <link rel="icon" type="img/png" href="images/hng-favicon.png">
+  <style>
+
+    .h2-head{
+      margin-top: 4rem;
+    }
+    .emtpy{
+        width: 50px;
+      }
+      thead{
+        background-color: #3c6b9c;
+        color: #FFF;
+      }
+      #wrapper{
+        background-color: #3c6b9c;
+        color: #F2f5f9
+      }
+      #headingOne{
+        background-color: #00AEFF;
+      }
+      #headingOne button{
+        color: #F8FDFF;
+      }
+      #collapseOne li{
+        color: #737373;
+      list-style-type: none;
+      }
+      .buttonTwo, .buttonThree, .buttonFour, .buttonFive{
+        color: #737373;
+      }
+      .para-text{
+        font-size: 20px;
+        padding: 15px 0px;
+        text-align: justify;
+        font-family: "Open Sans", sans-serif;
+
+      }
+
+      .onboard-container,.scalable-container{
+            margin-top: 5px;
+      }
+      .onboard-container > h3, .apply-container > h3, .h2-head, .scalable-container > h3{
+        color: #084482;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .get-started-btn{
+        font-family: "Open Sans", sans-serif;
+        font-weight: bold;
+      }
+
+      .page-footer{
+        background: #FAFAFA;
+      }
+
+      @media (min-width: 768px){
+        .para-text{
+            font-size: 18px;
+            width: 300px;
+        }
+        .first-container, .second-container, .firs-container{
+            display:flex;
+            padding: 10px;
+        }
+        .second-container{
+            flex-direction: row-reverse;
+        }
+        .onboard-image,.onboard-container,.product-image, .scalable-container, .apply-container, .table-container{
+            width:50%;
+            height:50%;
+            margin:10px;
+        }
+        .onboard-container > h3, .scalable-container > h3{
+            font-size: 20px;
+        }
+      }
+
+      @media (min-width: 992px){
+        .para-text{
+            font-size: 19px;
+            padding: 20px 0px 33px 0px;
+            width: 400px;
+        }
+        .first-container, .second-container, .firs-container{
+            padding: 20px;
+        }
+        .second-container{
+            margin-top: 6%;
+        }
+        .laptop-image{
+            width:600px;
+        }
+        .onboard-image,.onboard-container,.product-image, .scalable-container{
+            margin:20px;
+        }
+        .onboard-container > h3, .scalable-container > h3{
+            font-size: 24px;
+        }
+      }
+
+      /*navbar styles*/
+      header{
+      background-color:#D1F0F6;
+      padding-bottom: 2rem;
+    };
+    .navbar-brand img{
+      width: 100%;
+      height: 100;
+      margin: 0 auto;
+    }
+
+    /*Footer styles*/
+     .page-footer{
+      background-color:  #FAFAFA;
+    }
+    footerh5{
+        color: #00AEFF;
+    }
+    a:hover{
+        text-decoration: none;
+    }
+    .fab{
+      border-radius: 50%;
+      background-color: #ffffff;
+      box-shadow: #8898AA 0px 4px 7px;
+    }
+    .fab:hover{
+      color: #084482;
+      font-weight: bold;
+    }
+    footer h2
+    {
+      font-size: 25px;
+      margin: 1rem auto;
+    }
+    footer #socials img
+    {
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img id="hng-logo" src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png"></a>
+    <input type="checkbox" id="mobile-bars-check" />
+        <label for="mobile-bars-check" id="mobile-bars">
+          <!--img src="images/bars-icon.png" height="23px"-->
+    <div class="stix" id="stik1"></div>
+    <div class="stix" id="stik2"></div>
+    <div class="stix" id="stik3"></div>
+        </label>
+    <nav>
+      <a href="index.html" class="header-links">Home</a>
+      <a href="hng6.html" class="header-links">HNG 6</a>
+      <a href="mentorpage.html" class="header-links">Mentors</a>
+      <a href="contactform.html" class="header-links">Contact</a>
+      <a href="join-intern.html" id="join-hng" class="def-button">Join HNG</a>
+    </nav>
+  </header>
+
+  <h2 class="h2-head container text-center mb-2">How does it Work ?</h2>
+  <div class="container firs-container">
+    <div class="apply-container">
+      <h3>Onboard and Connect with Teammates</h3>
+        <p class="para-text">
+            The HNG internship is a 3-month remote
+            internship designed to find and develop
+            the most talented software developers.
+            Everyone is welcome to participate (there
+            is no extrance exam). Anyone can log into
+            the internship using their laptop. Each week,
+            we give tasks.
+        </p>
+        <div class="get-started">
+            <a class="get-started-btn btn btn-primary" href="#join-intern.html">Get Started</a>
+        </div>
+    </div>
+    <div class="mt-3 table-container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Event Calendar</th>
+            <th class="empty"> </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+                Registration
+            </td>
+          </tr>
+          <tr>
+            <td>Registration</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Internship Starts</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Stage 1 to Stage 10</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Internship Ends</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+  <div class="first-container container mt-4">
+      <div class="onboard-image">
+        <img class="laptop-image img-fluid" src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1570554236/laptop.png" alt="people pressing laptop">
+      </div>
+      <div class="onboard-container">
+        <h3>Onboard and Connect with Teammates</h3>
+        <p class="para-text">
+            The HNG internship is a 3-month remote
+            internship designed to find and develop
+            the most talented software developers.
+            Everyone is welcome to participate (there
+            is no extrance exam). Anyone can log into
+            the internship using their laptop. Each week,
+            we give tasks.
+        </p>
+        <div class="get-started">
+            <a class="get-started-btn btn btn-primary" href="#">Get Started</a>
+        </div>
+      </div>
+  </div>
+  <div class="second-container container mt-4">
+    <div class="product-image">
+      <img class="product-img laptop-image img-fluid" src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1570554238/new_product.png" alt="laptop beside a coffee">
+    </div>
+    <div class="scalable-container">
+      <h3>Build Scalable Products & Grow</h3>
+      <p class="para-text">The HNG internship is a 3-month remote
+          internship designed to find and develop
+          the most talented software developers.
+          Everyone is welcome to participate (there
+          is no extrance exam). Anyone can log into
+          the internship using their laptop. Each week,
+          we give tasks.
+      </p>
+      <div class="get-started">
+          <a class="get-started-btn btn btn-primary" href="#">Get Started</a>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid mt-2" id="wrapper">
+    <div class="row">
+      <div class="col-12">
+        <h4 class="text-center mt-5">One of the Best Learning Curriculums in the World</h4>
+        <section>
+          <div class="container">
+            <div class="row">
+            <div class="col-md-6 col-sm-12 mt-5 mb-5">
+              <div class="row">
+                <div class="col-2">
+                  <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/frontend_hzyzio.png" width="50px" class="img-fluid">
+                </div>
+                <div class="col-10">
+                  <h5>FRONT END</h5>
+                  <P>Put your Frontend skills to test and sharpen it further as you turn exciting UI Designs into stunning web pages.</P>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-2">
+                  <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/backend_orn4az.png" width="50px" class="img-fluid">
+                </div>
+                <div class="col-10">
+                  <h5>BACK END</h5>
+                  <P>Put your backenend skills to test and sharpen it by building scalable, logic driven applications with world class technologies.</P>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-2">
+                  <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/ml_sdviij.png" width="30px" class="img-fluid ml-2">
+                </div>
+                <div class="col-10">
+                  <h5>MACHINE LEARNING</h5>
+                  <P>Develop programs that can access data and utilize it to automatically learn and improve from experience</P>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-2">
+                  <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/ui-ux_xq64bx.png" width="50px" class="img-fluid">
+                </div>
+                <div class="col-10">
+                  <h5>UI / UX DESIGN</h5>
+                  <P>Put your UX/UI Design skills to test and sharpen it as you design exciting User Interfaces for great User Experience.</P>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-2">
+                  <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/dm_bxzzr2.png" width="50px" class="img-fluid">
+                </div>
+                <div class="col-10">
+                  <h5>DIGITAL MARKETING</h5>
+                  <P>Put your UX/UI Design skills to test and sharpen it as you design exciting User Interfaces for great User Experience.</P>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-6 col-sm-12 mb-5 mt-5">
+              <div class="accordion" id="accordionExample">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                      <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png" class="arrow1">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> Frontend Development </button>
+                    </h2>
+                  </div>
+
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                      <ul>
+                        <li>HTML</li>
+                        <li>CSS 3</li>
+                        <li>Javascript</li>
+                        <li>Bootstrap</li>
+                        <li>JQuery</li>
+                      </ul>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                    <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
+                      <button class="btn btn-link collapsed buttonTwo" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> Backend Development </button>
+                    </h2>
+                  </div>
+
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                      tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                    <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
+                      <button class="btn btn-link collapsed buttonThree" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> Machine Learning </button>
+                    </h2>
+                  </div>
+
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                      tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingFour">
+                    <h2 class="mb-0 ">
+                    <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
+                      <button class="btn btn-link collapsed buttonFour" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"> UI/UX Design </button>
+                    </h2>
+                  </div>
+
+                  <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                      tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingFive">
+                    <h2 class="mb-0">
+                    <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
+                      <button class="btn btn-link collapsed buttonFive" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"> Digital Marketing </button>
+                    </h2>
+                  </div>
+
+                  <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                      tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722444/hng-brand-logo_gnplmq.svg">
+    <nav>
+      <section>
+        <h2 class="skyblue-text">Quick Links</h2>
+        <div id="link-list">
+          <a href="join-intern.html" class="skyblue-text">Join HNG</a>
+          <a href="index.html" class="skyblue-text">About HNG</a>
+          <a href="MentorSetUpPage2.html" class="skyblue-text">Become a Sponsor</a>
+          <a href="MentorSetUpPage2.html" class="skyblue-text">Sign up as Mentor</a>
+        </div>
+      </section>
+      <section id="contact-section">
+        <h2 class="skyblue-text">Contact Us</h2>
+        <div>
+          <a href="tel:+2348123456789">
+            <strong>
+              Phone: <br />
+            </strong>
+            +234 812 345 6789           
+          </a>
+          <br />
+          <a href="mailto:interns@hng.tech">
+            <strong>
+              Email: <br />
+            </strong>
+            interns@hng.tech
+          </a>
+        </div>
+      </section>
+      <section>
+        <h2 class="skyblue-text">Office Address</h2>
+        <p id="address">
+          3 Birrel Avenue <br /> Sabo, Yaba, <br /> Lagos state
+        </p>
+      </section>
+      <section>
+        <h2 class="skyblue-text">Follow Us</h2>
+        <div id="socials">
+          <a href="https://twitter.com" title="Follow on Twitter!"><img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/twitter-logo_m1mgzi.svg"></a>
+          <a href="https://facebook.com"><img title="Follow on Facebook!" src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/facebook-logo_bw1hal.svg"></a>
+          <a href="https://dribble.com"><img title="Follow on Dribble!" src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/dribble-logo_w4vwuz.svg"></a>
+        </div>
+      </section>
+    </nav>
+    <p class="center-text darkblue-text">&copy 2019, HGN Internship. All rights reserved.</p>
+  </footer>
+  <!--footer class="page-footer font-small mdb-color lighten-3 pt-4">
+      <div class="container text-center text-md-left">
+          <a class="navbar-brand text-dark" href="#">
+              <img src="https://res.cloudinary.com/kuic/image/upload/v1570690973/HNG/brand-logo_nbp2ci.png" alt="HNG Internship" class="logo">
+          </a>
+        <div class="row">
+          <hr class="clearfix w-100 d-md-none">
+          <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+            <h5 class="font-weight-bold text-uppercase mb-4">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li>
+                <p>
+                  <a href="join-intern.html">Join HNG</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="how-it-works.html">About HNG</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#">Become a Sponsor</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#">Signup as a mentor</a>
+                </p>
+              </li>
+            </ul>
+
+          </div>
+          <hr class="clearfix w-100 d-md-none">
+          <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+            <h5 class="font-weight-bold  mb-4">Contact Us</h5>
+            <ul class="list-unstyled">
+              <li>
+                <p>Phone: </p>
+              </li>
+              <li>
+                <p>+234 (0) 812 345 6789</p>
+              </li>
+              <li>
+                <p>Email:</p>
+                  <li>
+                      <p>interns@hng.tech</p>
+                    </li>
+
+              </li>
+
+            </ul>
+
+          </div>
+          <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+              <h5 class="font-weight-bold  mb-4">Office Address</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <p>3 Birrel Avenue</p>
+                </li>
+                <li>
+                  <p>Sabo,Yaba,</p>
+                </li>
+                <li>
+                  <p>Lagos State</p>
+                </li>
+              </ul>
+            </div>
+          <hr class="clearfix w-100 d-md-none">
+          <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+            <h5 class="font-weight-bold mb-4">Follow Us</h5>
+              <a href="https://twitter.com">
+              <i class="fab fa-twitter p-2"></i>
+            </a>
+            <a href="https://facebook.com">
+              <i class="fab fa-facebook-f ml-3 p-2"></i>
+            </a>
+            <a href="https://dribble.com">
+              <i class="fab fa-dribbble ml-3 p-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright text-center py-3">© 2018 Copyright:
+        <span> HNG Internship. All rights reserved.</span>
+      </div>
+  </footer-->
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+
+
+  </script>
+  <script src="https://kit.fontawesome.com/85682eb992.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
