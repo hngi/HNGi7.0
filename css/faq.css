@@ -5,7 +5,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', segoe UI, sans-serif;
 
 }
 header, .hero{
@@ -65,6 +65,12 @@ header .wrap .logo{
     margin: auto;
     margin-bottom: 20px;
 }
+.freq
+{
+    width: auto;
+    text-align: center;
+    margin: 1rem auto;
+}
 .freq .wrap{
     display: flex;
     flex-flow: column;
@@ -75,7 +81,13 @@ header .wrap .logo{
     color: #00AEFF;
     font-weight: 600;
     font-size: 20px;
+    align-self: center;
+    text-align: center;
     text-transform: capitalize;
+    transition: 0.4s ease-out;
+}
+.freq .wrap a:hover {
+    color: rgb(150, 150, 150);
 }
 .freq .wrap a::after{
     content: url(./images/Vector.png);
@@ -104,28 +116,42 @@ header .wrap .logo{
     flex-flow: column;
 
 }
+.inputs-wrap
+{
+    margin-bottom: 3rem;
+}
+.inputs-wrap > *
+{
+    width: 40vw;
+    font-size: 16px;
+}
 .inputs-wrap input{
+    font-family: inherit;
     padding: 10px 16px;
     margin-bottom: 20px;
-    flex-basis: 100%;
-  
+    border-radius: 3px;
+    align-self: center;
+    border: 2px solid rgba(0, 0, 0, 0.1);
 }
 .inputs-wrap textarea{
-   
-    flex-basis: 100%;
+    padding: 10px 16px;
+    align-self: center;
+    border-radius: 3px;
     margin-bottom: 20px;
-  
+    border: 2px solid rgba(0, 0, 0, 0.1);
 }
-.inputs-wrap input:nth-last-child(1){
+.inputs-wrap #submit{
     color: white;
+    cursor: pointer;
     background: #00AEFF;
     box-shadow: 0px 4px 6px rgba(50, 50, 93, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08);
     border-radius: 4px;
-    border: 1px solid #00AEFF;
+    border: none;
+    transition: 0.4s ease-out;
 }
-footer{
-    padding: 50px 0px;
-    background-color: #fafafa;
+.inputs-wrap #submit:hover
+{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 .final{
     display: flex;
@@ -149,27 +175,6 @@ footer{
     padding: 10px 0px;
     
 }
-footer span{
-    display: block;
-
-}
-footer p{
-    color: #737373;
-}
-footer .img{
-    display: flex;
-    justify-content: space-between;
-}
-footer .img div{
-    background: #FFFFFF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 45%;
-    flex-basis: 30px;
-    height: 30px;
-    box-shadow: 0px 4px 4px rgba(50, 50, 93, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08);
-}
 .rights{
     margin-bottom: 0;
     color: #8898AA;
@@ -185,7 +190,7 @@ footer .img div{
 
 
 
-@media(max-width:776px){
+@media(max-width:860px){
     header .nav a{
         font-size: 10px;
     }
@@ -196,6 +201,11 @@ footer .img div{
         flex-basis: 45%;
         font-size: 14px;
     }
+    .inputs-wrap > *
+    {
+        width: 80vw;
+        font-size: 16px;
+    }
     .final a{
         font-size: 14px;
     }
@@ -205,11 +215,5 @@ footer .img div{
     .freq .wrap a::after{
         content: url(./images/Vector.png);
         margin-left: 5px;
-    }
-    footer .footer-logo{
-        width: 200px;
-    }
-    footer .footer-logo img{
-        width: 100%;
     }
 }
