@@ -1,0 +1,467 @@
+html
+{
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+body
+{
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+	font-family: "Open Sans", segoe UI, sans-serif;
+	background-color: #fff;
+	color: rgba(0, 0, 0, 0.8);
+}
+a
+{
+	text-decoration: none;
+	cursor: pointer;
+}
+section
+{
+	margin-bottom: 8rem;
+}
+h1
+{
+	font-size: 40px;
+}
+.def-button
+{
+	color: white;
+	border-radius: 3px;
+	padding: 0.5rem 1rem;
+	background-color: #00AEFF;
+	outline: none;
+	border: none;
+	transition: 0.4s ease-out;
+}
+.def-button:hover
+{
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+.shadowed
+{
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.center-text
+{
+	text-align: center;
+}
+.skyblue-text
+{
+	color: #00AEFF;
+}
+.blue-text
+{
+	color: #084482;
+}
+.darkblue-text
+{
+	color: #8898AA;
+}
+.countdown-symbol
+{
+	border-radius: 50%;
+	position: relative;
+	height: 6rem;
+	width: 6rem;
+	font-size: 4rem;
+	font-weight: bolder;
+	font-family: Oswald, segoe UI, sans-serif;
+}
+.countdown-symbol > span
+{
+	position: absolute;
+	left: 1rem;
+	top: 0.1rem;
+}
+.countdown-symbol + p
+{
+	font-weight: bolder;
+	font-size: 20px;
+	font-family: Oswald, segoe UI, sans-serif;
+}
+.arc, .arcs-background 
+{
+    position: absolute;
+    top: -0.4rem;
+    left: -0.4rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 0.6rem solid;
+    border-color: #00AEFF #00AEFF transparent transparent;
+}
+.arcs-background
+{
+	border-color: rgba(240, 240, 240);
+	border-width: 0.6rem;
+}
+.arc_start 
+{
+    transform: rotate(45deg);
+}
+.arc_end 
+{
+	z-index: 10;
+    transform: rotate(-135deg);
+}
+#countdown-section
+{
+	margin: 8rem auto;
+}
+#countdown-container
+{
+	width: 50vw;
+	margin: 3rem auto 4.5rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+#countdown-register
+{
+	border-radius: 3px;
+	border: 1px solid #00AEFF;
+	padding: 0.3rem 1rem;
+	transition: 0.4s ease-out;
+	font-weight: lighter;
+}
+#countdown-register:hover
+{
+	color: white;
+	background-color: #00AEFF;
+}
+#about-container
+{
+	display: flex;
+	flex-direction: row;
+}
+#home-about
+{
+	padding-left: 10vw;
+}
+#about-container article
+{
+	width: 50vw;
+	padding-right: 3vw;
+	font-size: 18px;
+}
+#about-container img
+{
+	width: 50vw;
+}
+#gallery-grid
+{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-gap: 2vw;
+	width: 82%;
+	margin: 3rem auto;
+}
+#participate-section
+{
+	display: flex;
+	flex-direction: row;
+	padding: 0 8vw;
+	font-size: 17px;
+}
+#participate-section article
+{
+	width: 40vw;
+	padding-right: 5vw;
+}
+#participate-section img
+{
+	width: 40vw;
+}
+#curriculum-flex
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 70vw;
+	margin: 1rem auto;
+	font-size: 18px;
+}
+#curriculum-flex p
+{
+	width: 50%;
+}
+#curriculum-flex #track-list
+{
+	align-self: center;
+}
+#curriculum-flex #track-list a
+{
+	color: #00AEFF;
+	text-align: right;
+	display: block;
+	margin-bottom: 1rem;
+}
+#mentor-section
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	background-color: rgb(245, 245, 245);
+	padding: 5rem 4rem 3rem;
+}
+#mentor-section article
+{
+	width: 35%;
+}
+#mentor-section #mentor-wrapper
+{
+	width: 35%;
+}
+#mentor-section #mentor-flex
+{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-between;
+	margin-bottom: 2.5rem;
+}
+#mentor-flex img
+{
+	border-radius: 50%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#mentor-flex .mentor-name
+{
+	font-size: 20px;
+	font-weight: bolder;
+	margin-bottom: 0;
+}
+#mentor-flex .mentor-desc
+{
+	font-size: 17px;
+	color: rgba(0, 0, 0, 0.5);
+	margin-top: 0.4rem;
+}
+#slack-channels #slack-title
+{
+	position: relative;
+	padding: 0.5rem;
+}
+#slack-channels #slack-logo
+{
+	position: absolute;
+}
+#slack-channels span
+{
+	padding: 0.5rem;
+}
+#slack-channels #channel-list
+{
+	width: 65%;
+	margin: 1rem auto;
+}
+#slack-channels #channel-list *
+{
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	padding-top: 1.5rem;
+	font-size: 17px;
+}
+#sponsor-flex-top, #sponsor-flex-bottom
+{
+	margin-top: 3rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+#sponsor-flex-bottom
+{
+	width: 80vw;
+	margin: 4rem auto 6rem;
+}
+#sponsor-flex-top img, #sponsor-flex-bottom img
+{
+	max-width: 15vw;
+}
+
+
+
+
+
+@media (max-width: 860px)
+{
+	body > *
+	{
+		overflow-x: hidden;
+	}
+	#sponsor-flex-top img, #sponsor-flex-bottom img
+	{
+		max-width: 20vw;
+	}
+	.checkbtn 
+	{
+          display: block;
+    }
+    h1
+	{
+		font-size: 30px;
+	}
+	section
+	{
+		margin-bottom: 4rem;
+	}
+    .countdown-symbol
+	{
+		height: 3rem;
+		width: 3rem;
+		font-size: 2.1rem;
+	}
+	.countdown-symbol > span
+	{
+		left: 0.6rem;
+		top: -0.4rem;
+	}
+	.countdown-symbol + p
+	{
+		font-size: 16px;
+	}
+	.arc, .arcs-background 
+	{
+	    top: -0.6rem;
+	    left: 0.1rem;
+	    border: 0.4rem solid;
+	    border-color: #00AEFF #00AEFF transparent transparent;
+	}
+	.arcs-background
+	{
+		border-color: rgba(240, 240, 240);
+		border-width: 0.4rem;
+	}
+	.arc_start 
+	{
+	    transform: rotate(45deg);
+	}
+	.arc_end 
+	{
+		z-index: 10;
+	    transform: rotate(-135deg);
+	}
+	#countdown-section
+	{
+		margin: 0 auto 2rem;
+	}
+	#countdown-container
+	{
+		width: 80vw;
+	}
+	#countdown-intro
+	{
+		font-size: 14px;
+	}
+	#countdown-register
+	{
+		font-size: 15px;
+	}
+	#home-about h1
+	{
+		text-align: center;
+	}
+	#about-container
+	{
+		flex-direction: column-reverse;
+	}
+	#about-container img
+	{
+		width: 90vw;
+	}
+	#about-container article
+	{
+		width: 90vw;
+	}
+	#home-about
+	{
+		padding-left: 5vw;
+		font-size: 14px;
+	}
+	#gallery-grid
+	{
+		margin: 1rem auto 2rem;
+		width: 95vw;
+	}
+	#gallery-grid > *
+	{
+		margin: 0.5rem auto;
+	}
+	#participate-section
+	{
+		flex-direction: column;
+		padding: 0 0.5rem;
+		font-size: 17px;
+	}
+	#participate-section article
+	{
+		width: 90vw;
+		margin-left: 0.5rem;
+		padding-right: 12rem;
+	}
+	#participate-section article h2, #participate-section article #p-link
+	{
+		text-align: center;
+	}
+	#participate-section img
+	{
+		width: 90vw;
+		margin: 2rem auto;
+	}
+	#curriculum-flex
+	{
+		flex-direction: column;
+		width: 90vw;
+		margin: 1rem auto;
+		font-size: 16px;
+	}
+	#curriculum-flex p
+	{
+		width: 100%;
+		margin: 1rem auto;
+	}
+	#curriculum-flex #track-list a
+	{
+		text-align: left;
+	}
+	#curriculum-flex #track-list
+	{
+		margin-top: 1rem;
+		align-self: auto;
+	}
+	#mentor-section
+	{
+		flex-direction: column;
+		justify-content: space-around;
+		padding: 1rem 0.5rem;
+	}
+	#mentor-section article
+	{
+		width: 100%;
+	}
+	#mentor-section #mentor-wrapper
+	{
+		margin: 1rem auto;
+		width: 95%;
+	}
+	#mentor-section #mentor-flex
+	{
+		justify-content: space-around;
+	}
+	#mentor-flex img
+	{
+		width: 30vw;
+		margin: 0 auto;
+		align-self: center;
+	}
+	#mentor-flex .mentor-name
+	{
+		font-size: 18px;
+	}
+	#mentor-flex .mentor-desc
+	{
+		font-size: 15px;
+		margin-top: 0.4rem;
+	}
+}
