@@ -1,15 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-body 
-{
-	font-size: "Open Sans", segoe UI, sans-serif;
-	padding: 0;
-	margin: 0;
+body {
+    font-size: "Open Sans", segoe UI, sans-serif;
+    padding: 0;
+    margin: 0;
 }
-header
-{
-	/* Uncomment the below to make the header fixed */
-	/*
+
+header {
+    /* Uncomment the below to make the header fixed */
+    /*
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -18,256 +17,260 @@ header
 	width: 93%;
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
 
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	padding: 1rem 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 3rem;
 }
-header a, footer a
-{
-	text-decoration: none;
+
+header a,
+footer a {
+    text-decoration: none;
 }
-header .def-button
-{
-	color: white;
-	border-radius: 3px;
-	padding: 0.5rem 1rem;
-	background-color: #00AEFF;
-	outline: none;
-	border: none;
-	transition: 0.4s ease-out;
+
+header .def-button {
+    color: white;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    background-color: #00AEFF;
+    outline: none;
+    border: none;
+    transition: 0.4s ease-out;
 }
-header .def-button:hover
-{
-	box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-	text-decoration: none;
+
+header .def-button:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
 }
-header nav
-{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	transition: 0.5s ease-out;
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: 0.5s ease-out;
 }
-header #hng-logo
-{
-	width: 22vw;
+
+header #hng-logo {
+    width: 22vw;
 }
-header .header-links
-{
-	color: rgba(0, 0, 0, 0.7);
-	margin: 0.5rem 1rem;
-	align-self: center;
-	font-size: 1.2vw;
-	transition: 0.4s ease-out;
+
+header .header-links {
+    color: rgba(0, 0, 0, 0.7);
+    margin: 0.5rem 1rem;
+    align-self: center;
+    font-size: 1.2vw;
+    transition: 0.4s ease-out;
 }
-header .header-links:hover
-{
-	transform: scale(1.2);
-	text-decoration: none;
+
+header .header-links:hover {
+    transform: scale(1.2);
+    text-decoration: none;
 }
-header #join-hng
-{
-	align-self: center;
+
+header #join-hng {
+    align-self: center;
 }
-header #mobile-bars 
-{
-	position: absolute;
-	left: 45vw;
-	font-size: 25px;
-	color: rgba(0, 0, 0, 0.7);
-	line-height: 80px;
-	margin-right: 40px;
-	cursor: pointer;
-	display: none;	
-}
-header .stix
-{
-	border-radius: 3px;
-	height: 3px;
-	width: 30px;
-	background-color: dimgray;
-	margin: 5px 0;
-	transition: 0.4s ease;
-}
-header #mobile-bars-check 
-{
+
+header #mobile-bars {
+    position: absolute;
+    left: 45vw;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
     display: none;
 }
-footer
-{
-	background-color: rgb(245, 245, 245);
-	padding: 4rem 8rem;
+
+header .stix {
+    border-radius: 3px;
+    height: 3px;
+    width: 30px;
+    background-color: dimgray;
+    margin: 5px 0;
+    transition: 0.4s ease;
 }
-footer h2
-{
-  font-size: 25px;
-  margin: 1rem auto;
-  font-weight: bolder;
+
+header #mobile-bars-check {
+    display: none;
 }
-footer > nav
-{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	height: 35vh;
+
+footer {
+    background-color: rgb(245, 245, 245);
+    padding: 4rem 8rem;
 }
-footer #contact-section a, footer #address
-{
-	color: rgba(0, 0, 0, 0.5);
-	text-decoration: none;
+
+footer h2 {
+    font-size: 25px;
+    margin: 1rem auto;
+    font-weight: bolder;
 }
-footer #link-list
-{
-	display: flex;
-	flex-direction: column;
+
+footer > nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 35vh;
 }
-footer #link-list > *
-{
-	font-weight: 500;
-	font-size: 17px;
-	align-self: flex-start;
-	padding: 0.5rem;
-	transition: 0.4s ease-out;
-	text-decoration: none;
+
+footer #contact-section a,
+footer #address {
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
 }
-footer .skyblue-text
-{
-	color: #00AEFF;
+
+footer #link-list {
+    display: flex;
+    flex-direction: column;
 }
-footer .darkblue-text
-{
-	color: #8898AA;
+
+footer #link-list > * {
+    font-weight: 500;
+    font-size: 17px;
+    align-self: flex-start;
+    padding: 0.5rem;
+    transition: 0.4s ease-out;
+    text-decoration: none;
 }
-footer .center-text
-{
-	text-align: center;
+
+footer .skyblue-text {
+    color: #00AEFF;
 }
-footer #link-list > a:hover
-{
-	color: rgb(120, 120, 120);
+
+footer .darkblue-text {
+    color: #8898AA;
 }
-footer #socials a
-{
-	padding: 0.5rem;
-	background-color: #fff;
-	border-radius: 50%;
-	margin-right: 0.8rem;
-	box-shadow: -3px 3px 3px 1px rgba(0, 0, 0, 0.07);
-	border: 1px solid #fff;
-	transition: 0.6s ease-out;
+
+footer .center-text {
+    text-align: center;
 }
-footer #socials a:hover
-{
-	border-color: #00AEFF;
+
+footer #link-list > a:hover {
+    color: rgb(120, 120, 120);
 }
-footer #socials img
-{
-	height: 13px;
-	width: 25px;
+
+footer #socials a {
+    padding: 0.5rem;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 0.8rem;
+    box-shadow: -3px 3px 3px 1px rgba(0, 0, 0, 0.07);
+    border: 1px solid #fff;
+    transition: 0.6s ease-out;
+}
+
+
+
+footer #socials img {
+    height: 13px;
+    width: 25px;
 }
 
 
 
 
 
-@media (max-width: 860px)
-{
-	body > *
-	{
-		width: auto;
-		overflow-x: hidden;
-	}
-	header
-    {
-    	flex-direction: column;
-    	padding-top: 10px;
-    	padding: 1rem;
-    	width: auto;
-    	height: auto;
-		overflow-x: hidden;
-    }
-    header #hng-logo
-    {
-    	width: 50vw;
-    }
-    header nav
-    {
-    	transition: 0.4s ease-out;
-    	height: 0;
-    	justify-content: flex-start;
-    	padding: 1.5rem;
-    	flex-direction: column;
-    }
-    header nav > *
-    {
-    	display: none;
-    }
-    header nav a, header nav .header-links, header nav #join-hng
-    {
-    	font-size: 3vw;
-    	align-self: flex-end;
-    }
-    header #mobile-bars
-    {
-    	display: block;
-    	margin-left: 40vw;
-    }
-    header #mobile-bars-check:checked ~ #mobile-bars > #stik1
-	{
-		transform: rotate(45deg) translateY(7px) translateX(5px);
-	}
-	header #mobile-bars-check:checked ~ #mobile-bars > #stik2
-	{
-		width: 0;
-		opacity: 0;
-	}
-	header #mobile-bars-check:checked ~ #mobile-bars > #stik3
-	{
-		transform: rotate(-45deg) translateY(-8px) translateX(5px);
-	}
-	header #mobile-bars-check:checked ~ nav > *
-    {
-    	display: block;
-    }
-	header #mobile-bars-check:checked ~ nav
-    {
-    	height: 16rem;
+@media (max-width: 860px) {
+    body > * {
+        width: auto;
+        overflow-x: hidden;
     }
 
-    footer
-    {
-    	padding: 2rem 1rem;
+    header {
+        flex-direction: column;
+        padding-top: 10px;
+        padding: 1rem;
+        width: auto;
+        height: auto;
+        overflow-x: hidden;
     }
-    footer nav
-    {
-    	flex-direction: column;
-    	justify-content: space-between;
-    	height: auto;
+
+    header #hng-logo {
+        width: 50vw;
     }
-    footer h2
-	{
-		font-size: 21px;
-	}
-    footer nav > *
-    {
-    	margin-bottom: 2rem;
+
+    header nav {
+        transition: 0.4s ease-out;
+        height: 0;
+        justify-content: flex-start;
+        padding: 1.5rem;
+        flex-direction: column;
     }
-    footer #link-list > *
-	{
-		font-size: 15px;
-		padding: 0.5rem;
-	}
+
+    header nav > * {
+        display: none;
+    }
+
+    header nav a,
+    header nav .header-links,
+    header nav #join-hng {
+        font-size: 3vw;
+        align-self: flex-end;
+    }
+
+    header #mobile-bars {
+        display: block;
+        margin-left: 40vw;
+    }
+
+    header #mobile-bars-check:checked ~ #mobile-bars > #stik1 {
+        transform: rotate(45deg) translateY(7px) translateX(5px);
+    }
+
+    header #mobile-bars-check:checked ~ #mobile-bars > #stik2 {
+        width: 0;
+        opacity: 0;
+    }
+
+    header #mobile-bars-check:checked ~ #mobile-bars > #stik3 {
+        transform: rotate(-45deg) translateY(-8px) translateX(5px);
+    }
+
+    header #mobile-bars-check:checked ~ nav > * {
+        display: block;
+    }
+
+    header #mobile-bars-check:checked ~ nav {
+        height: 16rem;
+    }
+
+    footer {
+        padding: 2rem 1rem;
+    }
+
+    footer nav {
+        flex-direction: column;
+        justify-content: space-between;
+        height: auto;
+    }
+
+    footer h2 {
+        font-size: 21px;
+    }
+
+    footer nav > * {
+        margin-bottom: 2rem;
+    }
+
+    footer #link-list > * {
+        font-size: 15px;
+        padding: 0.5rem;
+    }
 }
-@media (max-width: 500px) /*Smaller screens*/
-{
-	header nav a, header nav .header-links, header nav #join-hng
+
+@media (max-width: 500px)
+
+/*Smaller screens*/
     {
-    	font-size: 4.5vw;
-    	align-self: flex-end;
+
+    header nav a,
+    header nav .header-links,
+    header nav #join-hng {
+        font-size: 4.5vw;
+        align-self: flex-end;
     }
-    header #mobile-bars-check:checked ~ nav
-    {
-    	height: 15rem;
+
+    header #mobile-bars-check:checked ~ nav {
+        height: 15rem;
     }
 }
