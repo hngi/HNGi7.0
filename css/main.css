@@ -690,6 +690,7 @@ cursor: pointer;
 
 
 @media(max-width:776px) {
+  
 header .nav a {
 font-size: 10px;
 }
@@ -912,6 +913,9 @@ margin-left: 5px;
 }
 
 @media screen and (max-width: 800px) {
+  #scroll-down-arrow {
+    display: none !important;
+  }
   .sponsors__images {
     flex-wrap: wrap;
   }
