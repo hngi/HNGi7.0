@@ -214,7 +214,7 @@ footer #socials img {
     }
 
     header #mobile-bars-check:checked ~ #mobile-bars > #stik1 {
-        transform: rotate(45deg) translateY(7px) translateX(5px);
+        transform: rotate(45deg) translateY(6px) translateX(4px);
     }
 
     header #mobile-bars-check:checked ~ #mobile-bars > #stik2 {
