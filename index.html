@@ -80,7 +80,7 @@
                 </h3>
                 <div id="countdown-circles-container">
                     <div class="countdown__item">
-                        <p class="countdown__number" id="days"></p>
+                        <p class="countdown__number" id="days">05</p>
                         <p class="text_center countdown__subText">DAYS</p>
                     </div>
                     <div class="countdown__item">
@@ -98,7 +98,7 @@
                 </div>
 
             </div>
-<!--
+
     <script>
     //darkangel cc.
     const daysElem = document.querySelector('#days'), //Edit this selector to pick the days element in your HTML.
@@ -137,45 +137,16 @@ var counter = setInterval(function() {
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
-
+    
+    
+    
+    
+    
+    
+    
+    
     </script>
--->
 
-<script>
-        //darkangel cc.
-        const daysElem = document.querySelector('#days'), //Edit this selector to pick the days element in your HTML.
-    hoursElem = document.querySelector('#hours'),
-    minutesElem = document.querySelector('#minutes'),
-    secondsElem = document.querySelector('#seconds'),
-    countDownWrapper = document.querySelector('.countdown'); //This is the counter that wraps all 4 numbers.
-
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 1, 2020 22:0:0").getTime();
-
-function updateClock() {
-  // Get today's date and time
-  var now = new Date().getTime();
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-  // Time calculations for days, hours, minutes and seconds
-  var daysLeft = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hoursLeft = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutesLeft = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var secondsLeft = Math.floor((distance % (1000 * 60)) / 1000);
-    // Display the results.
-    daysElem.innerText = daysLeft;
-    hoursElem.innerText = hoursLeft;
-    minutesElem.innerText = minutesLeft;
-    secondsElem.innerText = secondsLeft;
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    document.getElementById("demo").innerHTML = "EXPIRED";
-    return;
-  }
-  setTimeout(updateClock, 1000);
-}
-updateClock();
-</script>
             <div class="main-third-row text_center">
                 <div class="">
                     <h3 class="subheading text__dark-blue" style = "font-weight: bold">
@@ -378,15 +349,17 @@ updateClock();
                               <div class="card">
                                 <div class="card-header" id="headingOne">
                                   <h2 class="mb-0">
+									<a data-toggle="collapse" data-target="#collapseOne"
+                                      aria-expanded="false" aria-controls="collapseOne">
                                     <img
                                       src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png"
-                                      class="arrow1">
+                                      class="arrow1"> </a>
                                     <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
-                                      aria-expanded="true" aria-controls="collapseOne"> Frontend Development </button>
+                                      aria-expanded="false" aria-controls="collapseOne"> Frontend Development </button>
                                   </h2>
                                 </div>
             
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                <div id="collapseOne" class="collapse " aria-labelledby="headingOne"
                                   data-parent="#accordionExample">
                                   <div class="card-body">
                                     <ul>
@@ -403,8 +376,11 @@ updateClock();
                               <div class="card">
                                 <div class="card-header" id="headingTwo">
                                   <h2 class="mb-0">
+									<a data-toggle="collapse"
+                                      data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                     <img
                                       src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
+									</a>
                                     <button class="btn btn-link collapsed buttonTwo" type="button" data-toggle="collapse"
                                       data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> Backend
                                       Development </button>
@@ -413,18 +389,19 @@ updateClock();
             
                                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                   <div class="card-body">
-                                    <ul class="list-unstyled text-dark">
-                                        <li>PHP</li>
-                                        <li>Python</li>
-                                    </ul>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua.
                                   </div>
                                 </div>
                               </div>
                               <div class="card">
                                 <div class="card-header" id="headingThree">
                                   <h2 class="mb-0">
+								  <a data-toggle="collapse"
+                                      data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                     <img
                                       src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
+								  </a>
                                     <button class="btn btn-link collapsed buttonThree" type="button" data-toggle="collapse"
                                       data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> Machine
                                       Learning </button>
@@ -434,19 +411,19 @@ updateClock();
                                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
                                   data-parent="#accordionExample">
                                   <div class="card-body">
-                                    <ul class="list-unstyled text-dark">
-                                        <li>Java</li>
-                                        <li>Python</li>
-                                        <li>C++</li>
-                                    </ul>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua.
                                   </div>
                                 </div>
                               </div>
                               <div class="card">
                                 <div class="card-header" id="headingFour">
                                   <h2 class="mb-0 ">
+								  <a data-toggle="collapse"
+                                      data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                     <img
                                       src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
+								  </a>
                                     <button class="btn btn-link collapsed buttonFour" type="button" data-toggle="collapse"
                                       data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"> UI/UX Design
                                     </button>
@@ -456,18 +433,19 @@ updateClock();
                                 <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
                                   data-parent="#accordionExample">
                                   <div class="card-body">
-                                      <ul class="list-unstyled text-dark">
-                                    <li>FIGMA</li>
-                                      
-                                    </ul>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua.
                                   </div>
                                 </div>
                               </div>
                               <div class="card">
                                 <div class="card-header" id="headingFive">
                                   <h2 class="mb-0">
+								  <a data-toggle="collapse"
+                                      data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                                     <img
                                       src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
+								  </a>
                                     <button class="btn btn-link collapsed buttonFive" type="button" data-toggle="collapse"
                                       data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"> Digital
                                       Marketing </button>
@@ -477,10 +455,8 @@ updateClock();
                                 <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
                                   data-parent="#accordionExample">
                                   <div class="card-body">
-                                    <ul class="list-unstyled text-dark">
-                                    <li>Social Media</li>
-                                    <li>Content Writing</li>                                      
-                                    </ul>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua.
                                   </div>
                                 </div>
                               </div>
@@ -710,7 +686,7 @@ updateClock();
 
     </div>
 
-    <aside class="showw">
+    <aside class="show">
         <div class="hide-aside text__dark-blue">
             &times;
         </div>
