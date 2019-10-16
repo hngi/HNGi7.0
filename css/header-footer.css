@@ -187,6 +187,7 @@ footer #socials img {
 
     header #hng-logo {
         width: 50vw;
+        float: right;
     }
 
     header nav {
