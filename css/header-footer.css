@@ -267,7 +267,7 @@ footer #socials img {
     header nav .header-links,
     header nav #join-hng {
         font-size: 4.5vw;
-        align-self: flex-end;
+        align-self: flex-start;
     }
 
     header #mobile-bars-check:checked ~ nav {
