@@ -237,5 +237,17 @@ section.jumbo > p.para2 > a {
       left: 0;
     }
   }
+   @media only screen and (max-width: 400px) {
+    section.jumbo > h2.heading {
+      font-size: 30px; 
+  }
+  section.jumbo > p.para {
+    font-size: .85em;
+  }
+  section.jumbo > p.para2 {
+    font-size: .85em;
+  }
+  
+  }
 }
 
