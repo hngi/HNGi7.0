@@ -73,7 +73,7 @@ header #join-hng {
 
 header #mobile-bars {
     position: absolute;
-    left: 45vw;
+    right: 75vw;
     font-size: 25px;
     color: rgba(0, 0, 0, 0.7);
     line-height: 80px;
