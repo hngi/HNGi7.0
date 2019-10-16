@@ -2,15 +2,33 @@
 require 'classControllers/init.php';
 
 $contact_mail = new AdminClass;
+$validation = new Validation();
 
 if (isset($_POST['contact-btn'])) {
 
   //use this as an example to get form input data
   $name = $database->escape_string($_POST["name"]);
- 
+  $email = $database->escape_string($_POST["email"]);
+  $subject = $database->escape_string($_POST["subject"]);
+  $message = $database->escape_string($_POST["message"]);
+  //validation of data
+  $msg = $validation->check_empty($_POST, array('name', 'email', 'subject', 'message'));
+  $check_email = $validation->is_email_valid($_POST['email']);
+          // checking empty fields
+          if ($msg != null) {
+            echo $msg;
+            //link to the previous page
+            echo "<br/><a href='javascript:self.history.back();'>Go Back</a>";
+          } elseif (!$check_email) {
+            echo 'Please provide proper email.';
+          } else {
+    // if all the fields are filled (not empty) 
 
+    //insert data to database	
+    $send = $contact_mail->contactFormMailer("INSERT INTO contact_messages(`name`,`email`,`subject`,`message`) VALUES('$name', '$email', '$subject', '$message')");
+  
   //here is method that will submit mail to database table and you can find it in adminClass
-    $send = $contact_mail->contactFormMailer($name, $email, $subject, $message);
+    //$send = $contact_mail->contactFormMailer($name, $email, $subject, $message);
     if ($send) {
       $name = $name;
       $subject = $subject;
@@ -53,7 +71,7 @@ if (isset($_POST['contact-btn'])) {
       <a href="index.html" class="header-links">Home</a>
       <a href="hng6.html" class="header-links">HNG 6</a>
       <a href="mentorpage.html" class="header-links">Mentors</a>
-      <a href="contactform.html" class="header-links">Contact</a>
+      <a href="contactform.php" class="header-links">Contact</a>
       <a href="join-intern.html" id="join-hng" class="def-button">Join HNG</a>
     </nav>
   </header>
