@@ -99,6 +99,54 @@
 
             </div>
 
+    <script>
+    //darkangel cc.
+    const daysElem = document.querySelector('#days'), //Edit this selector to pick the days element in your HTML.
+    hoursElem = document.querySelector('#hours'),
+    minutesElem = document.querySelector('#minutes'),
+    secondsElem = document.querySelector('#seconds'),
+    countDownWrapper = document.querySelector('.countdown'); //This is the counter that wraps all 4 numbers.
+
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 1, 2020 22:0:0").getTime();
+
+// Update the count down every 1 second
+var counter = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var daysLeft = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hoursLeft = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutesLeft = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var secondsLeft = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the results.
+    daysElem.innerText = daysLeft;
+    hoursElem.innerText = hoursLeft;
+    minutesElem.innerText = minutesLeft;
+    secondsElem.innerText = secondsLeft;
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(counter);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+
             <div class="main-third-row text_center">
                 <div class="">
                     <h3 class="subheading text__dark-blue" style = "font-weight: bold">
@@ -442,17 +490,22 @@
                     </button>
                 </div>
             </div>
-            
-            <div class="journey">
-                <div class="row">
-                    <div class="text-center text-md-left col-12 col-md-6 col" style="padding-top: 65px;">
-                        <h4 style="color: darkblue; padding-bottom: 20px">HNG 6.0 Internship</h4>
-                        <p style="line-height: 0.4px; color: #8898AA; margin-top: -15px;">&nbsp;...the journey so far</p>
+
+
+            <div class="container-fluid mb-4 px-4">
+                <div class="row" style="padding-top: 4em;">
+                    <div class="col-12 text-center text-md-left  col-md-6" style="padding-top: 5em;">
+                        <h4 style="color: darkblue;letter-spacing: 1.2px; font-weight: bold; font-size: 24px;">HNG 6.0
+                            Internship</h4>
+                        <p style="line-height: 0.4px; color: #8898AA;"><i>.....the journey so far</i></p>
                         <p style="color: #333333; font-style: normal; letter-spacing: 1.1px; padding-top: 20px;">The HNG
                             6.0
                             Internship commenced 23rd
                             April, 2019 and ended 5th October, 2020.</p>
-                        <p class="content">A well-planned, coordinated event where young
+
+                        <p
+                            style="color: #333333; font-style: normal; letter-spacing: 1.1px;text-align: justify; padding-top: 20px;">
+                            A well-planned, coordinated event where young
                             talented folks from across the globe
                             participated remotely and were involved in
                             learning key skills needed to
@@ -460,26 +513,18 @@
                             design thinking, machine learning and digital
                             marketing.</p>
 
-                            <div class="mb-3" style="padding-top: 35px;"><a style="color:#00AEFF;" href="hng6.html"><i
-                                class="fa fa-angle-right px-1"
-                                style="color:#00AEFF; border:2px solid #00AEFF; background-color: white; width: 40px height:7px; border-radius: 50%; "></i>
-                            Learn more</a></div>  
+                        <div class="mb-3" style="padding-top: 35px;"><a style="color:#00AEFF;" href="hng6.html"><i
+                                    class="fa fa-angle-right px-1"
+                                    style="color:#00AEFF; border:2px solid #00AEFF; background-color: white; width: 40px height:7px; border-radius: 50%; "></i>
+                                Learn more</a></div>
                     </div>
 
-                    <div class="col-12 mt-md-5 mt-lg-0 col-md-6 ">
-                        <div class="row">
-                            <div class="col-12 myImage" style="padding-bottom: 6em; padding-top: 12px">
-                                <img style="width: 100%;"
+                    <div class="col-12 col-lg-6">
+                        <img style="width: 100%;"
                             src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730841/IMG5_prmueb.png">
-                            </div>
-                        </div>
-
                     </div>
-
                 </div>
             </div>
-
-            
 
             <section id="support" class="support">
                 <div class="support__header">
@@ -699,3 +744,4 @@
 </body>
 
 </html>
+
