@@ -99,6 +99,54 @@
 
             </div>
 
+    <script>
+    //darkangel cc.
+    const daysElem = document.querySelector('#days'), //Edit this selector to pick the days element in your HTML.
+    hoursElem = document.querySelector('#hours'),
+    minutesElem = document.querySelector('#minutes'),
+    secondsElem = document.querySelector('#seconds'),
+    countDownWrapper = document.querySelector('.countdown'); //This is the counter that wraps all 4 numbers.
+
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 1, 2020 22:0:0").getTime();
+
+// Update the count down every 1 second
+var counter = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var daysLeft = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hoursLeft = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutesLeft = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var secondsLeft = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the results.
+    daysElem.innerText = daysLeft;
+    hoursElem.innerText = hoursLeft;
+    minutesElem.innerText = minutesLeft;
+    secondsElem.innerText = secondsLeft;
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(counter);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+
             <div class="main-third-row text_center">
                 <div class="">
                     <h3 class="subheading text__dark-blue" style = "font-weight: bold">
@@ -579,6 +627,7 @@
                             <a href="index.html" class="skyblue-text">About HNG</a>
                             <a href="MentorSetUpPage2.html" class="skyblue-text">Become a Sponsor</a>
                             <a href="MentorSetUpPage2.html" class="skyblue-text">Sign up as Mentor</a>
+                            <a href="faq.html" class="skyblue-text">FAQ</a>
                         </div>
                     </section>
                     <section id="contact-section">
@@ -695,3 +744,4 @@
 </body>
 
 </html>
+
