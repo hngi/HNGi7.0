@@ -173,7 +173,7 @@ footer #socials img {
 @media (max-width: 860px) {
     body > * {
         width: auto;
-        overflow-x: hidden;
+        overflow: hidden;
     }
 
     header {
@@ -182,7 +182,7 @@ footer #socials img {
         padding: 1rem;
         width: auto;
         height: auto;
-        overflow-x: hidden;
+        overflow: hidden;
     }
 
     header #hng-logo {
