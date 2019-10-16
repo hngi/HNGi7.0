@@ -6,7 +6,7 @@ class Validation
 		$msg = null;
 		foreach ($fields as $value) {
 			if (empty($data[$value])) {
-				$msg .= "$value field empty <br />";
+				$msg .= "$value field can't be empty <br />";
 			}
 		} 
 		return $msg;

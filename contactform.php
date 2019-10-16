@@ -16,19 +16,12 @@ if (isset($_POST['contact-btn'])) {
   $check_email = $validation->is_email_valid($_POST['email']);
           // checking empty fields
           if ($msg != null) {
-            echo $msg;
-            //link to the previous page
-            echo "<br/><a href='javascript:self.history.back();'>Go Back</a>";
           } elseif (!$check_email) {
-            echo 'Please provide proper email.';
+            $msg2 = 'Please provide proper email.';
           } else {
-    // if all the fields are filled (not empty) 
 
-    //insert data to database	
-    $send = $contact_mail->contactFormMailer("INSERT INTO contact_messages(`name`,`email`,`subject`,`message`) VALUES('$name', '$email', '$subject', '$message')");
-  
-  //here is method that will submit mail to database table and you can find it in adminClass
-    //$send = $contact_mail->contactFormMailer($name, $email, $subject, $message);
+   //here is method that will submit mail to database table and you can find it in adminClass
+    $send = $contact_mail->contactFormMailer($name, $email, $subject, $message);
     if ($send) {
       $name = $name;
       $subject = $subject;
@@ -37,6 +30,7 @@ if (isset($_POST['contact-btn'])) {
       contactMail($email, $name, $subject, $body);
       $mess = 'Message Sent, Thank you!';
     }
+          }
 }
 
 
@@ -87,6 +81,12 @@ if (isset($_POST['contact-btn'])) {
             }
              if(!empty($mess)){
                 echo "<h4 class='text-success text-center' style='color: green;'>".$mess."</h4>";
+            }
+            if (!empty($msg)) {
+              echo "<h4 class='text-danger text-center' style='color: red;'>".$msg."</h4>";
+            }
+            if (!empty($msg2)) {
+              echo "<h4 class='text-danger text-center' style='color: red;'>".$msg2."</h4>";
             }
         ?>
       
