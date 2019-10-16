@@ -1,3 +1,8 @@
+<?php
+
+date_default_timezone_set('Africa/Lagos');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -41,19 +46,28 @@
     </section>
 
     <div class="form-area">
-      <form class="form-container">
-        <input type="text" name="" id="" placeholder="Name" />
-        <input type="email" name="" id="" placeholder="Email" />
-        <input type="text" name="" id="" placeholder="Phone number" />
-        <input type="text" name="" id="" placeholder="What do you do" />
-        <input type="url" name="" id="" placeholder="Link to portfolio (if you have any)"/>
-        <input type="url" name="" id="" placeholder="Link to your CV (Linkedin profile or any other link)" />
-        <input type="text" name="" id="" placeholder="How many years experience do you have" />
-        <input type="text" name="" id="" placeholder="What area are you interested in" />
-        <input type="text" name="" id="" placeholder="What state are you currently  located in?"/>
-        <input type="text" name="" id="" placeholder="What is  your current employment status?" />
-        <textarea name="" id="" cols="30" rows="10" placeholder="Briefly tell us about yourself" ></textarea>
-        <button type="submit">Submit</button>
+
+<?php
+        $errMsg = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+            if (strpos($errMsg, 'join-intern.php?Submitted') !== false){
+                echo "<div style='text-align:center; font-size:1.3em; color:#084482'>Thank You for completing the form, we will get back to You soon!</div>";
+            }
+?>
+
+
+      <form class="form-container" action="interns_form.php" method="post">
+        <input type="text" name="fullname" id="" required placeholder="Fullname" />
+        <input type="email" name="email" id="" required placeholder="Email" />
+        <input type="text" name="phoneNo" id="" required placeholder="Phone number" />
+        <input type="url" name="linkPort" id="" required placeholder="Link to portfolio (if you have any)"/>
+        <input type="url" name="linkCV" id="" required placeholder="Link to your CV (Linkedin profile or any other link)" />
+        <input type="text" name="exp" id="" required placeholder="How many years experience do you have" />
+        <input type="text" name="interest" id="" required placeholder="What area are you interested in" />
+        <input type="text" name="location" id="" required placeholder="What state are you currently  located in?"/>
+        <input type="text" name="empStatus" id="" required placeholder="What is  your current employment status?" />
+        <textarea name="about" id="" required cols="30" rows="10" placeholder="Briefly tell us about yourself" ></textarea>
+        <input type='hidden' name='date' value='<?=date('Y-m-d H:i:s');?>'>
+        <input type="submit" name="submit" placeholder="SUBMIT" class="submitBtn" />
       </form>
     </div>
     <!--div class="footer-container">
@@ -118,7 +132,7 @@
             <strong>
               Phone: <br />
             </strong>
-            +234 812 345 6789           
+            +234 812 345 6789
           </a>
           <br />
           <a href="mailto:interns@hng.tech">

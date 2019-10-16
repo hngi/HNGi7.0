@@ -121,6 +121,21 @@ section.jumbo > p.para2 {
 section.jumbo > p.para2 > a {
   color: #00aeff;
 }
+
+.submitBtn {
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 4px;
+  background: #00aeff;
+  border: 0px;
+  color: #fff;
+  transition: 0.4s ease-out;
+}
+
+.submitBtn > button:hover {
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
+}
+
 .footer-container {
   background: #fafafa;
   margin-top: 10rem;
@@ -238,4 +253,3 @@ section.jumbo > p.para2 > a {
     }
   }
 }
-
