@@ -4,12 +4,34 @@
 margin: 0;
 padding: 0;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
 font-family: "Open Sans", segoe UI, sans-serif;
 
 }
-
+/* Scroll down arrow */
+#scroll-down-arrow{
+  height: 10vh;
+  width: 10vh;
+  border-radius: 50%;
+  background: #00aeff;
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  filter: opacity(0.7);
+  cursor: pointer;
+  border: 1px solid white;
+  z-index: 1000;
+}
+#scroll-down-arrow i{
+  font-size: 25px;
+  color: white;
+  position: relative;
+  top: 32%;
+  left: 32%;
+}
 .desktop-only {
 display: none;
 }

@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The HNG Internship</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="stylesheet" href="css/main.css">
@@ -15,6 +18,9 @@
 </head>
 
 <body>
+    <div id="scroll-down-arrow" class="animated bounceInUp" onclick="scrollWin()">
+        <i class="fas fa-arrow-down"></i>
+    </div>
     <img src="https://bit.ly/2OC3tWo" id="corner-circle" alt="Graphic at the top right corner">
     <div class="containerGrid">
         <header>
@@ -98,7 +104,7 @@
                 </div>
 
             </div>
-<!--
+            <!--
     <script>
     //darkangel cc.
     const daysElem = document.querySelector('#days'), //Edit this selector to pick the days element in your HTML.
@@ -141,44 +147,44 @@ var counter = setInterval(function() {
     </script>
 -->
 
-<script>
-        //darkangel cc.
-        const daysElem = document.querySelector('#days'), //Edit this selector to pick the days element in your HTML.
-    hoursElem = document.querySelector('#hours'),
-    minutesElem = document.querySelector('#minutes'),
-    secondsElem = document.querySelector('#seconds'),
-    countDownWrapper = document.querySelector('.countdown'); //This is the counter that wraps all 4 numbers.
+            <script>
+                //darkangel cc.
+                const daysElem = document.querySelector('#days'), //Edit this selector to pick the days element in your HTML.
+                    hoursElem = document.querySelector('#hours'),
+                    minutesElem = document.querySelector('#minutes'),
+                    secondsElem = document.querySelector('#seconds'),
+                    countDownWrapper = document.querySelector('.countdown'); //This is the counter that wraps all 4 numbers.
 
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 1, 2020 22:0:0").getTime();
+                // Set the date we're counting down to
+                var countDownDate = new Date("Jan 1, 2020 22:0:0").getTime();
 
-function updateClock() {
-  // Get today's date and time
-  var now = new Date().getTime();
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-  // Time calculations for days, hours, minutes and seconds
-  var daysLeft = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hoursLeft = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutesLeft = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var secondsLeft = Math.floor((distance % (1000 * 60)) / 1000);
-    // Display the results.
-    daysElem.innerText = daysLeft;
-    hoursElem.innerText = hoursLeft;
-    minutesElem.innerText = minutesLeft;
-    secondsElem.innerText = secondsLeft;
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    document.getElementById("demo").innerHTML = "EXPIRED";
-    return;
-  }
-  setTimeout(updateClock, 1000);
-}
-updateClock();
-</script>
+                function updateClock() {
+                    // Get today's date and time
+                    var now = new Date().getTime();
+                    // Find the distance between now and the count down date
+                    var distance = countDownDate - now;
+                    // Time calculations for days, hours, minutes and seconds
+                    var daysLeft = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hoursLeft = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutesLeft = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var secondsLeft = Math.floor((distance % (1000 * 60)) / 1000);
+                    // Display the results.
+                    daysElem.innerText = daysLeft;
+                    hoursElem.innerText = hoursLeft;
+                    minutesElem.innerText = minutesLeft;
+                    secondsElem.innerText = secondsLeft;
+                    // If the count down is finished, write some text
+                    if (distance < 0) {
+                        document.getElementById("demo").innerHTML = "EXPIRED";
+                        return;
+                    }
+                    setTimeout(updateClock, 1000);
+                }
+                updateClock();
+            </script>
             <div class="main-third-row text_center">
                 <div class="">
-                    <h3 class="subheading text__dark-blue" style = "font-weight: bold">
+                    <h3 class="subheading text__dark-blue" style="font-weight: bold">
                         Unleash Your Creativity
                     </h3>
                 </div>
@@ -221,9 +227,10 @@ updateClock();
                                 the most talented software developers. Everyone is welcomed to participate (there is no
                                 entrance exam).
                                 Anyone can log into the internship using their laptop. Each week we give tasks.
-                          
-            
-                                <button class="cta-button-4 button--midBlue" onclick="location.href='join-intern.html'" type="button">Get Started</button>
+
+
+                                <button class="cta-button-4 button--midBlue" onclick="location.href='join-intern.html'"
+                                    type="button">Get Started</button>
                         </div>
                         <div class="half-a-row">
                             <table>
@@ -262,7 +269,8 @@ updateClock();
                                 alt="interns" />
                         </div>
                         <div class="half-a-row">
-                            <h4 class="" style="color: darkblue; padding-bottom: 20px">Onboard And Connect With Teammates</h4>
+                            <h4 class="" style="color: darkblue; padding-bottom: 20px">Onboard And Connect With
+                                Teammates</h4>
                             <p class="content">The HNG internship is a 3-month remote internship designed to find and
                                 develop
                                 the most talented software developers. Everyone is welcomed to participate (there is no
@@ -271,16 +279,16 @@ updateClock();
                             <button class="cta-button-4 button--midBlue" type="button"><a href="join-intern.html">Get
                                     Started</a></button>
 
-                                Anyone can log into the internship using their laptop. Each week we give tasks.
-                                <button class="cta-button-4 button--midBlue" type="button"><a
-                                        href="join-intern.html">Get Started</a></button></p>
+                            Anyone can log into the internship using their laptop. Each week we give tasks.
+                            <button class="cta-button-4 button--midBlue" type="button"><a href="join-intern.html">Get
+                                    Started</a></button></p>
                         </div>
                     </div>
 
                 </div>
             </div>
 
-            
+
             <div class="main-fifth-row">
                 <div class="row">
                     <div class="text-center text-md-left col-12 col-md-6 col" style="padding-top: 35px;">
@@ -310,187 +318,199 @@ updateClock();
 
             <div class="container-fluid mt-2" id="wrapper">
                 <div class="row">
-                  <div class="col-12">
-                    <h4 class="text-center mt-5">One of the Best Learning Curriculums in the World</h4>
-                    <section>
-                      <div class="container">
-                        <div class="row">
-                          <div class="col-md-6 col-sm-12 mt-5 mb-5">
-                            <div class="row">
-                              <div class="col-2">
-                                <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/frontend_hzyzio.png"
-                                  width="50px" class="img-fluid">
-                              </div>
-                              <div class="col-10">
-                                <h5>FRONT END</h5>
-                                <P>Put your Frontend skills to test and sharpen it further as you turn exciting UI Designs into
-                                  stunning web pages.</P>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-2">
-                                <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/backend_orn4az.png"
-                                  width="50px" class="img-fluid">
-                              </div>
-                              <div class="col-10">
-                                <h5>BACK END</h5>
-                                <P>Put your backenend skills to test and sharpen it by building scalable, logic driven applications
-                                  with world class technologies.</P>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-2">
-                                <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/ml_sdviij.png"
-                                  width="30px" class="img-fluid ml-2">
-                              </div>
-                              <div class="col-10">
-                                <h5>MACHINE LEARNING</h5>
-                                <P>Develop programs that can access data and utilize it to automatically learn and improve from
-                                  experience</P>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-2">
-                                <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/ui-ux_xq64bx.png"
-                                  width="50px" class="img-fluid">
-                              </div>
-                              <div class="col-10">
-                                <h5>UI / UX DESIGN</h5>
-                                <P>Put your UX/UI Design skills to test and sharpen it as you design exciting User Interfaces for
-                                  great User Experience.</P>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-2">
-                                <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/dm_bxzzr2.png"
-                                  width="50px" class="img-fluid">
-                              </div>
-                              <div class="col-10">
-                                <h5>DIGITAL MARKETING</h5>
-                                <P>Put your UX/UI Design skills to test and sharpen it as you design exciting User Interfaces for
-                                  great User Experience.</P>
-                              </div>
-                            </div>
-            
-                          </div>
-                          <div class="col-md-6 col-sm-12 mb-5 mt-5">
-                            <div class="accordion" id="accordionExample">
-                              <div class="card">
-                                <div class="card-header" id="headingOne">
-                                  <h2 class="mb-0">
-                                    <img
-                                      src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png"
-                                      class="arrow1">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
-                                      aria-expanded="true" aria-controls="collapseOne"> Frontend Development </button>
-                                  </h2>
+                    <div class="col-12">
+                        <h4 class="text-center mt-5">One of the Best Learning Curriculums in the World</h4>
+                        <section>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12 mt-5 mb-5">
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/frontend_hzyzio.png"
+                                                    width="50px" class="img-fluid">
+                                            </div>
+                                            <div class="col-10">
+                                                <h5>FRONT END</h5>
+                                                <P>Put your Frontend skills to test and sharpen it further as you turn
+                                                    exciting UI Designs into
+                                                    stunning web pages.</P>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/backend_orn4az.png"
+                                                    width="50px" class="img-fluid">
+                                            </div>
+                                            <div class="col-10">
+                                                <h5>BACK END</h5>
+                                                <P>Put your backenend skills to test and sharpen it by building
+                                                    scalable, logic driven applications
+                                                    with world class technologies.</P>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/ml_sdviij.png"
+                                                    width="30px" class="img-fluid ml-2">
+                                            </div>
+                                            <div class="col-10">
+                                                <h5>MACHINE LEARNING</h5>
+                                                <P>Develop programs that can access data and utilize it to automatically
+                                                    learn and improve from
+                                                    experience</P>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/ui-ux_xq64bx.png"
+                                                    width="50px" class="img-fluid">
+                                            </div>
+                                            <div class="col-10">
+                                                <h5>UI / UX DESIGN</h5>
+                                                <P>Put your UX/UI Design skills to test and sharpen it as you design
+                                                    exciting User Interfaces for
+                                                    great User Experience.</P>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/dm_bxzzr2.png"
+                                                    width="50px" class="img-fluid">
+                                            </div>
+                                            <div class="col-10">
+                                                <h5>DIGITAL MARKETING</h5>
+                                                <P>Put your UX/UI Design skills to test and sharpen it as you design
+                                                    exciting User Interfaces for
+                                                    great User Experience.</P>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 col-sm-12 mb-5 mt-5">
+                                        <div class="accordion" id="accordionExample">
+                                            <div class="card">
+                                                <div class="card-header" id="headingOne">
+                                                    <h2 class="mb-0">
+                                                        <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png"
+                                                            class="arrow1">
+                                                        <button class="btn btn-link" type="button"
+                                                            data-toggle="collapse" data-target="#collapseOne"
+                                                            aria-expanded="true" aria-controls="collapseOne"> Frontend
+                                                            Development </button>
+                                                    </h2>
+                                                </div>
+
+                                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                                    data-parent="#accordionExample">
+                                                    <div class="card-body">
+                                                        <ul>
+                                                            <li>HTML</li>
+                                                            <li>CSS 3</li>
+                                                            <li>Javascript</li>
+                                                            <li>Bootstrap</li>
+                                                            <li>JQuery</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card">
+                                                <div class="card-header" id="headingTwo">
+                                                    <h2 class="mb-0">
+                                                        <img
+                                                            src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
+                                                        <button class="btn btn-link collapsed buttonTwo" type="button"
+                                                            data-toggle="collapse" data-target="#collapseTwo"
+                                                            aria-expanded="false" aria-controls="collapseTwo"> Backend
+                                                            Development </button>
+                                                    </h2>
+                                                </div>
+
+                                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                                    data-parent="#accordionExample">
+                                                    <div class="card-body">
+                                                        <ul class="list-unstyled text-dark">
+                                                            <li>PHP</li>
+                                                            <li>Python</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingThree">
+                                                    <h2 class="mb-0">
+                                                        <img
+                                                            src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
+                                                        <button class="btn btn-link collapsed buttonThree" type="button"
+                                                            data-toggle="collapse" data-target="#collapseThree"
+                                                            aria-expanded="false" aria-controls="collapseThree"> Machine
+                                                            Learning </button>
+                                                    </h2>
+                                                </div>
+
+                                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                                    data-parent="#accordionExample">
+                                                    <div class="card-body">
+                                                        <ul class="list-unstyled text-dark">
+                                                            <li>Java</li>
+                                                            <li>Python</li>
+                                                            <li>C++</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingFour">
+                                                    <h2 class="mb-0 ">
+                                                        <img
+                                                            src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
+                                                        <button class="btn btn-link collapsed buttonFour" type="button"
+                                                            data-toggle="collapse" data-target="#collapseFour"
+                                                            aria-expanded="false" aria-controls="collapseFour"> UI/UX
+                                                            Design
+                                                        </button>
+                                                    </h2>
+                                                </div>
+
+                                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                                                    data-parent="#accordionExample">
+                                                    <div class="card-body">
+                                                        <ul class="list-unstyled text-dark">
+                                                            <li>FIGMA</li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingFive">
+                                                    <h2 class="mb-0">
+                                                        <img
+                                                            src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
+                                                        <button class="btn btn-link collapsed buttonFive" type="button"
+                                                            data-toggle="collapse" data-target="#collapseFive"
+                                                            aria-expanded="false" aria-controls="collapseFive"> Digital
+                                                            Marketing </button>
+                                                    </h2>
+                                                </div>
+
+                                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                                                    data-parent="#accordionExample">
+                                                    <div class="card-body">
+                                                        <ul class="list-unstyled text-dark">
+                                                            <li>Social Media</li>
+                                                            <li>Content Writing</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-            
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                                  data-parent="#accordionExample">
-                                  <div class="card-body">
-                                    <ul>
-                                      <li>HTML</li>
-                                      <li>CSS 3</li>
-                                      <li>Javascript</li>
-                                      <li>Bootstrap</li>
-                                      <li>JQuery</li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-            
-                              <div class="card">
-                                <div class="card-header" id="headingTwo">
-                                  <h2 class="mb-0">
-                                    <img
-                                      src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
-                                    <button class="btn btn-link collapsed buttonTwo" type="button" data-toggle="collapse"
-                                      data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> Backend
-                                      Development </button>
-                                  </h2>
-                                </div>
-            
-                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                  <div class="card-body">
-                                    <ul class="list-unstyled text-dark">
-                                        <li>PHP</li>
-                                        <li>Python</li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="card">
-                                <div class="card-header" id="headingThree">
-                                  <h2 class="mb-0">
-                                    <img
-                                      src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
-                                    <button class="btn btn-link collapsed buttonThree" type="button" data-toggle="collapse"
-                                      data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> Machine
-                                      Learning </button>
-                                  </h2>
-                                </div>
-            
-                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                                  data-parent="#accordionExample">
-                                  <div class="card-body">
-                                    <ul class="list-unstyled text-dark">
-                                        <li>Java</li>
-                                        <li>Python</li>
-                                        <li>C++</li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="card">
-                                <div class="card-header" id="headingFour">
-                                  <h2 class="mb-0 ">
-                                    <img
-                                      src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
-                                    <button class="btn btn-link collapsed buttonFour" type="button" data-toggle="collapse"
-                                      data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"> UI/UX Design
-                                    </button>
-                                  </h2>
-                                </div>
-            
-                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
-                                  data-parent="#accordionExample">
-                                  <div class="card-body">
-                                      <ul class="list-unstyled text-dark">
-                                    <li>FIGMA</li>
-                                      
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="card">
-                                <div class="card-header" id="headingFive">
-                                  <h2 class="mb-0">
-                                    <img
-                                      src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
-                                    <button class="btn btn-link collapsed buttonFive" type="button" data-toggle="collapse"
-                                      data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"> Digital
-                                      Marketing </button>
-                                  </h2>
-                                </div>
-            
-                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
-                                  data-parent="#accordionExample">
-                                  <div class="card-body">
-                                    <ul class="list-unstyled text-dark">
-                                    <li>Social Media</li>
-                                    <li>Content Writing</li>                                      
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                    </section>
-                  </div>
+                        </section>
+                    </div>
                 </div>
-              </div>
+            </div>
 
 
             <div class="container">
@@ -779,7 +799,30 @@ updateClock();
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+<script>
+    let scrollArrow = document.querySelector('#scroll-down-arrow');
+    function scrollWin() {
+        window.scrollBy(0, 500);
+        console.log(window.scrollY)
+        if (window.scrollY >= 5000) {
+            scrollArrow.style.display = "none";
+        }
+    }
+    const hideArrow = (event) => {
+        if (window.scrollY >= 5000) {
+            scrollArrow.style.display = "none";
+        }
+    }
+    window.addEventListener('scroll', (event) => hideArrow(event))
+
+    const displayArrow = (event) => {
+        if (window.scrollY < 5000) {
+            scrollArrow.classList.add('bounceInDown')
+            scrollArrow.style.display = "block";
+        }
+    }
+    window.addEventListener('scroll', (event) => displayArrow(event))
+</script>
 </body>
 
 </html>
-
