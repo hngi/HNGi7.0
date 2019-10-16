@@ -777,6 +777,7 @@ margin-left: 5px;
   padding-top: 1.5em;
   width: 100%;
   padding-bottom: 1em;
+  text-align: center;
 }
 
 .sponsors__header {
@@ -790,26 +791,29 @@ margin-left: 5px;
 }
 
 .sponsors__images {
+  height:100%;
   padding-left: 15.83%;
   padding-right: 15.83%;
   margin-top: 94px;
-  display: flex;
-  justify-content: space-between;
+  /* display: flex; */
+  /* justify-content: space-between; */
 }
 
 .hng_logo {
-  /* width: 167.12px; */
-  height: 52.89px;
+  width: 167.12px !important;
+  height: 55px;
+  margin-bottom:25px;
 }
 
 .akwa_logo {
-  height: 55px;
-  width: 55px;
+  height: 80px ;
+  width: 80px !important;
 }
 
 .verifi_logo {
-  width: 115.4px;
-  height: 52.89px;
+  width: 115.4px !important;
+  height: 55px;
+  margin-bottom:25px;
 }
 
 .sponsors__images2 {
@@ -821,19 +825,44 @@ margin-left: 5px;
 }
 
 .figma_logo {
-  line-height: 26.84px;
+  /* line-height: 26.84px ; */
   font-size: 30px;
+  height:55px;
+  margin: 0;
+  padding: 0;
+  margin-bottom:25px;
 }
 
 .bluechip_logo {
-  /* height: 55px; */
-  width: 153.8px;
+  height: 55px;
+  width: 163.8px !important;
+  margin-bottom:25px;
 }
 
 .flutter_logo {
-  width: 298.16px;
+  height: 55px;
+  width: 298.16px !important;
+  margin-bottom:25px;
 }
-
+.slide{
+  position: relative;
+}
+.carousel-indicators{
+  position: absolute;
+  top:90px;
+  z-index:10;
+}
+.carousel-indicators li{
+  background-color: lightgrey;
+  opacity:0.2;
+}
+.carousel-indicators li:active{
+  opacity:0.3;
+}
+.carousel-control-next , .carousel-control-prev{
+  background-color: rgba(60, 107, 126, 0.1);
+  background-size: 20px 20px;
+}
  .sponsors_button {
   text-align: center;
 }
