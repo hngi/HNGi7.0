@@ -58,7 +58,7 @@ nav ul li a:hover {
 /* styling of individual input field and textarea */
 .form-container input,
 textarea {
-  width: 80%;
+  width: 100%;
   padding: 10px 20px;
   margin: 10px auto;
   font-family: inherit;
@@ -178,10 +178,10 @@ section.jumbo > p.para2 > a {
 @media (max-width: 860px) {
   .form-container
   {
-    width: 90%;
+    width: 100%;
   }
   .form-container input, textarea {
-      width: 90%;
+      width: 100%;
     }
   .form-container button
   {
