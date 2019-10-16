@@ -1,0 +1,219 @@
+*{
+    text-decoration: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', segoe UI, sans-serif;
+
+}
+header, .hero{
+    background-color: #d1f0f6;
+}
+.container{
+    max-width: 75vw;
+    padding: 10px;
+    margin: auto;
+}
+header .wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+header .wrap a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+header .wrap .logo img{
+    width: 100%;
+}
+header .wrap .nav{
+    flex-basis: 45%;
+    display: flex;
+    justify-content: space-between;
+}
+header .wrap .logo{
+    flex-basis: 30%;
+}
+.nav .nav-btn{
+    padding: 5px 10px;
+    background: #00AEFF;
+    border: 1px solid #00AEFF;
+    border-radius: 4px;
+    color: white;
+    font-weight: 500;
+}
+.hero .wrap{
+    text-align: center;
+
+}
+.hero .wrap h1{
+    text-transform: capitalize;
+    color: #084482;
+    font-size: 40px;
+    margin-top: 50px;
+}
+.hero .wrap p{
+    margin-top: 30px;
+    max-width: 650px;
+    color: #474747;
+    line-height: 33px;
+    font-size: 24px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.freq
+{
+    width: auto;
+    text-align: center;
+    margin: 1rem auto;
+}
+.freq .wrap{
+    display: flex;
+    flex-flow: column;
+}
+.freq .wrap a{
+    padding: 20px 0px;
+    text-decoration: none;
+    color: #00AEFF;
+    font-weight: 600;
+    font-size: 20px;
+    align-self: center;
+    text-align: center;
+    text-transform: capitalize;
+    transition: 0.4s ease-out;
+}
+.freq .wrap a:hover {
+    color: rgb(150, 150, 150);
+}
+.freq .wrap a::after{
+    content: url(./images/Vector.png);
+    margin-left: 50px;
+}
+.freq-n h1{
+    text-align: center;
+    max-width: 400px;
+    margin: auto;
+    text-transform: capitalize;
+    color: #084482;
+    font-weight: 600;
+    font-size: 30px;
+    
+    
+}
+.freq-n .header{
+    padding: 50px 0px;
+}
+.freq-n .wrap{
+    display: flex;
+    flex-flow: column;
+}
+.freq-n .wrap .inputs-wrap{
+    display: flex;
+    flex-flow: column;
+
+}
+.inputs-wrap
+{
+    margin-bottom: 3rem;
+}
+.inputs-wrap > *
+{
+    width: 40vw;
+    font-size: 16px;
+}
+.inputs-wrap input{
+    font-family: inherit;
+    padding: 10px 16px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    align-self: center;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+.inputs-wrap textarea{
+    padding: 10px 16px;
+    align-self: center;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+.inputs-wrap #submit{
+    color: white;
+    cursor: pointer;
+    background: #00AEFF;
+    box-shadow: 0px 4px 6px rgba(50, 50, 93, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    border: none;
+    transition: 0.4s ease-out;
+}
+.inputs-wrap #submit:hover
+{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+.final{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+.quick{
+    display: flex;
+    flex-flow: column;
+}
+.final h2{
+    text-transform: capitalize;
+    color: #00AEFF;
+}
+.final div{
+    flex-basis: 22%;
+}
+.quick a{
+    color: #00AEFF;
+    padding: 10px 0px;
+    
+}
+.rights{
+    margin-bottom: 0;
+    color: #8898AA;
+    text-align: center;
+    font-size: 14px;
+}
+.img img{
+    width: 20px;
+}
+
+
+
+
+
+
+@media(max-width:860px){
+    header .nav a{
+        font-size: 10px;
+    }
+    .final{
+        flex-wrap: wrap;
+    }
+    .final div{
+        flex-basis: 45%;
+        font-size: 14px;
+    }
+    .inputs-wrap > *
+    {
+        width: 80vw;
+        font-size: 16px;
+    }
+    .final a{
+        font-size: 14px;
+    }
+    .freq .wrap a{
+        font-size: 15px;
+    }
+    .freq .wrap a::after{
+        content: url(./images/Vector.png);
+        margin-left: 5px;
+    }
+}
