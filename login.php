@@ -18,7 +18,7 @@ if(isset($_POST['ok'])){
         $admin_info = $admin->getAdminDetails($email);
         $_SESSION['hng-admin'] = $admin_info; //Set session for logged user
     }else{
-        $_SESSION['err_msg'] = "<div class='alert alert-danger'>Invalid login details!</div>";
+        $_SESSION['err_msg'] = "<div class='alert alert-danger'>Invalid login details!</div>"; //Set error message
     }
 
 
