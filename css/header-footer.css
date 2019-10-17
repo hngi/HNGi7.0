@@ -63,8 +63,9 @@ header .header-links {
 }
 
 header .header-links:hover {
-    transform: scale(1.2);
+    /*transform: scale(1.2);*/
     text-decoration: none;
+    color: lightblue;
 }
 
 header #join-hng {
