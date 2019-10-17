@@ -227,6 +227,9 @@ color: #333333;
 color: #084482;
 }
 
+.accordion_tab{
+  margin-left:15%;
+}
 @media (max-width: 860){
   footer {
     width: auto;

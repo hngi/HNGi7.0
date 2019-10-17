@@ -30,6 +30,7 @@ footer a {
 }
 
 header .def-button {
+    margin-left:20px;
     color: white;
     border-radius: 3px;
     padding: 0.5rem 1rem;
@@ -60,11 +61,11 @@ header .header-links {
     margin: 0.5rem 1rem;
     align-self: center;
     font-size: 1.2vw;
-    transition: 0.4s ease-out;
+    /* transition: 0.4s ease-out; */
 }
 
 header .header-links:hover {
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
     text-decoration: none;
 }
 
