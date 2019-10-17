@@ -55,7 +55,6 @@ nav ul li a:hover {
   width: 40vw;
   margin: 1rem auto;
 }
-/* styling of individual input field and textarea */
 .form-container input,
 textarea {
   width: 80%;
@@ -63,15 +62,6 @@ textarea {
   margin: 10px auto;
   font-family: inherit;
   font-size: 16px;
-  border-radius: 4px;
-  border:1px solid #0a0a0a86;
-  resize: none;
-}
-/* when user click on a field box */
-.form-container input:focus, .form-container textarea:focus {
-box-shadow: 0px 0px 10px #45758b;
-border:1px solid #00aeff;
-transition:box-shadow .5s  ease-in-out,border .5s  ease-in-out; ;
 }
 
 form.form-container > button {
@@ -115,18 +105,11 @@ section.jumbo > p.para {
 
 section.jumbo > p.para2 {
   text-align: center;
-  margin-top: 0.5rem;
+  margin-top: 0px;
   margin-bottom: 50px;
 }
 section.jumbo > p.para2 > a {
-    color: white;
-    border-radius: 3px;
-    padding: 0.2rem 0.5rem;
-    background-color: #00AEFF;
-    outline: none;
-    border: none;
-    transition: 0.4s ease-out;
-    margin-top: 2rem;
+  color: #00aeff;
 }
 .footer-container {
   background: #fafafa;

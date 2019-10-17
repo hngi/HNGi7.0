@@ -6,9 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The HNG Internship</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+   
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
+
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
@@ -19,7 +25,7 @@
     <div class="containerGrid">
         <header>
             <a href="index.html"><img id="hng-logo"
-                    src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png"></a>
+                    src="https://res.cloudinary.com/jaycodist/image/upload/v1570722444/hng-brand-logo_gnplmq.svg"></a>
             <input type="checkbox" id="mobile-bars-check" />
             <label for="mobile-bars-check" id="mobile-bars">
                 <!--img src="images/bars-icon.png" height="23px"-->
@@ -80,7 +86,7 @@
                 </h3>
                 <div id="countdown-circles-container">
                     <div class="countdown__item">
-                        <p class="countdown__number" id="days"></p>
+                        <p class="countdown__number" id="days">05</p>
                         <p class="text_center countdown__subText">DAYS</p>
                     </div>
                     <div class="countdown__item">
@@ -98,84 +104,7 @@
                 </div>
 
             </div>
-<!--
-    <script>
-    //darkangel cc.
-    const daysElem = document.querySelector('#days'), //Edit this selector to pick the days element in your HTML.
-    hoursElem = document.querySelector('#hours'),
-    minutesElem = document.querySelector('#minutes'),
-    secondsElem = document.querySelector('#seconds'),
-    countDownWrapper = document.querySelector('.countdown'); //This is the counter that wraps all 4 numbers.
 
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 1, 2020 22:0:0").getTime();
-
-// Update the count down every 1 second
-var counter = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var daysLeft = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hoursLeft = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutesLeft = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var secondsLeft = Math.floor((distance % (1000 * 60)) / 1000);
-
-    // Display the results.
-    daysElem.innerText = daysLeft;
-    hoursElem.innerText = hoursLeft;
-    minutesElem.innerText = minutesLeft;
-    secondsElem.innerText = secondsLeft;
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(counter);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-
-    </script>
--->
-
-<script>
-        //darkangel cc.
-        const daysElem = document.querySelector('#days'), //Edit this selector to pick the days element in your HTML.
-    hoursElem = document.querySelector('#hours'),
-    minutesElem = document.querySelector('#minutes'),
-    secondsElem = document.querySelector('#seconds'),
-    countDownWrapper = document.querySelector('.countdown'); //This is the counter that wraps all 4 numbers.
-
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 1, 2020 22:0:0").getTime();
-
-function updateClock() {
-  // Get today's date and time
-  var now = new Date().getTime();
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-  // Time calculations for days, hours, minutes and seconds
-  var daysLeft = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hoursLeft = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutesLeft = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var secondsLeft = Math.floor((distance % (1000 * 60)) / 1000);
-    // Display the results.
-    daysElem.innerText = daysLeft;
-    hoursElem.innerText = hoursLeft;
-    minutesElem.innerText = minutesLeft;
-    secondsElem.innerText = secondsLeft;
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    document.getElementById("demo").innerHTML = "EXPIRED";
-    return;
-  }
-  setTimeout(updateClock, 1000);
-}
-updateClock();
-</script>
             <div class="main-third-row text_center">
                 <div class="">
                     <h3 class="subheading text__dark-blue" style = "font-weight: bold">
@@ -656,7 +585,6 @@ updateClock();
                             <a href="index.html" class="skyblue-text">About HNG</a>
                             <a href="MentorSetUpPage2.html" class="skyblue-text">Become a Sponsor</a>
                             <a href="MentorSetUpPage2.html" class="skyblue-text">Sign up as Mentor</a>
-                            <a href="faq.html" class="skyblue-text">FAQ</a>
                         </div>
                     </section>
                     <section id="contact-section">
@@ -773,4 +701,3 @@ updateClock();
 </body>
 
 </html>
-
