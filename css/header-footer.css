@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 body {
-    font-size: "Open Sans", segoe UI, sans-serif;
+    font-family: "Open Sans", segoe UI, sans-serif;
     padding: 0;
     margin: 0;
 }
