@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Team Icon</title>
+    <title>HNG i7</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
@@ -30,7 +30,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Team Icon</a>
+        <a class="navbar-brand" href="#">HngI7</a>
     </div>
 
     </div><!-- /.navbar-collapse -->
@@ -63,7 +63,7 @@
 
 
                             <div class="form-group">
-                                <input type="submit" name="register" class="btn btn-success" value="Login">
+                                <input type="submit" name="login" class="btn btn-success" value="Login">
                             </div>
 
                         </form>
