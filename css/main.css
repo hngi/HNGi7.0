@@ -113,7 +113,7 @@ grid-template-areas:
 
 main>div {
 padding: 0 10px;
-margin: 0 auto;
+
 }
 
 .main-first-row {
@@ -209,7 +209,7 @@ text-align: center;
 width: 100%;
 display: block;
 height: auto;
-margin: 0 auto;
+
 }
 
 .card1-container {
