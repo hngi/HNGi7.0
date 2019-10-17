@@ -10,7 +10,7 @@ require 'classControllers/init.php';
 $admin = new AdminClass();
 session_start();
 
-if(isset($_POST['ok'])){
+if(isset($_POST['login'])){
     $email = $database->escape_string($_POST["email"]);
     $password = $database->escape_string($_POST["password"]);
 
