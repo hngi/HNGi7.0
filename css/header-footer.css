@@ -6,7 +6,7 @@ body {
     margin: 0;
 }
 .hng6header{
-    position: fixed;
+    position: sticky;
 	left: 0;
 	top: 0;
 	z-index: 200;
@@ -18,8 +18,20 @@ body {
     justify-content: space-between;
     padding: 1rem 3rem;
 }
+.indexheader, .mentorheader, .contactheader, .joinheader{
+    position: sticky;
+	left: 0;
+	top: 0;
+	z-index: 200;
+	background-color: white;
+	width: 100%;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
 header {
-	position: fixed;
 	left: 0;
 	top: 0;
 	z-index: 200;
@@ -30,6 +42,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     padding: 1rem 3rem;
+  
 }
 
 header a,
@@ -179,7 +192,7 @@ footer #socials img {
 
 
 
-@media (max-width: 860px) {
+@media (max-width: 768px) {
     body > * {
         width: auto;
         overflow: hidden;
@@ -191,7 +204,7 @@ footer #socials img {
         padding: 1rem;
         width: auto;
         height: auto;
-        overflow: hidden;
+        overflow: hidden;  
     }
 
     header #hng-logo {
@@ -280,6 +293,6 @@ footer #socials img {
     }
 
     header #mobile-bars-check:checked ~ nav {
-        height: 15rem;
+        height: 19rem;
     }
 }
