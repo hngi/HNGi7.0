@@ -468,3 +468,38 @@ h1
         margin-left: 2%;
     }
 }
+/*Gallery Page*/
+@media screen and (min-width: 800px){
+	.carousel-item img, #myCarousel{
+		margin: auto;
+		max-width:60vw;
+		height: auto;
+		max-height: 80vh;
+	}
+	.galleryContainer{
+		position: relative;
+		top: 10vh;
+	}
+}
+@media screen and (max-width: 799px){
+	.carousel-item img, #myCarousel{
+		margin: auto;
+		max-width:90vw;
+		height: auto;
+		max-height: 80vh;
+	}
+	.galleryContainer{
+	position: relative;
+	top: 10vh;
+}
+}
+
+.fa-chevron-right, .fa-chevron-left{
+	color: #00Aeff;
+	font-size: 3vw;
+  }
+  .fa-chevron-right:hover, .fa-chevron-left:hover{
+	color: #3C6B9C;
+	font-weight: bold;
+	font-size: 5vw;
+  }
