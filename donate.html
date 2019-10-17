@@ -95,7 +95,7 @@
 
     <section class="women">
       <figure>
-        <img src="https://bit.ly/2Vug2Vf" alt="Computer" />
+        <img src="https://hng.tech/app/img/support/intro.png" alt="Computer" />
       </figure>
       <div class="text">
         <h3 class="title">Donate to specific groups</h3>
@@ -130,9 +130,39 @@
       </form>
     </section>
 
+    <div class="banner form" id="supportForm">
+      <h3 class="title">Support via software or tool</h3>
+      <p class="desc">
+        Give anything you have that can make an intern's journey easier
+      </p>
+      <form action="" id="actualSupportForm">
+        <input
+          type="text"
+          name="tool"
+          placeholder="What do you want to donate"
+          required
+        />
+        <input type="email" name="email" placeholder="Email address" required />
+        <label for="group">To which group?</label>
+        <select name="group">
+          <option value="all">All</option>
+          <option value="women">Women</option>
+          <option value="disabled">Disabled</option>
+        </select>
+        <input type="submit" />
+      </form>
+    </div>
+
+    <!-- Delete this when form submission is set up -->
     <script>
-      let form = document.querySelector("#actualForm");
-      form.addEventListener("submit", e => {
+      let form = document.querySelector('#actualForm');
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+
+        alert("Thanks, but donations aren't working yet");
+      });
+      let SupportForm = document.querySelector('#actualSupportForm');
+      SupportForm.addEventListener('submit', e => {
         e.preventDefault();
 
         alert("Thanks, but donations aren't working yet");
