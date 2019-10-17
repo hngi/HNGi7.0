@@ -10,4 +10,12 @@ class AdminClass
 		$result = $database->query("INSERT INTO contact_messages(`name`,`email`,`subject`,`message`,`timestamp`) VALUES('$name', '$email', '$subject', '$message', NOW())");
 		return $result;
 	}
+
+	/*
+	 Function to handle admin sign in
+	 * */
+
+	function login($email, $password){
+
+    }
 }
