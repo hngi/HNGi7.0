@@ -26,6 +26,8 @@ class AdminClass
     function getAdminDetails($email){
         global $database;
         $stmt = $database->query("SELECT admin_id, firstname, lastname, email, role FROM admin WHERE email = '$email'");
+        $result = $stmt->fetch();
 
+        var_dump($result);
     }
 }
