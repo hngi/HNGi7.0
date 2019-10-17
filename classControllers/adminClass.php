@@ -18,14 +18,14 @@ class AdminClass
 	function login($email, $password){
 	    global $database;
 	    $enc_password = sha1($password); //generate encrypted password
-	    $stmt = $database->query("SELECT admin_id FROM admin WHERE email = '$email' AND password = '$password'");
+	    $stmt = $database->query("SELECT admin_id FROM admins WHERE email = '$email' AND password = '$password'");
 	    $rows = $stmt->num_rows;
 	    return $rows;
     }
 
     function getAdminDetails($email){
         global $database;
-        $stmt = $database->query("SELECT admin_id, firstname, lastname, email, role FROM admin WHERE email = '$email'");
+        $stmt = $database->query("SELECT admin_id, firstname, lastname, email, role FROM admins WHERE email = '$email'");
         $result = $stmt->fetch();
 
         var_dump($result);
