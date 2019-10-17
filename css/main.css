@@ -127,6 +127,11 @@ grid-area: row2;
 display: flex;
 flex-direction: column;
 justify-content: center;
+margin-left: 20px;
+}
+
+.countdown__item {
+  margin-right: 20px !important;
 }
 
 .main-third-row {
