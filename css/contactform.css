@@ -26,6 +26,7 @@ input {
   border: 1px solid #3f3f3f;
   padding-left: 25px;
   font-size: inherit;
+  outline: none;
 }
 textarea {
   min-height: 200px;
@@ -34,6 +35,7 @@ textarea {
   padding-left: 25px;
   padding-top: 13px;
   border: 1px solid #3f3f3f;
+  outline: none;
 
 }
 .submit {
@@ -63,4 +65,9 @@ outline: none;
   position: absolute;
   padding-top: 10px;
  padding-left: 5px;
+}
+@media(max-width:860px){
+  footer nav {
+      margin-left: 7%;
+  }
 }
