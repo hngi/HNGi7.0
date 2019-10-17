@@ -8,18 +8,9 @@
 body {
   font-family: "Open Sans", sans-serif;
 }
-nav {
+header {
   background: #d1f0f6;
-  height: 80px;
   width: 100%;
-}
-
-img {
-  height: 57px;
-  width: 200px;
-  line-height: 80px;
-  margin-left: 100px;
-  margin-top: 10px;
 }
 nav ul {
   float: right;
@@ -61,22 +52,43 @@ nav ul li a:hover {
   align-items: center;
   justify-content: center;
   padding-top: 50px;
+  width: 40vw;
+  margin: 1rem auto;
 }
+/* styling of individual input field and textarea */
 .form-container input,
 textarea {
   width: 80%;
   padding: 10px 20px;
   margin: 10px auto;
+  font-family: inherit;
+  font-size: 16px;
+  border-radius: 4px;
+  border:1px solid #0a0a0a86;
+  resize: none;
+}
+/* when user click on a field box */
+.form-container input:focus, .form-container textarea:focus {
+box-shadow: 0px 0px 10px #45758b;
+border:1px solid #00aeff;
+transition:box-shadow .5s  ease-in-out,border .5s  ease-in-out; ;
 }
 
 form.form-container > button {
   margin: 30px auto;
   display: block;
-  padding: 5px 30px;
+  width: 60%;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
   border-radius: 4px;
   background: #00aeff;
   border: 0px;
   color: #fff;
+  transition: 0.4s ease-out;
+}
+form.form-container > button:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 section.jumbo {
   background: #d1f0f6;
@@ -91,6 +103,7 @@ section.jumbo {
 section.jumbo > h2.heading {
   margin-top: 100px;
   margin-bottom: 30px;
+  font-size: 40px;
   color: #084482;
 }
 
@@ -102,56 +115,20 @@ section.jumbo > p.para {
 
 section.jumbo > p.para2 {
   text-align: center;
-  margin-top: 0px;
+  margin-top: 0.5rem;
   margin-bottom: 50px;
 }
 section.jumbo > p.para2 > a {
-  color: #00aeff;
+    color: white;
+    border-radius: 3px;
+    padding: 0.2rem 0.5rem;
+    background-color: #00AEFF;
+    outline: none;
+    border: none;
+    transition: 0.4s ease-out;
+    margin-top: 2rem;
 }
-.footer-container {
-  background: #fafafa;
-  margin-top: 10rem;
-  font-size: 0.93rem;
-}
-.footer-items {
-  display: flex;
-  justify-content: space-between;
-  vertical-align: middle;
-  /* flex-basis: 50px; */
-  flex-wrap: wrap;
-  margin: 3rem 6rem;
-}
-.footer-logo {
-  width: 12.5rem;
-}
-.footer-header {
-  padding: 1rem 0;
-  color: #00aeff;
-}
-.footer-item {
-  padding: 0.3rem 0;
-}
-.footer-links a {
-  color: #00aeff;
-}
-.footer-items a:hover {
-  color: #ccc;
-}
-.contact-us__item {
-  padding: 0.3rem 0;
-  color: #737373;
-}
-.office-address {
-  color: #737373;
-}
-.footer-p {
-  text-align: center;
-  padding: 3rem;
-  color: #8898aa;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-}
+
 .social-icon {
   margin-right: 1rem;
   color: #00aeff;
@@ -162,63 +139,61 @@ section.jumbo > p.para2 > a {
     0px 1px 3px rgba(0, 0, 0, 0.08);
   border-radius: 50%;
 }
-@media (min-width: 320px) and (max-width: 480px) {
-  img {
-    height: 45px;
-    width: 130px;
-    line-height: 80px;
-    margin-left: 20px;
-    margin-top: 15px;
+
+@media (max-width: 860px) {
+  .form-container
+  {
+    width: 90%;
   }
-
-
-  .footer-items {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    /* vertical-align: middle; */
-    /* flex-basis: 50px; */
-    /* flex-wrap: wrap; */
-    /* margin: 3rem 6rem; */
+  .form-container input, textarea {
+      width: 90%;
+    }
+  .form-container button
+  {
+    width: 100%;
   }
-
-  @media (max-width: 952px) {
-    nav ul li a {
-      font-size: 16px;
-    }
-  }
-
-  @media (max-width: 858px) {
-    .checkbtn {
-      display: block;
-    }
-    nav ul {
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      background: #d1f0f6;
-      top: 80px;
-      left: -100%;
-      text-align: center;
-      transition: all 0.5s;
-    }
-    nav ul li {
-      display: block;
-      margin: 50px 0;
-      line-height: 30px;
-    }
-    nav ul li a {
-      font-size: 20px;
-    }
-    nav ul li a:hover,
-    nav ul li a.active {
-      background: none;
-      color: #00aeff;
-    }
-    #check:checked ~ ul {
-      left: 0;
-    }
+  footer nav {
+    margin-left: 7%;
   }
 }
+
+@media (max-width: 952px) {
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+
+  .checkbtn {
+    display: block;
+  }
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #d1f0f6;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  nav ul li a:hover,
+  nav ul li a.active {
+    background: none;
+    color: #00aeff;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
 

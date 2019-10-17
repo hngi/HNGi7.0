@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family:  Open Sans, sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #F4F5F7 !important;   
+}
+
+header {
+    /* background: linear-gradient(90deg, #D1F0F6 0%, rgb(183, 199, 202) 100%);  */
+    background: linear-gradient(90deg, #D1F0F6 0%, rgb(17, 205, 239) 100%);
+    position: relative;
+    height: 13vh;
+    z-index: 5;
+}
+#sidebar
+{
+    /* background: linear-gradient(180deg, #D1F0F6 0%, rgb(183, 199, 202) 100%); */
+    background: linear-gradient(180deg, #D1F0F6 0%, rgb(17, 205, 239) 100%);
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 4;
+	height: 100vh;
+	width: 135px;
+    padding-top: 6rem;
+}
+
+#sidebar #upper
+{
+	display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+.wrapper{
+    width: 500px;
+}
+
+.table_title{
+    text-align:center;
+}
+.tables{
+    width:70vw;
+    margin: 0 auto;
+}
+.table{
+    background: #FFFFFF;
+    border: 2px solid #D3D3D3;
+    box-sizing: border-box;
+    width: 70vw;
+    height: 380px;
+    overflow-y: scroll;
+}
+
+.table-input{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height:47px;
+    text-align: center;
+}
+.table-input>td{
+    padding-bottom: 2em;
+    vertical-align: middle;
+   
+}
+
+.btn{
+    background-color: #337ab7;
+    width:149px;
+    height:37px;
+    color: white;
+   
+}
+.btn-lg{
+    padding-top: 5px;
+    outline: none;
+}
+
+.tables{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.box > *{
+    margin: 1em;
+    color: #337ab7;
+   
+}
+.box > select{
+    height: 30px;
+}
+
+th{
+    position: relative;
+    text-align: center;
+}
+
+i{
+    position: absolute;
+    margin-left: 10px;
+    top: 17px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    
+}
+
+i:hover{
+    color:blue;    
+}
+
+.table>thead>tr>th,
+.table>tbody>tr>td,
+.table>tbody>tr>th{
+    vertical-align: middle;
+}
