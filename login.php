@@ -77,7 +77,7 @@ if(isset($_POST['login'])){
                             ?>
                             <div class="form-group">
                                 <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" class="form-control" required placeholder="Email Address">
+                                <input type="email" id="email" name="email" class="form-control" required placeholder="Email Address" value="<?php echo @$_POST['email'];?>">
                             </div>
 
                             <div class="form-group">
