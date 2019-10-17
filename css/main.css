@@ -78,6 +78,33 @@ justify-content: space-between;
 align-items: center;
 }
 
+#join-hng{
+	border-radius: 3px !important;
+	padding: none !important;
+	color: #fff !important;
+	background: none !important;
+	transition: none ! important;
+}
+ 
+ header .header-links {
+	align-self: center;
+	border-radius: 3px;
+    padding: 0.3rem 0.3rem !important;
+}
+
+#join-hng:hover{
+	color: #fff !important;
+background:#00AEFF !important;
+box-shadow: none !important;
+}
+
+header .header-links:hover {
+    transform: none !important;
+	color: #fff !important;
+background:#00AEFF !important;
+box-shadow: none !important;
+}
+
 .logo-container {
 height: 100%;
 }
@@ -602,7 +629,9 @@ display: none;
 padding: 0;
 }
 
-
+#hng-logo {
+	  width: 40% !important;
+	}
 
 }
 
@@ -1009,6 +1038,10 @@ margin-left: 5px;
     text-align: center;
     margin-bottom: 60px;
   }
+  
+  #hng-logo {
+	  width: 33% !important;
+	}
 }
 
 #wrapper {
