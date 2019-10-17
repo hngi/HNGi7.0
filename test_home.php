@@ -49,7 +49,7 @@ header("location:login.php");
 <section id="login">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
+            <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-success">
                     <div class="panel-heading">Welcome</div>
                     <div class="panel-body">
@@ -62,6 +62,28 @@ header("location:login.php");
                         <h3>
                             Welcome <?php echo $_SESSION['hng-admin']['firstname'];?>
                         </h3>
+
+                        <h4>Admin Details</h4>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Field</th>
+                                    <th>Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <?php
+                                foreach ($_SESSION['hng-admin'] as $key=>$value){
+                                    ?>
+                                    <tr>
+                                        <td><?php echo ucfirst($key)?></td>
+                                        <td><?php echo ucfirst($value);?></td>
+                                    </tr>
+                                    <?php
+                                }
+                            ?>
+                            </tbody>
+                        </table>
                         <p>
                             <a href="login.php?act=logout" class="btn btn-danger">Logout</a>
                         </p>
