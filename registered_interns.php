@@ -1,4 +1,5 @@
 <?php
+require_once 'dbh.php';
 
 $rew = new Database;
 $resul = $rew->saveRecords();
@@ -20,6 +21,7 @@ $resul = $rew->saveRecords();
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="stylesheet" href="css/join-intern.css">
+
   </head>
   <body>
     <header>
@@ -35,22 +37,33 @@ $resul = $rew->saveRecords();
       <a href="index.html" class="header-links">Home</a>
       <a href="hng6.html" class="header-links">HNG 6</a>
       <a href="mentorpage.html" class="header-links">Mentors</a>
-      <a href="contactform.html" class="header-links">Contact</a>
-      <a href="join-intern.html" id="join-hng" class="def-button">Join HNG</a>
+      <a href="registered_interns.php" id="join-hng" class="def-button">View Registered Interns</a>
     </nav>
   </header>
-  <section>
+  <div class="table-responsive">
 
-    <table class="table table-bordered table-condensed table-striped mr-2 ml-2 mt-1 mb-1">
+    <table class="table table-bordered table-condensed table-hover table-sm mr-2 ml-2 mt-1 mb-1">
       <thead>
-        <th>id</th><th>Name</th><th>Email</th><th>PhoneNo</th><th>Link To Portfolio</th><th>Link to CV</th>
-        <th>Years of Experience</th><th>Interest</th><th>Location</th><th>Employment Status</th><th>About</th><th>Timestamp</th>
+      <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>PhoneNo</th>
+        <th>Link To Portfolio</th>
+        <th>Link to CV</th>
+        <th>Years of Experience</th>
+        <th>Interest</th>
+        <th>Location</th>
+        <th>Employment Status</th>
+        <th>About</th>
+        <th>Timestamp</th>
+      </tr>
       </thead>
-      <tbody>
         <!-- Loop condition to view rigestered interns -->
     <?php while ($results = mysqli_fetch_assoc($resul)) :
 
       ?>
+      <tbody>
         <tr>
           <td><?=$results['intern_id'];?></td>
           <td><?=$results['name'];?></td>
@@ -65,11 +78,10 @@ $resul = $rew->saveRecords();
           <td><?=$results['about'];?></td>
           <td><?=$results['timestamp'];?></td>
         </tr>
+        </tbody>
         <?php endwhile; ?>
-      </tbody>
     </table>
-
-  </section>
+  </div>
 
   <footer>
 
