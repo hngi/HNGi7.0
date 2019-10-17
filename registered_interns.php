@@ -1,4 +1,5 @@
 <?php
+require_once 'dbh.php';
 
 $rew = new Database;
 $resul = $rew->saveRecords();
@@ -36,7 +37,7 @@ $resul = $rew->saveRecords();
       <a href="hng6.html" class="header-links">HNG 6</a>
       <a href="mentorpage.html" class="header-links">Mentors</a>
       <a href="contactform.html" class="header-links">Contact</a>
-      <a href="join-intern.html" id="join-hng" class="def-button">Join HNG</a>
+      <a href="join-intern.php" id="join-hng" class="def-button">Join HNG</a>
     </nav>
   </header>
   <section>
