@@ -227,6 +227,9 @@ color: #333333;
 color: #084482;
 }
 
+.accordion_tab{
+  margin-left:15%;
+}
 @media (max-width: 860){
   footer {
     width: auto;
@@ -1148,7 +1151,9 @@ margin-left: 5px;
 .lee{
   width: 85%;
 }
-
+.support{
+  width: 90%;
+}
 .sponsors__header{
   width:89%;
 }
@@ -1166,6 +1171,9 @@ margin-left: 5px;
 }
 .sponsors_button{
   width: 90%;
+}
+.tripp{
+  width: 85%;
 }
 
 #zz{
