@@ -6,6 +6,23 @@
  * Time: 9:12 AM
  */
 
+require 'classControllers/init.php';
+$admin = new AdminClass();
+session_start();
+
+if(isset($_POST['ok'])){
+    $email = $database->escape_string($_POST["email"]);
+    $password = $database->escape_string($_POST["password"]);
+
+    if($admin->login("$email","$password")){
+        $admin_info = $admin->getAdminDetails($email);
+        $_SESSION['hng-admin'] = $admin_info; //Set session for logged user
+    }else{
+        $_SESSION['err_msg'] = "<div class='alert alert-danger'>Invalid login details!</div>";
+    }
+
+
+}
 ?>
 <!DOCTYPE html>
 <html>
