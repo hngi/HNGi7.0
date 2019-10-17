@@ -11,15 +11,26 @@ body{
     margin: 0 auto;
     padding: 0;
     background-color: #F4F5F7 !important;
+    height: 100vh;
 }
 
 .wrapper{
     overflow-x:auto;
 }
 
-.table_title{
+.table_wrapper {
+     background: #fff;
+     width: 80%;
+     padding: 2rem 0;
+}
+
+
+ .table_title{
     text-align:center;
 }
+
+
+
 .table{
     background: #FFFFFF;
     border: 2px solid #D3D3D3;
@@ -27,6 +38,25 @@ body{
     width: 950px;
     height: 540px;
 }
+
+
+
+.container-mentors-table .mentors_table,
+.container-interns-table .interns_table {
+    margin-bottom: 5rem;
+}
+
+
+
+.align_buttons_1,
+.align_buttons_2 {
+    margin: 0 8rem 3rem 0;
+} 
+
+.align_buttons_1 .space_between,
+.align_buttons_2 .space_between {   margin-right: 20px; }
+
+.align_buttons { margin-top: -4rem; }
 
 .table-input{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
