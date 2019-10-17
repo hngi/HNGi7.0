@@ -6,9 +6,15 @@
  * Time: 9:12 AM
  */
 
+session_start();
+if(isset($_GET['act']) && ($_GET['act'] == "logout")){
+    unset($_SESSION['hng-admin']);
+    header("location:login.php");
+}
+
 require 'classControllers/init.php';
 $admin = new AdminClass();
-session_start();
+
 
 if(isset($_POST['login'])){
     $email = $database->escape_string($_POST["email"]);
