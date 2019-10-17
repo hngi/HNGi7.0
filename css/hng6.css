@@ -464,4 +464,7 @@ h1
 		font-size: 15px;
 		margin-top: 0.4rem;
 	}
+	footer nav {
+        margin-left: 2%;
+    }
 }
