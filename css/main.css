@@ -798,97 +798,105 @@ margin-left: 5px;
 
 /* SPONSOR STYLING */
 
-@media screen and (max-width: 800px) {
-  .sponsors{
-    width: 96vw;
-    margin-right: 0;
-    padding-right: 0;
-    overflow-x: none;
-  
-  }
-  .sponsors__header{
-    color:#3c6b9c;
-    font-weight: bold;
-    text-align: center;
-  }
-  .sponsors_button button{
-    margin: auto;
-  }
-  .sponsors img{
-    box-sizing: border-box;
-  }
+.sponsors{
+  width: 96vw;
+  margin-right: 0;
+  padding-right: 0;
+  overflow-x: none;
+
+}
+.sponsors__header{
+  color:#3c6b9c;
+  font-weight: bold;
+  text-align: center;
+}
+.sponsors_button button{
+  margin: auto;
+}
+.sponsors img{
+  box-sizing: border-box;
+}
+.sponsors__images1 .image1{
+  float: left;
+  margin-right: 4vw;
+  width: 12vw;
+}
+.sponsors__images1 .image3{
+  float: right;
+  margin-left: 5vw;
+  width: 9vw;
+}
+.sponsors__images1 .image2{
+  margin: 0 6vw;
+  width: 4vw;  
+}
+.sponsors__images1 .image4{
+  margin: 0 12vw;
+  width: 4vw;  
+}
+.image4 {
+  font-size: 3vw;
+}
+.sponsors__images2{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+.image5, .image6{
+  width: 20vw;
+}
+.image4, .image5{
+  margin: 5%;
+}
+.carousel{
+  display: none;
+}
+.fa-chevron-right, .fa-chevron-left{
+  color: #00Aeff;
+  font-size: 3vw;
+}
+.fa-chevron-right:hover, .fa-chevron-left:hover{
+  color: #3C6B9C;
+  font-weight: bold;
+  font-size: 5vw;
+}
+@media screen and (max-width:900px){
   .sponsors__images1 .image1{
-    float: left;
-    margin-right: 4vw;
-    width: 12vw;
+    margin-right: 5vw;
+    width: 13vw;
   }
   .sponsors__images1 .image3{
-    float: right;
-    margin-left: 5vw;
+    margin-left: 0vw;
+    width: 11vw;
+  }
+  .sponsors__images1 .image2{
+    margin: 0 5vw;
+    width: 6vw;  
+  }
+}
+
+@media screen and (max-width:800px){
+  .sponsors__images1 .image1{
+    margin-right: 5vw;
+    width: 11vw;
+  }
+  .sponsors__images1 .image3{
     width: 9vw;
   }
   .sponsors__images1 .image2{
-    margin: 0 6vw;
-    width: 4vw;  
+    margin: 0 10.5%;
+    width: 5vw;  
   }
-  .sponsors__images1 .image4{
-    margin: 0 12vw;
-    width: 4vw;  
-  }
-  .image4 {
-    font-size: 3vw;
-  }
-  .sponsors__images2{
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-    justify-items: center;
-  }
-  .image5, .image6{
-    width: 20vw;
-  }
-  .image4, .image5{
-    margin: 5%;
-  }
-  .carousel{
+}
+@media screen and (max-width:500px){
+  .sponsors_images_container{
     display: none;
   }
-  @media screen and (max-width:900px){
-    .sponsors__images1 .image1{
-      margin-right: 5vw;
-      width: 13vw;
-    }
-    .sponsors__images1 .image3{
-      margin-left: 0vw;
-      width: 11vw;
-    }
-    .sponsors__images1 .image2{
-      margin: 0 5vw;
-      width: 6vw;  
-    }
+  .carousel{
+    display: block;
   }
-  
-  @media screen and (max-width:800px){
-    .sponsors__images1 .image1{
-      margin-right: 5vw;
-      width: 11vw;
-    }
-    .sponsors__images1 .image3{
-      width: 9vw;
-    }
-    .sponsors__images1 .image2{
-      margin: 0 10.5%;
-      width: 5vw;  
-    }
-  }
-  @media screen and (max-width:500px){
-    .sponsors_images_container{
-      display: none;
-    }
-    .carousel{
-      display: block;
-    }
-  }
+}
 
 #wrapper {
     background-color: #3c6b9c;
@@ -1010,6 +1018,7 @@ margin-left: 5px;
   }
 
   /**Very Small Screens**/
+  
 @media screen and (max-width: 640px){
   #welcome-text{
     width: 100%;
@@ -1042,9 +1051,10 @@ margin-left: 5px;
 .main-fifth-row{
   width: 85%;
 }
-.mt-5{
+/* Tife Black please find another way to achieve this without overriding the css class*/
+/*.mt-5{
   width: 85%;
-}
+}*/
 .bass{
   width: 85%;
 }
@@ -1052,30 +1062,6 @@ margin-left: 5px;
   width: 85%;
 }
 .lee{
-  width: 85%;
-}
-.support{
-  width: 90%;
-}
-.sponsors__header{
-  width:89%;
-}
-.sponsors__images{
-  width:85%;
-}
-.figma_logo{
-  width:85%;
-}
-.bluechip_logo{
-  width: 60%;
-}
-.flutter_logo{
-  width: 80%;
-}
-.sponsors_button{
-  width: 90%;
-}
-.tripp{
   width: 85%;
 }
 
@@ -1093,5 +1079,3 @@ margin-left: 5px;
   width: 85%;
 }
 }
-
-/** Very Small screens**/
