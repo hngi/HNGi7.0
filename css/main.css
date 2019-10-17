@@ -131,7 +131,7 @@ margin-left: 20px;
 }
 
 .countdown__item {
-  margin-right: 20px !important;
+  margin-right: 5px !important;
 }
 
 .main-third-row {
@@ -231,15 +231,10 @@ font-size: 1.05em;
 font-size: 0.95em;
 letter-spacing: 0.05em;
 color: #333333;
-margin: 0 auto;
 }
 
 .text__dark-blue {
 color: #084482;
-}
-
-#how-it-works{
-  margin: 0 auto;
 }
 
 
