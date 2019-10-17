@@ -78,13 +78,11 @@ justify-content: space-between;
 align-items: center;
 }
 
-logo-container {
-
+.logo-container {
 height: 100%;
 }
 
 #logo {
-
 height: 100%;
 width: 90%;
 }
@@ -114,7 +112,8 @@ grid-template-areas:
 }
 
 main>div {
-padding: 0 10%;
+padding: 0 10px;
+margin: 0 auto;
 }
 
 .main-first-row {
@@ -128,14 +127,22 @@ grid-area: row2;
 display: flex;
 flex-direction: column;
 justify-content: center;
+margin-left: 20px;
+}
+
+.countdown__item {
+  margin-right: 20px !important;
 }
 
 .main-third-row {
 grid-area: row3;
-display: flex;
-flex-direction: column;
 background: rgba(196, 196, 196, 0.1);
 padding-top: 2em;
+padding-right: 0;
+}
+
+.subheading {
+  margin: 0 auto;
 }
 
 #welcome-text {
@@ -199,8 +206,7 @@ text-align: center;
 }
 
 .card1-image {
-
-max-width: 100%;
+width: 100%;
 display: block;
 height: auto;
 margin: 0 auto;
@@ -212,6 +218,10 @@ display: flex;
 
 }
 
+.card1 {
+  margin: 0 auto;
+}
+
 .card1-heading {
 margin: 1em 0;
 font-size: 1.05em;
@@ -221,11 +231,17 @@ font-size: 1.05em;
 font-size: 0.95em;
 letter-spacing: 0.05em;
 color: #333333;
+margin: 0 auto;
 }
 
 .text__dark-blue {
 color: #084482;
 }
+
+#how-it-works{
+  margin: 0 auto;
+}
+
 
 .accordion_tab{
   margin-left:15%;
@@ -272,6 +288,14 @@ position: absolute;
 top: 0.2em;
 right: 0.3em;
 cursor: pointer;
+}
+
+#support {
+  width: 100%;
+}
+
+.tripp {
+  width: 100% !important;
 }
 
 
