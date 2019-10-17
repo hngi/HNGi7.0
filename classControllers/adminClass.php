@@ -16,6 +16,8 @@ class AdminClass
 	 * */
 
 	function login($email, $password){
-
+	    global $database;
+	    $enc_password = sha1($password); //generate encrypted password
+	    $stmt = $database->query("SELECT admin_id, firstname, lastname, email, role FROM admin WHERE email = '$email' ")
     }
 }
