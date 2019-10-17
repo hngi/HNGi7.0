@@ -128,50 +128,7 @@ section.jumbo > p.para2 > a {
     transition: 0.4s ease-out;
     margin-top: 2rem;
 }
-.footer-container {
-  background: #fafafa;
-  margin-top: 10rem;
-  font-size: 0.93rem;
-}
-.footer-items {
-  display: flex;
-  justify-content: space-between;
-  vertical-align: middle;
-  /* flex-basis: 50px; */
-  flex-wrap: wrap;
-  margin: 3rem 6rem;
-}
-.footer-logo {
-  width: 12.5rem;
-}
-.footer-header {
-  padding: 1rem 0;
-  color: #00aeff;
-}
-.footer-item {
-  padding: 0.3rem 0;
-}
-.footer-links a {
-  color: #00aeff;
-}
-.footer-items a:hover {
-  color: #ccc;
-}
-.contact-us__item {
-  padding: 0.3rem 0;
-  color: #737373;
-}
-.office-address {
-  color: #737373;
-}
-.footer-p {
-  text-align: center;
-  padding: 3rem;
-  color: #8898aa;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-}
+
 .social-icon {
   margin-right: 1rem;
   color: #00aeff;
@@ -182,6 +139,7 @@ section.jumbo > p.para2 > a {
     0px 1px 3px rgba(0, 0, 0, 0.08);
   border-radius: 50%;
 }
+
 @media (max-width: 860px) {
   .form-container
   {
@@ -194,17 +152,10 @@ section.jumbo > p.para2 > a {
   {
     width: 100%;
   }
-
-  .footer-items {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    /* vertical-align: middle; */
-    /* flex-basis: 50px; */
-    /* flex-wrap: wrap; */
-    /* margin: 3rem 6rem; */
+  footer nav {
+    margin-left: 7%;
   }
+}
 
   /*Smaller screens*/
   @media screen and (max-width: 578px) {
@@ -382,38 +333,39 @@ section.jumbo > p.para2 > a {
       font-size: 16px;
     }
   }
+}
 
-  @media (max-width: 858px) {
+@media (max-width: 858px) {
 
-    .checkbtn {
-      display: block;
-    }
-    nav ul {
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      background: #d1f0f6;
-      top: 80px;
-      left: -100%;
-      text-align: center;
-      transition: all 0.5s;
-    }
-    nav ul li {
-      display: block;
-      margin: 50px 0;
-      line-height: 30px;
-    }
-    nav ul li a {
-      font-size: 20px;
-    }
-    nav ul li a:hover,
-    nav ul li a.active {
-      background: none;
-      color: #00aeff;
-    }
-    #check:checked ~ ul {
-      left: 0;
-    }
+  .checkbtn {
+    display: block;
+  }
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #d1f0f6;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  nav ul li a:hover,
+  nav ul li a.active {
+    background: none;
+    color: #00aeff;
+  }
+  #check:checked ~ ul {
+    left: 0;
   }
 }
+
 
