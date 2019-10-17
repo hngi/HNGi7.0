@@ -157,9 +157,181 @@ section.jumbo > p.para2 > a {
   }
 }
 
-@media (max-width: 952px) {
-  nav ul li a {
-    font-size: 16px;
+  /*Smaller screens*/
+  @media screen and (max-width: 578px) {
+    * {
+      padding: 0;
+      margin: 0;
+      text-decoration: none;
+      list-style: none;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Open Sans", sans-serif;
+    }
+    header {
+      background: #d1f0f6;
+      width: 100%;
+    }
+    nav ul {
+      float: right;
+      margin-right: 20px;
+    }
+    nav ul li {
+      display: inline-block;
+      line-height: 80px;
+      margin: 0 5px;
+    }
+    nav ul li a {
+      color: #474747;
+      font-size: 16px;
+      padding: 15px 20px;
+      border-radius: 3px;
+      opacity: 0.95;
+    }
+    nav ul li a.active,
+    nav ul li a:hover {
+      background: #00aeff;
+      transition: 0.5s;
+      color: white;
+    }
+    .checkbtn {
+      font-size: 30px;
+      color: white;
+      float: right;
+      line-height: 80px;
+      margin-right: 40px;
+      cursor: pointer;
+      display: none;
+    }
+    #check {
+      display: none;
+    }
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 50px;
+      width: 40vw;
+      margin: 1rem auto;
+    }
+    .form-container input,
+    textarea {
+      width: 80%;
+      padding: 10px 20px;
+      margin: 10px auto;
+      font-family: inherit;
+      font-size: 16px;
+    }
+    
+    form.form-container > button {
+      margin: 30px auto;
+      display: block;
+      width: 60%;
+      padding: 10px 30px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      background: #00aeff;
+      border: 0px;
+      color: #fff;
+      transition: 0.4s ease-out;
+    }
+    form.form-container > button:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    }
+    section.jumbo {
+      background: #d1f0f6;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-top: 0px;
+    }
+    
+    section.jumbo > h2.heading {
+      margin-top: 100px;
+      margin-bottom: 30px;
+      font-size: 40px;
+      color: #084482;
+    }
+    
+    section.jumbo > p.para {
+      text-align: center;
+      margin-bottom: 0px;
+      padding: 0 5px;
+    }
+    
+    section.jumbo > p.para2 {
+      text-align: center;
+      margin-top: 0px;
+      margin-bottom: 50px;
+    }
+    section.jumbo > p.para2 > a {
+      color: #00aeff;
+    }
+    .footer-container {
+      background: #fafafa;
+      margin-top: 10rem;
+      font-size: 0.93rem;
+    }
+    .footer-items {
+      display: flex;
+      justify-content: space-between;
+      vertical-align: middle;
+      /* flex-basis: 50px; */
+      flex-wrap: wrap;
+      margin: 3rem 6rem;
+    }
+    .footer-logo {
+      width: 12.5rem;
+    }
+    .footer-header {
+      padding: 1rem 0;
+      color: #00aeff;
+    }
+    .footer-item {
+      padding: 0.3rem 0;
+    }
+    .footer-links a {
+      color: #00aeff;
+    }
+    .footer-items a:hover {
+      color: #ccc;
+    }
+    .contact-us__item {
+      padding: 0.3rem 0;
+      color: #737373;
+    }
+    .office-address {
+      color: #737373;
+    }
+    .footer-p {
+      text-align: center;
+      padding: 3rem;
+      color: #8898aa;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+    }
+    .social-icon {
+      margin-right: 1rem;
+      color: #00aeff;
+      background: white;
+      padding: 0.5rem;
+      border: 5px solid white;
+      box-shadow: 0px 4px 4px rgba(50, 50, 93, 0.11),
+        0px 1px 3px rgba(0, 0, 0, 0.08);
+      border-radius: 50%;
+    }
+  }
+
+  @media (max-width: 952px) {
+    nav ul li a {
+      font-size: 16px;
+    }
   }
 }
 
@@ -193,6 +365,18 @@ section.jumbo > p.para2 > a {
   }
   #check:checked ~ ul {
     left: 0;
+  }
+  @media only screen and (max-width: 400px) {
+    section.jumbo > h2.heading {
+      font-size: 30px; 
+  }
+  section.jumbo > p.para {
+    font-size: .85em;
+  }
+  section.jumbo > p.para2 {
+    font-size: .85em;
+  }
+  
   }
 }
 

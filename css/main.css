@@ -12,7 +12,27 @@ body {
 font-family: "Open Sans", segoe UI, sans-serif;
 
 }
-
+/* Scroll down arrow */
+#scroll-down-arrow{
+  height: 5vw;
+  width: 5vw;
+  border-radius: 50%;
+  background: #00aeff;
+  position: fixed;
+  top: 80%;
+  left: 47%;
+  filter: opacity(0.7);
+  cursor: pointer;
+  border: 1px solid white;
+  z-index: 1000;
+}
+#scroll-down-arrow i{
+  font-size: 2vw;
+  color: white;
+  position: relative;
+  top: 32%;
+  left: 32%;
+}
 .desktop-only {
 display: none;
 }
@@ -284,6 +304,9 @@ font-size: 1.2em;
 @media screen and (max-width: 960px) {
   header{
     margin: 0.2em 1em;
+  }
+  #scroll-down-arrow {
+    display: none !important;
   }
 }
 
@@ -1125,9 +1148,7 @@ margin-left: 5px;
 .lee{
   width: 85%;
 }
-.support{
-  width: 90%;
-}
+
 .sponsors__header{
   width:89%;
 }
@@ -1145,9 +1166,6 @@ margin-left: 5px;
 }
 .sponsors_button{
   width: 90%;
-}
-.tripp{
-  width: 85%;
 }
 
 #zz{

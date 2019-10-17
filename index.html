@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The HNG Internship</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -14,6 +15,9 @@
 </head>
 
 <body>
+    <div id="scroll-down-arrow" class="animated bounceInUp" onclick="scrollWin()">
+        <i class="fas fa-arrow-down"></i>
+    </div>
     <img src="https://bit.ly/2OC3tWo" id="corner-circle" alt="Graphic at the top right corner">
     <div class="containerGrid">
         <header id="header">
@@ -576,7 +580,7 @@ updateClock();
                             </h4>
                             <span class="support__item-link">
                                 <i class="fa fa-chevron-circle-right"></i>
-                                <a href="#" class="text-light">Get Started</a>
+                                <a href="donate.html" class="text-light">Get Started</a>
                             </span>
                         </div>
                     </div>
@@ -590,7 +594,7 @@ updateClock();
                             </h4>
                             <span class="support__item-link">
                                 <i class="fa fa-chevron-circle-right"></i>
-                                <a href="#" class="text-light">Get Started</a>
+                                <a href="faq.html" class="text-light">Get Started</a>
                             </span>
                         </div>
                     </div>
@@ -604,7 +608,7 @@ updateClock();
                             </h4>
                             <span class="support__item-link">
                                 <i class="fa fa-chevron-circle-right"></i>
-                                <a href="#" class="text-light">Get Started</a>
+                                <a href="donate.html#supportForm" class="text-light">Get Started</a>
                             </span>
                         </div>
                     </div>
@@ -871,6 +875,30 @@ $('a[href*="#"]')
     crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"
     crossorigin="anonymous"></script>
+    <script>
+        let scrollArrow = document.querySelector('#scroll-down-arrow');
+        function scrollWin() {
+            window.scrollBy(0, 500);
+            console.log(window.scrollY)
+            if (window.scrollY >= 5000) {
+                scrollArrow.style.display = "none";
+            }
+        }
+        const hideArrow = (event) => {
+            if (window.scrollY >= 5000) {
+                scrollArrow.style.display = "none";
+            }
+        }
+        window.addEventListener('scroll', (event) => hideArrow(event))
+    
+        const displayArrow = (event) => {
+            if (window.scrollY < 5000) {
+                scrollArrow.classList.add('bounceInDown')
+                scrollArrow.style.display = "block";
+            }
+        }
+        window.addEventListener('scroll', (event) => displayArrow(event))
+    </script>
 </body>
 
 </html>
