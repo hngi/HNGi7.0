@@ -66,3 +66,8 @@ outline: none;
   padding-top: 10px;
  padding-left: 5px;
 }
+@media(max-width:860px){
+  footer nav {
+      margin-left: 7%;
+  }
+}

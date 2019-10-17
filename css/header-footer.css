@@ -103,7 +103,7 @@ footer {
 footer h2 {
     font-size: 25px;
     margin: 1rem auto;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 footer > nav {
@@ -125,10 +125,9 @@ footer #link-list {
 }
 
 footer #link-list > * {
-    font-weight: 500;
     font-size: 17px;
+    padding: 2px;
     align-self: flex-start;
-    padding: 0.5rem;
     transition: 0.4s ease-out;
     text-decoration: none;
 }
@@ -166,9 +165,9 @@ footer #socials img {
     width: 25px;
 }
 
-
-
-
+footer .footer-nav .row {
+    width: 100%;
+}
 
 @media (max-width: 860px) {
     body > * {
@@ -249,12 +248,17 @@ footer #socials img {
     }
 
     footer nav > * {
+        margin-top: 1rem;
         margin-bottom: 2rem;
     }
 
     footer #link-list > * {
         font-size: 15px;
-        padding: 0.5rem;
+        padding: 2px;
+    }
+
+    footer .footer-nav .row {
+        margin-left: 5%;
     }
 }
 
