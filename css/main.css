@@ -4,6 +4,9 @@
 margin: 0;
 padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
 font-family: "Open Sans", segoe UI, sans-serif;
