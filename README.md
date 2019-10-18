@@ -1,7 +1,3 @@
-# HNG6.0-Project
-
-# Important!
-
 Please before you push your codes to the repository make sure you pull from the repository, so the changes that have been made can be reflected on your local machine, for us to avoid merge conflicts
 use the git command line
 ```git
