@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
@@ -82,18 +81,39 @@
 
     .first-color {
       background: #FB6340;
+      cursor: pointer;
     }
 
     .second-color {
       background: #5E72E4;
+      cursor: pointer;
     }
 
     .third-color {
       background: #11CDEF;
+      cursor: pointer;
     }
 
     .fourth-color {
       background: rgb(98, 255, 98);
+      cursor: pointer;
+    }
+
+    .first-color:hover {
+      background: rgb(226, 91, 61);
+      transition: .5s ease-in-out;
+    }
+    .second-color:hover {
+      background: rgb(83, 102, 204);
+      transition: .5s ease-in-out;
+    }
+    .third-color:hover {
+      background: rgb(17, 179, 207);
+      transition: .5s ease-in-out;
+    }
+    .fourth-color:hover {
+      background: rgb(82, 216, 82);
+      transition: .5s ease-in-out;
     }
      #landing-page {
       text-align: center;
@@ -184,7 +204,7 @@
         min-height: 60vh;
         padding: 1rem;
      }
-     
+
 
 
     @media (min-width: 700px) {
@@ -295,7 +315,7 @@
         </li>
         <li class="nav-item">
 
-          <a class="nav-link" href="hng6.html">HNGi6.0</a>
+          <a class="nav-link" href="hng6.html">HNG6</a>
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="mentorpage.html">Mentors</a>
@@ -304,7 +324,7 @@
             <a class="nav-link" href="contactform.html">Contact</a>
         </li>
 
-        <button class="btn btn-primary" id="btn"><a style="color:#fff" href="join-intern.html">Join HNGi7.0</a></button>
+        <button class="btn btn-primary" id="btn"><a style="color:#fff" href="join-intern.html">Join HNG</a></button>
       </ul>
     </div>
   </nav>
@@ -320,7 +340,7 @@
   </div>
 </header-->
 
-<header class="mentorheader">
+<header>
     <a href="index.html"><img id="hng-logo" src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png"></a>
     <input type="checkbox" id="mobile-bars-check" />
         <label for="mobile-bars-check" id="mobile-bars">
@@ -331,7 +351,7 @@
         </label>
     <nav>
       <a href="index.html" class="header-links">Home</a>
-      <a href="hng6.html" class="header-links">HNGi6.0</a>
+      <a href="hng6.html" class="header-links">HNGi 6.0</a>
       <a href="mentorpage.html" class="header-links">Mentors</a>
       <a href="contactform.html" class="header-links">Contact</a>
       <a href="join-intern.html" id="join-hng" class="def-button">Join HNGi7.0</a>
@@ -350,12 +370,12 @@
 
   <main>
     <section class="mentors-section">
-      <div class="wrapper"  data-aos="zoom-in-right"></div>
-   </section>
+      <div class="wrapper">
+
+      </div>
+    </section>
   </main>
 
-
-  
   <footer>
       <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722444/hng-brand-logo_gnplmq.svg">
       <nav class="footer-nav">
@@ -363,7 +383,7 @@
               <div class="col-sm-3 pb-3">
                   <h2 class="skyblue-text">Quick Links</h2>
                   <div id="link-list">
-                      <a href="join-intern.html" class="skyblue-text">Join HNGi7.0</a>
+                      <a href="join-intern.html" class="skyblue-text">Join HNG</a>
                       <a href="index.html" class="skyblue-text">About HNG</a>
                       <a href="faq.html" class="skyblue-text">Become a Sponsor</a>
                       <a href="MentorSetUpPage2.html" class="skyblue-text">Sign up as Mentor</a>
@@ -408,15 +428,11 @@
           </div>
       </nav>
       <p class="center-text darkblue-text">&copy 2019, HGN Internship. All rights reserved.</p>
-
   </footer>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
-  <script>
-        AOS.init();
-  </script>
  <script>
   const wrapper = document.querySelector('.wrapper');
 wrapper.classList.add('wrapper');
