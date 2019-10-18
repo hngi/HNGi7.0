@@ -29,7 +29,7 @@ h1
 }
 #mobile-bars 
 {
-    position: absolute;
+    position: fixed;
     left: -35vw;
     top: 3vh;
     font-size: 25px;
@@ -262,6 +262,7 @@ h1
 	#overview-section
 	{
 		width: 90vw;
+		bottom-padding: 1rem;
 	}
 	#overview-section h1, #overview-section h2
 	{
@@ -272,7 +273,7 @@ h1
 		padding: 0.5rem 1.5rem;
 		font-size: 16px;
 		border-radius: 5px;
-		margin: 3rem auto;
+		margin: 3rem auto 0;
 	}
 	#intern-section
 	{
