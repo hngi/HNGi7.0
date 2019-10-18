@@ -131,7 +131,7 @@ header #join-hng {
 
 header #mobile-bars {
     position: absolute;
-    right: 75vw;
+    left: 45vw;
     font-size: 25px;
     color: rgba(0, 0, 0, 0.7);
     line-height: 80px;
@@ -244,7 +244,6 @@ footer .footer-nav .row {
 
     header #hng-logo {
         width: 50vw;
-        float: right;
     }
 
     header nav {
@@ -263,7 +262,7 @@ footer .footer-nav .row {
     header nav .header-links,
     header nav #join-hng {
         font-size: 3vw;
-        align-self: flex-start;
+        align-self: flex-end;
     }
 
     header #mobile-bars {
@@ -330,7 +329,7 @@ footer .footer-nav .row {
     header nav .header-links,
     header nav #join-hng {
         font-size: 4.5vw;
-        align-self: flex-start;
+        align-self: flex-end;
     }
 
     header #mobile-bars-check:checked ~ nav {
