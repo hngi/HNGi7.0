@@ -853,110 +853,108 @@ margin-left: 5px;
 }
 
 /* SPONSOR STYLING */
-.sponsors {
-  background-color: #ffffff;
-  padding-top: 1.5em;
-  width: 100%;
-  padding-bottom: 1em;
+.sponsors{
+  width: 96vw;
+  margin-right: 0;
+  padding-right: 0;
+  overflow-x: none;
+
+}
+.sponsors__header{
+  color:#3c6b9c;
+  font-weight: bold;
   text-align: center;
 }
-
-.sponsors__header {
-  color: #3c6b9c;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 34px;
-  font-style: normal;
-  text-align: center;
-
+.sponsors_button button{
+  margin: auto;
+}
+.sponsors img{
+  box-sizing: border-box;
+}
+.sponsors__images1 .image1{
+  float: left;
+  margin-right: 4vw;
+  width: 12vw;
+}
+.sponsors__images1 .image3{
+  float: right;
+  margin-left: 5vw;
+  width: 9vw;
+}
+.sponsors__images1 .image2{
+  margin: 0 6vw;
+  width: 4vw;  
+}
+.sponsors__images1 .image4{
+  margin: 0 12vw;
+  width: 4vw;  
+}
+.image4 {
+  font-size: 3vw;
+}
+.sponsors__images2{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+.image5, .image6{
+  width: 20vw;
+}
+.image4, .image5{
+  margin: 5%;
+}
+.carousel{
+  display: none;
+}
+.fa-chevron-right, .fa-chevron-left{
+  color: #00Aeff;
+  font-size: 3vw;
+}
+.fa-chevron-right:hover, .fa-chevron-left:hover{
+  color: #3C6B9C;
+  font-weight: bold;
+  font-size: 5vw;
+}
+@media screen and (max-width:900px){
+  .sponsors__images1 .image1{
+    margin-right: 5vw;
+    width: 13vw;
+  }
+  .sponsors__images1 .image3{
+    margin-left: 0vw;
+    width: 11vw;
+  }
+  .sponsors__images1 .image2{
+    margin: 0 5vw;
+    width: 6vw;  
+  }
 }
 
-.sponsors__images {
-  height:100%;
-  padding-left: 15.83%;
-  padding-right: 15.83%;
-  margin-top: 94px;
-  /* display: flex; */
-  /* justify-content: space-between; */
+@media screen and (max-width:800px){
+  .sponsors__images1 .image1{
+    margin-right: 5vw;
+    width: 11vw;
+  }
+  .sponsors__images1 .image3{
+    width: 9vw;
+  }
+  .sponsors__images1 .image2{
+    margin: 0 10.5%;
+    width: 5vw;  
+  }
 }
-
-.hng_logo {
-  width: 167.12px !important;
-  height: 55px;
-  margin-bottom:25px;
+@media screen and (max-width:600px){
+  .sponsors_images_container{
+    display: none;
+  }
+  .carousel{
+    display: block;
+  }
+  .sponsors{
+  width: 100vw;
+  }
 }
-
-.akwa_logo {
-  height: 80px ;
-  width: 80px !important;
-}
-
-.verifi_logo {
-  width: 115.4px !important;
-  height: 55px;
-  margin-bottom:25px;
-}
-
-.sponsors__images2 {
-  padding-left: 23.68%;
-  padding-right: 23.68%;
-  margin-top: 66px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.figma_logo {
-  /* line-height: 26.84px ; */
-  font-size: 30px;
-  height:55px;
-  margin: 0;
-  padding: 0;
-  margin-bottom:25px;
-}
-
-.bluechip_logo {
-  height: 55px;
-  width: 163.8px !important;
-  margin-bottom:25px;
-}
-
-.flutter_logo {
-  height: 55px;
-  width: 298.16px !important;
-  margin-bottom:25px;
-}
-.slide{
-  position: relative;
-}
-.carousel-indicators{
-  position: absolute;
-  top:90px;
-  z-index:10;
-}
-.carousel-indicators li{
-  background-color: lightgrey;
-  opacity:0.2;
-}
-.carousel-indicators li:active{
-  opacity:0.3;
-}
-.carousel-control-next , .carousel-control-prev{
-  background-color: rgba(60, 107, 126, 0.1);
-  background-size: 20px 20px;
-}
- .sponsors_button {
-  text-align: center;
-}
-
-.sponsors_button button {
- display: inline-block;
-}
-
-.sponsors_button button:focus {
- outline: none;
- border: none;
-}
-
 
 @media (max-width: 750px) {
   .support__items {
@@ -966,83 +964,12 @@ margin-left: 5px;
   .support__item:not(:first-child) {
     margin-top: 4rem;
   }
-}
-
-@media screen and (max-width: 1200px) {
-  .sponsors__images2 {
-    padding-left: 19%;
-    padding-right: 19%;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .sponsors__images {
-    padding-left: 12%;
-    padding-right: 12%;
-  }
-
-  .sponsors__images2 {
-    padding-left: 15%;
-    padding-right: 15%;
-  }
-}
-
-@media screen and (max-width: 950px) {
-  .sponsors__images {
-    padding-left: 9%;
-    padding-right: 9%;
-  }
-
-  .sponsors__images2 {
-    padding-left: 12%;
-    padding-right: 12%;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .sponsors__images {
-    flex-wrap: wrap;
-  }
-
-  .sponsors__images2 {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 0;
-  }
-
-  .image2 {
-    width: 50%;
-    text-align: center;
-    margin-bottom: 40px;
-  }
-
-  .image3 img{
-    width: 55%;
-    max-width: 100%;
-  }
-  .image3{
-   text-align: center;
-   width: 100%;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .image1 {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 60px;
-  }
-
-  .image3 {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 60px;
-  }
   
   #hng-logo {
 	  width: 33% !important;
 	}
 }
+
 
 #wrapper {
     background-color: #3c6b9c;
@@ -1207,9 +1134,9 @@ margin-left: 5px;
 .main-fifth-row{
   width: 85%;
 }
-.mt-5{
+/*.mt-5{
   width: 85%;
-}
+}*/
 .bass{
   width: 85%;
 }
@@ -1222,24 +1149,7 @@ margin-left: 5px;
 .support{
   width: 90%;
 }
-.sponsors__header{
-  width:89%;
-}
-.sponsors__images{
-  width:85%;
-}
-.figma_logo{
-  width:85%;
-}
-.bluechip_logo{
-  width: 60%;
-}
-.flutter_logo{
-  width: 80%;
-}
-.sponsors_button{
-  width: 90%;
-}
+
 .tripp{
   width: 85%;
 }
