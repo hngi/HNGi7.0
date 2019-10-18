@@ -1,0 +1,187 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body 
+{
+    font-family: "Open Sans", segoe UI, sans-serif;
+    padding: 0;
+    margin: 0;
+    --sidebar-width: 10vw;
+}
+html
+{
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+main
+{
+	background-color: rgb(240, 240, 240);
+	margin-left: var(--sidebar-width);
+	padding: 2rem;
+	height: 90vh;
+}
+h1
+{
+	font-size: 35px;
+}
+.center-text
+{
+	text-align: center;
+}
+#overview-section
+{
+	width: 60vw;
+}
+#overview-section #export
+{
+	background-color: rgb(80, 80, 130);
+	color: white;
+	padding: 0.5rem 1rem;
+	outline: none;
+	border: none;
+	font-family: inherit;
+	font-size: 16px;
+	border-radius: 5px;
+	margin: 2rem auto;
+	cursor: pointer;
+	display: block;
+	transition: 0.6s ease-out;
+}
+#overview-section #export:hover
+{
+	background-color: rgb(110, 110, 160);
+}
+#mentor-section
+{
+	max-height: 50vh;
+	width: 100%;
+	background-color: white;
+	overflow-y: scroll;
+	padding: 0.5rem;
+}
+#mentor-section .mentor
+{
+	background-color: white;
+	border-bottom: 1px solid dimgray;
+	width: 95%;
+	padding: 0.5rem;
+	cursor: pointer;
+	overflow-x: hidden;
+}
+#mentor-section .mentor .name
+{
+	display: inline-block;
+	width: 40%;
+}
+#mentor-section .mentor .email
+{
+	width: 45%;
+	display: inline-block;
+}
+#mentor-section .mentor .track
+{
+	width: 5%;
+}
+#mentor-section .mentor:hover
+{
+	background-color: #D1F0F6;
+}
+#mentor-section .mentor a
+{
+	text-decoration: none;
+	color: inherit;
+}
+#mentor-section .mentor a:hover
+{
+	color: rgb(100, 100, 225);
+}
+#details-section
+{
+	position: fixed;
+	z-index: 10;
+	height: 100vh;
+	top: 0;
+	left: 77vw;
+	width: 20vw;
+	padding-left: 1rem;
+	border-left: 1px solid rgba(0, 0, 0, 0.1);
+	padding-top: 4rem;
+}
+#details-section *
+{
+	overflow-wrap: break-word;
+}
+#details-section span, #details-section a
+{
+	color: darkblue;
+	font-weight: bolder;
+	text-decoration: none;
+}
+#details-section #no-mentor
+{
+	display: block;
+	margin: 0 auto;
+	color: crimson;
+}
+#sidebar
+{
+	background: linear-gradient(180deg, #D1F0F6 0%, #11CDEF 100%);
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	height: 100vh;
+	width: var(--sidebar-width);
+	padding-top: 4rem;
+}
+#sidebar #upper
+{
+	display: flex;
+	flex-direction: column;
+}
+#sidebar #upper > *
+{
+	font-weight: bolder;
+	align-self: center;	
+}
+#sidebar #upper em
+{
+	font-size: 0.8rem;
+}
+#sidebar #lower
+{
+	display: flex;
+	flex-direction: column;
+	margin-top: 4rem;
+}
+#sidebar #lower > *
+{
+	align-self: center;
+	margin-top: 1.4rem;
+}
+#sidebar #lower select
+{
+	font-family: inherit;
+	background-color: #D1F0F6;
+	align-self: center;
+	outline: none;
+	border: none;
+	border-radius: 3px;
+	font-weight: bolder;
+	font-size: 1rem;
+	padding: 0.3rem;
+	cursor: pointer;
+}
+#sidebar #lower select option
+{
+	font-weight: bolder;
+}
+#sidebar img
+{
+	border-radius: 50%;
+}
+#sidebar a
+{
+	text-decoration: none;
+	color: black;
+	font-weight: bolder;
+} 
