@@ -68,7 +68,7 @@ header .wrap .logo{
 .freq
 {
     width: auto;
-    text-align: center;
+    /* text-align: center; */
     margin: 1rem auto;
 }
 .freq .wrap{
@@ -81,8 +81,8 @@ header .wrap .logo{
     color: #00AEFF;
     font-weight: 600;
     font-size: 20px;
-    align-self: center;
-    text-align: center;
+    /* align-self: center; */
+    /* text-align: center; */
     text-transform: capitalize;
     transition: 0.4s ease-out;
 }
@@ -92,6 +92,11 @@ header .wrap .logo{
 .freq .wrap a::after{
     content: url(./images/Vector.png);
     margin-left: 50px;
+}
+.paragraph {
+    color: #7B7C7D;
+   line-height: 2rem;
+   transition:  1s ease;
 }
 .freq-n h1{
     text-align: center;
@@ -153,6 +158,7 @@ header .wrap .logo{
 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
+
 .final{
     display: flex;
     justify-content: space-between;
@@ -218,5 +224,8 @@ header .wrap .logo{
     }
     footer nav {
         margin-left: 7%;
+    }
+    .freq {
+    text-align: center;
     }
 }

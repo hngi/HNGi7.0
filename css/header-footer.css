@@ -6,22 +6,51 @@ body {
     margin: 0;
     scroll-behavior: smooth;
 }
-
-header {
-    /* Uncomment the below to make the header fixed */
-    /*
-	position: fixed;
+.hng6header{ 
+    position: static;
 	left: 0;
 	top: 0;
 	z-index: 200;
 	background-color: white;
 	width: 93%;
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 1rem 3rem;
+}
+.indexheader, .mentorheader, .contactheader, .joinheader{
+    position: static;
+	left: 0;
+	top: 0;
+	z-index: 200;
+    background-color: transparent;
+	width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
+
+.joinheader {
+    background-color: #d1f0f6;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.26);
+}
+ 
+     
+ 
+  
+header {
+    position: static;
+	left: 0;
+	top: 0;
+	z-index: 200;
+	background-color: white;
+	width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+  
 }
 
 header a,
@@ -29,7 +58,36 @@ footer a {
     text-decoration: none;
 }
 
+#join-hng{
+	border-radius: 3px !important;
+	padding: none !important;
+	color: grey;
+	background: none !important;
+	transition: none ! important;
+}
+
+#join-hng:hover{
+	transform: none !important;
+	color: #fff !important;
+background:#00AEFF !important;
+box-shadow: none !important;
+}
+
+header .header-links {
+	align-self: center;
+	border-radius: 3px;
+    padding: 0.3rem 0.3rem !important;
+}
+
+header .header-links:hover {
+    transform: none !important;
+	color: #fff !important;
+background:#00AEFF !important;
+box-shadow: none !important;
+}
+
 header .def-button {
+    margin-left:20px;
     color: white;
     border-radius: 3px;
     padding: 0.5rem 1rem;
@@ -60,12 +118,13 @@ header .header-links {
     margin: 0.5rem 1rem;
     align-self: center;
     font-size: 1.2vw;
-    transition: 0.4s ease-out;
+    /* transition: 0.4s ease-out; */
 }
 
 header .header-links:hover {
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
     text-decoration: none;
+    color: lightblue;
 }
 
 header #join-hng {
@@ -170,7 +229,7 @@ footer .footer-nav .row {
     width: 100%;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 768px) {
     body > * {
         width: auto;
         overflow: hidden;
@@ -182,7 +241,7 @@ footer .footer-nav .row {
         padding: 1rem;
         width: auto;
         height: auto;
-        overflow: hidden;
+        overflow: hidden;  
     }
 
     header #hng-logo {
@@ -276,7 +335,7 @@ footer .footer-nav .row {
     }
 
     header #mobile-bars-check:checked ~ nav {
-        height: 15rem;
+        height: 19rem;
     }
 }
 /* 
