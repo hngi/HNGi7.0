@@ -22,11 +22,11 @@
                 </div>
                 <div class="nav">
                     <a href="index.html">Home</a>
-                    <a href="hng6.html">HNG6</a>
+                    <a href="hng6.html">HNGi6.0</a>
                     <a href="mentorpage.html">Mentors</a>
                     <a href="contactform.html">Contact</a>
                     <a href="join-intern.html" class="nav-btn">
-                        Join HNG
+                        Join HNGi7.0
                     </a>
                  </div>
              </div>
@@ -44,10 +44,10 @@
         </label>
         <nav>
             <a href="index.html" class="header-links">Home</a>
-            <a href="hng6.html" class="header-links">HNG 6</a>
+            <a href="hng6.html" class="header-links">HNGi6.0</a>
             <a href="mentorpage.html" class="header-links">Mentors</a>
             <a href="contactform.html" class="header-links">Contact</a>
-            <a href="join-intern.html" id="join-hng" class="def-button">Join HNG</a>
+            <a href="join-intern.html" id="join-hng" class="def-button">Join HNGi7.0</a>
         </nav>
     </header>
     
@@ -57,17 +57,37 @@
                 <div class="wrap">
                     <h1>frequently asked questions
                     </h1>
-                    <p>Here are some of the most frequently asked questions on HNG 7.0</p>
+                    <p>Here are some of the most frequently asked questions on HNGi7.0</p>
                 </div>
             </div>
         </section>
         <section class="freq">
             <div class="container">
-                <div class="wrap">
-                    <a href="">When will the internship start?</a>
-                    <a href="">Where will the internship start?</a>
-                    <a href="">How will the internship start?</a>
-                    <a href="">Why will the internship start?</a>
+                <div class="wrap">          
+                        <a href="##" onclick="toggleVisibility('Menu1');">When will the internship start?</a>
+                        <p id="Menu1" style="display: none;" class="paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                        and scrambled it to make a type specimen book.
+                        It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                        essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing .</p>
+                    <a href="##" onclick="toggleVisibility('Menu2');">Where will the internship start?</a>
+                        <p id="Menu2" style="display: none;" class="paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                        and scrambled it to make a type specimen book.
+                        It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                        essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing .</p>
+                    <a href="##" onclick="toggleVisibility('Menu3');">How will the internship start?</a>
+                        <p id="Menu3" style="display: none;" class="paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                        and scrambled it to make a type specimen book.
+                        It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                        essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing .</p>
+                    <a href="##" onclick="toggleVisibility('Menu4');">Why will the internship start?</a>
+                        <p id="Menu4" style="display: none;" class="paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                        and scrambled it to make a type specimen book.
+                        It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                        essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing .</p>
                 </div>
             </div>
         </section>
@@ -93,12 +113,12 @@
         <footer>
         <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722444/hng-brand-logo_gnplmq.svg">
         <nav>
-            <section>
+            <section class="quick-links">
                 <h2 class="skyblue-text">Quick Links</h2>
                 <div id="link-list">
-                    <a href="join-intern.html" class="skyblue-text">Join HNG</a>
+                    <a href="join-intern.html" class="skyblue-text">Join HNGi7.0</a>
                     <a href="index.html" class="skyblue-text">About HNG</a>
-                    <a href="MentorSetUpPage2.html" class="skyblue-text">Become a Sponsor</a>
+                    <a href="faq.html" class="skyblue-text">Become a Sponsor</a>
                     <a href="MentorSetUpPage2.html" class="skyblue-text">Sign up as Mentor</a>
                     <a href="faq.html" class="skyblue-text">FAQ</a>
                 </div>
@@ -138,6 +158,29 @@
         </nav>
         <p class="center-text darkblue-text">&copy 2019, HGN Internship. All rights reserved.</p>
     </footer>
-
+<script>
+    var divs = ["Menu1", "Menu2", "Menu3", "Menu4"];
+        var visibleDivId = null;
+        function toggleVisibility(divId) {
+            if (visibleDivId === divId) {
+                
+            } else {
+                visibleDivId = divId;
+            }
+            hideNonVisibleDivs();
+        }
+        function hideNonVisibleDivs() {
+            var i, divId, div;
+            for (i = 0; i < divs.length; i++) {
+                divId = divs[i];
+                div = document.getElementById(divId);
+                if (visibleDivId === divId) {
+                    div.style.display = "block";
+                } else {
+                    div.style.display = "none";
+                }
+            }
+        }
+</script>
 </body>
 </html>
