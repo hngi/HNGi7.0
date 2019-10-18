@@ -56,6 +56,34 @@ footer a {
     text-decoration: none;
 }
 
+#join-hng{
+	border-radius: 3px !important;
+	padding: none !important;
+	color: grey;
+	background: none !important;
+	transition: none ! important;
+}
+
+#join-hng:hover{
+	transform: none !important;
+	color: #fff !important;
+background:#00AEFF !important;
+box-shadow: none !important;
+}
+
+header .header-links {
+	align-self: center;
+	border-radius: 3px;
+    padding: 0.3rem 0.3rem !important;
+}
+
+header .header-links:hover {
+    transform: none !important;
+	color: #fff !important;
+background:#00AEFF !important;
+box-shadow: none !important;
+}
+
 header .def-button {
     margin-left:20px;
     color: white;
