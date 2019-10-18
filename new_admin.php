@@ -1,11 +1,21 @@
 <?php
-session_start();
-if(!isset($_SESSION["role"])) {
-	header('Location:admin_login.php'); 
-}
-    include('backend/Interns.php');
-    $interns = new Interns();
-    $display = $interns->allInterns();
+
+    include('backend/Admins.php');
+    $admin = new Admins();
+
+    if(!isset($_SESSION["role"])) {
+        header('Location:admin_login.php'); 
+    }
+
+    if(isset($_POST["submit"])) {
+        $firstname = $_POST["firstname"];
+        $lastname = $_POST["lastname"];
+        $email = $_POST["email"];
+        $role = $_POST["role"];
+
+        $resp = $admin->newAdmin($firstname, $lastname, $email, $role);
+
+    }
 
 ?>
 <!DOCTYPE html>
@@ -14,7 +24,7 @@ if(!isset($_SESSION["role"])) {
 	<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>Interns</title>
+	<title>New Admin</title>
 	<link rel="icon" type="img/png" href="images/hng-favicon.png">
 	<link rel="stylesheet" href="css/dashboard.css">
 
@@ -42,57 +52,51 @@ if(!isset($_SESSION["role"])) {
 <body>
 	<main>
 		<section id="overview-section">
-			<!-- <h1>Dashboard</h1> -->
-			<h2>Registered Interns </h2>
+            <!-- <h1>Dashboard</h1> -->
+            <br><br>
+			<h2>Register a new Admin </h2>
 			<!-- <section id="intern-section">
 				Populated by `js/dashboard.js` 
 			</section> -->
 
 			<div class="container">
 				<div class="row">
+                    <div class="col-md-6">
+                        <form method="post">
 
-                <?php
-                    if($display == "0") {
-                        echo "<h2>There are no Registered Interns</h2>";
-                    } else {
-                    ?>
-                        <div class="col-md-3">
-                            <a href="exports/export-to-excel.php">
-                                <button type="button" id="export">Export to Spreadsheet</button>
-                            </a>
-                        </div>
-                        <div class="col-md-3">
-                            <a href="exports/export-to-pdf.php">
-                                <button type="button" id="export">Export to PDF</button>
-                            </a>
-                        </div>
-                        <table class="table table-hover">
-                            <thead>
-                            <tr>
-                                <th>SN</th>
-                                <th>Name</th>
-                                <th>Emai</th>
-                                <th>Phone</th>
-                                <!-- <th>Porfolio</th> -->
-                                <th>CV</th>
-                                <th>Exp</th>
-                                <th>Interest</th>
-                                <th>Location</th>
-                                <th>Emp. Stat</th>
-                                <th>About</th>
-                                <th>Reg. Date</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-                                    echo $display; 
-                                ?>
-                            </tbody>
-                        </table>
                         <?php
-                    }
-                ?>
-                    
+                            if(isset($resp)) {
+                                echo $resp;
+                            }
+                        ?>
+
+                            <div class="form-group">
+                                <label for="email">First Name</label>
+                                <input type="text" class="form-control" name="firstname" id="firstname" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Last Name</label>
+                                <input type="text" class="form-control" name="lastname" id="lastname" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" class="form-control" name="email" id="email">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Role</label>
+                                <select class="form-control" name="role" id="role">
+                                    <option>--Select Role--</option>
+                                    <option value="2">Admin</option>
+                                    <option value="1">Super Admin</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" name="submit">Submit</button>
+                        </form>
+                    </div> 
 				</div>
 			</div>
 

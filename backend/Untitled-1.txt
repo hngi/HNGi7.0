@@ -46,25 +46,23 @@ $con = $db->get_connection();
             global $db;
             $query = 'SELECT * FROM interns';
             $res = $db->query($query);
-            $count = mysqli_num_rows($res);
+            $count = mysqli_affected_rows($resyy);
             return $count;
         } 
 
         public function getNoOfMentors() {
-            //global $con;
-            global $db;
+            global $con;
             $query = 'SELECT * FROM mentors';
-            $res = $db->query($query);
-            $count = mysqli_num_rows($res);
+            $res = mysqli_query($con, $query);
+            $count = mysqli_affected_rows($con);
             return $count;
         } 
 
         public function getNoOfAdmins() {
-            //global $con;
-            global $db;
+            global $con;
             $query = 'SELECT * FROM admins';
-            $res = $db->query($query);
-            $count = mysqli_num_rows($res);
+            $res = mysqli_query($con, $query);
+            $count = mysqli_affected_rows($con);
             return $count;
         }
 

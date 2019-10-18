@@ -1,11 +1,8 @@
 <?php
-session_start();
-if(!isset($_SESSION["role"])) {
-	header('Location:admin_login.php'); 
-}
-    include('backend/Interns.php');
-    $interns = new Interns();
-    $display = $interns->allInterns();
+
+    include('backend/Admins.php');
+    $admin = new Admins();
+    $display = $admin->allAdmins();
 
 ?>
 <!DOCTYPE html>
@@ -41,9 +38,16 @@ if(!isset($_SESSION["role"])) {
 </head>
 <body>
 	<main>
+		<?php 
+			if($_SESSION["role"] != 1) {
+				echo '<h2><br><br><br>Sorry, You do not have the priviledge to view this page</p>';
+				echo '<h3><a href="dashboard.php">Dashboard</a></h3>';
+				exit();
+			}
+		?>
 		<section id="overview-section">
 			<!-- <h1>Dashboard</h1> -->
-			<h2>Registered Interns </h2>
+			<h2>Registered Admins </h2>
 			<!-- <section id="intern-section">
 				Populated by `js/dashboard.js` 
 			</section> -->
@@ -57,30 +61,20 @@ if(!isset($_SESSION["role"])) {
                     } else {
                     ?>
                         <div class="col-md-3">
-                            <a href="exports/export-to-excel.php">
-                                <button type="button" id="export">Export to Spreadsheet</button>
+                            <a href="new_admin.php">
+                                <button type="button" id="export"> + New Admin</button>
                             </a>
                         </div>
-                        <div class="col-md-3">
-                            <a href="exports/export-to-pdf.php">
-                                <button type="button" id="export">Export to PDF</button>
-                            </a>
-                        </div>
+
                         <table class="table table-hover">
                             <thead>
                             <tr>
                                 <th>SN</th>
-                                <th>Name</th>
-                                <th>Emai</th>
-                                <th>Phone</th>
-                                <!-- <th>Porfolio</th> -->
-                                <th>CV</th>
-                                <th>Exp</th>
-                                <th>Interest</th>
-                                <th>Location</th>
-                                <th>Emp. Stat</th>
-                                <th>About</th>
-                                <th>Reg. Date</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Date of Registration</th>
                             </tr>
                             </thead>
                             <tbody>

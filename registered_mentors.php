@@ -3,9 +3,9 @@ session_start();
 if(!isset($_SESSION["role"])) {
 	header('Location:admin_login.php'); 
 }
-    include('backend/Interns.php');
-    $interns = new Interns();
-    $display = $interns->allInterns();
+    include('backend/Mentors.php');
+    $mentors = new Mentors();
+    $display = $mentors->allMentors();
 
 ?>
 <!DOCTYPE html>
@@ -14,7 +14,7 @@ if(!isset($_SESSION["role"])) {
 	<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>Interns</title>
+	<title>Mentors</title>
 	<link rel="icon" type="img/png" href="images/hng-favicon.png">
 	<link rel="stylesheet" href="css/dashboard.css">
 
@@ -43,7 +43,7 @@ if(!isset($_SESSION["role"])) {
 	<main>
 		<section id="overview-section">
 			<!-- <h1>Dashboard</h1> -->
-			<h2>Registered Interns </h2>
+			<h2>Registered Mentors </h2>
 			<!-- <section id="intern-section">
 				Populated by `js/dashboard.js` 
 			</section> -->
@@ -57,12 +57,12 @@ if(!isset($_SESSION["role"])) {
                     } else {
                     ?>
                         <div class="col-md-3">
-                            <a href="exports/export-to-excel.php">
+                            <a href="exports/export-to-excel-mentors.php">
                                 <button type="button" id="export">Export to Spreadsheet</button>
                             </a>
                         </div>
                         <div class="col-md-3">
-                            <a href="exports/export-to-pdf.php">
+                            <a href="exports/export-to-pdf-mentors.php">
                                 <button type="button" id="export">Export to PDF</button>
                             </a>
                         </div>
@@ -70,17 +70,17 @@ if(!isset($_SESSION["role"])) {
                             <thead>
                             <tr>
                                 <th>SN</th>
+                                <th>Area Of Expertise</th>
+                                <th>Photo</th>
                                 <th>Name</th>
-                                <th>Emai</th>
+                                <th>Email</th>
                                 <th>Phone</th>
-                                <!-- <th>Porfolio</th> -->
-                                <th>CV</th>
-                                <th>Exp</th>
-                                <th>Interest</th>
-                                <th>Location</th>
-                                <th>Emp. Stat</th>
-                                <th>About</th>
-                                <th>Reg. Date</th>
+                                <!-- <th>Link To Linkedin</th> -->
+                                <th>Link To Cv</th>
+                                <th>Why Interested</th>
+                                <th>Current State</th>
+                                <th>Employment Status</th>
+                                <th>Timestamp</th>
                             </tr>
                             </thead>
                             <tbody>

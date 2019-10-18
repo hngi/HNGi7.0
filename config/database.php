@@ -37,7 +37,9 @@ require_once "constants.php";
 		}
 
 	    }
-
+        public function affected_rows(){
+           return mysqli_affected_rows($this->db);
+        }
 
         public function escape_string($string) {
 

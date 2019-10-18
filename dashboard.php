@@ -1,11 +1,35 @@
 <?php
 session_start();
+// check if session is set
 if(!isset($_SESSION["role"])) {
 	header('Location:admin_login.php'); 
 }
-    include('backend/Interns.php');
-    $interns = new Interns();
-    $display = $interns->allInterns();
+
+	include('backend/LockRegForm.php');
+
+    $lockForm = new LockRegForm();
+	$status = $lockForm->checkStatus();
+	
+	$noOfInterns = $lockForm->getNoOfInterns();
+	$noOfMentors = $lockForm->getNoOfMentors();
+	$noOfAdmins = $lockForm->getNoOfAdmins();
+
+    if($status == 1) {
+        // echo "<p>The form is OPen for Registration</p>";
+    } else {
+        // echo "<p>Registration is closed</p>";
+    }
+
+    if(isset($_POST["lockopenform"])) {
+		$status = $_POST['status'];
+        if($status == "open") {
+            $sval = 1;
+        } else {
+            $sval = 0;
+		}
+        
+        $lockForm->setStatus($sval);
+    }
 
 ?>
 <!DOCTYPE html>
@@ -14,7 +38,7 @@ if(!isset($_SESSION["role"])) {
 	<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>Interns</title>
+	<title>Dashboard</title>
 	<link rel="icon" type="img/png" href="images/hng-favicon.png">
 	<link rel="stylesheet" href="css/dashboard.css">
 
@@ -30,11 +54,18 @@ if(!isset($_SESSION["role"])) {
 	<style type="text/css">
 		.card {
 			height: 150px;
-			background: #ccc;
+			background: #D2D8E8;
 			margin: 15px;
-			padding: 10px;
+			padding: 20px;
 			border-radius: 15px;
+			text-align: center;
+			font-size: 20px;
 			
+		}
+
+		.card p{
+			font-weight: bolder;
+			font-size: 35px;
 		}
 	</style>
 
@@ -42,57 +73,60 @@ if(!isset($_SESSION["role"])) {
 <body>
 	<main>
 		<section id="overview-section">
-			<!-- <h1>Dashboard</h1> -->
-			<h2>Registered Interns </h2>
+			<h1>Dashboard</h1>
+			<h2>Welcome <?php echo $_SESSION["fullname"]; ?></h2>
 			<!-- <section id="intern-section">
 				Populated by `js/dashboard.js` 
 			</section> -->
 
+			<div class="row">
+				
+				<div class="col-md-5">
+					<form method="post">
+						<?php
+							if($status == 1) {
+								// form is open
+								?>
+									<input type="hidden" name="status" value="close" />
+									<button style="background: #924846;" type="submit" name="lockopenform" id="export">Registration is Open, Lock Now</button>
+								<?php
+							} else if($status == 0) {
+								// form is closed
+								?>
+									<input type="hidden" name="status" value="open" />
+									<button style="background: #4E6A4D;" type="submit" name="lockopenform" id="export">Lock Registration Locked, Open Now</button>
+								<?php
+							}
+						?>
+						
+					</form>
+					
+				</div>
+				
+			</div>
+
 			<div class="container">
 				<div class="row">
+					<a href="registered_interns.php">
+						<div class="col-md-2 card">
+							Registered Interns
+							<p><?php echo $noOfInterns; ?></p>
+						</div>
+					</a>
 
-                <?php
-                    if($display == "0") {
-                        echo "<h2>There are no Registered Interns</h2>";
-                    } else {
-                    ?>
-                        <div class="col-md-3">
-                            <a href="exports/export-to-excel.php">
-                                <button type="button" id="export">Export to Spreadsheet</button>
-                            </a>
-                        </div>
-                        <div class="col-md-3">
-                            <a href="exports/export-to-pdf.php">
-                                <button type="button" id="export">Export to PDF</button>
-                            </a>
-                        </div>
-                        <table class="table table-hover">
-                            <thead>
-                            <tr>
-                                <th>SN</th>
-                                <th>Name</th>
-                                <th>Emai</th>
-                                <th>Phone</th>
-                                <!-- <th>Porfolio</th> -->
-                                <th>CV</th>
-                                <th>Exp</th>
-                                <th>Interest</th>
-                                <th>Location</th>
-                                <th>Emp. Stat</th>
-                                <th>About</th>
-                                <th>Reg. Date</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-                                    echo $display; 
-                                ?>
-                            </tbody>
-                        </table>
-                        <?php
-                    }
-                ?>
-                    
+					<a href="registered_mentors.php">
+						<div class="col-md-2 card">
+							Registered Mentors
+							<p><?php echo $noOfMentors; ?></p>
+						</div>
+					</a>
+					
+					<a href="admins.php">
+						<div class="col-md-2 card">
+							Registered Admins
+							<p><?php echo $noOfAdmins; ?></p>
+						</div>
+					</a>
 				</div>
 			</div>
 
@@ -127,8 +161,7 @@ if(!isset($_SESSION["role"])) {
         <div class="stix" id="stik2"></div>
         <div class="stix" id="stik3"></div>
     </label>
-    
-    <?php include('fragments/sidebar.php'); ?>
+	<?php include('fragments/sidebar.php'); ?>
 
 </body>
 </html>
