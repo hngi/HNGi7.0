@@ -136,14 +136,15 @@ header .wrap .logo{
     margin-bottom: 20px;
     border-radius: 3px;
     align-self: center;
-    border: 2px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid #00AEFF;
 }
 .inputs-wrap textarea{
+    font-family: inherit;
     padding: 10px 16px;
     align-self: center;
     border-radius: 3px;
     margin-bottom: 20px;
-    border: 2px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid #00AEFF;
 }
 .inputs-wrap #submit{
     color: white;
