@@ -2,8 +2,8 @@
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
-include_once ('Database.php');
-include_once ('Interns.php');
+include_once ('../backend/config/database2.php');
+include_once ('Mentors.php');
 
 
 //Instantiate DB and connect
@@ -11,10 +11,10 @@ $database = new Database();
 $db = $database->connect();
 
 //Instantiate Intern object
-$intern = new Interns($db);
+$mentors = new Mentors($db);
 
 //Get Intern query
-$result = $intern->read();
+$result = $mentors->read();
 
 //get row count
 $num = $result->rowCount();
@@ -22,20 +22,22 @@ $num = $result->rowCount();
 //check intern
 if ($num > 0){
     $delimiter = ",";
-    $filename = "interns_" . date('Y-m-d') . ".csv";
+    $filename = "Mentors" . date('Y-m-d') . ".csv";
 
     //create a file pointer
     $f = fopen('php://memory', 'w');
 
     //set column headers
-    $fields = array('S/N','Intern ID', 'Name', 'Email', 'Phone', 'Link to Portfolio','Link to Cv','Years of Experience','Interest','Location','Employment Status', 'About');
+    
+    $fields = array('S/N', 'Area of Expertise', 'Photo', 'Name', 'Email','Link to Linkedin','Link to CV','Why Interested','Current State','Employment Status', 'Date Registered');
     fputcsv($f, $fields, $delimiter);
 
     $x = 1;
     while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
         extract($row);
         //$lineData = array($row['intern_id'], $row['name'], $row['email'], $row['phone_no'], $row['link_to_portfolio'],$row['link_to_cv'],$row['years_of_experience'],$row['interest'],$row['current_location'],$row['employment_status'], $row['about']);
-        $lineData = array($x++,$intern_id, $name, $email, $phone_no, $link_to_portfolio, $link_to_cv, $years_of_experience, $interest, $current_location, $employment_status, $about);
+
+        $lineData = array($x++, $area_of_expertise, $photo_url, $name, $email, $phone_no, $link_to_linkedin, $link_to_cv, $why_interested, $current_state, $employment_status, $timestamp);
         fputcsv($f, $lineData, $delimiter);
     }
         //move back to beginning of file

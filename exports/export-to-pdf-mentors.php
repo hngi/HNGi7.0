@@ -2,9 +2,9 @@
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
-include_once ('Database.php');
-include_once ('Interns.php');
-require ('vendor/autoload.php');
+include_once ('../backend/config/database2.php');
+include_once ('Mentors.php');
+require ('../vendor/autoload.php');
 
 use Spipu\Html2Pdf\Html2Pdf;
 $html2pdf = new Html2Pdf('L','A3');
@@ -15,10 +15,10 @@ $database = new Database();
 $db = $database->connect();
 
 //Instantiate Intern object
-$intern = new Interns($db);
+$mentors = new Mentors($db);
 
 //Get Intern query
-$result = $intern->read();
+$result = $mentors->read();
 
 //get row count
 $num = $result->rowCount();
@@ -48,19 +48,19 @@ background-color: #000000;
 }
 -->
 </style>';
-    $content .= '<page><table>
+    $content .= '<page><table border="1">
     <tr>
     <th>S/N</th>
-    <th>Intern Id</th>
+    <th>Area of Expertise</th>
     <th>Name</th>
     <th>Email</th>
-    <th>Phone Number</th>
-    <th>Link to Portfolio</th>
+    <th>Phone</th>
+    <th>Lilnk to Linkedin</th>
     <th>Link to CV</th>
-    <th>Experience (Yrs)</th>
-    <th>Interest</th>
-    <th>Location</th>
+    <th>Why Interested</th>
+    <th>Current Location</th>
     <th>Employment Status</th>
+    <th>Date of Registration</th>
   </tr>';
 
     $x = 1;
@@ -68,16 +68,16 @@ background-color: #000000;
         extract($row);
         $content .= '<tr>';
         $content .= '<td>'.$x++.'</td>';
-        $content .= '<td>'.$intern_id.'</td>';
+        $content .= '<td>'.$area_of_expertise.'</td>';
         $content .= '<td>'.$name.'</td>';
         $content .= '<td>'.$email.'</td>';
         $content .= '<td>'.$phone_no.'</td>';
-        $content .= '<td>'.$link_to_portfolio.'</td>';
+        $content .= '<td>'.$link_to_linkedin.'</td>';
         $content .= '<td>'.$link_to_cv.'</td>';
-        $content .= '<td>'.$years_of_experience.'</td>';
-        $content .= '<td>'.$interest.'</td>';
-        $content .= '<td>'.$current_location.'</td>';
+        $content .= '<td>'.$why_interested.'</td>';
+        $content .= '<td>'.$current_state.'</td>';
         $content .= '<td>'.$employment_status.'</td>';
+        $content .= '<td>'.$timestamp.'</td>';
         $content .= '</tr>';
 
 
@@ -86,7 +86,7 @@ background-color: #000000;
 
     $html2pdf->writeHTML($content);
 
-    $html2pdf->output('interns.pdf', 'D');
+    $html2pdf->output('Mentors.pdf', 'D');
 
 
     exit;
@@ -94,7 +94,7 @@ background-color: #000000;
 }else{
     //No post
     echo json_encode(
-        array('message' => 'No Intern Found')
+        array('message' => 'No Mentor Found')
     );
 
 }
