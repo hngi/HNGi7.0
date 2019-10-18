@@ -1016,8 +1016,19 @@ margin-left: 5px;
     color: #F2f5f9
   }
 
-  #headingOne {
+  .accordBlue {
     background-color: #00AEFF;
+    color: white;
+  }
+
+  .dark-text {
+   color: black !important;
+   text-decoration: none !important;
+  }
+
+  .light-text {
+   color: white !important;
+   text-decoration: none !important;
   }
 
   #headingOne button {
