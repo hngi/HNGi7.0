@@ -7,43 +7,45 @@ body {
     scroll-behavior: smooth;
 }
 .hng6header{ 
-    position: sticky;
+    position: static;
 	left: 0;
 	top: 0;
 	z-index: 200;
 	background-color: white;
 	width: 93%;
-	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 1rem 3rem;
 }
 .indexheader, .mentorheader, .contactheader, .joinheader{
-    position: sticky;
+    position: static;
 	left: 0;
 	top: 0;
 	z-index: 200;
-	background-color: white;
+    background-color: transparent;
 	width: 100%;
-	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 1rem 3rem;
+}
+
+.joinheader {
+    background-color: #d1f0f6;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.26);
 }
  
      
  
   
 header {
-    position: sticky;
+    position: static;
 	left: 0;
 	top: 0;
 	z-index: 200;
 	background-color: white;
 	width: 100%;
-	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
