@@ -98,6 +98,10 @@ header .wrap .logo{
    line-height: 2rem;
    transition:  1s ease;
 }
+.fas {
+    margin-left: 1rem
+}
+
 .freq-n h1{
     text-align: center;
     max-width: 400px;
