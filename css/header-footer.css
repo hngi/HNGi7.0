@@ -1,26 +1,54 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 body {
-    font-size: "Open Sans", segoe UI, sans-serif;
+    font-family: "Open Sans", segoe UI, sans-serif;
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
-
-header {
-    /* Uncomment the below to make the header fixed */
-    /*
-	position: fixed;
+.hng6header{ 
+    position: sticky;
 	left: 0;
 	top: 0;
 	z-index: 200;
 	background-color: white;
 	width: 93%;
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
-
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 1rem 3rem;
+}
+.indexheader, .mentorheader, .contactheader, .joinheader{
+    position: sticky;
+	left: 0;
+	top: 0;
+	z-index: 200;
+	background-color: white;
+	width: 100%;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
+ 
+     
+ 
+  
+header {
+    position: sticky;
+	left: 0;
+	top: 0;
+	z-index: 200;
+	background-color: white;
+	width: 100%;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+  
 }
 
 header a,
@@ -28,7 +56,36 @@ footer a {
     text-decoration: none;
 }
 
+#join-hng{
+	border-radius: 3px !important;
+	padding: none !important;
+	color: grey;
+	background: none !important;
+	transition: none ! important;
+}
+
+#join-hng:hover{
+	transform: none !important;
+	color: #fff !important;
+background:#00AEFF !important;
+box-shadow: none !important;
+}
+
+header .header-links {
+	align-self: center;
+	border-radius: 3px;
+    padding: 0.3rem 0.3rem !important;
+}
+
+header .header-links:hover {
+    transform: none !important;
+	color: #fff !important;
+background:#00AEFF !important;
+box-shadow: none !important;
+}
+
 header .def-button {
+    margin-left:20px;
     color: white;
     border-radius: 3px;
     padding: 0.5rem 1rem;
@@ -59,12 +116,13 @@ header .header-links {
     margin: 0.5rem 1rem;
     align-self: center;
     font-size: 1.2vw;
-    transition: 0.4s ease-out;
+    /* transition: 0.4s ease-out; */
 }
 
 header .header-links:hover {
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
     text-decoration: none;
+    color: lightblue;
 }
 
 header #join-hng {
@@ -103,7 +161,7 @@ footer {
 footer h2 {
     font-size: 25px;
     margin: 1rem auto;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 footer > nav {
@@ -125,10 +183,9 @@ footer #link-list {
 }
 
 footer #link-list > * {
-    font-weight: 500;
     font-size: 17px;
+    padding: 2px;
     align-self: flex-start;
-    padding: 0.5rem;
     transition: 0.4s ease-out;
     text-decoration: none;
 }
@@ -166,11 +223,11 @@ footer #socials img {
     width: 25px;
 }
 
+footer .footer-nav .row {
+    width: 100%;
+}
 
-
-
-
-@media (max-width: 860px) {
+@media (max-width: 768px) {
     body > * {
         width: auto;
         overflow: hidden;
@@ -182,7 +239,7 @@ footer #socials img {
         padding: 1rem;
         width: auto;
         height: auto;
-        overflow: hidden;
+        overflow: hidden;  
     }
 
     header #hng-logo {
@@ -250,12 +307,17 @@ footer #socials img {
     }
 
     footer nav > * {
+        margin-top: 1rem;
         margin-bottom: 2rem;
     }
 
     footer #link-list > * {
         font-size: 15px;
-        padding: 0.5rem;
+        padding: 2px;
+    }
+
+    footer .footer-nav .row {
+        margin-left: 5%;
     }
 }
 
@@ -272,6 +334,41 @@ footer #socials img {
     }
 
     header #mobile-bars-check:checked ~ nav {
-        height: 15rem;
+        height: 19rem;
     }
 }
+/* 
+	style for jump to top arrow
+*/
+
+#top {
+	margin: 0 auto;
+	right:10px;
+	bottom:10px;
+	cursor:pointer;
+	width:50px;
+	height:50px;
+	background-color:#3498db;
+	text-indent:-9999px;
+	display:block;
+	-webkit-border-radius:60px;
+	-moz-border-radius:60px;
+	border-radius:40px
+}
+#top span {
+	top:50%;
+	left:50%;
+	margin-left:18px;
+	margin-top:-12px;
+	height:0;
+	width:0;
+	border:8px solid transparent;
+	border-bottom-color:#ffffff;
+}
+#top:hover {
+	background-color:#0088C7;
+	opacity:1;filter:"alpha(opacity=100)";
+	-ms-filter:"alpha(opacity=100)";
+}
+
+
