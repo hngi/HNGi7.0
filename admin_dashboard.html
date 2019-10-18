@@ -1,0 +1,389 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>admin_dashboard</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="css/header-footer.css">
+        <link rel="icon" type="img/png" href="images/hng-favicon.png">
+        
+    </head>
+    <style>
+      header {
+        background: #D1F0F6 !important;
+        box-shadow:  none !important;
+      }
+      tr {
+        margin-top: 5px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+      .container button {
+        width: 84px;
+        margin: 5px;
+        height: 30px;
+        background: #1C8FA5;
+        /* width: 44px; */
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 11px;
+        line-height: 13px;
+        /* identical to box height */
+
+
+        color: #FFFFFF;
+      }
+      body {
+
+        background: #D1F0F6 ;
+      }
+      .mAside, section {
+        margin-top: 30px;
+      }
+      .box-cont {
+        overflow: hidden;
+        width: 100%;
+        height: fit-content;
+
+        background: #FFFFFF;
+        border: 2px solid #D3D3D3;
+        box-sizing: border-box;
+      }
+      .mHeader {
+        height: 39px;
+      }
+      .mAside {
+        width: 25%;
+        height: 762px;
+        /* float-left */
+        text-align: center;
+      }
+      .mAside h2 {
+        height: 16px;
+
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+
+        color: #000000;
+      }
+      .mAside img {
+        border-radius: 100%;
+      }
+      .adminPotalbig{
+        display: block;
+      }
+      .adminPotalsmall {
+        display: none;
+      }
+      .adminPotal {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 16px;
+        color: #084482 !important;
+        margin-top: 20px;
+
+      }
+      section {
+        width:  72%;
+        float: left;
+        background: #FFFFFF;  
+        padding: 20px;
+      }
+      .container {
+        text-align: center;
+        height: fit-content;
+      }
+      .plus {
+        width: 15px;
+        height: 16px;
+
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        color: #000000;
+      }
+      /* .adminPotal {
+        margin-top: 20px;
+      } */
+      #search {
+        margin-top: 15px;
+        /* margin-right: 10px !important; */
+        margin-left: 0px !important;
+        border-radius: 40px;
+        width:  250px;
+        height: 30px;
+        background-color: #FFFFFF;
+      }
+      #search::placeholder {              
+        background: url('https://res.cloudinary.com/celx/image/upload/v1571410478/nbajbha9c9fdrhiw31fd.svg');
+        background-repeat: no-repeat;
+        background-position: left;
+        padding-left: 30px !important;  
+      }
+
+      @media (max-width: 768px) {
+        .box-cont {
+        overflow: scroll;
+        }
+        .adminPotalsmall {
+          display: block;
+        }
+        .adminPotalbig{
+          display: none;
+        }
+        section h2 {
+          text-align: center;
+          font-weight: bold;
+        }
+        section {
+          width: 100%;
+        }
+        .mAside {
+          width: 100%;
+          height: fit-content;
+        }
+        header nav {
+
+          padding:  0rem;
+
+        }
+
+        .indexheader, .mentorheader, .contactheader, .joinheader {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem 1.5rem;
+        }
+        .indexheader, 
+        .mentorheader, 
+        .contactheader, 
+        .joinheader {
+            flex-direction: column;
+            display: flex;
+        }
+        header #hng-logo {
+                            width: 50% !important; 
+
+        }
+        .logoimg {
+          
+            width: fit-content;
+            height: fit-content;
+
+        }
+
+        #search {
+        margin-top: 20px;
+        width: 100%; 
+        }
+
+      }
+    </style>
+    <body>
+                        <header class="contactheader">
+                            <a href="index.html" class="logoimg "><img id="hng-logo" src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png"></a>
+                            <h3 class=" header-links adminPotal adminPotalbig">Admin Potal</h3>
+                            <input type="checkbox" id="mobile-bars-check" />
+                                <label for="mobile-bars-check" id="mobile-bars">
+                                                <div class="stix" id="stik1"></div>
+                                                <div class="stix" id="stik2"></div>
+                                                <div class="stix" id="stik3"></div>
+                                </label>
+                            <nav>
+
+                                  <input id="search" type="text" placeholder="Search">
+                            <a href="" class="header-links"> <i class="fa fa-plus"></i></a>
+                            <a href="" class="header-links"> <img src="https://res.cloudinary.com/celx/image/upload/v1571410526/jnh0cquycn9jcvele3ma.svg" alt="" ></a>
+                            <a href="" class="header-links">
+                                  <img src="https://res.cloudinary.com/celx/image/upload/v1571410478/xwcgrual033awxxmklne.svg" alt="">
+                                  <i class="fa fa-caret-down"></i>
+                            </a>
+
+                            </nav>
+                          </header>
+
+  <!-- <div class="jumbotron"> -->
+     <aside class=" mAside float-left">
+        <h3 class="adminPotal adminPotalsmall">Admin Potal</h3>
+        <br>
+        <img src="https://res.cloudinary.com/celx/image/upload/v1571410478/ibwkakzziriygpsmdtmz.jpg" alt=""><br><br>
+        <h2>Seyi  Onifade</h2>
+        <p>Admin</p>
+        <a href="">Dashboard</a><br>
+        <a href="">Logout</a>
+      </aside>
+    <section>
+        <h2>Overview</h2>
+        <div class="container">
+          <br>
+            <h3>Mentors</h3>
+            <div class="box-cont">
+                
+                <table class="table">
+                    <thead>
+                      <tr>
+                      <th>SN</th>
+                      <th>Name</th>
+                      <th>Tracks</th>
+                      <th>Name</th>
+                      <th>Name</th>
+                      <th>Name</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1.</td>
+                        <td>Bode Lawal</td>
+                        <td>Frontend</td>
+                        <td>Frontend</td>
+                        <td>Frontend</td>
+                        <td>Frontend</td>
+                      </tr>
+                      <tr>
+                        <td>2.</td>
+                        <td>Ugo Lanre</td>
+                        <td>Backend</td>
+                        <td>Backend</td>
+                        <td>Backend</td>
+                        <td>Backend</td>
+                      </tr>
+                      <tr>
+                          <td>3.</td>
+                          <td>Ugo Lanre</td>
+                          <td>Backend</td>
+                          <td>Backend</td>
+                          <td>Backend</td>
+                          <td>Backend</td>
+                      </tr>
+                      <tr>
+                          <td>4.</td>
+                          <td>Ugo Lanre</td>
+                          <td>Backend</td>
+                          <td>Backend</td>
+                          <td>Backend</td>
+                          <td>Backend</td>
+                      </tr>
+                      <tr>
+                          <td>5.</td>
+                          <td>Ugo Lanre</td>
+                          <td>Backend</td>
+                          <td>Backend</td>
+                          <td>Backend</td>
+                          <td>Backend</td>
+                      </tr>
+                      <tr>
+                          <td>6.</td>
+                          <td>Ugo Lanre</td>
+                          <td>Backend</td>
+                          <td>Backend</td>
+                          <td>Backend</td>
+                          <td>Backend</td>
+                      </tr>
+                  </tbody>
+                </table>
+
+              </div><br>
+              <button class="float-right">export +</button>
+              <button class="float-right">veiw all</button>
+            <br><br><br>
+
+
+              <h3>Interns</h3>
+              <div class="box-cont">
+                  
+                  <table class="table">
+                      <thead>
+                        <tr>
+                        <th>SN</th>
+                        <th>Name</th>
+                        <th>Tracks</th>
+                        <th>Name</th>
+                        <th>Name</th>
+                        <th>Name</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1.</td>
+                          <td>Bode Lawal</td>
+                          <td>Frontend</td>
+                          <td>Frontend</td>
+                          <td>Frontend</td>
+                          <td>Frontend</td>
+                        </tr>
+                        <tr>
+                          <td>2.</td>
+                          <td>Ugo Lanre</td>
+                          <td>Backend</td>
+                          <td>Backend</td>
+                          <td>Backend</td>
+                          <td>Backend</td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td>Ugo Lanre</td>
+                            <td>Backend</td>
+                            <td>Backend</td>
+                            <td>Backend</td>
+                            <td>Backend</td>
+                        </tr>
+                        <tr>
+                            <td>4.</td>
+                            <td>Ugo Lanre</td>
+                            <td>Backend</td>
+                            <td>Backend</td>
+                            <td>Backend</td>
+                            <td>Backend</td>
+                        </tr>
+                        <tr>
+                            <td>5.</td>
+                            <td>Ugo Lanre</td>
+                            <td>Backend</td>
+                            <td>Backend</td>
+                            <td>Backend</td>
+                            <td>Backend</td>
+                        </tr>
+                        <tr>
+                            <td>6.</td>
+                            <td>Ugo Lanre</td>
+                            <td>Backend</td>
+                            <td>Backend</td>
+                            <td>Backend</td>
+                            <td>Backend</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div><br>
+                <button class="float-right">export +</button>
+                <button class=" float-right">veiw all</button>
+              <br>
+        
+   
+
+    </section>
+
+    </div> 
+                      <!-- <script src="jquery-3.4.1.slim.min.js"></script>
+                      <script src="popper.min.js"></script>
+                      <script src="bootstrap/js/bootstrap.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  </body>
+  </html>
