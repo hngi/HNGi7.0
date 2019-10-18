@@ -2,7 +2,7 @@
 
 include('config/database.php');
 $db = new DB();
-$con = $db->get_connection();
+//$con = $db->get_connection();
 
     class LockRegForm {
 
@@ -27,7 +27,7 @@ $con = $db->get_connection();
             global $db;
             $query = "UPDATE reg_form_status SET status = '".$status."'";
             $res = $db->query($query);
-            $count = mysqli_affected_rows($db);
+            $count = $db->affected_rows();
 
             if($count > 0) {
                 // status updated
@@ -46,7 +46,7 @@ $con = $db->get_connection();
             global $db;
             $query = 'SELECT * FROM interns';
             $res = $db->query($query);
-            $count = mysqli_num_rows($res);
+            $count = $db->affected_rows();
             return $count;
         } 
 
@@ -55,7 +55,7 @@ $con = $db->get_connection();
             global $db;
             $query = 'SELECT * FROM mentors';
             $res = $db->query($query);
-            $count = mysqli_num_rows($res);
+            $count = $db->affected_rows();
             return $count;
         } 
 
@@ -64,7 +64,7 @@ $con = $db->get_connection();
             global $db;
             $query = 'SELECT * FROM admins';
             $res = $db->query($query);
-            $count = mysqli_num_rows($res);
+            $count = $db->affected_rows();
             return $count;
         }
 
