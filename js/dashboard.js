@@ -120,13 +120,42 @@ const dummyInterns =
 		CVlink: "https://holder.com/sdhgshdgssds",
 		location: "Lagos"
 	},
+	{
+		id: "323wew13",
+		name: "Bobby Fischer",
+		email: "fischer@gmail.com",
+		age: 35,
+		number: "+2348043434788",
+		track: "UI/UX",
+		CVlink: "https://holder.com/sdhgshdgssds",
+		location: "Lagos"
+	},
+	{
+		id: "323wew14",
+		name: "Mercy Johnson",
+		email: "mercyj@gmail.com",
+		age: 23,
+		number: "+2348043434788",
+		track: "FRONTEND",
+		CVlink: "https://holder.com/sdhgshdgssds",
+		location: "Lagos"
+	},
+	{
+		id: "323wew15",
+		name: "Taraji Henson",
+		email: "thenson@gmail.com",
+		age: 29,
+		number: "+2348043434788",
+		track: "PM",
+		CVlink: "https://holder.com/sdhgshdgssds",
+		location: "Lagos"
+	}
 ];
 
 
 const handleInternClick = e =>
 {
 	let id = e.target.getAttribute("data-owner");
-	console.log(id);
 	let intern = dummyInterns.find(a => a.id === id);
 	document.getElementById("no-intern").style.display = "none";
 	document.getElementById("details-name").textContent = intern.name;
@@ -144,7 +173,26 @@ const handleInternClick = e =>
 	while(linkHolder.firstChild)
 		linkHolder.removeChild(linkHolder.firstChild);
 	linkHolder.appendChild(link);
+
+	if (screen.width <= 860)
+	{
+		document.getElementById("details-section").style.left = 0;
+	}
 }
+
+document.getElementById("details-back").addEventListener("click", e => 
+	document.getElementById("details-section").style.left = "100vw");
+
+document.getElementById("details-return").addEventListener("click", e => 
+	document.getElementById("details-section").style.left = "100vw");
+
+window.addEventListener("resize", e => 
+{
+	if (screen.width >= 860)
+		document.getElementById("details-section").style.left = "77vw"
+	else
+		document.getElementById("details-section").style.left = "100vw"
+})
 
 const populateInterns = interns =>
 {
