@@ -494,104 +494,6 @@
         <div class="carousel-item active">
          <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730789/hostelPic_u2oqax.png" class=" hng_logo" alt="HNG Logo">
         </div>
-<<<<<<< HEAD
-        <div class="carousel-item">
-         <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730696/akwa-ibom_crs3gb.png" class=" akwa_logo" alt="Government of Akwa Ibom logo">
-        </div>
-        <div class="carousel-item">
-         <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730861/imo-logo_xepy5p.png" class=" akwa_logo" alt="Government of Imo logo">
-        </div>
-        <div class="carousel-item">
-         <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730875/VerifiPic_dhgplz.png" class=" verifi_logo" alt="Verifi logo">
-        </div>
-        <div class="carousel-item">
-         <h4 class="figma_logo">Figma</h4>
-        </div>
-        <div class="carousel-item">
-         <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730716/flutterwave_fkjzd7.png" class=" flutter_logo" alt="Flutterwave logo">
-        </div>
-        <div class="carousel-item">
-         <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730701/BluePic_ujoey7.png" class=" bluechip_logo" alt="Bluechip logo">
-        </div>
-       </div>
-       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-       </a>
-       <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-       </a>
-      </div>
-
-     </div>
-    </div>
-
-    <div class="sponsors_button">
-     <button class="cta-button button--midBlue">
-      <a href="faq.html">
-       Become a Sponsor
-      </a>
-     </button>
-    </div>
-   </section>
-   <?php include('fragments/site_footer.php'); ?>
-  </main>
-
- </div>
-
- <aside class="showw">
-  <div class="hide-aside text__dark-blue">
-   &times;
-  </div>
-  <nav>
-   <ul>
-    <li class="nav-link-1-vertical"><a href="index.html">Home</a></li>
-    <li class="nav-link-1-vertical"><a href="hng6.html">HNGi6</a></li>
-    <li class="nav-link-1-vertical"><a href="mentorpage.html">Mentors</a></li>
-    <li class="nav-link-1-vertical"><a href="contactform.html">Contact</a></li>
-    <li class="nav-link-1-vertical"><a href="join-intern.html" class="text__dark-blue">Join HNGi</a></li>
-
-   </ul>
-  </nav>
- </aside>
-
- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>
- <script>
-  let scrollArrow = document.querySelector('#scroll-down-arrow');
-
-  function scrollWin() {
-   window.scrollBy(0, 500);
-   console.log(window.scrollY)
-   if (window.scrollY >= 5000) {
-    scrollArrow.style.display = "none";
-   }
-  }
-  const hideArrow = (event) => {
-   if (window.scrollY >= 5000) {
-    scrollArrow.style.display = "none";
-   }
-  }
-  window.addEventListener('scroll', (event) => hideArrow(event))
-
-  const displayArrow = (event) => {
-   if (window.scrollY < 5000) {
-    scrollArrow.classList.add('bounceInDown')
-    scrollArrow.style.display = "block";
-   }
-  }
-  window.addEventListener('scroll', (event) => displayArrow(event))
- </script>
- <script>
-  const hamburger = document.getElementById("hamburger");
-  const aside = document.getElementsByTagName("aside")[0];
-  const hide_aside = document.getElementsByClassName("hide-aside")[0];
-  let mediaQuery = window.matchMedia("(max-width: 960px)");
-  let slideIndex = 0;
-=======
         <nav>
             <ul>
                 <li class="nav-link-1-vertical"><a href="index.html">Home</a></li>
@@ -668,7 +570,6 @@
             }
 
         }
->>>>>>> ecc54650385c643ed7a95cd597842510dc12c829
 
   showSlides(mediaQuery);
   mediaQuery.addListener(showSlides);
