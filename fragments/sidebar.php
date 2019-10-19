@@ -15,13 +15,6 @@
 				<?php
 				}
 			?>
-			
-			<!-- <select>
-				<option selected="selected" disabled="disabled">Overview</option>
-				<option value="0">Mentors</option>
-				<option value="1">Users</option>
-			</select>
-			<a href="#">Advanced</a> -->
 			<a href="./logout.php">Logout</a>
 		</nav>
 	</section>
