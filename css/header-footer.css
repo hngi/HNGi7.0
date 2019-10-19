@@ -112,6 +112,7 @@ footer > nav {/*
     display: flex;
     flex-direction: row;
     justify-content: space-between;*/
+    display: flex;
     margin-bottom: 1em;
     /*height: 35vh;*/
 }
