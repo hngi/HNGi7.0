@@ -494,6 +494,7 @@
         <div class="carousel-item active">
          <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730789/hostelPic_u2oqax.png" class=" hng_logo" alt="HNG Logo">
         </div>
+<<<<<<< HEAD
         <div class="carousel-item">
          <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730696/akwa-ibom_crs3gb.png" class=" akwa_logo" alt="Government of Akwa Ibom logo">
         </div>
@@ -590,6 +591,84 @@
   const hide_aside = document.getElementsByClassName("hide-aside")[0];
   let mediaQuery = window.matchMedia("(max-width: 960px)");
   let slideIndex = 0;
+=======
+        <nav>
+            <ul>
+                <li class="nav-link-1-vertical"><a href="index.html">Home</a></li>
+                <li class="nav-link-1-vertical"><a href="hng6.html">HNGi6</a></li>
+                <li class="nav-link-1-vertical"><a href="mentorpage.html">Mentors</a></li>
+                <li class="nav-link-1-vertical"><a href="contactform.html">Contact</a></li>
+                <li class="nav-link-1-vertical"><a href="join-intern.html" class="text__dark-blue">Join HNGi</a></li>
+
+            </ul>
+        </nav>
+    </aside>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"
+    crossorigin="anonymous"></script>
+    <script>
+        let scrollArrow = document.querySelector('#scroll-down-arrow');
+        function scrollWin() {
+            window.scrollBy(0, 500);
+            console.log(window.scrollY)
+            if (window.scrollY >= 500) {
+                scrollArrow.style.display = "none";
+            }
+        }
+        const hideArrow = (event) => {
+            if (window.scrollY >= 500) {
+                scrollArrow.style.display = "none";
+            }
+        }
+        window.addEventListener('scroll', (event) => hideArrow(event))
+    
+        const displayArrow = (event) => {
+            if (window.scrollY < 500) {
+                scrollArrow.classList.add('bounceInDown')
+                scrollArrow.style.display = "block";
+            }
+        }
+        window.addEventListener('scroll', (event) => displayArrow(event))
+    </script>
+    <script>
+    const hamburger = document.getElementById("hamburger");
+    const aside = document.getElementsByTagName("aside")[0];
+    const hide_aside = document.getElementsByClassName("hide-aside")[0];
+    let mediaQuery = window.matchMedia("(max-width: 960px)");
+    let slideIndex = 0;
+
+    showSlides(mediaQuery);
+    mediaQuery.addListener(showSlides);
+
+
+    //const cards = document.getElementsByClassName("card1");
+    function showSlides(mediaQueryx) {
+        let i;
+
+        let cards = document.getElementsByClassName("card1");
+        if (mediaQuery.matches) {
+
+            //var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < cards.length; i++) {
+                cards[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > cards.length) { slideIndex = 1 }
+
+                cards[i].style.display = "block";
+            }
+
+        }
+>>>>>>> ecc54650385c643ed7a95cd597842510dc12c829
 
   showSlides(mediaQuery);
   mediaQuery.addListener(showSlides);

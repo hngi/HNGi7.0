@@ -1,11 +1,11 @@
 <?php
-session_start();
+require 'classControllers/init.php';
 // check if session is set
 if(!isset($_SESSION["role"])) {
 	header('Location:admin_login.php'); 
 }
 
-	include('backend/LockRegForm.php');
+	
 
     $lockForm = new LockRegForm();
 	$status = $lockForm->checkStatus();
