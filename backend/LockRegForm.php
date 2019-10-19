@@ -29,12 +29,38 @@ $con = $db->get_connection();
 
             if($count > 0) {
                 // status updated
-                header('Location: lock_reg_form.php');
+                header("Refresh:0");
+
             } else {
                 // failed, error, not updated
-                header('Location: lock_reg_form.php');
+                // header('dashboard.php');
+                header("Refresh:0");
             }
             
+        }
+
+        public function getNoOfInterns() {
+            global $con;
+            $query = 'SELECT * FROM interns';
+            $res = mysqli_query($con, $query);
+            $count = mysqli_affected_rows($con);
+            return $count;
+        } 
+
+        public function getNoOfMentors() {
+            global $con;
+            $query = 'SELECT * FROM mentors';
+            $res = mysqli_query($con, $query);
+            $count = mysqli_affected_rows($con);
+            return $count;
+        } 
+
+        public function getNoOfAdmins() {
+            global $con;
+            $query = 'SELECT * FROM admins';
+            $res = mysqli_query($con, $query);
+            $count = mysqli_affected_rows($con);
+            return $count;
         }
 
     }

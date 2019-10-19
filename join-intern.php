@@ -1,8 +1,9 @@
 <?php
 
-date_default_timezone_set('Africa/Lagos');
+  date_default_timezone_set('Africa/Lagos');
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,31 +19,52 @@ date_default_timezone_set('Africa/Lagos');
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="stylesheet" href="css/join-intern.css">
+
+    <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
+
+    <script>
+      function signup() {
+              
+        var fullname = $('#fullname').val();
+        var email = $('#email').val();
+        var phoneNo = $('#phoneNo').val();
+        var linkPort = $('#linkPort').val();
+        var linkCV = $('#linkCV').val();
+        var exp = $('#exp').val();
+        var interest = $('#interest').val();
+        var location = $('#location').val();
+        var empStatus = $('#empStatus').val();
+        var about = $('#about').val();
+        var date = $('#date').val();
+        
+        $.post('backend/Interns.php?signup=yes', {
+            fullname: fullname,
+            email: email,
+            phoneNo: phoneNo,
+            linkPort: linkPort,
+            linkCV: linkCV,
+            exp: exp,
+            interest: interest,
+            location: location,
+            empStatus: empStatus,
+            about: about,
+            date: date
+        },
+        function(data){
+            $('#result').html(data);
+        });            
+      }
+    </script>
+
   </head>
   <body>
-    <header>
-    <a href="index.html"><img id="hng-logo" src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png"></a>
-    <input type="checkbox" id="mobile-bars-check" />
-        <label for="mobile-bars-check" id="mobile-bars">
-          <!--img src="images/bars-icon.png" height="23px"-->
-    <div class="stix" id="stik1"></div>
-    <div class="stix" id="stik2"></div>
-    <div class="stix" id="stik3"></div>
-        </label>
-    <nav>
-      <a href="index.html" class="header-links">Home</a>
-      <a href="hng6.html" class="header-links">HNG 6</a>
-      <a href="mentorpage.html" class="header-links">Mentors</a>
-      <a href="contactform.html" class="header-links">Contact</a>
-      <a href="join-intern.html" id="join-hng" class="def-button">Join HNG</a>
-    </nav>
-  </header>
+    <?php include('fragments/site_header.php'); ?>
     <section class="jumbo">
       <h2 class="heading">Join as an intern</h2>
       <p class="para">
         Complete the form below to begin your journey as an intern.
       </p>
-      <p class="para2">To become a mentor <a href="MentorSetUpPage2.html">Click here</a></p>
+      <p class="para2">To become a mentor <a href="MentorSetUpPage2.php">Click here</a></p>
     </section>
 
     <div class="form-area">
@@ -54,21 +76,51 @@ date_default_timezone_set('Africa/Lagos');
             }
 ?>
 
+    <?php
+      include('backend/LockRegForm.php');
+      $lockForm = new LockRegForm();
+      $status = $lockForm->checkStatus();
+      if($status == 1) {
+        ?>
+        <form class="form-container" action="interns_form.php" method="post" id="myForm">
 
-      <form class="form-container" action="interns_form.php" method="post">
-        <input type="text" name="fullname" id="" required placeholder="Fullname" />
-        <input type="email" name="email" id="" required placeholder="Email" />
-        <input type="text" name="phoneNo" id="" required placeholder="Phone number" />
-        <input type="url" name="linkPort" id="" required placeholder="Link to portfolio (if you have any)"/>
-        <input type="url" name="linkCV" id="" required placeholder="Link to your CV (Linkedin profile or any other link)" />
-        <input type="text" name="exp" id="" required placeholder="How many years experience do you have" />
-        <input type="text" name="interest" id="" required placeholder="What area are you interested in" />
-        <input type="text" name="location" id="" required placeholder="What state are you currently  located in?"/>
-        <input type="text" name="empStatus" id="" required placeholder="What is  your current employment status?" />
-        <textarea name="about" id="" required cols="30" rows="10" placeholder="Briefly tell us about yourself" ></textarea>
-        <input type='hidden' name='date' value='<?=date('Y-m-d H:i:s');?>'>
-        <input type="submit" name="submit" placeholder="SUBMIT" class="submitBtn" />
-      </form>
+        <?php 
+          if(isset($_GET["success"])) {
+            echo '
+            <div class="alert alert-success" role="alert" style="color: green;">
+                Your registration was  successful. We will get back to you as soon as possible.
+            </div>';
+          }
+          ?>
+
+          <input type="text" name="fullname" id="fullname" required placeholder="Fullname" />
+          <input type="email" name="email" id="email" required placeholder="Email" />
+          <input type="text" name="phoneNo" id="phoneNo" required placeholder="Phone number" />
+          <input type="url" name="linkPort" id="linkPort" required placeholder="Link to portfolio (if you have any)"/>
+          <input type="url" name="linkCV" id="linkCV" required placeholder="Link to your CV (Linkedin profile or any other link)" />
+          <input type="text" name="exp" id="exp" required placeholder="How many years experience do you have" />
+          <input type="text" name="interest" id="interest" required placeholder="What area are you interested in" />
+          <input type="text" name="location" id="location" required placeholder="What state are you currently  located in?"/>
+          <input type="text" name="empStatus" id="empStatus" required placeholder="What is  your current employment status?" />
+          <textarea name="about" id="about" required cols="30" rows="10" placeholder="Briefly tell us about yourself" ></textarea>
+          <input type='hidden' name='date' id="date" value='<?=date('Y-m-d H:i:s');?>'>
+
+          <p id="result"></p>
+
+          <input type="button" name="submit" value="SUBMIT" class="submitBtn" onclick="signup()" />
+        </form>
+        <?php
+
+      } else {
+        ?>
+          <div style="width: 100%; margin: 0 auto; text-align: center; padding: 30px; color: #6F0503; ">
+            <h1>Registration is now Closed</h1>
+          </div>
+        <?php
+      }
+    ?>
+
+      
     </div>
     <!--div class="footer-container">
       <footer class="footer">
@@ -120,9 +172,9 @@ date_default_timezone_set('Africa/Lagos');
         <h2 class="skyblue-text">Quick Links</h2>
         <div id="link-list">
           <a href="join-intern.php" class="skyblue-text">Join HNG</a>
-          <a href="index.html" class="skyblue-text">About HNG</a>
-          <a href="MentorSetUpPage2.html" class="skyblue-text">Become a Sponsor</a>
-          <a href="MentorSetUpPage2.html" class="skyblue-text">Sign up as Mentor</a>
+          <a href="index.php" class="skyblue-text">About HNG</a>
+          <a href="MentorSetUpPage2.php" class="skyblue-text">Become a Sponsor</a>
+          <a href="MentorSetUpPage2.php" class="skyblue-text">Sign up as Mentor</a>
         </div>
       </section>
       <section id="contact-section">

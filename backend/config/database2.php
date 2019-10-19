@@ -1,5 +1,7 @@
 <?php
+
 class Database{
+   
 
     //DB Parameters
     private $host = 'remotemysql.com';
