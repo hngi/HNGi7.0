@@ -111,15 +111,8 @@ footer h2 {
 footer > nav {
     display: flex;
     flex-direction: row;
-<<<<<<< HEAD
-    justify-content: space-between;*/
-    display: flex;
-    margin-bottom: 1em;
-    /*height: 35vh;*/
-=======
     justify-content: space-between;
     height: 35vh;
->>>>>>> b6f0660349afde48126025a0146ebcf9cb34b231
 }
 
 footer #contact-section a,
@@ -268,11 +261,7 @@ footer .footer-nav .row {
 
     footer .footer-nav .row {
         margin-left: 5%;
-<<<<<<< HEAD
-    }*/
-=======
     }
->>>>>>> b6f0660349afde48126025a0146ebcf9cb34b231
 }
 
 @media (max-width: 500px)
@@ -295,22 +284,8 @@ footer .footer-nav .row {
 	style for jump to top arrow
 */
 
-.back-to-top {
-    position: fixed;
-    width: 50px;
-    height: 50px;
-    display: none;
-
-    bottom: 70px;
-    right: 50px;
-}
-
 #top {
-<<<<<<< HEAD
-    margin: 0 auto;
-=======
 	margin: 0 auto;
->>>>>>> b6f0660349afde48126025a0146ebcf9cb34b231
 	right:10px;
 	bottom:10px;
 	cursor:pointer;
@@ -318,12 +293,7 @@ footer .footer-nav .row {
 	height:50px;
 	background-color:#3498db;
 	text-indent:-9999px;
-<<<<<<< HEAD
-    display:flex;
-    align-items: center;
-=======
 	display:block;
->>>>>>> b6f0660349afde48126025a0146ebcf9cb34b231
 	-webkit-border-radius:60px;
 	-moz-border-radius:60px;
 	border-radius:40px
@@ -331,13 +301,8 @@ footer .footer-nav .row {
 #top span {
 	top:50%;
 	left:50%;
-<<<<<<< HEAD
-	margin-left:17px;
-	margin-top:-9px;
-=======
 	margin-left:18px;
 	margin-top:-12px;
->>>>>>> b6f0660349afde48126025a0146ebcf9cb34b231
 	height:0;
 	width:0;
 	border:8px solid transparent;
