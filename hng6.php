@@ -94,7 +94,7 @@
 				Participation was achieved remotely via the popular collaboration tool called Slack.
 			</p>
 			<br />
-			<p id="p-link"><a href="join-intern.html" class="def-button">Join HNG</a></p>
+			<a href="join-intern.php" class="def-button">Join HNG</a>
 		</article>
 		<img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722649/home-geeks_vld6nt.png" id="geek-img">
 	</section>

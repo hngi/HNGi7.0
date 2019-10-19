@@ -7,11 +7,28 @@
     <title>FAQ2</title>
    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="stylesheet" href="css/faq.css">
+    <style>
+        @media only screen and (max-width: 400px){
+            .firstheading {
+                font-size: 25px;
+                margin-top: 5px;
+            }
+            .paragra {
+                font-size: 15px;
+                margin-bottom: 0;
+            }
+            .secondheading {
+                font-size: 25px;
+
+            }
+        }
+    </style>
 </head>
 <body>
         <!--header>
@@ -33,31 +50,17 @@
             </div>
         </header-->
 
-        <header>
-        <a href="index.html"><img id="hng-logo" src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png"></a>
-        <input type="checkbox" id="mobile-bars-check" />
-        <label for="mobile-bars-check" id="mobile-bars">
-          <!--img src="images/bars-icon.png" height="23px"-->
-        <div class="stix" id="stik1"></div>
-        <div class="stix" id="stik2"></div>
-        <div class="stix" id="stik3"></div>
-        </label>
-        <nav>
-            <a href="index.html" class="header-links">Home</a>
-            <a href="hng6.html" class="header-links">HNG 6</a>
-            <a href="mentorpage.html" class="header-links">Mentors</a>
-            <a href="contactform.html" class="header-links">Contact</a>
-            <a href="join-intern.html" id="join-hng" class="def-button">Join HNG</a>
-        </nav>
-    </header>
+        <?php
+            include('fragments/site_header.php');
+        ?>
     
 
         <section class="hero">
             <div class="container">
                 <div class="wrap">
-                    <h1>frequently asked questions
+                    <h1 class="firstheading">frequently asked questions
                     </h1>
-                    <p>Here are some of the most frequently asked questions on HNG 7.0</p>
+                    <p class="paragra">Here are some of the most frequently asked questions on HNG 7.0</p>
                 </div>
             </div>
         </section>
@@ -95,7 +98,7 @@
             <div class="container">
                 <div class="wrap" style="width: 100%;">
                     <div class="header">
-                        <h1>not a frequently asked question?
+                        <h1 class="secondheading">not a frequently asked question?
                             contact us below
                         </h1>
                     </div>

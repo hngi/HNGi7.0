@@ -12,6 +12,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/donation.css">
+  <link rel="icon" type="img/png" href="images/hng-favicon.png">
   <script>
     function myFunction() {
        alert("We still have enough money, Please keep the money for now.");
