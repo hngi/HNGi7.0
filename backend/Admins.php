@@ -1,8 +1,8 @@
 <?php
 session_start();
-include('config/database.php');
+include('../config/database.php');
 $db = new DB();
-$con = $db->get_connection();
+//$con = $db->get_connection();
 
     class Admins {
 
@@ -12,8 +12,8 @@ $con = $db->get_connection();
 
         public function adminLogin() {
 
-            global $con;
-
+            //global $con;
+            global $db;
             $email = $_POST["email"];
             $password = $_POST["password"];
 
@@ -30,7 +30,7 @@ $con = $db->get_connection();
 
             // check if there are errors
             if(count($errors)) {
-                echo '<p>Login Failed with the following Errors</p>';
+                echo '<p>Registration Failed with the following Errors</p>';
                 foreach($errors as $error) {
                     echo $error . '<br />';
                 }
@@ -38,8 +38,8 @@ $con = $db->get_connection();
                 // there are no errors
                 $query = 'SELECT * FROM admins WHERE email="'.$email.'" AND password="'.$password.'" ';
 
-                $res = mysqli_query($con, $query) or die(mysqli_error($con));
-                $count = mysqli_affected_rows($con);
+                $res = $db->query($query);
+                $count = $db->affected_rows();
 
                 if($count > 0) {
                     // user exist
@@ -64,10 +64,11 @@ $con = $db->get_connection();
 
         public function allAdmins() {
             global $con;
+            global $db;
             $display = '';
             $query = 'SELECT * FROM admins';
-            $res = mysqli_query($con, $query) or die(mysqli_error($con));
-            $count = mysqli_affected_rows($con);
+            $res = $db->query($query);
+            $count = $db->affected_rows();
             if($count > 0) {
                 // inters exist
                 $sn = 1;
@@ -93,14 +94,15 @@ $con = $db->get_connection();
         }
 
         public function newAdmin($firstname, $lastname, $email, $role) {
-            global $con;
+            global $db;
+            //global $con;
             $password = rand(123456,789654);
             $hashedPassword = sha1($password);
 
             // check for existing email
             $query = "SELECT * FROM admins WHERE email = '".$email."' ";
-            $res = mysqli_query($con, $query) or die(mysqli_error($con));
-            $count = mysqli_affected_rows($con);
+            $res = $db->query($query);
+            $count = $db->affected_rows();
             if($count > 0) {
                 // email exists
                 $res = $resp = '<div class="alert alert-danger" role="alert">
@@ -110,8 +112,8 @@ $con = $db->get_connection();
                 // email is available, good, proceed to register
                 
                 $query = "INSERT INTO admins (firstname, lastname, email, password, role, timestamp) VALUES ('".$firstname."', '".$lastname."', '".$email."', '".$hashedPassword."', '".$role."', now())";
-                $res = mysqli_query($con, $query) or die(mysqli_error($con));
-                $count = mysqli_affected_rows($con);
+                $res = $db->query($query);
+                $count = $db->affected_rows();
 
                 if($count > 0) {
                     // success

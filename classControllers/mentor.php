@@ -25,7 +25,6 @@ class Mentors
 		global $database;
 		$result = $database->query("SELECT * FROM mentors");
 		$array = array();  
-        $query = "SELECT * FROM mentors";  
         while($row = mysqli_fetch_array($result))  
            {  
                 $array[] = $row;  
