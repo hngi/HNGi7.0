@@ -1153,6 +1153,8 @@ margin-left: 5px;
 
 #how-it-works{
   width: 85%;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 .section-2-sections-container{
   width: 85%;
@@ -1161,14 +1163,17 @@ margin-left: 5px;
 }
 .main-fifth-row{
   width: 85%;
-  margin-left:center !important;
-  margin-right:center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 .mt-5{
   width: 85%;
 }
 .bass{
   width: 85%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+
 }
 #leash{
   width: 85%;
@@ -1240,5 +1245,6 @@ margin-left: 5px;
   display: none;
  }
 }
+
 
 /** Very Small screens**/
