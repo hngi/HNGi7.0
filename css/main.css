@@ -111,7 +111,7 @@ grid-template-areas:
 "row3";
 }
 
-main>div {
+main {
 padding: 0 10px;
 
 }
@@ -181,7 +181,7 @@ color: #fff;
 font-family: Oswald;
 margin: 1.5em 0;
 display: flex;
-justify-content: space-between;
+justify-content: space-evenly;
 }
 
 .countdown__number {
@@ -1134,6 +1134,8 @@ margin-left: 5px;
   }
 .countdown__heading{
   width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .subheading {
   width: 85%;
@@ -1203,9 +1205,13 @@ margin-left: 5px;
 }
 .main-first-row{
   width: 85%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .dee{
-  width: 85%;
+
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 }
 
