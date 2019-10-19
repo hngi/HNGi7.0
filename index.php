@@ -603,19 +603,19 @@
         function scrollWin() {
             window.scrollBy(0, 500);
             console.log(window.scrollY)
-            if (window.scrollY >= 5000) {
+            if (window.scrollY >= 500) {
                 scrollArrow.style.display = "none";
             }
         }
         const hideArrow = (event) => {
-            if (window.scrollY >= 5000) {
+            if (window.scrollY >= 500) {
                 scrollArrow.style.display = "none";
             }
         }
         window.addEventListener('scroll', (event) => hideArrow(event))
     
         const displayArrow = (event) => {
-            if (window.scrollY < 5000) {
+            if (window.scrollY < 500) {
                 scrollArrow.classList.add('bounceInDown')
                 scrollArrow.style.display = "block";
             }
