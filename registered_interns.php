@@ -1,10 +1,10 @@
 <?php
-session_start();
+require 'classControllers/init.php';
 if(!isset($_SESSION["role"])) {
 	header('Location:admin_login.php'); 
 }
-    include('backend/Interns.php');
-    $interns = new Interns();
+    // include('backend/Interns.php');
+    $interns = new Intern;
     $display = $interns->allInterns();
 
 ?>

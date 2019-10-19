@@ -37,3 +37,4 @@ if($admin->adminExist($email) == 1){
         header("location:add_admin.php");
         exit();
     }
+}

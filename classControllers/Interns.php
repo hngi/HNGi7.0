@@ -1,28 +1,26 @@
 <?php
 
-include('config/database.php');
-$db = new DB();
-//$con = $db->get_connection();
 
-    class Interns {
+
+    class Intern {
 
         
 
         public function internSignup() {
 
             //global $con;
-            global $db;
-            $fullname = $_POST["fullname"];
-            $email = $_POST["email"];
-            $phoneNo = $_POST["phoneNo"];
-            $linkPort = $_POST["linkPort"];
-            $linkCV = $_POST["linkCV"];
-            $exp = $_POST["exp"];
-            $interest = $_POST["interest"];
-            $location = $_POST["location"];
-            $empStatus = $_POST["empStatus"];
-            $about = $_POST["about"];
-            $date = $_POST["date"];
+            global $database;
+            $fullname = $database->escape_string($_POST['fullname']);
+            $email = $database->escape_string($_POST['email']);
+            $phoneNo = $database->escape_string($_POST['phoneNo']);
+            $linkPort = $database->escape_string($_POST['linkPort']);
+            $linkCV = $database->escape_string($_POST['linkCV']);
+            $exp = $database->escape_string($_POST['exp']);
+            $interest = $database->escape_string($_POST['interest']);
+            $location = $database->escape_string($_POST['location']);
+            $empStatus = $database->escape_string($_POST['empStatus']);
+            $about = $database->escape_string($_POST['about']);
+            $date = $database->escape_string($_POST['date']);
 
             // validation codes here
             $errors = array();
@@ -71,8 +69,8 @@ $db = new DB();
 
             // check if email aready exist
             $query = "SELECT * FROM interns WHERE email = '".$email."' ";
-            $res = $db->query($query);
-            $count = $db->affected_rows();
+            $res = $database->query($query);
+            $count = $database->affected_rows();
             if($count > 0) {
                 // email already taken
                 array_push($errors, "The Email address is already in use.");
@@ -90,12 +88,12 @@ $db = new DB();
                 // there are no errors
                 $query = "INSERT INTO interns (name, email, phone_no, link_to_portfolio, link_to_cv, years_of_experience, interest, current_location, employment_status, about, timestamp) VALUES('".$fullname."', '".$email."', '".$phoneNo."', '".$linkPort."', '".$linkCV."', '".$exp."', '".$interest."', '".$location."', '".$empStatus."', '".$about."', '".$date."' ) ";
 
-                $res = $db->query($query);
-                $count = $db->affected_rows();
+                $res = $database->query($query);
+                $count = $database->affected_rows();
 
                 if($count > 0) {
                     // intern created
-                    echo '<script>window.location.href = "./join-intern.php?success"</script>';
+                    echo '<script>window.location.href = "./join-intern.php"</script>';
                 } else {
                     // failed, error, not created
                     echo '
@@ -109,11 +107,11 @@ $db = new DB();
 
         public function allInterns() {
             global $con;
-            global $db;
+            global $database;
             $display = '';
             $query = 'SELECT * FROM interns';
             //$res = mysqli_query($con, $query) or die(mysqli_error($con));
-            $res = $db->query($query);
+            $res = $database->query($query);
             $count = mysqli_num_rows($res);
             if($count > 0) {
                 // inters exist
