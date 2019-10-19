@@ -2,18 +2,16 @@
 
 include('config/database.php');
 $db = new DB();
-$con = $db->get_connection();
+//$con = $db->get_connection();
 
     class Interns {
 
-        function __construct() {
-            
-        }
+        
 
         public function internSignup() {
 
-            global $con;
-
+            //global $con;
+            global $db;
             $fullname = $_POST["fullname"];
             $email = $_POST["email"];
             $phoneNo = $_POST["phoneNo"];
@@ -73,8 +71,8 @@ $con = $db->get_connection();
 
             // check if email aready exist
             $query = "SELECT * FROM interns WHERE email = '".$email."' ";
-            $res = mysqli_query($con, $query) or die(mysqli_error($con));
-            $count = mysqli_affected_rows($con);
+            $res = $db->query($query);
+            $count = $db->affected_rows();
             if($count > 0) {
                 // email already taken
                 array_push($errors, "The Email address is already in use.");
@@ -92,8 +90,8 @@ $con = $db->get_connection();
                 // there are no errors
                 $query = "INSERT INTO interns (name, email, phone_no, link_to_portfolio, link_to_cv, years_of_experience, interest, current_location, employment_status, about, timestamp) VALUES('".$fullname."', '".$email."', '".$phoneNo."', '".$linkPort."', '".$linkCV."', '".$exp."', '".$interest."', '".$location."', '".$empStatus."', '".$about."', '".$date."' ) ";
 
-                $res = mysqli_query($con, $query) or die(mysqli_error($con));
-                $count = mysqli_affected_rows($con);
+                $res = $db->query($query);
+                $count = $db->affected_rows();
 
                 if($count > 0) {
                     // intern created
@@ -111,10 +109,12 @@ $con = $db->get_connection();
 
         public function allInterns() {
             global $con;
+            global $db;
             $display = '';
             $query = 'SELECT * FROM interns';
-            $res = mysqli_query($con, $query) or die(mysqli_error($con));
-            $count = mysqli_affected_rows($con);
+            //$res = mysqli_query($con, $query) or die(mysqli_error($con));
+            $res = $db->query($query);
+            $count = mysqli_num_rows($res);
             if($count > 0) {
                 // inters exist
                 $sn = 1;

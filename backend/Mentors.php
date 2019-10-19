@@ -12,10 +12,11 @@ $con = $db->get_connection();
 
         public function allMentors() {
             global $con;
+            global $db;
             $display = '';
             $query = 'SELECT * FROM mentors';
-            $res = mysqli_query($con, $query) or die(mysqli_error($con));
-            $count = mysqli_affected_rows($con);
+            $res = $db->query($query);
+            $count = $db->affected_rows();
             if($count > 0) {
                 // mentors exist
                 $sn = 1;
