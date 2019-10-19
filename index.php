@@ -43,7 +43,7 @@
    </div>
 
    <div class="main-second-row countdown">
-    <h3 class="countdown__heading text_center">
+    <h3 class="countdown__heading text_center col-12 mx-auto">
      Countdown to HNGi7.0
     </h3>
     <div class="dee" id="countdown-circles-container">
@@ -65,8 +65,6 @@
      </div>
     </div>
 
-   </div>
- 
    </div>
    <div class="main-third-row text_center">
     <div class="row mb-5">
@@ -104,73 +102,6 @@
      </div>
     </div>
    </div>
-
-   <!-- <div class="main-fourth-row">
-    <h3 id="how-it-works">How Does It Work ?</h3>
-    <div class="section-2">
-     <div class="section-2-sections-container">
-      <div class="half-a-row">
-       <h4 class="mh4" style="color: darkblue; padding-bottom: 20px">Apply To Become An Intern</h4>
-       <p class="content">The HNG internship is a 3-month remote internship designed to find and
-        develop
-        the most talented software developers. Everyone is welcomed to participate (there is no
-        entrance exam).
-        Anyone can log into the internship using their laptop. Each week we give tasks.
-
-
-        <button class="cta-button-4 button--midBlue" onclick="location.href='join-intern.php'" type="button">Get Started</button>
-      </div>
-      <div class="half-a-row">
-       <table>
-        <thead>
-         <tr style="padding: 0">
-          <th style="padding: 1.5em 1.5em" colspan="2">Event Calendar</th>
-         </tr>
-        </thead>
-        <tbody>
-         <tr>
-          <td>Registration</td>
-          <td></td>
-         </tr>
-         <tr>
-          <td>Internship Starts</td>
-          <td></td>
-         </tr>
-         <tr>
-          <td>Stage 1 to Stage 10</td>
-          <td></td>
-         </tr>
-         <tr>
-          <td>Internship Ends</td>
-          <td></td>
-         </tr>
-        </tbody>
-       </table>
-
-      </div>
-     </div>
-
-     <div class="section-2-sections-container">
-      <div class="half-a-row">
-       <img class="intern-meet" src="https://res.cloudinary.com/chux/image/upload/v1570646194/Rectangle_4.6_vfbtwb.png" alt="interns" />
-      </div>
-      <div class="half-a-row">
-       <h4 class="" style="color: darkblue; padding-bottom: 20px">Onboard And Connect With Teammates</h4>
-       <p class="content">The HNG internship is a 3-month remote internship designed to find and
-        develop
-        the most talented software developers. Everyone is welcomed to participate (there is no
-        entrance exam).
-        Anyone can log into the internship using their laptop. Each week we give tasks.</p>
-       <button class="cta-button-4 button--midBlue" type="button"><a href="join-intern.php">Get
-         Started</a></button>
-
-       Anyone can log into the internship using their laptop. Each week we give tasks.
-       <button class="cta-button-4 button--midBlue" type="button"><a href="join-intern.php">Get Started</a></button></p>
-      </div>
-     </div>
-
-    </div>
-   </div> -->
 
    <div class="main-fourth-row">
     <h3 id="how-it-works">How Does It Work ?</h3>
@@ -239,9 +170,10 @@
     </div>
    </div>
 
-   <div class="main-fifth-row">
+
+   <div class="main-fifth-row mx-auto">
     <div class="row">
-     <div class="text-center text-md-left col-12 col-md-6 col" style="padding-top: 35px;">
+     <div class="text-center text-md-left col-12 col-md-6">
       <h4 style="color: darkblue; padding-bottom: 20px">Build Scalable Products & Grow</h4>
       <p class="content">The HNG Internship is a 3-months remote
        internship designed to find and develop the most talented software developers.
@@ -264,8 +196,9 @@
 
     </div>
    </div>
+   
 
-   <div class="container-fluid mt-2" id="wrapper">
+   <div class="container-fluid mt-2 mx-auto" id="wrapper">
     <div class="row">
      <div class="col-12">
       <h4 class="text-center mt-5">One of the Best Learning Curriculums in the World</h4>
@@ -325,7 +258,7 @@
           </div>
 
          </div>
-         <div class="col-md-6 col-sm-12 mb-5 mt-5">
+         <div class="col-md-6 col-sm-12 mb-5 mt-5 mx-auto">
           <div class="accordion" id="accordionExample">
            <div class="card">
             <div class="card-header" id="headingOne">
@@ -682,8 +615,8 @@
    }
 
   }
+ }
 
-  }
   //handle sroll to top arrow
   $('a[href*="#"]')
    .not('[href="#"]')

@@ -500,6 +500,7 @@ font-weight: 600;
 .main-fourth-row table {
 border-collapse: collapse;
 padding-left: 1em;
+margin: 0 auto;
 width: 80%;
 height: 100%;
 font-size: 0.9em;
@@ -1155,9 +1156,13 @@ margin-left: 5px;
 }
 .section-2-sections-container{
   width: 85%;
+  margin-right: auto;
+  margin-left: auto;
 }
 .main-fifth-row{
   width: 85%;
+  margin-left:center !important;
+  margin-right:center !important;
 }
 .mt-5{
   width: 85%;
@@ -1176,9 +1181,13 @@ margin-left: 5px;
 }
 .sponsors__header{
   width:89%;
+  margin-right: auto;
+  margin-left: auto;
 }
 .sponsors__images{
   width:85%;
+  margin-right: auto;
+  margin-left: auto;
 }
 .figma_logo{
   width:85%;
@@ -1191,6 +1200,8 @@ margin-left: 5px;
 }
 .sponsors_button{
   width: 90%;
+  margin-right: auto;
+  margin-left: auto;
 }
 .tripp{
   width: 85%;
@@ -1220,6 +1231,13 @@ margin-left: 5px;
  
   margin-left: auto;
   margin-right: auto;
+ }
+}
+
+@media (max-width: 490px){
+
+ #wrapper img {
+  display: none;
  }
 }
 
