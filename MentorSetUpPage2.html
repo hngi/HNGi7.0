@@ -49,8 +49,7 @@
                 </nav> 
             </div> 
         </header-->
-
-  <header>
+  <header style="background-color: #D1F0F6">
    <a href="index.html"><img id="hng-logo"
      src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png"></a>
    <input type="checkbox" id="mobile-bars-check" />
@@ -140,30 +139,37 @@
       <div class="invalid-feedback">
        Please Enter Your Name
       </div>
-      <div class="col-sm-12">
+      <div class="row m-0">
+      <div class="col-sm-12 col-md-8">
        <input type="email" class="form-control mt-2" id="validationCustom02" placeholder="Email" required></div>
-      <div class="col-sm-12">
-       <input type="number" class="form-control mt-2" id="validationCustom03" placeholder="Phone number" required></div>
-      <div class="col-sm-12">
-       <input type="text" class="form-control mt-2" id="validationCustom04" placeholder="What do you do" required></div>
-      <div class="col-sm-12">
-       <input type="url" class="form-control mt-2" id="validationCustom05" placeholder="Link to you portfolio" required>
+      <div class="col-sm-12 col-md-4">
+       <input type="tel" class="form-control mt-2" id="validationCustom03" placeholder="Phone number" required></div></div>
+      <div class="row m-0">
+       <div class="col-sm-12 col-md-6">
+        <textarea type="text" class="form-control mt-2 mb-2" id="validationCustom04" placeholder="What do you do?" required></textarea></div>
+      <div class="col-sm-12 col-md-6">
+       <input type="url" class="form-control mt-2" id="validationCustom05" placeholder="Link to your portfolio" required>
+       <input type="url" class="form-control mt-2" id="validationCustom07" placeholder="Link to your cv" required>
+       <input type="url" class="form-control mt-2" id="validationCustom06" placeholder="Link to your Linkedin profile"
+       required></div>
       </div>
       <div class="col-sm-12">
-       <input type="url" class="form-control mt-2" id="validationCustom06" placeholder="Link to your Linkedin profile"
-        required></div>
-      <div class="col-sm-12">
-       <input type="url" class="form-control mt-2" id="validationCustom07" placeholder="Link to your cv" required></div>
-      <div class="col-sm-12">
-       <input type="text" class="form-control mt-2" id="validationCustom08"
-        placeholder="Why are you interested in mentoring with HNG?" required></div>
-      <div class="col-sm-12">
+       <textarea type="text" class="form-control mt-2" id="validationCustom08"
+        placeholder="Why are you interested in mentoring with HNG?" required></textarea></div>
+        <div class="row m-0">
+      <div class="col-sm-12 col-md-8">
        <input type="text" class="form-control mt-2" id="validationCustom09"
         placeholder="What state are you currently in?" required></div>
-      <div class="col-sm-12">
-       <input type="text" class="form-control mt-2" id="validationCustom10"
-        placeholder="What is your current employment status?" required></div>
-      <center><button class="btn btn-primary mt-3" type="submit">Submit</button></center>
+      <div class="col-sm-12 col-md-4">
+        <select name="employment-status" class="form-control mt-2" id="validationCustom10">
+          <option value="">Employment status</option>
+          <option value="Employed">Employed</option>
+          <option value="Unemployed">Unemployed</option>
+          <option value="Self-Employed">Self-Employed</option>
+        </select>
+      </div>
+      </div>
+      <center><button class="btn btn-primary mt-3 align-center" type="submit">Submit</button></center>
      </form>
     </div>
    </div>
