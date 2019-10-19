@@ -111,7 +111,7 @@ grid-template-areas:
 "row3";
 }
 
-main>div {
+main {
 padding: 0 10px;
 
 }
@@ -181,7 +181,7 @@ color: #fff;
 font-family: Oswald;
 margin: 1.5em 0;
 display: flex;
-justify-content: space-between;
+justify-content: space-evenly;
 }
 
 .countdown__number {
@@ -206,7 +206,7 @@ text-align: center;
 }
 
 .card1-image {
-width: 100%;
+max-width: 100%;
 display: block;
 height: auto;
 
@@ -500,6 +500,7 @@ font-weight: 600;
 .main-fourth-row table {
 border-collapse: collapse;
 padding-left: 1em;
+margin: 0 auto;
 width: 80%;
 height: 100%;
 font-size: 0.9em;
@@ -1134,6 +1135,8 @@ margin-left: 5px;
   }
 .countdown__heading{
   width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .subheading {
   width: 85%;
@@ -1153,9 +1156,13 @@ margin-left: 5px;
 }
 .section-2-sections-container{
   width: 85%;
+  margin-right: auto;
+  margin-left: auto;
 }
 .main-fifth-row{
   width: 85%;
+  margin-left:center !important;
+  margin-right:center !important;
 }
 .mt-5{
   width: 85%;
@@ -1174,9 +1181,13 @@ margin-left: 5px;
 }
 .sponsors__header{
   width:89%;
+  margin-right: auto;
+  margin-left: auto;
 }
 .sponsors__images{
   width:85%;
+  margin-right: auto;
+  margin-left: auto;
 }
 .figma_logo{
   width:85%;
@@ -1189,6 +1200,8 @@ margin-left: 5px;
 }
 .sponsors_button{
   width: 90%;
+  margin-right: auto;
+  margin-left: auto;
 }
 .tripp{
   width: 85%;
@@ -1203,10 +1216,29 @@ margin-left: 5px;
 }
 .main-first-row{
   width: 85%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .dee{
-  width: 85%;
+
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
+}
+
+@media (max-width: 991px){
+ .card1-text {
+ 
+  margin-left: auto;
+  margin-right: auto;
+ }
+}
+
+@media (max-width: 490px){
+
+ #wrapper img {
+  display: none;
+ }
 }
 
 /** Very Small screens**/
