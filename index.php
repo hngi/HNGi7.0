@@ -675,11 +675,19 @@ updateClock();
         </div>
         <nav>
             <ul>
+<<<<<<< HEAD:index.php
                 <li class="nav-link-1-vertical"><a href="index.php">Home</a></li>
                 <li class="nav-link-1-vertical"><a href="hng6.php">HNGi6</a></li>
                 <li class="nav-link-1-vertical"><a href="mentorpage.php">Mentors</a></li>
                 <li class="nav-link-1-vertical"><a href="contactform.php">Contact</a></li>
                 <li class="nav-link-1-vertical"><a href="join-intern.php" class="text__dark-blue">Join HNGi</a></li>
+=======
+                <li class="nav-link-1-vertical"><a href="index.html">Home</a></li>
+                <li class="nav-link-1-vertical"><a href="hng6.html">HNGi6</a></li>
+                <li class="nav-link-1-vertical"><a href="mentorpage.html">Mentors</a></li>
+                <li class="nav-link-1-vertical"><a href="contactform.html">Contact</a></li>
+                <li class="nav-link-1-vertical"><a href="join-intern.html" class="text__dark-blue">Join HNGi</a></li>
+>>>>>>> af688b8bf4a9fe94346e55aa35004eb02e949ea2:index.html
 
             </ul>
         </nav>

@@ -9,7 +9,7 @@ require_once 'classControllers/mentor.php';
         $error['name'] = "Name is required";
       }
       if (empty($_POST['area_of_expertise'])) {
-        $error['area_of_expertise'] = "You need to pick at least one araea of expertise";
+        $error['area_of_expertise'] = "You need to pick at least one area of expertise";
       }
       if (!isset($_FILES['image'])) {
         $error['image'] = "Profile Photo is required";
