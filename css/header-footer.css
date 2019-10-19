@@ -303,8 +303,8 @@ footer .footer-nav .row {
 	height:50px;
 	background-color:#3498db;
 	text-indent:-9999px;
-    /* display:flex;
-    align-items: center; */
+    display:flex;
+    align-items: center;
 	-webkit-border-radius:60px;
 	-moz-border-radius:60px;
 	border-radius:40px
@@ -312,8 +312,8 @@ footer .footer-nav .row {
 #top span {
 	top:50%;
 	left:50%;
-	/* margin-left:17px;
-	margin-top:-9px; */
+	margin-left:17px;
+	margin-top:-9px;
 	height:0;
 	width:0;
 	border:8px solid transparent;
