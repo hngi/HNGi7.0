@@ -23,31 +23,7 @@
         <?php
           include('fragments/site_header.php');
         ?>
-<<<<<<< HEAD
-        <!--header id="header">
-            <nav>
-                <div class="logo-container">
-                    <img src="https://bit.ly/2M2pUlV" alt="HNG Internship Logo" id="logo">
-                </div>
-                <div class="hamburger-container">
-                    <img src="https://bit.ly/2OHfmKZ" id="hamburger" alt="" width="35" height="35">
-                </div>
-                <ul class="nav-ul desktop-only">
-                    <li class="nav-link-1"><a href="index.html">Home</a></li>
-                    <li class="nav-link-1"><a href="hng6.html">HNG6</a></li>
-                    <li class="nav-link-1"><a href="mentorpage.html">Mentors</a></li>
-                    <li class="nav-link-1"><a href="contactform.html">Contact</a></li>
-                    <li class="nav-link-1"><button class="cta-button button--midBlue" id="join-hng"><a
-                                href="join-intern.html">Join
-                                HNG</a></button></li>
-                </ul>
-            </nav>
-        </header-->
-
-        <main>
-=======
          <main>
->>>>>>> ad7c6df42595e5f10038457dd19a1e16e0a4ead2
             <div class="main-first-row">
                 <div class="welcome-column">
                     <h1 id="welcome-text" class="text__dark-blue">
@@ -58,11 +34,7 @@
                         the bridge between learning to code, and becoming the best in the world.
                     </p>
                     <button class="cta-button button--midBlue" id="buttt"> 
-<<<<<<< HEAD
-                        <a href="join-intern.html" id="butt">Get Started</a>
-=======
                         <a href="join-intern.php" id="butt">Get Started</a>
->>>>>>> ad7c6df42595e5f10038457dd19a1e16e0a4ead2
                     </button>
                 </div>
                 <div class="image-column desktop-only">
@@ -94,88 +66,6 @@
                 </div>
 
             </div>
-<<<<<<< HEAD
-<!--
-    <script>
-    //darkangel cc.
-    const daysElem = document.querySelector('#days'), //Edit this selector to pick the days element in your HTML.
-    hoursElem = document.querySelector('#hours'),
-    minutesElem = document.querySelector('#minutes'),
-    secondsElem = document.querySelector('#seconds'),
-    countDownWrapper = document.querySelector('.countdown'); //This is the counter that wraps all 4 numbers.
-
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 1, 2020 22:0:0").getTime();
-
-// Update the count down every 1 second
-var counter = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var daysLeft = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hoursLeft = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutesLeft = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var secondsLeft = Math.floor((distance % (1000 * 60)) / 1000);
-
-    // Display the results.
-    daysElem.innerText = daysLeft;
-    hoursElem.innerText = hoursLeft;
-    minutesElem.innerText = minutesLeft;
-    secondsElem.innerText = secondsLeft;
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(counter);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-
-    </script>
--->
-
-<script>
-        //darkangel cc.
-        const daysElem = document.querySelector('#days'), //Edit this selector to pick the days element in your HTML.
-    hoursElem = document.querySelector('#hours'),
-    minutesElem = document.querySelector('#minutes'),
-    secondsElem = document.querySelector('#seconds'),
-    countDownWrapper = document.querySelector('.countdown'); //This is the counter that wraps all 4 numbers.
-
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 1, 2020 22:0:0").getTime();
-
-function updateClock() {
-  // Get today's date and time
-  var now = new Date().getTime();
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-  // Time calculations for days, hours, minutes and seconds
-  var daysLeft = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hoursLeft = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutesLeft = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var secondsLeft = Math.floor((distance % (1000 * 60)) / 1000);
-    // Display the results.
-    daysElem.innerText = daysLeft;
-    hoursElem.innerText = hoursLeft;
-    minutesElem.innerText = minutesLeft;
-    secondsElem.innerText = secondsLeft;
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    document.getElementById("demo").innerHTML = "EXPIRED";
-    return;
-  }
-  setTimeout(updateClock, 1000);
-}
-updateClock();
-</script>
-=======
-
->>>>>>> ad7c6df42595e5f10038457dd19a1e16e0a4ead2
             <div class="main-third-row text_center">
                 <div class="">
                     <h3 class="subheading text__dark-blue" style = "font-weight: bold">
@@ -223,11 +113,7 @@ updateClock();
                                 Anyone can log into the internship using their laptop. Each week we give tasks.
                           
             
-<<<<<<< HEAD
-                                <button class="cta-button-4 button--midBlue" onclick="location.href='join-intern.html'" type="button">Get Started</button>
-=======
                                 <button class="cta-button-4 button--midBlue" onclick="location.href='join-intern.php'" type="button">Get Started</button>
->>>>>>> ad7c6df42595e5f10038457dd19a1e16e0a4ead2
                         </div>
                         <div class="half-a-row">
                             <table>
@@ -272,20 +158,12 @@ updateClock();
                                 the most talented software developers. Everyone is welcomed to participate (there is no
                                 entrance exam).
                                 Anyone can log into the internship using their laptop. Each week we give tasks.</p>
-<<<<<<< HEAD
-                            <button class="cta-button-4 button--midBlue" type="button"><a href="join-intern.html">Get
-=======
                             <button class="cta-button-4 button--midBlue" type="button"><a href="join-intern.php">Get
->>>>>>> ad7c6df42595e5f10038457dd19a1e16e0a4ead2
                                     Started</a></button>
 
                                 Anyone can log into the internship using their laptop. Each week we give tasks.
                                 <button class="cta-button-4 button--midBlue" type="button"><a
-<<<<<<< HEAD
-                                        href="join-intern.html">Get Started</a></button></p>
-=======
                                         href="join-intern.php">Get Started</a></button></p>
->>>>>>> ad7c6df42595e5f10038457dd19a1e16e0a4ead2
                         </div>
                     </div>
 
@@ -304,11 +182,7 @@ updateClock();
 
 
                         <button class="button--midBlue cta-button">
-<<<<<<< HEAD
-                            <a href="join-intern.html">Get Started</a></button>
-=======
                             <a href="join-intern.php">Get Started</a></button>
->>>>>>> ad7c6df42595e5f10038457dd19a1e16e0a4ead2
                     </div>
 
                     <div class="col-12 mt-md-5 mt-lg-0 col-md-6 ">
@@ -572,16 +446,9 @@ updateClock();
                             design thinking, machine learning and digital
                             marketing.</p>
 
-<<<<<<< HEAD
-                        <div class="mb-3" style="padding-top: 35px;"><a style="color:#00AEFF;" href="hng6.html"><i
-                                    class="fa fa-angle-right px-1"
-                                    style="color:#00AEFF; border:2px solid #00AEFF; background-color: white; width: 40px; height:7px; border-radius: 50%; "></i>
-                                Learn more</a></div>
-=======
                         <div class="mb-3" style="padding-top: 35px;">
                         <a style="color:#00AEFF;" href="hng6.php">
                         <i class="fa fa-angle-right px-1" style="color:#00AEFF; border:2px solid #00AEFF; background-color: white; width: 40px; height:7px; border-radius: 50%; "></i>Learn more</a></div>
->>>>>>> ad7c6df42595e5f10038457dd19a1e16e0a4ead2
                     </div>
 
                     <div class="col-12 col-lg-6">
@@ -618,11 +485,7 @@ updateClock();
                             </h4>
                             <span class="support__item-link">
                                 <i class="fa fa-chevron-circle-right"></i>
-<<<<<<< HEAD
-                                <a href="#" class="text-light">Get Started</a>
-=======
                                 <a href="donationpage.html" class="text-light">Get Started</a>
->>>>>>> ad7c6df42595e5f10038457dd19a1e16e0a4ead2
                             </span>
                         </div>
                     </div>
@@ -713,27 +576,16 @@ updateClock();
         </div>
         <nav>
             <ul>
-<<<<<<< HEAD
-                <li class="nav-link-1-vertical"><a href="index.php">Home</a></li>
-                <li class="nav-link-1-vertical"><a href="hng6.php">HNGi6</a></li>
-                <li class="nav-link-1-vertical"><a href="mentorpage.php">Mentors</a></li>
-                <li class="nav-link-1-vertical"><a href="contactform.php">Contact</a></li>
-                <li class="nav-link-1-vertical"><a href="join-intern.php" class="text__dark-blue">Join HNGi</a></li>
-=======
                 <li class="nav-link-1-vertical"><a href="index.html">Home</a></li>
                 <li class="nav-link-1-vertical"><a href="hng6.html">HNGi6</a></li>
                 <li class="nav-link-1-vertical"><a href="mentorpage.html">Mentors</a></li>
                 <li class="nav-link-1-vertical"><a href="contactform.html">Contact</a></li>
                 <li class="nav-link-1-vertical"><a href="join-intern.html" class="text__dark-blue">Join HNGi</a></li>
->>>>>>> ad7c6df42595e5f10038457dd19a1e16e0a4ead2
 
             </ul>
         </nav>
     </aside>
 
-<<<<<<< HEAD
-<script>
-=======
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -770,7 +622,6 @@ updateClock();
         window.addEventListener('scroll', (event) => displayArrow(event))
     </script>
     <script>
->>>>>>> ad7c6df42595e5f10038457dd19a1e16e0a4ead2
     const hamburger = document.getElementById("hamburger");
     const aside = document.getElementsByTagName("aside")[0];
     const hide_aside = document.getElementsByClassName("hide-aside")[0];
@@ -795,25 +646,11 @@ updateClock();
             slideIndex++;
             if (slideIndex > cards.length) { slideIndex = 1 }
 
-<<<<<<< HEAD
-            cards[slideIndex - 1].style.display = "block";
-            //dots[slideIndex - 1].className += " active";
-            setTimeout(showSlides, 2000);// Change image every 2 seconds*/
-
-        }
-        else {
-            for (i = 0; i < cards.length; i++) {
-=======
->>>>>>> ad7c6df42595e5f10038457dd19a1e16e0a4ead2
                 cards[i].style.display = "block";
             }
 
         }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> ad7c6df42595e5f10038457dd19a1e16e0a4ead2
     }
     //handle sroll to top arrow
 $('a[href*="#"]')
