@@ -66,31 +66,36 @@
     </div>
 
    </div>
+ 
+   </div>
    <div class="main-third-row text_center">
-    <div class="">
+    <div class="row mb-5">
+     <div class="col-lg-12">
      <h3 class="subheading text__dark-blue" style="font-weight: bold">
       Unleash Your Creativity
      </h3>
     </div>
-    <div class="card1-container">
-     <div class="card1">
-      <img class="card1-image" src="https://bit.ly/33gP99W" alt="">
+    </div>
+
+    <div class="card1-container row">
+     <div class="card1 col-lg-4 mb-5 mx-auto">
+      <img class="card1-image d-md-inline d-sm-inline" src="https://bit.ly/33gP99W" alt="">
       <h5 class="card1-heading text__dark-blue">Remote Learning</h5>
       <p class="card1-text">
        The HNG internship is a 3-month remote internship designed to find and develop the most
        talented software developers.
       </p>
      </div>
-     <div class="card1">
-      <img class="card1-image" src="https://bit.ly/2IAGSFN" alt="">
+     <div class="card1 col-lg-4 mb-5 mx-auto">
+      <img class="card1-image d-md-inline d-sm-inline" src="https://bit.ly/2IAGSFN" alt="">
       <h5 class="card1-heading text__dark-blue">Collaborate with Creatives</h5>
       <p class="card1-text" id="tess">
        The HNG internship is a 3-month remote internship designed to find and develop the most
        talented software developers.
       </p>
      </div>
-     <div class="card1">
-      <img class="card1-image" src="https://bit.ly/2Vug2Vf" alt="">
+     <div class="card1 col-lg-4 mb-5 mx-auto">
+      <img class="card1-image d-md-inline d-sm-inline" src="https://bit.ly/2Vug2Vf" alt="">
       <h5 class="card1-heading text__dark-blue">Build Portfolio</h5>
       <p class="card1-text">
        The HNG internship is a 3-month remote internship designed to find and develop the most
@@ -100,7 +105,7 @@
     </div>
    </div>
 
-   <div class="main-fourth-row">
+   <!-- <div class="main-fourth-row">
     <h3 id="how-it-works">How Does It Work ?</h3>
     <div class="section-2">
      <div class="section-2-sections-container">
@@ -165,8 +170,74 @@
      </div>
 
     </div>
-   </div>
+   </div> -->
 
+   <div class="main-fourth-row">
+    <h3 id="how-it-works">How Does It Work ?</h3>
+    <div class="section-2">
+     <div class="section-2-sections-container">
+      <div class="half-a-row">
+       <h4 class="mh4" style="color: darkblue; padding-bottom: 20px">Apply To Become An Intern</h4>
+       <p class="content">The HNG internship is a 3-month remote internship designed to find and
+        develop
+        the most talented software developers. Everyone is welcomed to participate (there is no
+        entrance exam).
+        Anyone can log into the internship using their laptop. Each week we give tasks.
+
+
+        <button class="cta-button-4 button--midBlue" onclick="location.href='join-intern.php'" type="button">Get Started</button>
+      </div>
+      <div class="half-a-row">
+       <table>
+        <thead>
+         <tr style="padding: 0">
+          <th style="padding: 1.5em 1.5em" colspan="2">Event Calendar</th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>Registration</td>
+          <td></td>
+         </tr>
+         <tr>
+          <td>Internship Starts</td>
+          <td></td>
+         </tr>
+         <tr>
+          <td>Stage 1 to Stage 10</td>
+          <td></td>
+         </tr>
+         <tr>
+          <td>Internship Ends</td>
+          <td></td>
+         </tr>
+        </tbody>
+       </table>
+
+      </div>
+     </div>
+
+     <div class="section-2-sections-container">
+      <div class="half-a-row">
+       <img class="intern-meet" src="https://res.cloudinary.com/chux/image/upload/v1570646194/Rectangle_4.6_vfbtwb.png" alt="interns" />
+      </div>
+      <div class="half-a-row">
+       <h4 class="" style="color: darkblue; padding-bottom: 20px">Onboard And Connect With Teammates</h4>
+       <p class="content">The HNG internship is a 3-month remote internship designed to find and
+        develop
+        the most talented software developers. Everyone is welcomed to participate (there is no
+        entrance exam).
+        Anyone can log into the internship using their laptop. Each week we give tasks.</p>
+       <button class="cta-button-4 button--midBlue" type="button"><a href="join-intern.php">Get
+         Started</a></button>
+    <p class="content">
+       Anyone can log into the internship using their laptop. Each week we give tasks.
+       <button class="cta-button-4 button--midBlue" type="button"><a href="join-intern.php">Get Started</a></button></p>
+      </div>
+     </div>
+
+    </div>
+   </div>
 
    <div class="main-fifth-row">
     <div class="row">

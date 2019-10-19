@@ -206,7 +206,7 @@ text-align: center;
 }
 
 .card1-image {
-width: 100%;
+max-width: 100%;
 display: block;
 height: auto;
 
@@ -1213,6 +1213,14 @@ margin-left: 5px;
   margin-left: auto !important;
   margin-right: auto !important;
 }
+}
+
+@media (max-width: 991px){
+ .card1-text {
+ 
+  margin-left: auto;
+  margin-right: auto;
+ }
 }
 
 /** Very Small screens**/
