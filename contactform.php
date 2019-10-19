@@ -51,7 +51,7 @@ if (isset($_POST['contact-btn'])) {
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
 </head>
 
-<body>
+<body class="container-fluid">
   <?php include('fragments/site_header.php'); ?>
 
 
@@ -141,7 +141,7 @@ if (isset($_POST['contact-btn'])) {
         </div>
       </section>
     </nav>
-    <p class="center-text darkblue-text">&copy 2019, HGN Internship. All rights reserved.</p>
+    <p class="center-text darkblue-text">&copy 2019, HNG Internship. All rights reserved.</p>
   </footer>
 </body>
 
