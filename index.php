@@ -114,7 +114,7 @@
                                 Anyone can log into the internship using their laptop. Each week we give tasks.
                           
             
-                                <button class="cta-button-4 button--midBlue" onclick="location.href='join-intern.html'" type="button">Get Started</button>
+                                <button class="cta-button-4 button--midBlue" onclick="location.href='join-intern.php'" type="button">Get Started</button>
                         </div>
                         <div class="half-a-row">
                             <table>
@@ -159,12 +159,12 @@
                                 the most talented software developers. Everyone is welcomed to participate (there is no
                                 entrance exam).
                                 Anyone can log into the internship using their laptop. Each week we give tasks.</p>
-                            <button class="cta-button-4 button--midBlue" type="button"><a href="join-intern.html">Get
+                            <button class="cta-button-4 button--midBlue" type="button"><a href="join-intern.php">Get
                                     Started</a></button>
 
                                 Anyone can log into the internship using their laptop. Each week we give tasks.
                                 <button class="cta-button-4 button--midBlue" type="button"><a
-                                        href="join-intern.html">Get Started</a></button></p>
+                                        href="join-intern.php">Get Started</a></button></p>
                         </div>
                     </div>
 
@@ -183,7 +183,7 @@
 
 
                         <button class="button--midBlue cta-button">
-                            <a href="join-intern.html">Get Started</a></button>
+                            <a href="join-intern.php">Get Started</a></button>
                     </div>
 
                     <div class="col-12 mt-md-5 mt-lg-0 col-md-6 ">
@@ -447,10 +447,9 @@
                             design thinking, machine learning and digital
                             marketing.</p>
 
-                        <div class="mb-3" style="padding-top: 35px;"><a style="color:#00AEFF;" href="hng6.html"><i
-                                    class="fa fa-angle-right px-1"
-                                    style="color:#00AEFF; border:2px solid #00AEFF; background-color: white; width: 40px; height:7px; border-radius: 50%; "></i>
-                                Learn more</a></div>
+                        <div class="mb-3" style="padding-top: 35px;">
+                        <a style="color:#00AEFF;" href="hng6.php">
+                        <i class="fa fa-angle-right px-1" style="color:#00AEFF; border:2px solid #00AEFF; background-color: white; width: 40px; height:7px; border-radius: 50%; "></i>Learn more</a></div>
                     </div>
 
                     <div class="col-12 col-lg-6">
@@ -487,7 +486,7 @@
                             </h4>
                             <span class="support__item-link">
                                 <i class="fa fa-chevron-circle-right"></i>
-                                <a href="#" class="text-light">Get Started</a>
+                                <a href="donationpage.html" class="text-light">Get Started</a>
                             </span>
                         </div>
                     </div>
