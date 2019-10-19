@@ -10,13 +10,13 @@ body {
 header {
     /* Uncomment the below to make the header fixed */
     /*
-	position: fixed;
-	left: 0;
-	top: 0;
-	z-index: 200;
-	background-color: white;
-	width: 93%;
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 200;
+    background-color: white;
+    width: 93%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
 
     display: flex;
     flex-direction: row;
@@ -99,20 +99,21 @@ header #mobile-bars-check {
 
 footer {
     background-color: rgb(245, 245, 245);
-    padding: 4rem 8rem;
+    padding: 4rem 4rem;
 }
 
-footer h2 {
+/*footer h2 {
     font-size: 25px;
     margin: 1rem auto;
     font-weight: bold;
-}
+}*/
 
-footer > nav {
+footer > nav {/*
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    height: 35vh;
+    justify-content: space-between;*/
+    margin-bottom: 1em;
+    /*height: 35vh;*/
 }
 
 footer #contact-section a,
@@ -127,9 +128,9 @@ footer #link-list {
 }
 
 footer #link-list > * {
-    font-size: 17px;
-    padding: 2px;
-    align-self: flex-start;
+    font-size: 14px;
+   /* padding: 2px;*/
+   /* align-self: flex-start;*/
     transition: 0.4s ease-out;
     text-decoration: none;
 }
@@ -151,10 +152,11 @@ footer #link-list > a:hover {
 }
 
 footer #socials a {
-    padding: 0.5rem;
+    padding: 3px;
     background-color: #fff;
     border-radius: 50%;
-    margin-right: 0.8rem;
+
+    margin-top: 0.8rem;
     box-shadow: -3px 3px 3px 1px rgba(0, 0, 0, 0.07);
     border: 1px solid #fff;
     transition: 0.6s ease-out;
@@ -166,11 +168,23 @@ footer #socials img {
     height: 13px;
     width: 25px;
 }
+ 
 
-footer .footer-nav .row {
-    width: 100%;
-}
+/*@media (min-width: 301px) and (max-width: 860px) {
+ 
+    header nav a,
+    header nav .header-links,
+    header nav #join-hng {
+        font-size: 10px !important;
+        align-self: flex-end;
+    }
 
+    header #mobile-bars-check:checked ~ nav {
+        height: 390px !important;
+    } 
+
+    }*/
+  
 @media (max-width: 860px) {
     body > * {
         width: auto;
@@ -178,8 +192,8 @@ footer .footer-nav .row {
     }
 
     header {
-        flex-direction: column;
-        padding-top: 10px;
+        flex-direction: column;/*
+        padding-top: 10px;*/
         padding: 1rem;
         width: auto;
         height: auto;
@@ -194,7 +208,7 @@ footer .footer-nav .row {
         transition: 0.4s ease-out;
         height: 0;
         justify-content: flex-start;
-        padding: 1.5rem;
+        padding: 0rem;
         flex-direction: column;
     }
 
@@ -205,7 +219,7 @@ footer .footer-nav .row {
     header nav a,
     header nav .header-links,
     header nav #join-hng {
-        font-size: 3vw;
+        font-size: 18px;
         align-self: flex-end;
     }
 
@@ -235,15 +249,15 @@ footer .footer-nav .row {
         height: 16rem;
     }
 
-    footer {
+    /*footer {
         padding: 2rem 1rem;
-    }
-
-    footer nav {
+    }*/
+/*
+    /*footer nav {
         flex-direction: column;
         justify-content: space-between;
         height: auto;
-    }
+    }*/
 
     footer h2 {
         font-size: 21px;
@@ -259,12 +273,12 @@ footer .footer-nav .row {
         padding: 2px;
     }
 
-    footer .footer-nav .row {
+    /*footer .footer-nav .row {
         margin-left: 5%;
     }
-}
+}*/
 
-@media (max-width: 500px)
+@media (max-width: 300px)
 
 /*Smaller screens*/
     {
@@ -272,7 +286,7 @@ footer .footer-nav .row {
     header nav a,
     header nav .header-links,
     header nav #join-hng {
-        font-size: 4.5vw;
+        font-size: 25px;
         align-self: flex-end;
     }
 
@@ -281,7 +295,7 @@ footer .footer-nav .row {
     }
 }
 /* 
-	style for jump to top arrow
+    style for jump to top arrow
 */
 
 .back-to-top {
@@ -295,7 +309,7 @@ footer .footer-nav .row {
 }
 
 #top {
-	margin: 0 auto;
+    margin: 0 auto;
 	right:10px;
 	bottom:10px;
 	cursor:pointer;
@@ -320,9 +334,9 @@ footer .footer-nav .row {
 	border-bottom-color:#ffffff;
 }
 #top:hover {
-	background-color:#0088C7;
-	opacity:1;filter:"alpha(opacity=100)";
-	-ms-filter:"alpha(opacity=100)";
+    background-color:#0088C7;
+    opacity:1;filter:"alpha(opacity=100)";
+    -ms-filter:"alpha(opacity=100)";
 }
 
 
