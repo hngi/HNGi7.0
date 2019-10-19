@@ -14,7 +14,7 @@
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
 </head>
 
-<body>
+<body class="container-fluid">
     <div id="scroll-down-arrow" class="animated bounceInUp" onclick="scrollWin()">
         <i class="fas fa-arrow-down"></i>
     </div>
@@ -570,22 +570,6 @@
         </main>
 
     </div>
-
-    <aside class="showw">
-        <div class="hide-aside text__dark-blue">
-            &times;
-        </div>
-        <nav>
-            <ul>
-                <li class="nav-link-1-vertical"><a href="index.html">Home</a></li>
-                <li class="nav-link-1-vertical"><a href="hng6.html">HNGi6</a></li>
-                <li class="nav-link-1-vertical"><a href="mentorpage.html">Mentors</a></li>
-                <li class="nav-link-1-vertical"><a href="contactform.html">Contact</a></li>
-                <li class="nav-link-1-vertical"><a href="join-intern.html" class="text__dark-blue">Join HNGi</a></li>
-
-            </ul>
-        </nav>
-    </aside>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

@@ -200,7 +200,7 @@ require_once 'classControllers/init.php';
         </div>
       </section>
     </nav>
-    <p class="center-text darkblue-text">&copy 2019, HGN Internship. All rights reserved.</p>
+    <p class="center-text darkblue-text">&copy 2019, HNG Internship. All rights reserved.</p>
   </footer>
 </body>
 

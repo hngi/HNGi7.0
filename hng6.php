@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="css/hng6.css">
 </head>
 
-<body>
+<body class="container-fluid">
 	<?php
 		include('fragments/site_header.php');
 	?>
@@ -221,7 +221,7 @@
 	 			</div>
 	 		</section>
 	 	</nav>
-	 	<p class="center-text darkblue-text">&copy 2019, HGN Internship. All rights reserved.</p>
+	 	<p class="center-text darkblue-text">&copy 2019, HNG Internship. All rights reserved.</p>
 	 </footer>
 </body>
 </html>

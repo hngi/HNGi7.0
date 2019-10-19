@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="stylesheet" href="css/faq.css">
 </head>
-<body>
+<body class="container-fluid">
         <!--header>
             <div class="container">
              <div class="wrap">
