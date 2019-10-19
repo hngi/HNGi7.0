@@ -284,6 +284,16 @@ footer .footer-nav .row {
 	style for jump to top arrow
 */
 
+.back-to-top {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    display: none;
+
+    bottom: 70px;
+    right: 50px;
+}
+
 #top {
 	margin: 0 auto;
 	right:10px;
@@ -293,7 +303,8 @@ footer .footer-nav .row {
 	height:50px;
 	background-color:#3498db;
 	text-indent:-9999px;
-	display:block;
+    /* display:flex;
+    align-items: center; */
 	-webkit-border-radius:60px;
 	-moz-border-radius:60px;
 	border-radius:40px
@@ -301,8 +312,8 @@ footer .footer-nav .row {
 #top span {
 	top:50%;
 	left:50%;
-	margin-left:18px;
-	margin-top:-12px;
+	/* margin-left:17px;
+	margin-top:-9px; */
 	height:0;
 	width:0;
 	border:8px solid transparent;

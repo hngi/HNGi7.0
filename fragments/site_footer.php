@@ -96,6 +96,6 @@
                 </nav>
                 <p class="center-text darkblue-text">&copy 2019, HGN Internship. All rights reserved.</p>
                 
-                <div class="center-text"><a href="#header" id="top">Jump to Top<span></span></a></div>
-
+                <div class="back-to-top center-text"><a href="#header" id="top"><span></span></a></div>
+                <script src="./js/scroll-to-top.js"></script>
             </footer>
