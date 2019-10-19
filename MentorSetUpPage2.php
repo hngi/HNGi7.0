@@ -1,6 +1,5 @@
 <?php
-require_once "config/database.php";
-require_once 'classControllers/mentor.php';
+require_once 'classControllers/init.php';
 
   $error = array();
   if($_SERVER["REQUEST_METHOD"] == "POST"){

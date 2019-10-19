@@ -1,5 +1,5 @@
 <?php
-require_once 'init.php';
+
 class Mentors
 {
 	public $area_of_expertise;
