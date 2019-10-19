@@ -1,21 +1,18 @@
 <?php
 
-include('config/database.php');
-$db = new DB();
-$con = $db->get_connection();
+
+
 
     class LockRegForm {
 
-        function __construct() {
-            
-        }
+      
 
         public function checkStatus() {
 
             //global $con;
-            global $db;            
+            global $database;            
             $query = 'SELECT * FROM reg_form_status';
-            $res = $db->query($query);
+            $res = $database->query($query);
             $row = mysqli_fetch_assoc($res);
             return $row['status'];
             
@@ -24,10 +21,10 @@ $con = $db->get_connection();
         public function setStatus($status) {
 
             //global $con;
-            global $db;
+            global $database;
             $query = "UPDATE reg_form_status SET status = '".$status."'";
-            $res = $db->query($query);
-            $count = mysqli_affected_rows($db);
+            $res = $database->query($query);
+            $count = $database->affected_rows();
 
             if($count > 0) {
                 // status updated
@@ -43,26 +40,28 @@ $con = $db->get_connection();
 
         public function getNoOfInterns() {
             //global $con;
-            global $db;
+            global $database;
             $query = 'SELECT * FROM interns';
-            $res = $db->query($query);
-            $count = mysqli_affected_rows($resyy);
+            $res = $database->query($query);
+            $count = $database->affected_rows();
             return $count;
         } 
 
         public function getNoOfMentors() {
-            global $con;
+            //global $con;
+            global $database;
             $query = 'SELECT * FROM mentors';
-            $res = mysqli_query($con, $query);
-            $count = mysqli_affected_rows($con);
+            $res = $database->query($query);
+            $count = $database->affected_rows();
             return $count;
         } 
 
         public function getNoOfAdmins() {
-            global $con;
+            //global $con;
+            global $database;
             $query = 'SELECT * FROM admins';
-            $res = mysqli_query($con, $query);
-            $count = mysqli_affected_rows($con);
+            $res = $database->query($query);
+            $count = $database->affected_rows();
             return $count;
         }
 
