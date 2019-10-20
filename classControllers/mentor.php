@@ -36,6 +36,7 @@ class Mentors
 	
 	
 }
+$mentor = new Mentors;
 	// $mentor = new Mentors;
 	// $mentor->area_of_expertise= $database->escape_string("web");
 	// $mentor->photo_url= "pic";
@@ -54,6 +55,3 @@ class Mentors
 	// foreach($mentor_data as $value){
 	// 	echo $value['name']. "</br>";
 	// }
-	
-	
-?>
