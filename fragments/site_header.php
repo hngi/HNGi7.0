@@ -8,11 +8,12 @@
     background: white !important;
     width: 100%;
     padding-right: 10px !important;
+    box-shadow: none !important;
 }
 .navbg {
     background: #ffffff !important;
     transition: background 1s;
-    z-index: 1;
+    z-index: 5;
 }
 .navbg2 {
     transition: background 1s;
@@ -62,38 +63,42 @@ header .header-links {
         D.body.clientHeight, D.documentElement.clientHeight
     )
 }
- 
 
+ let prev = 0;
  function mainfunc(){
+    //prev = pctScrolled;
     var winheight= window.innerHeight || (document.documentElement || document.body).clientHeight;
     var docheight = grabHeight();
     var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
     var trackLength = docheight - winheight;
     var pctScrolled = scrollTop/trackLength * 100; 
 
-    if(pctScrolled > 0.6){
+    if (scrollTop > prev ) {
+        document.getElementById("header").classList.add("navbg2");
+        document.getElementById("header").classList.remove("navbg");
+        document.getElementById("header").classList.remove("dynamic");
+        
+    } else  {
+    
         document.getElementById("header").classList.add("navbg");
         document.getElementById("header").classList.remove("navbg2");
         document.getElementById("header").classList.add("dynamic");
 
-        /* FOR DEBUGGING PURPOSES */
-        //console.log('this block works');
-
-    } else if (pctScrolled < 0.6){
+    }
+    if(pctScrolled < 0.3) {
         document.getElementById("header").classList.add("navbg2");
         document.getElementById("header").classList.remove("navbg");
         document.getElementById("header").classList.remove("dynamic");
-        //document.getElementByClassName("navbg").style.z-index = -1;
-
-        /* FOR DEBUGGING PURPOSE */
-        //console.log('this block works 2');
+        
     }
+
+    return prev = scrollTop <= 0 ? 0 : scrollTop;
     
 
  }
  window.addEventListener("scroll", function(){
     mainfunc();
 
- }, false);
+ });
 
 </script>
