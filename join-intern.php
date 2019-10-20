@@ -42,8 +42,15 @@ require_once 'classControllers/init.php';
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
   <link rel="stylesheet" type="text/css" href="css/header-footer.css">
   <link rel="stylesheet" href="css/join-intern.css">
-
   <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <style>
+    
+    #socials a {
+        display: inline-block;
+        margin-top: 10px;   
+    }
+    
+  </style>
 
 </head>
 
@@ -165,6 +172,8 @@ require_once 'classControllers/init.php';
           <a href="index.php" class="skyblue-text">About HNG</a>
           <a href="MentorSetUpPage2.php" class="skyblue-text">Become a Sponsor</a>
           <a href="MentorSetUpPage2.php" class="skyblue-text">Sign up as Mentor</a>
+          <a href="faq.php" class="skyblue-text">FAQ</a>
+
         </div>
       </section>
       <section id="contact-section">
