@@ -11,4 +11,3 @@ require_once "Mentors.php";
 require_once "Interns.php";
 require_once "LockRegForm.php";
 require_once "validation.php";
-?>

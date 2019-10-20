@@ -420,7 +420,7 @@
                 </div>
                 <div style="text-align: center; padding-top: 20px;">
                     <button class="button--midBlue cta-button" style="margin: 0 auto">
-                        <a href="mentorpage.html">See more</a>
+                        <a href="mentorpage.php">See more</a>
                     </button>
                 </div>
             </div>
@@ -472,7 +472,7 @@
                             </h4>
                             <span class="support__item-link">
                                 <i class="fa fa-chevron-circle-right"></i>
-                                <a href="donationpage.html" class="text-light">Get Started</a>
+                                <a href="donationpage.php" class="text-light">Get Started</a>
                             </span>
                         </div>
                     </div>
@@ -486,7 +486,7 @@
                             </h4>
                             <span class="support__item-link">
                                 <i class="fa fa-chevron-circle-right"></i>
-                                <a href="donationpage.html" class="text-light">Get Started</a>
+                                <a href="donationpage.php" class="text-light">Get Started</a>
                             </span>
                         </div>
                     </div>
@@ -560,7 +560,7 @@
 
                 <div class="sponsors_button">
                     <button class="cta-button button--midBlue">
-                        <a href="faq.html">
+                        <a href="faq.php">
                           Become a Sponsor
                         </a>
                     </button>
@@ -577,11 +577,11 @@
         </div>
         <nav>
             <ul>
-                <li class="nav-link-1-vertical"><a href="index.html">Home</a></li>
-                <li class="nav-link-1-vertical"><a href="hng6.html">HNGi6</a></li>
-                <li class="nav-link-1-vertical"><a href="mentorpage.html">Mentors</a></li>
-                <li class="nav-link-1-vertical"><a href="contactform.html">Contact</a></li>
-                <li class="nav-link-1-vertical"><a href="join-intern.html" class="text__dark-blue">Join HNGi</a></li>
+                <li class="nav-link-1-vertical"><a href="index.php">Home</a></li>
+                <li class="nav-link-1-vertical"><a href="hng6.php">HNGi6</a></li>
+                <li class="nav-link-1-vertical"><a href="mentorpage.php">Mentors</a></li>
+                <li class="nav-link-1-vertical"><a href="contactform.php">Contact</a></li>
+                <li class="nav-link-1-vertical"><a href="join-intern.php" class="text__dark-blue">Join HNGi</a></li>
 
             </ul>
         </nav>
@@ -599,7 +599,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"
     crossorigin="anonymous"></script>
     <script>
-        let scrollArrow = document.querySelector('#scroll-down-arrow');
+        var scrollArrow = document.querySelector('#scroll-down-arrow');
         function scrollWin() {
             window.scrollBy(0, 500);
             console.log(window.scrollY)
@@ -626,8 +626,8 @@
     const hamburger = document.getElementById("hamburger");
     const aside = document.getElementsByTagName("aside")[0];
     const hide_aside = document.getElementsByClassName("hide-aside")[0];
-    let mediaQuery = window.matchMedia("(max-width: 960px)");
-    let slideIndex = 0;
+    var mediaQuery = window.matchMedia("(max-width: 960px)");
+    var slideIndex = 0;
 
     showSlides(mediaQuery);
     mediaQuery.addListener(showSlides);
@@ -635,9 +635,9 @@
 
     //const cards = document.getElementsByClassName("card1");
     function showSlides(mediaQueryx) {
-        let i;
+        var i;
 
-        let cards = document.getElementsByClassName("card1");
+        var cards = document.getElementsByClassName("card1");
         if (mediaQuery.matches) {
 
             //var dots = document.getElementsByClassName("dot");
