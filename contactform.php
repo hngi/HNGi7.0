@@ -108,7 +108,6 @@ if (isset($_POST['contact-btn'])) {
     </div>
   </section>
 
-  <?php include('fragments/site_footer.php'); ?>
 
   <!--
     <footer class="tripp">
