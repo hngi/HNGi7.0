@@ -581,7 +581,7 @@
 
                 <div class="sponsors_button">
                     <button class="cta-button button--midBlue">
-                        <a href=donationpage.html">
+                        <a href=donate.html">
                           Become a Sponsor
                         </a>
                     </button>
