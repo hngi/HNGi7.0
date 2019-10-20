@@ -464,7 +464,45 @@ h1
 		font-size: 15px;
 		margin-top: 0.4rem;
 	}
-	footer nav {
+	/*footer nav {
         margin-left: 2%;
+    }*/
+}
+/*Responsive footer*/
+footer > nav{
+    display: grid;
+    grid-template-rows:1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0 3vw;
+    box-sizing: border-box;        
+}
+#socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right:20%;
+}
+footer{
+    background-color: rgb(245, 245, 245);
+    
+}
+@media screen and (max-width:899px){
+    footer{
+        font-size: 2.5vw;
+    }
+    footer #socials img {
+        padding: 20%;
+        height: 5vw !important;
+        width: 5vw !important;
+    }
+}
+@media screen and (min-width:900px){
+    footer{
+        padding: 4rem 8vw;
+    }
+    footer #socials img {
+        padding: 30%;
+        height: 3.5vw;
+        width: 3.5vw;
     }
 }
