@@ -102,10 +102,10 @@ if (isset($_POST['contact-btn'])) {
       <section>
         <h2 class="skyblue-text">Quick Links</h2>
         <div id="link-list">
-          <a href="join-intern.html" class="skyblue-text">Join HNG</a>
-          <a href="index.html" class="skyblue-text">About HNG</a>
-          <a href="MentorSetUpPage2.html" class="skyblue-text">Become a Sponsor</a>
-          <a href="MentorSetUpPage2.html" class="skyblue-text">Sign up as Mentor</a>
+          <a href="join-intern.php" class="skyblue-text">Join HNG</a>
+          <a href="index.php" class="skyblue-text">About HNG</a>
+          <a href="donationpage.html" class="skyblue-text">Become a Sponsor</a>
+          <a href="MentorSetUpPage2.php" class="skyblue-text">Sign up as Mentor</a>
         </div>
       </section>
       <section id="contact-section">
