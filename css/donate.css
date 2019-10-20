@@ -1,7 +1,8 @@
 :root {
   --dark-blue: #084482;
-  --blue: #00AEFF;
-  --light-blue: #D1F0F6;
+  --blue: #00aeff;
+  --light-blue: #d1f0f6;
+  --other-blue: #3c6b9c;
 }
 
 * {
@@ -46,7 +47,8 @@ html {
   font-size: 16px;
 }
 
-a.button-primary, .banner.form form input[type="submit"] {
+a.button-primary,
+.banner.form form input[type='submit'] {
   display: inline-block;
   color: white;
   border-radius: 3px;
@@ -57,7 +59,8 @@ a.button-primary, .banner.form form input[type="submit"] {
   transition: 0.4s ease-out;
 }
 
-a.button-primary:hover {
+a.button-primary:hover,
+.banner.form form input[type='submit']:hover {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   text-decoration: none;
 }
@@ -187,9 +190,8 @@ a.button-primary:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 50vh;
+  min-height: 50vh;
   padding: 32px;
-
 
   background: var(--light-blue);
   background-position: center;
@@ -203,29 +205,32 @@ a.button-primary:hover {
   font-size: 24px;
 }
 
-.banner .desc, .banner .title {
+.banner .desc,
+.banner .title {
   max-width: 600px;
 }
 
 .banner.form form {
   display: flex;
   flex-direction: column;
-  width:100%;
+  width: 100%;
   max-width: 600px;
   text-align: left;
   align-items: center;
 }
 
-.banner.form form input[type='number'] {
+.banner.form form input[type='number'],
+.banner.form form input[type='text'],
+.banner.form form input[type='email'] {
   width: 100%;
   display: block;
   height: 50px;
   padding: 0 0 0 40px;
+  margin-bottom: 16px;
 }
 
 .banner.form form label {
   width: 100%;
-  margin-top: 16px;
   margin-bottom: 4px;
 }
 
@@ -235,4 +240,14 @@ a.button-primary:hover {
   margin-bottom: 16px;
   background: white;
   height: 50px;
+}
+
+.banner#supportForm {
+  background: var(--other-blue);
+}
+
+.banner#supportForm .desc,
+.banner#supportForm .title,
+.banner#supportForm form label {
+  color: white;
 }

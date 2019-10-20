@@ -78,13 +78,38 @@ justify-content: space-between;
 align-items: center;
 }
 
-logo-container {
+#join-hng{
+	border-radius: 3px !important;
+	padding: none !important;
+	color: #808080 !important;
+	background: none !important;
+	transition: none ! important;
+}
+ 
+ header .header-links {
+	align-self: center;
+	border-radius: 3px;
+    padding: 0.3rem 0.3rem !important;
+}
 
+#join-hng:hover{
+	color: #fff !important;
+background:#00AEFF !important;
+box-shadow: none !important;
+}
+
+header .header-links:hover {
+    transform: none !important;
+	color: #fff !important;
+background:#00AEFF !important;
+box-shadow: none !important;
+}
+
+.logo-container {
 height: 100%;
 }
 
 #logo {
-
 height: 100%;
 width: 90%;
 }
@@ -114,7 +139,8 @@ grid-template-areas:
 }
 
 main>div {
-padding: 0 10%;
+padding: 0 10px;
+
 }
 
 .main-first-row {
@@ -128,14 +154,22 @@ grid-area: row2;
 display: flex;
 flex-direction: column;
 justify-content: center;
+margin-left: 20px;
+}
+
+.countdown__item {
+  margin-right: 5px !important;
 }
 
 .main-third-row {
 grid-area: row3;
-display: flex;
-flex-direction: column;
 background: rgba(196, 196, 196, 0.1);
 padding-top: 2em;
+padding-right: 0;
+}
+
+.subheading {
+  margin: 0 auto;
 }
 
 #welcome-text {
@@ -199,11 +233,10 @@ text-align: center;
 }
 
 .card1-image {
-
-max-width: 100%;
+width: 100%;
 display: block;
 height: auto;
-margin: 0 auto;
+
 }
 
 .card1-container {
@@ -211,6 +244,10 @@ margin: 2em 0;
 display: flex;
 
 }
+
+
+  
+
 
 .card1-heading {
 margin: 1em 0;
@@ -227,6 +264,10 @@ color: #333333;
 color: #084482;
 }
 
+
+.accordion_tab{
+  margin-left:15%;
+}
 @media (max-width: 860){
   footer {
     width: auto;
@@ -269,6 +310,14 @@ position: absolute;
 top: 0.2em;
 right: 0.3em;
 cursor: pointer;
+}
+
+#support {
+  width: 100%;
+}
+
+.tripp {
+  width: 100% !important;
 }
 
 
@@ -521,7 +570,6 @@ background: #00AEFF;
 box-shadow: 0px 4px 6px rgba(50, 50, 93, 0.11);
 border-radius: 4px;
 color: #FFFFFF;
-
 }*/
 
 .intern-meet {
@@ -575,7 +623,9 @@ display: none;
 padding: 0;
 }
 
-
+#hng-logo {
+	  width: 40% !important;
+	}
 
 }
 
@@ -797,110 +847,108 @@ margin-left: 5px;
 }
 
 /* SPONSOR STYLING */
-.sponsors {
-  background-color: #ffffff;
-  padding-top: 1.5em;
-  width: 100%;
-  padding-bottom: 1em;
+.sponsors{
+  width: 96vw;
+  margin-right: 0;
+  padding-right: 0;
+  overflow-x: none;
+
+}
+.sponsors__header{
+  color:#3c6b9c;
+  font-weight: bold;
   text-align: center;
 }
-
-.sponsors__header {
-  color: #3c6b9c;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 34px;
-  font-style: normal;
-  text-align: center;
-
+.sponsors_button button{
+  margin: auto;
+}
+.sponsors img{
+  box-sizing: border-box;
+}
+.sponsors__images1 .image1{
+  float: left;
+  margin-right: 4vw;
+  width: 12vw;
+}
+.sponsors__images1 .image3{
+  float: right;
+  margin-left: 5vw;
+  width: 9vw;
+}
+.sponsors__images1 .image2{
+  margin: 0 6vw;
+  width: 4vw;  
+}
+.sponsors__images1 .image4{
+  margin: 0 12vw;
+  width: 4vw;  
+}
+.image4 {
+  font-size: 3vw;
+}
+.sponsors__images2{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+.image5, .image6{
+  width: 20vw;
+}
+.image4, .image5{
+  margin: 5%;
+}
+.carousel{
+  display: none;
+}
+.fa-chevron-right, .fa-chevron-left{
+  color: #00Aeff;
+  font-size: 3vw;
+}
+.fa-chevron-right:hover, .fa-chevron-left:hover{
+  color: #3C6B9C;
+  font-weight: bold;
+  font-size: 5vw;
+}
+@media screen and (max-width:900px){
+  .sponsors__images1 .image1{
+    margin-right: 5vw;
+    width: 13vw;
+  }
+  .sponsors__images1 .image3{
+    margin-left: 0vw;
+    width: 11vw;
+  }
+  .sponsors__images1 .image2{
+    margin: 0 5vw;
+    width: 6vw;  
+  }
 }
 
-.sponsors__images {
-  height:100%;
-  padding-left: 15.83%;
-  padding-right: 15.83%;
-  margin-top: 94px;
-  /* display: flex; */
-  /* justify-content: space-between; */
+@media screen and (max-width:800px){
+  .sponsors__images1 .image1{
+    margin-right: 5vw;
+    width: 11vw;
+  }
+  .sponsors__images1 .image3{
+    width: 9vw;
+  }
+  .sponsors__images1 .image2{
+    margin: 0 10.5%;
+    width: 5vw;  
+  }
 }
-
-.hng_logo {
-  width: 167.12px !important;
-  height: 55px;
-  margin-bottom:25px;
+@media screen and (max-width:600px){
+  .sponsors_images_container{
+    display: none;
+  }
+  .carousel{
+    display: block;
+  }
+  .sponsors{
+  width: 100vw;
+  }
 }
-
-.akwa_logo {
-  height: 80px ;
-  width: 80px !important;
-}
-
-.verifi_logo {
-  width: 115.4px !important;
-  height: 55px;
-  margin-bottom:25px;
-}
-
-.sponsors__images2 {
-  padding-left: 23.68%;
-  padding-right: 23.68%;
-  margin-top: 66px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.figma_logo {
-  /* line-height: 26.84px ; */
-  font-size: 30px;
-  height:55px;
-  margin: 0;
-  padding: 0;
-  margin-bottom:25px;
-}
-
-.bluechip_logo {
-  height: 55px;
-  width: 163.8px !important;
-  margin-bottom:25px;
-}
-
-.flutter_logo {
-  height: 55px;
-  width: 298.16px !important;
-  margin-bottom:25px;
-}
-.slide{
-  position: relative;
-}
-.carousel-indicators{
-  position: absolute;
-  top:90px;
-  z-index:10;
-}
-.carousel-indicators li{
-  background-color: lightgrey;
-  opacity:0.2;
-}
-.carousel-indicators li:active{
-  opacity:0.3;
-}
-.carousel-control-next , .carousel-control-prev{
-  background-color: rgba(60, 107, 126, 0.1);
-  background-size: 20px 20px;
-}
- .sponsors_button {
-  text-align: center;
-}
-
-.sponsors_button button {
- display: inline-block;
-}
-
-.sponsors_button button:focus {
- outline: none;
- border: none;
-}
-
 
 @media (max-width: 750px) {
   .support__items {
@@ -910,87 +958,31 @@ margin-left: 5px;
   .support__item:not(:first-child) {
     margin-top: 4rem;
   }
+  
+  #hng-logo {
+	  width: 33% !important;
+	}
 }
 
-@media screen and (max-width: 1200px) {
-  .sponsors__images2 {
-    padding-left: 19%;
-    padding-right: 19%;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .sponsors__images {
-    padding-left: 12%;
-    padding-right: 12%;
-  }
-
-  .sponsors__images2 {
-    padding-left: 15%;
-    padding-right: 15%;
-  }
-}
-
-@media screen and (max-width: 950px) {
-  .sponsors__images {
-    padding-left: 9%;
-    padding-right: 9%;
-  }
-
-  .sponsors__images2 {
-    padding-left: 12%;
-    padding-right: 12%;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .sponsors__images {
-    flex-wrap: wrap;
-  }
-
-  .sponsors__images2 {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 0;
-  }
-
-  .image2 {
-    width: 50%;
-    text-align: center;
-    margin-bottom: 40px;
-  }
-
-  .image3 img{
-    width: 55%;
-    max-width: 100%;
-  }
-  .image3{
-   text-align: center;
-   width: 100%;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .image1 {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 60px;
-  }
-
-  .image3 {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 60px;
-  }
-}
 
 #wrapper {
     background-color: #3c6b9c;
     color: #F2f5f9
   }
 
-  #headingOne {
+  .accordBlue {
     background-color: #00AEFF;
+    color: white;
+  }
+
+  .dark-text {
+   color: black !important;
+   text-decoration: none !important;
+  }
+
+  .light-text {
+   color: white !important;
+   text-decoration: none !important;
   }
 
   #headingOne button {
@@ -1136,9 +1128,9 @@ margin-left: 5px;
 .main-fifth-row{
   width: 85%;
 }
-.mt-5{
+/*.mt-5{
   width: 85%;
-}
+}*/
 .bass{
   width: 85%;
 }
@@ -1151,24 +1143,7 @@ margin-left: 5px;
 .support{
   width: 90%;
 }
-.sponsors__header{
-  width:89%;
-}
-.sponsors__images{
-  width:85%;
-}
-.figma_logo{
-  width:85%;
-}
-.bluechip_logo{
-  width: 60%;
-}
-.flutter_logo{
-  width: 80%;
-}
-.sponsors_button{
-  width: 90%;
-}
+
 .tripp{
   width: 85%;
 }
@@ -1189,3 +1164,4 @@ margin-left: 5px;
 }
 
 /** Very Small screens**/
+  
