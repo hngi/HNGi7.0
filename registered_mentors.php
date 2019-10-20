@@ -1,10 +1,10 @@
 <?php
-session_start();
+require 'classControllers/init.php';
 if(!isset($_SESSION["role"])) {
 	header('Location:admin_login.php'); 
 }
-    include('backend/Mentors.php');
-    $mentors = new Mentors();
+   
+    $mentors = new Mentor;
     $display = $mentors->allMentors();
 
 ?>
@@ -37,6 +37,25 @@ if(!isset($_SESSION["role"])) {
 			
 		}
 	</style>
+	
+	<script language="javascript" type="text/javascript">
+        function printDiv(divID) {
+            //Get the HTML of div
+            var divElements = document.getElementById(divID).innerHTML;
+            //Get the HTML of whole page
+            var oldPage = document.body.innerHTML;
+
+            //Reset the page's HTML with div's HTML only
+            document.body.innerHTML = 
+              "<html><head><title></title></head><body><br><br><br>" + divElements + "</body>";
+
+            //Print Page
+            window.print();
+
+            //Restore orignal HTML
+            document.body.innerHTML = oldPage;
+        }
+    </script>
 
 </head>
 <body>
@@ -56,39 +75,42 @@ if(!isset($_SESSION["role"])) {
                         echo "<h2>There are no Registered Interns</h2>";
                     } else {
                     ?>
+                        <!--<div class="col-md-3">-->
+                        <!--    <a href="exports/export-to-excel-mentors.php">-->
+                        <!--        <button type="button" id="export">Export to Spreadsheet</button>-->
+                        <!--    </a>-->
+                        <!--</div>-->
                         <div class="col-md-3">
-                            <a href="exports/export-to-excel-mentors.php">
-                                <button type="button" id="export">Export to Spreadsheet</button>
-                            </a>
-                        </div>
-                        <div class="col-md-3">
-                            <a href="exports/export-to-pdf-mentors.php">
+                            <!--<a href="exports/export-to-pdf-mentors.php">-->
+                            <a href="#" onclick="javascript:printDiv('printablediv')">
                                 <button type="button" id="export">Export to PDF</button>
                             </a>
                         </div>
-                        <table class="table table-hover">
-                            <thead>
-                            <tr>
-                                <th>SN</th>
-                                <th>Area Of Expertise</th>
-                                <th>Photo</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Phone</th>
-                                <!-- <th>Link To Linkedin</th> -->
-                                <th>Link To Cv</th>
-                                <th>Why Interested</th>
-                                <th>Current State</th>
-                                <th>Employment Status</th>
-                                <th>Timestamp</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-                                    echo $display; 
-                                ?>
-                            </tbody>
-                        </table>
+                        <div id="printablediv">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>SN</th>
+                                    <th>Area Of Expertise</th>
+                                    <th>Photo</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <!-- <th>Link To Linkedin</th> -->
+                                    <th>Link To Cv</th>
+                                    <th>Why Interested</th>
+                                    <th>Current State</th>
+                                    <th>Employment Status</th>
+                                    <th>Timestamp</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                        echo $display; 
+                                    ?>
+                                </tbody>
+                            </table>
+                        </div>
                         <?php
                     }
                 ?>

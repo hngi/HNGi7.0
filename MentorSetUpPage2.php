@@ -78,7 +78,7 @@ require_once 'classControllers/init.php';
                     $fileNameNew = uniqid('', true).".".$fileActualExt;
                     $fileDestination = 'uploads/'.$fileNameNew;
                     if(move_uploaded_file($fileTmpName, $fileDestination)){
-                      $mentor = new Mentors;
+                      $mentor = new Mentor;
                       $mentor->area_of_expertise= $database->escape_string($area_of_expertise);
                       $mentor->photo_url= $fileDestination;
                       $mentor->name = $database->escape_string($_POST['name']);

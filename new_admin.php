@@ -1,6 +1,5 @@
 <?php
-
-    include('backend/Admins.php');
+   require_once "classControllers/init.php";
     $admin = new Admins();
 
     if(!isset($_SESSION["role"])) {
@@ -8,12 +7,20 @@
     }
 
     if(isset($_POST["submit"])) {
-        $firstname = $_POST["firstname"];
-        $lastname = $_POST["lastname"];
-        $email = $_POST["email"];
-        $role = $_POST["role"];
+        $firstname = $database->escape_string($_POST["firstname"]);
+        $lastname = $database->escape_string($_POST["lastname"]);
+        $email = $database->escape_string($_POST["email"]);
+        $role = $database->escape_string($_POST["role"]);
+        $password = rand(123456, 789654);
+        //$password = sha1($password);
+        $resp = $admin->newAdmin($firstname, $lastname, $email, $role,$password);
+        if ($resp) {
 
-        $resp = $admin->newAdmin($firstname, $lastname, $email, $role);
+            $url = "http://" . $_SERVER["HTTP_HOST"] . dirname($_SERVER["PHP_SELF"]) . "/admin_login.php";
+            $subject = 'WElCOME TO HNG INTERNSHIP';
+            $body = $firstname . ' ' . $lastname . 'You have been registered as an admin on HNG INTERSHIP site, kindly find the attachment of your registration detail and login with it. You are advise to change your password after you logedd in. Thank you';
+            sendNewAdminMail($email, $password, $url, $subject, $body);
+        }
 
     }
 

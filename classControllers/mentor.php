@@ -1,5 +1,4 @@
 <?php
-
 class Mentors
 {
 	public $area_of_expertise;
@@ -14,6 +13,8 @@ class Mentors
 	public $current_state;
 	public $employment_status;
 	public $timestamp;
+
+
 	public function Apply_mentor(){
 		global $database;
 		$res = $database->query("INSERT INTO mentors()
@@ -32,6 +33,7 @@ class Mentors
            return $array;
            
 	}
+	
 	
 }
 	// $mentor = new Mentors;

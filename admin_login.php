@@ -1,3 +1,14 @@
+<?php require 'classControllers/init.php';
+$interns = new Admins;
+if (isset($_POST['login'])) {
+  $email = $_POST["email"];
+  $password = $_POST["password"];
+  $login = $interns->adminLogin($email, $password);
+  $errors = '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: #F7CFCF; color: #6A0E0D; width: 80% !important; text-align: center;">Wrong Credentials</p>';
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,7 +34,7 @@
         var email = $('#email').val();
         var password = $('#password').val();
         
-        $.post('backend/Admins.php?login=yes', {
+        $.post($login.'?login=yes", {
             email: email,
             password: password
         },
@@ -44,16 +55,24 @@
 
     <div class="form-area">
         
-      <form class="form-container">
+      <form class="form-container" method="post">
+        
         <h2>Login as an Admin</h2>
+        <?php
+          if(!empty($errors) ){
+            
+              echo $errors;
+            
+          }
 
+        ?>
         <p id="result"></p>
 
-        <input type="email" name="email" id="email" placeholder="enter your Email" />
-        <input type="password" name="password" id="password" placeholder="enter your password">
+        <input type="email" name="email" id="email" placeholder="enter your Email" required/>
+        <input type="password" name="password" id="password" placeholder="enter your password" required>
         
-        <button type="button" onclick="signup()">LOG IN</button>
-        <a href="">Forgot Password?</a>
+        <button type="submit" onclick="signup()" name="login">LOG IN</button>
+        <!--<a href="">Forgot Password?</a>-->
         
       </form>
     </div>
@@ -65,11 +84,11 @@
       <section>
         <h2 class="skyblue-text">Quick Links</h2>
         <div id="link-list">
-          <a href="join-intern.html" class="skyblue-text">Join HNG</a>
-          <a href="index.html" class="skyblue-text">About HNG</a>
-          <a href="MentorSetUpPage2.html" class="skyblue-text">Become a Sponsor</a>
-          <a href="MentorSetUpPage2.html" class="skyblue-text">Sign up as Mentor</a>
-          <a href="faq.html" class="skyblue-text">FAQ</a>
+          <a href="join-intern.php" class="skyblue-text">Join HNG</a>
+          <a href="index.php" class="skyblue-text">About HNG</a>
+          <a href="MentorSetUpPage2.php" class="skyblue-text">Become a Sponsor</a>
+          <a href="MentorSetUpPage2.php" class="skyblue-text">Sign up as Mentor</a>
+          <a href="faq.php" class="skyblue-text">FAQ</a>
         </div>
       </section>
       <section id="contact-section">
