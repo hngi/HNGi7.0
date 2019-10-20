@@ -21,13 +21,13 @@ function sendNewAdminMail($email, $enc_password, $subject, $url, $body)
     $mail->isSMTP();                                            // Set mailer to use SMTP
     $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'hnginterns9@gmail.com';                     // SMTP username
-    $mail->Password   = 'California008';                               // SMTP password
+    $mail->Username = 'alisataylorm.m@gmail.com';
+    $mail->Password = 'alisa1074';                               // SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom($email, 'HNG SUPPER ADMIN');
+    $mail->setFrom('alisataylorm.m@gmail.com', 'HNG SUPPER ADMIN');
     $mail->addAddress("$email");     // Add a recipient
     // $mail->addAddress('ellen@example.com');               // Name is optional
     $mail->addReplyTo('no-reply@gmail.com', 'No-Reply');
@@ -66,13 +66,13 @@ function contactMail($email, $name, $subject, $body)
     $mail->isSMTP();                                            // Set mailer to use SMTP
     $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'hnginterns9@gmail.com';                     // SMTP username
-    $mail->Password   = 'California008';                               // SMTP password
+    $mail->Username = 'alisataylorm.m@gmail.com';
+    $mail->Password = 'alisa1074';                              // SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom($email, $name);
+    $mail->setFrom('alisataylorm.m@gmail.com', $name);
     $mail->addAddress("$email");     // Add a recipient
     // $mail->addAddress('ellen@example.com');               // Name is optional
     $mail->addReplyTo('no-reply@gmail.com', 'No-Reply');
