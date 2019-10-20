@@ -106,6 +106,8 @@ if (isset($_POST['contact-btn'])) {
           <a href="index.php" class="skyblue-text">About HNG</a>
           <a href="donationpage.html" class="skyblue-text">Become a Sponsor</a>
           <a href="MentorSetUpPage2.php" class="skyblue-text">Sign up as Mentor</a>
+          <a href="faq.php" class="skyblue-text">FAQ</a>
+
         </div>
       </section>
       <section id="contact-section">
