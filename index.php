@@ -470,7 +470,7 @@
 
                         <div class="mb-3" style="padding-top: 35px;">
                         <a style="color:#00AEFF;" href="hng6.php">
-                        <i class="fa fa-angle-right px-1" style="color:#00AEFF; border:2px solid #00AEFF; background-color: white; width: 40px; height:7px; border-radius: 50%; "></i>Learn more</a></div>
+                        <i class="fa fa-angle-right px-1" style="color:#00AEFF; border:2px solid #00AEFF; background-color: white; border-radius: 50%; "></i>Learn more</a></div>
                     </div>
 
                     <div class="col-12 col-lg-6">
