@@ -121,7 +121,7 @@ const dummyInterns =
 		location: "Lagos"
 	},
 	{
-		id: "323wew13",
+		id: "323wew12",
 		name: "Bobby Fischer",
 		email: "fischer@gmail.com",
 		age: 35,
@@ -131,7 +131,7 @@ const dummyInterns =
 		location: "Lagos"
 	},
 	{
-		id: "323wew14",
+		id: "323wew12",
 		name: "Mercy Johnson",
 		email: "mercyj@gmail.com",
 		age: 23,
@@ -141,7 +141,7 @@ const dummyInterns =
 		location: "Lagos"
 	},
 	{
-		id: "323wew15",
+		id: "323wew12",
 		name: "Taraji Henson",
 		email: "thenson@gmail.com",
 		age: 29,
