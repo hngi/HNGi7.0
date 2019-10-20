@@ -59,14 +59,14 @@
 			</div>
 		</section>
 
-		<h2 class="center-text"><a href="join-intern.html" class="skyblue-text" id="countdown-register">REGISTER FOR HNG 7.0 NOW</a></h2>
+		<h2 class="center-text"><a href="join-intern.php" class="skyblue-text" id="countdown-register">REGISTER FOR HNG 7.0 NOW</a></h2>
 	</section>
 	<section id="home-about">
 		<h1 class="blue-text">HNG 6.0 Internship</h1>
 		<div id="about-container">
 			<article>
 				<p>
-					The HNG 6.0 Internship commenced 23rd April, 2019 and ended 58th October, 2020. <br /> <br /> A well-planned, coordinated event where young talented folks from across the globe participated remotely and were involved in learning key skills needed to becoming the best globally in programming, design thinking, machine learning and digital marketing. <br /> <br /> The HNG 6.0 Internship programme comprised of 10 stages. Tasks were given to participants and deadlines for submission was set. Those who were late in submitting tasks and also those who didn’t follow instructions to complete task as required were eliminated at every stage of the event. <br /> <br /> The programme was directed by Mark Essien, (founder-CEO hotels.ng) and some of the participants from the previous HNG Internship edition were brought on board as <a href="mentorpage.html" class="skyblue-text">Mentors</a>, their job was to guide and inspire participatants when needed and also to properly coordinate the event.
+					The HNG 6.0 Internship commenced 23rd April, 2019 and ended 58th October, 2020. <br /> <br /> A well-planned, coordinated event where young talented folks from across the globe participated remotely and were involved in learning key skills needed to becoming the best globally in programming, design thinking, machine learning and digital marketing. <br /> <br /> The HNG 6.0 Internship programme comprised of 10 stages. Tasks were given to participants and deadlines for submission was set. Those who were late in submitting tasks and also those who didn’t follow instructions to complete task as required were eliminated at every stage of the event. <br /> <br /> The programme was directed by Mark Essien, (founder-CEO hotels.ng) and some of the participants from the previous HNG Internship edition were brought on board as <a href="mentorpage.php" class="skyblue-text">Mentors</a>, their job was to guide and inspire participatants when needed and also to properly coordinate the event.
 				</p>
 			</article>
 			<img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722500/home-forum_wmrsfj.png">
@@ -94,7 +94,7 @@
 				Participation was achieved remotely via the popular collaboration tool called Slack.
 			</p>
 			<br />
-			<p id="p-link"><a href="join-intern.html" class="def-button">Join HNG</a></p>
+			<p id="p-link"><a href="join-intern.php" class="def-button">Join HNG</a></p>
 		</article>
 		<img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722649/home-geeks_vld6nt.png" id="geek-img">
 	</section>
@@ -171,7 +171,7 @@
 			<a href="#"><img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722855/bluechip-logo_rw62cu.svg"></a>
 			<a href="#"><img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg"></a>
 		</div>
-		<p class="center-text"><a href="MentorSetUpPage2.html" class="def-button shadowed center">Become a Sponsor</a></p>
+		<p class="center-text"><a href="MentorSetUpPage2.php" class="def-button shadowed center">Become a Sponsor</a></p>
 	</section>
 	 <footer>
 	 	<img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722444/hng-brand-logo_gnplmq.svg">

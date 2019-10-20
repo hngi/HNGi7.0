@@ -12,6 +12,27 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
+    <style>
+        @media screen and (max-width: 700px){
+          .main-first-row, .main-fourth-row {
+            margin: 0 auto;
+          }
+
+          .main-third-row .card1-container {
+            display : block;
+          }
+
+          .main-third-row .card1-container .card1 {
+            margin : 10px auto;
+          }
+
+          .main-fourth-row {
+          width: 85%;
+          padding-right: 0px;
+
+          }
+        }
+    </style>
 </head>
 
 <body class="container-fluid">
@@ -500,7 +521,7 @@
                             </h4>
                             <span class="support__item-link">
                                 <i class="fa fa-chevron-circle-right"></i>
-                                <a href="#" class="text-light">Get Started</a>
+                                <a href="donate.html" class="text-light">Get Started</a>
                             </span>
                         </div>
                     </div>
