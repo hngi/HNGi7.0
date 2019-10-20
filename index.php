@@ -127,7 +127,7 @@
                 <div class="section-2">
                     <div class="section-2-sections-container">
                         <div class="half-a-row">
-                            <h4 class="mh4" style="color: darkblue; padding-bottom: 20px">Apply To Become An Intern</h4>
+                            <h4 class="mh4 h3" style="color: #00AEFF; padding-bottom: 20px">Apply To Become An Intern</h4>
                             <p class="content">The HNG internship is a 3-month remote internship designed to find and
                                 develop
                                 the most talented software developers. Everyone is welcomed to participate (there is no
