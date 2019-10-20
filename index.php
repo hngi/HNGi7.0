@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
+    <script src="https://unpkg.com/scrollreveal"></script>
     <style>
         @media screen and (max-width: 700px){
           .main-first-row, .main-fourth-row {
@@ -55,7 +56,7 @@
                         the bridge between learning to code, and becoming the best in the world.
                     </p>
                     <button class="cta-button button--midBlue" id="buttt"> 
-                        <a href="join-intern.php" id="butt">Get Started</a>
+                        <a href="join-intern.php" id="butt">Begin Internship</a>
                     </button>
                 </div>
                 <div class="image-column desktop-only">
@@ -121,13 +122,18 @@
                     </div>
                 </div>
             </div>
+            <!--Start Reveal-->
 
+
+          <section class="reveal">
+            <div class="content">
             <div class="main-fourth-row">
-                <h3 id="how-it-works">How Does It Work ?</h3>
+                
                 <div class="section-2">
                     <div class="section-2-sections-container">
-                        <div class="half-a-row">
-                            <h4 class="mh4 h3" style="color: #00AEFF; padding-bottom: 20px">Apply To Become An Intern</h4>
+                        <div class="half-a-row the-half-row">
+                        <h3 class="h3" d="how-it-works">How Does It Work ?</h3>
+                            <h4 class="mh4" style="color: darkblue; padding-bottom: 20px">Apply To Become An Intern</h4>
                             <p class="content">The HNG internship is a 3-month remote internship designed to find and
                                 develop
                                 the most talented software developers. Everyone is welcomed to participate (there is no
@@ -135,7 +141,7 @@
                                 Anyone can log into the internship using their laptop. Each week we give tasks.
                           
             
-                                <button class="cta-button-4 button--midBlue" onclick="location.href='join-intern.php'" type="button">Get Started</button>
+                                <button class="cta-button-4 button--midBlue" onclick="location.href='join-intern.php'" type="button">Apply Now</button>
                         </div>
                         <div class="half-a-row">
                             <table>
@@ -166,6 +172,9 @@
 
                         </div>
                     </div>
+            </div>
+          </section>
+            
 
                     <div class="section-2-sections-container">
                         <div class="half-a-row">
@@ -180,12 +189,9 @@
                                 the most talented software developers. Everyone is welcomed to participate (there is no
                                 entrance exam).
                                 Anyone can log into the internship using their laptop. Each week we give tasks.</p>
-                            <button class="cta-button-4 button--midBlue" type="button"><a href="join-intern.php">Get
-                                    Started</a></button>
+                            <button class="cta-button-4 button--midBlue" type="button"><a href="join-intern.php">Connect With Teammates</a></button>
 
-                                Anyone can log into the internship using their laptop. Each week we give tasks.
-                                <button class="cta-button-4 button--midBlue" type="button"><a
-                                        href="join-intern.php">Get Started</a></button></p>
+                                
                         </div>
                     </div>
 
@@ -204,7 +210,7 @@
 
 
                         <button class="button--midBlue cta-button">
-                            <a href="join-intern.php">Get Started</a></button>
+                            <a href="join-intern.php">Learn More</a></button>
                     </div>
 
                     <div class="col-12 mt-md-5 mt-lg-0 col-md-6 ">
@@ -467,12 +473,12 @@
                             becoming the best globally in programming,
                             design thinking, machine learning and digital
                             marketing.</p>
-
-                        <div class="mb-3" style="padding-top: 35px;">
-                        <a style="color:#00AEFF;" href="hng6.php">
-
-                        <i class="fa fa-angle-right px-1" style="color:#00AEFF; border:1px solid #00AEFF; background-color: white; border-radius: 50%; "></i>Learn more</a></div>
-
+                          <!-- The fix-a class was used to style the a element as a button-->
+                        <div class="mb-3" style="padding-top: 15px;"><button class="button--midBlue cta-button">
+                      <a href="hng6.php">Learn more</a>
+                      </button>
+                        
+                      </div>
                     </div>
 
                     <div class="col-12 col-lg-6">
@@ -495,7 +501,7 @@
                             </h4>
                             <span class="support__item-link">
                                 <i class="fa fa-chevron-circle-right"></i>
-                                <a href="donationpage.php" class="text-light">Get Started</a>
+                                <a href="donationpage.php" class="text-light">Donate to us</a>
                             </span>
                         </div>
                     </div>
@@ -509,7 +515,7 @@
                             </h4>
                             <span class="support__item-link">
                                 <i class="fa fa-chevron-circle-right"></i>
-                                <a href="donationpage.php" class="text-light">Get Started</a>
+                                <a href="donationpage.php" class="text-light">Partner with us</a>
                             </span>
                         </div>
                     </div>
@@ -523,7 +529,7 @@
                             </h4>
                             <span class="support__item-link">
                                 <i class="fa fa-chevron-circle-right"></i>
-                                <a href="donate.html" class="text-light">Get Started</a>
+                                <a href="donate.html" class="text-light">Support us</a>
                             </span>
                         </div>
                     </div>
@@ -583,7 +589,7 @@
 
                 <div class="sponsors_button">
                     <button class="cta-button button--midBlue">
-                        <a href="donate.html">
+                        <a href="faq.php">
                           Become a Sponsor
                         </a>
                     </button>
@@ -604,6 +610,12 @@
     crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"
     crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script>
+    ScrollReveal({  reset: true})
+    ScrollReveal().reveal('.reveal', {  delay: 200})
+    </script>
     <script>
         var scrollArrow = document.querySelector('#scroll-down-arrow');
         function scrollWin() {
@@ -658,7 +670,8 @@
 
         }
 
-    }
+        
+    
     //handle sroll to top arrow
 $('a[href*="#"]')
   .not('[href="#"]')
