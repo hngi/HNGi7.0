@@ -107,9 +107,6 @@ if (isset($_POST['contact-btn'])) {
       </div>
     </div>
   </section>
-
-  <?php include('fragments/site_footer.php'); ?>
-
   <!--
     <footer class="tripp">
             <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722444/hng-brand-logo_gnplmq.svg">
