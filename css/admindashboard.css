@@ -1,21 +1,6 @@
 *{
     box-sizing: border-box;
 }
-
-
-.top-bar{
-    background: #fff;
-    height: auto;
-    padding: 12px;
-}
-
-.top-bar h2{
-    margin-left: 35%;
-    font-size: 22px;
-    font-weight: bold;
-    /*margin-top: -5%;*/
-}
-
 html{
     scroll-behavior: smooth;
 }
