@@ -1,128 +1,118 @@
 <?php
+date_default_timezone_set('Africa/Lagos');
+require_once 'classControllers/init.php';
+    $intern = new Intern;
+    $lockForm = new LockRegForm();
+    $status = $lockForm->checkStatus();
 
-  date_default_timezone_set('Africa/Lagos');
+    if (isset($_POST['submit'])) {
 
+      $fullname = $database->escape_string($_POST['fullname']);
+      $email = $database->escape_string($_POST['email']);
+      $phoneNo = $database->escape_string($_POST['phoneNo']); 
+      $linkPort = $database->escape_string($_POST['linkPort']); 
+      $linkCV = $database->escape_string($_POST['linkCV']);
+      $exp = $database->escape_string($_POST['exp']);
+      $interest = $database->escape_string($_POST['interest']);
+      $location = $database->escape_string($_POST['location']);
+      $empStatus = $database->escape_string($_POST['empStatus']);
+      $about = $database->escape_string($_POST['about']);
+      $date = $database->escape_string($_POST['date']);
+      $insertInterns = $intern->internSignup();
+
+      $success = '<div class="alert alert-success" role="alert" style="background: green; padding: 5px 10px 5px 10px; width: 80% !important; text-align: center; color: white; ">
+                Your registration was  successful. We will get back to you as soon as possible.
+            </div>';
+      
+    }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Join as an intern</title>
-    <link rel="shortcut icon" href="https://res.cloudinary.com/dekillerj/image/upload/v1570648980/brand-logo.png"/>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-      crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
-    <link rel="icon" type="img/png" href="images/hng-favicon.png">
-    <link rel="stylesheet" type="text/css" href="css/header-footer.css">
-    <link rel="stylesheet" href="css/join-intern.css">
 
-    <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join as an intern</title>
+  <link rel="shortcut icon" href="https://res.cloudinary.com/dekillerj/image/upload/v1570648980/brand-logo.png" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+  <link rel="icon" type="img/png" href="images/hng-favicon.png">
+  <link rel="stylesheet" type="text/css" href="css/header-footer.css">
+  <link rel="stylesheet" href="css/join-intern.css">
 
-    <script>
-      function signup() {
-              
-        var fullname = $('#fullname').val();
-        var email = $('#email').val();
-        var phoneNo = $('#phoneNo').val();
-        var linkPort = $('#linkPort').val();
-        var linkCV = $('#linkCV').val();
-        var exp = $('#exp').val();
-        var interest = $('#interest').val();
-        var location = $('#location').val();
-        var empStatus = $('#empStatus').val();
-        var about = $('#about').val();
-        var date = $('#date').val();
-        
-        $.post('backend/Interns.php?signup=yes', {
-            fullname: fullname,
-            email: email,
-            phoneNo: phoneNo,
-            linkPort: linkPort,
-            linkCV: linkCV,
-            exp: exp,
-            interest: interest,
-            location: location,
-            empStatus: empStatus,
-            about: about,
-            date: date
-        },
-        function(data){
-            $('#result').html(data);
-        });            
-      }
-    </script>
+  <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 
-  </head>
-  <body>
-    <?php include('fragments/site_header.php'); ?>
-    <section class="jumbo">
-      <h2 class="heading">Join as an intern</h2>
-      <p class="para">
-        Complete the form below to begin your journey as an intern.
-      </p>
-      <p class="para2">To become a mentor <a href="MentorSetUpPage2.php">Click here</a></p>
-    </section>
+</head>
 
-    <div class="form-area">
+<body>
+  <?php include('fragments/site_header.php'); ?>
+  <section class="jumbo">
+    <h2 class="heading">Join as an intern</h2>
+    <p class="para">
+      Complete the form below to begin your journey as an intern.
+    </p>
+    <p class="para2">To become a mentor <a href="MentorSetUpPage2.php">Click here</a></p>
+  </section>
 
-<?php
-        $errMsg = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-            if (strpos($errMsg, 'join-intern.php?Submitted') !== false){
-                echo "<div style='text-align:center; font-size:1.3em; color:#084482'>Thank You for completing the form, we will get back to You soon!</div>";
-            }
-?>
+  <div class="form-area">
 
     <?php
-      include('backend/LockRegForm.php');
-      $lockForm = new LockRegForm();
-      $status = $lockForm->checkStatus();
-      if($status == 1) {
-        ?>
-        <form class="form-container" action="interns_form.php" method="post" id="myForm">
-
-        <?php 
-          if(isset($_GET["success"])) {
-            echo '
-            <div class="alert alert-success" role="alert" style="color: green;">
-                Your registration was  successful. We will get back to you as soon as possible.
-            </div>';
-          }
-          ?>
-
-          <input type="text" name="fullname" id="fullname" required placeholder="Fullname" />
-          <input type="email" name="email" id="email" required placeholder="Email" />
-          <input type="text" name="phoneNo" id="phoneNo" required placeholder="Phone number" />
-          <input type="url" name="linkPort" id="linkPort" required placeholder="Link to portfolio (if you have any)"/>
-          <input type="url" name="linkCV" id="linkCV" required placeholder="Link to your CV (Linkedin profile or any other link)" />
-          <input type="text" name="exp" id="exp" required placeholder="How many years experience do you have" />
-          <input type="text" name="interest" id="interest" required placeholder="What area are you interested in" />
-          <input type="text" name="location" id="location" required placeholder="What state are you currently  located in?"/>
-          <input type="text" name="empStatus" id="empStatus" required placeholder="What is  your current employment status?" />
-          <textarea name="about" id="about" required cols="30" rows="10" placeholder="Briefly tell us about yourself" ></textarea>
-          <input type='hidden' name='date' id="date" value='<?=date('Y-m-d H:i:s');?>'>
-
-          <p id="result"></p>
-
-          <input type="button" name="submit" value="SUBMIT" class="submitBtn" onclick="signup()" />
-        </form>
-        <?php
-
-      } else {
-        ?>
-          <div style="width: 100%; margin: 0 auto; text-align: center; padding: 30px; color: #6F0503; ">
-            <h1>Registration is now Closed</h1>
-          </div>
-        <?php
-      }
+    $errMsg = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    if (strpos($errMsg, 'join-intern.php?Submitted') !== false) {
+      echo "<div style='text-align:center; font-size:1.3em; color:#084482'>Thank You for completing the form, we will get back to You soon!</div>";
+    }
     ?>
 
-      
-    </div>
-    <!--div class="footer-container">
+    <?php
+   
+    if ($status == 1) {
+      ?>
+      <form class="form-container" action="" method="post" id="myForm">
+
+        <?php
+         
+          
+          if(isset($success) ){
+            
+              echo $success;
+            
+          }
+           
+          ?>
+
+        <input type="text" name="fullname" id="fullname" required placeholder="Fullname" />
+        <input type="email" name="email" id="email" required placeholder="Email" />
+        <input type="text" name="phoneNo" id="phoneNo" required placeholder="Phone number" />
+        <input type="url" name="linkPort" id="linkPort" required placeholder="Link to portfolio (if you have any)" />
+        <input type="url" name="linkCV" id="linkCV" required placeholder="Link to your CV (Linkedin profile or any other link)" />
+        <input type="text" name="exp" id="exp" required placeholder="How many years experience do you have" />
+        <input type="text" name="interest" id="interest" required placeholder="What area are you interested in" />
+        <input type="text" name="location" id="location" required placeholder="What state are you currently  located in?" />
+        <input type="text" name="empStatus" id="empStatus" required placeholder="What is  your current employment status?" />
+        <textarea name="about" id="about" required cols="30" rows="10" placeholder="Briefly tell us about yourself"></textarea>
+        <input type='hidden' name='date' id="date" value='<?= date('Y-m-d H:i:s'); ?>'>
+
+        <p id="result"></p>
+
+        <input type="submit" name="submit" value="SUBMIT" class="submitBtn"/>
+      </form>
+    <?php
+
+    } else {
+      ?>
+      <div style="width: 100%; margin: 0 auto; text-align: center; padding: 30px; color: #6F0503; ">
+        <h1>Registration is now Closed</h1>
+      </div>
+    <?php
+    }
+    ?>
+
+
+  </div>
+  <!--div class="footer-container">
       <footer class="footer">
         <a href="index.html"><img class="footer-logo" src="https://res.cloudinary.com/dekillerj/image/upload/v1570648980/brand-logo.png" alt="HNG logo" /></a>
         <div class="footer-items">
@@ -165,7 +155,7 @@
       </footer>
     </div-->
 
-    <footer>
+  <footer>
     <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722444/hng-brand-logo_gnplmq.svg">
     <nav>
       <section>
@@ -210,7 +200,8 @@
         </div>
       </section>
     </nav>
-    <p class="center-text darkblue-text">&copy 2019, HGN Internship. All rights reserved.</p>
+    <p class="center-text darkblue-text">&copy 2019, HNG Internship. All rights reserved.</p>
   </footer>
-  </body>
+</body>
+
 </html>

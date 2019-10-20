@@ -1,3 +1,11 @@
+<style>
+footer #socials a  {
+    display: inline-block;
+    margin-top: 10px;  
+}
+</style>
+
+
 <footer class="tripp">
                 <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722444/hng-brand-logo_gnplmq.svg">
                 <nav class="footer-nav">
@@ -49,7 +57,7 @@
                         </div>
                     </div>
                 </nav>
-                <p class="center-text darkblue-text">&copy 2019, HGN Internship. All rights reserved.</p>
+                <p class="center-text darkblue-text">&copy 2019, HNG Internship. All rights reserved.</p>
                 
                 <div class="center-text"><a href="#header" id="top">Jump to Top<span></span></a></div>
 

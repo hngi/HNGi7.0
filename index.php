@@ -12,21 +12,40 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
+    <style>
+        @media screen and (max-width: 700px){
+          .main-first-row, .main-fourth-row {
+            margin: 0 auto;
+          }
+
+          .main-third-row .card1-container {
+            display : block;
+          }
+
+          .main-third-row .card1-container .card1 {
+            margin : 10px auto;
+          }
+
+          .main-fourth-row {
+          width: 85%;
+          padding-right: 0px;
+
+          }
+        }
+    </style>
 </head>
 
-<body>
-  <div class="container-fluid">
+<body class="container-fluid">
     <div id="scroll-down-arrow" class="animated bounceInUp" onclick="scrollWin()">
         <i class="fas fa-arrow-down"></i>
     </div>
     <img src="https://bit.ly/2OC3tWo" id="corner-circle" alt="Graphic at the top right corner">
-
     <div class="containerGrid">
         <?php
           include('fragments/site_header.php');
         ?>
          <main>
-            <div class="main-first-row ">
+            <div class="main-first-row">
                 <div class="welcome-column">
                     <h1 id="welcome-text" class="text__dark-blue">
                         Welcome to <br> HNG 7.0 Internship
@@ -109,9 +128,13 @@
                     <div class="section-2-sections-container">
                         <div class="half-a-row">
                             <h4 class="mh4" style="color: darkblue; padding-bottom: 20px">Apply To Become An Intern</h4>
-                            <p class="content">
-                              The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcomed to participate (there is no entrance exam). Anyone can log into the internship using their laptop. Each week we give tasks.
-                            </p>
+                            <p class="content">The HNG internship is a 3-month remote internship designed to find and
+                                develop
+                                the most talented software developers. Everyone is welcomed to participate (there is no
+                                entrance exam).
+                                Anyone can log into the internship using their laptop. Each week we give tasks.
+                          
+            
                                 <button class="cta-button-4 button--midBlue" onclick="location.href='join-intern.php'" type="button">Get Started</button>
                         </div>
                         <div class="half-a-row">
@@ -418,7 +441,7 @@
                 </div>
                 <div style="text-align: center; padding-top: 20px;">
                     <button class="button--midBlue cta-button" style="margin: 0 auto">
-                        <a href="mentorpage.html">See more</a>
+                        <a href="mentorpage.php">See more</a>
                     </button>
                 </div>
             </div>
@@ -447,7 +470,9 @@
 
                         <div class="mb-3" style="padding-top: 35px;">
                         <a style="color:#00AEFF;" href="hng6.php">
-                        <i class="fa fa-angle-right px-1" style="color:#00AEFF; border:2px solid #00AEFF; background-color: white; width: 40px; height:7px; border-radius: 50%; "></i>Learn more</a></div>
+
+                        <i class="fa fa-angle-right px-1" style="color:#00AEFF; border:1px solid #00AEFF; background-color: white; border-radius: 50%; "></i>Learn more</a></div>
+
                     </div>
 
                     <div class="col-12 col-lg-6">
@@ -470,7 +495,7 @@
                             </h4>
                             <span class="support__item-link">
                                 <i class="fa fa-chevron-circle-right"></i>
-                                <a href="donationpage.html" class="text-light">Get Started</a>
+                                <a href="donationpage.php" class="text-light">Get Started</a>
                             </span>
                         </div>
                     </div>
@@ -484,7 +509,7 @@
                             </h4>
                             <span class="support__item-link">
                                 <i class="fa fa-chevron-circle-right"></i>
-                                <a href="donationpage.html" class="text-light">Get Started</a>
+                                <a href="donationpage.php" class="text-light">Get Started</a>
                             </span>
                         </div>
                     </div>
@@ -498,7 +523,7 @@
                             </h4>
                             <span class="support__item-link">
                                 <i class="fa fa-chevron-circle-right"></i>
-                                <a href="#" class="text-light">Get Started</a>
+                                <a href="donate.html" class="text-light">Get Started</a>
                             </span>
                         </div>
                     </div>
@@ -558,7 +583,7 @@
 
                 <div class="sponsors_button">
                     <button class="cta-button button--midBlue">
-                        <a href="faq.html">
+                        <a href="donate.html">
                           Become a Sponsor
                         </a>
                     </button>
@@ -568,24 +593,19 @@
         </main>
 
     </div>
-  </div>
-
-
-
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"
     crossorigin="anonymous"></script>
     <script>
-        let scrollArrow = document.querySelector('#scroll-down-arrow');
+        var scrollArrow = document.querySelector('#scroll-down-arrow');
         function scrollWin() {
             window.scrollBy(0, 500);
             console.log(window.scrollY)
@@ -608,13 +628,12 @@
         }
         window.addEventListener('scroll', (event) => displayArrow(event))
     </script>
-
     <script>
     const hamburger = document.getElementById("hamburger");
     const aside = document.getElementsByTagName("aside")[0];
     const hide_aside = document.getElementsByClassName("hide-aside")[0];
-    let mediaQuery = window.matchMedia("(max-width: 960px)");
-    let slideIndex = 0;
+    var mediaQuery = window.matchMedia("(max-width: 960px)");
+    var slideIndex = 0;
 
     showSlides(mediaQuery);
     mediaQuery.addListener(showSlides);
@@ -622,9 +641,9 @@
 
     //const cards = document.getElementsByClassName("card1");
     function showSlides(mediaQueryx) {
-        let i;
+        var i;
 
-        let cards = document.getElementsByClassName("card1");
+        var cards = document.getElementsByClassName("card1");
         if (mediaQuery.matches) {
 
             //var dots = document.getElementsByClassName("dot");
@@ -639,11 +658,12 @@
 
         }
 
+    }
     //handle sroll to top arrow
-    $('a[href*="#"]')
-    .not('[href="#"]')
-    .not('[href="#0"]')
-    .click(function(event) {
+$('a[href*="#"]')
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
     
     if (
       location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
@@ -669,12 +689,10 @@
         });
       }
     }
-    });
+  });
 
-  </script>
-
-
-  <script>
+</script>
+<script>
         //darkangel cc.
         const daysElem = document.querySelector('#days'), //Edit this selector to pick the days element in your HTML.
     hoursElem = document.querySelector('#hours'),
@@ -682,33 +700,33 @@
     secondsElem = document.querySelector('#seconds'),
     countDownWrapper = document.querySelector('.countdown'); //This is the counter that wraps all 4 numbers.
 
-    // Set the date we're counting down to
-    var countDownDate = new Date("Jan 1, 2020 22:0:0").getTime();
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 1, 2020 22:0:0").getTime();
 
-    function updateClock() {
-    // Get today's date and time
-    var now = new Date().getTime();
-    // Find the distance between now and the count down date
-    var distance = countDownDate - now;
-    // Time calculations for days, hours, minutes and seconds
-    var daysLeft = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hoursLeft = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutesLeft = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var secondsLeft = Math.floor((distance % (1000 * 60)) / 1000);
+function updateClock() {
+  // Get today's date and time
+  var now = new Date().getTime();
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+  // Time calculations for days, hours, minutes and seconds
+  var daysLeft = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hoursLeft = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutesLeft = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var secondsLeft = Math.floor((distance % (1000 * 60)) / 1000);
     // Display the results.
     daysElem.innerText = daysLeft;
     hoursElem.innerText = hoursLeft;
     minutesElem.innerText = minutesLeft;
     secondsElem.innerText = secondsLeft;
-    // If the count down is finished, write some text
-    if (distance < 0) {
+  // If the count down is finished, write some text
+  if (distance < 0) {
     document.getElementById("demo").innerHTML = "EXPIRED";
     return;
-    }
-    setTimeout(updateClock, 1000);
-    }
-    updateClock();
-  </script>
+  }
+  setTimeout(updateClock, 1000);
+}
+updateClock();
+</script>
 </body>
 
 </html>

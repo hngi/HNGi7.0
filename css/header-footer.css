@@ -11,6 +11,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 1rem 3rem;
 }
 
 header a,
@@ -20,7 +21,6 @@ footer a {
 
 header .def-button {
     margin-left:20px;
-    margin-right: 0;
     color: white;
     border-radius: 3px;
     padding: 0.5rem 1rem;
@@ -36,14 +36,10 @@ header .def-button:hover {
 }
 
 header nav {
-    z-index: 5;
     display: flex;
     flex-direction: row;
-    justify-content: column-reverse;
+    justify-content: space-between;
     transition: 0.5s ease-out;
-    margin-bottom: 60px;
-    padding-right: 0;
-
 }
 
 header #hng-logo {
@@ -55,10 +51,8 @@ header .header-links {
     margin: 0.5rem 1rem;
     align-self: center;
     font-size: 1.2vw;
-
     /* transition: 0.4s ease-out; */
 }
-
 
 header .header-links:hover {
     /* transform: scale(1.2); */
@@ -154,8 +148,6 @@ footer #socials a {
     box-shadow: -3px 3px 3px 1px rgba(0, 0, 0, 0.07);
     border: 1px solid #fff;
     transition: 0.6s ease-out;
-    display: inline-block;
-    margin-top: 10px;
 }
 
 
@@ -195,14 +187,6 @@ footer .footer-nav .row {
         padding: 1.5rem;
         flex-direction: column;
     }
-   
-    .header-links:first-of-type {
-            margin-top: -20px;
-        }
-    header .header-links {
-            margin-right: -40px;
-        }
-
 
     header nav > * {
         display: none;

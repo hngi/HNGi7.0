@@ -11,7 +11,7 @@ require 'PHPMailer/src/SMTP.php';
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer(true);
 
-function sendMail($email, $body, $subject, $url)
+function sendNewAdminMail($email, $enc_password, $subject, $body)
 {
   global $mail;
 
@@ -21,13 +21,13 @@ function sendMail($email, $body, $subject, $url)
     $mail->isSMTP();                                            // Set mailer to use SMTP
     $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'hnginterns9@gmail.com';                     // SMTP username
-    $mail->Password   = 'California008';                               // SMTP password
+    $mail->Username = 'alisataylorm.m@gmail.com';
+    $mail->Password = 'alisa1074';                               // SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('eshy008@gmail.com', 'Team-Asclepius');
+    $mail->setFrom('alisataylorm.m@gmail.com', 'HNG SUPPER ADMIN');
     $mail->addAddress("$email");     // Add a recipient
     // $mail->addAddress('ellen@example.com');               // Name is optional
     $mail->addReplyTo('no-reply@gmail.com', 'No-Reply');
@@ -39,11 +39,11 @@ function sendMail($email, $body, $subject, $url)
     // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 
     // Content
-    $url = $url;
+    
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = $subject;
     $mail->Body    = "<html><body>
-                  <p style='color: #f40;'>'.$body.'</p>  
+                  <p style='color: gray; text-align: center;'>$body</p><p>$email and $enc_password </p> <a href='http://3.83.91.27/admin_login.php'>login in here</a>   
     </body></html>";
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
@@ -52,6 +52,7 @@ function sendMail($email, $body, $subject, $url)
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
   }
 }
+
 
 
 //for contact us form
@@ -65,13 +66,13 @@ function contactMail($email, $name, $subject, $body)
     $mail->isSMTP();                                            // Set mailer to use SMTP
     $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'hnginterns9@gmail.com';                     // SMTP username
-    $mail->Password   = 'California008';                               // SMTP password
+    $mail->Username = 'alisataylorm.m@gmail.com';
+    $mail->Password = 'alisa1074';                              // SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom($email, $name);
+    $mail->setFrom('alisataylorm.m@gmail.com', $name);
     $mail->addAddress("$email");     // Add a recipient
     // $mail->addAddress('ellen@example.com');               // Name is optional
     $mail->addReplyTo('no-reply@gmail.com', 'No-Reply');
@@ -87,7 +88,7 @@ function contactMail($email, $name, $subject, $body)
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = $subject;
     $mail->Body    =  "<html><body>
-                  <p style='color: #f40;'>'.$body.'</p>  
+                  <p style='color: gray; text-align: center'>$body</p>  
     </body></html>";
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
     $mail->addReplyTo($email, $name);
