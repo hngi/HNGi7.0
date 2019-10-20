@@ -1,6 +1,20 @@
+<style>
+@media screen and (max-width: 860px){
+header nav a {
+    margin-right: -30px !important;
+}
+
+header nav a:first-child {
+    margin-top: -20px;
+}
+
+}
+</style>
+
 <header id="header">
-    <a href="index.html"><img id="hng-logo"
-            src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png"></a>
+    <a href="index.php"><img id="hng-logo"
+            src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png"
+            style="width: 50%" ></a>
     <input type="checkbox" id="mobile-bars-check" />
     <label for="mobile-bars-check" id="mobile-bars">
         <!--img src="images/bars-icon.png" height="23px"-->
@@ -8,7 +22,7 @@
         <div class="stix" id="stik2"></div>
         <div class="stix" id="stik3"></div>
     </label>
-    <nav>
+    <nav  style="height: auto">
         <a href="index.php" class="header-links">Home</a>
         <a href="hng6.php" class="header-links">HNGi 6.0</a>
         <a href="mentorpage.php" class="header-links">Mentors</a>

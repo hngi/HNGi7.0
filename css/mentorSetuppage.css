@@ -45,6 +45,12 @@
          background-color: #FAFAFA;
        }
 
+       
+       #wrap>div{
+           padding-left: 12%;
+           min-width:250px;
+          
+       }
        .check {
         margin-left: auto;
         margin-right: auto;
@@ -53,16 +59,48 @@
 
       .check label {
        font-weight: 500;
+      
       }
   
-       .fa-chevron-down{
-        float: right;
-        color:  #00AEFF;
+        .accordion-label{
+            position: relative;
+            cursor: pointer;
         }
-        .area{
-          font-size: 24px;
-          font-weight: 600;
-          color: #333333;
+       
+ 
+        .accordion-label::after{
+            content: "\f078";
+            font-family: "fontawesome";
+            position: absolute;
+            color:  #00AEFF;
+            left: 210px;
+  
+        }
+        .accordion-label.active::after{
+          content: "\f077";
+          font-family: "fontawesome";
+        }
+
+        .accordion-content{
+            color: grey;
+            max-height: 0;
+            font-size: 0.6rem;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+            margin-left: 18px;
+            margin-top: -8px;
+
+        }
+        
+        .accordion-content span{
+            font-weight: bold;
+            color: black;
+        }
+        .col-12.text-center.area.p-2{
+            margin-bottom: 6px;
+            font-size: 24px;
+            font-weight: 600;
+            color: #333333;
         }
         .image-upload > input
         {
@@ -143,7 +181,60 @@
           font-weight: bold;
         }
         @media only screen and (max-width: 860px){
-          input::placeholder{
-          font-size: 100%;
-        }
-    }
+             input::placeholder{
+                font-size: 100%;
+            }
+         }
+
+         @media(min-width:770px) and (max-width:991px){
+            #wrap>div{
+                padding-left: 0;
+                margin-left: -20px;
+            }
+         }
+         @media(max-width:769px){
+            .accordion-label::after{
+                left: 200px;
+            }
+            .col-12.text-center.area.p-2{
+                margin-bottom: 4px;
+            }
+         }
+         @media(min-width:576px) and (max-width:769px){
+            #wrap>div{
+                margin-left: -55px;
+            }
+            
+         }
+         @media(min-width:500px) and (max-width:575px){
+            #wrap>div{
+                margin-left: 12%;
+            }
+         }
+
+         @media(min-width:450px) and (max-width:499px){
+            #wrap>div{
+                margin-left: 10%;
+            }
+           
+         }
+
+         @media(min-width:401px) and (max-width:449px){
+            #wrap>div{
+                margin-left: 5%;
+            }
+         }
+         @media(max-width:400px){
+            #wrap>div{
+                padding-left: 9.5%;
+            }
+         }
+
+         @media(max-width:330px){
+            #wrap>div{
+                padding-left: 5%;
+            } 
+            .col-12.text-center.area.p-2{
+                font-size: 20px;
+            }
+         }

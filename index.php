@@ -12,9 +12,30 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
+    <style>
+        @media screen and (max-width: 700px){
+          .main-first-row, .main-fourth-row {
+            margin: 0 auto;
+          }
+
+          .main-third-row .card1-container {
+            display : block;
+          }
+
+          .main-third-row .card1-container .card1 {
+            margin : 10px auto;
+          }
+
+          .main-fourth-row {
+          width: 85%;
+          padding-right: 0px;
+
+          }
+        }
+    </style>
 </head>
 
-<body>
+<body class="container-fluid">
     <div id="scroll-down-arrow" class="animated bounceInUp" onclick="scrollWin()">
         <i class="fas fa-arrow-down"></i>
     </div>
@@ -500,7 +521,7 @@
                             </h4>
                             <span class="support__item-link">
                                 <i class="fa fa-chevron-circle-right"></i>
-                                <a href="#" class="text-light">Get Started</a>
+                                <a href="donate.html" class="text-light">Get Started</a>
                             </span>
                         </div>
                     </div>
@@ -570,23 +591,6 @@
         </main>
 
     </div>
-
-    <aside class="showw">
-        <div class="hide-aside text__dark-blue">
-            &times;
-        </div>
-        <nav>
-            <ul>
-                <li class="nav-link-1-vertical"><a href="index.php">Home</a></li>
-                <li class="nav-link-1-vertical"><a href="hng6.php">HNGi6</a></li>
-                <li class="nav-link-1-vertical"><a href="mentorpage.php">Mentors</a></li>
-                <li class="nav-link-1-vertical"><a href="contactform.php">Contact</a></li>
-                <li class="nav-link-1-vertical"><a href="join-intern.php" class="text__dark-blue">Join HNGi</a></li>
-
-            </ul>
-        </nav>
-    </aside>
-
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>

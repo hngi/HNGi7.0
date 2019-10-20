@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="stylesheet" href="css/faq.css">
 </head>
-<body>
+<body class="container-fluid">
         <!--header>
             <div class="container">
              <div class="wrap">
@@ -52,8 +52,6 @@
     <!--</header>-->
     
     <?php include('fragments/site_header.php'); ?>
-    
-
         <section class="hero">
             <div class="container">
                 <div class="wrap">
