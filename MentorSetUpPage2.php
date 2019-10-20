@@ -79,7 +79,7 @@ require_once 'classControllers/mentor.php';
                     $fileNameNew = uniqid('', true).".".$fileActualExt;
                     $fileDestination = 'uploads/'.$fileNameNew;
                     if(move_uploaded_file($fileTmpName, $fileDestination)){
-                      $mentor = new Mentor;
+                      $mentor = new Mentors;
                       $mentor->area_of_expertise= $database->escape_string($area_of_expertise);
                       $mentor->photo_url= $fileDestination;
                       $mentor->name = $database->escape_string($_POST['name']);
@@ -128,7 +128,8 @@ require_once 'classControllers/mentor.php';
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu|Pacifico&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="css/header-footer.css">
-        <link rel="stylesheet" href="css/mentorSetuppage.css">
+        <link href="css/mentorSetuppage.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+        <!-- <link rel="stylesheet" href="css/mentorSetuppage.css"> -->
         <link rel="icon" type="img/png" href="images/hng-favicon.png">
     </head>
             
@@ -191,7 +192,7 @@ require_once 'classControllers/mentor.php';
                   <div class="row expertise"> 
                          <p class=" col-12 text-center area p-2">Choose an area of expertise</p>
                           <div class="col-sm-4"></div>  
-                          <div class="text-justify col-sm-4 mb-3 mt-2">  <?php
+                          <div id="wrap" class="text-justify col-sm-4 mb-3 mt-2">  <?php
                                 if (!empty($error)) {
                                   
                                   foreach ($error as $details) {
@@ -201,12 +202,42 @@ require_once 'classControllers/mentor.php';
                                 }
                                  
                               ?>
-                              <div><input type="checkbox" name="area_of_expertise[]" class="checkbox mr-1" value="Frontend"><span id="span-text">Frontend Development</span><i class="fas fa-chevron-down" aria-hidden="true"></i></div>
-                              <div><input name="area_of_expertise[]"type="checkbox" class="checkbox mr-1" value="Backend"><span id="span-text">Backend Development</span><i class="fas fa-chevron-down" aria-hidden="true"></i></div>
-                              <div><input name="area_of_expertise[]" type="checkbox" class="checkbox mr-1" value="Machine-leraning"><span id="span-text">Machine Learning</span><i class="fas fa-chevron-down" aria-hidden="true"></i></div>
-                              <div><input name="area_of_expertise[]" type="checkbox" class="checkbox mr-1" value="UI/UX-Design"><span id="span-text">UI/UX Design</span><i class="fas fa-chevron-down" aria-hidden="true"></i></div>
-                              <div><input name="area_of_expertise[]" type="checkbox" class="checkbox mr-1" value="Mobile-Development"><span id="span-text">Mobile Development</span><i class="fas fa-chevron-down" aria-hidden="true"></i></div>
-                              <div><input name="area_of_expertise[]" type="checkbox" class="checkbox mr-1" value="Digital-marketing"><span id="span-text">Digital Marketing</span><i class="fas fa-chevron-down" aria-hidden="true"></i></div>
+                              <div>
+                                <input id="check1" type="checkbox" name="area_of_expertise[]" class="checkbox mr-1" value="Frontend"><label class="accordion-label" for="check1" >Frontend Development</label>
+                                <div class="accordion-content">
+                                  <p><span>Preferred Skills: </span>  HTML, CSS, JavaScript, Bootstrap, JQuery</p>
+                                </div>
+                              </div>
+                              <div>
+                                <input id="check2" name="area_of_expertise[]"type="checkbox" class="checkbox mr-1" value="Backend"><label class="accordion-label" for="check2">Backend Development</label>
+                                <div class="accordion-content">
+                                  <p><span>Preferred Skills: </span>PHP/Laravel, NodeJS, SQL, MongoDB</p>
+                                </div>
+                              </div>
+                              <div>
+                                <input id="check3" name="area_of_expertise[]" type="checkbox" class="checkbox mr-1" value="Machine-leraning"><label class="accordion-label" for="check3">Machine Learning</label>
+                                <div class="accordion-content">
+                                  <p><span>Preferred Skills: </span>Python, TensorFlow</p>
+                                </div>
+                              </div>
+                              <div>
+                                <input id="check4" name="area_of_expertise[]" type="checkbox" class="checkbox mr-1" value="UI/UX-Design"><label    class="accordion-label" for="check4">UI/UX Design</label>
+                                <div class="accordion-content">
+                                  <p><span>Preferred Skills: </span>Creative, Attention to detail, Figma</p>
+                                </div>
+                              </div>
+                              <div>
+                                <input id="check5" name="area_of_expertise[]" type="checkbox" class="checkbox mr-1" value="Mobile-Development"><label class="accordion-label" for="check5">Mobile Development</label>
+                                <div class="accordion-content">
+                                  <p><span>Preferred Skills: </span>Android, Java, Kotlin, Flutter</p>
+                                </div>
+                              </div>
+                              <div>
+                                <input id="check6" name="area_of_expertise[]" type="checkbox" class="checkbox mr-1" value="Digital-marketing"><label class="accordion-label" for="check6">Digital Marketing</label>
+                                <div class="accordion-content">
+                                  <p><span>Preferred Skills: </span> Adwords, SEO, Content writing, E-mail and Facebook Marketing </p>
+                                </div>
+                              </div>
                           </div>
                           <div class="col-sm-4"></div>
                   </div>
@@ -234,7 +265,7 @@ require_once 'classControllers/mentor.php';
                               <div class="col-sm-12">
                                   <input name="email" type="email" class="form-control mt-2" id="validationCustom02" placeholder="Email"required value="<?php if(isset($_POST['email'])){ echo $_POST['email']; } ?>"></div>
                               <div class="col-sm-12">
-                                  <input name="phone" type="number" class="form-control mt-2" id="validationCustom03" placeholder="Phone number"required value="<?php if(isset($_POST['phone'])){ echo $_POST['phone']; } ?>"></div>
+                                  <input name="phone" type="tel" class="form-control mt-2" id="validationCustom03" placeholder="Phone number"required value="<?php if(isset($_POST['phone'])){ echo $_POST['phone']; } ?>"></div>
                               <div class="col-sm-12">
                                   <input name="job" type="text" class="form-control mt-2" id="validationCustom04" placeholder="What do you do"required value="<?php if(isset($_POST['job'])){ echo $_POST['job']; } ?>"></div>
                               <div class="col-sm-12">
@@ -265,31 +296,11 @@ require_once 'classControllers/mentor.php';
 
 
 
-  <script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function() {
-      'use strict';
-      window.addEventListener('load', function() {
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.getElementsByClassName('needs-validation');
-        // Loop over them and prevent submission
-        var validation = Array.prototype.filter.call(forms, function(form) {
-          form.addEventListener('submit', function(event) {
-            if (form.checkValidity() === false) {
-              event.preventDefault();
-              event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-          }, false);
-        });
-      }, false);
-    })();
-    
-
-    </script>
+ 
         <script src="https://kit.fontawesome.com/85682eb992.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="js/mentorSetupPage.js"></script>
     </body>
 </html>
