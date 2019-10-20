@@ -142,7 +142,7 @@
 					<p class="mentor-desc center-text">Mentor, HNG 6.0</p>
 				</div>
 			</div>
-			<p class="center-text"><a href="mentorpage.html" class="def-button shadowed">See all Mentors</a></p>
+			<p class="center-text"><a href="mentorpage.php" class="def-button shadowed">See all Mentors</a></p>
 		</div>
 	</section>
 	<section id="slack-channels">
