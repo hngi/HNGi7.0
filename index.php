@@ -493,7 +493,7 @@
                             </h4>
                             <span class="support__item-link">
                                 <i class="fa fa-chevron-circle-right"></i>
-                                <a href="donationpage.html" class="text-light">Get Started</a>
+                                <a href="donationpage.php" class="text-light">Get Started</a>
                             </span>
                         </div>
                     </div>
@@ -507,7 +507,7 @@
                             </h4>
                             <span class="support__item-link">
                                 <i class="fa fa-chevron-circle-right"></i>
-                                <a href="donationpage.html" class="text-light">Get Started</a>
+                                <a href="donationpage.php" class="text-light">Get Started</a>
                             </span>
                         </div>
                     </div>
@@ -581,7 +581,7 @@
 
                 <div class="sponsors_button">
                     <button class="cta-button button--midBlue">
-                        <a href="faq.html">
+                        <a href="faq.php">
                           Become a Sponsor
                         </a>
                     </button>
@@ -591,7 +591,6 @@
         </main>
 
     </div>
-
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -604,7 +603,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"
     crossorigin="anonymous"></script>
     <script>
-        let scrollArrow = document.querySelector('#scroll-down-arrow');
+        var scrollArrow = document.querySelector('#scroll-down-arrow');
         function scrollWin() {
             window.scrollBy(0, 500);
             console.log(window.scrollY)
@@ -631,8 +630,8 @@
     const hamburger = document.getElementById("hamburger");
     const aside = document.getElementsByTagName("aside")[0];
     const hide_aside = document.getElementsByClassName("hide-aside")[0];
-    let mediaQuery = window.matchMedia("(max-width: 960px)");
-    let slideIndex = 0;
+    var mediaQuery = window.matchMedia("(max-width: 960px)");
+    var slideIndex = 0;
 
     showSlides(mediaQuery);
     mediaQuery.addListener(showSlides);
@@ -640,9 +639,9 @@
 
     //const cards = document.getElementsByClassName("card1");
     function showSlides(mediaQueryx) {
-        let i;
+        var i;
 
-        let cards = document.getElementsByClassName("card1");
+        var cards = document.getElementsByClassName("card1");
         if (mediaQuery.matches) {
 
             //var dots = document.getElementsByClassName("dot");
