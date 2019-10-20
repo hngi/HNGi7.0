@@ -11,7 +11,7 @@
 			<?php 
 				if($_SESSION["role"] == 1) {
 				?>
-					<a href="admins.php">Admin</a>
+					<a href="admins.php">Admins</a>
 				<?php
 				}
 			?>
