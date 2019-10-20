@@ -33,23 +33,25 @@
             </div>
         </header-->
 
-        <header>
-        <a href="index.html"><img id="hng-logo" src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png"></a>
-        <input type="checkbox" id="mobile-bars-check" />
-        <label for="mobile-bars-check" id="mobile-bars">
+    <!--    <header>-->
+    <!--    <a href="index.html"><img id="hng-logo" src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png"></a>-->
+    <!--    <input type="checkbox" id="mobile-bars-check" />-->
+    <!--    <label for="mobile-bars-check" id="mobile-bars">-->
           <!--img src="images/bars-icon.png" height="23px"-->
-        <div class="stix" id="stik1"></div>
-        <div class="stix" id="stik2"></div>
-        <div class="stix" id="stik3"></div>
-        </label>
-        <nav>
-            <a href="index.html" class="header-links">Home</a>
-            <a href="hng6.html" class="header-links">HNG 6</a>
-            <a href="mentorpage.html" class="header-links">Mentors</a>
-            <a href="contactform.html" class="header-links">Contact</a>
-            <a href="join-intern.html" id="join-hng" class="def-button">Join HNG</a>
-        </nav>
-    </header>
+    <!--    <div class="stix" id="stik1"></div>-->
+    <!--    <div class="stix" id="stik2"></div>-->
+    <!--    <div class="stix" id="stik3"></div>-->
+    <!--    </label>-->
+    <!--    <nav>-->
+    <!--        <a href="index.html" class="header-links">Home</a>-->
+    <!--        <a href="hng6.html" class="header-links">HNG 6</a>-->
+    <!--        <a href="mentorpage.html" class="header-links">Mentors</a>-->
+    <!--        <a href="contactform.html" class="header-links">Contact</a>-->
+    <!--        <a href="join-intern.html" id="join-hng" class="def-button">Join HNG</a>-->
+    <!--    </nav>-->
+    <!--</header>-->
+    
+    <?php include('fragments/site_header.php'); ?>
     
 
         <section class="hero">
@@ -110,7 +112,7 @@
                 </div>
             </div>
         </section>
-        <?php include('fragments/site_footer.php'); ?>
+        
 <script>
     var divs = ["Menu1", "Menu2", "Menu3", "Menu4"];
         var visibleDivId = null;
