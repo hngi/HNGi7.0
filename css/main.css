@@ -467,7 +467,7 @@ flex: 1;
 
 #how-it-works {
 color: #084482;
-text-align: center;
+text-align: center !important;
 font-size: 25px;
 line-height: 34px;
 font-weight: bold;
