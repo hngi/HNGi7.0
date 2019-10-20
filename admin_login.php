@@ -57,7 +57,7 @@ if (isset($_POST['login'])) {
         
       <form class="form-container" method="post">
         
-        <h2>Login as an Admin</h2>
+        <h2 class="login-heading">Login as an Admin</h2>
         <?php
           if(!empty($errors) ){
             

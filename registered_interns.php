@@ -37,6 +37,25 @@ if(!isset($_SESSION["role"])) {
 			
 		}
 	</style>
+	
+	<script language="javascript" type="text/javascript">
+        function printDiv(divID) {
+            //Get the HTML of div
+            var divElements = document.getElementById(divID).innerHTML;
+            //Get the HTML of whole page
+            var oldPage = document.body.innerHTML;
+
+            //Reset the page's HTML with div's HTML only
+            document.body.innerHTML = 
+              "<html><head><title></title></head><body><br><br><br>" + divElements + "</body>";
+
+            //Print Page
+            window.print();
+
+            //Restore orignal HTML
+            document.body.innerHTML = oldPage;
+        }
+    </script>
 
 </head>
 <body>
@@ -56,16 +75,18 @@ if(!isset($_SESSION["role"])) {
                         echo "<h2>There are no Registered Interns</h2>";
                     } else {
                     ?>
+                        <!--<div class="col-md-3">-->
+                        <!--    <a href="exports/export-to-excel.php">-->
+                        <!--        <button type="button" id="export">Export to Spreadsheet</button>-->
+                        <!--    </a>-->
+                        <!--</div>-->
                         <div class="col-md-3">
-                            <a href="exports/export-to-excel.php">
-                                <button type="button" id="export">Export to Spreadsheet</button>
-                            </a>
-                        </div>
-                        <div class="col-md-3">
-                            <a href="exports/export-to-pdf.php">
+                            <!--<a href="exports/export-to-pdf.php">-->
+                            <a href="#" onclick="javascript:printDiv('printablediv')">
                                 <button type="button" id="export">Export to PDF</button>
                             </a>
                         </div>
+                        <div id="printablediv">
                         <table class="table table-hover">
                             <thead>
                             <tr>
@@ -89,6 +110,7 @@ if(!isset($_SESSION["role"])) {
                                 ?>
                             </tbody>
                         </table>
+                        </div>
                         <?php
                     }
                 ?>
