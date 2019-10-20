@@ -441,7 +441,7 @@
                 </div>
                 <div style="text-align: center; padding-top: 20px;">
                     <button class="button--midBlue cta-button" style="margin: 0 auto">
-                        <a href="mentorpage.html">See more</a>
+                        <a href="mentorpage.php">See more</a>
                     </button>
                 </div>
             </div>
