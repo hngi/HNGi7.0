@@ -491,7 +491,7 @@
                             </h4>
                             <span class="support__item-link">
                                 <i class="fa fa-chevron-circle-right"></i>
-                                <a href="donationpage.php" class="text-light">Get Started</a>
+                                <a href="donate.html" class="text-light">Get Started</a>
                             </span>
                         </div>
                     </div>
@@ -505,7 +505,7 @@
                             </h4>
                             <span class="support__item-link">
                                 <i class="fa fa-chevron-circle-right"></i>
-                                <a href="donationpage.php" class="text-light">Get Started</a>
+                                <a href="donate.html" class="text-light">Get Started</a>
                             </span>
                         </div>
                     </div>
