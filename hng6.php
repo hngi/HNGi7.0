@@ -142,7 +142,7 @@
 					<p class="mentor-desc center-text">Mentor, HNG 6.0</p>
 				</div>
 			</div>
-			<p class="center-text"><a href="mentorpage.html" class="def-button shadowed">See all Mentors</a></p>
+			<p class="center-text"><a href="mentorpage.php" class="def-button shadowed">See all Mentors</a></p>
 		</div>
 	</section>
 	<section id="slack-channels">
@@ -171,7 +171,7 @@
 			<a href="#"><img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722855/bluechip-logo_rw62cu.svg"></a>
 			<a href="#"><img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg"></a>
 		</div>
-		<p class="center-text"><a href="MentorSetUpPage2.php" class="def-button shadowed center">Become a Sponsor</a></p>
+		<p class="center-text"><a href="donate.html" class="def-button shadowed center">Become a Sponsor</a></p>
 	</section>
 	 <footer>
 	 	<img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722444/hng-brand-logo_gnplmq.svg">
@@ -181,7 +181,7 @@
 	 			<div id="link-list">
 	 				<a href="join-intern.php" class="skyblue-text">Join HNG</a>
 	 				<a href="index.php" class="skyblue-text">About HNG</a>
-	 				<a href="MentorSetUpPage2.php" class="skyblue-text">Become a Sponsor</a>
+	 				<a href="donate.html" class="skyblue-text">Become a Sponsor</a>
 	 				<a href="faq.php" class="skyblue-text">FAQ</a>
 	 			</div>
 	 		</section>
