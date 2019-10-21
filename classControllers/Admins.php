@@ -83,7 +83,7 @@ class Admins
     return $display;
   }
 
-  public function newAdmin($firstname, $lastname, $email, $role,$password)
+  public function newAdmin($firstname, $lastname, $email, $role)
   {
     global $database;
     //global $con;
@@ -100,13 +100,16 @@ class Admins
                                 </div>';
     } else {
       // email is available, good, proceed to register
-
+      $password = rand(123456, 789654);
       $query = "INSERT INTO admins (firstname, lastname, email, password, role, timestamp) VALUES ('" . $firstname . "', '" . $lastname . "', '" . $email . "', '" . $password . "', '" . $role . "', now())";
       $res = $database->query($query);
       $count = $database->affected_rows();
 
       if ($count > 0) {
         // success
+        $subject = 'WElCOME TO HNG INTERNSHIP';
+        $body = $firstname . ' ' . $lastname . ' you have been registered as an admin on HNG INTERSHIP site, kindly find the attachment of your registration details below and login with it. You are advise to change your password after you login . Thank you';
+        sendNewAdminMail($email, $password, $subject, $body);
         $resp = '<div class="alert alert-success" role="alert">
                                 Admin Created Successfully
                             </div>';
