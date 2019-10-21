@@ -40,6 +40,7 @@ header nav {
     flex-direction: row;
     justify-content: space-between;
     transition: 0.5s ease-out;
+        
 }
 
 header #hng-logo {

@@ -3,12 +3,14 @@
 <style>
 
 .dynamic {
+    justify-content: space-between !important;
     top: 0;
-    position: fixed; 
+    position: sticky; 
     background: white !important;
+    z-index: 7;
     width: 100%;
-    padding-right: 10px !important;
-    box-shadow: none !important;
+    border-color: white !important;
+    margin: 0px !important;
 }
 .navbg {
     background: #ffffff !important;
@@ -20,12 +22,13 @@
     z-index: 0;
 }
 @media screen and (max-width: 960px){
-    /* header {
-    margin: 0em !important;
-} */
-header .header-links {
+    .dynamic {
+    position: fixed;
+    width: 97.45%;
+    } 
+    header .header-links {
     margin-right: 0px !important;
-}
+    }
 
 }
 
@@ -87,7 +90,7 @@ header .header-links {
 
     }
     if(pctScrolled < 0.3) {
-        document.getElementById("header").classList.add("navbg2");
+        document.getElementById("header").classList.remove("navbg2");
         document.getElementById("header").classList.remove("navbg");
         document.getElementById("header").classList.remove("dynamic");
         
