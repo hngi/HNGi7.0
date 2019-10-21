@@ -57,7 +57,7 @@ if (isset($_POST['login'])) {
         
       <form class="form-container" method="post">
         
-        <h2>Login as an Admin</h2>
+        <h2 class="login-heading">Login as an Admin</h2>
         <?php
           if(!empty($errors) ){
             
@@ -86,7 +86,7 @@ if (isset($_POST['login'])) {
         <div id="link-list">
           <a href="join-intern.php" class="skyblue-text">Join HNG</a>
           <a href="index.php" class="skyblue-text">About HNG</a>
-          <a href="MentorSetUpPage2.php" class="skyblue-text">Become a Sponsor</a>
+          <a href="donate.html" class="skyblue-text">Become a Sponsor</a>
           <a href="MentorSetUpPage2.php" class="skyblue-text">Sign up as Mentor</a>
           <a href="faq.php" class="skyblue-text">FAQ</a>
         </div>
@@ -124,7 +124,7 @@ if (isset($_POST['login'])) {
         </div>
       </section>
     </nav>
-    <p class="center-text darkblue-text">&copy 2019, HGN Internship. All rights reserved.</p>
+    <p class="center-text darkblue-text">&copy 2019, HNG Internship. All rights reserved.</p>
   </footer>
   </body>
 </html>
