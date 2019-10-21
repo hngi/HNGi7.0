@@ -1,6 +1,5 @@
 <?php
 require 'classControllers/init.php';
-    // include('backend/Admins.php');
     $admin = new Admins();
     $display = $admin->allAdmins();
 

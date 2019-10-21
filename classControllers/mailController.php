@@ -43,7 +43,7 @@ function sendNewAdminMail($email, $enc_password, $subject, $body)
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = $subject;
     $mail->Body    = "<html><body>
-                  <p style='color: gray; text-align: center;'>$body</p><p>$email and $enc_password </p> <a href='http://3.83.91.27/admin_login.php'>login in here</a>   
+                  <p style='color: gray; text-align: center;'>$body</p><p>$email and $enc_password </p> <a href='https://hngi7.herokuapp.com/admin_login.php'>login in here</a>   
     </body></html>";
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
