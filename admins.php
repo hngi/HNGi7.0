@@ -1,5 +1,5 @@
 <?php
-require 'classControllers/init.php';
+require_once 'classControllers/init.php';
     // include('backend/Admins.php');
     $admin = new Admins();
     $display = $admin->allAdmins();
@@ -31,14 +31,14 @@ require 'classControllers/init.php';
 			margin: 15px;
 			padding: 10px;
 			border-radius: 15px;
-			
+
 		}
 	</style>
 
 </head>
 <body>
 	<main>
-		<?php 
+		<?php
 			if($_SESSION["role"] != 1) {
 				echo '<h2><br><br><br>Sorry, You do not have the priviledge to view this page</p>';
 				echo '<h3><a href="dashboard.php">Dashboard</a></h3>';
@@ -49,7 +49,7 @@ require 'classControllers/init.php';
 			<!-- <h1>Dashboard</h1> -->
 			<h2>Registered Admins </h2>
 			<!-- <section id="intern-section">
-				Populated by `js/dashboard.js` 
+				Populated by `js/dashboard.js`
 			</section> -->
 
 			<div class="container">
@@ -79,19 +79,19 @@ require 'classControllers/init.php';
                             </thead>
                             <tbody>
                                 <?php
-                                    echo $display; 
+                                    echo $display;
                                 ?>
                             </tbody>
                         </table>
                         <?php
                     }
                 ?>
-                    
+
 				</div>
 			</div>
 
 			<!-- <button id="export">Export to Spreadsheet</button> -->
-		
+
 		</section>
 		<!-- <section id="details-section">
 			<div id="details-back">
@@ -121,7 +121,7 @@ require 'classControllers/init.php';
         <div class="stix" id="stik2"></div>
         <div class="stix" id="stik3"></div>
     </label>
-    
+
     <?php include('fragments/sidebar.php'); ?>
 
 </body>

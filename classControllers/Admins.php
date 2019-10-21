@@ -3,10 +3,10 @@
 class Admins
 {
 
- 
+
   public function adminLogin()
   {
-    
+
     //global $con;
     global $database;
     $errors = [];
@@ -26,8 +26,8 @@ class Admins
     //   foreach ($errors as $error) {
     //     echo $error . '<br />';
     //   }
-    // } 
-    
+    // }
+
     if(count($errors) === 0){
       // there are no errors
       $query = 'SELECT * FROM admins WHERE email="' . $email . '" AND password="' . $password . '" ';
@@ -87,7 +87,7 @@ class Admins
   {
     global $database;
     //global $con;
-    
+
 
     // check for existing email
     $query = "SELECT * FROM admins WHERE email = '" . $email . "' ";

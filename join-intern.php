@@ -9,8 +9,8 @@ require_once 'classControllers/init.php';
 
       $fullname = $database->escape_string($_POST['fullname']);
       $email = $database->escape_string($_POST['email']);
-      $phoneNo = $database->escape_string($_POST['phoneNo']); 
-      $linkPort = $database->escape_string($_POST['linkPort']); 
+      $phoneNo = $database->escape_string($_POST['phoneNo']);
+      $linkPort = $database->escape_string($_POST['linkPort']);
       $linkCV = $database->escape_string($_POST['linkCV']);
       $exp = $database->escape_string($_POST['exp']);
       $interest = $database->escape_string($_POST['interest']);
@@ -20,10 +20,10 @@ require_once 'classControllers/init.php';
       $date = $database->escape_string($_POST['date']);
       $insertInterns = $intern->internSignup();
 
-      $success = '<div class="alert alert-success" role="alert" style="background: green; padding: 5px 10px 5px 10px; width: 80% !important; text-align: center; color: white; ">
-                Your registration was  successful. We will get back to you as soon as possible.
-            </div>';
-      
+      // $success = '<div class="alert alert-success" role="alert" style="background: green; padding: 5px 10px 5px 10px; width: 80% !important; text-align: center; color: white; ">
+      //           Your registration was  successful. We will get back to you as soon as possible.
+      //       </div>';
+
     }
 ?>
 
@@ -44,12 +44,12 @@ require_once 'classControllers/init.php';
   <link rel="stylesheet" href="css/join-intern.css">
   <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <style>
-    
+
     #socials a {
         display: inline-block;
-        margin-top: 10px;   
+        margin-top: 10px;
     }
-    
+
   </style>
 
 </head>
@@ -68,27 +68,33 @@ require_once 'classControllers/init.php';
 
     <?php
     $errMsg = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-    if (strpos($errMsg, 'join-intern.php?Submitted') !== false) {
-      echo "<div style='text-align:center; font-size:1.3em; color:#084482'>Thank You for completing the form, we will get back to You soon!</div>";
+    if (strpos($errMsg, 'join-intern.php?successful') !== false) {
+      // echo "<div style='text-align:center; font-size:1.3em; color:#084482'>Thank You for completing the form, we will get back to You soon!</div>";
+      echo '<div style="margin:auto 30vw; background: green; padding: 5px 10px 5px 10px; width: 40vw !important; text-align: center; color: white; ">
+                Your registration was  successful. We will get back to you as soon as possible.
+            </div>';
+}
+    $errMsg = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    if (strpos($errMsg, 'join-intern.php?failed') !== false) {
+      // echo "<div style='text-align:center; font-size:1.3em; color:#084482'>Thank You for completing the form, we will get back to You soon!</div>";
+      echo '<div style="margin:auto 30vw; background: red; padding: 5px 10px 5px 10px; width: 40vw !important; text-align: center; color: white; ">
+                Your registration failed because Email already exist.
+            </div>';
+
     }
     ?>
 
     <?php
-   
+
     if ($status == 1) {
       ?>
       <form class="form-container" action="" method="post" id="myForm">
-
+<!--
         <?php
-         
-          
-          if(isset($success) ){
-            
-              echo $success;
-            
+        if(isset($success) ){
+            echo $success;
           }
-           
-          ?>
+          ?> -->
 
         <input type="text" name="fullname" id="fullname" required placeholder="Fullname" />
         <input type="email" name="email" id="email" required placeholder="Email" />
