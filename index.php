@@ -33,19 +33,19 @@
           }
         }
     </style>
+    
 </head>
-
 <body class="container-fluid">
-    <div id="scroll-down-arrow" class="animated bounceInUp" onclick="scrollWin()">
-        <i class="fas fa-arrow-down"></i>
-    </div>
     <img src="https://bit.ly/2OC3tWo" id="corner-circle" alt="Graphic at the top right corner">
     <div class="containerGrid">
+    
         <?php
           include('fragments/site_header.php');
         ?>
          <main>
-            <div class="main-first-row">
+         <!--Jumbo Div added so the header would fit on scroll-->
+         
+         <div class="main-first-row">
                 <div class="welcome-column">
                     <h1 id="welcome-text" class="text__dark-blue">
                         Welcome to <br> HNG 7.0 Internship
@@ -87,6 +87,9 @@
                 </div>
 
             </div>
+         </div>
+         
+            
 
             <div class="main-third-row text_center">
                 <div class="">
@@ -286,11 +289,11 @@
                               <div class="card">
                                 <div class="card-header" id="headingOne">
                                   <h2 class="mb-0">
-                                    <img class="btn btn-link"  data-toggle="collapse" data-target="#collapseOne"
+                                    <img class="btn buttonOne"  data-toggle="collapse" data-target="#collapseOne"
                                     aria-expanded="true" aria-controls="collapseOne"
                                       src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png"
                                       class="arrow1">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                                    <button class="btn  btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
                                       aria-expanded="true" aria-controls="collapseOne"> Frontend Development </button>
                                   </h2>
                                 </div>
@@ -312,7 +315,7 @@
                               <div class="card">
                                 <div class="card-header" id="headingTwo">
                                   <h2 class="mb-0">
-                                    <img class="btn btn-link collapsed buttonTwo"  data-toggle="collapse"
+                                    <img class="btn collapsed buttonTwo"  data-toggle="collapse"
                                     data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
                                       src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
                                     <button class="btn btn-link collapsed buttonTwo" type="button" data-toggle="collapse"
@@ -333,7 +336,7 @@
                               <div class="card">
                                 <div class="card-header" id="headingThree">
                                   <h2 class="mb-0">
-                                    <img class="btn btn-link collapsed buttonThree"  data-toggle="collapse"
+                                    <img class="btn collapsed buttonThree"  data-toggle="collapse"
                                     data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
                                       src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
                                     <button class="btn btn-link collapsed buttonThree" type="button" data-toggle="collapse"
@@ -356,7 +359,7 @@
                               <div class="card">
                                 <div class="card-header" id="headingFour">
                                   <h2 class="mb-0 ">
-                                    <img class="btn btn-link collapsed buttonFour"  data-toggle="collapse"
+                                    <img class="btn collapsed buttonFour"  data-toggle="collapse"
                                     data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"
                                       src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
                                     <button class="btn btn-link collapsed buttonFour" type="button" data-toggle="collapse"
@@ -378,7 +381,7 @@
                               <div class="card">
                                 <div class="card-header" id="headingFive">
                                   <h2 class="mb-0">
-                                    <img class="btn btn-link collapsed buttonFive"  data-toggle="collapse"
+                                    <img class="btn collapsed buttonFive"  data-toggle="collapse"
                                     data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"
                                       src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
                                     <button class="btn btn-link collapsed buttonFive" type="button" data-toggle="collapse"
@@ -600,129 +603,7 @@
     crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"
     crossorigin="anonymous"></script>
-    <script>
-        var scrollArrow = document.querySelector('#scroll-down-arrow');
-        function scrollWin() {
-            window.scrollBy(0, 500);
-            console.log(window.scrollY)
-            if (window.scrollY >= 5000) {
-                scrollArrow.style.display = "none";
-            }
-        }
-        const hideArrow = (event) => {
-            if (window.scrollY >= 5000) {
-                scrollArrow.style.display = "none";
-            }
-        }
-        window.addEventListener('scroll', (event) => hideArrow(event))
-    
-        const displayArrow = (event) => {
-            if (window.scrollY < 5000) {
-                scrollArrow.classList.add('bounceInDown')
-                scrollArrow.style.display = "block";
-            }
-        }
-        window.addEventListener('scroll', (event) => displayArrow(event))
-    </script>
-    <script>
-    const hamburger = document.getElementById("hamburger");
-    const aside = document.getElementsByTagName("aside")[0];
-    const hide_aside = document.getElementsByClassName("hide-aside")[0];
-    var mediaQuery = window.matchMedia("(max-width: 960px)");
-    var slideIndex = 0;
-
-    showSlides(mediaQuery);
-    mediaQuery.addListener(showSlides);
-
-
-    //const cards = document.getElementsByClassName("card1");
-    function showSlides(mediaQueryx) {
-        var i;
-
-        var cards = document.getElementsByClassName("card1");
-        if (mediaQuery.matches) {
-
-            //var dots = document.getElementsByClassName("dot");
-            for (i = 0; i < cards.length; i++) {
-                cards[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > cards.length) { slideIndex = 1 }
-
-                cards[i].style.display = "block";
-            }
-
-        }
-
-    }
-    //handle sroll to top arrow
-$('a[href*="#"]')
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
-      location.hostname == this.hostname
-    ) {
-      var target = $(this.hash);
-     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      
-      if (target.length) {
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000, function() {
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { 
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); 
-            $target.focus(); 
-          };
-        });
-      }
-    }
-  });
-
-</script>
-<script>
-        //darkangel cc.
-        const daysElem = document.querySelector('#days'), //Edit this selector to pick the days element in your HTML.
-    hoursElem = document.querySelector('#hours'),
-    minutesElem = document.querySelector('#minutes'),
-    secondsElem = document.querySelector('#seconds'),
-    countDownWrapper = document.querySelector('.countdown'); //This is the counter that wraps all 4 numbers.
-
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 1, 2020 22:0:0").getTime();
-
-function updateClock() {
-  // Get today's date and time
-  var now = new Date().getTime();
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-  // Time calculations for days, hours, minutes and seconds
-  var daysLeft = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hoursLeft = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutesLeft = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var secondsLeft = Math.floor((distance % (1000 * 60)) / 1000);
-    // Display the results.
-    daysElem.innerText = daysLeft;
-    hoursElem.innerText = hoursLeft;
-    minutesElem.innerText = minutesLeft;
-    secondsElem.innerText = secondsLeft;
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    document.getElementById("demo").innerHTML = "EXPIRED";
-    return;
-  }
-  setTimeout(updateClock, 1000);
-}
-updateClock();
-</script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
