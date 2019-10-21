@@ -4,10 +4,10 @@ class AdminClass
 {
 
 	/**************METHOD TO HANDLE SENDING OF CONTACT FORM****************/
-	public function contactFormMailer($name, $email, $subject, $message)
+	public function contactFormMailer($ticket, $name, $email, $subject, $message)
 	{
 		global $database;
-		$result = $database->query("INSERT INTO contact_messages(`name`,`email`,`subject`,`message`,`timestamp`) VALUES('$name', '$email', '$subject', '$message', NOW())");
+		$result = $database->query("INSERT INTO contact_messages(`ticket_id`,`name`,`email`,`subject`,`message`,`timestamp`) VALUES('$ticket', '$name', '$email', '$subject', '$message', NOW())");
 		return $result;
 	}
 
