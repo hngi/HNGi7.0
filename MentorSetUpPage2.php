@@ -1,6 +1,6 @@
 <?php
 require_once "config/database.php";
-require_once 'classControllers/init.php';
+require_once 'classControllers/mentor.php';
 
 $error = array();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -211,7 +211,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               </div>
             </div>
             <div>
-              <input id="check3" name="area_of_expertise[]" type="checkbox" class="checkbox mr-1" value="Machine-learning"><label class="accordion-label" for="check3">Machine Learning</label>
+              <input id="check3" name="area_of_expertise[]" type="checkbox" class="checkbox mr-1" value="Machine-leraning"><label class="accordion-label" for="check3">Machine Learning</label>
               <div class="accordion-content">
                 <p><span>Preferred Skills: </span>Python, TensorFlow</p>
               </div>
