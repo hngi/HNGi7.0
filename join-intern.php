@@ -42,8 +42,15 @@ require_once 'classControllers/init.php';
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
   <link rel="stylesheet" type="text/css" href="css/header-footer.css">
   <link rel="stylesheet" href="css/join-intern.css">
-
   <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <style>
+    
+    #socials a {
+        display: inline-block;
+        margin-top: 10px;   
+    }
+    
+  </style>
 
 </head>
 
@@ -112,50 +119,7 @@ require_once 'classControllers/init.php';
 
 
   </div>
-  <!--div class="footer-container">
-      <footer class="footer">
-        <a href="index.html"><img class="footer-logo" src="https://res.cloudinary.com/dekillerj/image/upload/v1570648980/brand-logo.png" alt="HNG logo" /></a>
-        <div class="footer-items">
-          <div class="quickLinks">
-            <h2 class="footer-header">Quick Links</h2>
-            <ul class="footer-links">
-              <a href="join-intern.html"><li class="footer-item">Join HNG</li></a>
-              <a href="how-it-works.html"><li class="footer-item">About HNG</li></a>
-              <a href="MentorSetUpPage2.html"><li class="footer-item">Become a Sponsor</li></a>
-              <a href="MentorSetUpPage2.html"><li class="footer-item">Signup as a mentor</li></a>
-            </ul>
-          </div>
-          <div class="contact-us">
-            <h2 class="footer-header">Contact Us</h2>
-            <p class="contact-us__item">
-              Phone: <br />
-              +234(0) 812 345 6789
-            </p>
-            <p class="contact-us__item">
-              Email: <br />
-              Interns@hng.tech
-            </p>
-          </div>
-          <div>
-            <h2 class="footer-header">Office Address</h2>
-            <p class="office-address">
-              3 Birrel Avenue,<br />
-              Sabo, Yaba<br />
-              Lagos State
-            </p>
-          </div>
-          <div>
-            <h2 class="footer-header">Follow us</h2>
-            <i class="fab fa-twitter social-icon"></i>
-            <i class="fab fa-facebook-square social-icon"></i>
-            <i class="fab fa-dribbble social-icon"></i>
-          </div>
-        </div>
-        <p class="footer-p">&copy; 2019, HNG Internship. All rights reserved</p>
-      </footer>
-    </div-->
-
-  <footer>
+   <footer>
     <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722444/hng-brand-logo_gnplmq.svg">
     <nav>
       <section>
@@ -165,6 +129,8 @@ require_once 'classControllers/init.php';
           <a href="index.php" class="skyblue-text">About HNG</a>
           <a href="MentorSetUpPage2.php" class="skyblue-text">Become a Sponsor</a>
           <a href="MentorSetUpPage2.php" class="skyblue-text">Sign up as Mentor</a>
+          <a href="faq.php" class="skyblue-text">FAQ</a>
+
         </div>
       </section>
       <section id="contact-section">

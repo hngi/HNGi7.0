@@ -7,6 +7,12 @@ if(!isset($_SESSION["role"])) {
     $mentors = new Mentor;
     $display = $mentors->allMentors();
 
+    if(isset($_GET['delete_id'])){
+        $mentor_id = $_GET['delete_id'];
+
+        $message = $mentors->DeleteMentor($mentor_id);
+    }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -91,6 +97,7 @@ if(!isset($_SESSION["role"])) {
                                 <thead>
                                 <tr>
                                     <th>SN</th>
+                                    <th>Action</th>
                                     <th>Area Of Expertise</th>
                                     <th>Photo</th>
                                     <th>Name</th>
@@ -102,12 +109,15 @@ if(!isset($_SESSION["role"])) {
                                     <th>Current State</th>
                                     <th>Employment Status</th>
                                     <th>Timestamp</th>
+                                    
+                                   
                                 </tr>
                                 </thead>
                                 <tbody>
                                     <?php
                                         echo $display; 
                                     ?>
+                                    
                                 </tbody>
                             </table>
                         </div>

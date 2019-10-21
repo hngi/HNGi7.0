@@ -88,7 +88,7 @@ function contactMail($email, $name, $subject, $body)
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = $subject;
     $mail->Body    =  "<html><body>
-                  <p style='color: gray; text-align: center'>$body</p>  
+                  <h6 style='color: gray; text-align: center'>$body</h6>  
     </body></html>";
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
     $mail->addReplyTo($email, $name);

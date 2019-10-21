@@ -64,34 +64,6 @@ font-family: "Open Sans", "segoe UI", sans-serif;
 .mt-5 h4 {
   font-weight: 900;
 }
-
-footer #socials a  {
-  display: inline-block;
-  margin-top: 10px;  
-}
-/* END BOOTSTRAP OVERRIDES */
-
-/* Scroll down arrow */
-#scroll-down-arrow{
-  height: 5vw;
-  width: 5vw;
-  border-radius: 50%;
-  background: #00aeff;
-  position: fixed;
-  top: 80%;
-  left: 47%;
-  filter: opacity(0.7);
-  cursor: pointer;
-  border: 1px solid white;
-  z-index: 1000;
-}
-#scroll-down-arrow i{
-  font-size: 2vw;
-  color: white;
-  position: relative;
-  top: 32%;
-  left: 32%;
-}
 .desktop-only {
 display: none;
 }
@@ -161,7 +133,6 @@ margin: auto 0;
 main {
 grid-area: main;
 display: grid;
-
 grid-template-columns: 1.5fr;
 grid-row-gap: 1em;
 grid-template-areas:
@@ -171,7 +142,7 @@ grid-template-areas:
 }
 
 main>div {
-padding: 0 10px;
+padding: 0 5px;
 
 }
 
@@ -597,18 +568,6 @@ background-color: #FFFFFF;
 border-radius: 4px;
 box-sizing: border-box;
 }
-
-/*.click {
-width: 120px;
-display: block;
-margin-top: 20px;
-height: 30px;
-box-sizing: border-box;
-background: #00AEFF;
-box-shadow: 0px 4px 6px rgba(50, 50, 93, 0.11);
-border-radius: 4px;
-color: #FFFFFF;
-}*/
 
 .intern-meet {
 max-width: 100%;
