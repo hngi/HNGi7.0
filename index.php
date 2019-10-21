@@ -33,16 +33,19 @@
           }
         }
     </style>
+    
 </head>
-
 <body class="container-fluid">
     <img src="https://bit.ly/2OC3tWo" id="corner-circle" alt="Graphic at the top right corner">
     <div class="containerGrid">
+    
         <?php
           include('fragments/site_header.php');
         ?>
          <main>
-            <div class="main-first-row">
+         <!--Jumbo Div added so the header would fit on scroll-->
+         
+         <div class="main-first-row">
                 <div class="welcome-column">
                     <h1 id="welcome-text" class="text__dark-blue">
                         Welcome to <br> HNG 7.0 Internship
@@ -84,6 +87,9 @@
                 </div>
 
             </div>
+         </div>
+         
+            
 
             <div class="main-third-row text_center">
                 <div class="">
@@ -283,11 +289,11 @@
                               <div class="card">
                                 <div class="card-header" id="headingOne">
                                   <h2 class="mb-0">
-                                    <img class="btn btn-link"  data-toggle="collapse" data-target="#collapseOne"
+                                    <img class="btn buttonOne"  data-toggle="collapse" data-target="#collapseOne"
                                     aria-expanded="true" aria-controls="collapseOne"
                                       src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png"
                                       class="arrow1">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                                    <button class="btn  btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
                                       aria-expanded="true" aria-controls="collapseOne"> Frontend Development </button>
                                   </h2>
                                 </div>
@@ -309,7 +315,7 @@
                               <div class="card">
                                 <div class="card-header" id="headingTwo">
                                   <h2 class="mb-0">
-                                    <img class="btn btn-link collapsed buttonTwo"  data-toggle="collapse"
+                                    <img class="btn collapsed buttonTwo"  data-toggle="collapse"
                                     data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
                                       src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
                                     <button class="btn btn-link collapsed buttonTwo" type="button" data-toggle="collapse"
@@ -330,7 +336,7 @@
                               <div class="card">
                                 <div class="card-header" id="headingThree">
                                   <h2 class="mb-0">
-                                    <img class="btn btn-link collapsed buttonThree"  data-toggle="collapse"
+                                    <img class="btn collapsed buttonThree"  data-toggle="collapse"
                                     data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
                                       src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
                                     <button class="btn btn-link collapsed buttonThree" type="button" data-toggle="collapse"
@@ -353,7 +359,7 @@
                               <div class="card">
                                 <div class="card-header" id="headingFour">
                                   <h2 class="mb-0 ">
-                                    <img class="btn btn-link collapsed buttonFour"  data-toggle="collapse"
+                                    <img class="btn collapsed buttonFour"  data-toggle="collapse"
                                     data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"
                                       src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
                                     <button class="btn btn-link collapsed buttonFour" type="button" data-toggle="collapse"
@@ -375,7 +381,7 @@
                               <div class="card">
                                 <div class="card-header" id="headingFive">
                                   <h2 class="mb-0">
-                                    <img class="btn btn-link collapsed buttonFive"  data-toggle="collapse"
+                                    <img class="btn collapsed buttonFive"  data-toggle="collapse"
                                     data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"
                                       src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
                                     <button class="btn btn-link collapsed buttonFive" type="button" data-toggle="collapse"
