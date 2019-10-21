@@ -82,6 +82,7 @@ function sendNewAdminMail($email, $enc_password, $subject, $body)
 </table>
 </body>
 </html>";
+
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();

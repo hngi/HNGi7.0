@@ -119,9 +119,7 @@ function random_strings($length_of_string) {
       </div>
     </div>
   </section>
- 
-
-
+  
   <footer>
     <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722444/hng-brand-logo_gnplmq.svg">
     <nav>

@@ -30,17 +30,17 @@ if (isset($_POST['login'])) {
     <script>
 
       function signup() {
-              
+
         var email = $('#email').val();
         var password = $('#password').val();
-        
+
         $.post($login.'?login=yes", {
             email: email,
             password: password
         },
         function(data){
             $('#result').html(data);
-        });            
+        });
       }
 
     </script>
@@ -49,20 +49,20 @@ if (isset($_POST['login'])) {
   <body>
     <?php include('fragments/site_header.php'); ?>
     <section class="jumbo">
-      
-    
+
+
     </section>
 
     <div class="form-area">
-        
+
       <form class="form-container" method="post">
-        
+
         <h2 class="login-heading">Login as an Admin</h2>
         <?php
           if(!empty($errors) ){
-            
+
               echo $errors;
-            
+
           }
 
         ?>
@@ -70,13 +70,13 @@ if (isset($_POST['login'])) {
 
         <input type="email" name="email" id="email" placeholder="enter your Email" required/>
         <input type="password" name="password" id="password" placeholder="enter your password" required>
-        
+
         <button type="submit" onclick="signup()" name="login">LOG IN</button>
         <!--<a href="">Forgot Password?</a>-->
-        
+
       </form>
     </div>
-    
+
 
     <footer>
     <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722444/hng-brand-logo_gnplmq.svg">
@@ -98,7 +98,7 @@ if (isset($_POST['login'])) {
             <strong>
               Phone: <br />
             </strong>
-            +234 812 345 6789           
+            +234 812 345 6789
           </a>
           <br />
           <a href="mailto:interns@hng.tech">

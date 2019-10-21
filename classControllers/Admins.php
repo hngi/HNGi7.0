@@ -3,10 +3,10 @@
 class Admins
 {
 
- 
+
   public function adminLogin()
   {
-    
+
     //global $con;
     global $database;
     $errors = [];
@@ -26,8 +26,8 @@ class Admins
     //   foreach ($errors as $error) {
     //     echo $error . '<br />';
     //   }
-    // } 
-    
+    // }
+
     if(count($errors) === 0){
       // there are no errors
       $query = 'SELECT * FROM admins WHERE email="' . $email . '" AND password="' . $password . '" ';
@@ -83,11 +83,11 @@ class Admins
     return $display;
   }
 
-  public function newAdmin($firstname, $lastname, $email, $role)
+  public function newAdmin($firstname, $lastname, $email, $role,$password)
   {
     global $database;
     //global $con;
-    
+
 
     // check for existing email
     $query = "SELECT * FROM admins WHERE email = '" . $email . "' ";
@@ -100,7 +100,7 @@ class Admins
                                 </div>';
     } else {
       // email is available, good, proceed to register
-      $password = rand(123456, 789654);
+
       $query = "INSERT INTO admins (firstname, lastname, email, password, role, timestamp) VALUES ('" . $firstname . "', '" . $lastname . "', '" . $email . "', '" . $password . "', '" . $role . "', now())";
       $res = $database->query($query);
       $count = $database->affected_rows();
@@ -137,6 +137,7 @@ class Admins
                           </td>
                                         </tr>";
         sendNewAdminMail($email, $password, $subject, $body);
+
         $resp = '<div class="alert alert-success" role="alert">
                                 Admin Created Successfully
                             </div>';
