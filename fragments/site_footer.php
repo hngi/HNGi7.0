@@ -58,7 +58,4 @@ footer #socials a  {
                     </div>
                 </nav>
                 <p class="center-text darkblue-text">&copy 2019, HNG Internship. All rights reserved.</p>
-                
-                <div class="center-text"><a href="#header" id="top">Jump to Top<span></span></a></div>
-
             </footer>

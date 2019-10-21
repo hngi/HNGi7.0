@@ -225,4 +225,9 @@ header .wrap .logo{
     .freq {
     text-align: center;
     }
-}
+    }
+
+    #socials a {
+    display: inline-block;
+    margin-top: 10px;   
+    }

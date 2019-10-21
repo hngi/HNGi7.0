@@ -83,7 +83,7 @@
 			<img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722618/gallery-third_oqgaiv.png">
 		</div>
 		<!-- <p class="center-text"><a class="def-button shadowed">View more photos</a></p> -->
-		<p class="center-text"><a href="gallery.html" class="def-button shadowed">View more photos</a></p>
+		<p class="center-text"><a href="#" class="def-button shadowed">View more photos</a></p>
 	</section>
 	<section id="participate-section">
 		<article>
@@ -223,7 +223,8 @@
 	 	</nav>
 	 	<p class="center-text darkblue-text">&copy 2019, HNG Internship. All rights reserved.</p>
 	 </footer>
+	 <script type="text/javascript" src="js/hng6.js"></script>
+
 </body>
 </html>
 
-<script type="text/javascript" src="js/hng6.js"></script>
