@@ -45,8 +45,7 @@ header .header-links {
         <div class="stix" id="stik2"></div>
         <div class="stix" id="stik3"></div>
     </label>
-    <nav  style="height: auto">
-        <a href="index.php" class="header-links">Home</a>
+    <nav >
         <a href="hng6.php" class="header-links">HNGi 6.0</a>
         <a href="mentorpage.php" class="header-links">Mentors</a>
         <a href="contactform.php" class="header-links">Contact</a>

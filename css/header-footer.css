@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap');
 
 body {
     font-family: "Open Sans", segoe UI, sans-serif;
@@ -88,7 +88,7 @@ header #mobile-bars-check {
 }
 
 footer {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(245, 245, 245);
     padding: 4rem 8rem;
 }
 

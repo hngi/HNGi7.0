@@ -1,19 +1,76 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap');
 
 
 * {
 margin: 0;
 padding: 0;
+box-sizing: border-box;
 }
 html {
   scroll-behavior: smooth;
 }
 
 body {
-font-family: "Open Sans", segoe UI, sans-serif;
+font-family: "Open Sans", "segoe UI", sans-serif;
 
 }
+
+.jumbo {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+}
+/* GHOST TOUCHES */
+.buttonOne,
+.buttonTwo, 
+.buttonThree, 
+.buttonFour, 
+.buttonFive {
+  opacity: .7;
+}
+
+.buttonOne:hover,
+.buttonTwo:hover, 
+.buttonThree:hover, 
+.buttonFour:hover, 
+.buttonFive:hover  {
+  cursor: pointer;
+  opacity: 1;
+}
+
+
+
+
+/* BOOTSTRAP OVERRIDES */
+
+.btn-link {
+  opacity: .6
+}
+
+.btn-link:hover, .btn-link:active {
+  text-decoration: none;
+  opacity: 1;
+  transition: .4s;
+  color: #00AEFF;
+}
+
+.card {
+  border: none;
+}
+
+.mt-5 h4 {
+  font-weight: 900;
+}
+
+footer #socials a  {
+  display: inline-block;
+  margin-top: 10px;  
+}
+/* END BOOTSTRAP OVERRIDES */
+
 /* Scroll down arrow */
 #scroll-down-arrow{
   height: 5vw;
@@ -40,30 +97,6 @@ display: none;
 }
 button > a{
 color: #fff;
-}
-
-
-.fix-a:hover {
-  color: #fff;  
-  text-decoration: none;
-
-}
-.accordion {
-  border: none;
-  outline: none;
-}
-
-.accordion img {
-  cursor: pointer;
-}
-
-.accordion img:hover {
-  opacity: .6;
-}
-
-h3 {
-  font-weight: 600;
-  letter-spacing: 1px;
 }
 
 button > a:hover{
@@ -231,6 +264,8 @@ font-weight: 500;
 text-align: center;
 }
 
+
+
 .card1-image {
 width: 100%;
 display: block;
@@ -261,6 +296,10 @@ color: #333333;
 
 .text__dark-blue {
 color: #084482;
+}
+
+.accordion {
+  border: none;
 }
 
 
@@ -494,7 +533,10 @@ flex: 1;
 #how-it-works {
 color: #084482;
 text-align: center !important;
-
+font-size: 25px;
+line-height: 34px;
+font-weight: bold;
+margin-bottom: 2em;
 
 }
 
@@ -1030,7 +1072,8 @@ margin-left: 5px;
 
 #wrapper {
     background-color: #3c6b9c;
-    color: #F2f5f9
+    color: #F2f5f9;
+    
   }
 
   #headingOne {
@@ -1213,7 +1256,9 @@ margin-left: 5px;
 .sponsors_button{
   width: 90%;
 }
-
+.tripp{
+  width: 85%;
+}
 
 #zz{
   width: 95%;
@@ -1231,55 +1276,3 @@ margin-left: 5px;
 }
 
 /** Very Small screens**/
-
-
-
-.reveal {
-  width:100%;
-  position: relative;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgb(255, 255, 255);
-}
-
-.reveal .content h3 {
-  position: relative;
-  color:#3C6B9C;
-  font-size: 55px; 
-  transition: 2s;
-  transform-origin: left;
-  transform: scaleX(1);
-}
-
-
-
-html.sr .load-hidden {
-  visibility: hidden;
-}
-
-/**
-
-.reveal .content h4:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #e02bff;
-  transform-origin: right;
-  transition: 2s;
-}
-
-.reveal .content button {
-  position: relative;
-  transition: 1s;
-}
-
-.reveal .content .the-half-row {
-  font-size: 25px;
-  transition: 1s;
-}
-**/
