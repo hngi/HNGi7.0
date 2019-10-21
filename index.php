@@ -182,10 +182,6 @@
                                 Anyone can log into the internship using their laptop. Each week we give tasks.</p>
                             <button class="cta-button-4 button--midBlue" type="button"><a href="join-intern.php">Get
                                     Started</a></button>
-
-                                Anyone can log into the internship using their laptop. Each week we give tasks.
-                                <button class="cta-button-4 button--midBlue" type="button"><a
-                                        href="join-intern.php">Get Started</a></button></p>
                         </div>
                     </div>
 
@@ -495,7 +491,7 @@
                             </h4>
                             <span class="support__item-link">
                                 <i class="fa fa-chevron-circle-right"></i>
-                                <a href="donationpage.php" class="text-light">Get Started</a>
+                                <a href="donate.html" class="text-light">Get Started</a>
                             </span>
                         </div>
                     </div>
@@ -509,7 +505,7 @@
                             </h4>
                             <span class="support__item-link">
                                 <i class="fa fa-chevron-circle-right"></i>
-                                <a href="donationpage.php" class="text-light">Get Started</a>
+                                <a href="donate.html" class="text-light">Get Started</a>
                             </span>
                         </div>
                     </div>

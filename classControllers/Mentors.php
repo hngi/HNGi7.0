@@ -4,6 +4,22 @@
 class Mentor
 {
 
+  public function DeleteMentor($mentor_id){
+
+    global $con;
+    global $database;
+
+    $sql = "DELETE FROM mentors WHERE mentor_id='$mentor_id'";
+    if($query = $database->query($sql)){
+
+      $message = "Mentor Deleted successfully.";
+
+      header('Location: registered_mentors.php');
+    }
+
+   // return $message;
+
+  }
 
 
   public function allMentors()
@@ -21,6 +37,7 @@ class Mentor
         $display .= '
                     <tr>
                         <td>' . $sn . '</td>
+                        <td>'. '<a onClick=\"javacript: return confirm("Please confirm deletion");\" href="registered_mentors.php?delete_id='.$row["mentor_id"].'" class="btn btn-danger btn-xs">Delete</a>' .'</td>
                         <td>' . $row["area_of_expertise"] . '</td>
                         <td><img src="' . $row["photo_url"] . '" style="width: 50px; height: 50px;"></td>
                         <td>' . $row["name"] . '</td>
@@ -32,6 +49,7 @@ class Mentor
                         <td>' . $row["current_state"] . '</td>
                         <td>' . $row["employment_status"] . '</td>
                         <td>' . $row["timestamp"] . '</td>
+                        
                     </tr>';
         $sn++;
       }
