@@ -191,12 +191,9 @@
               }
           }
 
-
-
           // function to connect and execute the query
             function search()
           {
-
               if(isset($_POST['search']))
               {
                 global $database;
@@ -207,7 +204,6 @@
               }
 
           }
-
 
     }
 

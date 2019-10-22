@@ -72,7 +72,7 @@ if (isset($_GET['delete_id'])) {
             <!-- <h1>Dashboard</h1> -->
             <h2>Registered Mentors </h2>
             <!-- <section id="intern-section">
-				Populated by `js/dashboard.js` 
+				Populated by `js/dashboard.js`
 			</section> -->
 
             <div class="container">
@@ -99,6 +99,7 @@ if (isset($_GET['delete_id'])) {
                                 <thead class="table-primary">
                                     <tr>
                                         <th>SN</th>
+                                        <th>Mentor ID</th>
                                         <th>Area Of Expertise</th>
                                         <th>Photo</th>
                                         <th>Name</th>

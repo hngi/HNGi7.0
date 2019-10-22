@@ -42,12 +42,7 @@ if (isset($_GET['delete_id'])) {
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 
-
-  <!-- jQuery library -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-
-  <!-- Latest compiled JavaScript -->
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
+    <script type="text/javascript" src="js/dashboard.js"></script>
 
   <style type="text/css">
     .card {
@@ -199,7 +194,8 @@ if (isset($_GET['delete_id'])) {
 
 
   <?php ob_start(); ?>
-    <!-- Modal -->
+  
+    <!-- Modal to display each Intern -->
     <div class="modal fade details-1" id="details-modal" tabindex="-1"
     role="dialog" aria-labelledby="details-l" aria-hidden="true">
       <div class="modal-dialog modal-md">
@@ -209,28 +205,64 @@ if (isset($_GET['delete_id'])) {
           </div>
           <div class="modal-body">
             <div class="container">
+
               <div class="row">
-
-                <div class="col-sm-7">
-
-                  <div>Intern ID: <?=$internDetails['intern_id'];?></div>
-                  <div>Name: <?=$internDetails['name'];?></div>
-                  <div>Email: <?=$internDetails['email'];?></div>
-                  <div>Phone No: <?=$internDetails['phone_no'];?></div>
-                  <div>Link: <?=$internDetails['link_to_portfolio'];?></div>
-                  <div>Link: <?=$internDetails['link_to_cv'];?></div>
-                  <div>Years: <?=$internDetails['years_of_experience'];?></div>
-                  <div>Interest: <?=$internDetails['interest'];?></div>
-                  <div>Location: <?=$internDetails['current_location'];?></div>
-                  <div>Status: <?=$internDetails['employment_status'];?></div>
-                  <div>About: <?=$internDetails['about'];?></div>
-                  <div>Time: <?=$internDetails['timestamp'];?></div>
+                <div class="col-md-12 col-10 table-responsive">
+                  <table class="table table-hover mt-3 mb-1">
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="table">Intern ID:</th>
+                        <td class=""><?=$internDetails['intern_id'];?></td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="table">Name:</th>
+                        <td class=""><?=$internDetails['name'];?></td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="table">Email:</th>
+                        <td class=""><?=$internDetails['email'];?></td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="table">Phone No:</th>
+                        <td class=""><?=$internDetails['phone_no'];?></td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="table">Link To Portfolio:</th>
+                        <td class=""><?=$internDetails['link_to_portfolio'];?></td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="table">Link To CV:</th>
+                        <td class=""><?=$internDetails['link_to_cv'];?></td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="table">Interest:</th>
+                        <td class=""><?=$internDetails['interest'];?></td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="table">Current Location:</th>
+                        <td class=""><?=$internDetails['current_location'];?></td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="table">Employment Status:</th>
+                        <td class=""><?=$internDetails['employment_status'];?></td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="table">About:</th>
+                        <td class=""><?=$internDetails['about'];?></td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="table">Tmie Registered:</th>
+                        <td class=""><?=$internDetails['timestamp'];?></td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
                 <div class="col-sm-6 modal-footer"></div>
                 <div class="modal-footer col-sm-6">
                   <button type="button" class="btn btn-info" onclick="closeModel()">Close</button>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -244,19 +276,19 @@ if (isset($_GET['delete_id'])) {
 
   // Ajax request from Modal To display the each intern.
     function interndetails(id){
-      // alert(id);
       var data = {"id" : id};
-      jQuery.ajax({
-        url : 'registered_interns.php',
+        $.ajax({
+        url : '',
         method : "get",
         data : data,
         success: function(data){
-          jQuery('body').append(data);
-          jQuery('#details-modal').modal('toggle');
+          $('body').append(data);
+          $('#details-modal').modal('show');
         },
         error: function(){alert("Something went wrong!")},
       });
     }
+
 
    // To close the display of each intern
       function closeModel(){
@@ -267,10 +299,13 @@ if (isset($_GET['delete_id'])) {
         },500);
       }
 
+
+
+
+
     </script>
 
 
-  <script type="text/javascript" src="js/dashboard.js"></script>
 
 
 </body>
