@@ -132,7 +132,7 @@
           }
           .countdown__number {
             font-style: normal;
-            font-weight: 500;
+            font-weight: bolder;
             text-align: center;
             font-size: 2em;
             border: 5px solid #06F4CC;
