@@ -1,11 +1,18 @@
 <?php
 require 'classControllers/init.php';
+
 if (!isset($_SESSION["role"])) {
   header('Location:admin_login.php');
 }
 // include('backend/Interns.php');
 $interns = new Intern;
 $display = $interns->allInterns();
+
+if (isset($_GET['delete_id'])) {
+  $intern_id = $_GET['delete_id'];
+
+  $message = $interns->DeleteIntern($intern_id);
+}
 
 ?>
 <!DOCTYPE html>
@@ -106,6 +113,7 @@ $display = $interns->allInterns();
                     <th>Emp. Stat</th>
                     <th>About</th>
                     <th>Reg. Date</th>
+                    <th>Action</th>
 
                   </tr>
                 </thead>

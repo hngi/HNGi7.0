@@ -118,10 +118,10 @@
                 the most talented software developers. Everyone is welcomed to participate (there is no
                 entrance exam).
                 Anyone can log into the internship using their laptop. Each week we give tasks.
-
-
-                <button class="cta-button-4 button--midBlue" onclick="location.href='join-intern.php'" type="button">Get
-                  Started</button>
+              </p>
+              <button class="cta-button button--midBlue" id="buttt">
+              <a href="join-intern.php" id="butt">Get Started</a>
+            </button>
             </div>
             <div class="half-a-row h222">
               <table >
@@ -165,8 +165,9 @@
                 the most talented software developers. Everyone is welcomed to participate (there is no
                 entrance exam).
                 Anyone can log into the internship using their laptop. Each week we give tasks.</p>
-              <button class="cta-button-4 button--midBlue" type="button"><a href="join-intern.php">Get
-                  Started</a></button>
+              <button class="cta-button button--midBlue" id="buttt">
+                <a href="join-intern.php" id="butt">Get Started</a>
+              </button>
             </div>
           </div>
 
@@ -184,8 +185,9 @@
               the internship using their laptop. Each week, we give tasks.</p>
 
 
-            <button class="button--midBlue cta-button">
-              <a href="join-intern.php">Get Started</a></button>
+            <button class="cta-button button--midBlue" id="buttt">
+              <a href="join-intern.php" id="butt">Get Started</a>
+            </button>
           </div>
 
           <div class="col-12 mt-md-5 mt-lg-0 col-md-6 ">
@@ -521,8 +523,24 @@
           </div>
         </div>
       </section>
+      <!-- sponsor section by hayjay -->
+      <section>
+		<h2 class="center-text blue-text">HNG 6.0 Internship Sponsors</h2>
+		<div id="sponsor-flex-top">
+			<a href="#"><img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg"></a>
+			<a href="#"><img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722780/akwa-ibom-logo_yzz8ny.svg"></a>
+			<a href="#"><img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722785/imo-logo_rvxpil.svg"></a>
+			<a href="#"><img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722788/verifi-logo_nfckrw.svg"></a>
+		</div>
+		<div id="sponsor-flex-bottom">
+			<a href="#"><img src="https://res.cloudinary.com/jaycodist/image/upload/v1570723653/figma-logo_iexfvh.png"></a>
+			<a href="#"><img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722855/bluechip-logo_rw62cu.svg"></a>
+			<a href="#"><img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg"></a>
+		</div>
+		<p class="center-text"><a href="donate.html" class="def-button shadowed center">Become a Sponsor</a></p>
+	</section>
 
-      <section class="sponsors">
+      <!-- <section class="sponsors">
         <h3 class="sponsors__header">HNG 6.0 Internship Sponsors</h3>
         <div class="sponsors_images_container">
           <div class="sponsors__images">
@@ -586,7 +604,7 @@
             </a>
           </button>
         </div>
-      </section>
+      </section> -->
     </main>
     <?php include('fragments/site_footer.php'); ?>
 

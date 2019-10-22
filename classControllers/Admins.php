@@ -2,10 +2,29 @@
 
 class Admins
 {
+  public function DeleteAdmin($admin_id){
+
+    
+    global $database;
+
+    $sql = "DELETE FROM admins WHERE admin_id = '$admin_id'";
+    if($query = $database->query($sql)){
+
+      $message = "Admin Deleted successfully.";
+
+      header('Location: admins.php');
+
+    }
+
+   // return $message;
+
+  }
 
  
   public function adminLogin()
   {
+
+    
     
     //global $con;
     global $database;
@@ -72,6 +91,7 @@ class Admins
                         <td>' . $row["email"] . '</td>
                         <td>' . $row["role"] . '</td>
                         <td>' . $row["timestamp"] . '</td>
+                        <td>' . '<a onClick=\"javacript: return confirm("Please confirm deletion");\" href="admins.php?delete_id=' . $row["admin_id"] . '" class="btn btn-danger btn-xs">Delete</a>' . '</td>
                     </tr>';
         $sn++;
       }
