@@ -18,7 +18,7 @@
 		include('fragments/site_header.php');
 	?>
 	<section id="countdown-section">
-		<h2 class="darkblue-text center-text" id="countdown-intro">Countdown to HNG 7.0 <span class="blue-text">- 1st January, 2020</span></h2>
+		<h2 class="darkblue-text center-text" id="countdown-intro">Countdown to HNGi7.0 <span class="blue-text">- 1st January, 2020</span></h2>
 
 		<section id="countdown-container">
 			<div id="day-div">
@@ -26,7 +26,7 @@
 					<div class="arcs-background"></div>
 				    <div id="day-start" class="arc arc_start"></div>
 				    <div id="day-end" class="arc arc_end"></div>
-					<span id="day-text">05</span>
+					<span id="day-text" class="moshe">05</span>
 				</div>
 				<p class="center-text">DAYS</p>
 			</div>
@@ -44,7 +44,7 @@
 					<div class="arcs-background"></div>
 				    <div id="minute-start" class="arc arc_start"></div>    
 				    <div id="minute-end" class="arc arc_end"></div>
-					<span id="minute-text">52</span>
+					<span id="minute-text" class="moshe">52</span>
 				</div>
 				<p class="center-text">MINUTES</p>
 			</div>
@@ -59,7 +59,7 @@
 			</div>
 		</section>
 
-		<h2 class="center-text"><a href="join-intern.php" class="skyblue-text" id="countdown-register">REGISTER FOR HNG 7.0 NOW</a></h2>
+		<h2 class="center-text"><a href="join-intern.php" class="skyblue-text" id="countdown-register">REGISTER FOR HNGi7.0 NOW</a></h2>
 	</section>
 	<section id="home-about">
 		<h1 class="blue-text">HNG 6.0 Internship</h1>
@@ -94,7 +94,7 @@
 				Participation was achieved remotely via the popular collaboration tool called Slack.
 			</p>
 			<br />
-			<p id="p-link"><a href="join-intern.php" class="def-button">Join HNG</a></p>
+			<p id="p-link"><a href="join-intern.php" class="def-button">Join HNGi7.0</a></p>
 		</article>
 		<img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722649/home-geeks_vld6nt.png" id="geek-img">
 	</section>
@@ -102,9 +102,9 @@
 		<h2 class="blue-text center-text">HNG 6 Internship Tracks (Curriculum)</h2>
 		<div id="curriculum-flex">
 			<p>
-				Those who participated in HNG 6 Internship program were divided into groups according to their interests
+				Those who participated in HNG 6.0 Internship program were divided into groups according to their interests
 				<br /><br />
-				Those groups were popularly known as tracks in HNG 6 Internship and the following were some of the tracks featured
+				Those groups were popularly known as tracks in HNG 6.0 Internship and the following were some of the tracks featured
 				<br /><br />
 				At various points in the program, collaboration between participants in different tracks is achieved
 			</p>
@@ -120,7 +120,7 @@
 	</section>
 	<section id="mentor-section">
 		<article>
-			<h2 class="blue-text">HNG 6 Internship Mentors</h2>
+			<h2 class="blue-text">HNG 6.0 Internship Mentors</h2>
 			<p>
 				Mentors are responsible for day-to-day running of the HNG Internship programme.
 				<br /><br />
