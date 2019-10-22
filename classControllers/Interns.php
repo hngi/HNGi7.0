@@ -6,22 +6,22 @@
 
         public function DeleteIntern($intern_id){
 
-    
+
             global $database;
-        
+
             $sql = "DELETE FROM interns WHERE intern_id = '$intern_id'";
-            
+
             if($query = $database->query($sql)){
-        
+
               $message = "Intern Deleted successfully.";
-        
+
              // header('Location: registered_interns.php');
 
               //echo '<script>window.location.href = "registered_interns.php"</script>';
             }
-        
+
            // return $message;
-        
+
           }
 
 
@@ -145,6 +145,8 @@
                     $no++;
                     $display .='
                     <tr>
+                        <td><button type="button" class="btn btn-md btn-info"
+                              onclick="interndetails('.$row["intern_id"].')">View</button></td>
                         <td>'.$no.'</td>
                         <td>'.$row["name"].'</td>
                         <td>'.$row["email"].'</td>
@@ -160,7 +162,7 @@
                         <td>' . '<a onClick=\"javacript: return confirm("Please confirm deletion");\" href="registered_interns.php?delete_id=' . $row["intern_id"] . '" class="btn btn-danger btn-xs">Delete</a>' . '</td>
 
                     </tr>';
-                   
+
                 }
 
             } else {
@@ -171,6 +173,41 @@
             return $display;
         }
 
+
+        //Function to view each intern details
+          function view()
+          {
+              if(isset($_GET['id']))
+              {
+                $id = $_GET['id'];
+                $id = (int)$id;
+                global $database;
+                $sql = "SELECT * FROM interns WHERE intern_id = '$id'";
+                $result = $database->query($sql);
+                $result1 = mysqli_fetch_assoc($result);
+
+              return $result1;
+              }
+          }
+
+
+
+          // function to connect and execute the query
+            function search()
+          {
+
+              if(isset($_POST['search']))
+              {
+                global $database;
+                $valueToSearch = $_POST['valueToSearch'];
+                $sql1 = "SELECT * FROM interns WHERE name ='$valueToSearch' OR current_location ='$valueToSearch'";
+                $result11 = $database->query($sql1);
+                return $result11;
+              }
+
+          }
+
+
     }
 
     if(isset($_GET["signup"])) {
@@ -178,10 +215,3 @@
         $interns->internSignup();
     }
 ?>
-<!-- <td><button type="button" class="btn btn-lg btn-info"
-onclick="detailsmodal('.$row["intern_id"].')">View</button></td> -->
-
-
-
-<!-- <td><button type="button" class="btn btn-lg btn-info"
-id="vacancies" data-toggle="modal" data-target="#coolStuffModal">View</button></td> -->

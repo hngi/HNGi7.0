@@ -32,9 +32,13 @@ require_once 'classControllers/init.php';
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Join as an intern</title>
   <link rel="shortcut icon" href="https://res.cloudinary.com/dekillerj/image/upload/v1570648980/brand-logo.png" />
+
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
   <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="stylesheet" href="css/newContact.css">
@@ -86,12 +90,7 @@ require_once 'classControllers/init.php';
     if ($status == 1) {
       ?>
       <form class="form-container" action="" method="post" id="myForm">
-<!--
-        <?php
-        if(isset($success) ){
-            echo $success;
-          }
-          ?> -->
+
 
         <input type="text" name="fullname" id="fullname" required placeholder="Fullname" />
         <input type="email" name="email" id="email" required placeholder="Email" />
@@ -107,7 +106,7 @@ require_once 'classControllers/init.php';
 
         <p id="result"></p>
 
-        <input type="submit" name="submit" value="SUBMIT" class="submitBtn"/>
+        <input type="submit" name="submit" value="SUBMIT" class="submitBtn btn btn-info"/>
       </form>
     <?php
 

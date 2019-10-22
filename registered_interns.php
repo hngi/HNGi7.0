@@ -7,6 +7,8 @@ if (!isset($_SESSION["role"])) {
 // include('backend/Interns.php');
 $interns = new Intern;
 $display = $interns->allInterns();
+$internDetails = $interns->view();
+$searc = $interns->search();
 
 if (isset($_GET['delete_id'])) {
   $intern_id = $_GET['delete_id'];
@@ -29,13 +31,23 @@ if (isset($_GET['delete_id'])) {
   <!-- Latest compiled and minified CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+  <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+   <!-- <script src="jquery-3.4.1.min.js"></script> -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 
 
   <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 
   <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
 
   <style type="text/css">
     .card {
@@ -94,13 +106,30 @@ if (isset($_GET['delete_id'])) {
             <div class="col-md-3">
               <!--<a href="exports/export-to-pdf.php">-->
               <a href="#" onclick="javascript:printDiv('printablediv')">
-                <button type="button" class="btn btn-primary" id="export">Export to PDF</button>
+                <button type="button" class="btn btn-info" id="export">Export to PDF</button>
               </a>
             </div>
             <div class="table-responsive" id="printablediv">
+
+      <?php
+          if(isset($_POST['search']))
+          {
+            while ($search = mysqli_fetch_assoc($searc)) {
+              echo "<div class='text-center bg-secondary'>".$search['name'].", Intern id is
+              ".$search['intern_id']." and Location is ".$search['current_location']."</div><br/>";
+        }
+      }
+      ?>
+
+        <form action="" method="post">
+            <input type="text" class="form-control mt-3 mb-0" name="valueToSearch" placeholder="Search Intern By Name or Location"class="ml-5" /><br><br>
+            <input type="submit" name="search" value="Search" class="ml-5 mt-0 btn btn-info" /><br><br>
+
+
               <table class="table table-hover table-bordered  mt-3 mb-1 table-condensed">
                 <thead class="table-primary">
                   <tr>
+                    <th></th>
                     <th>S/N</th>
                     <th>Name</th>
                     <th>Emai</th>
@@ -123,6 +152,8 @@ if (isset($_GET['delete_id'])) {
                     ?>
                 </tbody>
               </table>
+            </form>
+
             </div>
           <?php
           }
@@ -166,85 +197,77 @@ if (isset($_GET['delete_id'])) {
   <?php include('fragments/sidebar.php'); ?>
 
 
-  <!-- Modal -->
-  <div class="modal fade" id="coolStuffModal" tabindex="-1" role="dialog" aria-labelledby="coolStuffLabel" aria-hidden="true">
+  <?php ob_start(); ?>
+    <!-- Modal -->
+    <div class="modal fade details-1" id="details-modal" tabindex="-1"
+    role="dialog" aria-labelledby="details-l" aria-hidden="true">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h3>Intern Details</h3>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
 
-    <!-- <div class="modal fade details-1" id="details-modal" tabindex="-1" role="dialog" aria-labelledby="details-l" aria-hidden="true"> -->
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="contentLabel">Noooo</h5>
-          <!-- <h5 class="modal-title" id="contentLabel"><?= $product['title']; ?></h5> -->
-          <!-- <button class="close" type="button" onclick="closeModel()" aria-label="close">
-          <span aria-hidden="true">&times;</span></button> -->
-        </div>
-        <div class="modal-body">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="center-block">
+                <div class="col-sm-7">
+
+                  <div>Intern ID: <?=$internDetails['intern_id'];?></div>
+                  <div>Name: <?=$internDetails['name'];?></div>
+                  <div>Email: <?=$internDetails['email'];?></div>
+                  <div>Phone No: <?=$internDetails['phone_no'];?></div>
+                  <div>Link: <?=$internDetails['link_to_portfolio'];?></div>
+                  <div>Link: <?=$internDetails['link_to_cv'];?></div>
+                  <div>Years: <?=$internDetails['years_of_experience'];?></div>
+                  <div>Interest: <?=$internDetails['interest'];?></div>
+                  <div>Location: <?=$internDetails['current_location'];?></div>
+                  <div>Status: <?=$internDetails['employment_status'];?></div>
+                  <div>About: <?=$internDetails['about'];?></div>
+                  <div>Time: <?=$internDetails['timestamp'];?></div>
                 </div>
-              </div>
-              <div class="col-sm-6">
-                <h4>Details</h4>
-                <!-- <p><?= $product['description']; ?></p>
-              <p>Price : <?= money($product['price']); ?></p>
-              <p>Brand: <?= $brand['brand']; ?></p> -->
-                <form class="" action="" method="post">
-                  <div class="form-group">
-                    <div class="row">
-                      <div class="col-sm-3"><label for="quantity">Quantity:</label></div>
-                      <input type="text" name="quantity" id="quantity" class="form-control form-brand" value="">
-                    </div>
-                    <div class="col-xs-9"></div>
-                  </div>
-                  <div class="form-group">
-                    <label for="size">Size :</label>
-                    <select class="form-control" name="size" id="size">
-                      <!-- <option value=""></option>
-        <?php foreach ($sizeArray as $string) {
-          $stringArray = explode(':', $string);
-          $size = $stringArray[0];
-          $quantity = $stringArray[1];
-          echo '<option value="' . $size . '">' . $size . ' (' . $quantity . ' Available)</option>';
-        } ?> -->
-                    </select>
-                  </div>
-                </form>
-              </div>
-              <div class="col-sm-6 modal-footer"></div>
-              <div class="modal-footer col-sm-6">
-                <button type="button" class="btn btn-info" onclick="closeModel()">Close</button>
-                <button type="submit" class="btn btn-warning" onclick="closeModel()">Add to Cart</button>
+                <div class="col-sm-6 modal-footer"></div>
+                <div class="modal-footer col-sm-6">
+                  <button type="button" class="btn btn-info" onclick="closeModel()">Close</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
-
     </div>
-  </div>
 
-  <script type="text/javascript">
-    // To display the promo items. The code is in index
-    function detailsmodal(id) {
-      var data = {
-        "intern_id": intern_id
-      };
+  <?php echo ob_get_clean(); ?>
+
+  <script>
+
+  // Ajax request from Modal To display the each intern.
+    function interndetails(id){
+      // alert(id);
+      var data = {"id" : id};
       jQuery.ajax({
-        url: '/HNGi7.0/registered_interns.php',
-        method: "post",
-        data: data,
-        success: function(data) {
+        url : 'registered_interns.php',
+        method : "get",
+        data : data,
+        success: function(data){
           jQuery('body').append(data);
           jQuery('#details-modal').modal('toggle');
         },
-        error: function() {
-          alert("Something went wrong!")
-        },
+        error: function(){alert("Something went wrong!")},
       });
     }
-  </script>
+
+   // To close the display of each intern
+      function closeModel(){
+        jQuery('#details-modal').modal('hide');
+        setTimeout(function(){
+          jQuery('#details-modal').remove();
+          jQuery('.modal-backdrop').remove();
+        },500);
+      }
+
+    </script>
+
 
   <script type="text/javascript" src="js/dashboard.js"></script>
 
