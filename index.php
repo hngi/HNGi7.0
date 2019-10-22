@@ -12,30 +12,9 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
-    <style>
-        @media screen and (max-width: 700px){
-          .main-first-row, .main-fourth-row {
-            margin: 0 auto;
-          }
-
-          .main-third-row .card1-container {
-            display : block;
-          }
-
-          .main-third-row .card1-container .card1 {
-            margin : 10px auto;
-          }
-
-          .main-fourth-row {
-          width: 85%;
-          padding-right: 0px;
-
-          }
-        }
-    </style>
     
 </head>
-<body class="container-fluid">
+<body class="container-fluid" style="max-width: 1800px;">
     <img src="https://bit.ly/2OC3tWo" id="corner-circle" alt="Graphic at the top right corner">
     <div class="containerGrid">
     
@@ -412,7 +391,7 @@
             <div class="container">
                 <h4 class="bass" style="padding-top: 4em; text-align: center; color: darkblue; font-size: 24px;">Our Dedicated
                     Mentors</h4>
-                <div class="row ment" style="padding-top: 6em; text-align: center;">
+                <div class="row" style="padding-top: 6em; text-align: center;">
                     <div class="col-6 col-lg-3">
                         <img style="width: 150px; height: 150px; border-radius: 50%;"
                             src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730807/IMG2_uiu3fj.png">
