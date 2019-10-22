@@ -43,7 +43,6 @@ class Mentor
                         <td>' . $row["name"] . '</td>
                         <td>' . $row["email"] . '</td>
                         <td>' . $row["phone_no"] . '</td>
-                        
                         <td>' . $row["link_to_cv"] . '</td>
                         <td>' . $row["why_interested"] . '</td>
                         <td>' . $row["current_state"] . '</td>

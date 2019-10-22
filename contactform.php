@@ -5,23 +5,12 @@ $contact_mail = new AdminClass;
 $validation = new Validation();
 
 if (isset($_POST['contact-btn'])) {
-// This function will return 
-// A random string of specified length 
-function random_strings($length_of_string) { 
-		
-	return substr ((date('dmys')), 0, $length_of_string); 
-} 
-
-// This function will generate 
-// Random string of length 10 
-//echo random_strings(10); 
 
   //use this as an example to get form input data
   $name = $database->escape_string($_POST["name"]);
   $email = $database->escape_string($_POST["email"]);
   $subject = $database->escape_string($_POST["subject"]);
   $message = $database->escape_string($_POST["message"]);
-  $ticket = random_strings(10);
   //validation of data
   $msg = $validation->check_empty($_POST, array('name', 'email', 'subject', 'message'));
   $check_email = $validation->is_email_valid($_POST['email']);
@@ -31,15 +20,16 @@ function random_strings($length_of_string) {
   } else {
 
     //here is method that will submit mail to database table and you can find it in adminClass
-    $send = $contact_mail->contactFormMailer($ticket, $name, $email, $subject, $message);
+    $send = $contact_mail->contactFormMailer($name, $email, $subject, $message);
     if ($send) {
-      $ticket = $ticket;
       $name = $name;
       $subject = $subject;
       $body = $message;
       //here is the function to send mail to admin email
+
       contactMail($email, $ticket, $name, $subject, $body);
       $mess = 'Message Sent you get a feedback from us thank you!';
+
     }
   }
 }
@@ -54,7 +44,7 @@ function random_strings($length_of_string) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Contact Us</title>
+  <title>FAQ2</title>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -67,23 +57,9 @@ function random_strings($length_of_string) {
 </head>
 
 <body>
-  <header>
-    <a href="index.php"><img id="hng-logo" src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png"></a>
-    <input type="checkbox" id="mobile-bars-check" />
-    <label for="mobile-bars-check" id="mobile-bars">
-      <!--img src="images/bars-icon.png" height="23px"-->
-      <div class="stix" id="stik1"></div>
-      <div class="stix" id="stik2"></div>
-      <div class="stix" id="stik3"></div>
-    </label>
-    <nav>
-      <a href="index.php" class="header-links">Home</a>
-      <a href="hng6.php" class="header-links">HNG 6.0</a>
-      <a href="mentorpage.php" class="header-links">Mentors</a>
-      <a href="contactform.php" class="header-links">Contact</a>
-      <a href="join-intern.php" id="join-hng" class="def-button">Join HNGi 7.0</a>
-    </nav>
-  </header>
+<?php
+    include_once "fragments/site_header.php";
+?>
 
   <section class="freq-n">
     <div class="container">
@@ -119,56 +95,9 @@ function random_strings($length_of_string) {
       </div>
     </div>
   </section>
-  
-  <footer>
-    <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722444/hng-brand-logo_gnplmq.svg">
-    <nav>
-      <section>
-        <h2 class="skyblue-text">Quick Links</h2>
-        <div id="link-list">
-          <a href="join-intern.php" class="skyblue-text">Join HNG</a>
-          <a href="index.php" class="skyblue-text">About HNG</a>
-          <a href="donationpage.html" class="skyblue-text">Become a Sponsor</a>
-          <a href="MentorSetUpPage2.php" class="skyblue-text">Sign up as Mentor</a>
-          <a href="faq.php" class="skyblue-text">FAQ</a>
-
-        </div>
-      </section>
-      <section id="contact-section">
-        <h2 class="skyblue-text">Contact Us</h2>
-        <div>
-          <a href="tel:+2348123456789">
-            <strong>
-              Phone: <br />
-            </strong>
-            +234 812 345 6789
-          </a>
-          <br />
-          <a href="mailto:interns@hng.tech">
-            <strong>
-              Email: <br />
-            </strong>
-            interns@hng.tech
-          </a>
-        </div>
-      </section>
-      <section>
-        <h2 class="skyblue-text">Office Address</h2>
-        <p id="address">
-          3 Birrel Avenue <br /> Sabo, Yaba, <br /> Lagos state
-        </p>
-      </section>
-      <section>
-        <h2 class="skyblue-text">Follow Us</h2>
-        <div id="socials">
-          <a href="https://twitter.com" title="Follow on Twitter!"><img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/twitter-logo_m1mgzi.svg"></a>
-          <a href="https://facebook.com"><img title="Follow on Facebook!" src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/facebook-logo_bw1hal.svg"></a>
-          <a href="https://dribble.com"><img title="Follow on Dribble!" src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/dribble-logo_w4vwuz.svg"></a>
-        </div>
-      </section>
-    </nav>
-    <p class="center-text darkblue-text">&copy 2019, HNG Internship. All rights reserved.</p>
-  </footer>
+ <?php
+    include_once "fragments/site_footer.php";
+?>
 </body>
 
 </html>
