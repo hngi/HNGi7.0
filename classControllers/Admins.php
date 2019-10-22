@@ -4,28 +4,10 @@ class Admins
 {
   public function DeleteAdmin($admin_id){
 
-    
-    global $database;
 
-    $sql = "DELETE FROM admins WHERE admin_id = '$admin_id'";
-    if($query = $database->query($sql)){
-
-      $message = "Admin Deleted successfully.";
-
-      header('Location: admins.php');
-
-    }
-
-   // return $message;
-
-  }
-
- 
   public function adminLogin()
   {
-
-    
-    
+   
     //global $con;
     global $database;
     $errors = [];
@@ -62,9 +44,11 @@ class Admins
 
         $fullname = $row["firstname"] . ' ' . $row["lastname"];
         $role = $row["role"];
+        $admin_id = $row["admin_id"];
 
         $_SESSION["fullname"] = $fullname;
         $_SESSION["role"] = $role;
+        $_SESSION["admin_id"] = $admin_id;
 
         echo '<script>window.location.href = "dashboard.php"</script>';
       }
@@ -76,22 +60,38 @@ class Admins
     global $con;
     global $database;
     $display = '';
-    $query = 'SELECT * FROM admins';
+    $query = 'SELECT * FROM admins WHERE admin_id <> '.$_SESSION["admin_id"].'  ORDER BY admin_id DESC';
     $res = $database->query($query);
     $count = $database->affected_rows();
     if ($count > 0) {
       // inters exist
       $sn = 1;
       while ($row = mysqli_fetch_assoc($res)) {
+        if($row["role"] == 1) {
+          $role = "Super Admin";
+        } else {
+          $role = "Admin";
+        }
         $display .= '
                     <tr>
                         <td>' . $sn . '</td>
                         <td>' . $row["firstname"] . '</td>
                         <td>' . $row["lastname"] . '</td>
                         <td>' . $row["email"] . '</td>
-                        <td>' . $row["role"] . '</td>
+                        <td>' . $role . '</td>
                         <td>' . $row["timestamp"] . '</td>
-                        <td>' . '<a onClick=\"javacript: return confirm("Please confirm deletion");\" href="admins.php?delete_id=' . $row["admin_id"] . '" class="btn btn-danger btn-xs">Delete</a>' . '</td>
+                        <td><a href="admin_view.php?editAdminId='.$row["admin_id"].'"><button class="btn btn-success btn-sm">View</button></a></td>';
+                        if($row["block"] == 0) {
+                          $display .='
+                          <td><a href="admins.php?blockAdminId='.$row["admin_id"].'"><button class="btn btn-warning btn-sm">Block</button></a></td>';
+                        } else if ($row["block"]==1) {
+                          $display .='
+                          <td><a href="admins.php?activateAdminId='.$row["admin_id"].'"><button class="btn btn-primary btn-sm">Activate</button></a></td>';
+                        }
+                        $display .= '
+                        <td><a href="delete_admin.php?deleteAdminId='.$row["admin_id"].'"><button class="btn btn-danger btn-sm">Delete</button></a></td>';
+                      $display .='
+
                     </tr>';
         $sn++;
       }
@@ -103,7 +103,7 @@ class Admins
     return $display;
   }
 
-  public function newAdmin($firstname, $lastname, $email, $role)
+  public function newAdmin($firstname, $lastname, $email, $role,$password)
   {
     global $database;
     //global $con;
@@ -120,7 +120,7 @@ class Admins
                                 </div>';
     } else {
       // email is available, good, proceed to register
-      $password = rand(123456, 789654);
+
       $query = "INSERT INTO admins (firstname, lastname, email, password, role, timestamp) VALUES ('" . $firstname . "', '" . $lastname . "', '" . $email . "', '" . $password . "', '" . $role . "', now())";
       $res = $database->query($query);
       $count = $database->affected_rows();
@@ -140,9 +140,76 @@ class Admins
 
     return $resp;
   }
+
+  public function getAdmin($id) {
+    global $database;
+    $query = "SELECT * FROM admins WHERE admin_id = ".$id."";
+    $res = $database->query($query);
+    $count = $database->affected_rows();
+    if($count > 0) {
+      // admin exists
+      $row = mysqli_fetch_assoc($res);
+
+      $data["firstname"] = $row["firstname"];
+      $data["lastname"] = $row["lastname"];
+      $data["email"] = $row["email"];
+      $data["role"] = $row["role"];
+      return $data;
+    } else {
+      // no admin found
+      return 0;
+    }
+  }
+
+  public function blockAdmin($id) {
+    global $database;
+    $query = "UPDATE admins set block = 1 WHERE admin_id = ".$id."";
+    $res = $database->query($query);
+    $count = $database->affected_rows();
+    if($count > 0) {
+      // updated
+      return true;
+    } else {
+      // failed
+      return false;
+    }
+  }
+
+  public function activateAdmin($id) {
+    global $database;
+    $query = "UPDATE admins set block = 0 WHERE admin_id = ".$id."";
+    $res = $database->query($query);
+    $count = $database->affected_rows();
+    if($count > 0) {
+      // updated
+      return true;
+    } else {
+      // failed
+      return false;
+    }
+  }
+
+  public function deleteAdmin($id) {
+    global $database;
+    $query = "DELETE FROM admins WHERE admin_id = ".$id."";
+    $res = $database->query($query);
+    $count = $database->affected_rows();
+    if($count > 0) {
+      // deleted
+      return true;
+    } else {
+      // failed
+      return false;
+    }
+  }
+
 }
+
+  
 
 if (isset($_GET["login"])) {
   $admin = new Admins();
   $admin->adminLogin();
 }
+
+
