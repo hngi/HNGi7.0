@@ -1,3 +1,38 @@
+
+<style>
+
+.dynamic {
+    justify-content: space-between !important;
+    top: 0;
+    position: sticky; 
+    background: white !important;
+    z-index: 7;
+    width: 100%;
+    border-color: white !important;
+    margin: 0px !important;
+}
+.navbg {
+    background: #ffffff !important;
+    transition: background 1s;
+    z-index: 5;
+}
+.navbg2 {
+    transition: background 1s;
+    z-index: 0;
+}
+@media screen and (max-width: 960px){
+    .dynamic {
+    position: fixed;
+    width: 97.45%;
+    } 
+    header .header-links {
+    margin-right: 0px !important;
+    }
+
+}
+
+
+</style>
 <header id="header" class="container-fluid">
     <a href="index.php"><img id="hng-logo"
             src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png"
