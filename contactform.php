@@ -5,12 +5,23 @@ $contact_mail = new AdminClass;
 $validation = new Validation();
 
 if (isset($_POST['contact-btn'])) {
+// This function will return 
+// A random string of specified length 
+function random_strings($length_of_string) { 
+		
+	return substr ((date('dmys')), 0, $length_of_string); 
+} 
+
+// This function will generate 
+// Random string of length 10 
+//echo random_strings(10); 
 
   //use this as an example to get form input data
   $name = $database->escape_string($_POST["name"]);
   $email = $database->escape_string($_POST["email"]);
   $subject = $database->escape_string($_POST["subject"]);
   $message = $database->escape_string($_POST["message"]);
+  $ticket = random_strings(10);
   //validation of data
   $msg = $validation->check_empty($_POST, array('name', 'email', 'subject', 'message'));
   $check_email = $validation->is_email_valid($_POST['email']);
@@ -20,13 +31,14 @@ if (isset($_POST['contact-btn'])) {
   } else {
 
     //here is method that will submit mail to database table and you can find it in adminClass
-    $send = $contact_mail->contactFormMailer($name, $email, $subject, $message);
+    $send = $contact_mail->contactFormMailer($ticket, $name, $email, $subject, $message);
     if ($send) {
+      $ticket = $ticket;
       $name = $name;
       $subject = $subject;
       $body = $message;
       //here is the function to send mail to admin email
-      contactMail($email, $name, $subject, $body);
+      contactMail($email, $ticket, $name, $subject, $body);
       $mess = 'Message Sent, Thank you!';
     }
   }
@@ -42,7 +54,7 @@ if (isset($_POST['contact-btn'])) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>FAQ2</title>
+  <title>Contact Us</title>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
