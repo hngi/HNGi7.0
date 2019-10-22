@@ -4,7 +4,7 @@
 
     class Intern {
 
-
+        
 
         public function internSignup() {
 
@@ -27,7 +27,7 @@
 
             if(empty($fullname)) {
                 array_push($errors,"Fullname is required");
-            }
+            } 
 
             if(empty($email)) {
                 array_push($errors,"Email is required");
@@ -37,35 +37,35 @@
 
             if(empty($phoneNo)) {
                 array_push($errors,"Phone Number is required");
-            }
+            } 
 
             if(empty($linkPort)) {
                 array_push($errors,"Link to portfolio is required");
-            }
+            } 
 
             if(empty($linkCV)) {
                 array_push($errors,"Link to CV is required");
-            }
+            } 
 
             if(empty($exp)) {
                 array_push($errors,"Experience is required");
-            }
+            } 
 
             if(empty($interest)) {
                 array_push($errors,"Interest is required");
-            }
+            } 
 
             if(empty($location)) {
                 array_push($errors,"Location is required");
-            }
+            } 
 
             if(empty($empStatus)) {
                 array_push($errors,"Employment is required");
-            }
+            } 
 
             if(empty($about)) {
                 array_push($errors,"About is required");
-            }
+            } 
 
             // check if email aready exist
             $query = "SELECT * FROM interns WHERE email = '".$email."' ";
@@ -83,22 +83,17 @@
                 echo '<p>Registration Failed with the following Errors</p>';
                 foreach($errors as $error) {
                     echo '<span style="color: red; font-size: 12px; font-wieght: bold;">' . $error . '</span><br />';
-                    header('Location: join-intern.php?failed');
-                    exit();
                 }
             } else {
                 // there are no errors
-                $query = "INSERT INTO interns (name, email, phone_no, link_to_portfolio, link_to_cv, years_of_experience, interest, current_location, employment_status, about, timestamp)
-                VALUES('".$fullname."', '".$email."', '".$phoneNo."', '".$linkPort."', '".$linkCV."', '".$exp."', '".$interest."', '".$location."', '".$empStatus."', '".$about."', '".$date."' ) ";
+                $query = "INSERT INTO interns (name, email, phone_no, link_to_portfolio, link_to_cv, years_of_experience, interest, current_location, employment_status, about, timestamp) VALUES('".$fullname."', '".$email."', '".$phoneNo."', '".$linkPort."', '".$linkCV."', '".$exp."', '".$interest."', '".$location."', '".$empStatus."', '".$about."', '".$date."' ) ";
 
                 $res = $database->query($query);
                 $count = $database->affected_rows();
-                header('Location: join-intern.php?successful');
+
                 if($count > 0) {
                     // intern created
                     echo '<script>window.location.href = "./join-intern.php"</script>';
-
-
                 } else {
                     // failed, error, not created
                     echo '
@@ -107,14 +102,14 @@
                         </div>';
                 }
             }
-
+ 
         }
 
         public function allInterns() {
             global $con;
             global $database;
             $display = '';
-            $query = 'SELECT * FROM interns ORDER BY intern_id DESC';
+            $query = 'SELECT * FROM interns';
             //$res = mysqli_query($con, $query) or die(mysqli_error($con));
             $res = $database->query($query);
             $count = mysqli_num_rows($res);
@@ -124,11 +119,11 @@
                 while($row = mysqli_fetch_assoc($res)) {
                     $display .='
                     <tr>
-                        <td>'.$row["intern_id"].'</td>
+                        <td>'.$sn.'</td>
                         <td>'.$row["name"].'</td>
                         <td>'.$row["email"].'</td>
                         <td>'.$row["phone_no"].'</td>
-
+                       
                         <td>'.$row["link_to_cv"].'</td>
                         <td>'.$row["years_of_experience"].'</td>
                         <td>'.$row["interest"].'</td>
@@ -136,7 +131,6 @@
                         <td>'.$row["employment_status"].'</td>
                         <td>'.$row["about"].'</td>
                         <td>'.$row["timestamp"].'</td>
-
                     </tr>';
                     $sn++;
                 }
@@ -156,10 +150,3 @@
         $interns->internSignup();
     }
 ?>
-<!-- <td><button type="button" class="btn btn-lg btn-info"
-onclick="detailsmodal('.$row["intern_id"].')">View</button></td> -->
-
-
-
-<!-- <td><button type="button" class="btn btn-lg btn-info"
-id="vacancies" data-toggle="modal" data-target="#coolStuffModal">View</button></td> -->

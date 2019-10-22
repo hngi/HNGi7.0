@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap');
 
 body {
     font-family: "Open Sans", segoe UI, sans-serif;
@@ -11,7 +11,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1rem 9rem;
+    padding: 1rem 3rem;
 }
 
 header a,
@@ -43,7 +43,7 @@ header nav {
 }
 
 header #hng-logo {
-    width: 20vw !important;
+    width: 22vw;
 }
 
 header .header-links {
@@ -177,7 +177,7 @@ footer .footer-nav .row {
     }
 
     header #hng-logo {
-        width: 50vw !important;
+        width: 50vw;
     }
 
     header nav {

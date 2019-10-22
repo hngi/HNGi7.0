@@ -12,7 +12,8 @@ html {
 }
 
 body {
-font-family: "Open Sans", segoe UI, sans-serif;
+font-family: "Open Sans", "segoe UI", sans-serif;
+
 }
 
 .jumbo {
@@ -1226,22 +1227,11 @@ margin-left: 5px;
   margin-left: 1500px
 }
 .main-first-row{
-  margin: auto !important;
-  text-align-last: center !important;
-  padding: 0;
-  width: 80%;
+  width: 85%;
 }
 .dee{
   width: 85%;
 }
-}
-
-@media (max-width: 400px) {
- .ment img {
-  width: 95px !important;
-  height: 95px !important;
- }
-
 }
 
 /** Very Small screens**/

@@ -412,7 +412,7 @@
             <div class="container">
                 <h4 class="bass" style="padding-top: 4em; text-align: center; color: darkblue; font-size: 24px;">Our Dedicated
                     Mentors</h4>
-                <div class="row ment" style="padding-top: 6em; text-align: center;">
+                <div class="row" style="padding-top: 6em; text-align: center;">
                     <div class="col-6 col-lg-3">
                         <img style="width: 150px; height: 150px; border-radius: 50%;"
                             src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730807/IMG2_uiu3fj.png">
@@ -607,3 +607,4 @@
 </body>
 
 </html>
+
