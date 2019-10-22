@@ -86,7 +86,7 @@
 			<img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722618/gallery-third_oqgaiv.png">
 		</div>
 		<!-- <p class="center-text"><a class="def-button shadowed">View more photos</a></p> -->
-		<p class="center-text"><a href="gallery.html" class="def-button shadowed">View more photos</a></p>
+		<p class="center-text"><a href="#" class="def-button shadowed">View more photos</a></p>
 	</section>
 	<section id="participate-section">
 		<article>

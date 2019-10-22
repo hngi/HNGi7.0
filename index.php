@@ -51,7 +51,7 @@
         <h3 class="countdown__heading text_center">
           Countdown to HNGi7.0
         </h3>
-        <div class="dee" id="countdown-circles-container">
+        <div id="countdown-circles-container">
           <div class="countdown__item">
             <p class="countdown__number" id="days"></p>
             <p class="text_center countdown__subText">DAYS</p>
@@ -79,8 +79,8 @@
             Unleash Your Creativity
           </h3>
         </div>
-        <div class="card1-container">
-          <div class="card1">
+        <div class="main-card__container">
+          <div class=".card__container">
             <img class="card1-image" src="https://bit.ly/33gP99W" alt="">
             <h5 class="card1-heading text__dark-blue">Remote Learning</h5>
             <p class="card1-text">
@@ -88,7 +88,7 @@
               talented software developers.
             </p>
           </div>
-          <div class="card1">
+          <div class=".card__container">
             <img class="card1-image" src="https://bit.ly/2IAGSFN" alt="">
             <h5 class="card1-heading text__dark-blue">Collaborate with Creatives</h5>
             <p class="card1-text" id="tess">
@@ -96,7 +96,7 @@
               talented software developers.
             </p>
           </div>
-          <div class="card1">
+          <div class=".card__container">
             <img class="card1-image" src="https://bit.ly/2Vug2Vf" alt="">
             <h5 class="card1-heading text__dark-blue">Build Portfolio</h5>
             <p class="card1-text">
@@ -108,11 +108,11 @@
       </div>
 
       <div class="main-fourth-row">
-        <h3 id="how-it-works">How Does It Work ?</h3>
-        <div class="section-2">
-          <div class="section-2-sections-container">
-            <div class="half-a-row">
-              <h4 class="mh4" style="color: darkblue; padding-bottom: 20px">Apply To Become An Intern</h4>
+        <h3 id="main-fourth-row_text">How Does It Work ?</h3>
+        <div class="">
+          <div class="section1">
+            <div class="myhalf-a-row">
+              <h4 class="apply">Apply To Become An Intern</h4>
               <p class="content">The HNG internship is a 3-month remote internship designed to find and
                 develop
                 the most talented software developers. Everyone is welcomed to participate (there is no
@@ -123,8 +123,8 @@
                 <button class="cta-button-4 button--midBlue" onclick="location.href='join-intern.php'" type="button">Get
                   Started</button>
             </div>
-            <div class="half-a-row">
-              <table>
+            <div class="half-a-row h222">
+              <table >
                 <thead>
                   <tr style="padding: 0">
                     <th style="padding: 1.5em 1.5em" colspan="2">Event Calendar</th>
@@ -153,7 +153,7 @@
             </div>
           </div>
 
-          <div class="section-2-sections-container">
+          <div class="section2">
             <div class="half-a-row">
               <img class="intern-meet"
                 src="https://res.cloudinary.com/chux/image/upload/v1570646194/Rectangle_4.6_vfbtwb.png" alt="interns" />
@@ -174,7 +174,7 @@
       </div>
 
 
-      <div class="main-fifth-row">
+      <div class="main-fifth-row text-align">
         <div class="row">
           <div class="text-center text-md-left col-12 col-md-6 col" style="padding-top: 35px;">
             <h4 style="color: darkblue; padding-bottom: 20px">Build Scalable Products & Grow</h4>
