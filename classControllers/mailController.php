@@ -11,7 +11,7 @@ require 'PHPMailer/src/SMTP.php';
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer(true);
 
-function sendNewAdminMail($email, $enc_password, $subject, $body)
+function sendNewAdminMail($email, $password, $subject, $body)
 {
   global $mail;
 
@@ -45,7 +45,7 @@ function sendNewAdminMail($email, $enc_password, $subject, $body)
     $mail->Body    = "$body
                   <tr>
     <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
-                       <b style='color:seablue;'>Email: $email <br> Password: $enc_password</b> <br> <a href='https://hngi7.herokuapp.com/admin_login.php'>Follow this link to login</a>
+                       <b style='color:seablue;'>Email: $email <br> Password: $password</b> <br> <a href='https://hngi7.herokuapp.com/admin_login.php'>Follow this link to login</a>
                       </td>
                   </tr>
 <tr>

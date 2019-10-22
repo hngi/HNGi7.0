@@ -120,11 +120,12 @@
             $count = mysqli_num_rows($res);
             if($count > 0) {
                 // inters exist
-                $sn = 1;
+                $no = '';
                 while($row = mysqli_fetch_assoc($res)) {
+                    $no++;
                     $display .='
                     <tr>
-                        <td>'.$row["intern_id"].'</td>
+                        <td>'.$no.'</td>
                         <td>'.$row["name"].'</td>
                         <td>'.$row["email"].'</td>
                         <td>'.$row["phone_no"].'</td>
@@ -138,7 +139,7 @@
                         <td>'.$row["timestamp"].'</td>
 
                     </tr>';
-                    $sn++;
+                   
                 }
 
             } else {

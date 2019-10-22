@@ -39,7 +39,7 @@ function random_strings($length_of_string) {
       $body = $message;
       //here is the function to send mail to admin email
       contactMail($email, $ticket, $name, $subject, $body);
-      $mess = 'Message Sent, Thank you!';
+      $mess = 'Message Sent you get a feedback from us thank you!';
     }
   }
 }

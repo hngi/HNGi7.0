@@ -20,10 +20,6 @@ require_once 'classControllers/init.php';
       $date = $database->escape_string($_POST['date']);
       $insertInterns = $intern->internSignup();
 
-      // $success = '<div class="alert alert-success" role="alert" style="background: green; padding: 5px 10px 5px 10px; width: 80% !important; text-align: center; color: white; ">
-      //           Your registration was  successful. We will get back to you as soon as possible.
-      //       </div>';
-
     }
 ?>
 
