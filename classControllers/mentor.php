@@ -33,7 +33,23 @@ class Mentors
            return $array;
            
 	}
-	
+	public function ById($id = 0)
+	{
+		global $database;
+		$result = $database->query("SELECT * FROM mentors WHERE mentor_id = {$id} LIMIT 1");
+		$record = mysqli_fetch_array($result);
+		return $record;
+	}
+	public function ByName($name)
+	{
+		global $database;
+		$result = $database->query("SELECT * FROM mentors WHERE `name` LIKE '%$name%'");
+		$array = array();
+		while ($row = mysqli_fetch_array($result)) {
+			$array[] = $row;
+		}
+		return $array;
+	}
 	
 }
 $mentor = new Mentors;
@@ -55,3 +71,9 @@ $mentor = new Mentors;
 	// foreach($mentor_data as $value){
 	// 	echo $value['name']. "</br>";
 	// }
+	//print_r($mentor->ById(3));
+	//print_r($mentor->ByName("joshua"));
+	
+ 	
+ 
+	
