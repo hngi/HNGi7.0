@@ -1,4 +1,5 @@
 <style>
+
 footer #socials a  {
     display: inline-block;
     margin-top: 10px;  
@@ -6,7 +7,7 @@ footer #socials a  {
 </style>
 
 
-<footer class="tripp">
+<footer class="tripp" >
                 <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722444/hng-brand-logo_gnplmq.svg">
                 <nav class="footer-nav">
                     <div class="row">
@@ -58,7 +59,4 @@ footer #socials a  {
                     </div>
                 </nav>
                 <p class="center-text darkblue-text">&copy 2019, HNG Internship. All rights reserved.</p>
-                
-                <div class="center-text"><a href="#header" id="top">Jump to Top<span></span></a></div>
-
             </footer>

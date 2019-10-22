@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap');
 
 body {
     font-family: "Open Sans", segoe UI, sans-serif;
@@ -28,6 +28,7 @@ header .def-button {
     outline: none;
     border: none;
     transition: 0.4s ease-out;
+    width: auto;
 }
 
 header .def-button:hover {
@@ -40,6 +41,8 @@ header nav {
     flex-direction: row;
     justify-content: space-between;
     transition: 0.5s ease-out;
+    height: auto;
+    width: auto;
 }
 
 header #hng-logo {
@@ -90,6 +93,7 @@ header #mobile-bars-check {
 footer {
     background-color: rgb(245, 245, 245);
     padding: 4rem 8rem;
+    
 }
 
 footer h2 {
@@ -161,7 +165,7 @@ footer .footer-nav .row {
     width: 100%;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 760px) {
     body > * {
         width: auto;
         overflow: hidden;
@@ -174,6 +178,7 @@ footer .footer-nav .row {
         width: auto;
         height: auto;
         overflow: hidden;
+        
     }
 
     header #hng-logo {
@@ -182,21 +187,26 @@ footer .footer-nav .row {
 
     header nav {
         transition: 0.4s ease-out;
-        height: 0;
+        height: auto;
         justify-content: flex-start;
         padding: 1.5rem;
         flex-direction: column;
+        margin-bottom: 40px;
     }
 
     header nav > * {
         display: none;
     }
 
-    header nav a,
     header nav .header-links,
     header nav #join-hng {
-        font-size: 3vw;
+        font-size: 1em;
         align-self: flex-end;
+        margin-right: -20px;
+    }
+
+    header .header-links:first-child{
+        margin-top: -20px;
     }
 
     header #mobile-bars {
@@ -227,6 +237,7 @@ footer .footer-nav .row {
 
     footer {
         padding: 2rem 1rem;
+        width: 100%;
     }
 
     footer nav {
