@@ -4,6 +4,14 @@ require_once 'classControllers/init.php';
 $admin = new Admins();
 $display = $admin->allAdmins();
 
+
+if (isset($_GET['delete_id'])) {
+	$admin_id = $_GET['delete_id'];
+  
+	$message = $admin->DeleteAdmin($admin_id);
+  }
+  
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -78,6 +86,7 @@ $display = $admin->allAdmins();
 										<th>Email</th>
 										<th>Role</th>
 										<th>Date of Registration</th>
+										<th>Action</th>
 									</tr>
 								</thead>
 								<tbody>
