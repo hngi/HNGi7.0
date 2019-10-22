@@ -63,30 +63,58 @@
                 </div>
             </div>
 
-            <div class="main-second-row countdown">
-                <h3 class="countdown__heading text_center">
-                    Countdown to HNGi7.0
-                </h3>
-                <div class="dee" id="countdown-circles-container">
-                    <div class="countdown__item">
-                        <p class="countdown__number" id="days"></p>
-                        <p class="text_center countdown__subText">DAYS</p>
-                    </div>
-                    <div class="countdown__item">
-                        <p class="countdown__number" id="hours">23</p>
-                        <p class="text_center countdown__subText">HOURS</p>
-                    </div>
-                    <div class="countdown__item">
-                        <p class="countdown__number" id="minutes">52</p>
-                        <p class="text_center countdown__subText">MINUTES</p>
-                    </div>
-                    <div class="countdown__item">
-                        <p class="countdown__number" id="seconds">41</p>
-                        <p class="text_center countdown__subText">SECONDS</p>
-                    </div>
-                </div>
+            
+              <section id="countdown-section">
+                <h4 class="darkblue-text center-text" id="countdown-intro">Countdown to HNGi 7.0 <span class="blue-text">- 1st January, 2020</span></h4>
 
-            </div>
+                <section id="countdown-container">
+                  <div id="day-div">
+                    <div class="countdown-symbol" id="day-symbol">
+                      <div class="arcs-background"></div>
+                      <div class="inner-bg"></div>
+                      <div class="outer-bg"></div>
+                        <div id="day-start" class="arc arc_start"></div>
+                        <div id="day-end" class="arc arc_end"></div>
+                      <span id="day-text"></span>
+                    </div>
+                    <p class="center-text">DAYS</p>
+                  </div>
+                  <div id="hour-div">
+                    <div class="countdown-symbol" id="hour-symbol">
+                      <div class="arcs-background"></div>
+                      <div class="inner-bg"></div>
+                      <div class="outer-bg"></div>
+                        <div id="hour-start" class="arc arc_start"></div>    
+                        <div id="hour-end" class="arc arc_end"></div>
+                      <span id="hour-text"></span>
+                    </div>
+                    <p class="center-text">HOURS</p>
+                  </div>
+                  <div id="minute-div">
+                    <div class="countdown-symbol" id="minute-symbol">
+                      <div class="arcs-background"></div>
+                      <div class="inner-bg"></div>
+                      <div class="outer-bg"></div>
+                        <div id="minute-start" class="arc arc_start"></div>    
+                        <div id="minute-end" class="arc arc_end"></div>
+                      <span id="minute-text"></span>
+                    </div>
+                    <p class="center-text">MINUTES</p>
+                  </div>
+                  <div id="second-div">
+                    <div class="countdown-symbol" id="second-symbol">
+                      <div class="arcs-background"></div>
+                      <div class="inner-bg"></div>
+                      <div class="outer-bg"></div>
+                        <div id="second-start" class="arc arc_start"></div>    
+                        <div id="second-end" class="arc arc_end"></div>
+                      <span id="second-text"></span>
+                    </div>
+                    <p class="center-text">SECONDS</p>
+                  </div>
+                </section>
+              </section>
+            
 
             <div class="main-third-row text_center">
                 <div class="">
@@ -648,13 +676,10 @@
             }
             slideIndex++;
             if (slideIndex > cards.length) { slideIndex = 1 }
-
-                cards[i].style.display = "block";
+            cards[slideIndex - 1].style.display = "block";
             }
-
         }
 
-    }
     //handle sroll to top arrow
 $('a[href*="#"]')
   .not('[href="#"]')
@@ -688,42 +713,8 @@ $('a[href*="#"]')
   });
 
 </script>
-<script>
-        //darkangel cc.
-        const daysElem = document.querySelector('#days'), //Edit this selector to pick the days element in your HTML.
-    hoursElem = document.querySelector('#hours'),
-    minutesElem = document.querySelector('#minutes'),
-    secondsElem = document.querySelector('#seconds'),
-    countDownWrapper = document.querySelector('.countdown'); //This is the counter that wraps all 4 numbers.
-
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 1, 2020 22:0:0").getTime();
-
-function updateClock() {
-  // Get today's date and time
-  var now = new Date().getTime();
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-  // Time calculations for days, hours, minutes and seconds
-  var daysLeft = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hoursLeft = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutesLeft = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var secondsLeft = Math.floor((distance % (1000 * 60)) / 1000);
-    // Display the results.
-    daysElem.innerText = daysLeft;
-    hoursElem.innerText = hoursLeft;
-    minutesElem.innerText = minutesLeft;
-    secondsElem.innerText = secondsLeft;
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    document.getElementById("demo").innerHTML = "EXPIRED";
-    return;
-  }
-  setTimeout(updateClock, 1000);
-}
-updateClock();
-</script>
 </body>
 
 </html>
 
+<script type="text/javascript" src="js/hng6.js"></script>

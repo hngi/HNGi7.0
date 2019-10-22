@@ -18,7 +18,7 @@
 		include('fragments/site_header.php');
 	?>
 	<section id="countdown-section">
-		<h2 class="darkblue-text center-text" id="countdown-intro">Countdown to HNG 7.0 <span class="blue-text">- 1st January, 2020</span></h2>
+		<h2 class="darkblue-text center-text" id="countdown-intro">Countdown to HNGi 7.0 <span class="blue-text">- 1st January, 2020</span></h2>
 
 		<section id="countdown-container">
 			<div id="day-div">
@@ -67,7 +67,7 @@
 			</div>
 		</section>
 
-		<h2 class="center-text"><a href="join-intern.php" class="skyblue-text" id="countdown-register">REGISTER FOR HNG 7.0 NOW</a></h2>
+		<h2 class="center-text"><a href="join-intern.php" class="skyblue-text" id="countdown-register">REGISTER FOR HNGi 7.0 NOW</a></h2>
 	</section>
 	<section id="home-about">
 		<h1 class="blue-text">HNG 6.0 Internship</h1>
