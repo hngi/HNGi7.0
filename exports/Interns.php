@@ -33,7 +33,7 @@ class Interns{
         //Execute query
         $stmt->execute();
 
-        return $stmt->get_result();
+        return $stmt;
 
     }
 }

@@ -14,12 +14,9 @@
 </head>
 
 <body class="container-fluid">
-	<div class="top-nav">
-		<?php
-			include('fragments/site_header.php');
-		?>
-	</div>
-	
+	<?php
+		include('fragments/site_header.php');
+	?>
 	<section id="countdown-section">
 		<h2 class="darkblue-text center-text" id="countdown-intro">Countdown to HNG 7.0 <span class="blue-text">- 1st January, 2020</span></h2>
 
@@ -226,7 +223,8 @@
 	 	</nav>
 	 	<p class="center-text darkblue-text">&copy 2019, HNG Internship. All rights reserved.</p>
 	 </footer>
+	 <script type="text/javascript" src="js/hng6.js"></script>
+
 </body>
 </html>
 
-<script type="text/javascript" src="js/hng6.js"></script>
