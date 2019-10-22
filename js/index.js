@@ -57,8 +57,8 @@ const showDay = days =>
 		endArcDays.style.borderColor = `${activeColor} ${activeColor} transparent transparent`;
 
 	startArcDays.style.transform = `rotate(${defaultDegStart + ((totalWaitDays - days) * 4)}deg)`;
-	dayText.style.left = days < 10 ? (screen.width > 860 ? "2.3rem" : "1.4rem")
-	 : (screen.width > 860 ? "1.3rem" : "1rem");
+	dayText.style.left = days < 10 ? (screen.width > 860 ? "2rem" : "1.4rem")
+	 : (screen.width > 860 ? "1.1rem" : "1rem");
 	dayText.textContent = days;
 }
 const showHour = hours =>
@@ -71,8 +71,8 @@ const showHour = hours =>
 
 	startArcHours.style.transform = `rotate(${defaultDegStart + ((24 - hours) * 15)}deg)`;
 
-	hourText.style.left = hours < 10 ? (screen.width > 860 ? "2.3rem" : "1.4rem")
-	 : (screen.width > 860 ? "1.3rem" : "1rem");
+	hourText.style.left = hours < 10 ? (screen.width > 860 ? "2rem" : "1.4rem")
+	 : (screen.width > 860 ? "1.1rem" : "1rem");
 	hourText.textContent = hours;
 }
 const showMinute = minutes =>
@@ -84,8 +84,8 @@ const showMinute = minutes =>
 		endArcMinutes.style.borderColor = `${activeColor} ${activeColor} transparent transparent`;
 
 	startArcMinutes.style.transform = `rotate(${defaultDegStart + ((60 - minutes) * 6)}deg)`;
-	minuteText.style.left = minutes < 10 ? (screen.width > 860 ? "2.3rem" : "1.4rem")
-	 : (screen.width > 860 ? "1.3rem" : "1rem");
+	minuteText.style.left = minutes < 10 ? (screen.width > 860 ? "2rem" : "1.4rem")
+	 : (screen.width > 860 ? "1.1rem" : "1rem");
 	minuteText.textContent = minutes;
 }
 const showSecond = seconds =>
@@ -96,8 +96,8 @@ const showSecond = seconds =>
 		endArcSeconds.style.borderColor = `${activeColor} ${activeColor} transparent transparent`;
 
 	startArcSeconds.style.transform = `rotate(${defaultDegStart + ((60 - seconds) * 6)}deg)`;
-	secondText.style.left = seconds < 10 ? (screen.width > 860 ? "2.3rem" : "1.4rem")
-	 : (screen.width > 860 ? "1.3rem" : "1rem");
+	secondText.style.left = seconds < 10 ? (screen.width > 860 ? "2rem" : "1.4rem")
+	 : (screen.width > 860 ? "1.1rem" : "1rem");
 	secondText.textContent = seconds;
 }
 

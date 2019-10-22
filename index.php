@@ -63,58 +63,57 @@
                 </div>
             </div>
 
-            
+            <div class="main-second-row">
               <section id="countdown-section">
                 <h4 class="darkblue-text center-text" id="countdown-intro">Countdown to HNGi 7.0 <span class="blue-text">- 1st January, 2020</span></h4>
-
                 <section id="countdown-container">
-                  <div id="day-div">
-                    <div class="countdown-symbol" id="day-symbol">
-                      <div class="arcs-background"></div>
-                      <div class="inner-bg"></div>
-                      <div class="outer-bg"></div>
-                        <div id="day-start" class="arc arc_start"></div>
-                        <div id="day-end" class="arc arc_end"></div>
-                      <span id="day-text"></span>
-                    </div>
-                    <p class="center-text">DAYS</p>
+                <div id="day-div">
+                  <div class="countdown-symbol" id="day-symbol">
+                    <div class="arcs-background"></div>
+                    <div class="inner-bg"></div>
+                    <div class="outer-bg"></div>
+                      <div id="day-start" class="arc arc_start"></div>
+                      <div id="day-end" class="arc arc_end"></div>
+                    <span id="day-text"></span>
                   </div>
-                  <div id="hour-div">
-                    <div class="countdown-symbol" id="hour-symbol">
-                      <div class="arcs-background"></div>
-                      <div class="inner-bg"></div>
-                      <div class="outer-bg"></div>
-                        <div id="hour-start" class="arc arc_start"></div>    
-                        <div id="hour-end" class="arc arc_end"></div>
-                      <span id="hour-text"></span>
-                    </div>
-                    <p class="center-text">HOURS</p>
+                  <p class="center-text">DAYS</p>
+                </div>
+                <div id="hour-div">
+                  <div class="countdown-symbol" id="hour-symbol">
+                    <div class="arcs-background"></div>
+                    <div class="inner-bg"></div>
+                    <div class="outer-bg"></div>
+                      <div id="hour-start" class="arc arc_start"></div>    
+                      <div id="hour-end" class="arc arc_end"></div>
+                    <span id="hour-text"></span>
                   </div>
-                  <div id="minute-div">
-                    <div class="countdown-symbol" id="minute-symbol">
-                      <div class="arcs-background"></div>
-                      <div class="inner-bg"></div>
-                      <div class="outer-bg"></div>
-                        <div id="minute-start" class="arc arc_start"></div>    
-                        <div id="minute-end" class="arc arc_end"></div>
-                      <span id="minute-text"></span>
-                    </div>
-                    <p class="center-text">MINUTES</p>
+                  <p class="center-text">HOURS</p>
+                </div>
+                <div id="minute-div">
+                  <div class="countdown-symbol" id="minute-symbol">
+                    <div class="arcs-background"></div>
+                    <div class="inner-bg"></div>
+                    <div class="outer-bg"></div>
+                      <div id="minute-start" class="arc arc_start"></div>    
+                      <div id="minute-end" class="arc arc_end"></div>
+                    <span id="minute-text"></span>
                   </div>
-                  <div id="second-div">
-                    <div class="countdown-symbol" id="second-symbol">
-                      <div class="arcs-background"></div>
-                      <div class="inner-bg"></div>
-                      <div class="outer-bg"></div>
-                        <div id="second-start" class="arc arc_start"></div>    
-                        <div id="second-end" class="arc arc_end"></div>
-                      <span id="second-text"></span>
-                    </div>
-                    <p class="center-text">SECONDS</p>
+                  <p class="center-text">MINUTES</p>
+                </div>
+                <div id="second-div">
+                  <div class="countdown-symbol" id="second-symbol">
+                    <div class="arcs-background"></div>
+                    <div class="inner-bg"></div>
+                    <div class="outer-bg"></div>
+                      <div id="second-start" class="arc arc_start"></div>    
+                      <div id="second-end" class="arc arc_end"></div>
+                    <span id="second-text"></span>
                   </div>
-                </section>
+                  <p class="center-text">SECONDS</p>
+                </div>
               </section>
-            
+            </section>
+            </div>
 
             <div class="main-third-row text_center">
                 <div class="">
@@ -676,10 +675,11 @@
             }
             slideIndex++;
             if (slideIndex > cards.length) { slideIndex = 1 }
-            cards[slideIndex - 1].style.display = "block";
-            }
-        }
 
+                cards[slideIndex - 1].style.display = "block";
+            }
+
+        }
     //handle sroll to top arrow
 $('a[href*="#"]')
   .not('[href="#"]')
@@ -717,4 +717,4 @@ $('a[href*="#"]')
 
 </html>
 
-<script type="text/javascript" src="js/hng6.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
