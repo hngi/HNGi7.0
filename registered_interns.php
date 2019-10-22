@@ -1,7 +1,7 @@
 <?php
 require 'classControllers/init.php';
 if(!isset($_SESSION["role"])) {
-	header('Location:admin_login.php');
+	header('Location:admin_login.php'); 
 }
     // include('backend/Interns.php');
     $interns = new Intern;
@@ -19,9 +19,7 @@ if(!isset($_SESSION["role"])) {
 	<link rel="stylesheet" href="css/dashboard.css">
 
 	<!-- Latest compiled and minified CSS -->
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -36,10 +34,10 @@ if(!isset($_SESSION["role"])) {
 			margin: 15px;
 			padding: 10px;
 			border-radius: 15px;
-
+			
 		}
 	</style>
-
+	
 	<script language="javascript" type="text/javascript">
         function printDiv(divID) {
             //Get the HTML of div
@@ -48,7 +46,7 @@ if(!isset($_SESSION["role"])) {
             var oldPage = document.body.innerHTML;
 
             //Reset the page's HTML with div's HTML only
-            document.body.innerHTML =
+            document.body.innerHTML = 
               "<html><head><title></title></head><body><br><br><br>" + divElements + "</body>";
 
             //Print Page
@@ -61,15 +59,15 @@ if(!isset($_SESSION["role"])) {
 
 </head>
 <body>
-	<main class="reg">
-		<section id="overview-section interns-list">
+	<main>
+		<section id="overview-section">
 			<!-- <h1>Dashboard</h1> -->
 			<h2>Registered Interns </h2>
 			<!-- <section id="intern-section">
-				Populated by `js/dashboard.js`
+				Populated by `js/dashboard.js` 
 			</section> -->
 
-			<div class="container-fluid">
+			<div class="container">
 				<div class="row">
 
                 <?php
@@ -88,11 +86,11 @@ if(!isset($_SESSION["role"])) {
                                 <button type="button" id="export">Export to PDF</button>
                             </a>
                         </div>
-                        <div class="table-responsive" id="printablediv">
-                        <table class="table table-hover table-bordered table-sm mt-3 mb-1">
+                        <div id="printablediv">
+                        <table class="table table-hover">
                             <thead>
                             <tr>
-                                <th>Intern ID</th>
+                                <th>SN</th>
                                 <th>Name</th>
                                 <th>Emai</th>
                                 <th>Phone</th>
@@ -104,12 +102,11 @@ if(!isset($_SESSION["role"])) {
                                 <th>Emp. Stat</th>
                                 <th>About</th>
                                 <th>Reg. Date</th>
-																<th></th>
                             </tr>
                             </thead>
                             <tbody>
                                 <?php
-                                    echo $display;
+                                    echo $display; 
                                 ?>
                             </tbody>
                         </table>
@@ -117,12 +114,12 @@ if(!isset($_SESSION["role"])) {
                         <?php
                     }
                 ?>
-
+                    
 				</div>
 			</div>
-<br/><br/>
-			<!-- <button id="export">Export to Spreadsheet</button> -->
 
+			<!-- <button id="export">Export to Spreadsheet</button> -->
+		
 		</section>
 		<!-- <section id="details-section">
 			<div id="details-back">
@@ -152,91 +149,10 @@ if(!isset($_SESSION["role"])) {
         <div class="stix" id="stik2"></div>
         <div class="stix" id="stik3"></div>
     </label>
-
+    
     <?php include('fragments/sidebar.php'); ?>
-
-
-		<!-- Modal -->
-		<div class="modal fade" id="coolStuffModal" tabindex="-1" role="dialog" aria-labelledby="coolStuffLabel" aria-hidden="true">
-
-<!-- <div class="modal fade details-1" id="details-modal" tabindex="-1" role="dialog" aria-labelledby="details-l" aria-hidden="true"> -->
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="contentLabel">Noooo</h5>
-				<!-- <h5 class="modal-title" id="contentLabel"><?= $product['title'];?></h5> -->
-        <!-- <button class="close" type="button" onclick="closeModel()" aria-label="close">
-          <span aria-hidden="true">&times;</span></button> -->
-      </div>
-      <div class="modal-body">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="center-block">
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <h4>Details</h4>
-              <!-- <p><?= $product['description']; ?></p>
-              <p>Price : <?= money($product['price']); ?></p>
-              <p>Brand: <?= $brand['brand']; ?></p> -->
-              <form class="" action="" method="post">
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col-sm-3"><label for="quantity">Quantity:</label></div>
-                    <input type="text" name="quantity" id="quantity" class="form-control form-brand" value="">
-                  </div>
-                  <div class="col-xs-9"></div>
-                </div>
-                <div class="form-group">
-                  <label for="size">Size :</label>
-                  <select class="form-control" name="size" id="size">
-                    <!-- <option value=""></option>
-        <?php foreach ($sizeArray as $string) {
-              $stringArray = explode(':', $string);
-              $size = $stringArray[0];
-              $quantity = $stringArray[1];
-              echo '<option value="'.$size.'">'.$size.' ('.$quantity.' Available)</option>';
-        } ?> -->
-                  </select>
-                </div>
-              </form>
-            </div>
-            <div class="col-sm-6 modal-footer"></div>
-            <div class="modal-footer col-sm-6">
-              <button type="button" class="btn btn-info" onclick="closeModel()">Close</button>
-              <button type="submit" class="btn btn-warning" onclick="closeModel()">Add to Cart</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<script type="text/javascript">
-
-
-// To display the promo items. The code is in index
-	function detailsmodal(id){
-		var data = {"intern_id" : intern_id};
-		jQuery.ajax({
-			url : '/HNGi7.0/registered_interns.php',
-			method : "post",
-			data : data,
-			success: function(data){
-				jQuery('body').append(data);
-				jQuery('#details-modal').modal('toggle');
-			},
-			error: function(){alert("Something went wrong!")},
-		});
-	}
-
-</script>
-
-<script type="text/javascript" src="js/dashboard.js"></script>
-
 
 </body>
 </html>
+
+<script type="text/javascript" src="js/dashboard.js"></script>
