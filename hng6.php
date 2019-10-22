@@ -26,7 +26,7 @@
 					<div class="arcs-background"></div>
 				    <div id="day-start" class="arc arc_start"></div>
 				    <div id="day-end" class="arc arc_end"></div>
-					<span id="day-text">05</span>
+					<span id="day-text" class="moshe">05</span>
 				</div>
 				<p class="center-text">DAYS</p>
 			</div>
@@ -44,7 +44,7 @@
 					<div class="arcs-background"></div>
 				    <div id="minute-start" class="arc arc_start"></div>    
 				    <div id="minute-end" class="arc arc_end"></div>
-					<span id="minute-text">52</span>
+					<span id="minute-text" class="moshe">52</span>
 				</div>
 				<p class="center-text">MINUTES</p>
 			</div>
@@ -59,10 +59,10 @@
 			</div>
 		</section>
 
-		<h2 class="center-text"><a href="join-intern.php" class="skyblue-text" id="countdown-register">REGISTER FOR HNG 7.0 NOW</a></h2>
+		<h2 class="center-text"><a href="join-intern.php" class="skyblue-text" id="countdown-register">REGISTER FOR HNGi7.0 NOW</a></h2>
 	</section>
 	<section id="home-about">
-		<h1 class="blue-text">HNG 6.0 Internship</h1>
+		<h1 class="blue-text">HNGi6.0 Internship</h1>
 		<div id="about-container">
 			<article>
 				<p>
@@ -94,7 +94,7 @@
 				Participation was achieved remotely via the popular collaboration tool called Slack.
 			</p>
 			<br />
-			<p id="p-link"><a href="join-intern.php" class="def-button">Join HNG</a></p>
+			<p id="p-link"><a href="join-intern.php" class="def-button">Join HNGi7.0</a></p>
 		</article>
 		<img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722649/home-geeks_vld6nt.png" id="geek-img">
 	</section>
