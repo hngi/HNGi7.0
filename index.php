@@ -200,7 +200,6 @@
 
         </div>
       </div>
-
       <div class="container-fluid mt-2" id="wrapper">
         <div class="row">
           <div class="col-12">
@@ -220,6 +219,7 @@
                         <P>Put your Frontend skills to test and sharpen it further as you turn exciting UI Designs into
                           stunning web pages.</P>
                       </div>
+
                     </div>
                     <div class="row">
                       <div class="col-2">
@@ -603,5 +603,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
 </body>
+
 
 </html>
