@@ -148,6 +148,7 @@
                         <td><button type="button" class="btn btn-md btn-info"
                               onclick="interndetails('.$row["intern_id"].')">View</button></td>
                         <td>'.$no.'</td>
+                        <td>'.$row["intern_id"].'</td>
                         <td>'.$row["name"].'</td>
                         <td>'.$row["email"].'</td>
                         <td>'.$row["phone_no"].'</td>

@@ -115,7 +115,7 @@ if (isset($_GET['delete_id'])) {
           if(isset($_POST['search']))
           {
             while ($search = mysqli_fetch_assoc($searc)) {
-              echo "<div class='text-center bg-secondary'>".$search['name'].", Intern id is
+              echo "<div class='text-center bg-secondary' style='margin-left:15vw; margin-right:15vw'>".$search['name'].", Intern id is
               ".$search['intern_id']." and Location is ".$search['current_location']."</div><br/>";
         }
       }
@@ -129,8 +129,9 @@ if (isset($_GET['delete_id'])) {
               <table class="table table-hover table-bordered  mt-3 mb-1 table-condensed">
                 <thead class="table-primary">
                   <tr>
-                    <th></th>
+                    <th>Action</th>
                     <th>S/N</th>
+                    <th>Intern ID</th>
                     <th>Name</th>
                     <th>Emai</th>
                     <th>Phone</th>
