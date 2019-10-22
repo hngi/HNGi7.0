@@ -282,7 +282,7 @@
    flex-direction: row;
    justify-content: space-between;
  }
-
+/*
  footer {
    background-color: rgb(245, 245, 245);
    padding: 4rem 8rem;
@@ -353,7 +353,7 @@
 
  footer .footer-nav .row {
    width: 100%;
- }
+ }*/
 
  @media (max-width: 860px) {
    body>* {
@@ -419,7 +419,7 @@
      height: 16rem;
    }
 
-   footer {
+  /* footer {
      padding: 2rem 1rem;
    }
 
@@ -445,7 +445,7 @@
 
    footer .footer-nav .row {
      margin-left: 5%;
-   }
+   }*/
  }
 
  @media (max-width: 500px)

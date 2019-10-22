@@ -22,8 +22,9 @@
 
 </head>
 
-<body class="container-fluid" style="max-width: 1800px;">
-  <img src="https://bit.ly/2OC3tWo" id="corner-circle" alt="Graphic at the top right corner">
+<body>
+<div class="container-fluid" style="max-width: 1800px;">
+<img src="https://bit.ly/2OC3tWo" id="corner-circle" alt="Graphic at the top right corner">
   <div class="containerGrid">
     <?php
           include('fragments/site_header.php');
@@ -403,7 +404,7 @@
 
 
       <div class="container">
-        <h4 class="bass" style="padding-top: 4em; text-align: center; color: darkblue; font-size: 24px;">Our Dedicated
+        <h4 class="bass text-center" style="padding-top: 4em; text-align: center; color: darkblue; font-size: 24px;">Our Dedicated
           Mentors</h4>
         <div class="row" style="padding-top: 6em; text-align: center;">
           <div class="col-6 col-lg-3">
@@ -606,9 +607,11 @@
         </div>
       </section> -->
     </main>
-    <?php include('fragments/site_footer.php'); ?>
+    
 
   </div>
+</div>
+<?php include('fragments/site_footer.php'); ?>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>

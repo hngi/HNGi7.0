@@ -12,7 +12,29 @@
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="stylesheet" href="css/faq.css">
-
+    <style>
+        @media screen and (max-width:899px){
+        footer{
+            font-size: 2.5vw;
+        }
+        footer #socials img {
+            padding: 20%;
+            height: 2vw !important;
+            width: 2vw !important;
+        }
+    }
+    @media screen and (min-width:900px){
+        footer{
+            padding: 4rem 8vw;
+            font-size: 20px;
+        }
+        footer #socials img {
+            padding: 25%;
+            height: 25px !important;
+            width: 25px !important;
+        }
+    }
+    </style>
 </head>
 <body class="container-fluid">
     
@@ -116,9 +138,9 @@
             <section>
         <h2 class="skyblue-text">Follow Us</h2>
         <div id="socials">
-          <a href="https://twitter.com" title="Follow on Twitter!"><img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/twitter-logo_m1mgzi.svg"></a>
-          <a href="https://facebook.com"><img title="Follow on Facebook!" src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/facebook-logo_bw1hal.svg"></a>
-          <a href="https://dribble.com"><img title="Follow on Dribble!" src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/dribble-logo_w4vwuz.svg"></a>
+          <a href="https://twitter.com" title="Follow on Twitter!"><img  src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/twitter-logo_m1mgzi.svg"></a>
+          <a href="https://facebook.com"><img title="Follow on Facebook!"  src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/facebook-logo_bw1hal.svg"></a>
+          <a href="https://dribble.com"><img title="Follow on Dribble!"  src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/dribble-logo_w4vwuz.svg"></a>
         </div>
         </section>
         </nav>

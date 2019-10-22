@@ -951,3 +951,11 @@
             transition: 0.4s ease-out;
           }
         }
+
+/*Aligning elements*/
+@media screen and (max-width:650px){
+  .main-fifth-row{
+    display: block;
+    margin: auto;
+  }
+}

@@ -116,12 +116,11 @@ if (isset($_POST['contact-btn'])) {
       <section>
         <h2 class="skyblue-text">Quick Links</h2>
         <div id="link-list">
-          <a href="join-intern.php" class="skyblue-text">Join HNG</a>
-          <a href="index.php" class="skyblue-text">About HNG</a>
-          <a href="donationpage.html" class="skyblue-text">Become a Sponsor</a>
+          <a href="join-intern.php" class="skyblue-text">Join HNGi7.0</a>
+          <a href="contactform.php" class="skyblue-text">About HNG</a>
+          <a href="donate.html" class="skyblue-text">Become a Sponsor</a>
           <a href="MentorSetUpPage2.php" class="skyblue-text">Sign up as Mentor</a>
           <a href="faq.php" class="skyblue-text">FAQ</a>
-
         </div>
       </section>
       <section id="contact-section">
@@ -131,7 +130,7 @@ if (isset($_POST['contact-btn'])) {
             <strong>
               Phone: <br />
             </strong>
-            +234 812 345 6789
+            +234 812 345 6789           
           </a>
           <br />
           <a href="mailto:interns@hng.tech">
@@ -159,6 +158,5 @@ if (isset($_POST['contact-btn'])) {
     </nav>
     <p class="center-text darkblue-text">&copy 2019, HNG Internship. All rights reserved.</p>
   </footer>
-</body>
 
 </html>
