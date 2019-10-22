@@ -1,7 +1,7 @@
 <?php
 require_once "autoloadClass.php";
 require_once "config/database.php";
-require_once "Admins.php";
+//require_once "Admins.php";
 require_once "adminClass.php";
 require_once "mailController.php";
 require_once "mentor.php";
