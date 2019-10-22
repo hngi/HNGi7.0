@@ -31,6 +31,14 @@ if(!isset($_SESSION["role"])) {
 
  
 
+
+if (isset($_GET['delete_id'])) {
+	$admin_id = $_GET['delete_id'];
+  
+	$message = $admin->DeleteAdmin($admin_id);
+  }
+  
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -73,7 +81,6 @@ if(!isset($_SESSION["role"])) {
 
 			<div class="container">
 				<div class="row">
-
                 <?php
                     if($display == "0") {
                         echo "<h2>There are no Registered Interns</h2>";
@@ -111,6 +118,7 @@ if(!isset($_SESSION["role"])) {
                     }
                 ?>
                     
+
 				</div>
 			</div>
 

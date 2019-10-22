@@ -4,6 +4,26 @@
 
     class Intern {
 
+        public function DeleteIntern($intern_id){
+
+    
+            global $database;
+        
+            $sql = "DELETE FROM interns WHERE intern_id = '$intern_id'";
+            
+            if($query = $database->query($sql)){
+        
+              $message = "Intern Deleted successfully.";
+        
+             // header('Location: registered_interns.php');
+
+              //echo '<script>window.location.href = "registered_interns.php"</script>';
+            }
+        
+           // return $message;
+        
+          }
+
 
 
         public function internSignup() {
@@ -137,6 +157,7 @@
                         <td>'.$row["employment_status"].'</td>
                         <td>'.$row["about"].'</td>
                         <td>'.$row["timestamp"].'</td>
+                        <td>' . '<a onClick=\"javacript: return confirm("Please confirm deletion");\" href="registered_interns.php?delete_id=' . $row["intern_id"] . '" class="btn btn-danger btn-xs">Delete</a>' . '</td>
 
                     </tr>';
                    

@@ -77,7 +77,8 @@
             </div>
         </section>
     <?php include('fragments/site_footer.php'); ?>
-        
+
+  
 <script>
     var divs = ["Menu1", "Menu2", "Menu3", "Menu4"];
         var visibleDivId = null;

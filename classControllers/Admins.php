@@ -2,11 +2,12 @@
 
 class Admins
 {
+  public function DeleteAdmin($admin_id){
 
- 
+
   public function adminLogin()
   {
-    
+   
     //global $con;
     global $database;
     $errors = [];
@@ -90,6 +91,7 @@ class Admins
                         $display .= '
                         <td><a href="delete_admin.php?deleteAdminId='.$row["admin_id"].'"><button class="btn btn-danger btn-sm">Delete</button></a></td>';
                       $display .='
+
                     </tr>';
         $sn++;
       }
@@ -209,4 +211,5 @@ if (isset($_GET["login"])) {
   $admin = new Admins();
   $admin->adminLogin();
 }
+
 

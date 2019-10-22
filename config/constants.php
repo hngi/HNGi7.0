@@ -5,5 +5,6 @@
     define('DB_PASS', 'wqmtOm6brY');
     define('DB_NAME','XnTQPp4tAK');
 
-
+  
 ?>
+
