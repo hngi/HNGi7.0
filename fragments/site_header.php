@@ -1,40 +1,4 @@
-
-<head>
-<style>
-
-.dynamic {
-    top: 0;
-    position: fixed; 
-    background: white !important;
-    width: 100%;
-    padding-right: 10px !important;
-    box-shadow: none !important;
-}
-.navbg {
-    background: #ffffff !important;
-    transition: background 1s;
-    z-index: 5;
-}
-.navbg2 {
-    transition: background 1s;
-    z-index: 0;
-}
-@media screen and (max-width: 960px){
-    /* header {
-    margin: 0em !important;
-} */
-header .header-links {
-    margin-right: 0px !important;
-}
-
-}
-
-
-</style>
-</head>
-
-
-<header id="header">
+<header id="header" class="container-fluid">
     <a href="index.php"><img id="hng-logo"
             src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png"
             style="width: 50%" ></a>
@@ -45,8 +9,7 @@ header .header-links {
         <div class="stix" id="stik2"></div>
         <div class="stix" id="stik3"></div>
     </label>
-    <nav  style="height: auto">
-        <a href="index.php" class="header-links">Home</a>
+    <nav >
         <a href="hng6.php" class="header-links">HNGi 6.0</a>
         <a href="mentorpage.php" class="header-links">Mentors</a>
         <a href="contactform.php" class="header-links">Contact</a>

@@ -5,7 +5,6 @@
 			<em>Admin</em>
 		</div>
 		<nav id="lower">
-			<a href="index.php">Home </a>
             <a href="dashboard.php">Dashboard</a>
 			<a href="registered_mentors.php">Mentors</a>
 			<a href="registered_interns.php">Interns</a>
