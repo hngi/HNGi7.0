@@ -306,11 +306,17 @@ h1
 	{
 		margin-bottom: 4rem;
 	}
+	.countdown__item {
+		margin-right: 5px;
+		width: 70px;
+		height: 70px;;
+	  }
     .countdown-symbol
 	{
 		height: 3rem;
 		width: 3rem;
 		font-size: 2.1rem;
+		border-color: solid #06F4CC;
 	}
 	.countdown-symbol > span
 	{
@@ -326,11 +332,11 @@ h1
 	    top: -0.6rem;
 	    left: 0.1rem;
 	    border: 0.4rem solid;
-	    border-color: #00AEFF #00AEFF transparent transparent;
+	    border-color: solid #06F4CC;
 	}
 	.arcs-background
 	{
-		border-color: rgba(240, 240, 240);
+		border-color:solid #06F4CC;
 		border-width: 0.4rem;
 	}
 	.arc_start 
