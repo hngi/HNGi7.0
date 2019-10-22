@@ -159,6 +159,8 @@ if (isset($_POST['contact-btn'])) {
     </nav>
     <p class="center-text darkblue-text">&copy 2019, HNG Internship. All rights reserved.</p>
   </footer>
+  <div id="jumptotop"><span></span></div>
+                <script src="./js/scroll-to-top.js"></script>
 </body>
 
 </html>
