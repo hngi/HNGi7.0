@@ -48,7 +48,8 @@ class Mentor
                         <td>' . $row["current_state"] . '</td>
                         <td>' . $row["employment_status"] . '</td>
                         <td>' . $row["timestamp"] . '</td>
-                        <td>' . '<a onClick=\"javacript: return confirm("Please confirm deletion");\" href="registered_mentors.php?delete_id=' . $row["mentor_id"] . '" class="btn btn-danger btn-xs">Delete</a>' . '</td>
+                        <td>' . '<a onClick=\"javacript: return confirm("Please confirm deletion");\" href="registered_mentors.php?delete_id=' . $row["mentor_id"] . '" class="btn btn-danger btn-xs">Delete</a>'. '<a class="btn btn-primary" onClick="displayEach('.$row["mentor_id"].');">&nbsp;View&nbsp;</a>' . '</td>
+                        
 
                     </tr>';
         $sn++;
