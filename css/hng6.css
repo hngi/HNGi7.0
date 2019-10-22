@@ -59,29 +59,53 @@ h1
 {
 	color: #8898AA;
 }
-.countdown-symbol
+#countdown-container .countdown-symbol
 {
 	border-radius: 50%;
 	position: relative;
-	height: 6rem;
-	width: 6rem;
+	height: 5.5rem;
+	width: 5.5rem;
 	font-size: 4rem;
 	font-weight: bolder;
 	font-family: Oswald, segoe UI, sans-serif;
 }
-.countdown-symbol > span
+#countdown-container .inner-bg
 {
 	position: absolute;
-	left: 1rem;
-	top: 0.1rem;
+	left: 0.4rem;
+	top: 0.4rem;
+	background-color: white;
+	border-radius: 50%;
+	height: 5.8rem;
+	width: 5.8rem;
+	z-index: 18;
 }
-.countdown-symbol + p
+#countdown-container .outer-bg
+{
+	position: absolute;
+	left: -0.65rem;
+	top: -0.65rem;
+	z-index: 18;
+	height: 7.2rem;
+	width: 7.2rem;
+	border-radius: 50%;
+	border: 0.4rem solid white;
+}
+#countdown-container .countdown-symbol > span
+{
+	position: absolute;
+	z-index: 20;
+	top: 0.25rem;
+}
+#countdown-container .countdown-symbol + p
 {
 	font-weight: bolder;
 	font-size: 20px;
 	font-family: Oswald, segoe UI, sans-serif;
+	margin-left: 0.5rem;
+	margin-top: 2rem;
 }
-.arc, .arcs-background 
+#countdown-container .arc, #countdown-container .arcs-background 
 {
     position: absolute;
     top: -0.4rem;
@@ -89,19 +113,19 @@ h1
     width: 100%;
     height: 100%;
     border-radius: 100%;
-    border: 0.6rem solid;
+    border: 1rem solid;
     border-color: #00AEFF #00AEFF transparent transparent;
 }
-.arcs-background
+#countdown-container .arcs-background
 {
 	border-color: rgba(240, 240, 240);
-	border-width: 0.6rem;
+	border-width: 1rem;
 }
-.arc_start 
+#countdown-container .arc_start 
 {
     transform: rotate(45deg);
 }
-.arc_end 
+#countdown-container .arc_end 
 {
 	z-index: 10;
     transform: rotate(-135deg);
@@ -306,38 +330,69 @@ h1
 	{
 		margin-bottom: 4rem;
 	}
-    .countdown-symbol
+	#countdown-container
 	{
-		height: 3rem;
-		width: 3rem;
-		font-size: 2.1rem;
+		justify-content: space-around;
+		width: 90vw;
 	}
-	.countdown-symbol > span
+    #countdown-container .countdown-symbol
 	{
-		left: 0.6rem;
-		top: -0.4rem;
+		height: 2.8rem;
+		width: 2.8rem;
+		font-size: 2rem;
 	}
-	.countdown-symbol + p
+	#countdown-container .inner-bg
+	{
+		position: absolute;
+		left: 0.5rem;
+		top: -0.13rem;
+		background-color: white;
+		border-radius: 50%;
+		height: 3.05rem;
+		width: 3.05rem;
+		z-index: 18;
+	}
+	#countdown-container .outer-bg
+	{
+		position: absolute;
+		left: -0.25rem;
+		top: -0.85rem;
+		z-index: 18;
+		height: 3.9rem;
+		width: 3.9rem;
+		border-radius: 50%;
+		border: 0.3rem solid white;
+	}
+	#countdown-container .countdown-symbol > span
+	{
+		top: -0.26rem;
+	}
+	#countdown-container .countdown-symbol + p
 	{
 		font-size: 16px;
+		margin: 2rem auto;
 	}
-	.arc, .arcs-background 
+	#countdown-container #day-div > p, #countdown-container #hour-div > p
+	{
+		margin-left: 0.6rem;
+	}
+	#countdown-container .arc, #countdown-container .arcs-background 
 	{
 	    top: -0.6rem;
 	    left: 0.1rem;
-	    border: 0.4rem solid;
+	    border: 0.6rem solid;
 	    border-color: #00AEFF #00AEFF transparent transparent;
 	}
-	.arcs-background
+	#countdown-container .arcs-background
 	{
 		border-color: rgba(240, 240, 240);
-		border-width: 0.4rem;
+		border-width: 0.6rem;
 	}
-	.arc_start 
+	#countdown-container .arc_start 
 	{
 	    transform: rotate(45deg);
 	}
-	.arc_end 
+	#countdown-container .arc_end 
 	{
 		z-index: 10;
 	    transform: rotate(-135deg);
@@ -345,10 +400,6 @@ h1
 	#countdown-section
 	{
 		margin: 0 auto 2rem;
-	}
-	#countdown-container
-	{
-		width: 80vw;
 	}
 	#countdown-intro
 	{

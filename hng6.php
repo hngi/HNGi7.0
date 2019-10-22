@@ -24,36 +24,44 @@
 			<div id="day-div">
 				<div class="countdown-symbol" id="day-symbol">
 					<div class="arcs-background"></div>
+					<div class="inner-bg"></div>
+					<div class="outer-bg"></div>
 				    <div id="day-start" class="arc arc_start"></div>
 				    <div id="day-end" class="arc arc_end"></div>
-					<span id="day-text">05</span>
+					<span id="day-text"></span>
 				</div>
 				<p class="center-text">DAYS</p>
 			</div>
 			<div id="hour-div">
 				<div class="countdown-symbol" id="hour-symbol">
 					<div class="arcs-background"></div>
+					<div class="inner-bg"></div>
+					<div class="outer-bg"></div>
 				    <div id="hour-start" class="arc arc_start"></div>    
 				    <div id="hour-end" class="arc arc_end"></div>
-					<span id="hour-text">24</span>
+					<span id="hour-text"></span>
 				</div>
 				<p class="center-text">HOURS</p>
 			</div>
 			<div id="minute-div">
 				<div class="countdown-symbol" id="minute-symbol">
 					<div class="arcs-background"></div>
+					<div class="inner-bg"></div>
+					<div class="outer-bg"></div>
 				    <div id="minute-start" class="arc arc_start"></div>    
 				    <div id="minute-end" class="arc arc_end"></div>
-					<span id="minute-text">52</span>
+					<span id="minute-text"></span>
 				</div>
 				<p class="center-text">MINUTES</p>
 			</div>
 			<div id="second-div">
 				<div class="countdown-symbol" id="second-symbol">
 					<div class="arcs-background"></div>
+					<div class="inner-bg"></div>
+					<div class="outer-bg"></div>
 				    <div id="second-start" class="arc arc_start"></div>    
 				    <div id="second-end" class="arc arc_end"></div>
-					<span id="second-text">41</span>
+					<span id="second-text"></span>
 				</div>
 				<p class="center-text">SECONDS</p>
 			</div>
