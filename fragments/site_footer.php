@@ -1,4 +1,5 @@
 <style>
+
 footer #socials a  {
     display: inline-block;
     margin-top: 10px;  
@@ -6,7 +7,7 @@ footer #socials a  {
 </style>
 
 
-<footer class="tripp">
+<footer class="tripp" >
                 <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722444/hng-brand-logo_gnplmq.svg">
                 <nav class="footer-nav">
                     <div class="row">
