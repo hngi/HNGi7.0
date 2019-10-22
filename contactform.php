@@ -26,8 +26,10 @@ if (isset($_POST['contact-btn'])) {
       $subject = $subject;
       $body = $message;
       //here is the function to send mail to admin email
-      contactMail($email, $name, $subject, $body);
-      $mess = 'Message Sent, Thank you!';
+
+      contactMail($email, $ticket, $name, $subject, $body);
+      $mess = 'Message Sent you get a feedback from us thank you!';
+
     }
   }
 }
