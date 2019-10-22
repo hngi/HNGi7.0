@@ -18,7 +18,7 @@
 		include('fragments/site_header.php');
 	?>
 	<section id="countdown-section">
-		<h2 class="darkblue-text center-text" id="countdown-intro">Countdown to HNG 7.0 <span class="blue-text">- 1st January, 2020</span></h2>
+		<h2 class="darkblue-text center-text" id="countdown-intro">Countdown to HNGi7.0 <span class="blue-text">- 1st January, 2020</span></h2>
 
 		<section id="countdown-container">
 			<div id="day-div">
@@ -62,7 +62,7 @@
 		<h2 class="center-text"><a href="join-intern.php" class="skyblue-text" id="countdown-register">REGISTER FOR HNGi7.0 NOW</a></h2>
 	</section>
 	<section id="home-about">
-		<h1 class="blue-text">HNGi6.0 Internship</h1>
+		<h1 class="blue-text">HNG 6.0 Internship</h1>
 		<div id="about-container">
 			<article>
 				<p>
@@ -102,9 +102,9 @@
 		<h2 class="blue-text center-text">HNG 6 Internship Tracks (Curriculum)</h2>
 		<div id="curriculum-flex">
 			<p>
-				Those who participated in HNG 6 Internship program were divided into groups according to their interests
+				Those who participated in HNG 6.0 Internship program were divided into groups according to their interests
 				<br /><br />
-				Those groups were popularly known as tracks in HNG 6 Internship and the following were some of the tracks featured
+				Those groups were popularly known as tracks in HNG 6.0 Internship and the following were some of the tracks featured
 				<br /><br />
 				At various points in the program, collaboration between participants in different tracks is achieved
 			</p>
@@ -120,7 +120,7 @@
 	</section>
 	<section id="mentor-section">
 		<article>
-			<h2 class="blue-text">HNG 6 Internship Mentors</h2>
+			<h2 class="blue-text">HNG 6.0 Internship Mentors</h2>
 			<p>
 				Mentors are responsible for day-to-day running of the HNG Internship programme.
 				<br /><br />
