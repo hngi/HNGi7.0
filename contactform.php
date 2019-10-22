@@ -5,32 +5,43 @@ $contact_mail = new AdminClass;
 $validation = new Validation();
 
 if (isset($_POST['contact-btn'])) {
+// This function will return 
+// A random string of specified length 
+function random_strings($length_of_string) { 
+		
+	return substr ((date('dmys')), 0, $length_of_string); 
+} 
+
+// This function will generate 
+// Random string of length 10 
+//echo random_strings(10); 
 
   //use this as an example to get form input data
   $name = $database->escape_string($_POST["name"]);
   $email = $database->escape_string($_POST["email"]);
   $subject = $database->escape_string($_POST["subject"]);
   $message = $database->escape_string($_POST["message"]);
+  $ticket = random_strings(10);
   //validation of data
   $msg = $validation->check_empty($_POST, array('name', 'email', 'subject', 'message'));
   $check_email = $validation->is_email_valid($_POST['email']);
-          // checking empty fields
-          if ($msg != null) {
-          } elseif (!$check_email) {
-            $msg2 = 'Please provide proper email.';
-          } else {
+  // checking empty fields
+  if ($msg != null) { } elseif (!$check_email) {
+    $msg2 = 'Please provide proper email.';
+  } else {
 
-   //here is method that will submit mail to database table and you can find it in adminClass
-    $send = $contact_mail->contactFormMailer($name, $email, $subject, $message);
+    //here is method that will submit mail to database table and you can find it in adminClass
+    $send = $contact_mail->contactFormMailer($ticket, $name, $email, $subject, $message);
     if ($send) {
+      $ticket = $ticket;
       $name = $name;
       $subject = $subject;
       $body = $message;
       //here is the function to send mail to admin email
-      contactMail($email, $name, $subject, $body);
-      $mess = 'Message Sent, Thank you!';
+      contactMail($email, $ticket, $name, $subject, $body);
+      $mess = 'Message Sent you get a feedback from us thank you!';
     }
-          }
+  }
 }
 
 
@@ -41,19 +52,23 @@ if (isset($_POST['contact-btn'])) {
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Contact</title>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Contact Us</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
-  <link rel="stylesheet" href="css/contactform.css">
-  <link rel="stylesheet" type="text/css" href="css/header-footer.css">
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
+  <link rel="stylesheet" type="text/css" href="css/header-footer.css">
+  <link rel="stylesheet" href="css/newContact.css">
+  <link rel="stylesheet" href="css/faq.css">
+
 </head>
 
 <body>
   <header>
-    <a href="index.html"><img id="hng-logo" src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png"></a>
+    <a href="index.php"><img id="hng-logo" src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png"></a>
     <input type="checkbox" id="mobile-bars-check" />
     <label for="mobile-bars-check" id="mobile-bars">
       <!--img src="images/bars-icon.png" height="23px"-->
@@ -62,66 +77,61 @@ if (isset($_POST['contact-btn'])) {
       <div class="stix" id="stik3"></div>
     </label>
     <nav>
-      <a href="index.html" class="header-links">Home</a>
-      <a href="hng6.html" class="header-links">HNG 6</a>
-      <a href="mentorpage.html" class="header-links">Mentors</a>
+      <a href="index.php" class="header-links">Home</a>
+      <a href="hng6.php" class="header-links">HNG 6.0</a>
+      <a href="mentorpage.php" class="header-links">Mentors</a>
       <a href="contactform.php" class="header-links">Contact</a>
-      <a href="join-intern.html" id="join-hng" class="def-button">Join HNG</a>
+      <a href="join-intern.php" id="join-hng" class="def-button">Join HNGi 7.0</a>
     </nav>
   </header>
 
+  <section class="freq-n">
+    <div class="container">
+      <div class="wrap" style="width: 100%;">
+        <div class="header">
+          <h1>Not a Frequently Asked Question?</h1>
+          <h1> contact us below</h1>
+        </div>
+        <form class="inputs-wrap" method="post">
+          <div id="contact-message">
+            <?php
 
-  <div class="form1">
-    <form class="form is-login" method="post">
-      <h2 class="heading">Not a Frequently Asked Question?<br>Contact us below</h2>
-      
-        <?php
-            if(!empty($error)){
-                echo "<h4 class='text-danger text-center'>".$error."</h4>";
+            if (!empty($error)) {
+              echo "<h4 class='text-danger text-center'>" . $error . "</h4>";
             }
-             if(!empty($mess)){
-                echo "<h4 class='text-success text-center' style='color: green;'>".$mess."</h4>";
+            if (!empty($mess)) {
+              echo "<h4 class='text-success text-center success' style='color: green;'>" . $mess . "</h4>";
             }
             if (!empty($msg)) {
-              echo "<h4 class='text-danger text-center' style='color: red;'>".$msg."</h4>";
+              echo "<h4 class='text-danger text-center' style='color: red;'>" . $msg . "</h4>";
             }
             if (!empty($msg2)) {
-              echo "<h4 class='text-danger text-center' style='color: red;'>".$msg2."</h4>";
+              echo "<h4 class='text-danger text-center' style='color: red;'>" . $msg2 . "</h4>";
             }
-        ?>
-      
-      <div class="form__field">
-        <i class="material-icons"> perm_identity </i>
-        <input type="text" name="name" placeholder="Name">
-
+            ?>
+          </div>
+          <input type="text" placeholder="Name" name="name" required>
+          <input type="email" placeholder="Email" name="email"  required>
+          <input type="text" placeholder="Subject" name="subject"  required>
+          <textarea id="" cols="" rows="10" name="message" required></textarea>
+          <input type="submit" id="submit" value="SEND MESSAGE" name="contact-btn">
+        </form>
       </div>
-      <div class="form__field">
-        <i class="material-icons">email</i>
-        <input type="email" name="email" placeholder="Email">
-
-      </div>
-      <div class="form__field">
-        <i class="material-icons">subject</i>
-        <input type="text" name="subject" placeholder="Subject">
-      </div>
-      <div class="form__field">
-        <i class="material-icons">create</i>
-        <textarea minlength="20" name="message" placeholder="Write a message"></textarea>
-      </div>
-      <input type="submit" class="submit" name="contact-btn" value="SEND MESSAGE">
-    </form>
-  </div>
-
+    </div>
+  </section>
+  
   <footer>
     <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722444/hng-brand-logo_gnplmq.svg">
     <nav>
       <section>
         <h2 class="skyblue-text">Quick Links</h2>
         <div id="link-list">
-          <a href="join-intern.html" class="skyblue-text">Join HNG</a>
-          <a href="index.html" class="skyblue-text">About HNG</a>
-          <a href="MentorSetUpPage2.html" class="skyblue-text">Become a Sponsor</a>
-          <a href="MentorSetUpPage2.html" class="skyblue-text">Sign up as Mentor</a>
+          <a href="join-intern.php" class="skyblue-text">Join HNG</a>
+          <a href="index.php" class="skyblue-text">About HNG</a>
+          <a href="donationpage.html" class="skyblue-text">Become a Sponsor</a>
+          <a href="MentorSetUpPage2.php" class="skyblue-text">Sign up as Mentor</a>
+          <a href="faq.php" class="skyblue-text">FAQ</a>
+
         </div>
       </section>
       <section id="contact-section">
@@ -157,7 +167,7 @@ if (isset($_POST['contact-btn'])) {
         </div>
       </section>
     </nav>
-    <p class="center-text darkblue-text">&copy 2019, HGN Internship. All rights reserved.</p>
+    <p class="center-text darkblue-text">&copy 2019, HNG Internship. All rights reserved.</p>
   </footer>
 </body>
 

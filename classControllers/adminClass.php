@@ -4,10 +4,10 @@ class AdminClass
 {
 
 	/**************METHOD TO HANDLE SENDING OF CONTACT FORM****************/
-	public function contactFormMailer($name, $email, $subject, $message)
+	public function contactFormMailer($ticket, $name, $email, $subject, $message)
 	{
 		global $database;
-		$result = $database->query("INSERT INTO contact_messages(`name`,`email`,`subject`,`message`,`timestamp`) VALUES('$name', '$email', '$subject', '$message', NOW())");
+		$result = $database->query("INSERT INTO contact_messages(`ticket_id`,`name`,`email`,`subject`,`message`,`timestamp`) VALUES('$ticket', '$name', '$email', '$subject', '$message', NOW())");
 		return $result;
 	}
 
@@ -29,6 +29,7 @@ class AdminClass
         $stmt = $database->query("SELECT admin_id, firstname, lastname, email, role FROM admins WHERE email = '$email'");
         $result = $stmt->fetch_assoc();
         return $result;
+
     }
 
     function adminExist($email){
@@ -47,10 +48,12 @@ class AdminClass
         return $stmt;
     }
 
-    function getRoles(){
-	    global $database;
-	    $stmt = $database->query("SELECT role_id,role_name FROM roles");
-	    $results = $stmt->fetch_all(MYSQLI_ASSOC);
-	    return $results;
-    }
+
+	function getRoles(){
+		global $database;
+		$stmt = $database->query("SELECT role_id,role_name FROM roles");
+		$results = $stmt->fetch_all(MYSQLI_ASSOC);
+		return $results;
+	}
+
 }
