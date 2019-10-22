@@ -1,22 +1,23 @@
 <?php
 require_once 'classControllers/init.php';
-    // include('backend/Admins.php');
-    $admin = new Admins();
-    $display = $admin->allAdmins();
+// include('backend/Admins.php');
+$admin = new Admins();
+$display = $admin->allAdmins();
 
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>Interns</title>
 	<link rel="icon" type="img/png" href="images/hng-favicon.png">
 	<link rel="stylesheet" href="css/dashboard.css">
 
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -36,14 +37,15 @@ require_once 'classControllers/init.php';
 	</style>
 
 </head>
+
 <body>
-	<main>
+	<main class="reg">
 		<?php
-			if($_SESSION["role"] != 1) {
-				echo '<h2><br><br><br>Sorry, You do not have the priviledge to view this page</p>';
-				echo '<h3><a href="dashboard.php">Dashboard</a></h3>';
-				exit();
-			}
+		if ($_SESSION["role"] != 1) {
+			echo '<h2><br><br><br>Sorry, You do not have the priviledge to view this page</p>';
+			echo '<h3><a href="dashboard.php">Dashboard</a></h3>';
+			exit();
+		}
 		?>
 		<section id="overview-section">
 			<!-- <h1>Dashboard</h1> -->
@@ -55,37 +57,39 @@ require_once 'classControllers/init.php';
 			<div class="container">
 				<div class="row">
 
-                <?php
-                    if($display == "0") {
-                        echo "<h2>There are no Registered Interns</h2>";
-                    } else {
-                    ?>
-                        <div class="col-md-3">
-                            <a href="new_admin.php">
-                                <button type="button" id="export"> + New Admin</button>
-                            </a>
-                        </div>
+					<?php
+					if ($display == "0") {
+						echo "<h2>There are no Registered Interns</h2>";
+					} else {
+						?>
+						<div class="col-md-3">
+							<a href="new_admin.php">
+								<button type="button" id="export"> + New Admin</button>
+							</a>
+						</div>
 
-                        <table class="table table-hover">
-                            <thead>
-                            <tr>
-                                <th>SN</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Email</th>
-                                <th>Role</th>
-                                <th>Date of Registration</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-                                    echo $display;
-                                ?>
-                            </tbody>
-                        </table>
-                        <?php
-                    }
-                ?>
+						<div class="table-responsive" id="printablediv">
+							<table class="table table-hover table-bordered  mt-3 mb-1 table-condensed">
+								<thead class="table-primary">
+									<tr>
+										<th>SN</th>
+										<th>First Name</th>
+										<th>Last Name</th>
+										<th>Email</th>
+										<th>Role</th>
+										<th>Date of Registration</th>
+									</tr>
+								</thead>
+								<tbody>
+									<?php
+										echo $display;
+										?>
+								</tbody>
+							</table>
+						</div>
+					<?php
+					}
+					?>
 
 				</div>
 			</div>
@@ -116,15 +120,16 @@ require_once 'classControllers/init.php';
 	</main>
 
 	<input type="checkbox" id="mobile-bars-check" />
-    <label for="mobile-bars-check" id="mobile-bars">
-        <div class="stix" id="stik1"></div>
-        <div class="stix" id="stik2"></div>
-        <div class="stix" id="stik3"></div>
-    </label>
+	<label for="mobile-bars-check" id="mobile-bars">
+		<div class="stix" id="stik1"></div>
+		<div class="stix" id="stik2"></div>
+		<div class="stix" id="stik3"></div>
+	</label>
 
-    <?php include('fragments/sidebar.php'); ?>
+	<?php include('fragments/sidebar.php'); ?>
 
 </body>
+
 </html>
 
 <script type="text/javascript" src="js/dashboard.js"></script>
