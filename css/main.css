@@ -814,19 +814,6 @@ display: block;
 
 }
 
-footer p {
-color: #737373;
-}
-
-footer .img {
-display: inline-block;
-}
-
-footer .img img {
-  margin-right: 20px;
-  width: 20px;
-}
-
 
 .rights {
 margin-bottom: 0;
