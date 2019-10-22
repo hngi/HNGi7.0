@@ -13,7 +13,7 @@
     <title>Mentors Page</title>
 
 </head>
-<body class="">
+<body class="container-fluid">
 
 <?php include('fragments/site_header.php'); ?>
 
