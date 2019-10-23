@@ -304,7 +304,6 @@
                           </div>
                         </div>
                       </div>
-
                       <div class="card" id="card1">
                         <div class="card-header" id="headingTwo">
                           <h2 class="mb-0">

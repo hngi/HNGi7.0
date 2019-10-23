@@ -237,6 +237,6 @@
 </body>
 
 <script type="text/javascript" src="js/hng6.js"></script>
-                <script src="./js/scroll-to-top.js"></script>
+<script src="./js/scroll-to-top.js"></script>
 </html>
 

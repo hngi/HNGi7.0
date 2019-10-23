@@ -957,16 +957,16 @@
     display: block;
     margin: auto;
   }
-}
-
-          .table_accord {
+  .table_accord {
           margin: 0;
           width: 100%;
-          font-size: .7em;
-          }
+    }
 
-          .table_accord button {
-            font-size: .4em;
-          }
-        }
+    .table_accord button {
+      font-size: 0.4em;
+    }
+}
+
+          
+        
 
