@@ -15,6 +15,10 @@
   <link rel="stylesheet" type="text/css" href="css/header-footer.css">
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
   <style>
+
+    #home {
+      display: none;
+    }
   footer {
     width: 100% !important;
   }
@@ -556,7 +560,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
   <div id="jumptotop"><span></span></div>
-                <script src="./js/scroll-to-top.js"></script>
+  <script src="js/scroll-to-top.js"></script>
+  
 </body>
 
 
