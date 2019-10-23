@@ -95,7 +95,7 @@ h1
     height: 100%;
     border-radius: 100%;
     border: 0.6rem solid;
-    border-color: #00AEFF #00AEFF transparent transparent;
+	border-color: #00AEFF #00AEFF transparent transparent;
 }
 .arcs-background
 {
@@ -334,14 +334,18 @@ h1
 	}
 	.arc, .arcs-background 
 	{
-	    top: -0.6rem;
-	    left: 0.1rem;
-	    border: 0.4rem solid;
-	    border-color: solid #06F4CC;
+	    position: absolute;
+    top: -0.4rem;
+    left: -0.4rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 0.4rem solid;
+	border-color: #00AEFF #00AEFF transparent transparent;
 	}
 	.arcs-background
 	{
-		border-color:solid #06F4CC;
+		border-color: rgba(240, 240, 240);
 		border-width: 0.4rem;
 	}
 	.arc_start 
