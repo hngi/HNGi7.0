@@ -145,8 +145,6 @@
                     $no++;
                     $display .='
                     <tr>
-                        <td><button type="button" class="btn btn-md btn-info"
-                              onclick="interndetails('.$row["intern_id"].')">View</button></td>
                         <td>'.$no.'</td>
                         <td>'.$row["intern_id"].'</td>
                         <td>'.$row["name"].'</td>
@@ -160,7 +158,12 @@
                         <td>'.$row["employment_status"].'</td>
                         <td>'.$row["about"].'</td>
                         <td>'.$row["timestamp"].'</td>
-                        <td>' . '<a onClick=\"javacript: return confirm("Please confirm deletion");\" href="registered_interns.php?delete_id=' . $row["intern_id"] . '" class="btn btn-danger btn-xs">Delete</a>' . '</td>
+                        <td>' . '<a class="btn btn-primary" onClick="interndetails('.$row["intern_id"].');">&nbsp;View&nbsp;</a>
+
+                        ' . '<a onClick=\"javacript: return confirm("Please confirm deletion");\"
+                        href="registered_interns.php?delete_id=' . $row["intern_id"] . '" class="btn btn-danger btn-xs">Delete</a>' . '
+
+                        </td>
 
                     </tr>';
 
@@ -178,8 +181,8 @@
         //Function to view each intern details
           function view()
           {
-              if(isset($_GET['id']))
-              {
+            if(isset($_GET['id']))
+            {
                 $id = $_GET['id'];
                 $id = (int)$id;
                 global $database;
@@ -188,7 +191,7 @@
                 $result1 = mysqli_fetch_assoc($result);
 
               return $result1;
-              }
+            }
           }
 
           // function to connect and execute the query
