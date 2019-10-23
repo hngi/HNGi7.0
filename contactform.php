@@ -6,11 +6,16 @@ $validation = new Validation();
 
 if (isset($_POST['contact-btn'])) {
 
+  function random_strings($length_of_string) { 
+		
+    return substr ((date('dmys')), 0, $length_of_string); 
+  } 
   //use this as an example to get form input data
   $name = $database->escape_string($_POST["name"]);
   $email = $database->escape_string($_POST["email"]);
   $subject = $database->escape_string($_POST["subject"]);
   $message = $database->escape_string($_POST["message"]);
+  $ticket = random_strings(10);
   //validation of data
   $msg = $validation->check_empty($_POST, array('name', 'email', 'subject', 'message'));
   $check_email = $validation->is_email_valid($_POST['email']);
@@ -44,17 +49,16 @@ if (isset($_POST['contact-btn'])) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Contact</title>
+  <title>Contact Us</title>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
   <link rel="stylesheet" type="text/css" href="css/header-footer.css">
+  <link rel="stylesheet" href="css/newContact.css">
   <link rel="stylesheet" href="css/faq.css">
-<style>
- 
-</style>
+
 </head>
 
 <body>
@@ -96,7 +100,7 @@ if (isset($_POST['contact-btn'])) {
       </div>
     </div>
   </section>
-  <footer>
+ 	<footer>
     <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722444/hng-brand-logo_gnplmq.svg">
     <nav>
       <section>
