@@ -16,6 +16,10 @@
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
   <style>
 
+    #header {
+      padding: 0 50px;
+    }
+
     #home {
       display: none;
     }
