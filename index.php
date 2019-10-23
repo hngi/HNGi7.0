@@ -31,6 +31,12 @@
   footer {
     width: 100% !important;
   }
+
+  @media screen and (max-width: 900px){
+    #header, main {
+      padding: 0;
+    }
+  }
   </style>
 
 </head>
