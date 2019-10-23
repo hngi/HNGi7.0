@@ -462,14 +462,17 @@
             background-color: #3c6b9c;
             color: #F2f5f9;
           }
-          #headingOne {
+          .activeHomepageDrop {
             background-color: #00AEFF;
           }
-      /*    changed color of text*/
+        /*  #headingOne {
+            background-color: #00AEFF;
+          }
+      
           #headingOne button {
             color: #FFFFFF;
             font-weight: 500;
-          }
+          }/*
     /*      added padding ifyajoke*/
           #collapseOne li {
             color: #737373;
@@ -972,3 +975,10 @@
             transition: 0.4s ease-out;
           }
         }
+/*Aligning elements*/
+@media screen and (max-width:650px){
+  .main-fifth-row{
+    display: block;
+    margin: auto;
+  }
+}
