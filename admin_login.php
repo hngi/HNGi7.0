@@ -8,6 +8,7 @@ if (isset($_POST['login'])) {
 }
 
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,6 +66,10 @@ if (isset($_POST['login'])) {
             
           }
 
+          if(isset($_GET["blocked"])) {
+            echo  '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: #F7CFCF; color: #6A0E0D; width: 80% !important; text-align: center;">Your account has been de-activated, Please contact a super admin.</p>';
+          }
+
         ?>
         <p id="result"></p>
 
@@ -89,7 +94,6 @@ if (isset($_POST['login'])) {
           <a href="donate.html" class="skyblue-text">Become a Sponsor</a>
           <a href="MentorSetUpPage2.php" class="skyblue-text">Sign up as Mentor</a>
           <a href="faq.php" class="skyblue-text">FAQ</a>
-          <a href="intern-experience.php" class="skyblue-text">Past Intern Experience</a>
         </div>
       </section>
       <section id="contact-section">
@@ -119,8 +123,8 @@ if (isset($_POST['login'])) {
       <section>
         <h2 class="skyblue-text">Follow Us</h2>
         <div id="socials">
-          <a href="https://twitter.com" title="Follow on Twitter!"><img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/twitter-logo_m1mgzi.svg"></a>
-          <a href="https://facebook.com"><img title="Follow on Facebook!" src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/facebook-logo_bw1hal.svg"></a>
+          <a href="https://twitter.com/hnginternship" title="Follow on Twitter!"><img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/twitter-logo_m1mgzi.svg"></a>
+          <a href="https://www.facebook.com/HNG-Internship-115577009820117/"><img title="Follow on Facebook!" src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/facebook-logo_bw1hal.svg"></a>
           <a href="https://dribble.com"><img title="Follow on Dribble!" src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/dribble-logo_w4vwuz.svg"></a>
         </div>
       </section>
