@@ -28,8 +28,7 @@ header .def-button {
     outline: none;
     border: none;
     transition: 0.4s ease-out;
-    width: 9rem;
-    text-align:center;
+    width: auto;
 }
 
 header .def-button:hover {
@@ -212,7 +211,7 @@ footer .footer-nav .row {
 
     header #mobile-bars {
         display: block;
-        margin-left: 40vw;
+        margin-left: 43vw;
     }
 
     header #mobile-bars-check:checked ~ #mobile-bars > #stik1 {
@@ -274,7 +273,7 @@ footer .footer-nav .row {
     header nav a,
     header nav .header-links,
     header nav #join-hng {
-        font-size: 4.5vw;
+        font-size: 3vw;
         align-self: flex-end;
     }
 

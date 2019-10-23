@@ -11,6 +11,13 @@
 	<link rel="icon" type="img/png" href="images/hng-favicon.png">
 	<link rel="stylesheet" href="css/hng6.css">	
 	<link rel="stylesheet" href="css/header-footer.css">
+	<style>
+
+		@media screen and (max-width: 760px){
+	#join-hng {
+		display: none;
+	}}
+	</style>
 
 </head>
 
