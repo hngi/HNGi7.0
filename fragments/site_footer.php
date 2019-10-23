@@ -4,6 +4,15 @@ footer #socials a  {
     display: inline-block;
     margin-top: 10px;  
 }
+
+    nav {
+        height: auto;
+    }
+
+p {
+    width: 100%;
+
+}
 </style>
 
 
@@ -16,7 +25,7 @@ footer #socials a  {
                             <div id="link-list">
                                 <a href="join-intern.php" class="skyblue-text">Join HNG</a>
                                 <a href="index.php" class="skyblue-text">About HNG</a>
-                                <a href="faq.php" class="skyblue-text">Become a Sponsor</a>
+                                <a href="donate.html" class="skyblue-text">Become a Sponsor</a>
                                 <a href="MentorSetUpPage2.php" class="skyblue-text">Sign up as Mentor</a>
                                 <a href="faq.php" class="skyblue-text">FAQ</a>
                                 <a href="intern-experience.php" class="skyblue-text">Past Intern Experience</a>
