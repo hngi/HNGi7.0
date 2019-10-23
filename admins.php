@@ -1,234 +1,216 @@
 <?php
+require_once 'classControllers/init.php';
+// include('backend/Admins.php');
 
-class Admins
-{
 
- 
-  public function adminLogin()
-  {
-    
-    //global $con;
-    global $database;
-    $errors = [];
-    $email = $database->escape_string( $_POST["email"]);
-    $password = $database->escape_string($_POST["password"]);
-    if (empty($email)) {
-      array_push($errors, "Email is required");
-    }
+if (!isset($_SESSION["role"])) {
+  header('Location:admin_login.php');
+}
 
-    if (empty($password)) {
-      array_push($errors, "Password is required");
-    }
+$admin = new Admins();
+$display = $admin->allAdmins();
 
-    // check if there are errors
-    // if (count($errors)) {
-    //   echo '<p>Registration Failed with the following Errors</p>';
-    //   foreach ($errors as $error) {
-    //     echo $error . '<br />';
-    //   }
-    // } 
-    
-    if(count($errors) === 0){
-      // there are no errors
-      $query = 'SELECT * FROM admins WHERE email="' . $email . '" AND password="' . $password . '" ';
-
-      $res = $database->query($query);
-      $count = $database->affected_rows();
-
-      if ($count > 0) {
-        // user exist
-        // get user details and create session
-
-        $row = mysqli_fetch_assoc($res);
-
-        $fullname = $row["firstname"] . ' ' . $row["lastname"];
-        $role = $row["role"];
-        $admin_id = $row["admin_id"];
-
-        $_SESSION["fullname"] = $fullname;
-        $_SESSION["role"] = $role;
-        $_SESSION["admin_id"] = $admin_id;
-
-        echo '<script>window.location.href = "dashboard.php"</script>';
-      }
-    }
+if (isset($_GET["blockAdminId"])) {
+  $id = $_GET["blockAdminId"];
+  $blockAdminRes = $admin->blockAdmin($id);
+  if ($blockAdminRes == true) {
+    header("Location:admins.php");
   }
+}
 
-  public function allAdmins()
-  {
-    global $con;
-    global $database;
-    $display = '';
-    $query = 'SELECT * FROM admins WHERE admin_id <> '.$_SESSION["admin_id"].'  ORDER BY admin_id DESC';
-    $res = $database->query($query);
-    $count = $database->affected_rows();
-    if ($count > 0) {
-      // inters exist
-      $sn = 1;
-      while ($row = mysqli_fetch_assoc($res)) {
-        if($row["role"] == 1) {
-          $role = "Super Admin";
-        } else {
-          $role = "Admin";
+if (isset($_GET["activateAdminId"])) {
+  $id = $_GET["activateAdminId"];
+  $activateAdminRes = $admin->activateAdmin($id);
+  if ($activateAdminRes == true) {
+    header("Location:admins.php");
+  }
+}
+
+if (isset($_GET['delete_id'])) {
+  $admin_id = $_GET['delete_id'];
+
+  $message = $admin->DeleteAdmin($admin_id);
+}
+
+if (isset($_GET["blockAdminId"])) {
+  $id = $_GET["blockAdminId"];
+  $blockAdminRes = $admin->blockAdmin($id);
+  if ($blockAdminRes == true) {
+    header("Location:admins.php");
+  }
+}
+
+if (isset($_GET["activateAdminId"])) {
+  $id = $_GET["activateAdminId"];
+  $activateAdminRes = $admin->activateAdmin($id);
+  if ($activateAdminRes == true) {
+    header("Location:admins.php");
+  }
+}
+
+
+
+?>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Dashboard</title>
+
+  <link rel="icon" type="img/png" href="images/hng-favicon.png">
+  <link rel="stylesheet" href="css/dashboard.css">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <style type="text/css">
+    .card {
+      height: 150px;
+      background: #ccc;
+      margin: 15px;
+      padding: 10px;
+      border-radius: 15px;
+
+    }
+
+    .col-md-2 {
+      height: 40px;
+    }
+
+    .col-md-8 {
+      height: 1px;
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+
+
+  <script language="javascript" type="text/javascript">
+    function printDiv(divID) {
+      //Get the HTML of div
+      var divElements = document.getElementById(divID).innerHTML;
+      //Get the HTML of whole page
+      var oldPage = document.body.innerHTML;
+
+      //Reset the page's HTML with div's HTML only
+      document.body.innerHTML =
+        "<html><head><title></title></head><body><br><br><br>" + divElements + "</body>";
+
+      //Print Page
+      window.print();
+
+      //Restore orignal HTML
+      document.body.innerHTML = oldPage;
+    }
+  </script>
+</head>
+
+<body>
+  <main class="reg">
+    <?php
+    if ($_SESSION["role"] != 1) {
+      echo '<h2><br><br><br>Sorry, You do not have the priviledge to view this page</p>';
+      echo '<h3><a href="dashboard.php">Dashboard</a></h3>';
+      exit();
+    }
+    ?>
+    <section id="overview-section">
+      <h1>Registered Admins</h1>
+      <div class="register-container">
+        <div class="row">
+
+          <?php
+          if ($display == "0") {
+            echo "<h2>There are no Registered Admins</h2>";
+          } else {
+            ?>
+            <div class="col-md-2">
+              <a href="new_admin.php">
+                <button type="button" class="btn btn-primary btn-sm" id="export">&#43; New Admin</button>
+              </a>
+            </div>
+            <div class="col-md-8"></div>
+            <div class="col-md-2">
+              <!--<a href="exports/export-to-pdf-mentors.php">-->
+              <a href="#" onclick="javascript:printDiv('printablediv')">
+                <button type="button" class="btn btn-primary btn-sm" id="export">Export to PDF</button>
+              </a>
+            </div>
+        </div> <br /><br />
+        <div class="row" id="table-row">
+          <div class="table-responsive" id="printablediv">
+            <table class="table table-hover mt-3 mb-1 table-condensed">
+              <thead class="table-primary">
+                <tr>
+                  <th>S/N</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Registration Date</th>
+                  <th colspan="2">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                  echo $display;
+                  ?>
+              </tbody>
+            </table>
+          </div>
+        <?php
         }
-        $display .= '
-                    <tr>
-                        <td>' . $sn . '</td>
-                        <td>' . $row["firstname"] . '</td>
-                        <td>' . $row["lastname"] . '</td>
-                        <td>' . $row["email"] . '</td>
-                        <td>' . $role . '</td>
-                        <td>' . $row["timestamp"] . '</td>
-                        <td><a href="admin_view.php?editAdminId='.$row["admin_id"].'"><button class="btn btn-success btn-sm">View</button></a></td>';
-                        if($row["block"] == 0) {
-                          $display .='
-                          <td><a href="admins.php?blockAdminId='.$row["admin_id"].'"><button class="btn btn-warning btn-sm">Block</button></a></td>';
-                        } else if ($row["block"]==1) {
-                          $display .='
-                          <td><a href="admins.php?activateAdminId='.$row["admin_id"].'"><button class="btn btn-primary btn-sm">Activate</button></a></td>';
-                        }
-                        $display .= '
-                        <td><a href="delete_admin.php?deleteAdminId='.$row["admin_id"].'"><button class="btn btn-danger btn-sm">Delete</button></a></td>';
-                      $display .='
-                    </tr>';
-        $sn++;
-      }
-    } else {
-      // there are no interns
-      $display = "0";
-    }
+        ?>
 
-    return $display;
-  }
+        </div>
+      </div>
+      <br /><br />
+      <!-- <button id="export">Export to Spreadsheet</button> -->
 
-  public function newAdmin($firstname, $lastname, $email, $role,$password)
-  {
-    global $database;
-    //global $con;
-    
+    </section>
+    <!-- <section id="details-section">
 
-    // check for existing email
-    $query = "SELECT * FROM admins WHERE email = '" . $email . "' ";
-    $res = $database->query($query);
-    $count = $database->affected_rows();
-    if ($count > 0) {
-      // email exists
-      $res = $resp = '<div class="alert alert-danger" role="alert">
-                                    The Email you entered is already associated with an account
-                                </div>';
-    } else {
-      // email is available, good, proceed to register
+			<div id="details-back">
+                <div>
+                    <a href="overview.html" id="newitem-go-back" title="Go back">
+                        <div></div>
+                    </a>
+                </div>
+            </div>
+			<h2>Intern application details</h2>
+			<em id="no-intern">No intern selected</em>
+			<br />
+			<p>Name: <span id="details-name"></span></p>
+			<p>Email: <span id="details-email"></span></p>
+			<p>Age: <span id="details-age"></span></p>
+			<p>Phone Number: <span id="details-number"></span></p>
+			<p>Track of interest: <span id="details-track"></span></p>
+			<p>CV link: <span id="details-CV-link"></span></p>
+			<p>State of residence: <span id="details-state-of-residence"></span></p>
+			<div href="" id="details-return">Back to Overview</div>
+		</section> -->
+  </main>
 
-      $query = "INSERT INTO admins (firstname, lastname, email, password, role, timestamp) VALUES ('" . $firstname . "', '" . $lastname . "', '" . $email . "', '" . $password . "', '" . $role . "', now())";
-      $res = $database->query($query);
-      $count = $database->affected_rows();
+  <input type="checkbox" id="mobile-bars-check" />
+  <label for="mobile-bars-check" id="mobile-bars">
+    <div class="stix" id="stik1"></div>
+    <div class="stix" id="stik2"></div>
+    <div class="stix" id="stik3"></div>
+  </label>
 
-      if ($count > 0) {
-        // success
-        $resp = '<div class="alert alert-success" role="alert">
-                                Admin Created Successfully
-                            </div>';
-      } else {
-        // failed
-        $resp = '<div class="alert alert-danger" role="alert">
-                                An error occurred. Please try again
-                            </div>';
-      }
-    }
+  <?php include('fragments/sidebar.php'); ?>
 
-    return $resp;
-  }
+</body>
 
-  public function getAdmin($id) {
-    global $database;
-    $query = "SELECT * FROM admins WHERE admin_id = ".$id."";
-    $res = $database->query($query);
-    $count = $database->affected_rows();
-    if($count > 0) {
-      // admin exists
-      $row = mysqli_fetch_assoc($res);
+</html>
 
-      $data["firstname"] = $row["firstname"];
-      $data["lastname"] = $row["lastname"];
-      $data["email"] = $row["email"];
-      $data["role"] = $row["role"];
-      return $data;
-    } else {
-      // no admin found
-      return 0;
-    }
-  }
-
-  public function blockAdmin($id) {
-    global $database;
-    $query = "UPDATE admins set block = 1 WHERE admin_id = ".$id."";
-    $res = $database->query($query);
-    $count = $database->affected_rows();
-    if($count > 0) {
-      // updated
-      return true;
-    } else {
-      // failed
-      return false;
-    }
-  }
-
-  public function activateAdmin($id) {
-    global $database;
-    $query = "UPDATE admins set block = 0 WHERE admin_id = ".$id."";
-    $res = $database->query($query);
-    $count = $database->affected_rows();
-    if($count > 0) {
-      // updated
-      return true;
-    } else {
-      // failed
-      return false;
-    }
-  }
-
-  public function deleteAdmin($id) {
-    global $database;
-    $query = "DELETE FROM admins WHERE admin_id = ".$id."";
-    $res = $database->query($query);
-    $count = $database->affected_rows();
-    if($count > 0) {
-      // deleted
-      return true;
-    } else {
-      // failed
-      return false;
-    }
-  }
-  public function isAdminExist($email){
-    global $database;
-    //global $con;
-
-
-    // check for existing email
-    $query = "SELECT * FROM admins WHERE email = '" . $email . "' ";
-    $res = $database->query($query);
-    $count = $database->affected_rows();
-    return $count;
-}
-
-  public function getAdminPassword($email){
-      global $database;
-      //global $con;
-
-
-      // check for existing email
-      $query = "SELECT password FROM admins WHERE email = '" . $email . "' ";
-      $res = $database->query($query);
-      $row = mysqli_fetch_assoc($res);
-      return $row;
-  }
-
-}
-
-
-if (isset($_GET["login"])) {
-  $admin = new Admins();
-  $admin->adminLogin();
-}
-
+<script type="text/javascript" src="js/dashboard.js"></script>
