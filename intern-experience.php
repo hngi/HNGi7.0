@@ -106,7 +106,7 @@
                         <p>Software Tester</p>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
                             quaerat eaque dolor? Praesentium, necessitatibus. Aut ratione dolorum ab voluptas
-                            doloremque, atque obcaecati?</p>
+                            , atque obcaecati?</p>
                     </div>
                     <div class="wrapper-child"  >
                         <img class="image" src="https://res.cloudinary.com/izik4004/image/upload/v1571822336/5.png">
