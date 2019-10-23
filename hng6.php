@@ -10,7 +10,6 @@
 		integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
 	<link rel="icon" type="img/png" href="images/hng-favicon.png">
 	<link rel="stylesheet" href="css/header-footer.css">
-    <link rel="stylesheet" href="css/newContact.css">
 	<link rel="stylesheet" href="css/hng6.css">
 </head>
 
