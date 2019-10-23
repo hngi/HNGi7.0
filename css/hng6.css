@@ -25,7 +25,8 @@ h1
 {
 	font-size: 40px;
 }
-.def-button {
+.def-button
+{
 	color: white;
 	border-radius: 3px;
 	padding: 0.5rem 1rem;
@@ -33,12 +34,6 @@ h1
 	outline: none;
 	border: none;
 	transition: 0.4s ease-out;
-	padding: 15px 32px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 14px;
-	font-family: "Open Sans", segoe UI, sans-serif;
 }
 .def-button:hover
 {
@@ -479,3 +474,24 @@ h1
         margin-left: 2%;
     }*/
 }
+@media screen and (max-width:899px){
+	footer{
+		font-size: 2.5vw;
+	}
+	footer #socials img {
+		padding: 20%;
+		height: 2.5vw;
+		width: 2.5vw;
+	}
+  }
+  @media screen and (min-width:900px){
+	footer{
+		padding: 4rem 8vw;
+		font-size: 20px;
+	}
+	footer #socials img {
+		padding: 25%;
+		height: 25px;
+		width: 25px;
+	}
+  }

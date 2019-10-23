@@ -5,6 +5,24 @@
     if(!isset($_SESSION["role"])) {
         header('Location:admin_login.php'); 
     }
+
+    if(isset($_POST["submit"])) {
+        $firstname = $database->escape_string($_POST["firstname"]);
+        $lastname = $database->escape_string($_POST["lastname"]);
+        $email = $database->escape_string($_POST["email"]);
+        $role = $database->escape_string($_POST["role"]);
+        $password = rand(123456, 789654);
+        //$password = sha1($password);
+        $resp = $admin->newAdmin($firstname, $lastname, $email, $role,$password);
+        if ($resp) {
+
+            $subject = 'WElCOME TO HNG INTERNSHIP';
+            $body = $firstname . ' ' . $lastname . ' you have been registered as an admin on HNG INTERSHIP site, kindly find the attachment of your registration detail and login with it. You are advise to change your password after you logedd in. Thank you';
+            sendNewAdminMail($email, $password, $subject, $body);
+        }
+
+    }
+
     if(isset($_GET["editAdminId"])) {
         $id = $_GET["editAdminId"];
         $res = $admin->getAdmin($id);
