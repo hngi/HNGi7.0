@@ -200,10 +200,47 @@ class Admins
       return false;
     }
   }
+  public function isAdminExist($email){
+    global $database;
+    //global $con;
+
+
+    // check for existing email
+    $query = "SELECT * FROM admins WHERE email = '" . $email . "' ";
+    $res = $database->query($query);
+    $count = $database->affected_rows();
+    return $count;
+}
+
+  public function getAdminPassword($email){
+      global $database;
+      //global $con;
+
+
+      // check for existing email
+      $query = "SELECT password FROM admins WHERE email = '" . $email . "' ";
+      $res = $database->query($query);
+      $row = mysqli_fetch_assoc($res);
+      return $row;
+  }
+
+  public function editAdmin($firstname, $lastname, $email, $role) {
+    global $database;
+    $query = "UPDATE admins  WHERE firstname ='" . $firstname . "', lastname='" . $lastname . "', email= '" . $email . "', role='" . $role . "' ";
+    $res = $database->query($query);
+    $count = $database->affected_rows();
+    if($count > 0) {
+      // updated
+      return true;
+    } else {
+      // failed
+      return false;
+    }
+  }
+
 
 }
 
-  
 
 if (isset($_GET["login"])) {
   $admin = new Admins();
