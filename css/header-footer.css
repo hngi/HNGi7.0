@@ -28,7 +28,7 @@ header .def-button {
     outline: none;
     border: none;
     transition: 0.4s ease-out;
-    width: 9rem;
+    width: auto;
     text-align:center;
 }
 
