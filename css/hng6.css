@@ -325,8 +325,10 @@ h1
 	}
 	.countdown-symbol > span
 	{
-		left: 0.6rem;
-		top: -0.4rem;
+		left: 2.0rem;
+		top: .30rem;
+		right: 1rem;
+		font-size: .5em;
 	}
 	.countdown-symbol + p
 	{
