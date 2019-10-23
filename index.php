@@ -36,6 +36,10 @@
     #header, main {
       padding: 0;
     }
+
+    #support {
+      margin-left: 0px;
+    }
   }
   </style>
 
