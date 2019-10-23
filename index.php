@@ -620,6 +620,8 @@
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
+  <div id="jumptotop"><span></span></div>
+                <script src="./js/scroll-to-top.js"></script>
 </body>
 
 

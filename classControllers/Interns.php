@@ -158,8 +158,8 @@
                         <td>'.$row["employment_status"].'</td>
                         <td>'.$row["about"].'</td>
                         <td>'.$row["timestamp"].'</td>
-                        <td><button type="button" class="btn btn-md btn-info"
-                              onclick="interndetails('.$row["intern_id"].')">View</button>
+                        <td>' . '<a class="btn btn-primary" onClick="interndetails('.$row["intern_id"].');">&nbsp;View&nbsp;</a>
+
                         ' . '<a onClick=\"javacript: return confirm("Please confirm deletion");\"
                         href="registered_interns.php?delete_id=' . $row["intern_id"] . '" class="btn btn-danger btn-xs">Delete</a>' . '
 
@@ -181,8 +181,8 @@
         //Function to view each intern details
           function view()
           {
-              if(isset($_GET['id']))
-              {
+            if(isset($_GET['id']))
+            {
                 $id = $_GET['id'];
                 $id = (int)$id;
                 global $database;
@@ -191,7 +191,7 @@
                 $result1 = mysqli_fetch_assoc($result);
 
               return $result1;
-              }
+            }
           }
 
           // function to connect and execute the query

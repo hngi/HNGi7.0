@@ -176,7 +176,8 @@
 	</section>
 	 <?php include_once "fragments/site_footer.php"; ?>
 	 <script type="text/javascript" src="js/hng6.js"></script>
-
+	 <div id="jumptotop"><span></span></div>
+                <script src="./js/scroll-to-top.js"></script>
 </body>
 </html>
 

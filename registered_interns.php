@@ -31,16 +31,17 @@ if (isset($_GET['delete_id'])) {
   <!-- Latest compiled and minified CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+
   <!-- Optional JavaScript -->
    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"></script>
-   <!-- <script src="jquery-3.4.1.min.js"></script> -->
+         crossorigin="anonymous"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <!-- jQuery library -->
 
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+   <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
 
     <script type="text/javascript" src="js/dashboard.js"></script>
 
@@ -72,6 +73,34 @@ if (isset($_GET['delete_id'])) {
       //Restore orignal HTML
       document.body.innerHTML = oldPage;
     }
+
+
+
+      // Ajax request from Modal To display the each intern.
+        function interndetails(id){
+          var data = {"id" : id};
+            $.ajax({
+            url : 'registered_interns.php',
+            method : "get",
+            data : data,
+            success: function(data){
+             $("body").html(data);
+              $('#details-modal').modal('toggle');
+            },
+            error: function(){alert("Something went wrong!")},
+          });
+        }
+
+       // To close the display of each intern
+          function closeModel(){
+            jQuery('#details-modal').modal('dispose');
+            setTimeout(function(){
+              jQuery('#details-modal').remove();
+              jQuery('.modal-backdrop').remove();
+            },500);
+          }
+
+
   </script>
 
 </head>
@@ -117,7 +146,7 @@ if (isset($_GET['delete_id'])) {
       ?>
 
         <form action="" method="post">
-            <input type="text" class="form-control mt-3 mb-0" name="valueToSearch" style="width:40vw"
+            <input type="text" class="form-control mt-3 mb-0" name="valueToSearch" style="width:40vw; position:static"
             placeholder="Search Intern By Name or Location"class="ml-5" /><br><br>
             <input type="submit" name="search" value="Search" class="ml-5 mt-0 btn btn-info" /><br><br>
 
@@ -128,7 +157,7 @@ if (isset($_GET['delete_id'])) {
                     <th>S/N</th>
                     <th>Intern ID</th>
                     <th>Name</th>
-                    <th>Emai</th>
+                    <th>Email</th>
                     <th>Phone</th>
                     <!-- <th>Porfolio</th> -->
                     <th>CV</th>
@@ -182,7 +211,10 @@ if (isset($_GET['delete_id'])) {
 			<div href="" id="details-return">Back to Overview</div>
 		</section> -->
   </main>
-
+  <div id="modal-div"></div>
+  <button id="trigger" hidden type="button" class="btn btn-primary" data-toggle="modal" data-target="#details-modal">
+      Launch demo modal
+  </button>
   <input type="checkbox" id="mobile-bars-check" />
   <label for="mobile-bars-check" id="mobile-bars">
     <div class="stix" id="stik1"></div>
@@ -271,40 +303,6 @@ if (isset($_GET['delete_id'])) {
     </div>
 
   <?php echo ob_get_clean(); ?>
-
-  <script>
-
-  // Ajax request from Modal To display the each intern.
-    function interndetails(id){
-      var data = {"id" : id};
-        $.ajax({
-        url : '',
-        method : "get",
-        data : data,
-        success: function(data){
-          $('body').append(data);
-          $('#details-modal').modal('show');
-        },
-        error: function(){alert("Something went wrong!")},
-      });
-    }
-
-
-   // To close the display of each intern
-      function closeModel(){
-        jQuery('#details-modal').modal('hide');
-        setTimeout(function(){
-          jQuery('#details-modal').remove();
-          jQuery('.modal-backdrop').remove();
-        },500);
-      }
-
-
-
-
-
-    </script>
-
 
 
 

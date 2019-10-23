@@ -211,7 +211,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               </div>
             </div>
             <div>
-              <input id="check3" name="area_of_expertise[]" type="checkbox" class="checkbox mr-1" value="Machine-leraning"><label class="accordion-label" for="check3">Machine Learning</label>
+              <input id="check3" name="area_of_expertise[]" type="checkbox" class="checkbox mr-1" value="Machine-learning"><label class="accordion-label" for="check3">Machine Learning</label>
               <div class="accordion-content">
                 <p><span>Preferred Skills: </span>Python, TensorFlow</p>
               </div>
@@ -289,15 +289,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="col-sm-12">
               <input name="interest" type="text" class="form-control mt-2" id="validationCustom08" placeholder="Why are you interested in mentoring with HNG?" required value="<?php if (isset($_POST['interest'])) {
                                                                                                                                                                                   echo $_POST['interest'];
-                                                                                                                                                                                } ?>"></div>
+                                                                                                                                                                                } ?>" maxlength="50"></div>
             <div class="col-sm-12">
               <input name="state" type="text" class="form-control mt-2" id="validationCustom09" placeholder="What state are you currently in?" required value="<?php if (isset($_POST['state'])) {
                                                                                                                                                                   echo $_POST['state'];
-                                                                                                                                                                } ?>"></div>
+                                                                                                                                                                } ?>" maxlength="15"></div>
             <div class="col-sm-12">
               <input name="employment_status" type="text" class="form-control mt-2" id="validationCustom10" placeholder="What is your current employment status?" required value="<?php if (isset($_POST['employment_status'])) {
                                                                                                                                                                                     echo $_POST['email'];
-                                                                                                                                                                                  } ?>"></div>
+                                                                                                                                                                                  } ?>" maxlength="15"></div>
             <center><button class="btn btn-primary mt-3" type="submit">Submit</button></center>
 
           </div>
