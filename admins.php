@@ -2,6 +2,7 @@
 require_once 'classControllers/init.php';
 // include('backend/Admins.php');
 
+
 if(!isset($_SESSION["role"])) {
 	header('Location:admin_login.php'); 
 }
@@ -40,6 +41,7 @@ if (isset($_GET['delete_id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>Dashboard</title>
+
 	<link rel="icon" type="img/png" href="images/hng-favicon.png">
 	<link rel="stylesheet" href="css/dashboard.css">
 
@@ -51,7 +53,6 @@ if (isset($_GET['delete_id'])) {
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
 
 	<style type="text/css">
 		.card {
@@ -157,6 +158,7 @@ if (isset($_GET['delete_id'])) {
 
         </section>
         <!-- <section id="details-section">
+
 			<div id="details-back">
                 <div>
                     <a href="overview.html" id="newitem-go-back" title="Go back">
