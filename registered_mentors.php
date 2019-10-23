@@ -14,25 +14,26 @@ if (isset($_GET['delete_id'])) {
 }
 
 ?>
+
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="UTF-8" />
+	<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Mentors</title>
-    <link rel="icon" type="img/png" href="images/hng-favicon.png">
-    <link rel="stylesheet" href="css/dashboard.css">
+	<title>Dashboard</title>
+	<link rel="icon" type="img/png" href="images/hng-favicon.png">
+	<link rel="stylesheet" href="css/dashboard.css">
 
-    <!-- Latest compiled and minified CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
 
     <style type="text/css">
         .card {
@@ -67,70 +68,67 @@ if (isset($_GET['delete_id'])) {
 </head>
 
 <body>
-    <main class="reg">
-        <section id="overview-section">
-            <!-- <h1>Dashboard</h1> -->
-            <h2>Registered Mentors </h2>
-            <!-- <section id="intern-section">
-				Populated by `js/dashboard.js` 
-			</section> -->
+	<main class="reg">
+		<section id="overview-section">
+			<h1>Registered Mentors</h1>
+			<div class="register-container">
+        <div class="row">
 
-            <div class="container">
-                <div class="row">
-
-                    <?php
-                    if ($display == "0") {
-                        echo "<h2>There are no Registered Interns</h2>";
-                    } else {
-                        ?>
-                        <!--<div class="col-md-3">-->
-                        <!--    <a href="exports/export-to-excel-mentors.php">-->
-                        <!--        <button type="button" id="export">Export to Spreadsheet</button>-->
-                        <!--    </a>-->
-                        <!--</div>-->
-                        <div class="col-md-3">
-                            <!--<a href="exports/export-to-pdf-mentors.php">-->
-                            <a href="#" onclick="javascript:printDiv('printablediv')">
-                                <button type="button" class="btn btn-primary btn-sm" id="export">Export to PDF</button>
-                            </a>
-                        </div>
-                        <div id="printablediv" class="table-responsive">
-                            <table class="table table-hover table-bordered mt-3 mb-1">
-                                <thead class="table-primary">
-                                    <tr>
-                                        <th>SN</th>
-                                        <th>Area Of Expertise</th>
-                                        <th>Photo</th>
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Phone</th>
-                                        <!-- <th>Link To Linkedin</th> -->
-                                        <th>Link To Cv</th>
-                                        <th>Why Interested</th>
-                                        <th>Current State</th>
-                                        <th>Employment Status</th>
-                                        <th>Timestamp</th>
-                                        <th>Action</th>
-
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                        echo $display;
-                                        ?>
-
-                                </tbody>
-                            </table>
-                        </div>
-                    <?php
-                    }
-                    ?>
-
+          <?php
+          if ($display == "0") {
+            echo "<h2>There are no Registered Mentors</h2>";
+          } else {
+            ?>
+            <!--<div class="col-md-3">-->
+            <!--    <a href="exports/export-to-excel.php">-->
+            <!--        <button type="button" id="export">Export to Spreadsheet</button>-->
+            <!--    </a>-->
+            <!--</div>-->
+            <div class="col-md-12">
+                    <!--<a href="exports/export-to-pdf-mentors.php">-->
+                    <a href="#" onclick="javascript:printDiv('printablediv')">
+                        <button type="button" class="btn btn-primary btn-sm" id="export">Export to PDF</button>
+                    </a>
                 </div>
             </div>
+            <div class="row" id="table-row">
+                    <div class="table-responsive" id="printablediv">
+                    <table class="table table-hover mt-3 mb-1">
+                            <thead class="table-primary">
+                                <tr>
+                                    <th>S/N</th>
+                                    <th>Area Of Expertise</th>
+                                    <th>Photo</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <!-- <th>Link To Linkedin</th> -->
+                                    <th>Link To CV</th>
+                                    <th>Why Interested</th>
+                                    <th>Current State</th>
+                                    <th>Employment Status</th>
+                                    <th>Timestamp</th>
+                                    <th>Action</th>
 
-            <!-- <button id="export">Export to Spreadsheet</button> -->
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                    echo $display;
+                                    ?>
+
+                            </tbody>
+                        </table>
+                    </div>
+                <?php
+                }
+                ?>
+
+            </div>
+      </div>
+      <br /><br />
+			<!-- <button id="export">Export to Spreadsheet</button> -->
 
         </section>
         <!-- <section id="details-section">

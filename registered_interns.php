@@ -17,28 +17,25 @@ if (isset($_GET['delete_id'])) {
 ?>
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Interns</title>
-  <link rel="icon" type="img/png" href="images/hng-favicon.png">
-  <link rel="stylesheet" href="css/dashboard.css">
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Dashboard</title>
+	<link rel="icon" type="img/png" href="images/hng-favicon.png">
+	<link rel="stylesheet" href="css/dashboard.css">
 
-  <!-- Latest compiled and minified CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
-  <style type="text/css">
-    .card {
+	<style type="text/css">
+		.card {
       height: 150px;
       background: #ccc;
       margin: 15px;
@@ -70,15 +67,10 @@ if (isset($_GET['delete_id'])) {
 </head>
 
 <body>
-  <main class="reg">
-    <section id="overview-section interns-list">
-      <!-- <h1>Dashboard</h1> -->
-      <h2>Registered Interns </h2>
-      <!-- <section id="intern-section">
-				Populated by `js/dashboard.js`
-			</section> -->
-
-      <div class="container">
+	<main class="reg">
+		<section id="overview-section">
+			<h1>Registered Interns</h1>
+			<div class="register-container">
         <div class="row">
 
           <?php
@@ -91,28 +83,31 @@ if (isset($_GET['delete_id'])) {
             <!--        <button type="button" id="export">Export to Spreadsheet</button>-->
             <!--    </a>-->
             <!--</div>-->
-            <div class="col-md-3">
+            <div class="col-md-12">
               <!--<a href="exports/export-to-pdf.php">-->
               <a href="#" onclick="javascript:printDiv('printablediv')">
-                <button type="button" class="btn btn-primary" id="export">Export to PDF</button>
+                <button type="button" class="btn btn-primary text-right" id="export">Export to PDF</button>
               </a>
             </div>
+
+          </div>
+        <div class="row" id="table-row">
             <div class="table-responsive" id="printablediv">
-              <table class="table table-hover table-bordered  mt-3 mb-1 table-condensed">
+              <table class="table table-hover mt-3 mb-1 table-condensed">
                 <thead class="table-primary">
                   <tr>
                     <th>S/N</th>
                     <th>Name</th>
-                    <th>Emai</th>
+                    <th>Email</th>
                     <th>Phone</th>
                     <!-- <th>Porfolio</th> -->
                     <th>CV</th>
-                    <th>Exp</th>
+                    <th>Experience</th>
                     <th>Interest</th>
                     <th>Location</th>
-                    <th>Emp. Stat</th>
+                    <th>Employment Status</th>
                     <th>About</th>
-                    <th>Reg. Date</th>
+                    <th>Registration Date</th>
                     <th>Action</th>
 
                   </tr>
@@ -131,10 +126,11 @@ if (isset($_GET['delete_id'])) {
         </div>
       </div>
       <br /><br />
-      <!-- <button id="export">Export to Spreadsheet</button> -->
+			<!-- <button id="export">Export to Spreadsheet</button> -->
 
-    </section>
-    <!-- <section id="details-section">
+      </section>
+			
+			<!-- <section id="details-section">
 			<div id="details-back">
                 <div>
                     <a href="overview.html" id="newitem-go-back" title="Go back">
@@ -154,9 +150,9 @@ if (isset($_GET['delete_id'])) {
 			<p>State of residence: <span id="details-state-of-residence"></span></p>
 			<div href="" id="details-return">Back to Overview</div>
 		</section> -->
-  </main>
+	</main>
 
-  <input type="checkbox" id="mobile-bars-check" />
+	<input type="checkbox" id="mobile-bars-check" />
   <label for="mobile-bars-check" id="mobile-bars">
     <div class="stix" id="stik1"></div>
     <div class="stix" id="stik2"></div>
