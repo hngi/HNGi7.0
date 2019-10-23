@@ -25,8 +25,7 @@ h1
 {
 	font-size: 40px;
 }
-.def-button
-{
+.def-button {
 	color: white;
 	border-radius: 3px;
 	padding: 0.5rem 1rem;
@@ -34,6 +33,12 @@ h1
 	outline: none;
 	border: none;
 	transition: 0.4s ease-out;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	font-family: "Open Sans", segoe UI, sans-serif;
 }
 .def-button:hover
 {

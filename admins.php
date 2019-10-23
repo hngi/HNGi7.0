@@ -31,6 +31,23 @@ if (isset($_GET['delete_id'])) {
   
 	$message = $admin->DeleteAdmin($admin_id);
   }
+
+if(isset($_GET["blockAdminId"])) {
+	$id = $_GET["blockAdminId"];
+	$blockAdminRes = $admin->blockAdmin($id);
+	if($blockAdminRes == true) {
+		header("Location:admins.php");
+	}
+}
+
+if(isset($_GET["activateAdminId"])) {
+	$id = $_GET["activateAdminId"];
+	$activateAdminRes = $admin->activateAdmin($id);
+	if($activateAdminRes == true) {
+		header("Location:admins.php");
+	}
+}
+
   
 
 ?>
@@ -137,7 +154,7 @@ if (isset($_GET['delete_id'])) {
 										<th>Email</th>
 										<th>Role</th>
 										<th>Registration Date</th>
-										<th colspan="3">Action</th>
+										<th colspan="2">Action</th>
 									</tr>
 								</thead>
 								<tbody>

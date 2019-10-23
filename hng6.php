@@ -10,7 +10,6 @@
 		integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
 	<link rel="icon" type="img/png" href="images/hng-favicon.png">
 	<link rel="stylesheet" href="css/header-footer.css">
-    <link rel="stylesheet" href="css/newContact.css">
 	<link rel="stylesheet" href="css/hng6.css">
 </head>
 
@@ -75,7 +74,7 @@
 	</section>
 	<section>
 		<h2 class="center-text blue-text">How it All Happened</h2>
-		<div id="gallery-grid">
+		<div class="center-text gallery-grid">
 			<img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722558/gallery-first_gldujn.png">
 			<img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722589/gallery-second_nkrosi.png">
 			<img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722618/gallery-third_oqgaiv.png">
@@ -83,8 +82,16 @@
 			<img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722589/gallery-second_nkrosi.png">
 			<img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722618/gallery-third_oqgaiv.png">
 		</div>
+		<div class="center-text gallery-grid" id="more-images" style="display: none;">
+			<img src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng1_rbfvik.jpg">
+			<img src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng2_rva54w.jpg">
+			<img src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng3_blzemp.jpg">
+			<img src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng4_tlrjyf.jpg">
+			<img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722618/gallery-third_oqgaiv.png">
+			<img src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng5_qvzjfy.jpg">
+		</div>
 		<!-- <p class="center-text"><a class="def-button shadowed">View more photos</a></p> -->
-		<p class="center-text"><a href="#" class="def-button shadowed">View more photos</a></p>
+		<p class="center-text"><button class="def-button shadowed" onclick="myFunction()">View more photos</button></p>
 	</section>
 	<section id="participate-section">
 		<article>
