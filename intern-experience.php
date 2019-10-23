@@ -34,7 +34,7 @@
             <section class="mentors-section">
                 <div class="wrapper">
                     <div class="wrapper-child"  >
-                        <img class="image" src="./Experience_files/Capture03_ynye5x.jpg">
+                        <img class="image" src="https://res.cloudinary.com/izik4004/image/upload/v1571823964/12.png">
                         <h4>Stephen Azubuike</h4>
                         <p>UI/UX Designer</p>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
@@ -44,7 +44,7 @@
                     </div>
                     <div class="wrapper-child"  >
                         <img class="image"
-                            src="https://res.cloudinary.com/theblvcksamurai/image/upload/v1571787484/phblnnglnch1gzsmgyas.png">
+                            src="https://res.cloudinary.com/izik4004/image/upload/v1571823755/7.png">
                         <h4>Oluwatoni Atunrase</h4>
                         <p>Web Developer</p>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
@@ -53,7 +53,7 @@
                         </p>
                     </div>
                     <div class="wrapper-child"  >
-                        <img class="image" src="./Experience_files/Capture03_ynye5x.jpg">
+                        <img class="image" src="https://res.cloudinary.com/izik4004/image/upload/v1571823755/10.png">
                         <h4>Aboagye</h4>
                         <p>Web Developer</p>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
@@ -61,7 +61,7 @@
                             doloremque, atque obcaecati?</p>
                     </div>
                     <div class="wrapper-child"  >
-                        <img class="image" src="./Experience_files/Capture01_c3eyb9.jpg">
+                        <img class="image" src="https://res.cloudinary.com/izik4004/image/upload/v1571823755/9.png">
                         <h4>John Ademoye</h4>
                         <p>Web Developer</p>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
@@ -69,7 +69,7 @@
                             doloremque, atque obcaecati?</p>
                     </div>
                     <div class="wrapper-child"  >
-                        <img class="image" src="./Experience_files/Capture02_psr3n9.jpg">
+                        <img class="image" src="https://res.cloudinary.com/izik4004/image/upload/v1571823755/8.png">
                         <h4>Adeyefa Oluwatoba</h4>
                         <p>Web Developer</p>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
@@ -77,7 +77,7 @@
                             doloremque, atque obcaecati?</p>
                     </div>
                     <div class="wrapper-child"  >
-                        <img class="image" src="./Experience_files/Capture03_ynye5x.jpg">
+                        <img class="image" src="https://res.cloudinary.com/izik4004/image/upload/v1571823755/11.png">
                         <h4>Adolphus Chris</h4>
                         <p>Web Developer</p>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
@@ -85,7 +85,7 @@
                             doloremque, atque obcaecati?</p>
                     </div>
                     <div class="wrapper-child"  >
-                        <img class="image" src="./Experience_files/Capture01_c3eyb9.jpg">
+                        <img class="image" src="https://res.cloudinary.com/izik4004/image/upload/v1571822336/myAvatar.png">
                         <h4>Ogundiji Bolade</h4>
                         <p>Web Developer</p>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
@@ -93,7 +93,7 @@
                             doloremque, atque obcaecati?</p>
                     </div>
                     <div class="wrapper-child"  >
-                        <img class="image" src="./Experience_files/Capture02_psr3n9.jpg">
+                        <img class="image" src="https://res.cloudinary.com/izik4004/image/upload/v1571822336/6.png">
                         <h4>Ajayi Jeremiah</h4>
                         <p>Backend Developer</p>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
@@ -101,7 +101,7 @@
                             doloremque, atque obcaecati?</p>
                     </div>
                     <div class="wrapper-child"  >
-                        <img class="image" src="./Experience_files/Capture02_psr3n9.jpg">
+                        <img class="image" src="https://res.cloudinary.com/izik4004/image/upload/v1571822336/4.png">
                         <h4>Patrick Aziken</h4>
                         <p>Software Tester</p>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
@@ -109,7 +109,7 @@
                             doloremque, atque obcaecati?</p>
                     </div>
                     <div class="wrapper-child"  >
-                        <img class="image" src="./Experience_files/Capture01_c3eyb9.jpg">
+                        <img class="image" src="https://res.cloudinary.com/izik4004/image/upload/v1571822336/5.png">
                         <h4>Everitus Olumese</h4>
                         <p>Developer</p>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
@@ -117,7 +117,7 @@
                             doloremque, atque obcaecati?</p>
                     </div>
                     <div class="wrapper-child"  >
-                        <img class="image" src="./Experience_files/Capture03_ynye5x.jpg">
+                        <img class="image" src="https://res.cloudinary.com/izik4004/image/upload/v1571822336/3.png">
                         <h4>Albert Oboh</h4>
                         <p>Web Developer</p>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
@@ -125,7 +125,7 @@
                             doloremque, atque obcaecati?</p>
                     </div>
                     <div class="wrapper-child"  >
-                        <img class="image" src="./Experience_files/Capture02_psr3n9.jpg">
+                        <img class="image" src="https://res.cloudinary.com/izik4004/image/upload/v1571822336/2.png">
                         <h4>Osumgha Chiamaka</h4>
                         <p>Web Developer</p>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
