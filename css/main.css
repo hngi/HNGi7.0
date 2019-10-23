@@ -477,7 +477,6 @@
             font-family: "Open Sans", sans-serif;
             font-weight: bold;
           }
-        }
 
         @media screen and (min-width: 568px) {
           .first-container, .second-container, .firs-container {
