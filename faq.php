@@ -7,51 +7,18 @@
     <title>FAQ2</title>
    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
+    <link rel="stylesheet" href="css/newContact.css">
     <link rel="stylesheet" href="css/faq.css">
+
 </head>
 <body>
-        <!--header>
-            <div class="container">
-             <div class="wrap">
-                <div class="logo">
-                    <img src="images/brand-logo.png" alt="brand">
-                </div>
-                <div class="nav">
-                    <a href="index.html">Home</a>
-                    <a href="hng6.html">HNG6</a>
-                    <a href="mentorpage.html">Mentors</a>
-                    <a href="contactform.html">Contact</a>
-                    <a href="join-intern.html" class="nav-btn">
-                        Join HNG
-                    </a>
-                 </div>
-             </div>
-            </div>
-        </header-->
-
-        <header>
-        <a href="index.html"><img id="hng-logo" src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png"></a>
-        <input type="checkbox" id="mobile-bars-check" />
-        <label for="mobile-bars-check" id="mobile-bars">
-          <!--img src="images/bars-icon.png" height="23px"-->
-        <div class="stix" id="stik1"></div>
-        <div class="stix" id="stik2"></div>
-        <div class="stix" id="stik3"></div>
-        </label>
-        <nav>
-            <a href="index.html" class="header-links">Home</a>
-            <a href="hng6.html" class="header-links">HNG 6</a>
-            <a href="mentorpage.html" class="header-links">Mentors</a>
-            <a href="contactform.html" class="header-links">Contact</a>
-            <a href="join-intern.html" id="join-hng" class="def-button">Join HNG</a>
-        </nav>
-    </header>
     
-
+    <?php include('fragments/site_header.php'); ?>
         <section class="hero">
             <div class="container">
                 <div class="wrap">
@@ -105,12 +72,14 @@
                         <input type="text" placeholder="Subject">
                         <textarea name="text" id="" cols="" rows="10"></textarea>
                         <input type="submit" id="submit" value="SEND MESSAGE">
-                        
+
                     </form>
                 </div>
             </div>
         </section>
-        <?php include('fragments/site_footer.php'); ?>
+    <?php include('fragments/site_footer.php'); ?>
+
+  
 <script>
     var divs = ["Menu1", "Menu2", "Menu3", "Menu4"];
         var visibleDivId = null;

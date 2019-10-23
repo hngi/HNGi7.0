@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap');
 
 body {
     font-family: "Open Sans", segoe UI, sans-serif;
@@ -8,16 +8,6 @@ body {
 }
 
 header {
-    /* Uncomment the below to make the header fixed */
-    /*
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 200;
-    background-color: white;
-    width: 93%;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -38,6 +28,7 @@ header .def-button {
     outline: none;
     border: none;
     transition: 0.4s ease-out;
+    width: auto;
 }
 
 header .def-button:hover {
@@ -50,6 +41,8 @@ header nav {
     flex-direction: row;
     justify-content: space-between;
     transition: 0.5s ease-out;
+    height: auto;
+    width: auto;
 }
 
 header #hng-logo {
@@ -99,22 +92,21 @@ header #mobile-bars-check {
 
 footer {
     background-color: rgb(245, 245, 245);
-    padding: 4rem 4rem;
+    padding: 4rem 8rem;
+    
 }
 
-/*footer h2 {
+footer h2 {
     font-size: 25px;
     margin: 1rem auto;
     font-weight: bold;
-}*/
+}
 
-footer > nav {/*
+footer > nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;*/
-    display: flex;
-    margin-bottom: 1em;
-    /*height: 35vh;*/
+    justify-content: space-between;
+    height: 35vh;
 }
 
 footer #contact-section a,
@@ -129,9 +121,9 @@ footer #link-list {
 }
 
 footer #link-list > * {
-    font-size: 14px;
-   /* padding: 2px;*/
-   /* align-self: flex-start;*/
+    font-size: 17px;
+    padding: 2px;
+    align-self: flex-start;
     transition: 0.4s ease-out;
     text-decoration: none;
 }
@@ -153,11 +145,10 @@ footer #link-list > a:hover {
 }
 
 footer #socials a {
-    padding: 3px;
+    padding: 0.5rem;
     background-color: #fff;
     border-radius: 50%;
-
-    margin-top: 0.8rem;
+    margin-right: 0.8rem;
     box-shadow: -3px 3px 3px 1px rgba(0, 0, 0, 0.07);
     border: 1px solid #fff;
     transition: 0.6s ease-out;
@@ -169,36 +160,25 @@ footer #socials img {
     height: 13px;
     width: 25px;
 }
- 
 
-/*@media (min-width: 301px) and (max-width: 860px) {
- 
-    header nav a,
-    header nav .header-links,
-    header nav #join-hng {
-        font-size: 10px !important;
-        align-self: flex-end;
-    }
+footer .footer-nav .row {
+    width: 100%;
+}
 
-    header #mobile-bars-check:checked ~ nav {
-        height: 390px !important;
-    } 
-
-    }*/
-  
-@media (max-width: 860px) {
+@media (max-width: 760px) {
     body > * {
         width: auto;
         overflow: hidden;
     }
 
     header {
-        flex-direction: column;/*
-        padding-top: 10px;*/
+        flex-direction: column;
+        padding-top: 10px;
         padding: 1rem;
         width: auto;
         height: auto;
         overflow: hidden;
+        
     }
 
     header #hng-logo {
@@ -207,26 +187,31 @@ footer #socials img {
 
     header nav {
         transition: 0.4s ease-out;
-        height: 0;
+        height: auto;
         justify-content: flex-start;
-        padding: 0rem;
+        padding: 1.5rem;
         flex-direction: column;
+        margin-bottom: 40px;
     }
 
     header nav > * {
         display: none;
     }
 
-    header nav a,
     header nav .header-links,
     header nav #join-hng {
-        font-size: 18px;
+        font-size: 1em;
         align-self: flex-end;
+        margin-right: -20px;
+    }
+
+    header .header-links:first-child{
+        margin-top: -20px;
     }
 
     header #mobile-bars {
         display: block;
-        margin-left: 40vw;
+        margin-left: 43vw;
     }
 
     header #mobile-bars-check:checked ~ #mobile-bars > #stik1 {
@@ -250,15 +235,16 @@ footer #socials img {
         height: 16rem;
     }
 
-    /*footer {
+    footer {
         padding: 2rem 1rem;
-    }*/
-/*
-    /*footer nav {
+        width: 100%;
+    }
+
+    footer nav {
         flex-direction: column;
         justify-content: space-between;
         height: auto;
-    }*/
+    }
 
     footer h2 {
         font-size: 21px;
@@ -274,12 +260,12 @@ footer #socials img {
         padding: 2px;
     }
 
-    /*footer .footer-nav .row {
+    footer .footer-nav .row {
         margin-left: 5%;
-    }*/
+    }
 }
 
-@media (max-width: 300px)
+@media (max-width: 500px)
 
 /*Smaller screens*/
     {
@@ -287,7 +273,7 @@ footer #socials img {
     header nav a,
     header nav .header-links,
     header nav #join-hng {
-        font-size: 25px;
+        font-size: 3vw;
         align-self: flex-end;
     }
 
@@ -296,21 +282,11 @@ footer #socials img {
     }
 }
 /* 
-    style for jump to top arrow
+	style for jump to top arrow
 */
 
-.back-to-top {
-    position: fixed;
-    width: 50px;
-    height: 50px;
-    display: none;
-
-    bottom: 70px;
-    right: 50px;
-}
-
 #top {
-    margin: 0 auto;
+	margin: 0 auto;
 	right:10px;
 	bottom:10px;
 	cursor:pointer;
@@ -318,8 +294,7 @@ footer #socials img {
 	height:50px;
 	background-color:#3498db;
 	text-indent:-9999px;
-    display:flex;
-    align-items: center;
+	display:block;
 	-webkit-border-radius:60px;
 	-moz-border-radius:60px;
 	border-radius:40px
@@ -327,17 +302,17 @@ footer #socials img {
 #top span {
 	top:50%;
 	left:50%;
-	margin-left:17px;
-	margin-top:-9px;
+	margin-left:18px;
+	margin-top:-12px;
 	height:0;
 	width:0;
 	border:8px solid transparent;
 	border-bottom-color:#ffffff;
 }
 #top:hover {
-    background-color:#0088C7;
-    opacity:1;filter:"alpha(opacity=100)";
-    -ms-filter:"alpha(opacity=100)";
+	background-color:#0088C7;
+	opacity:1;filter:"alpha(opacity=100)";
+	-ms-filter:"alpha(opacity=100)";
 }
 
 

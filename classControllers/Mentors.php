@@ -4,14 +4,31 @@
 class Mentor
 {
 
+  public function DeleteMentor($mentor_id)
+  {
+
+
+    global $database;
+
+    $sql = "DELETE FROM mentors WHERE mentor_id='$mentor_id'";
+    if ($query = $database->query($sql)) {
+
+      $message = "Mentor Deleted successfully.";
+
+      header('Location: registered_mentors.php');
+    }
+
+    // return $message;
+
+  }
 
 
   public function allMentors()
   {
-    global $con;
+
     global $database;
     $display = '';
-    $query = 'SELECT * FROM mentors';
+    $query = 'SELECT * FROM mentors ORDER BY mentor_id DESC';
     $res = $database->query($query);
     $count = $database->affected_rows();
     if ($count > 0) {
@@ -26,12 +43,14 @@ class Mentor
                         <td>' . $row["name"] . '</td>
                         <td>' . $row["email"] . '</td>
                         <td>' . $row["phone_no"] . '</td>
-                        
                         <td>' . $row["link_to_cv"] . '</td>
                         <td>' . $row["why_interested"] . '</td>
                         <td>' . $row["current_state"] . '</td>
                         <td>' . $row["employment_status"] . '</td>
                         <td>' . $row["timestamp"] . '</td>
+                        <td>' . '<button type="button" class="btn btn-info btn-xs" onClick="displayEach(' . $row["mentor_id"] . ');">&nbsp;View&nbsp;</button>&nbsp;<a onClick=\"javacript: return confirm("Please confirm deletion");\" href="registered_mentors.php?delete_id=' . $row["mentor_id"] . '" class="btn btn-danger btn-xs">Delete</a>' . '</td>
+                        
+
                     </tr>';
         $sn++;
       }
