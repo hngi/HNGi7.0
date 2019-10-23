@@ -202,6 +202,7 @@
 
         </div>
       </div>
+      
       <div class="container-fluid mt-2" id="wrapper">
         <div class="row">
           <div class="col-12">
@@ -274,7 +275,7 @@
                     </div>
 
                   </div>
-                  <div class="col-md-6 col-sm-12 mb-5 mt-5">
+                  <div class="col-md-6 col-sm-12 mb-5 mt-5 table_accord">
                     <div class="accordion" id="accordionExample">
                       <div class="card">
                         <div class="card-header" id="headingOne">
@@ -539,72 +540,6 @@
 		</div>
 		<p class="center-text"><a href="donate.html" class="def-button shadowed center">Become a Sponsor</a></p>
 	</section>
-
-      <!-- <section class="sponsors">
-        <h3 class="sponsors__header">HNG 6.0 Internship Sponsors</h3>
-        <div class="sponsors_images_container">
-          <div class="sponsors__images">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730789/hostelPic_u2oqax.png"
-                    class=" hng_logo" alt="HNG Logo">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730696/akwa-ibom_crs3gb.png"
-                    class=" akwa_logo" alt="Government of Akwa Ibom logo">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730861/imo-logo_xepy5p.png"
-                    class=" akwa_logo" alt="Government of Imo logo">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730875/VerifiPic_dhgplz.png"
-                    class=" verifi_logo" alt="Verifi logo">
-                </div>
-                <div class="carousel-item">
-                  <h4 class="figma_logo">Figma</h4>
-                </div>
-                <div class="carousel-item">
-                  <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730716/flutterwave_fkjzd7.png"
-                    class=" flutter_logo" alt="Flutterwave logo">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730701/BluePic_ujoey7.png"
-                    class=" bluechip_logo" alt="Bluechip logo">
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="sponsors_button">
-          <button class="cta-button button--midBlue">
-            <a href="donate.html">
-              Become a Sponsor
-            </a>
-          </button>
-        </div>
-      </section> -->
     </main>
     <?php include('fragments/site_footer.php'); ?>
 

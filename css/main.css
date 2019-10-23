@@ -833,8 +833,9 @@
             width: 85%;
           }
           .main-fifth-row {
-            width: 85%;
-            margin-left: 40px;
+            width: 100%;
+            text-align-last: center;
+            padding: 20px;
           /*  centered div on mobile view by ifyajoke*/
           }
           .mt-5 {
@@ -969,5 +970,10 @@
             border: none;
             text-decoration: none;
             transition: 0.4s ease-out;
+          }
+
+          .table_accord {
+          margin: 0;
+          width: 100%;
           }
         }
