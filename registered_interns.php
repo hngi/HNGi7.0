@@ -117,14 +117,14 @@ if (isset($_GET['delete_id'])) {
       ?>
 
         <form action="" method="post">
-            <input type="text" class="form-control mt-3 mb-0" name="valueToSearch" placeholder="Search Intern By Name or Location"class="ml-5" /><br><br>
+            <input type="text" class="form-control mt-3 mb-0" name="valueToSearch" style="width:40vw"
+            placeholder="Search Intern By Name or Location"class="ml-5" /><br><br>
             <input type="submit" name="search" value="Search" class="ml-5 mt-0 btn btn-info" /><br><br>
 
 
               <table class="table table-hover table-bordered  mt-3 mb-1 table-condensed">
                 <thead class="table-primary">
                   <tr>
-                    <th>Action</th>
                     <th>S/N</th>
                     <th>Intern ID</th>
                     <th>Name</th>
@@ -194,7 +194,7 @@ if (isset($_GET['delete_id'])) {
 
 
   <?php ob_start(); ?>
-  
+
     <!-- Modal to display each Intern -->
     <div class="modal fade details-1" id="details-modal" tabindex="-1"
     role="dialog" aria-labelledby="details-l" aria-hidden="true">
