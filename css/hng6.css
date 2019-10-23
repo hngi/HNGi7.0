@@ -69,15 +69,6 @@ h1
 	font-weight: bolder;
 	font-family: Oswald, segoe UI, sans-serif;
 }
-.moshe{
-	padding-left: 0.1em;
-	font-weight: 500 !important;
-	text-align: center !important;
-    font-size: 1em !important;
-}
-.moshe2{
-	 border-color: #06F4CC !important;
-}
 .countdown-symbol > span
 {
 	position: absolute;

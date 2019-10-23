@@ -2,8 +2,6 @@
 
 class Admins
 {
-  public function DeleteAdmin($admin_id){
-
 
   public function adminLogin()
   {
@@ -205,11 +203,8 @@ class Admins
 
 }
 
-  
 
 if (isset($_GET["login"])) {
   $admin = new Admins();
   $admin->adminLogin();
 }
-
-
