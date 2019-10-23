@@ -15,14 +15,38 @@
   <link rel="stylesheet" type="text/css" href="css/header-footer.css">
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
   <style>
+
+    #header {
+      padding: 0 50px;
+    }
+
+    #home {
+      display: none;
+    }
+
+  main {
+    padding: 0 50px;
+  }
+
   footer {
     width: 100% !important;
+  }
+
+  @media screen and (max-width: 900px){
+    #header, main {
+      padding: 0;
+    }
+
+    #support {
+      margin-left: 0px;
+    }
   }
   </style>
 
 </head>
 
-<body class="container-fluid" style="max-width: 1800px;">
+<body>
+  <div class="container-fluid" style="max-width: 1800px;">
   <img src="https://bit.ly/2OC3tWo" id="corner-circle" alt="Graphic at the top right corner">
   <div class="containerGrid">
     <?php
@@ -202,6 +226,7 @@
 
         </div>
       </div>
+      
       <div class="container-fluid mt-2" id="wrapper">
         <div class="row">
           <div class="col-12">
@@ -274,23 +299,23 @@
                     </div>
 
                   </div>
-                  <div class="col-md-6 col-sm-12 mb-5 mt-5">
+                  <div class="col-md-6 col-sm-12 mb-5 mt-5 table_accord">
                     <div class="accordion" id="accordionExample">
-                      <div class="card">
+                      <div class="card" id="card0">
                         <div class="card-header" id="headingOne">
                           <h2 class="mb-0">
-                            <img class="btn buttonOne" data-toggle="collapse" data-target="#collapseOne"
+                            <img onclick="activeDropDown('headingOne')" class="btn" data-toggle="collapse" data-target="#collapseOne"
                               aria-expanded="true" aria-controls="collapseOne"
                               src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png"
                               class="arrow1">
-                            <button class="btn  btn-link" type="button" data-toggle="collapse"
+                            <button onclick="activeDropDown('headingOne')" class="btn btn-link collapsed buttonTwo" type="button" data-toggle="collapse"
                               data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> Frontend
                               Development </button>
                           </h2>
                         </div>
 
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                          data-parent="#accordionExample">
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                        >
                           <div class="card-body">
                             <ul class="accordion_tab">
                               <li>HTML</li>
@@ -302,21 +327,20 @@
                           </div>
                         </div>
                       </div>
-
-                      <div class="card">
+                      <div class="card" id="card1">
                         <div class="card-header" id="headingTwo">
                           <h2 class="mb-0">
-                            <img class="btn collapsed buttonTwo" data-toggle="collapse" data-target="#collapseTwo"
+                            <img onclick="activeDropDown('headingTwo')" class="btn collapsed buttonTwo" data-toggle="collapse" data-target="#collapseTwo"
                               aria-expanded="false" aria-controls="collapseTwo"
                               src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
-                            <button class="btn btn-link collapsed buttonTwo" type="button" data-toggle="collapse"
+                            <button onclick="activeDropDown('headingTwo')" class="btn btn-link collapsed buttonTwo" type="button" data-toggle="collapse"
                               data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> Backend
                               Development </button>
                           </h2>
                         </div>
 
                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                          data-parent="#accordionExample">
+                          >
                           <div class="card-body">
                             <ul class="list-unstyled text-dark accordion_tab">
                               <li>PHP</li>
@@ -325,20 +349,20 @@
                           </div>
                         </div>
                       </div>
-                      <div class="card">
+                      <div class="card" id="card2">
                         <div class="card-header" id="headingThree">
                           <h2 class="mb-0">
-                            <img class="btn collapsed buttonThree" data-toggle="collapse" data-target="#collapseThree"
+                            <img onclick="activeDropDown('headingThree')" class="btn collapsed buttonThree" data-toggle="collapse" data-target="#collapseThree"
                               aria-expanded="false" aria-controls="collapseThree"
                               src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
-                            <button class="btn btn-link collapsed buttonThree" type="button" data-toggle="collapse"
+                            <button onclick="activeDropDown('headingThree')" class="btn btn-link collapsed buttonThree" type="button" data-toggle="collapse"
                               data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> Machine
                               Learning </button>
                           </h2>
                         </div>
 
                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                          data-parent="#accordionExample">
+                        >
                           <div class="card-body">
                             <ul class="list-unstyled text-dark accordion_tab">
                               <li>Java</li>
@@ -348,13 +372,13 @@
                           </div>
                         </div>
                       </div>
-                      <div class="card">
+                      <div class="card" id="card3">
                         <div class="card-header" id="headingFour">
                           <h2 class="mb-0 ">
-                            <img class="btn collapsed buttonFour" data-toggle="collapse" data-target="#collapseFour"
+                            <img onclick="activeDropDown('headingFour')" class="btn collapsed buttonFour" data-toggle="collapse" data-target="#collapseFour"
                               aria-expanded="false" aria-controls="collapseFour"
                               src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
-                            <button class="btn btn-link collapsed buttonFour" type="button" data-toggle="collapse"
+                            <button onclick="activeDropDown('headingFour')" class="btn btn-link collapsed buttonFour" type="button" data-toggle="collapse"
                               data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"> UI/UX
                               Design
                             </button>
@@ -362,7 +386,7 @@
                         </div>
 
                         <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
-                          data-parent="#accordionExample">
+                        >
                           <div class="card-body">
                             <ul class="list-unstyled text-dark accordion_tab">
                               <li>FIGMA</li>
@@ -371,20 +395,19 @@
                           </div>
                         </div>
                       </div>
-                      <div class="card">
+                      <div class="card" id="card4">
                         <div class="card-header" id="headingFive">
                           <h2 class="mb-0">
-                            <img class="btn collapsed buttonFive" data-toggle="collapse" data-target="#collapseFive"
+                            <img onclick="activeDropDown('headingFive')" class="btn collapsed buttonFive" data-toggle="collapse" data-target="#collapseFive"
                               aria-expanded="false" aria-controls="collapseFive"
                               src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
-                            <button class="btn btn-link collapsed buttonFive" type="button" data-toggle="collapse"
+                            <button onclick="activeDropDown('headingFive')" class="btn btn-link collapsed buttonFive" type="button" data-toggle="collapse"
                               data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"> Digital
                               Marketing </button>
                           </h2>
                         </div>
 
-                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
-                          data-parent="#accordionExample">
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive">
                           <div class="card-body">
                             <ul class="list-unstyled text-dark accordion_tab">
                               <li>Social Media</li>
@@ -394,7 +417,6 @@
                         </div>
                       </div>
                     </div>
-                  </div>
                 </div>
             </section>
           </div>
@@ -539,76 +561,12 @@
 		</div>
 		<p class="center-text"><a href="donate.html" class="def-button shadowed center">Become a Sponsor</a></p>
 	</section>
-
-      <!-- <section class="sponsors">
-        <h3 class="sponsors__header">HNG 6.0 Internship Sponsors</h3>
-        <div class="sponsors_images_container">
-          <div class="sponsors__images">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730789/hostelPic_u2oqax.png"
-                    class=" hng_logo" alt="HNG Logo">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730696/akwa-ibom_crs3gb.png"
-                    class=" akwa_logo" alt="Government of Akwa Ibom logo">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730861/imo-logo_xepy5p.png"
-                    class=" akwa_logo" alt="Government of Imo logo">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730875/VerifiPic_dhgplz.png"
-                    class=" verifi_logo" alt="Verifi logo">
-                </div>
-                <div class="carousel-item">
-                  <h4 class="figma_logo">Figma</h4>
-                </div>
-                <div class="carousel-item">
-                  <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730716/flutterwave_fkjzd7.png"
-                    class=" flutter_logo" alt="Flutterwave logo">
-                </div>
-                <div class="carousel-item">
-                  <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730701/BluePic_ujoey7.png"
-                    class=" bluechip_logo" alt="Bluechip logo">
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="sponsors_button">
-          <button class="cta-button button--midBlue">
-            <a href="donate.html">
-              Become a Sponsor
-            </a>
-          </button>
-        </div>
-      </section> -->
     </main>
-    <?php include('fragments/site_footer.php'); ?>
+    
 
   </div>
+  </div>
+  <?php include('fragments/site_footer.php'); ?>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -621,7 +579,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
   <div id="jumptotop"><span></span></div>
-                <script src="./js/scroll-to-top.js"></script>
+  <script src="js/scroll-to-top.js"></script>
+  
 </body>
 
 

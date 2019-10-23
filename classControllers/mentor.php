@@ -15,23 +15,22 @@ class Mentors
 	public $timestamp;
 
 
-	public function Apply_mentor(){
+	public function Apply_mentor()
+	{
 		global $database;
 		$res = $database->query("INSERT INTO mentors()
 			VALUES(NULL, '$this->area_of_expertise', '$this->photo_url', '$this->name', '$this->email', '$this->phone_no', '$this->link_to_portfolio', '$this->link_to_linkedin', '$this->link_to_cv', '$this->why_interested', '$this->current_state', '$this->employment_status', '$this->timestamp')");
 		return $res;
-
 	}
-	public function showAll_mentors(){
+	public function showAll_mentors()
+	{
 		global $database;
 		$result = $database->query("SELECT * FROM mentors");
-		$array = array();  
-        while($row = mysqli_fetch_array($result))  
-           {  
-                $array[] = $row;  
-           }  
-           return $array;
-           
+		$array = array();
+		while ($row = mysqli_fetch_array($result)) {
+			$array[] = $row;
+		}
+		return $array;
 	}
 	public function ById($id = 0)
 	{
@@ -48,7 +47,7 @@ class Mentors
 		if ($count > 0) {
 			// mentors exist
 			$sn = 1;
-			$display ="";
+			$display = "";
 			while ($row = mysqli_fetch_assoc($result)) {
 				$display .= '
                     <tr>
@@ -65,7 +64,7 @@ class Mentors
                         <td>' . $row["current_state"] . '</td>
                         <td>' . $row["employment_status"] . '</td>
                         <td>' . $row["timestamp"] . '</td>
-                        <td>' . '<a onClick=\"javacript: return confirm("Please confirm deletion");\" href="registered_mentors.php?delete_id=' . $row["mentor_id"] . '" class="btn btn-danger btn-xs">Delete</a>' . '<a class="btn btn-primary" onClick="displayEach(' . $row["mentor_id"] . ');">View</a>' . '</td>
+                        <td>' . '<button type="button" class="btn btn-info btn-xs" onClick="displayEach(' . $row["mentor_id"] . ');">&nbsp;View&nbsp;</button>&nbsp;<a onClick=\"javacript: return confirm("Please confirm deletion");\" href="registered_mentors.php?delete_id=' . $row["mentor_id"] . '" class="btn btn-danger btn-xs">Delete</a>' . '</td>
                         
                     </tr>';
 				$sn++;
@@ -77,9 +76,6 @@ class Mentors
 
 		return $display;
 	}
-
-	
-	
 }
 $mentor = new Mentors;
 	// $mentor = new Mentors;

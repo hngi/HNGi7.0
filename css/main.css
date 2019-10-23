@@ -447,12 +447,10 @@
             background-color: #3c6b9c;
             color: #F2f5f9;
           }
-          #headingOne {
+          .activeHomepageDrop {
             background-color: #00AEFF;
           }
-          #headingOne button {
-            color: #F8FDFF;
-          }
+
           #collapseOne li {
             color: #737373;
             list-style-type: none;
@@ -814,8 +812,9 @@
             width: 85%;
           }
           .main-fifth-row {
-            width: 85%;
-            margin-left: 40px;
+            width: 100%;
+            text-align-last: center;
+            padding: 20px;
           /*  centered div on mobile view by ifyajoke*/
           }
           .mt-5 {
@@ -952,3 +951,28 @@
             transition: 0.4s ease-out;
           }
         }
+/*Aligning elements*/
+@media screen and (max-width:650px){
+  .main-fifth-row{
+    display: block;
+    margin: auto;
+  }
+  .table_accord {
+          margin: 0;
+          width: 100%;
+    }
+
+    .table_accord button {
+      font-size: 0.4em;
+    }
+
+  #support {
+    width: 100%;
+    margin-left: -20px;;
+    padding-left: 0;
+  }  
+}
+
+          
+        
+
