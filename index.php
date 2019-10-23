@@ -447,8 +447,8 @@
             <p class="lee" style="line-height: 0.4px; color: #8898AA;"><i>.....the journey so far</i></p>
             <p style="color: #333333; font-style: normal; letter-spacing: 1.1px; padding-top: 20px;">The HNG
               6.0
-              Internship commenced 23rd
-              April, 2019 and ended 5th October, 2020.</p>
+              Internship commenced 9th
+        September, 2019 and ended 17th November, 2019.</p>
 
             <p
               style="color: #333333; font-style: normal; letter-spacing: 1.1px;text-align: justify; padding-top: 20px;">
@@ -620,6 +620,8 @@
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
+  <div id="jumptotop"><span></span></div>
+                <script src="./js/scroll-to-top.js"></script>
 </body>
 
 

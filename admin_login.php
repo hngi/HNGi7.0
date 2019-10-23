@@ -89,6 +89,7 @@ if (isset($_POST['login'])) {
           <a href="donate.html" class="skyblue-text">Become a Sponsor</a>
           <a href="MentorSetUpPage2.php" class="skyblue-text">Sign up as Mentor</a>
           <a href="faq.php" class="skyblue-text">FAQ</a>
+          <a href="intern-experience.php" class="skyblue-text">Past Intern Experience</a>
         </div>
       </section>
       <section id="contact-section">
