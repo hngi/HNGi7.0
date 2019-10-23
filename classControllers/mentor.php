@@ -77,6 +77,7 @@ class Mentors
 
 		return $display;
 	}
+
 	
 	
 }
@@ -99,9 +100,3 @@ $mentor = new Mentors;
 	// foreach($mentor_data as $value){
 	// 	echo $value['name']. "</br>";
 	// }
-	//print_r($mentor->ById(3));
-	//print_r($mentor->ByName("joshua"));
-	
- 	
- 
-	

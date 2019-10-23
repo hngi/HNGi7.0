@@ -2,8 +2,6 @@
 
 class Admins
 {
-
-
   public function adminLogin()
   {
 
@@ -157,3 +155,4 @@ if (isset($_GET["login"])) {
   $admin = new Admins();
   $admin->adminLogin();
 }
+
