@@ -19,6 +19,11 @@
     #home {
       display: none;
     }
+
+  main {
+    padding: 0 50px;
+  }
+
   footer {
     width: 100% !important;
   }

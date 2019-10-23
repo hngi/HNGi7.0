@@ -965,6 +965,12 @@
     .table_accord button {
       font-size: 0.4em;
     }
+
+  #support {
+    width: 100%;
+    margin-left: -20px;;
+    padding-left: 0;
+  }  
 }
 
           
