@@ -224,21 +224,6 @@ class Admins
       return $row;
   }
 
-  public function editAdmin($firstname, $lastname, $email, $role) {
-    global $database;
-    $query = "UPDATE admins  WHERE firstname ='" . $firstname . "', lastname='" . $lastname . "', email= '" . $email . "', role='" . $role . "' ";
-    $res = $database->query($query);
-    $count = $database->affected_rows();
-    if($count > 0) {
-      // updated
-      return true;
-    } else {
-      // failed
-      return false;
-    }
-  }
-
-
 }
 
 
