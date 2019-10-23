@@ -12,78 +12,81 @@ if (isset($_POST['login'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Login</title>
-    <link rel="shortcut icon" href="https://res.cloudinary.com/dekillerj/image/upload/v1570648980/brand-logo.png"/>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-      crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
-    <link rel="icon" type="img/png" href="images/hng-favicon.png">
-    <link rel="stylesheet" type="text/css" href="css/header-footer.css">
-    <link rel="stylesheet" href="css/join-intern.css">
 
-    <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login</title>
+  <link rel="shortcut icon" href="https://res.cloudinary.com/dekillerj/image/upload/v1570648980/brand-logo.png" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="icon" type="img/png" href="images/hng-favicon.png">
+  <link rel="stylesheet" type="text/css" href="css/header-footer.css">
+  <link rel="stylesheet" href="css/join-intern.css">
 
-    <script>
+  <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 
-      function signup() {
-              
-        var email = $('#email').val();
-        var password = $('#password').val();
-        
-        $.post($login.'?login=yes", {
-            email: email,
-            password: password
+  <script>
+    function signup() {
+
+      var email = $('#email').val();
+      var password = $('#password').val();
+
+      $.post($login.
+          '?login=yes", {
+          email: email,
+          password: password
         },
-        function(data){
-            $('#result').html(data);
-        });            
+        function(data) {
+          $('#result').html(data);
+        });
+    }
+  </script>
+
+</head>
+
+<body>
+  <?php include('fragments/site_header.php'); ?>
+  <section class="jumbo">
+
+
+  </section>
+
+  <div class="form-area">
+
+    <form class="form-container" method="post">
+
+      <h2 class="login-heading">Login as an Admin</h2>
+      <?php
+      if (!empty($errors)) {
+
+        echo $errors;
+      }
+      if(isset($_GET['getmess'])){
+        echo $_GET['getmess'];
       }
 
-    </script>
+      if (isset($_GET["blocked"])) {
+        echo  '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: #F7CFCF; color: #6A0E0D; width: 80% !important; text-align: center;">Your account has been de-activated, Please contact a super admin.</p>';
+      }
 
-  </head>
-  <body>
-    <?php include('fragments/site_header.php'); ?>
-    <section class="jumbo">
-      
-    
-    </section>
+      ?>
+      <p id="result"></p>
 
-    <div class="form-area">
-        
-      <form class="form-container" method="post">
-        
-        <h2 class="login-heading">Login as an Admin</h2>
-        <?php
-          if(!empty($errors) ){
-            
-              echo $errors;
-            
-          }
+      <input type="email" name="email" id="email" placeholder="enter your Email" required />
+      <input type="password" name="password" id="password" placeholder="enter your password" required>
 
-          if(isset($_GET["blocked"])) {
-            echo  '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: #F7CFCF; color: #6A0E0D; width: 80% !important; text-align: center;">Your account has been de-activated, Please contact a super admin.</p>';
-          }
+      <button type="submit" onclick="signup()" name="login">LOG IN</button>
+      <a href="forgotpassword.php" class="text-danger">Forgot Password?</a>
 
-        ?>
-        <p id="result"></p>
+    </form>
+  </div>
 
-        <input type="email" name="email" id="email" placeholder="enter your Email" required/>
-        <input type="password" name="password" id="password" placeholder="enter your password" required>
-        
-        <button type="submit" onclick="signup()" name="login">LOG IN</button>
-        <!--<a href="">Forgot Password?</a>-->
-        
-      </form>
-    </div>
-    
 
-    <footer>
+  <footer>
     <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722444/hng-brand-logo_gnplmq.svg">
     <nav>
       <section>
@@ -103,7 +106,7 @@ if (isset($_POST['login'])) {
             <strong>
               Phone: <br />
             </strong>
-            +234 812 345 6789           
+            +234 812 345 6789
           </a>
           <br />
           <a href="mailto:interns@hng.tech">
@@ -131,5 +134,6 @@ if (isset($_POST['login'])) {
     </nav>
     <p class="center-text darkblue-text">&copy 2019, HNG Internship. All rights reserved.</p>
   </footer>
-  </body>
+</body>
+
 </html>

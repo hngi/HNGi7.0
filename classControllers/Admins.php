@@ -108,7 +108,7 @@ class Admins
     return $display;
   }
 
-  public function newAdmin($firstname, $lastname, $email, $role,$password)
+  public function newAdmin($firstname, $lastname, $email, $role)
   {
     global $database;
     //global $con;
@@ -125,7 +125,7 @@ class Admins
                                 </div>';
     } else {
       // email is available, good, proceed to register
-
+      $password = rand(123456, 789654);
       $query = "INSERT INTO admins (firstname, lastname, email, password, role, timestamp) VALUES ('" . $firstname . "', '" . $lastname . "', '" . $email . "', '" . $password . "', '" . $role . "', now())";
       $res = $database->query($query);
       $count = $database->affected_rows();
