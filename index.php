@@ -64,7 +64,7 @@
             the bridge between learning to code, and becoming the best in the world.
           </p>
           <button class="cta-button button--midBlue" id="buttt">
-            <a href="join-intern.php" id="butt">Get Started</a>
+            <a href="join-intern" id="butt">Get Started</a>
           </button>
         </div>
         <div class="image-column desktop-only">
@@ -145,7 +145,7 @@
                 Anyone can log into the internship using their laptop. Each week we give tasks.
               </p>
               <button class="cta-button button--midBlue" id="buttt">
-              <a href="join-intern.php" id="butt">Get Started</a>
+              <a href="join-intern" id="butt">Get Started</a>
             </button>
             </div>
             <div class="half-a-row h222">
@@ -191,7 +191,7 @@
                 entrance exam).
                 Anyone can log into the internship using their laptop. Each week we give tasks.</p>
               <button class="cta-button button--midBlue" id="buttt">
-                <a href="join-intern.php" id="butt">Get Started</a>
+                <a href="join-intern" id="butt">Get Started</a>
               </button>
             </div>
           </div>
@@ -211,7 +211,7 @@
 
 
             <button class="cta-button button--midBlue" id="buttt">
-              <a href="join-intern.php" id="butt">Get Started</a>
+              <a href="join-intern" id="butt">Get Started</a>
             </button>
           </div>
 

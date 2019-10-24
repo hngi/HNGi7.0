@@ -4,7 +4,7 @@ require_once 'classControllers/init.php';
 
 
 if(!isset($_SESSION["role"])) {
-    header('Location:admin_login.php');
+    header('Location:admin_login');
 }
 
 $admin = new Admins();
@@ -14,7 +14,7 @@ if(isset($_GET["blockAdminId"])) {
     $id = $_GET["blockAdminId"];
     $blockAdminRes = $admin->blockAdmin($id);
     if($blockAdminRes == true) {
-        header("Location:admins.php");
+        header("Location:admins");
     }
 }
 
@@ -22,7 +22,7 @@ if(isset($_GET["activateAdminId"])) {
     $id = $_GET["activateAdminId"];
     $activateAdminRes = $admin->activateAdmin($id);
     if($activateAdminRes == true) {
-        header("Location:admins.php");
+        header("Location:admins");
     }
 }
 
@@ -36,7 +36,7 @@ if(isset($_GET["blockAdminId"])) {
     $id = $_GET["blockAdminId"];
     $blockAdminRes = $admin->blockAdmin($id);
     if($blockAdminRes == true) {
-        header("Location:admins.php");
+        header("Location:admins");
     }
 }
 
@@ -44,7 +44,7 @@ if(isset($_GET["activateAdminId"])) {
     $id = $_GET["activateAdminId"];
     $activateAdminRes = $admin->activateAdmin($id);
     if($activateAdminRes == true) {
-        header("Location:admins.php");
+        header("Location:admins");
     }
 }
 
