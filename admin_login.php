@@ -79,7 +79,7 @@ if (isset($_POST['login'])) {
       <input type="email" name="email" id="email" placeholder="enter your Email" required />
       <input type="password" name="password" id="password" placeholder="enter your password" required>
 
-      <button type="submit" onclick="signup()" name="login">LOG IN</button>
+      <button type="submit" onclick="signup()" name="login" class="def-button">LOG IN</button>
       <a href="forgotpassword.php" class="text-danger">Forgot Password?</a>
 
     </form>
