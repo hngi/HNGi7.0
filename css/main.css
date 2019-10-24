@@ -998,6 +998,133 @@
   }  
 }
 
-          
+
+.center-text
+          {
+            text-align: center;
+          }
+          .countdown-symbol
+          {
+            border-radius: 50%;
+            position: relative;
+            margin-top: -5px;
+            height: 6.3rem;
+            width: 6.3rem;
+            font-size: 4rem;
+            font-weight: bolder;
+            font-family: Oswald, segoe UI, sans-serif;
+          }
+          .countdown-symbol > span
+          {
+            position: absolute;
+            left: 0.7rem;
+            top: 0.06rem;
+            font-size: 3.5rem;
+          }
+          .countdown-symbol + p
+          {
+            font-weight: bolder;
+            font-size: 13px;
+            font-family: Oswald, segoe UI, sans-serif;
+            margin-left: -5px;
+            color: #676767;
+          }
+          .arc, .arcs-background 
+          {
+              position: absolute;
+              top: -0.4rem;
+              left: -0.4rem;
+              width: 100%;
+              height: 100%;
+              border-radius: 100%;
+              border: 0.4rem solid;
+              border-color: #06F4CC #06F4CC transparent transparent;
+          }
+          .arcs-background
+          {
+            border-color: rgba(240, 240, 240);
+            border-width: 0.4rem;
+          }
+          .arc_start 
+          {
+              transform: rotate(45deg);
+          }
+          .arc_end 
+          {
+            z-index: 10;
+              transform: rotate(-135deg);
+          }
+          #countdown-section
+          {
+            margin: 8rem auto;
+          }
+          #countdown-container
+          {
+            width: 50vw;
+            margin-left:-8px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 30px;
+          }
+
+           @media screen and (min-width: 568px) {
+              #countdown-container
+          {
+            width: 50vw;
+            margin-left:-8px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 30px;
+          }
+           }
+
+           @media screen and (min-width: 480px) {
+              #countdown-container
+          {
+            width: 50vw;
+            margin-left:90px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 30px;
+          }
+            }
+           @media screen and (min-width: 400px) {
+              #countdown-container
+          {
+            width: 50vw;
+            margin-left:90px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 30px;
+          }
+           }
+
+          @media screen and (min-width: 650px) {
+            #countdown-container
+          {
+            width: 40vw;
+            margin-left:35px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 30px;
+          }
+          }
+
+           @media screen and (min-width: 767px) {
+            #countdown-container
+          {
+            width: 40vw;
+            margin-left:-2px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 30px;
+          }
+          }         
         
 
