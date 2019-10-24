@@ -158,6 +158,14 @@ header .wrap .logo{
 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
+.#submit:hover
+{
+   background: #0088C7 ;
+	text-decoration: none ;
+	color: #ffff ;
+	box-shadow: none ;
+}
+
 
 .final{
     display: flex;
