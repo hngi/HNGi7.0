@@ -41,7 +41,6 @@ require_once 'classControllers/init.php';
 
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
   <link rel="stylesheet" type="text/css" href="css/header-footer.css">
-    <link rel="stylesheet" href="css/newContact.css">
   <link rel="stylesheet" href="css/join-intern.css">
   <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <style>
@@ -56,8 +55,9 @@ require_once 'classControllers/init.php';
 </head>
 
 <body>
-  <?php include('fragments/site_header.php'); ?>
-  <section class="jumbo">
+  <section class="jumbo">  
+    <?php include('fragments/site_header.php'); ?>
+
     <h2 class="heading">Join as an intern</h2>
     <p class="para">
       Complete the form below to begin your journey as an intern.

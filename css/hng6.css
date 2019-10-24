@@ -71,12 +71,11 @@ h1
 }
 .countdown-symbol
 {
-	border-radius: 50%;
+	border-radius: 10%;
 	position: relative;
 	height: 6rem;
 	width: 6rem;
 	font-size: 4rem;
-	font-weight: bolder;
 	font-family: Oswald, segoe UI, sans-serif;
 }
 .countdown-symbol > span
@@ -87,7 +86,7 @@ h1
 }
 .countdown-symbol + p
 {
-	font-weight: bolder;
+	font-weight: lighter;
 	font-size: 20px;
 	font-family: Oswald, segoe UI, sans-serif;
 }

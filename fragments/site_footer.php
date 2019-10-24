@@ -1,30 +1,34 @@
 <style>
+
 footer #socials a  {
     display: inline-block;
     margin-top: 10px;  
 }
+
     nav {
         height: auto;
     }
+
 p {
     width: 100%;
+
 }
 </style>
 
 
 <footer class="tripp" >
-                <span><img class = "hng-logo" src="https://res.cloudinary.com/jaycodist/image/upload/v1570722444/hng-brand-logo_gnplmq.svg"></span>
+                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722444/hng-brand-logo_gnplmq.svg">
                 <nav class="footer-nav">
                     <div class="row">
                         <div class="col-sm-3 pb-3">
-                            <h2 class="skyblue-text" id="quick-links">Quick Links</h2>
+                            <h2 class="skyblue-text">Quick Links</h2>
                             <div id="link-list">
-                                <a href="join-intern" class="skyblue-text">Join HNG</a>
-                                <a href="index" class="skyblue-text">About HNG</a>
-                                <a href="donate." class="skyblue-text">Become a Sponsor</a>
-                                <a href="MentorSetUpPage2" class="skyblue-text">Sign up as Mentor</a>
-                                <a href="faq" class="skyblue-text">FAQ</a>
-                                <a href="intern-experience" class="skyblue-text">Past Intern Experience</a>
+                                <a href="join-intern.php" class="skyblue-text">Join HNG</a>
+                                <a href="index.php" class="skyblue-text">About HNG</a>
+                                <a href="donate.html" class="skyblue-text">Become a Sponsor</a>
+                                <a href="MentorSetUpPage2.php" class="skyblue-text">Sign up as Mentor</a>
+                                <a href="faq.php" class="skyblue-text">FAQ</a>
+                                <a href="intern-experience.php" class="skyblue-text">Past Intern Experience</a>
                                 
                             </div>
                         </div>
@@ -66,6 +70,4 @@ p {
                     </div>
                 </nav>
                 <p class="center-text darkblue-text">&copy 2019, HNG Internship. All rights reserved.</p>
-                <div id="jumptotop"><a id="jumptotop">Jump to Top<span></span></a></div>
-                <script src="./js/scroll-to-top.js"></script>
             </footer>

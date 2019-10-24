@@ -5,7 +5,6 @@ body {
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
-    /* padding: 0 80px 0 80px; */
 }
 
 header {
@@ -13,11 +12,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     padding: 1rem 3rem;
-    padding-top: 25px;
-    padding-left: 50px;
-
-    
-
+    padding-bottom: 0;
 }
 
 header a,
@@ -49,12 +44,10 @@ header nav {
     transition: 0.5s ease-out;
     height: auto;
     width: auto;
-   
 }
 
 header #hng-logo {
     width: 22vw;
-   
 }
 
 header .header-links {
@@ -100,7 +93,7 @@ header #mobile-bars-check {
 
 footer {
     background-color: rgb(245, 245, 245);
-    padding: 2rem 4rem;
+    padding: 4rem 8rem;
     
 }
 
@@ -156,7 +149,7 @@ footer #socials a {
     padding: 0.5rem;
     background-color: #fff;
     border-radius: 50%;
-    margin-right: 0.4rem;
+    margin-right: 0.8rem;
     box-shadow: -3px 3px 3px 1px rgba(0, 0, 0, 0.07);
     border: 1px solid #fff;
     transition: 0.6s ease-out;
@@ -186,6 +179,7 @@ footer .footer-nav .row {
         width: auto;
         height: auto;
         overflow: hidden;
+        padding-bottom: 0px;
         
     }
 
@@ -199,7 +193,6 @@ footer .footer-nav .row {
         justify-content: flex-start;
         padding: 1.5rem;
         flex-direction: column;
-        margin-bottom: 40px;
     }
 
     header nav > * {
@@ -208,7 +201,7 @@ footer .footer-nav .row {
 
     header nav .header-links,
     header nav #join-hng {
-        font-size: 10em;
+        font-size: 1em;
         align-self: flex-end;
         margin-right: -20px;
     }
@@ -244,7 +237,7 @@ footer .footer-nav .row {
     }
 
     footer {
-        padding: 1rem 1rem;
+        padding: 2rem 1rem;
         width: 100%;
     }
 
@@ -271,10 +264,6 @@ footer .footer-nav .row {
     footer .footer-nav .row {
         margin-left: 5%;
     }
-
-      footer h2 {
-        margin-top: -10px;
-    }
 }
 
 @media (max-width: 500px)
@@ -297,38 +286,31 @@ footer .footer-nav .row {
 	style for jump to top arrow
 */
 
-#jumptotop {
+#top {
+	margin: 0 auto;
 	right:10px;
 	bottom:10px;
 	cursor:pointer;
 	width:50px;
 	height:50px;
-	background-color:#209cee63;
+	background-color:#3498db;
 	text-indent:-9999px;
-    display:flex;
-    align-items: center;
+	display:block;
 	-webkit-border-radius:60px;
 	-moz-border-radius:60px;
-    border-radius:40px;
-    float: right;
-    position: fixed;
-    outline: none;
-    display: none;
+	border-radius:40px
 }
-#jumptotop span {
-	position:absolute;
-    top:50%;
-    left:50%;
-    margin-left:-8px;
-    margin-top:-12px;
-    height:0;
-    width:0;
-    border:8px solid transparent;
-    border-bottom-color:#ffffff;
-    align-items: center;
-    
+#top span {
+	top:50%;
+	left:50%;
+	margin-left:18px;
+	margin-top:-12px;
+	height:0;
+	width:0;
+	border:8px solid transparent;
+	border-bottom-color:#ffffff;
 }
-#jumptotop:hover {
+#top:hover {
 	background-color:#0088C7;
 	opacity:1;filter:"alpha(opacity=100)";
 	-ms-filter:"alpha(opacity=100)";

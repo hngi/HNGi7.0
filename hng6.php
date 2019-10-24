@@ -16,6 +16,7 @@
 		@media screen and (max-width: 760px){
 	#join-hng {
 		display: none;
+		margin-top: 8px;
 	}}
 	</style>
 
