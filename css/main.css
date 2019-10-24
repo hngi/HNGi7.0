@@ -1030,23 +1030,26 @@
           {
             text-align: center;
           }
+
           .countdown-symbol
           {
             border-radius: 50%;
             position: relative;
             margin-top: -5px;
-            height: 6.3rem;
-            width: 6.3rem;
-            font-size: 4rem;
+            margin-right: 10px;
+            height: 5rem;
+            width: 5rem;
+            font-size: 3rem;
             font-weight: bolder;
             font-family: Oswald, segoe UI, sans-serif;
           }
+          
           .countdown-symbol > span
           {
             position: absolute;
             left: 0.7rem;
             top: 0.06rem;
-            font-size: 3.5rem;
+            font-size: 2.5rem;
           }
           .countdown-symbol + p
           {
