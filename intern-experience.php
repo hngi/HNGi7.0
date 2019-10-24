@@ -127,7 +127,7 @@
                             ?>
                             <div class="wrapper-child"  >
                                 <img class="image" src="./Experience_files/Capture03_ynye5x.jpg">
-                                <h4>Stephen Azubuike</h4>
+                                <h4><?php echo $all_experience['names'];?></h4>
                                 <p>UI/UX Designer</p>
                                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
                                     quaerat eaque dolor? Praesentium, necessitatibus. Aut ratione dolorum ab voluptas
