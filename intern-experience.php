@@ -39,11 +39,31 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
-                    Modal body ...
+                    <form action="submit-experience.php" method="post" role="form" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="name">Full name</label>
+                            <input type="text" name="names" class="form-control" required placeholder="Full Name" id="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="stack">Your Stack</label>
+                            <input type="text" name="stack" class="form-control" required placeholder="Your Stack" id="stack">
+                        </div>
+                        <div class="form-group">
+                            <label for="exp">Your Experience</label>
+                            <textarea name="experience" class="form-control" required placeholder="Your Experience" id="exp" maxlength="300"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="image">Your Picture(Optional)</label>
+                            <input type="file" name="image" accept="image/*">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" name="ok" class="btn btn-success" value="Submit Experience">
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
