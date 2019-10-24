@@ -17,7 +17,7 @@
   <style>
 
     #header {
-      padding: 0 50px;
+      padding: 0 80px;
       margin-top: 20px;
     }
 
@@ -26,7 +26,7 @@
     }
 
   main {
-    padding: 0 50px;
+    padding: 0 80px;
   }
 
   footer {
