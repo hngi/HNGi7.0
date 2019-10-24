@@ -29,8 +29,8 @@ if (isset($_GET['delete_id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Dashboard</title>
-    <link rel="icon" type="img/png" href="images/hng-favicon.png">
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="icon" type="img/png" href="images/hng-favicon">
+    <link rel="stylesheet" href="css/dashboard">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -87,12 +87,12 @@ if (isset($_GET['delete_id'])) {
                     } else {
                         ?>
                         <!--<div class="col-md-3">-->
-                        <!--    <a href="exports/export-to-excel.php">-->
+                        <!--    <a href="exports/export-to-excel">-->
                         <!--        <button type="button" id="export">Export to Spreadsheet</button>-->
                         <!--    </a>-->
                         <!--</div>-->
                         <div class="col-md-12">
-                            <!--<a href="exports/export-to-pdf-mentors.php">-->
+                            <!--<a href="exports/export-to-pdf-mentors">-->
                             <a href="#" onclick="javascript:printDiv('printablediv')">
                                 <button type="button" class="btn btn-primary btn-sm" id="export">Export to PDF</button>
                             </a>
