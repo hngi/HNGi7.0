@@ -125,10 +125,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu|Pacifico&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="css/header-footer">
-  <link href="css/mentorSetuppage?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="css/header-footer.css">
+  <link href="css/mentorSetuppage.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
   <!-- <link rel="stylesheet" href="css/mentorSetuppage.css"> -->
-  <link rel="icon" type="img/png" href="images/hng-favicon">
+  <link rel="icon" type="img/png" href="images/hng-favicon.png">
 </head>
 
 <body>

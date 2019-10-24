@@ -55,9 +55,9 @@ if (isset($_POST['contact-btn'])) {
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
-  <link rel="stylesheet" type="text/css" href="css/header-footer">
-  <link rel="stylesheet" href="css/newContact">
-  <link rel="stylesheet" href="css/faq">
+  <link rel="stylesheet" type="text/css" href="css/header-footer.css">
+  <link rel="stylesheet" href="css/newContact.css">
+  <link rel="stylesheet" href="css/faq.css">
 
 </head>
 
@@ -106,12 +106,12 @@ if (isset($_POST['contact-btn'])) {
       <section>
         <h2 class="skyblue-text">Quick Links</h2>
         <div id="link-list">
-          <a href="join-intern" class="skyblue-text">Join HNGi7.0</a>
-          <a href="index" class="skyblue-text">About HNG</a>
-          <a href="donate" class="skyblue-text">Become a Sponsor</a>
-          <a href="MentorSetUpPage2" class="skyblue-text">Sign up as Mentor</a>
-          <a href="faq" class="skyblue-text">FAQ</a>
-          <a href="intern-experience" class="skyblue-text">Past Intern Experience</a>
+          <a href="join-intern.php" class="skyblue-text">Join HNGi7.0</a>
+          <a href="index.php" class="skyblue-text">About HNG</a>
+          <a href="donate.html" class="skyblue-text">Become a Sponsor</a>
+          <a href="MentorSetUpPage2.php" class="skyblue-text">Sign up as Mentor</a>
+          <a href="faq.php" class="skyblue-text">FAQ</a>
+          <a href="intern-experience.php" class="skyblue-text">Past Intern Experience</a>
 
         </div>
       </section>
