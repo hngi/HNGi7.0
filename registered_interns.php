@@ -32,7 +32,7 @@ if (isset($_GET['delete_id'])) {
   <link rel="stylesheet" href="css/dashboard.css">
 
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -87,7 +87,7 @@ if (isset($_GET['delete_id'])) {
 
           <?php
           if ($display == "0") {
-            echo "<h2>There are no Registered Interns</h2>";
+            echo "<h2 class='text-warning'>There are no Registered Interns</h2>";
           } else {
             ?>
             <!--<div class="col-md-3">-->
@@ -118,13 +118,15 @@ if (isset($_GET['delete_id'])) {
                 </div>
               </div>
             </div>
+            <div id="table-row">
+
+            </div>
             <div class="table-responsive" id="printablediv">
 
-              <table class="table table-hover table-bordered  mt-3 mb-1 table-condensed">
+              <table class="table table-hover table-bordered table-sm  mt-3 mb-1">
                 <thead class="table-primary">
                   <tr>
                     <th>S/N</th>
-                    <th>Intern ID</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Phone</th>
