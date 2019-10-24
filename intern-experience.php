@@ -25,10 +25,29 @@
         <div class="">
             <h2>Experience Recap From Past Interns</h2>
             <p class="lead">Testimonies From Ex HNG Internship Finalists</p>
-            <a href="#modal" data-toggle="modal" class="btn btn-primary">Submit Experience</a> <!--button to add experience-->
+            <a href="#modal-id" data-toggle="modal" class="btn btn-primary">Submit Experience</a> <!--button to add experience-->
         </div>
 
     </div>
+
+    <!--modal here-->
+    <div class="modal fade" id="modal-id">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Submit Your HNG Internship Experience</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    Modal body ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
     <main>
         <section>
