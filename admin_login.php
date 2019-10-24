@@ -86,7 +86,11 @@ if (isset($_POST['login'])) {
       </div>
       
       <button type="submit" onclick="signup()" name="login">LOG IN</button>
+
       <a href="forgotpassword.php" class="text-danger small-text">Forgot Password?</a>
+
+      <a href="forgotpassword" class="text-danger">Forgot Password?</a>
+
 
     </form>
   </div>

@@ -11,7 +11,7 @@ require 'PHPMailer/src/SMTP.php';
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer(true);
 
-function sendNewAdminMail($email, $password, $subject, $body)
+function sendNewAdminMail($email, $subject, $body)
 {
   global $mail;
 
@@ -45,7 +45,7 @@ function sendNewAdminMail($email, $password, $subject, $body)
     $mail->Body    = "$body
                   <tr>
     <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
-                       <b style='color:seablue;'>Email: $email <br> Password: $password</b> <br> <a href='https://hngi7.hng.tech/admin_login.php'>Follow this link to login</a>
+                       <b style='color:seablue;'>Email: $email <br> Password: $password</b> <br> <a href='https://hngi7.hng.tech/forgotpassword'>Follow this link to request for a password</a>
                       </td>
                   </tr>
 <tr>
@@ -267,11 +267,11 @@ function forGetPasswordMail($url,$subject,$email,$fullname)
                         This password reset is only valid for the next 24 hours.
                         Reset your password $fullname<br><br></p>
 
-                       <p>For security, If you did not request a password reset, please ignore this email or <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
+                       <p>For security, If you did not request a password reset, please ignore this email or <a href='http://hngi7.hng.tech/contactform'> Contact support</a> if you have questions.</p>
 
                        <p>If you’re having trouble clicking the link above, copy and paste the URL below into your web browser.
 
-                       <br> <a href='http://hngi7.hng.tech/admin_login.php'>Follow this link to login</a></p>
+                       <br> <a href='http://hngi7.hng.tech/admin_login'>Follow this link to login</a></p>
                      <p> Thanks,<br>
                       The User Suppport Team.</p>
 
