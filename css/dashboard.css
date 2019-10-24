@@ -72,6 +72,15 @@ h1
 	display: block;
 	transition: 0.6s ease-out;
 }
+#export {
+	 background: #00AEFF !important;
+}
+#export:hover {
+	 background: #0088C7 !important;
+	text-decoration: none !important;
+	color: #ffff !important;
+	box-shadow: none !important;
+}
 #overview-section #export:hover
 {
 	background: #0088C7 !important;
