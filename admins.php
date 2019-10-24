@@ -116,7 +116,7 @@ if(isset($_GET["activateAdminId"])) {
     <?php
     if ($_SESSION["role"] != 1) {
         echo '<h2><br><br><br>Sorry, You do not have the priviledge to view this page</p>';
-        echo '<h3><a href="dashboard.php">Dashboard</a></h3>';
+        echo '<h3><a href="dashboard">Dashboard</a></h3>';
         exit();
     }
     ?>
@@ -131,7 +131,7 @@ if(isset($_GET["activateAdminId"])) {
                 } else {
                 ?>
                 <div class="col-md-2">
-                    <a href="new_admin.php">
+                    <a href="new_admin">
                         <button type="button" class="btn btn-primary btn-sm" id="export">&#43; New Admin</button>
                     </a>
                 </div>
@@ -178,7 +178,7 @@ if(isset($_GET["activateAdminId"])) {
 
         <div id="details-back">
             <div>
-                <a href="overview.html" id="newitem-go-back" title="Go back">
+                <a href="overview" id="newitem-go-back" title="Go back">
                     <div></div>
                 </a>
             </div>

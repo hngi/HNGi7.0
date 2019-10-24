@@ -64,7 +64,7 @@
             the bridge between learning to code, and becoming the best in the world.
           </p>
           <button class="cta-button button--midBlue" id="buttt">
-            <a href="join-intern.php" id="butt">Get Started</a>
+            <a href="join-intern" id="butt">Get Started</a>
           </button>
         </div>
         <div class="image-column desktop-only">
@@ -145,7 +145,7 @@
                 Anyone can log into the internship using their laptop. Each week we give tasks.
               </p>
               <button class="cta-button button--midBlue" id="buttt">
-              <a href="join-intern.php" id="butt">Get Started</a>
+              <a href="join-intern" id="butt">Get Started</a>
             </button>
             </div>
             <div class="half-a-row h222">
@@ -191,7 +191,7 @@
                 entrance exam).
                 Anyone can log into the internship using their laptop. Each week we give tasks.</p>
               <button class="cta-button button--midBlue" id="buttt">
-                <a href="join-intern.php" id="butt">Get Started</a>
+                <a href="join-intern" id="butt">Get Started</a>
               </button>
             </div>
           </div>
@@ -211,7 +211,7 @@
 
 
             <button class="cta-button button--midBlue" id="buttt">
-              <a href="join-intern.php" id="butt">Get Started</a>
+              <a href="join-intern" id="butt">Get Started</a>
             </button>
           </div>
 
@@ -456,7 +456,7 @@
         </div>
         <div style="text-align: center; padding-top: 20px;">
           <button class="button--midBlue cta-button" style="margin: 0 auto">
-            <a href="mentorpage.php">See more</a>
+            <a href="mentorpage">See more</a>
           </button>
         </div>
       </div>
@@ -484,7 +484,7 @@
               marketing.</p>
 
             <div class="mb-3" style="padding-top: 35px;">
-              <a style="color:#00AEFF;" href="hng6.php">
+              <a style="color:#00AEFF;" href="hng6">
 
                 <i class="fa fa-angle-right px-1"
                   style="color:#00AEFF; border:1px solid #00AEFF; background-color: white; border-radius: 50%; "></i>Learn
@@ -512,7 +512,7 @@
               </h4>
               <span class="support__item-link">
                 <i class="fa fa-chevron-circle-right"></i>
-                <a href="donate.html" class="text-light">Get Started</a>
+                <a href="donate" class="text-light">Get Started</a>
               </span>
             </div>
           </div>
@@ -526,7 +526,7 @@
               </h4>
               <span class="support__item-link">
                 <i class="fa fa-chevron-circle-right"></i>
-                <a href="donate.html" class="text-light">Get Started</a>
+                <a href="donate" class="text-light">Get Started</a>
               </span>
             </div>
           </div>
@@ -540,7 +540,7 @@
               </h4>
               <span class="support__item-link">
                 <i class="fa fa-chevron-circle-right"></i>
-                <a href="donate.html" class="text-light">Get Started</a>
+                <a href="donate" class="text-light">Get Started</a>
               </span>
             </div>
           </div>

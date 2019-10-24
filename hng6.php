@@ -109,7 +109,7 @@
 				Participation was achieved remotely via the popular collaboration tool called Slack.
 			</p>
 			<br />
-			<p id="p-link"><a href="join-intern.php" class="def-button">Join HNGi7.0</a></p>
+			<p id="p-link"><a href="join-intern" class="def-button">Join HNGi7.0</a></p>
 		</article>
 		<img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722649/home-geeks_vld6nt.png" id="geek-img">
 	</section>
@@ -195,12 +195,12 @@
       <section>
         <h2 class="skyblue-text">Quick Links</h2>
         <div id="link-list">
-          <a href="join-intern.php" class="skyblue-text">Join HNGi7.0</a>
-          <a href="contactform.php" class="skyblue-text">About HNG</a>
-          <a href="donate.html" class="skyblue-text">Become a Sponsor</a>
-          <a href="MentorSetUpPage2.php" class="skyblue-text">Sign up as Mentor</a>
-          <a href="faq.php" class="skyblue-text">FAQ</a>
-          <a href="intern-experience.php" class="skyblue-text">Past Intern Experience</a>
+          <a href="join-intern" class="skyblue-text">Join HNGi7.0</a>
+          <a href="contactform" class="skyblue-text">About HNG</a>
+          <a href="donate" class="skyblue-text">Become a Sponsor</a>
+          <a href="MentorSetUpPage2" class="skyblue-text">Sign up as Mentor</a>
+          <a href="faq" class="skyblue-text">FAQ</a>
+          <a href="intern-experience" class="skyblue-text">Past Intern Experience</a>
 
         </div>
       </section>

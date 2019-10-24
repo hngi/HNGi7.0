@@ -10,12 +10,12 @@
         <div class="stix" id="stik3"></div>
     </label>
     <nav >
-        <a href="index.php" class="header-links" id="home">Home</a>
-        <a href="hng6.php" class="header-links">HNGi 6.0</a>
-        <a href="mentorpage.php" class="header-links">Mentors</a>
-        <a href="contactform.php" class="header-links">Contact</a>
-        <a href="admin_login.php" class="header-links">Login</a>
-        <a href="join-intern.php" id="join-hng" class="def-button">Join HNGi7.0</a>
+        <a href="index" class="header-links" id="home">Home</a>
+        <a href="hng6" class="header-links">HNGi 6.0</a>
+        <a href="mentorpage" class="header-links">Mentors</a>
+        <a href="contactform" class="header-links">Contact</a>
+        <a href="admin_login" class="header-links">Login</a>
+        <a href="join-intern" id="join-hng" class="def-button">Join HNGi7.0</a>
     </nav>
 </header>
 

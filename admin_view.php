@@ -94,7 +94,7 @@ if (isset($_GET["editAdminId"])) {
                                 &nbsp;
                             </div>
                             <div class="col-md-6">
-                                <a href="admins.php"><button class="btn btn-primary">All Admins</button></a>
+                                <a href="admins"><button class="btn btn-primary">All Admins</button></a>
                                 <!--  <a href="deleteAdmin.php?deleteAdminId=<?php echo $id; ?>"><button class="btn btn-danger">Delete</button></a> -->
                             </div>
                         </div>

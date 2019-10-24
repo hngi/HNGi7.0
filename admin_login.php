@@ -80,7 +80,7 @@ if (isset($_POST['login'])) {
       <input type="password" name="password" id="password" placeholder="enter your password" required>
 
       <button type="submit" onclick="signup()" name="login">LOG IN</button>
-      <a href="forgotpassword.php" class="text-danger">Forgot Password?</a>
+      <a href="forgotpassword" class="text-danger">Forgot Password?</a>
 
     </form>
   </div>
@@ -92,11 +92,11 @@ if (isset($_POST['login'])) {
       <section>
         <h2 class="skyblue-text">Quick Links</h2>
         <div id="link-list">
-          <a href="join-intern.php" class="skyblue-text">Join HNG</a>
-          <a href="index.php" class="skyblue-text">About HNG</a>
-          <a href="donate.html" class="skyblue-text">Become a Sponsor</a>
-          <a href="MentorSetUpPage2.php" class="skyblue-text">Sign up as Mentor</a>
-          <a href="faq.php" class="skyblue-text">FAQ</a>
+          <a href="join-intern" class="skyblue-text">Join HNG</a>
+          <a href="index" class="skyblue-text">About HNG</a>
+          <a href="donate" class="skyblue-text">Become a Sponsor</a>
+          <a href="MentorSetUpPage2" class="skyblue-text">Sign up as Mentor</a>
+          <a href="faq" class="skyblue-text">FAQ</a>
         </div>
       </section>
       <section id="contact-section">

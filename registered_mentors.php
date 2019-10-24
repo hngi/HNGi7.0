@@ -157,7 +157,7 @@ if (isset($_GET['delete_id'])) {
         <!-- <section id="details-section">
 			<div id="details-back">
                 <div>
-                    <a href="overview.html" id="newitem-go-back" title="Go back">
+                    <a href="overview" id="newitem-go-back" title="Go back">
                         <div></div>
                     </a>
                 </div>
