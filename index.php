@@ -35,10 +35,12 @@
   @media screen and (max-width: 900px){
     #header, main {
       padding: 0;
+      margin-top:10px;
     }
 
     #support {
-      margin-left: 0px;
+      margin-left: -5px;
+      }
     }
   }
   </style>
@@ -203,7 +205,7 @@
                 src="https://res.cloudinary.com/chux/image/upload/v1570646194/Rectangle_4.6_vfbtwb.png" alt="interns" />
             </div>
             <div class="half-a-row">
-              <h4 class="" style="color: darkblue; padding-bottom: 20px">Onboard And Connect With Teammates</h4>
+              <h4 class="" style="color: darkblue; margin-top: 10px; ">Onboard And Connect With Teammates</h4>
               <p class="content">The HNG internship is a 3-month remote internship designed to find and
                 develop
                 the most talented software developers. Everyone is welcomed to participate (there is no
@@ -222,7 +224,7 @@
       <div class="main-fifth-row text-align">
         <div class="row">
           <div class="text-center text-md-left col-12 col-md-6 col" style="padding-top: 35px;">
-            <h4 style="color: darkblue; padding-bottom: 20px">Build Scalable Products & Grow</h4>
+            <h4 style="color: darkblue; margin-bottom: 20px; margin-right: 10px;">Build Scalable Products & Grow</h4>
             <p class="content">The HNG Internship is a 3-months remote
               internship designed to find and develop the most talented software developers.
               Everyone is welcoming to participate(there is no entrance exam). Anyone can log into
@@ -445,9 +447,9 @@
 
 
       <div class="container">
-        <h4 class="bass" style="padding-top: 4em; text-align: center; color: darkblue; font-size: 24px;">Our Dedicated
+        <h4 class="bass" style="margin-top: 4em; margin-left: 10px; text-align: center; color: darkblue; font-size: 24px;">Our Dedicated
           Mentors</h4>
-        <div class="row" style="padding-top: 6em; text-align: center;">
+        <div class="row" style="margin-top: 2em; margin-left: -41px; text-align: center;">
           <div class="col-6 col-lg-3">
             <img style="width: 150px; height: 150px; border-radius: 50%;"
               src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730807/IMG2_uiu3fj.png">
@@ -493,7 +495,7 @@
         September, 2019 and ended 17th November, 2019.</p>
 
             <p
-              style="color: #333333; font-style: normal; letter-spacing: 1.1px;text-align: justify; padding-top: 20px;">
+              id="jz" >
               A well-planned, coordinated event where young
               talented folks from across the globe
               participated remotely and were involved in
