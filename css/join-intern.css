@@ -58,7 +58,7 @@ nav ul li a:hover {
 /* styling of individual input field and textarea */
 .form-container input,
 textarea {
- width: 80%;
+ width: 100%;
  padding: 10px 20px;
  margin: 10px auto;
  font-family: inherit;
@@ -223,7 +223,7 @@ section.jumbo > p.para2 > a {
    }
    .form-container input,
    textarea {
-     width: 90%;
+     width: 100%;
      padding: 10px 20px;
      margin: 10px auto;
      font-family: inherit;
@@ -380,4 +380,22 @@ section.jumbo > p.para2 > a {
  }
  
  }
+}
+.inputWithIcon{
+  position: relative;
+}
+.inputWithIcon input[type="email"], input[type="password"]{
+  padding-left:3rem;
+}
+.inputWithIcon i{
+  position: absolute;
+  left:0;
+  top: 16px;
+  color:#8898aa;
+  padding:9px 8px;
+}
+/* overiding text-danger */
+.small-text{
+  font-size:0.8rem;
+  color:cornflowerblue !important;
 }
