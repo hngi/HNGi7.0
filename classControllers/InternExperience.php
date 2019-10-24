@@ -19,5 +19,10 @@ class InternExperience
     function fetch_experiences(){
         global $database;
         //Method to fetch interns records
+        $sql = "SELECT names,stack,image,experience FROM intern_experience WHERE status = '1' ORDER BY id DESC";
+        $query = $database->query($sql);
+        $result = $query->fetch_all(MYSQLI_ASSOC);
+
+        return $result;
     }
 }
