@@ -39,7 +39,7 @@ header("location:login.php");
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index">HNG I7</a>
+        <a class="navbar-brand" href="index.php">HNG I7</a>
     </div>
 
     </div><!-- /.navbar-collapse -->
@@ -85,7 +85,7 @@ header("location:login.php");
                             </tbody>
                         </table>
                         <p>
-                            <a href="login?act=logout" class="btn btn-danger">Logout</a>
+                            <a href="login.php?act=logout" class="btn btn-danger">Logout</a>
                         </p>
                     </div>
                 </div>

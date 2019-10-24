@@ -39,8 +39,8 @@ if(!isset($_SESSION["role"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>Dashboard</title>
-	<link rel="icon" type="img/png" href="images/hng-favicon">
-	<link rel="stylesheet" href="css/dashboard">
+	<link rel="icon" type="img/png" href="images/hng-favicon.png">
+	<link rel="stylesheet" href="css/dashboard.css">
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -105,21 +105,21 @@ if(!isset($_SESSION["role"])) {
 
 			<div class="container">
 				<div class="row">
-					<a href="registered_interns">
+					<a href="registered_interns.php">
 						<div class="col-md-2 card">
 							<p><?php echo $noOfInterns; ?></p>
 							Registered Interns
 						</div>
 					</a>
 
-					<a href="registered_mentors">
+					<a href="registered_mentors.php">
 						<div class="col-md-2 card">
 							<p><?php echo $noOfMentors; ?></p>
 							Registered Mentors
 						</div>
 					</a>
 					
-					<a href="admins">
+					<a href="admins.php">
 						<div class="col-md-2 card">
 							<p><?php echo $noOfAdmins; ?></p>
 							Registered Admins
