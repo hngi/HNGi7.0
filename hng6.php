@@ -20,8 +20,6 @@
 	</style>
 
 </head>
-<section>hello world</section>
-
 <body class="container-fluid">
 	<?php
 		include('fragments/site_header.php');
