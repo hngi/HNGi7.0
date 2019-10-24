@@ -124,6 +124,14 @@
                 <div class="wrapper">
                     <?php
                         foreach ($all_experiences as $all_experience){
+                            $image = $all_experience['image'];
+                            $names = $all_experience['names'];
+
+                            if($image == ""){
+                                $img_src = "";
+                            }else{
+
+                            }
                             ?>
                             <div class="wrapper-child"  >
                                 <img class="image" src="./Experience_files/Capture03_ynye5x.jpg">
