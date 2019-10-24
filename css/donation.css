@@ -27,6 +27,12 @@ body {
     width: 400px;
     background-color: #0088C7;
 }
+.donate-btn:hover {
+	 background: #0088C7 !important;
+	text-decoration: none !important;
+	color: #ffff !important;
+	box-shadow: none !important;
+}
 @media screen and (max-width: 770px) {
     .center-div{
         width: 400px;
