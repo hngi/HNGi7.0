@@ -141,7 +141,7 @@
 
      
      #img {
-       margin-left: 1rem !important;
+       /* margin-left: 1rem !important; */
        width: 150px;
      }
      
@@ -201,6 +201,13 @@
   .wrapper-child {
     margin: 0.5rem;
   }
+      .image {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        margin: 1rem 0;
+      }
+
 }
     @media (min-width: 700px) {
       .wrapper {
