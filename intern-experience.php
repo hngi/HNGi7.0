@@ -11,7 +11,7 @@
             $ext = strtolower(end(explode(".",$_FILES['image']['name'])));
             $allowed = array('jpg','jpeg','png');
             if(in_array($ext,$allowed)){
-                $image_name = uniqid($_FILES['image']['name']);
+                $image_name = uniqid().$_FILES['image']['name'];
                 $destination = $folder."/".$image_name;
                 $source = $_FILES['image']['tmp_name'];
 
