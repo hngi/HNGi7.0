@@ -113,112 +113,31 @@
     <main>
         <section>
             <section class="mentors-section">
-                <?php
+                <div class="container">
+                    <?php
                     if(isset($_SESSION['msg'])){
                         echo $_SESSION['msg'];
                         unset($_SESSION['msg']);
                     }
-                ?>
+                    ?>
+                </div>
                 <div class="wrapper">
-                    <div class="wrapper-child"  >
-                        <img class="image" src="./Experience_files/Capture03_ynye5x.jpg">
-                        <h4>Stephen Azubuike</h4>
-                        <p>UI/UX Designer</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
-                            quaerat eaque dolor? Praesentium, necessitatibus. Aut ratione dolorum ab voluptas
-                            doloremque, atque obcaecati?
-                        </p>
-                    </div>
-                    <div class="wrapper-child"  >
-                        <img class="image"
-                            src="https://res.cloudinary.com/theblvcksamurai/image/upload/v1571787484/phblnnglnch1gzsmgyas.png">
-                        <h4>Oluwatoni Atunrase</h4>
-                        <p>Web Developer</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
-                            quaerat eaque dolor? Praesentium, necessitatibus. Aut ratione dolorum ab voluptas
-                            doloremque, atque obcaecati?
-                        </p>
-                    </div>
-                    <div class="wrapper-child"  >
-                        <img class="image" src="./Experience_files/Capture03_ynye5x.jpg">
-                        <h4>Aboagye</h4>
-                        <p>Web Developer</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
-                            quaerat eaque dolor? Praesentium, necessitatibus. Aut ratione dolorum ab voluptas
-                            doloremque, atque obcaecati?</p>
-                    </div>
-                    <div class="wrapper-child"  >
-                        <img class="image" src="./Experience_files/Capture01_c3eyb9.jpg">
-                        <h4>John Ademoye</h4>
-                        <p>Web Developer</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
-                            quaerat eaque dolor? Praesentium, necessitatibus. Aut ratione dolorum ab voluptas
-                            doloremque, atque obcaecati?</p>
-                    </div>
-                    <div class="wrapper-child"  >
-                        <img class="image" src="./Experience_files/Capture02_psr3n9.jpg">
-                        <h4>Adeyefa Oluwatoba</h4>
-                        <p>Web Developer</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
-                            quaerat eaque dolor? Praesentium, necessitatibus. Aut ratione dolorum ab voluptas
-                            doloremque, atque obcaecati?</p>
-                    </div>
-                    <div class="wrapper-child"  >
-                        <img class="image" src="./Experience_files/Capture03_ynye5x.jpg">
-                        <h4>Adolphus Chris</h4>
-                        <p>Web Developer</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
-                            quaerat eaque dolor? Praesentium, necessitatibus. Aut ratione dolorum ab voluptas
-                            doloremque, atque obcaecati?</p>
-                    </div>
-                    <div class="wrapper-child"  >
-                        <img class="image" src="./Experience_files/Capture01_c3eyb9.jpg">
-                        <h4>Ogundiji Bolade</h4>
-                        <p>Web Developer</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
-                            quaerat eaque dolor? Praesentium, necessitatibus. Aut ratione dolorum ab voluptas
-                            doloremque, atque obcaecati?</p>
-                    </div>
-                    <div class="wrapper-child"  >
-                        <img class="image" src="./Experience_files/Capture02_psr3n9.jpg">
-                        <h4>Ajayi Jeremiah</h4>
-                        <p>Backend Developer</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
-                            quaerat eaque dolor? Praesentium, necessitatibus. Aut ratione dolorum ab voluptas
-                            doloremque, atque obcaecati?</p>
-                    </div>
-                    <div class="wrapper-child"  >
-                        <img class="image" src="./Experience_files/Capture02_psr3n9.jpg">
-                        <h4>Patrick Aziken</h4>
-                        <p>Software Tester</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
-                            quaerat eaque dolor? Praesentium, necessitatibus. Aut ratione dolorum ab voluptas
-                            doloremque, atque obcaecati?</p>
-                    </div>
-                    <div class="wrapper-child"  >
-                        <img class="image" src="./Experience_files/Capture01_c3eyb9.jpg">
-                        <h4>Everitus Olumese</h4>
-                        <p>Developer</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
-                            quaerat eaque dolor? Praesentium, necessitatibus. Aut ratione dolorum ab voluptas
-                            doloremque, atque obcaecati?</p>
-                    </div>
-                    <div class="wrapper-child"  >
-                        <img class="image" src="./Experience_files/Capture03_ynye5x.jpg">
-                        <h4>Albert Oboh</h4>
-                        <p>Web Developer</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
-                            quaerat eaque dolor? Praesentium, necessitatibus. Aut ratione dolorum ab voluptas
-                            doloremque, atque obcaecati?</p>
-                    </div>
-                    <div class="wrapper-child"  >
-                        <img class="image" src="./Experience_files/Capture02_psr3n9.jpg">
-                        <h4>Osumgha Chiamaka</h4>
-                        <p>Web Developer</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
-                            quaerat eaque dolor? Praesentium, necessitatibus. Aut ratione dolorum ab voluptas
-                            doloremque, atque obcaecati?</p>
-                    </div>
+                    <?php
+                        foreach ($all_experiences as $all_experience){
+                            ?>
+                            <div class="wrapper-child"  >
+                                <img class="image" src="./Experience_files/Capture03_ynye5x.jpg">
+                                <h4>Stephen Azubuike</h4>
+                                <p>UI/UX Designer</p>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
+                                    quaerat eaque dolor? Praesentium, necessitatibus. Aut ratione dolorum ab voluptas
+                                    doloremque, atque obcaecati?
+                                </p>
+                            </div>
+                            <?php
+                        }
+                    ?>
+
             </section>
         </section>
         <?php include('fragments/site_footer.php'); ?>
