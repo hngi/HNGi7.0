@@ -87,7 +87,6 @@ if (isset($_POST['login'])) {
       
       <button type="submit" onclick="signup()" name="login">LOG IN</button>
       <a href="forgotpassword.php" class="text-danger small-text">Forgot Password?</a>
-
     </form>
   </div>
 
