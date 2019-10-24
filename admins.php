@@ -59,8 +59,8 @@ if(isset($_GET["activateAdminId"])) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Dashboard</title>
 
-    <link rel="icon" type="img/png" href="images/hng-favicon.png">
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="icon" type="img/png" href="images/hng-favicon">
+    <link rel="stylesheet" href="css/dashboard">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -131,7 +131,7 @@ if(isset($_GET["activateAdminId"])) {
                 } else {
                 ?>
                 <div class="col-md-2">
-                    <a href="new_admin.php">
+                    <a href="new_admin">
                         <button type="button" class="btn btn-primary btn-sm" id="export">&#43; New Admin</button>
                     </a>
                 </div>
@@ -178,7 +178,7 @@ if(isset($_GET["activateAdminId"])) {
 
         <div id="details-back">
             <div>
-                <a href="overview.html" id="newitem-go-back" title="Go back">
+                <a href="overview" id="newitem-go-back" title="Go back">
                     <div></div>
                 </a>
             </div>

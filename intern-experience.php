@@ -50,9 +50,9 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="icon" type="img/png" href="images/hng-favicon.png">
-    <link rel="stylesheet" type="text/css" href="css/header-footer.css">
-    <link rel="stylesheet" href="css/intern-experience.css">
+    <link rel="icon" type="img/png" href="images/hng-favicon">
+    <link rel="stylesheet" type="text/css" href="css/header-footer">
+    <link rel="stylesheet" href="css/intern-experience">
     <title>Experience Page</title>
 </head>
 

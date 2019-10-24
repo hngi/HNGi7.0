@@ -46,8 +46,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Delete Admin</title>
-    <link rel="icon" type="img/png" href="images/hng-favicon.png">
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="icon" type="img/png" href="images/hng-favicon">
+    <link rel="stylesheet" href="css/dashboard">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -129,8 +129,8 @@
                                 &nbsp;
                             </div>
                             <div class="col-md-6">
-                                <a href="admins.php"><button class="btn btn-primary">No, Cancel</button></a>
-                                <a href="delete_admin.php?yesDeleteId=<?php echo $id; ?>"><button class="btn btn-danger">Yes, Delete</button></a>
+                                <a href="admins"><button class="btn btn-primary">No, Cancel</button></a>
+                                <a href="delete_admin?yesDeleteId=<?php echo $id; ?>"><button class="btn btn-danger">Yes, Delete</button></a>
                             </div>
                         </div>
 

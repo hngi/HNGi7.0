@@ -22,8 +22,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>New Admin</title>
-	<link rel="icon" type="img/png" href="images/hng-favicon.png">
-	<link rel="stylesheet" href="css/dashboard.css">
+	<link rel="icon" type="img/png" href="images/hng-favicon">
+	<link rel="stylesheet" href="css/dashboard">
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">

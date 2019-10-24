@@ -8,9 +8,9 @@
 	<title>HNG 6.0</title>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
 		integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
-	<link rel="icon" type="img/png" href="images/hng-favicon.png">
-	<link rel="stylesheet" href="css/hng6.css">	
-	<link rel="stylesheet" href="css/header-footer.css">
+	<link rel="icon" type="img/png" href="images/hng-favicon">
+	<link rel="stylesheet" href="css/hng6">	
+	<link rel="stylesheet" href="css/header-footer">
 	<style>
 
 		@media screen and (max-width: 760px){
@@ -66,7 +66,7 @@
 			</div>
 		</section>
 
-		<h2 class="center-text"><a href="join-intern.php" class="skyblue-text" id="countdown-register">REGISTER FOR HNGi7.0 NOW</a></h2>
+		<h2 class="center-text"><a href="join-intern" class="skyblue-text" id="countdown-register">REGISTER FOR HNGi7.0 NOW</a></h2>
 	</section>
 	<section id="home-about">
 		<h1 class="blue-text">HNG 6.0 Internship</h1>
@@ -109,7 +109,7 @@
 				Participation was achieved remotely via the popular collaboration tool called Slack.
 			</p>
 			<br />
-			<p id="p-link"><a href="join-intern.php" class="def-button">Join HNGi7.0</a></p>
+			<p id="p-link"><a href="join-intern" class="def-button">Join HNGi7.0</a></p>
 		</article>
 		<img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722649/home-geeks_vld6nt.png" id="geek-img">
 	</section>
@@ -186,7 +186,7 @@
 			<a href="#"><img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722855/bluechip-logo_rw62cu.svg"></a>
 			<a href="#"><img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg"></a>
 		</div>
-		<p class="center-text"><a href="donate.html" class="def-button shadowed center">Become a Sponsor</a></p>
+		<p class="center-text"><a href="donate" class="def-button shadowed center">Become a Sponsor</a></p>
 	</section>
 	
 	<footer>
@@ -195,12 +195,12 @@
       <section>
         <h2 class="skyblue-text">Quick Links</h2>
         <div id="link-list">
-          <a href="join-intern.php" class="skyblue-text">Join HNGi7.0</a>
-          <a href="contactform.php" class="skyblue-text">About HNG</a>
-          <a href="donate.html" class="skyblue-text">Become a Sponsor</a>
-          <a href="MentorSetUpPage2.php" class="skyblue-text">Sign up as Mentor</a>
-          <a href="faq.php" class="skyblue-text">FAQ</a>
-          <a href="intern-experience.php" class="skyblue-text">Past Intern Experience</a>
+          <a href="join-intern" class="skyblue-text">Join HNGi7.0</a>
+          <a href="contactform" class="skyblue-text">About HNG</a>
+          <a href="donate" class="skyblue-text">Become a Sponsor</a>
+          <a href="MentorSetUpPage2" class="skyblue-text">Sign up as Mentor</a>
+          <a href="faq" class="skyblue-text">FAQ</a>
+          <a href="intern-experience" class="skyblue-text">Past Intern Experience</a>
 
         </div>
       </section>
