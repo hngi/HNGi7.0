@@ -143,9 +143,22 @@
    border: none;
    transition: 0.4s ease-out;
  }
+.def-button{
+	 background: #00AEFF;
+	 color: white;
+ }
+ .def-button:hover {
+	 background: #0088C7 !important;
+	text-decoration: none !important;
+	color: #ffff !important;
+	box-shadow: none !important;
+ }
 
  .inputs-wrap #submit:hover {
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+	background: #0088C7 !important;
+	text-decoration: none !important;
+	color: #ffff !important;
+	box-shadow: none !important;
  }
 
  .img img {
