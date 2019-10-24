@@ -128,13 +128,13 @@
                             $names = $all_experience['names'];
 
                             if($image == ""){
-                                $img_src = "";
+                                $img_src = "https://via.placeholder.com/150x150.png?text=$names";
                             }else{
-
+                                $img_src = "uploads/interns/$image";
                             }
                             ?>
                             <div class="wrapper-child"  >
-                                <img class="image" src="./Experience_files/Capture03_ynye5x.jpg">
+                                <img class="image" src="<?php echo $img_src;?>">
                                 <h4><?php echo $all_experience['names'];?></h4>
                                 <p><?php echo $all_experience['stack'];?></p>
                                 <p>
