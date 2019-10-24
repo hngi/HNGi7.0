@@ -9,6 +9,9 @@ if (isset($_GET['mentor_id'])) {
     <div class="modal fade" id="mentor-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
             <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="text-center">Mentor Details</h3>
+                </div>
                 <div class="modal-body">
                     <div class="container-fluid">
                         <div class="row">
@@ -80,6 +83,86 @@ if (isset($_GET['mentor_id'])) {
             </div>
         </div>
     </div>
+<?php
+}
+if (isset($_GET['id'])) {
+    require_once 'classControllers/Interns.php';
+    require_once 'config/database.php';
+    $interns = new Intern;
+    $internDetails = $interns->view();
+    ?>
+    <?php ob_start(); ?>
+    <!-- Modal to display each Intern -->
+    <div class="modal fade" id="details-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="text-center">Intern Details</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12 col-10 table-responsive">
+                                <table class="table table-hover mt-3 mb-1">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Intern ID:</th>
+                                            <td class=""><?= $internDetails['intern_id']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Name:</th>
+                                            <td class=""><?= $internDetails['name']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Email:</th>
+                                            <td class=""><?= $internDetails['email']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Phone No:</th>
+                                            <td class=""><?= $internDetails['phone_no']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Link To Portfolio:</th>
+                                            <td class=""><?= $internDetails['link_to_portfolio']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Link To CV:</th>
+                                            <td class=""><?= $internDetails['link_to_cv']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Interest:</th>
+                                            <td class=""><?= $internDetails['interest']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Current Location:</th>
+                                            <td class=""><?= $internDetails['current_location']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Employment Status:</th>
+                                            <td class=""><?= $internDetails['employment_status']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">About:</th>
+                                            <td class=""><?= $internDetails['about']; ?></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Tmie Registered:</th>
+                                            <td class=""><?= $internDetails['timestamp']; ?></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php echo ob_get_clean(); ?>
+
 <?php
 }
 ?>

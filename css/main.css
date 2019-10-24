@@ -11,20 +11,17 @@
             font-family: "Open Sans", segoe UI, sans-serif;
           }
           /* GHOST TOUCHES */
-       /*   remove opacity ifyajoke*/
           .buttonOne, .buttonTwo, .buttonThree, .buttonFour, .buttonFive {
-          /*  opacity: .7;*/
-             font-weight: 500;
+            opacity: .7;
           }
           .buttonOne:hover, .buttonTwo:hover, .buttonThree:hover, .buttonFour:hover, .buttonFive:hover {
             cursor: pointer;
             opacity: 1;
           }
           /* BOOTSTRAP OVERRIDES */
-      /*   removed opacity
           .btn-link {
             opacity: .6
-          }*/
+          }
           .btn-link:hover, .btn-link:active {
             text-decoration: none;
             opacity: 1;
@@ -154,12 +151,6 @@
             width: 100%;
            
           }
-/*          changed css of header to look like figma design*/
-          .card-header {
-            background: white;
-            border-bottom: 0.5px solid #D3CCCC ;
-            border-top:0.5px solid #D3CCCC;
-          }
           .card1-container {
             margin: 2em auto;
             display: block;
@@ -179,15 +170,9 @@
           .accordion {
             border: none;
           }
-          /*changed css of dropdown*/
-        .card-body{
-          background: #F5F4F4;
-          font-weight: 500;
-        }
           .accordion_tab {
             margin-left: 15%;
           }
-
           #support {
             width: 100%;
           }
@@ -465,19 +450,10 @@
           .activeHomepageDrop {
             background-color: #00AEFF;
           }
-        /*  #headingOne {
-            background-color: #00AEFF;
-          }
-      
-          #headingOne button {
-            color: #FFFFFF;
-            font-weight: 500;
-          }/*
-    /*      added padding ifyajoke*/
+
           #collapseOne li {
             color: #737373;
             list-style-type: none;
-            padding-bottom: 3px;
           }
           .buttonTwo, .buttonThree, .buttonFour, .buttonFive {
             color: #737373;
@@ -499,7 +475,6 @@
             font-family: "Open Sans", sans-serif;
             font-weight: bold;
           }
-        }
 
         @media screen and (min-width: 568px) {
           .first-container, .second-container, .firs-container {
@@ -837,8 +812,9 @@
             width: 85%;
           }
           .main-fifth-row {
-            width: 85%;
-            margin-left: 40px;
+            width: 100%;
+            text-align-last: center;
+            padding: 20px;
           /*  centered div on mobile view by ifyajoke*/
           }
           .mt-5 {
@@ -981,4 +957,22 @@
     display: block;
     margin: auto;
   }
+  .table_accord {
+          margin: 0;
+          width: 100%;
+    }
+
+    .table_accord button {
+      font-size: 0.4em;
+    }
+
+  #support {
+    width: 100%;
+    margin-left: -20px;;
+    padding-left: 0;
+  }  
 }
+
+          
+        
+
