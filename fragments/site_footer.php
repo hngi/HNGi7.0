@@ -52,7 +52,7 @@ footer #socials a  {
                             <div id="socials">
                                 <a href="https://twitter.com/hnginternship" title="Follow on Twitter!"><img
                                         src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/twitter-logo_m1mgzi.svg"></a>
-                                <a href="https://https://www.facebook.com/HNG-Internship-115577009820117/"><img title="Follow on Facebook!"
+                                <a href="https://www.facebook.com/HNG-Internship-115577009820117/"><img title="Follow on Facebook!"
                                         src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/facebook-logo_bw1hal.svg"></a>
                                 <a href="https://dribble.com"><img title="Follow on Dribble!"
                                         src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/dribble-logo_w4vwuz.svg"></a>
