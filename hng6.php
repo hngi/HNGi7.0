@@ -20,6 +20,7 @@
 	</style>
 
 </head>
+<<<<<<< HEAD
 
 <body>
 		<?php
@@ -28,6 +29,12 @@
 	<div  class="containers">
 </div>
 
+=======
+<body class="container-fluid">
+	<?php
+		include('fragments/site_header.php');
+	?>
+>>>>>>> 06944d632d0a4f226cb83c4ee3c93abe90d1bf02
 	<section id="countdown-section">
 		<h2 class="darkblue-text center-text" id="countdown-intro">Countdown to HNGi7.0 </h2>
 
