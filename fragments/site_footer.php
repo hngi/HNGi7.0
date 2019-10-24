@@ -17,11 +17,11 @@ p {
 
 
 <footer class="tripp" >
-                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722444/hng-brand-logo_gnplmq.svg">
+                <span><img class = "hng-logo" src="https://res.cloudinary.com/jaycodist/image/upload/v1570722444/hng-brand-logo_gnplmq.svg"></span>
                 <nav class="footer-nav">
                     <div class="row">
                         <div class="col-sm-3 pb-3">
-                            <h2 class="skyblue-text">Quick Links</h2>
+                            <h2 class="skyblue-text" id="quick-links">Quick Links</h2>
                             <div id="link-list">
                                 <a href="join-intern" class="skyblue-text">Join HNG</a>
                                 <a href="index" class="skyblue-text">About HNG</a>

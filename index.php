@@ -18,6 +18,7 @@
 
     #header {
       padding: 0 50px;
+      margin-top: 30px;
     }
 
     #home {
