@@ -15,7 +15,7 @@ if (isset($_GET["code"])) {
     }
     $message = $admin->createNewPassword($password, $code);
      $getmess = '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: green; color: #fff; width: 80% !important; text-align: center;"></p>';
-    header("location: admin_login.php?getmess".$getmess);
+    header("location: admin_login?getmess".$getmess);
   }
 }else{
    exit("Can't find page");
