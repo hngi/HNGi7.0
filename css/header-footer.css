@@ -65,6 +65,11 @@ header .header-links:hover {
 header #join-hng {
     align-self: center;
 }
+#join-hng:hover {
+	background: #0088C7 ;
+	text-decoration: none ;
+	color: #ffff ;
+}
 
 header #mobile-bars {
     position: absolute;
