@@ -156,7 +156,10 @@ header .wrap .logo{
 }
 .inputs-wrap #submit:hover
 {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    background: #0088C7 !important;
+	text-decoration: none !important;
+	color: #ffff !important;
+	box-shadow: none !important;
 }
 
 .final{
