@@ -1,3 +1,41 @@
+<?php
+    require 'classControllers/init.php';
+    $internExperience = new InternExperience();
+    if(isset($_POST['ok'])){
+        $names = $database->escape_string($_POST["names"]);
+        $stack = $database->escape_string($_POST["stack"]);
+        $experience = $database->escape_string($_POST['experience']);
+
+        if(isset($_FILES['image']['name']) && $_FILES['image']['name'] != ""){
+            $folder = "./uploads/interns/";
+            $ext = strtolower(end(explode(".",$_FILES['image']['name'])));
+            $allowed = array('jpg','jpeg','png');
+            if(in_array($ext,$allowed)){
+                $image_name = uniqid($_FILES['image']['name']);
+                $destination = $folder."/".$image_name;
+                $source = $_FILES['image']['tmp_name'];
+
+                if(move_uploaded_file($source,$destination)){
+                    $image = $image_name;
+                }else{
+                    $image = "";
+                }
+            }else{
+                $image = "";
+            }
+
+        }else{
+            $image = "";
+        }
+
+        $internExperience->saveExperience("$names","$stack","$image","$experience");
+
+        $_SESSION['msg'] = "<div class='alert alert-success'>Your experience has been submitted successfully!</div>";
+        header("location:intern-experience.php");
+        exit();
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,7 +77,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <form action="submit-experience.php" method="post" role="form" enctype="multipart/form-data">
+                    <form action="" method="post" role="form" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="name">Full name</label>
                             <input type="text" name="names" class="form-control" required placeholder="Full Name" id="name">

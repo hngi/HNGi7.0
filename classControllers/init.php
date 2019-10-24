@@ -9,5 +9,6 @@ require_once "mailController.php";
 require_once "mentor.php";
 require_once "Mentors.php";
 require_once "Interns.php";
+require_once "InternExperience.php";
 require_once "LockRegForm.php";
 require_once "validation.php";
