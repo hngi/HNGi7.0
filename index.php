@@ -560,7 +560,7 @@
 			<a href="#"><img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722855/bluechip-logo_rw62cu.svg"></a>
 			<a href="#"><img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg"></a>
 		</div>
-		<p class="center-text"><a href="donate.html" class="def-button shadowed center">Become a Sponsor</a></p>
+		<p class="center-text"><a href="donate.html" class="def-button shadowed center no-underline">Become a Sponsor</a></p>
 	</section>
     </main>
     

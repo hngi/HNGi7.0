@@ -75,12 +75,18 @@ if (isset($_POST['login'])) {
 
       ?>
       <p id="result"></p>
-
+      <div class="inputWithIcon iconBg">
+      <i class="fa fa-envelope" aria-hidden="true"></i>
       <input type="email" name="email" id="email" placeholder="enter your Email" required />
-      <input type="password" name="password" id="password" placeholder="enter your password" required>
+      </div>
 
+      <div class="inputWithIcon iconBg">
+        <i class="fa fa-key" aria-hidden="true"></i>
+        <input type="password" name="password" id="password" placeholder="enter your password" required>
+      </div>
+      
       <button type="submit" onclick="signup()" name="login">LOG IN</button>
-      <a href="forgotpassword.php" class="text-danger">Forgot Password?</a>
+      <a href="forgotpassword.php" class="text-danger small-text">Forgot Password?</a>
 
     </form>
   </div>
