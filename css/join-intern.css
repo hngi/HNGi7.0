@@ -12,6 +12,12 @@ header {
  background: #d1f0f6;
  width: 100%;
 }
+.def-button:hover {
+	background: #0088C7 !important;
+	text-decoration: none !important;
+	color: #ffff !important;
+	box-shadow: none !important;
+}
 nav ul {
  float: right;
  margin-right: 20px;
