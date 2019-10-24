@@ -15,26 +15,67 @@ class Mentors
 	public $timestamp;
 
 
-	public function Apply_mentor(){
+	public function Apply_mentor()
+	{
 		global $database;
 		$res = $database->query("INSERT INTO mentors()
 			VALUES(NULL, '$this->area_of_expertise', '$this->photo_url', '$this->name', '$this->email', '$this->phone_no', '$this->link_to_portfolio', '$this->link_to_linkedin', '$this->link_to_cv', '$this->why_interested', '$this->current_state', '$this->employment_status', '$this->timestamp')");
 		return $res;
-
 	}
-	public function showAll_mentors(){
+	public function showAll_mentors()
+	{
 		global $database;
 		$result = $database->query("SELECT * FROM mentors");
-		$array = array();  
-        while($row = mysqli_fetch_array($result))  
-           {  
-                $array[] = $row;  
-           }  
-           return $array;
-           
+		$array = array();
+		while ($row = mysqli_fetch_array($result)) {
+			$array[] = $row;
+		}
+		return $array;
 	}
-	
-	
+	public function ById($id = 0)
+	{
+		global $database;
+		$result = $database->query("SELECT * FROM mentors WHERE mentor_id = {$id} LIMIT 1");
+		$record = mysqli_fetch_array($result);
+		return $record;
+	}
+	public function ByName($name)
+	{
+		global $database;
+		$result = $database->query("SELECT * FROM mentors WHERE `name` LIKE '%$name%'");
+		$count = $database->affected_rows();
+		if ($count > 0) {
+			// mentors exist
+			$sn = 1;
+			$display = "";
+			while ($row = mysqli_fetch_assoc($result)) {
+				$display .= '
+                    <tr>
+                        <td>' . $sn . '</td>
+                        
+                        <td>' . $row["area_of_expertise"] . '</td>
+                        <td><img src="' . $row["photo_url"] . '" style="width: 50px; height: 50px;"></td>
+                        <td>' . $row["name"] . '</td>
+                        <td>' . $row["email"] . '</td>
+                        <td>' . $row["phone_no"] . '</td>
+                        
+                        <td>' . $row["link_to_cv"] . '</td>
+                        <td>' . $row["why_interested"] . '</td>
+                        <td>' . $row["current_state"] . '</td>
+                        <td>' . $row["employment_status"] . '</td>
+                        <td>' . $row["timestamp"] . '</td>
+                        <td>' . '<button type="button" class="btn btn-info btn-xs" onClick="displayEach(' . $row["mentor_id"] . ');">&nbsp;View&nbsp;</button>&nbsp;<a onClick=\"javacript: return confirm("Please confirm deletion");\" href="registered_mentors.php?delete_id=' . $row["mentor_id"] . '" class="btn btn-danger btn-xs">Delete</a>' . '</td>
+                        
+                    </tr>';
+				$sn++;
+			}
+		} else {
+			// there are no mentors
+			$display = 0;
+		}
+
+		return $display;
+	}
 }
 $mentor = new Mentors;
 	// $mentor = new Mentors;

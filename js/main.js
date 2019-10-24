@@ -1,66 +1,4 @@
-    const hamburger = document.getElementById("hamburger");
-    const aside = document.getElementsByTagName("aside")[0];
-    const hide_aside = document.getElementsByClassName("hide-aside")[0];
-    var mediaQuery = window.matchMedia("(max-width: 960px)");
-    var slideIndex = 0;
-
-    showSlides(mediaQuery);
-    mediaQuery.addListener(showSlides);
-
-
-    //const cards = document.getElementsByClassName("card1");
-    function showSlides(mediaQueryx) {
-        var i;
-
-        var cards = document.getElementsByClassName("card1");
-        if (mediaQuery.matches) {
-
-            //var dots = document.getElementsByClassName("dot");
-            for (i = 0; i < cards.length; i++) {
-                cards[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > cards.length) { slideIndex = 1 }
-
-                cards[i].style.display = "block";
-            }
-
-        }
-
-    
-    //handle sroll to top arrow
-  $('a[href*="#"]')
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
-      location.hostname == this.hostname
-    ) {
-      var target = $(this.hash);
-     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      
-      if (target.length) {
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000, function() {
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { 
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); 
-            $target.focus(); 
-          };
-        });
-      }
-    }
-  });
-
-        //darkangel cc.
+          //darkangel cc.
         const daysElem = document.querySelector('#days'), //Edit this selector to pick the days element in your HTML.
     hoursElem = document.querySelector('#hours'),
     minutesElem = document.querySelector('#minutes'),
@@ -93,3 +31,10 @@
   setTimeout(updateClock, 1000);
   }
   updateClock();
+function activeDropDown(strings){
+    // let collapsebtn = 'button' + strings.split('').splice(7,6).join('').charAt(0).toUpperCase() + strings.split('').splice(8,7).join('');
+     //let collapseEl = document.getElementById(collapseId);
+      let el = document.getElementById(strings);
+      setTimeout(()=>{
+        el.classList.toggle('activeHomepageDrop')}, 200);
+}

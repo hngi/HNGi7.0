@@ -1,11 +1,23 @@
 <?php
 require 'classControllers/init.php';
+
 if (!isset($_SESSION["role"])) {
   header('Location:admin_login.php');
 }
 // include('backend/Interns.php');
 $interns = new Intern;
 $display = $interns->allInterns();
+
+if (isset($_POST['search'])) {
+  $interns = new Intern;
+  $display = $interns->search($_POST['search']);
+}
+
+if (isset($_GET['delete_id'])) {
+  $intern_id = $_GET['delete_id'];
+
+  $message = $interns->DeleteIntern($intern_id);
+}
 
 ?>
 <!DOCTYPE html>
@@ -20,16 +32,20 @@ $display = $interns->allInterns();
   <link rel="stylesheet" href="css/dashboard.css">
 
   <!-- Latest compiled and minified CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!-- please do not change from maxcdn bootstrap-->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- jQuery library -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
+
+  <script type="text/javascript" src="js/dashboard.js"></script>
   <style type="text/css">
     .card {
       height: 150px;
@@ -64,19 +80,14 @@ $display = $interns->allInterns();
 
 <body>
   <main class="reg">
-    <section id="overview-section interns-list">
-      <!-- <h1>Dashboard</h1> -->
-      <h2>Registered Interns </h2>
-      <!-- <section id="intern-section">
-				Populated by `js/dashboard.js`
-			</section> -->
-
-      <div class="container">
+    <section id="overview-section">
+      <h1>Registered Interns</h1>
+      <div class="register-container">
         <div class="row">
 
           <?php
           if ($display == "0") {
-            echo "<h2>There are no Registered Interns</h2>";
+            echo "<h2 class='text-warning'>There are no Registered Interns</h2>";
           } else {
             ?>
             <!--<div class="col-md-3">-->
@@ -84,28 +95,50 @@ $display = $interns->allInterns();
             <!--        <button type="button" id="export">Export to Spreadsheet</button>-->
             <!--    </a>-->
             <!--</div>-->
-            <div class="col-md-3">
+            <div class="col-md-12">
               <!--<a href="exports/export-to-pdf.php">-->
               <a href="#" onclick="javascript:printDiv('printablediv')">
-                <button type="button" class="btn btn-primary" id="export">Export to PDF</button>
+                <button type="button" class="btn btn-primary text-right" id="export">Export to PDF</button>
+
               </a>
             </div>
+
+
+            <div class="col-md-12">
+              <div class="row justify-content-end">
+                <div class=" col-md-4 offset-md-4">
+                  <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" role="search" method="POST">
+                    <div class="input-group add-on">
+                      <input class="form-control" placeholder="Search by name or Location" name="search" type="text">
+                      <div class="input-group-btn">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div id="table-row">
+
+            </div>
             <div class="table-responsive" id="printablediv">
-              <table class="table table-hover table-bordered  mt-3 mb-1 table-condensed">
+
+              <table class="table table-hover table-bordered table-sm  mt-3 mb-1">
                 <thead class="table-primary">
                   <tr>
                     <th>S/N</th>
                     <th>Name</th>
-                    <th>Emai</th>
+                    <th>Email</th>
                     <th>Phone</th>
                     <!-- <th>Porfolio</th> -->
                     <th>CV</th>
-                    <th>Exp</th>
+                    <th>Experience</th>
                     <th>Interest</th>
                     <th>Location</th>
-                    <th>Emp. Stat</th>
+                    <th>Employment Status</th>
                     <th>About</th>
-                    <th>Reg. Date</th>
+                    <th>Registration Date</th>
+                    <th>Action</th>
 
                   </tr>
                 </thead>
@@ -116,16 +149,17 @@ $display = $interns->allInterns();
                 </tbody>
               </table>
             </div>
+
           <?php
           }
           ?>
-
         </div>
       </div>
       <br /><br />
       <!-- <button id="export">Export to Spreadsheet</button> -->
 
     </section>
+
     <!-- <section id="details-section">
 			<div id="details-back">
                 <div>
@@ -158,87 +192,52 @@ $display = $interns->allInterns();
   <?php include('fragments/sidebar.php'); ?>
 
 
-  <!-- Modal -->
-  <div class="modal fade" id="coolStuffModal" tabindex="-1" role="dialog" aria-labelledby="coolStuffLabel" aria-hidden="true">
+  <div id="modal-div"></div>
+  <button id="trigger" type="button" class="btn btn-primary" data-toggle="modal" data-target="#details-modal" style="display: none;">
+  </button>
 
-    <!-- <div class="modal fade details-1" id="details-modal" tabindex="-1" role="dialog" aria-labelledby="details-l" aria-hidden="true"> -->
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="contentLabel">Noooo</h5>
-          <!-- <h5 class="modal-title" id="contentLabel"><?= $product['title']; ?></h5> -->
-          <!-- <button class="close" type="button" onclick="closeModel()" aria-label="close">
-          <span aria-hidden="true">&times;</span></button> -->
-        </div>
-        <div class="modal-body">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="center-block">
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <h4>Details</h4>
-                <!-- <p><?= $product['description']; ?></p>
-              <p>Price : <?= money($product['price']); ?></p>
-              <p>Brand: <?= $brand['brand']; ?></p> -->
-                <form class="" action="" method="post">
-                  <div class="form-group">
-                    <div class="row">
-                      <div class="col-sm-3"><label for="quantity">Quantity:</label></div>
-                      <input type="text" name="quantity" id="quantity" class="form-control form-brand" value="">
-                    </div>
-                    <div class="col-xs-9"></div>
-                  </div>
-                  <div class="form-group">
-                    <label for="size">Size :</label>
-                    <select class="form-control" name="size" id="size">
-                      <!-- <option value=""></option>
-        <?php foreach ($sizeArray as $string) {
-          $stringArray = explode(':', $string);
-          $size = $stringArray[0];
-          $quantity = $stringArray[1];
-          echo '<option value="' . $size . '">' . $size . ' (' . $quantity . ' Available)</option>';
-        } ?> -->
-                    </select>
-                  </div>
-                </form>
-              </div>
-              <div class="col-sm-6 modal-footer"></div>
-              <div class="modal-footer col-sm-6">
-                <button type="button" class="btn btn-info" onclick="closeModel()">Close</button>
-                <button type="submit" class="btn btn-warning" onclick="closeModel()">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <script type="text/javascript">
-    // To display the promo items. The code is in index
-    function detailsmodal(id) {
-      var data = {
-        "intern_id": intern_id
-      };
-      jQuery.ajax({
-        url: '/HNGi7.0/registered_interns.php',
-        method: "post",
-        data: data,
-        success: function(data) {
-          jQuery('body').append(data);
-          jQuery('#details-modal').modal('toggle');
-        },
-        error: function() {
-          alert("Something went wrong!")
-        },
+  <script>
+    // Ajax request from Modal To display the each intern.
+    function interndetails(id) {
+      $.get("modal.php", {
+        id: id
+      }, function(data) {
+        console.log(data);
+        $("#modal-div").html(data);
+        //jQuery('#mentor-modal').modal('toggle');
+        //setTimeout(function() {
+        $('#trigger').trigger('click');
+        //}, 500);
       });
+      //   var data = {
+      //     "id": id
+      //   };
+      //   $.ajax({
+      //     url: '',
+      //     method: "get",
+      //     data: data,
+      //     success: function(data) {
+      //       $('body').append(data);
+      //       $('#details-modal').modal('show');
+      //     },
+      //     error: function() {
+      //       alert("Something went wrong!")
+      //     },
+      //   });
+      // }
+
+
+      // // To close the display of each intern
+      // function closeModel() {
+      //   jQuery('#details-modal').modal('hide');
+      //   setTimeout(function() {
+      //     jQuery('#details-modal').remove();
+      //     jQuery('.modal-backdrop').remove();
+      //   }, 500);
     }
   </script>
 
-  <script type="text/javascript" src="js/dashboard.js"></script>
+
 
 
 </body>

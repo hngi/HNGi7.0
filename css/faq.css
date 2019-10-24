@@ -192,10 +192,6 @@ header .wrap .logo{
 }
 
 
-
-
-
-
 @media(max-width:860px){
     header .nav a{
         font-size: 10px;
@@ -226,8 +222,4 @@ header .wrap .logo{
     text-align: center;
     }
     }
-
-    #socials a {
-    display: inline-block;
-    margin-top: 10px;   
-    }
+    
