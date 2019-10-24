@@ -10,24 +10,32 @@
           body {
             font-family: "Open Sans", segoe UI, sans-serif;
           }
-          /* GHOST TOUCHES */
-          .buttonOne, .buttonTwo, .buttonThree, .buttonFour, .buttonFive {
+           /* GHOST TOUCHES */
+        /*  removed opacity*/
+         /* .buttonOne, .buttonTwo, .buttonThree, .buttonFour, .buttonFive {
             opacity: .7;
-          }
+          }*/
           .buttonOne:hover, .buttonTwo:hover, .buttonThree:hover, .buttonFour:hover, .buttonFive:hover {
             cursor: pointer;
             opacity: 1;
           }
-          /* BOOTSTRAP OVERRIDES */
-          .btn-link {
+             /* BOOTSTRAP OVERRIDES */
+        /*  removed opacity*/
+         /* .btn-link {
             opacity: .6
-          }
+          }*/
           .btn-link:hover, .btn-link:active {
             text-decoration: none;
             opacity: 1;
             transition: .4s;
             color: #00AEFF;
           }
+           /*  added border*/
+          #headingTwo, #headingThree , #headingFour, #headingFive {
+         border: 0.5px solid #D3CCCC;
+         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          border-radius: 4px;
+        }
           .card {
             border: none;
           }
@@ -170,9 +178,26 @@
           .accordion {
             border: none;
           }
+          /*   increased font weight and margin*/
           .accordion_tab {
             margin-left: 15%;
+            font-weight: 600;
+            margin-bottom: 0;
           }
+          /* added css to collapse*/
+          .card-body {
+            background: #F5F4F4;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 4px;
+          }
+          /*change accordion header color and border*/
+          .card-header {
+            background-color: #FFFFFF;
+           }
+           #headingOne.card-header {
+            background: #00AEFF;
+            color: #FFFFFF;
+           }
           #support {
             width: 100%;
           }
@@ -457,6 +482,9 @@
           }
           .buttonTwo, .buttonThree, .buttonFour, .buttonFive {
             color: #737373;
+          }
+          .card-header.buttonTwo {
+            color: #fff;
           }
           .para-text {
             font-size: 20px;
