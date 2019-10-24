@@ -18,5 +18,6 @@ class InternExperience
 
     function fetch_experiences(){
         global $database;
+        //Method to fetch interns records
     }
 }
