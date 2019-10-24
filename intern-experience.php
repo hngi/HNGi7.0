@@ -35,6 +35,8 @@
         exit();
     }
 
+    $all_experiences = $internExperience->fetch_experiences();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
