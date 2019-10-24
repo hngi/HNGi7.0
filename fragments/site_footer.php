@@ -1,17 +1,13 @@
 <style>
-
 footer #socials a  {
     display: inline-block;
     margin-top: 10px;  
 }
-
     nav {
         height: auto;
     }
-
 p {
     width: 100%;
-
 }
 </style>
 
@@ -70,4 +66,6 @@ p {
                     </div>
                 </nav>
                 <p class="center-text darkblue-text">&copy 2019, HNG Internship. All rights reserved.</p>
+                <div id="jumptotop"><a id="jumptotop">Jump to Top<span></span></a></div>
+                <script src="./js/scroll-to-top.js"></script>
             </footer>
