@@ -8,8 +8,10 @@
 }
 
 .btn:hover {
-  background-color: rgb(29, 180, 250);
-
+  background: #0088C7 !important;
+	text-decoration: none !important;
+	color: #ffff !important;
+	box-shadow: none !important;
 }
 
 .jumb {
