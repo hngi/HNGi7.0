@@ -12,6 +12,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     padding: 1rem 3rem;
+    margin-top: 25px;
 }
 
 header a,
