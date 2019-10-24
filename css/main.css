@@ -158,6 +158,8 @@
           .card1-heading {
             margin: 1em 0;
             font-size: 1.05em;
+            margin-right: 30px;
+          
           }
           .card1-text {
             font-size: 0.95em;
@@ -166,6 +168,7 @@
           }
           .text__dark-blue {
             color: #084482;
+            margin-left: 10px;
           }
           .accordion {
             border: none;
@@ -216,6 +219,7 @@
             font-size: 16px;
             line-height: 2em;
             color: #333333;
+            margin-left: -4px;
           }
           .Apply-internship7 {
             color: #084482;
@@ -446,6 +450,7 @@
           #wrapper {
             background-color: #3c6b9c;
             color: #F2f5f9;
+            margin-left: -5px;
           }
           .activeHomepageDrop {
             background-color: #00AEFF;
@@ -538,6 +543,7 @@
           }
           .card1-text {
             font-size: 1.05em;
+           
           }
           #welcome-text {
             text-align: left;
@@ -782,6 +788,19 @@
             transition: 0.4s ease-out;
           }
         }
+        #jz{
+              color: #333333;
+              font-style: normal;
+              letter-spacing: 1.1px;
+              text-align: justify;
+              padding-top: 20px;
+        }
+        @media screen and (max-width: 640px) {
+          #jz{
+            width: 100%;
+            text-align: -webkit-center;
+          }
+        }
 
         @media screen and (max-width: 640px) {
           #welcome-text {
@@ -792,18 +811,23 @@
           }
           .countdown__heading {
             width: 90%;
+            margin-left: 10px;
           }
           .subheading {
             width: 85%;
+            margin-left: 10px;
+          
           }
           .card1 {
             width: 85%;
           }
           .card1-text {
             width: 90%;
+            margin-left: 10px;
           }
           #tess {
             width: 100%;
+            margin-left: -1px;
           }
           #how-it-works {
             width: 85%;
@@ -819,6 +843,7 @@
           }
           .mt-5 {
             width: 85%;
+            margin: auto;
           }
           .bass {
             width: 85%;
