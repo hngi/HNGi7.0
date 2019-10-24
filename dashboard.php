@@ -15,7 +15,7 @@ if(!isset($_SESSION["role"])) {
 	$noOfAdmins = $lockForm->getNoOfAdmins();
 
     if($status == 1) {
-        // echo "<p>The form is OPen for Registration</p>";
+        // echo "<p>The form is Open for Registration</p>";
     } else {
         // echo "<p>Registration is closed</p>";
     }
@@ -54,12 +54,13 @@ if(!isset($_SESSION["role"])) {
 	<style type="text/css">
 		.card {
 			height: 150px;
-			background: #D2D8E8;
+			background: #f3f3f3;
 			margin: 15px;
 			padding: 20px;
-			border-radius: 15px;
+			border-radius: 8px;
 			text-align: center;
 			font-size: 20px;
+			box-shadow: 1px 0 4px rgba(0,0,0,0.3);
 			
 		}
 
@@ -74,57 +75,54 @@ if(!isset($_SESSION["role"])) {
 	<main>
 		<section id="overview-section">
 			<h1>Dashboard</h1>
-			<h2>Welcome <?php echo $_SESSION["fullname"]; ?></h2>
-			<!-- <section id="intern-section">
-				Populated by `js/dashboard.js` 
-			</section> -->
-
-			<div class="row">
-				
-				<div class="col-md-5">
+			<div class="row" id="welcome">
+				<div class="col-md-9"><h2>Welcome, <?php echo $_SESSION["fullname"]; ?> !</h2></div>
+				<div class="col-md-3">
 					<form method="post">
 						<?php
 							if($status == 1) {
 								// form is open
 								?>
 									<input type="hidden" name="status" value="close" />
-									<button style="background: #924846;" type="submit" name="lockopenform" id="export">Registration is Open, Lock Now</button>
+									<button style="background: #b31329;" type="submit" name="lockopenform" id="export">Registration is Open, Lock Now</button>
 								<?php
 							} else if($status == 0) {
 								// form is closed
 								?>
 									<input type="hidden" name="status" value="open" />
-									<button style="background: #4E6A4D;" type="submit" name="lockopenform" id="export">Lock Registration Locked, Open Now</button>
+									<button style="background: #5cb85c;" type="submit" name="lockopenform" id="export">Registration Locked, Open Now</button>
 								<?php
 							}
 						?>
 						
 					</form>
-					
 				</div>
-				
 			</div>
+			
+			<!-- <section id="intern-section">
+				Populated by `js/dashboard.js` 
+			</section> -->
 
 			<div class="container">
 				<div class="row">
 					<a href="registered_interns.php">
 						<div class="col-md-2 card">
-							Registered Interns
 							<p><?php echo $noOfInterns; ?></p>
+							Registered Interns
 						</div>
 					</a>
 
 					<a href="registered_mentors.php">
 						<div class="col-md-2 card">
-							Registered Mentors
 							<p><?php echo $noOfMentors; ?></p>
+							Registered Mentors
 						</div>
 					</a>
 					
 					<a href="admins.php">
 						<div class="col-md-2 card">
-							Registered Admins
 							<p><?php echo $noOfAdmins; ?></p>
+							Registered Admins
 						</div>
 					</a>
 				</div>

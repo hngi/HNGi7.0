@@ -8,6 +8,7 @@ if (isset($_POST['login'])) {
 }
 
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -63,6 +64,10 @@ if (isset($_POST['login'])) {
             
               echo $errors;
             
+          }
+
+          if(isset($_GET["blocked"])) {
+            echo  '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: #F7CFCF; color: #6A0E0D; width: 80% !important; text-align: center;">Your account has been de-activated, Please contact a super admin.</p>';
           }
 
         ?>

@@ -51,29 +51,36 @@ if (isset($_POST['contact-btn'])) {
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
   <link rel="stylesheet" type="text/css" href="css/header-footer.css">
-  <link rel="stylesheet" href="css/newContact.css">
   <link rel="stylesheet" href="css/faq.css">
-
+<style>
+  @media screen and (max-width:899px){
+  footer{
+      font-size: 2.5vw;
+  }
+  footer #socials img {
+      padding: 20%;
+      height: 2.5vw;
+      width: 2.5vw;
+  }
+}
+@media screen and (min-width:900px){
+  footer{
+      padding: 4rem 8vw;
+      font-size: 20px;
+  }
+  footer #socials img {
+      padding: 25%;
+      height: 25px;
+      width: 25px;
+  }
+}
+</style>
 </head>
 
 <body>
-  <header>
-    <a href="index.php"><img id="hng-logo" src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png"></a>
-    <input type="checkbox" id="mobile-bars-check" />
-    <label for="mobile-bars-check" id="mobile-bars">
-      <!--img src="images/bars-icon.png" height="23px"-->
-      <div class="stix" id="stik1"></div>
-      <div class="stix" id="stik2"></div>
-      <div class="stix" id="stik3"></div>
-    </label>
-    <nav>
-      <a href="index.php" class="header-links">Home</a>
-      <a href="hng6.php" class="header-links">HNG 6.0</a>
-      <a href="mentorpage.php" class="header-links">Mentors</a>
-      <a href="contactform.php" class="header-links">Contact</a>
-      <a href="join-intern.php" id="join-hng" class="def-button">Join HNGi 7.0</a>
-    </nav>
-  </header>
+<?php
+    include_once "fragments/site_header.php";
+?>
 
   <section class="freq-n">
     <div class="container">
@@ -109,58 +116,9 @@ if (isset($_POST['contact-btn'])) {
       </div>
     </div>
   </section>
-  
-  <footer>
-    <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722444/hng-brand-logo_gnplmq.svg">
-    <nav>
-      <section>
-        <h2 class="skyblue-text">Quick Links</h2>
-        <div id="link-list">
-          <a href="join-intern.php" class="skyblue-text">Join HNG</a>
-          <a href="index.php" class="skyblue-text">About HNG</a>
-          <a href="donationpage.html" class="skyblue-text">Become a Sponsor</a>
-          <a href="MentorSetUpPage2.php" class="skyblue-text">Sign up as Mentor</a>
-          <a href="faq.php" class="skyblue-text">FAQ</a>
-
-        </div>
-      </section>
-      <section id="contact-section">
-        <h2 class="skyblue-text">Contact Us</h2>
-        <div>
-          <a href="tel:+2348123456789">
-            <strong>
-              Phone: <br />
-            </strong>
-            +234 812 345 6789
-          </a>
-          <br />
-          <a href="mailto:interns@hng.tech">
-            <strong>
-              Email: <br />
-            </strong>
-            interns@hng.tech
-          </a>
-        </div>
-      </section>
-      <section>
-        <h2 class="skyblue-text">Office Address</h2>
-        <p id="address">
-          3 Birrel Avenue <br /> Sabo, Yaba, <br /> Lagos state
-        </p>
-      </section>
-      <section>
-        <h2 class="skyblue-text">Follow Us</h2>
-        <div id="socials">
-          <a href="https://twitter.com/hnginternship" title="Follow on Twitter!"><img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/twitter-logo_m1mgzi.svg"></a>
-          <a href="https://www.facebook.com/HNG-Internship-115577009820117/"><img title="Follow on Facebook!" src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/facebook-logo_bw1hal.svg"></a>
-          <a href="https://dribble.com"><img title="Follow on Dribble!" src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/dribble-logo_w4vwuz.svg"></a>
-        </div>
-      </section>
-    </nav>
-    <p class="center-text darkblue-text">&copy 2019, HNG Internship. All rights reserved.</p>
-  </footer>
-  <div id="jumptotop"><span></span></div>
-                <script src="./js/scroll-to-top.js"></script>
+ <?php
+    include_once "fragments/site_footer.php";
+?>
 </body>
 
 </html>
