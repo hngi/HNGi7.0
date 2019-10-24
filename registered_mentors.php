@@ -33,7 +33,7 @@ if (isset($_GET['delete_id'])) {
     <link rel="stylesheet" href="css/dashboard.css">
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -115,7 +115,7 @@ if (isset($_GET['delete_id'])) {
                 </div>
                 <div class="row" id="table-row">
                     <div class="table-responsive" id="printablediv">
-                        <table class="table table-hover mt-3 mb-1">
+                        <table class="table table-hover mt-3 mb-1 table-bordered">
                             <thead class="table-primary">
                                 <tr>
                                     <th>S/N</th>

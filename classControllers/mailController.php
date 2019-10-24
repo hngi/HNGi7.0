@@ -45,7 +45,7 @@ function sendNewAdminMail($email, $password, $subject, $body)
     $mail->Body    = "$body
                   <tr>
     <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
-                       <b style='color:seablue;'>Email: $email <br> Password: $password</b> <br> <a href='https://hngi7.herokuapp.com/admin_login.php'>Follow this link to login</a>
+                       <b style='color:seablue;'>Email: $email <br> Password: $password</b> <br> <a href='https://hngi7.hng.tech/admin_login.php'>Follow this link to login</a>
                       </td>
                   </tr>
 <tr>
@@ -205,7 +205,7 @@ function contactMail($email, $ticket, $name, $subject, $body)
 
 
 //for contact us form
-function forGetPasswordMail($url,$subject, $body,$email,$fullname)
+function forGetPasswordMail($url,$subject,$email,$fullname)
 {
   global $mail;
 
@@ -221,7 +221,7 @@ function forGetPasswordMail($url,$subject, $body,$email,$fullname)
     $mail->Port       = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('alisataylorm.m@gmail.com', $fullname);
+    $mail->setFrom('alisataylorm.m@gmail.com',$url);
     $mail->addAddress("$email");     // Add a recipient
     // $mail->addAddress('ellen@example.com');               // Name is optional
     $mail->addReplyTo('no-reply@gmail.com', 'No-Reply');
@@ -236,10 +236,45 @@ function forGetPasswordMail($url,$subject, $body,$email,$fullname)
     ;
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = $subject;
-    $mail->Body    = "$body
+    $mail->Body    = "<html>
+    <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+    </head>
+    <body style='margin: 0; padding: 0;'>
+      <table border='0' cellpadding='0' cellspacing='0' width='100%'>	
+        <tr>
+          <td style='padding: 10px 0 30px 0;'>
+            <table align='center' border='0' cellpadding='0' cellspacing='0' width='600' style='border: 1px solid #cccccc; border-collapse: collapse;'>
+              <tr>
+                <td align='center' bgcolor='#fff' style='padding: 40px 0 30px 0; color: #153643; font-size: 28px; font-weight: bold; font-family: Arial, sans-serif;'>
+                  <img src='https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png' alt='HNGi 7.0' width='300' height='150' style='display: block;' />
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor='#ffffff' style='padding: 40px 30px 40px 30px;'>
+                  <table border='0' cellpadding='0' cellspacing='0' width='100%'>
+                    <tr>
+                      <td style='color: #153643; font-family: Arial, sans-serif; font-size: 24px;'>
+                        <b>Dear, User </b>
+                      </td>
+                    </tr>
                   <tr>
     <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
-                       <b style='color:seablue;'>Your reset link : $url </b> <br> <a href='https://hngi7.herokuapp.com/admin_login.php'>Follow this link to login</a>
+                      
+                       <p>You recently requested to reset your password for your HNGi account.<br>
+                        Use the link below to reset it.<br>
+                        This password reset is only valid for the next 24 hours.
+                        Reset your password $fullname<br><br></p>
+
+                       <p>For security, If you did not request a password reset, please ignore this email or <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
+
+                       <p>If you’re having trouble clicking the link above, copy and paste the URL below into your web browser.
+
+                       <br> <a href='http://hngi7.hng.tech/admin_login.php'>Follow this link to login</a></p>
+                     <p> Thanks,<br>
+                      The User Suppport Team.</p>
+
                       </td>
                   </tr>
 <tr>
