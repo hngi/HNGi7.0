@@ -144,7 +144,7 @@ class Intern
                 $display .= '
                     <tr>
                         <td>' . $no . '</td>
-                        <td>' . $row["intern_id"] . '</td>
+
                         <td>' . $row["name"] . '</td>
                         <td>' . $row["email"] . '</td>
                         <td>' . $row["phone_no"] . '</td>
@@ -156,8 +156,8 @@ class Intern
                         <td>' . $row["employment_status"] . '</td>
                         <td>' . $row["about"] . '</td>
                         <td>' . $row["timestamp"] . '</td>
-                        <td>' . '<button type="button" class="btn btn-xs btn-info"
-                              onclick="interndetails(' . $row["intern_id"] . ')">&nbsp;View&nbsp;</button>&nbsp;<a onClick=\"javacript: return confirm("Please confirm deletion");\" href="registered_interns.php?delete_id=' . $row["intern_id"] . '" class="btn btn-danger btn-xs">Delete</a>' . '</td>
+                        <td>' . '<button type="button" class="btn btn-sm btn-info"
+                              onclick="interndetails(' . $row["intern_id"] . ')">&nbsp;View&nbsp;</button>&nbsp;<a onClick=\"javacript: return confirm("Please confirm deletion");\" href="registered_interns.php?delete_id=' . $row["intern_id"] . '" class="btn btn-danger btn-sm">Delete</a>' . '</td>
 
                     </tr>';
             }
