@@ -27,8 +27,8 @@
           .btn-link:hover, .btn-link:active {
             text-decoration: none;
             opacity: 1;
+            color: white;
             transition: .4s;
-            color: #00AEFF;
           }
            /*  added border*/
           #headingTwo, #headingThree , #headingFour, #headingFive {
@@ -170,8 +170,7 @@
           
           }
           .card1-text {
-            font-size: 0.95em;
-            letter-spacing: 0.05em;
+            font-size: 1em;
             color: #333333;
           }
           .text__dark-blue {
@@ -184,7 +183,7 @@
           /*   increased font weight and margin*/
           .accordion_tab {
             margin-left: 15%;
-            font-weight: 600;
+            font-weight: 400;
             margin-bottom: 0;
           }
           /* added css to collapse*/
@@ -197,10 +196,11 @@
           .card-header {
             background-color: #FFFFFF;
            }
-           #headingOne.card-header {
-            background: #00AEFF;
-            color: #FFFFFF;
+
+           .card-header:hover {
+             background-color: #0088C7;
            }
+
           #support {
             width: 100%;
           }
@@ -570,7 +570,7 @@
             font-size: 1.2em;
           }
           .card1-text {
-            font-size: 1.05em;
+            font-size: 1em;
            
           }
           #welcome-text {
@@ -850,8 +850,7 @@
             width: 85%;
           }
           .card1-text {
-            width: 90%;
-            margin-left: 10px;
+            width: 100%;
           }
           #tess {
             width: 100%;

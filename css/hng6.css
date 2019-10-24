@@ -353,12 +353,7 @@ h1
 	max-width: 15vw;
 }
 
-
-
-
-
-@media (max-width: 860px)
-{
+@media screen and (max-width: 860px){
 	body > *
 	{
 		overflow-x: hidden;
@@ -611,11 +606,8 @@ text-align: left;
 	font-weight: bold;
 	text-align: center;
 }
-
+}
 @media screen and (max-width: 400px) {
-	.section4 {
-	
-	}
 	.section4 h2 {
 		font-size: 20px;
 		font-weight: bold;
@@ -667,4 +659,5 @@ text-align: left;
 .section3 p {
 text-align: left;
 }
+
 }
