@@ -238,6 +238,7 @@ class Admins
       return false;
     }
   }
+  
   public function isAdminExist($email){
     global $database;
     //global $con;
