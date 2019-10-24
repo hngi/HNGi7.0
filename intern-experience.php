@@ -25,6 +25,7 @@
         <div class="">
             <h2>Experience Recap From Past Interns</h2>
             <p class="lead">Testimonies From Ex HNG Internship Finalists</p>
+            <a href="#modal" data-toggle="modal" class="btn btn-primary">Submit Experience</a> <!--button to add experience-->
         </div>
 
     </div>
