@@ -92,6 +92,7 @@
                         </div>
                         <div class="form-group">
                             <label for="image">Your Picture(Optional)</label>
+                            <br>
                             <input type="file" name="image" accept="image/*">
                         </div>
 
@@ -110,6 +111,12 @@
     <main>
         <section>
             <section class="mentors-section">
+                <?php
+                    if(isset($_SESSION['msg'])){
+                        echo $_SESSION['msg'];
+                        unset($_SESSION['msg']);
+                    }
+                ?>
                 <div class="wrapper">
                     <div class="wrapper-child"  >
                         <img class="image" src="./Experience_files/Capture03_ynye5x.jpg">
