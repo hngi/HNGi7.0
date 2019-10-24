@@ -32,8 +32,13 @@ header .def-button {
 }
 
 header .def-button:hover {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    background: #0088C7 !important;
     text-decoration: none;
+}
+.def-button:hover {
+	background: #0088C7 !important;
+	text-decoration: none !important;
+	color: #ffff !important;
 }
 
 header nav {
