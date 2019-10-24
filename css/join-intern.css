@@ -12,6 +12,12 @@ header {
  background: #d1f0f6;
  width: 100%;
 }
+#moshe1:hover {
+	background: #0088C7 ;
+	text-decoration: none ;
+	color: #ffff ;
+	box-shadow: none ;
+}
 nav ul {
  float: right;
  margin-right: 20px;

@@ -147,6 +147,23 @@
  .inputs-wrap #submit:hover {
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
  }
+#submit:hover {
+   background: #0088C7 ;
+	text-decoration: none ;
+	color: #ffff ;
+	box-shadow: none ;
+ }
+ #join-hng{
+	 background: #00AEFF;
+	 color: white;
+ }
+ #join-hng:hover {
+	 background: #0088C7 ;
+	text-decoration: none ;
+	color: #ffff ;
+	box-shadow: none ;
+ }
+
 
  .img img {
    width: 20px;
