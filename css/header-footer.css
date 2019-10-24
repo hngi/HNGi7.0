@@ -5,6 +5,7 @@ body {
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
+    /* padding: 0 80px 0 80px; */
 }
 
 header {
@@ -12,6 +13,8 @@ header {
     flex-direction: row;
     justify-content: space-between;
     padding: 1rem 3rem;
+    margin-top: 5px;
+    
 }
 
 header a,
@@ -43,10 +46,12 @@ header nav {
     transition: 0.5s ease-out;
     height: auto;
     width: auto;
+   
 }
 
 header #hng-logo {
     width: 22vw;
+   
 }
 
 header .header-links {
