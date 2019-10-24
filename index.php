@@ -18,7 +18,7 @@
 
     #header {
       padding: 0 50px;
-      margin-top: 30px;
+      margin-top: 20px;
     }
 
     #home {
