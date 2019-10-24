@@ -20,7 +20,6 @@
 	</style>
 
 </head>
-
 <body class="container-fluid">
 	<?php
 		include('fragments/site_header.php');
