@@ -18,7 +18,6 @@
 
     #header {
       padding: 0 50px;
-      margin-top: 30px;
     }
 
     #home {
@@ -76,24 +75,44 @@
         <h3 class="countdown__heading text_center">
           Countdown to HNGi7.0
         </h3>
-        <div id="countdown-circles-container">
-          <div class="countdown__item">
-            <p class="countdown__number" id="days"></p>
-            <p class="text_center countdown__subText">DAYS</p>
-          </div>
-          <div class="countdown__item">
-            <p class="countdown__number" id="hours">23</p>
-            <p class="text_center countdown__subText">HOURS</p>
-          </div>
-          <div class="countdown__item">
-            <p class="countdown__number" id="minutes">52</p>
-            <p class="text_center countdown__subText">MINUTES</p>
-          </div>
-          <div class="countdown__item">
-            <p class="countdown__number" id="seconds">41</p>
-            <p class="text_center countdown__subText">SECONDS</p>
-          </div>
+         <section id="countdown-container">
+      <div id="day-div">
+        <div class="countdown-symbol" id="day-symbol">
+          <div class="arcs-background"></div>
+            <div id="day-start" class="arc arc_start"></div>
+            <div id="day-end" class="arc arc_end"></div>
+          <span id="day-text" class="moshe">05</span>
         </div>
+        <p class="center-text">DAYS</p>
+      </div>
+      <div id="hour-div">
+        <div class="countdown-symbol" id="hour-symbol">
+          <div class="arcs-background"></div>
+            <div id="hour-start" class="arc arc_start"></div>    
+            <div id="hour-end" class="arc arc_end"></div>
+          <span id="hour-text">24</span>
+        </div>
+        <p class="center-text">HOURS</p>
+      </div>
+      <div id="minute-div">
+        <div class="countdown-symbol" id="minute-symbol">
+          <div class="arcs-background"></div>
+            <div id="minute-start" class="arc arc_start"></div>    
+            <div id="minute-end" class="arc arc_end"></div>
+          <span id="minute-text" class="moshe">52</span>
+        </div>
+        <p class="center-text">MINUTES</p>
+      </div>
+      <div id="second-div">
+        <div class="countdown-symbol" id="second-symbol">
+          <div class="arcs-background"></div>
+            <div id="second-start" class="arc arc_start"></div>    
+            <div id="second-end" class="arc arc_end"></div>
+          <span id="second-text">41</span>
+        </div>
+        <p class="center-text">SECONDS</p>
+      </div>
+    </section>
 
       </div>
 
@@ -578,6 +597,7 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
   <script src="js/main.js"></script>
   <div id="jumptotop"><span></span></div>
   <script src="js/scroll-to-top.js"></script>

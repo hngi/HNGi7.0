@@ -21,6 +21,7 @@
 
 </head>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <body>
 		<?php
@@ -30,6 +31,9 @@
 </div>
 
 =======
+=======
+
+>>>>>>> 1c3a464ba6ae73ea79fe9cdcdc73ec87bf0c1ddb
 <body class="container-fluid">
 	<?php
 		include('fragments/site_header.php');
