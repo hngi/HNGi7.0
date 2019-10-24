@@ -94,6 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($mentor->Apply_mentor()) {
               header("location:MentorSetUpPage2.php?message=Application Successful");
+              echo "<script>alert('Image uploaded successfully!')</script>";
             }
           } else {
             $error['image'] = "image failed to upload";

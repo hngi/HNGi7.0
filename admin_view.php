@@ -1,36 +1,19 @@
 <?php
-   require_once "classControllers/init.php";
-    $admin = new Admins();
+require_once "classControllers/init.php";
+$admin = new Admins();
 
-    if(!isset($_SESSION["role"])) {
-        header('Location:admin_login.php'); 
-    }
-
-    if(isset($_POST["submit"])) {
-        $firstname = $database->escape_string($_POST["firstname"]);
-        $lastname = $database->escape_string($_POST["lastname"]);
-        $email = $database->escape_string($_POST["email"]);
-        $role = $database->escape_string($_POST["role"]);
-        $password = rand(123456, 789654);
-        //$password = sha1($password);
-        $resp = $admin->newAdmin($firstname, $lastname, $email, $role,$password);
-        if ($resp) {
-
-            $subject = 'WElCOME TO HNG INTERNSHIP';
-            $body = $firstname . ' ' . $lastname . ' you have been registered as an admin on HNG INTERSHIP site, kindly find the attachment of your registration detail and login with it. You are advise to change your password after you logedd in. Thank you';
-            sendNewAdminMail($email, $password, $subject, $body);
-        }
-
-    }
-
-    if(isset($_GET["editAdminId"])) {
-        $id = $_GET["editAdminId"];
-        $res = $admin->getAdmin($id);
-    }
+if (!isset($_SESSION["role"])) {
+    header('Location:admin_login.php');
+}
+if (isset($_GET["editAdminId"])) {
+    $id = $_GET["editAdminId"];
+    $res = $admin->getAdmin($id);
+}
 
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -40,7 +23,7 @@
     <link rel="stylesheet" href="css/dashboard.css">
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -55,11 +38,12 @@
             margin: 15px;
             padding: 10px;
             border-radius: 15px;
-            
+
         }
     </style>
 
 </head>
+
 <body>
     <main>
         <section id="overview-section">
@@ -97,7 +81,11 @@
                                 <h4>Role</h4>
                             </div>
                             <div class="col-md-6">
-                                <h4><?php if($res["role"]==1) { echo "Super Admin"; } else { echo "Admin"; } ?></h4>
+                                <h4><?php if ($res["role"] == 1) {
+                                        echo "Super Admin";
+                                    } else {
+                                        echo "Admin";
+                                    } ?></h4>
                             </div>
                         </div>
 
@@ -107,16 +95,16 @@
                             </div>
                             <div class="col-md-6">
                                 <a href="admins.php"><button class="btn btn-primary">All Admins</button></a>
-                               <!--  <a href="deleteAdmin.php?deleteAdminId=<?php echo $id; ?>"><button class="btn btn-danger">Delete</button></a> -->
+                                <!--  <a href="deleteAdmin.php?deleteAdminId=<?php echo $id; ?>"><button class="btn btn-danger">Delete</button></a> -->
                             </div>
                         </div>
 
-                    </div> 
+                    </div>
                 </div>
             </div>
 
             <!-- <button id="export">Export to Spreadsheet</button> -->
-        
+
         </section>
         <!-- <section id="details-section">
             <div id="details-back">
@@ -146,10 +134,11 @@
         <div class="stix" id="stik2"></div>
         <div class="stix" id="stik3"></div>
     </label>
-    
+
     <?php include('fragments/sidebar.php'); ?>
 
 </body>
+
 </html>
 
 <script type="text/javascript" src="js/dashboard.js"></script>

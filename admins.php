@@ -209,5 +209,3 @@ if(isset($_GET["activateAdminId"])) {
 </body>
 
 </html>
-
-<script type="text/javascript" src="js/dashboard.js"></script>
