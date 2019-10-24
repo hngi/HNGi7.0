@@ -21,12 +21,15 @@
 
 </head>
 
-<body class="container-fluid">
-	<?php
-		include('fragments/site_header.php');
-	?>
+<body>
+		<?php
+          include('fragments/site_header.php');
+        ?>
+	<div  class="containers">
+</div>
+
 	<section id="countdown-section">
-		<h2 class="darkblue-text center-text" id="countdown-intro">Countdown to HNGi7.0 <span class="blue-text">- 1st January, 2020</span></h2>
+		<h2 class="darkblue-text center-text" id="countdown-intro">Countdown to HNGi7.0 </h2>
 
 		<section id="countdown-container">
 			<div id="day-div">
@@ -74,13 +77,18 @@
 		<div id="about-container">
 			<article>
 				<p>
-					The HNG 6.0 Internship commenced 23rd April, 2019 and ended 58th October, 2020. <br /> <br /> A well-planned, coordinated event where young talented folks from across the globe participated remotely and were involved in learning key skills needed to becoming the best globally in programming, design thinking, machine learning and digital marketing. <br /> <br /> The HNG 6.0 Internship programme comprised of 10 stages. Tasks were given to participants and deadlines for submission was set. Those who were late in submitting tasks and also those who didn’t follow instructions to complete task as required were eliminated at every stage of the event. <br /> <br /> The programme was directed by Mark Essien, (founder-CEO hotels.ng) and some of the participants from the previous HNG Internship edition were brought on board as <a href="mentorpage.php" class="skyblue-text">Mentors</a>, their job was to guide and inspire participatants when needed and also to properly coordinate the event.
+					The HNG 6.0 Internship commenced 23rd April, 2019 and ended 58th October, 2020. <br /> <br /> 
+					A well-planned, coordinated event where young talented folks from across the globe participated remotely 
+					and were involved in learning key skills needed to becoming the best globally in programming, design thinking, machine learning and digital marketing. <br /> <br /> 
+					The HNG 6.0 Internship programme comprised of 10 stages. Tasks were given to participants and deadlines for submission was set. Those who were late in submitting tasks and also those who didn’t follow instructions to complete task as required were eliminated at every stage of the event. <br /> <br /> 
+					The programme was directed by Mark Essien, (founder-CEO hotels.ng) and some of the participants from the previous HNG Internship edition were brought on board as 
+					<a href="mentorpage.php" class="skyblue-text">Mentors</a>, their job was to guide and inspire participatants when needed and also to properly coordinate the event.
 				</p>
 			</article>
 			<img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722500/home-forum_wmrsfj.png">
 		</div>
 	</section>
-	<section>
+	<section class="section2">
 		<h2 class="center-text blue-text">How it All Happened</h2>
 		<div class="center-text gallery-grid">
 			<img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722558/gallery-first_gldujn.png">
@@ -114,15 +122,15 @@
 		</article>
 		<img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722649/home-geeks_vld6nt.png" id="geek-img">
 	</section>
-	<section>
+	<section class="section3">
 		<h2 class="blue-text center-text">HNG 6 Internship Tracks (Curriculum)</h2>
 		<div id="curriculum-flex">
 			<p>
-				Those who participated in HNG 6.0 Internship program were divided into groups according to their interests
+				Those who participated in HNG 6.0 Internship program were divided into groups according to their interests.
 				<br /><br />
-				Those groups were popularly known as tracks in HNG 6.0 Internship and the following were some of the tracks featured
+				Those groups were popularly known as tracks in HNG 6.0 Internship and the following were some of the tracks featured.
 				<br /><br />
-				At various points in the program, collaboration between participants in different tracks is achieved
+				At various points in the program, collaboration between participants in different tracks is achieved.
 			</p>
 			<div id="track-list">
 				<a href="#">BACK END TRACK</a>
@@ -158,7 +166,7 @@
 					<p class="mentor-desc center-text">Mentor, HNG 6.0</p>
 				</div>
 			</div>
-			<p class="center-text"><a href="mentorpage.php" class="def-button shadowed">See all Mentors</a></p>
+			<center><a href="mentorpage.php" class="def-button shadowed">See all Mentors</a></center>
 		</div>
 	</section>
 	<section id="slack-channels">
@@ -174,7 +182,7 @@
 			<div class="skyblue-text">#underworld</div>
 		</div>
 	</section>
-	<section>
+	<section class="section4">
 		<h2 class="center-text blue-text">HNG 6.0 Internship Sponsors</h2>
 		<div id="sponsor-flex-top">
 			<a href="#"><img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg"></a>
