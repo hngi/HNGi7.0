@@ -108,7 +108,7 @@ class Admins
     return $display;
   }
 
-  public function newAdmin($firstname, $lastname, $email, $role,$password)
+  public function newAdmin($firstname, $lastname, $email, $role)
   {
     global $database;
     //global $con;
@@ -125,7 +125,7 @@ class Admins
                                 </div>';
     } else {
       // email is available, good, proceed to register
-
+      $password = rand(123456, 789654);
       $query = "INSERT INTO admins (firstname, lastname, email, password, role, timestamp) VALUES ('" . $firstname . "', '" . $lastname . "', '" . $email . "', '" . $password . "', '" . $role . "', now())";
       $res = $database->query($query);
       $count = $database->affected_rows();
@@ -237,6 +237,25 @@ class Admins
       // failed
       return false;
     }
+  }
+  
+  public function isAdminExist($email){
+    global $database;
+    //global $con;
+    // check for existing email
+    $query = "SELECT * FROM admins WHERE email = '" . $email . "' ";
+    $res = $database->query($query);
+    $count = $database->affected_rows();
+    return $count;
+ }
+  public function getAdminPassword($email){
+      global $database;
+      //global $con;
+      // check for existing email
+      $query = "SELECT password FROM admins WHERE email = '" . $email . "' ";
+      $res = $database->query($query);
+      $row = mysqli_fetch_assoc($res);
+      return $row;
   }
 }
 

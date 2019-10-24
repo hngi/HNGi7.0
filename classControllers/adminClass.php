@@ -11,6 +11,39 @@ class AdminClass
 		return $result;
 	}
 
+	/**************METHOD TO HANDLE FOR REQUESTING FOR PASSWORD CHANGE****************/
+	public function forGetpassword($email, $code)
+	{
+		global $database;
+		$query =  "INSERT INTO resetpassword (code, email) VALUES('$code', '$email')";
+		$sendEmail  = $database->query($query);
+		return $sendEmail;
+			
+	}
+
+	/**************METHOD TO HANDLE PASSWORD RESET****************/
+	public function createNewPassword($password, $code){
+
+     
+      global $database;
+      $getEmailQuery = $database->query( "SELECT * FROM resetpassword WHERE code='$code' LIMIT 1 ");
+      $emails = mysqli_fetch_assoc($getEmailQuery);
+      $email = $database->escape_string($emails['email']);
+      if ($email) {
+        $password = password_hash($password, PASSWORD_BCRYPT);
+        $query = $database->query( "UPDATE admins SET password='$password' WHERE email='$email' ");
+        
+        if ($query) {
+          $query = "DELETE FROM resetpassword WHERE code='$code' ";
+          $deletePass = $database->query($query);
+          return $deletePass;
+        }
+        
+      }
+  
+
+  }
+
 	/*
 	 Function to handle admin sign in
 	 * */

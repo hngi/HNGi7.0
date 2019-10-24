@@ -56,6 +56,8 @@ class DB
         $this->db->header("location: $location");
         
     }
+
+   
 }
 
 $database = new DB();
