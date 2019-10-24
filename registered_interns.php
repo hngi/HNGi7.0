@@ -28,8 +28,8 @@ if (isset($_GET['delete_id'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Interns</title>
-  <link rel="icon" type="img/png" href="images/hng-favicon">
-  <link rel="stylesheet" href="css/dashboard">
+  <link rel="icon" type="img/png" href="images/hng-favicon.png">
+  <link rel="stylesheet" href="css/dashboard.css">
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -163,7 +163,7 @@ if (isset($_GET['delete_id'])) {
     <!-- <section id="details-section">
 			<div id="details-back">
                 <div>
-                    <a href="overview" id="newitem-go-back" title="Go back">
+                    <a href="overview.html" id="newitem-go-back" title="Go back">
                         <div></div>
                     </a>
                 </div>
