@@ -45,6 +45,8 @@
       </section>
     </nav>
     <p class="center-text darkblue-text">&copy 2019, HNG Internship. All rights reserved.</p>
+    <div id="jumptotop"><span></span></div>
+                <script src="./js/scroll-to-top.js"></script>
   </footer>
 
 
