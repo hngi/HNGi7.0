@@ -115,7 +115,7 @@ if (isset($_GET['delete_id'])) {
                 </div>
                 <div class="row" id="table-row">
                     <div class="table-responsive" id="printablediv">
-                        <table class="table table-hover mt-3 mb-1">
+                        <table class="table table-hover mt-3 mb-1 table-bordered">
                             <thead class="table-primary">
                                 <tr>
                                     <th>S/N</th>
