@@ -12,49 +12,14 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
-    <style>
-        #header {
-            padding: 0 50px;
-            margin-top: 30px;
-        }
-        
-        #header nav {
-            margin-right: 10px;
-        }
-        
-        #home {
-            display: none;
-        }
-        
-        main {
-            padding: 0 50px;
-        }
-        
-        footer {
-            width: 100% !important;
-        }
-        
-        @media screen and (max-width: 900px) {
-            #header,
-            main {
-                padding: 0;
-                margin-top: 10px;
-            }
-            #support {
-                margin-left: -5px;
-            }
-        }
-    </style>
-
 </head>
 
 <body>
-    <div class="container-fluid" style="max-width: 1800px;">
+    <div class="container-fluid">
         <img src="https://bit.ly/2OC3tWo" id="corner-circle" alt="Graphic at the top right corner">
         <div class="containerGrid">
-            <?php
-          include('fragments/site_header.php');
-        ?>
+            <?php include('fragments/site_header.php');?>
+        <!--
                 <main>
                     <div class="main-first-row">
                         <div class="welcome-column">
@@ -522,7 +487,6 @@
                                     </div>
                                 </div>
                             </section>
-                            <!-- sponsor section by hayjay -->
                             <section>
                                 <h2 class="center-text blue-text">HNG 6.0 Internship Sponsors</h2>
                                 <div id="sponsor-flex-top">
@@ -539,7 +503,7 @@
                                 <p class="center-text"><a href="donate.html" class="def-button shadowed center no-underline">Become a Sponsor</a></p>
                             </section>
                 </main>
-
+            -->
 
                 </div>
                 </div>
