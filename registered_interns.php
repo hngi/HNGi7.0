@@ -101,18 +101,18 @@
                                 <!-- <thead class="table-primary"> -->
                                 <thead>
                                     <tr>
-                                    <th data-heading="sn">SN<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-                                    <th data-heading="name">Name<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-                                    <th data-heading="email">Email<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-                                    <th data-heading="phone">Phone No<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-                                    <th data-heading="cv">CV<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-                                    <th data-heading="experience">Experience<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
+                                    <th data-heading="sn">SN<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                    <th data-heading="name">Name<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                    <th data-heading="email">Email<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                    <th data-heading="phone">Phone No<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                    <th data-heading="cv">CV<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                    <th data-heading="experience">Experience<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
                                     <!-- <th>Link To Linkedin</th> -->
-                                    <th data-heading="interest">Interest<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-                                    <th data-heading="location">Location<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-                                    <th data-heading="employmentStatus">Employment Status<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-                                    <th data-heading="about">About<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-                                    <th data-heading="timeStamp">Registration Date<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
+                                    <th data-heading="interest">Interest<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                    <th data-heading="location">Location<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                    <th data-heading="employmentStatus">Employment Status<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                    <th data-heading="about">About<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                    <th data-heading="timeStamp">Registration Date<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
                                         <th>Action</th>
 
 
