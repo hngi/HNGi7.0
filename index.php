@@ -39,11 +39,6 @@
             main {
                 padding: 0;
                 margin-top: 10px;
-                padding-bottom: 20px;
-            }
-
-            .main-first-row {
-                margin-left: -10px;
             }
             #support {
                 margin-left: -5px;
@@ -555,8 +550,8 @@
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>
                 <script src="js/script.js"></script>
                 <script src="js/main.js"></script>
-                <div id="jumptotop"><span></span></div>
-                <script src="js/scroll-to-top.js"></script>
+                <div id="jumptotop"><em></em></div>
+                <script src="./js/scroll-to-top.js"></script> 
 
 </body>
 
