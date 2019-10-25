@@ -335,6 +335,12 @@
                                                                 <ul class="list-unstyled text-dark accordion_tab">
                                                                     <li>PHP</li>
                                                                     <li>Python</li>
+                                                                    <li>Ruby on Rails</li>
+                                                                    <li>Node.js</li>
+                                                                    <li>Laravel</li>
+                                                                    <li>Apache</li>
+                                                                    <li>NGINX</li>
+
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -352,8 +358,11 @@
                                                             <div class="card-body">
                                                                 <ul class="list-unstyled text-dark accordion_tab">
                                                                     <li>Java</li>
-                                                                    <li>Python</li>
-                                                                    <li>C++</li>
+                                                                    <li>Python</li>                                                                    <li>Google Cloud ML Engine</li>
+                                                                    <li>Amazon Machine Learning (AML)</li>
+                                                                    <li>Accord.NET</li>
+                                                                    <li>Apache Mahout</li>
+                                                                    <li>Shogun</li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -372,6 +381,11 @@
                                                             <div class="card-body">
                                                                 <ul class="list-unstyled text-dark accordion_tab">
                                                                     <li>FIGMA</li>
+                                                                    <li>InVision Studio</li>
+                                                                    <li>Adobe XD</li>
+                                                                    <li>Framer X</li>
+                                                                    <li>UXPin</li>
+                                                                    <li>Adobe Illustrator</li>
 
                                                                 </ul>
                                                             </div>
@@ -391,6 +405,9 @@
                                                                 <ul class="list-unstyled text-dark accordion_tab">
                                                                     <li>Social Media</li>
                                                                     <li>Content Writing</li>
+                                                                    <li>Google analytic</li>
+                                                                    <li>SEO</li>
+                                                                    <li>Google Adwords</li>
                                                                 </ul>
                                                             </div>
                                                         </div>
