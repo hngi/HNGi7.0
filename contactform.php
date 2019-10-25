@@ -33,7 +33,7 @@ if (isset($_POST['contact-btn'])) {
       //here is the function to send mail to admin email
 
       contactMail($email, $ticket, $name, $subject, $body);
-      $mess = 'Message Sent you get a feedback from us thank you!';
+      $mess = '<p style="text-align:center;">Message Sent you get a feedback from us thank you!</a>';
 
     }
   }
@@ -60,7 +60,7 @@ if (isset($_POST['contact-btn'])) {
 
 </head>
 
-<body>
+<body class="container-fluid">
 <?php
     include_once "fragments/site_header.php";
 ?>
@@ -72,23 +72,26 @@ if (isset($_POST['contact-btn'])) {
           <h1>Not a Frequently Asked Question?</h1>
           <h1> contact us below</h1>
         </div>
+
+        <?php
+
+if (!empty($error)) {
+  echo "<h4 class='text-danger text-center'>" . $error . "</h4>";
+}
+if (!empty($mess)) {
+  echo "<center><h4 class='text-success text-center success' style='background: #D3ECDB; color: #2B5036; padding: 10px;'>" . $mess . "</h4></center>";
+}
+if (!empty($msg)) {
+  echo "<h4 class='text-danger text-center' style='color: red;'>" . $msg . "</h4>";
+}
+if (!empty($msg2)) {
+  echo "<h4 class='text-danger text-center' style='color: red;'>" . $msg2 . "</h4>";
+}
+?>
+
         <form class="inputs-wrap" method="post">
           <div id="contact-message">
-            <?php
-
-            if (!empty($error)) {
-              echo "<h4 class='text-danger text-center'>" . $error . "</h4>";
-            }
-            if (!empty($mess)) {
-              echo "<h4 class='text-success text-center success' style='color: green;'>" . $mess . "</h4>";
-            }
-            if (!empty($msg)) {
-              echo "<h4 class='text-danger text-center' style='color: red;'>" . $msg . "</h4>";
-            }
-            if (!empty($msg2)) {
-              echo "<h4 class='text-danger text-center' style='color: red;'>" . $msg2 . "</h4>";
-            }
-            ?>
+           
           </div>
           <input type="text" placeholder="Name" name="name" required>
           <input type="email" placeholder="Email" name="email"  required>

@@ -27,6 +27,6 @@
 		</select>
 		<a href="#">Advanced</a> -->
 		<hr id="hr2">
-		<a href="./logout">Logout</a>
+		<a href="./logout.php">Logout</a>
 	</nav>
 </section>

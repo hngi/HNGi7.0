@@ -46,10 +46,10 @@ if (isset($_POST['login'])) {
 
 </head>
 
-<body>
-  <section class="jumbo">
+<body class="container-fluid">
+ 
   <?php include('fragments/site_header.php'); ?>
-  </section>
+
 
   <div class="form-area">
 
