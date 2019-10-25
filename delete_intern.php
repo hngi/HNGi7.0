@@ -1,21 +1,22 @@
 <?php
    require_once "classControllers/init.php";
-    $admin = new Admins();
+   //  $mentor = new Mentors();
+    $interns = new Intern;
 
     if(!isset($_SESSION["role"])) {
         header('Location:admin_login.php'); 
     }
 
-    if(isset($_GET["deleteAdminId"])) {
-        $id = $_GET["deleteAdminId"];
-        $res = $admin->getAdmin($id);
+    if(isset($_GET["deleteInternId"])) {
+        $id = $_GET["deleteInternId"];
+        $res = $interns->getIntern($id);
     }
 
     if(isset($_GET["yesDeleteId"])) {
         $id = $_GET["yesDeleteId"];
-        $deleteRes = $admin->deleteAdmin($id);
+        $deleteRes = $interns->deleteIntern($id);
         if($deleteRes == true) {
-            header("Location:admins.php");
+            header("Location:registered_interns.php");
         } else {
             $respose = '<div><p> Error;  Please try again</p></div>';
         }
@@ -28,7 +29,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Delete Admin</title>
+    <title>Delete Intern</title>
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
     <link rel="stylesheet" href="css/dashboard.css">
 
@@ -65,7 +66,7 @@
             ?>
             <!-- <h1>Dashboard</h1> -->
             <br><br><br>
-            <h2> Confirm Delete Admin </h2>
+            <h2> Confirm Delete Intern </h2>
             <!-- <section id="intern-section">
                 Populated by `js/dashboard.js` 
             </section> -->
@@ -76,16 +77,16 @@
 
                         <div>
                             <div class="col-md-12">
-                                <h4>Are you sure you want to delete admin with the following details?</h4>
+                                <h4>Are you sure you want to delete Intern with the following details?</h4>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-3">
-                                <h4>Fullname</h4>
+                                <h4>Name</h4>
                             </div>
                             <div class="col-md-6">
-                                <h4><?php echo $res["firstname"] . ' ' . $res["lastname"]; ?></h4>
+                                <h4><?php echo $res["name"]; ?></h4>
                             </div>
                         </div>
 
@@ -100,10 +101,10 @@
 
                         <div class="row">
                             <div class="col-md-3">
-                                <h4>Role</h4>
+                                <h4>Phone</h4>
                             </div>
                             <div class="col-md-6">
-                                <h4><?php if($res["role"]==1) { echo "Super Admin"; } else { echo "Admin"; } ?></h4>
+                                <h4><?php echo $res["phone"]; ?></h4>
                             </div>
                         </div>
 
@@ -112,8 +113,8 @@
                                 &nbsp;
                             </div>
                             <div class="col-md-6">
-                                <a href="admins.php"><button class="btn btn-primary">No, Cancel</button></a>
-                                <a href="delete_admin.php?yesDeleteId=<?php echo $id; ?>"><button class="btn btn-danger">Yes, Delete</button></a>
+                                <a href="registered_interns.php"><button class="btn btn-primary">No, Cancel</button></a>
+                                <a href="delete_intern.php?yesDeleteId=<?php echo $id; ?>"><button class="btn btn-danger">Yes, Delete</button></a>
                             </div>
                         </div>
 

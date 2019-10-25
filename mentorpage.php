@@ -11,7 +11,6 @@
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="stylesheet" type="text/css" href="css/mentorpage.css">
     <title>Mentors Page</title>
-
 </head>
 <body class="">
 

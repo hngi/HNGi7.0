@@ -56,7 +56,6 @@ if (isset($_POST['contact-btn'])) {
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
   <link rel="stylesheet" type="text/css" href="css/header-footer.css">
-  <link rel="stylesheet" href="css/newContact.css">
   <link rel="stylesheet" href="css/faq.css">
 
 </head>
