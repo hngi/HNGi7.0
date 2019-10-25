@@ -2,49 +2,6 @@
 <html lang="en">
 
 <head>
-<<<<<<< HEAD
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>The HNG Internship</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" type="text/css" href="css/header-footer.css">
-  <link rel="icon" type="img/png" href="images/hng-favicon.png">
-  <style>
-
-    #header {
-      padding: 0 80px;
-      margin-top: 20px;
-    }
-
-    #home {
-      display: none;
-    }
-
-  main {
-    padding: 0 80px;
-  }
-
-  footer {
-    width: 100% !important;
-  }
-
-  @media screen and (max-width: 900px){
-    #header, main {
-      padding: 0;
-    }
-
-    #support {
-      margin-left: 0px;
-    }
-  }
-  </style>
-=======
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -84,7 +41,6 @@
             }
         }
     </style>
->>>>>>> 753cee7d98a8cf6c400d2805983b113ae0b3e1b1
 
 </head>
 
