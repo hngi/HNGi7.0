@@ -45,7 +45,7 @@ function sendNewAdminMail($email, $subject, $body)
     $mail->Body    = "$body
                   <tr>
     <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
-                       <b style='color:seablue;'>Email: $email <br> Password: $password</b> <br> <a href='https://hngi7.hng.tech/forgotpassword'>Follow this link to request for a password</a>
+                       <b style='color:seablue;'>Email: $email </b> <br> <a href='https://hngi7.hng.tech/password_req'>Follow this link to request for a password</a>
                       </td>
                   </tr>
 <tr>
@@ -268,6 +268,99 @@ function forGetPasswordMail($url,$subject,$email,$fullname)
                         Reset your password $fullname<br><br></p>
 
                        <p>For security, If you did not request a password reset, please ignore this email or <a href='http://hngi7.hng.tech/contactform'> Contact support</a> if you have questions.</p>
+
+                       <p>If you’re having trouble clicking the link above, copy and paste the URL below into your web browser.
+
+                       <br> <a href='http://hngi7.hng.tech/admin_login'>Follow this link to login</a></p>
+                     <p> Thanks,<br>
+                      The User Suppport Team.</p>
+
+                      </td>
+                  </tr>
+<tr>
+<td bgcolor='#808080' style='padding: 30px 30px 30px 30px;'>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'>
+  <tr>
+    <td style='color: #ffffff; font-family: Arial, sans-serif; font-size: 14px;' width='75%'>
+      &reg; HNGi 7.0, 2019<br/>
+      </td>
+    <td align='right' width='25%'>
+      <table border='0' cellpadding='0' cellspacing='0'>
+        <tr>
+          <td style='font-family: Arial, sans-serif; font-size: 12px; font-weight: bold;'>
+            <a href='http://www.twitter.com/' style='color: #ffffff;'>
+              <img src='https://cdn3.iconfinder.com/data/icons/flat-icons-web/40/Twitter-512.png' alt='Twitter' width='38' height='38' style='display: block;' border='0' />
+            </a>
+          </td>
+          <td style='font-size: 0; line-height: 0;' width='20'>&nbsp;</td>
+          <td style='font-family: Arial, sans-serif; font-size: 12px; font-weight: bold;'>
+            <a href='http://www.twitter.com/' style='color: #ffffff;'>
+              <img src='https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/facebook_circle-512.png' alt='Facebook' width='38' height='38' style='display: block;' border='0' />
+            </a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>";
+
+    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+    $mail->send();
+  } catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+  }
+}
+
+//for contact us form
+function SetPasswordMail($subject, $body, $email, $url, $fullname)
+{
+  global $mail;
+
+
+  try {
+    //Server settings
+    $mail->isSMTP();                                            // Set mailer to use SMTP
+    $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+    $mail->Username = 'alisataylorm.m@gmail.com';
+    $mail->Password = 'alisa1074';                              // SMTP password
+    $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
+    $mail->Port       = 587;                                    // TCP port to connect to
+
+    //Recipients
+    $mail->setFrom('alisataylorm.m@gmail.com', $subject);
+    $mail->addAddress("$email");     // Add a recipient
+    // $mail->addAddress('ellen@example.com');               // Name is optional
+    $mail->addReplyTo('no-reply@gmail.com', 'No-Reply');
+      // $mail->addCC('cc@example.com');
+      // $mail->addBCC('bcc@example.com');
+
+      // Attachments
+      // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+      // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+
+      // Content
+    ;
+    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->Subject = $subject;
+    $mail->Body    = "$body
+    <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
+                      
+                       <p>You've requested to set your password for your HNGi account.<br>
+                        Use the link below to set it.<br>
+                        This password set link is only valid for the next 24 hours.
+                        Set your password $url<br><br></p>
+
+                       <p>For security, If you did not request a password set, please ignore this email or <a href='http://hngi7.hng.tech/contactform'> Contact support</a> if you have questions.</p>
 
                        <p>If you’re having trouble clicking the link above, copy and paste the URL below into your web browser.
 

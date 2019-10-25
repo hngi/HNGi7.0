@@ -7,8 +7,6 @@ if (isset($_POST['login'])) {
   $errors = '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: #F7CFCF; color: #6A0E0D; width: 80% !important; text-align: center;">Wrong Credentials</p>';
 }
 
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,7 +62,7 @@ if (isset($_POST['login'])) {
         echo $errors;
       }
       if(isset($_GET['getmess'])){
-        echo $_GET['getmess'];
+  echo  '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: green; color: black; width: 80% !important; text-align: center;">Your password has been set Sucessfully</p>';
       }
 
       if (isset($_GET["blocked"])) {

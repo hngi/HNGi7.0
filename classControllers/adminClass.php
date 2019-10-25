@@ -4,10 +4,10 @@ class AdminClass
 {
 
 	/**************METHOD TO HANDLE SENDING OF CONTACT FORM****************/
-	public function contactFormMailer($name, $email, $subject, $message)
+	public function contactFormMailer($ticket,$name, $email, $subject, $message)
 	{
 		global $database;
-		$result = $database->query("INSERT INTO contact_messages(`name`,`email`,`subject`,`message`,`timestamp`) VALUES('$name', '$email', '$subject', '$message', NOW())");
+		$result = $database->query("INSERT INTO contact_messages(`ticket_id`,`name`,`email`,`subject`,`message`,`timestamp`) VALUES('$ticket','$name', '$email', '$subject', '$message', NOW())");
 		return $result;
 	}
 
@@ -21,12 +21,23 @@ class AdminClass
 			
 	}
 
-	/**************METHOD TO HANDLE PASSWORD RESET****************/
-	public function createNewPassword($password, $code){
+	/**************METHOD TO HANDLE FOR REQUEST FOR PASSWORD ****************/
+	public function Setpassword($email, $code)
+	{
+		global $database;
+		$query =  "INSERT INTO setpassword (code, email, created_at) VALUES('$code', '$email', NOW())";
+		$sendEmail  = $database->query($query);
+		return $sendEmail;
+	}
+
+
+
+	/**************METHOD TO HANDLE PASSWORD SET****************/
+	public function createPassword($password, $code){
 
      
       global $database;
-      $getEmailQuery = $database->query( "SELECT * FROM resetpassword WHERE code='$code' LIMIT 1 ");
+      $getEmailQuery = $database->query( "SELECT * FROM setpassword WHERE code='$code' LIMIT 1 ");
       $emails = mysqli_fetch_assoc($getEmailQuery);
       $email = $database->escape_string($emails['email']);
       if ($email) {
@@ -34,7 +45,7 @@ class AdminClass
         $query = $database->query( "UPDATE admins SET password='$password' WHERE email='$email' ");
         
         if ($query) {
-          $query = "DELETE FROM resetpassword WHERE code='$code' ";
+          $query = "DELETE FROM setpassword WHERE code='$code' ";
           $deletePass = $database->query($query);
           return $deletePass;
         }
@@ -43,6 +54,29 @@ class AdminClass
   
 
   }
+
+	/**************METHOD TO HANDLE PASSWORD RESET****************/
+	public function createNewPassword($password, $code)
+	{
+
+
+		global $database;
+		$getEmailQuery = $database->query("SELECT * FROM resetpassword WHERE code='$code' LIMIT 1 ");
+		$emails = mysqli_fetch_assoc($getEmailQuery);
+		$email = $database->escape_string($emails['email']);
+		if ($email) {
+			$password = password_hash($password, PASSWORD_BCRYPT);
+			$query = $database->query("UPDATE admins SET password='$password' WHERE email='$email' ");
+
+			if ($query) {
+				$query = "DELETE FROM resetpassword WHERE code='$code' ";
+				$deletePass = $database->query($query);
+				return $deletePass;
+			}
+		}
+	}
+
+
 
 	/*
 	 Function to handle admin sign in
@@ -73,10 +107,10 @@ class AdminClass
 	}
 
 
-	function createAdmin($firstname, $lastname, $email, $role, $password){
+	function createAdmin($firstname, $lastname, $email, $role){
 		global $database;
 		$time = date("Y-m-d H:i:s");
-		$stmt = $database->query("INSERT INTO admins (firstname, lastname, email, role, password,timestamp) VALUES ('$firstname','$lastname','$email','$role','$password','$time')");
+		$stmt = $database->query("INSERT INTO admins (firstname, lastname, email, role, timestamp) VALUES ('$firstname','$lastname','$email','$role','$time')");
 		return $stmt;
 	}
 

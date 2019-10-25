@@ -10,7 +10,7 @@ if (isset($_POST["recover-btn"])) {
   $fullname = $row["firstname"] . ' ' . $row["lastname"];
   $count = mysqli_num_rows($query);
   if ($count > 0) {
-     $url = "http://hngi7.hng.tech/resetpassword.php?code=$code";
+    $url = "http://hngi7.hng.tech/resetpassword.php?code=$code";
     $subject = 'YOUR PASSWORD REST LINK';
     $body = "<html>
         <head>
@@ -37,7 +37,7 @@ if (isset($_POST["recover-btn"])) {
                         </tr>
                         <tr>
                           <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
-                                            You recieve this email because you request for a reset password link, Kindly find bellow a link to reset your password.<br> Thank you.
+                                            You recieve this email because you request for a reset password link, Kindly find below a link to reset your password.<br> Thank you.
                           </td>
                                         </tr>";
     $admin->forGetpassword($email, $code);

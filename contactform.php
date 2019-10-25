@@ -25,8 +25,9 @@ if (isset($_POST['contact-btn'])) {
   } else {
 
     //here is method that will submit mail to database table and you can find it in adminClass
-    $send = $contact_mail->contactFormMailer($name, $email, $subject, $message);
+    $send = $contact_mail->contactFormMailer($ticket,$name, $email, $subject, $message);
     if ($send) {
+      $ticket = $ticket;
       $name = $name;
       $subject = $subject;
       $body = $message;
