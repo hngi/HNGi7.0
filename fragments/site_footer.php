@@ -66,6 +66,6 @@ p {
                     </div>
                 </nav>
                 <p class="center-text darkblue-text">&copy 2019, HNG Internship. All rights reserved.</p>
-                <div id="jumptotop"><a id="jumptotop">Jump to Top<span></span></a></div>
+                <div id="jumptotop"><a id="em"><span></span></a></div>
                 <script src="./js/scroll-to-top.js"></script>
             </footer>
