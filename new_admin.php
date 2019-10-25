@@ -3,7 +3,7 @@
     $admin = new Admins();
 
     if(!isset($_SESSION["role"])) {
-        header('Location:admin_login'); 
+        header('Location:login'); 
     }
 
     if(isset($_POST["submit"])) {

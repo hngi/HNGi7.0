@@ -2,7 +2,7 @@
 
 class Admins
 {
-  public function adminLogin()
+ public function adminLogin()
   {
 
     //global $con;
@@ -28,17 +28,17 @@ class Admins
 
     if(count($errors) === 0){
       // there are no errors
-      $query = 'SELECT * FROM admins WHERE email="' . $email . '" AND password="' . $password . '" ';
+      $query = "SELECT * FROM admins WHERE email=  '$email'";
 
       $res = $database->query($query);
       $count = $database->affected_rows();
+      $row = mysqli_fetch_assoc($res);
 
-      if ($count > 0) {
+      if (password_verify($password, $row['password'])) {
         // user exist
         // get user details and create session
 
-        $row = mysqli_fetch_assoc($res);
-
+        
         $fullname = $row["firstname"] . ' ' . $row["lastname"];
         $role = $row["role"];
         $admin_id = $row["admin_id"];
@@ -46,14 +46,14 @@ class Admins
 
         if($block == 1) {
           // admin is blocked, cannot login
-          header("Location: admin_login.php?blocked");
+          header("Location: login?blocked");
         } else {
           // admin can login
           $_SESSION["fullname"] = $fullname;
           $_SESSION["role"] = $role;
           $_SESSION["admin_id"] = $admin_id;
 
-          echo '<script>window.location.href = "dashboard.php"</script>';
+          echo '<script>window.location.href = "dashboard"</script>';
         }
 
         
@@ -86,16 +86,16 @@ class Admins
                         <td>' . $row["email"] . '</td>
                         <td>' . $role . '</td>
                         <td>' . $row["timestamp"] . '</td>
-                        <td><a href="admin_view.php?editAdminId='.$row["admin_id"].'"><button class="btn btn-success btn-sm">View</button></a></td>';
+                        <td><a href="admin_view?editAdminId='.$row["admin_id"].'"><button class="btn btn-success btn-sm">View</button></a></td>';
                         if($row["block"] == 0) {
                           $display .='
-                          <td><a href="admins.php?blockAdminId='.$row["admin_id"].'"><button class="btn btn-warning btn-sm">Block</button></a></td>';
+                          <td><a href="admins?blockAdminId='.$row["admin_id"].'"><button class="btn btn-warning btn-sm">Block</button></a></td>';
                         } else if ($row["block"]==1) {
                           $display .='
-                          <td><a href="admins.php?activateAdminId='.$row["admin_id"].'"><button class="btn btn-primary btn-sm">Activate</button></a></td>';
+                          <td><a href="admins?activateAdminId='.$row["admin_id"].'"><button class="btn btn-primary btn-sm">Activate</button></a></td>';
                         }
                         $display .= '
-                        <td><a href="delete_admin.php?deleteAdminId='.$row["admin_id"].'"><button class="btn btn-danger btn-sm">Delete</button></a></td>';
+                        <td><a href="delete_admin?deleteAdminId='.$row["admin_id"].'"><button class="btn btn-danger btn-sm">Delete</button></a></td>';
                       $display .='
                     </tr>';
         $sn++;

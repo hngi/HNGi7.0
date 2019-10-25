@@ -11,7 +11,7 @@ session_start();
 
 if(!isset($_SESSION['hng-admin'])){
 $_SESSION['err_msg'] = "<div class='alert alert-danger'>Please login first!</div>";
-header("location:login.php");
+header("location:login");
 }
 
 ?>
@@ -85,7 +85,7 @@ header("location:login.php");
                             </tbody>
                         </table>
                         <p>
-                            <a href="login.php?act=logout" class="btn btn-danger">Logout</a>
+                            <a href="login?act=logout" class="btn btn-danger">Logout</a>
                         </p>
                     </div>
                 </div>

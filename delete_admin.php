@@ -3,7 +3,7 @@
     $admin = new Admins();
 
     if(!isset($_SESSION["role"])) {
-        header('Location:admin_login.php'); 
+        header('Location:admin_login'); 
     }
 
     if(isset($_GET["deleteAdminId"])) {
@@ -15,7 +15,7 @@
         $id = $_GET["yesDeleteId"];
         $deleteRes = $admin->deleteAdmin($id);
         if($deleteRes == true) {
-            header("Location:admins.php");
+            header("Location:admins");
         } else {
             $respose = '<div><p> Error;  Please try again</p></div>';
         }
@@ -59,7 +59,7 @@
             <?php 
                 if($_SESSION["role"] != 1) {
                     echo '<h2><br><br><br>Sorry, You do not have the priviledge to view this page</p>';
-                    echo '<h3><a href="dashboard.php">Dashboard</a></h3>';
+                    echo '<h3><a href="dashboard">Dashboard</a></h3>';
                     exit();
                 }
             ?>
@@ -112,8 +112,8 @@
                                 &nbsp;
                             </div>
                             <div class="col-md-6">
-                                <a href="admins.php"><button class="btn btn-primary">No, Cancel</button></a>
-                                <a href="delete_admin.php?yesDeleteId=<?php echo $id; ?>"><button class="btn btn-danger">Yes, Delete</button></a>
+                                <a href="admins"><button class="btn btn-primary">No, Cancel</button></a>
+                                <a href="delete_admin?yesDeleteId=<?php echo $id; ?>"><button class="btn btn-danger">Yes, Delete</button></a>
                             </div>
                         </div>
 

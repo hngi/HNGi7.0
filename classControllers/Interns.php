@@ -84,7 +84,7 @@ class Intern
             echo '<p>Registration Failed with the following Errors</p>';
             foreach ($errors as $error) {
                 echo '<span style="color: red; font-size: 12px; font-wieght: bold;">' . $error . '</span><br />';
-                header('Location: join-intern.php?failed');
+                header('Location: join-intern?failed');
                 exit();
             }
         } else {
@@ -94,10 +94,10 @@ class Intern
 
             $res = $database->query($query);
             $count = $database->affected_rows();
-            header('Location: join-intern.php?successful');
+            header('Location: join-intern?successful');
             if ($count > 0) {
                 // intern created
-                echo '<script>window.location.href = "./join-intern.php"</script>';
+                echo '<script>window.location.href = "./join-intern"</script>';
             } else {
                 // failed, error, not created
                 echo '
@@ -135,7 +135,7 @@ class Intern
                         <td>' . $row["employment_status"] . '</td>
                         <td>' . $row["about"] . '</td>
                         <td>' . $row["timestamp"] . '</td>
-                        <td>' . '<a href="delete_intern.php?deleteInternId=' . $row["intern_id"] . '" class="btn btn-danger btn-sm">Delete</a>' . '</td>
+                        <td>' . '<a href="delete_intern?deleteInternId=' . $row["intern_id"] . '" class="btn btn-danger btn-sm">Delete</a>' . '</td>
 
                     </tr>';
             }
@@ -192,7 +192,7 @@ class Intern
                             <td>' . $row["employment_status"] . '</td>
                             <td>' . $row["about"] . '</td>
                             <td>' . $row["timestamp"] . '</td>
-                            <td>' . '&nbsp;<a  href="delete_intern.php?deleteInternId=' . $row["intern_id"] . '" class="btn btn-danger btn-xs">Delete</a>' . '</td>
+                            <td>' . '&nbsp;<a  href="delete_intern?deleteInternId=' . $row["intern_id"] . '" class="btn btn-danger btn-xs">Delete</a>' . '</td>
 
                         </tr>';
             }

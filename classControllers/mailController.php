@@ -45,7 +45,7 @@ function sendNewAdminMail($email, $subject, $body)
     $mail->Body    = "$body
                   <tr>
     <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
-                       <b style='color:seablue;'>Email: $email <br> Password: $password</b> <br> <a href='https://hngi7.hng.tech/forgotpassword'>Follow this link to request for a password</a>
+                       <b style='color:seablue;'>Email: $email <br></b> <br> <a href='https://hngi7.herokuapp.com/forgotpassword'>Follow this link to request for a password</a>
                       </td>
                   </tr>
 <tr>
@@ -205,7 +205,7 @@ function contactMail($email, $ticket, $name, $subject, $body)
 
 
 //for contact us form
-function forGetPasswordMail($url,$subject,$email,$fullname)
+function forGetPasswordMail($url,$subject,$email,$body)
 {
   global $mail;
 
@@ -262,16 +262,13 @@ function forGetPasswordMail($url,$subject,$email,$fullname)
                   <tr>
     <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
                       
-                       <p>You recently requested to reset your password for your HNGi account.<br>
-                        Use the link below to reset it.<br>
-                        This password reset is only valid for the next 24 hours.
-                        Reset your password $fullname<br><br></p>
+                      $body
 
-                       <p>For security, If you did not request a password reset, please ignore this email or <a href='http://hngi7.hng.tech/contactform'> Contact support</a> if you have questions.</p>
+                       <p>For security, If you did not request a password reset, please ignore this email or <a href='https://hngi7.herokuapp.com/contactform'> Contact support</a> if you have questions.</p>
 
                        <p>If you’re having trouble clicking the link above, copy and paste the URL below into your web browser.
 
-                       <br> <a href='http://hngi7.hng.tech/admin_login'>Follow this link to login</a></p>
+                       <br> <a href='https://hngi7.herokuapp.com/login'>Follow this link to login</a></p>
                      <p> Thanks,<br>
                       The User Suppport Team.</p>
 

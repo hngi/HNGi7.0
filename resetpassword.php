@@ -14,11 +14,10 @@ if (isset($_GET["code"])) {
       $err = '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: #F7CFCF; color: #6A0E0D; width: 80% !important; text-align: center;">Password not match</p>';
     }
     $message = $admin->createNewPassword($password, $code);
-     $getmess = '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: green; color: #fff; width: 80% !important; text-align: center;"></p>';
-    header("location: admin_login?getmess".$getmess);
+    header("location: login?getmess=Your Password Has Been Updated");
   }
 }else{
-   exit("Can't find page");
+   header("location: login");
 }
 
 ?>
@@ -82,11 +81,11 @@ if (isset($_GET["code"])) {
       <section>
         <h2 class="skyblue-text">Quick Links</h2>
         <div id="link-list">
-          <a href="join-intern.php" class="skyblue-text">Join HNG</a>
-          <a href="index.php" class="skyblue-text">About HNG</a>
-          <a href="donate.html" class="skyblue-text">Become a Sponsor</a>
-          <a href="MentorSetUpPage2.php" class="skyblue-text">Sign up as Mentor</a>
-          <a href="faq.php" class="skyblue-text">FAQ</a>
+          <a href="join-intern" class="skyblue-text">Join HNG</a>
+          <a href="index" class="skyblue-text">About HNG</a>
+          <a href="donate" class="skyblue-text">Become a Sponsor</a>
+          <a href="MentorSetUpPage2" class="skyblue-text">Sign up as Mentor</a>
+          <a href="faq" class="skyblue-text">FAQ</a>
         </div>
       </section>
       <section id="contact-section">

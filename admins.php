@@ -1,6 +1,6 @@
 <?php
 require_once 'classControllers/init.php';
-// include('backend/Admins.php');
+// include('backend/Admins');
 
 
 if(!isset($_SESSION["role"])) {
@@ -98,7 +98,7 @@ if(isset($_GET["activateAdminId"])) {
     <?php
     if ($_SESSION["role"] != 1) {
         echo '<h2><br><br><br>Sorry, You do not have the priviledge to view this page</p>';
-        echo '<h3><a href="dashboard.php">Dashboard</a></h3>';
+        echo '<h3><a href="dashboard">Dashboard</a></h3>';
         exit();
     }
     ?>
@@ -113,7 +113,7 @@ if(isset($_GET["activateAdminId"])) {
                 } else {
                 ?>
                 <div class="col-md-2">
-                    <a href="new_admin.php">
+                    <a href="new_admin">
                         <button type="button" class="btn btn-primary btn-sm" id="export">&#43; New Admin</button>
                     </a>
                 </div>
@@ -122,7 +122,7 @@ if(isset($_GET["activateAdminId"])) {
             </div> <br /><br />
             <div class="row" id="table-row">
                 <div class="table-responsive" id="printablediv">
-                    <table class="table table-hover mt-3 mb-1 table-condensed">
+                    <table class="table table-hover mt-3 mb-1 table-bordered table-condensed">
                         <thead class="table-primary">
                         <tr>
                             <th>S/N</th>
@@ -131,7 +131,7 @@ if(isset($_GET["activateAdminId"])) {
                             <th>Email</th>
                             <th>Role</th>
                             <th>Registration Date</th>
-                            <th colspan="2">Action</th>
+                            <th colspan="3">Action</th>
                         </tr>
                         </thead>
                         <tbody>

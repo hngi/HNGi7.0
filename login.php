@@ -4,7 +4,7 @@ if (isset($_POST['login'])) {
   $email = $_POST["email"];
   $password = $_POST["password"];
   $login = $interns->adminLogin($email, $password);
-  $errors = '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: #F7CFCF; color: #6A0E0D; width: 80% !important; text-align: center;">Wrong Credentials</p>';
+  $errors = '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: #F7CFCF; color: #6A0E0D; width: 45% !important; text-align: center;">Wrong Credentials</p>';
 }
 
 
@@ -51,7 +51,7 @@ if (isset($_POST['login'])) {
   <?php include('fragments/site_header.php'); ?>
   </section>
 
-  <div class="form-area">
+  <div class="form-area" id="login-input">
 
     <form class="form-container" method="post">
 
@@ -62,7 +62,7 @@ if (isset($_POST['login'])) {
         echo $errors;
       }
       if(isset($_GET['getmess'])){
-        echo $_GET['getmess'];
+        echo  '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: green; color: #fff; width: 80% !important; text-align: center;">'.$_GET['getmess'].'</p>';
       }
 
       if (isset($_GET["blocked"])) {
@@ -82,7 +82,7 @@ if (isset($_POST['login'])) {
       </div>
       
       <button type="submit" onclick="signup()" name="login">LOG IN</button>
-      <a href="forgotpassword.php" class="text-danger small-text">Forgot Password?</a>
+      <a href="forgotpassword" class="text-danger">Forgot Password?</a>
     </form>
   </div>
 
@@ -93,11 +93,11 @@ if (isset($_POST['login'])) {
       <section>
         <h2 class="skyblue-text">Quick Links</h2>
         <div id="link-list">
-          <a href="join-intern.php" class="skyblue-text">Join HNG</a>
-          <a href="index.php" class="skyblue-text">About HNG</a>
-          <a href="donate.html" class="skyblue-text">Become a Sponsor</a>
-          <a href="MentorSetUpPage2.php" class="skyblue-text">Sign up as Mentor</a>
-          <a href="faq.php" class="skyblue-text">FAQ</a>
+          <a href="join-intern" class="skyblue-text">Join HNG</a>
+          <a href="index" class="skyblue-text">About HNG</a>
+          <a href="donate" class="skyblue-text">Become a Sponsor</a>
+          <a href="MentorSetUpPage2" class="skyblue-text">Sign up as Mentor</a>
+          <a href="faq" class="skyblue-text">FAQ</a>
         </div>
       </section>
       <section id="contact-section">
