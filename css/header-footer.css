@@ -190,7 +190,7 @@ footer .footer-nav .row {
     }
     header nav .header-links,
     header nav #join-hng {
-        font-size: 2em;
+        font-size: 1em;
         align-self: flex-end;
         margin-right: -20px;
     }
@@ -246,7 +246,7 @@ footer .footer-nav .row {
     header nav a,
     header nav .header-links,
     header nav #join-hng {
-        font-size: 3vw;
+        font-size: 4vw;
         align-self: flex-end;
     }
     header #mobile-bars-check:checked~nav {
