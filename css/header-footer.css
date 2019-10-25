@@ -269,10 +269,11 @@ footer .footer-nav .row {
     float: right;
     position: fixed;
     outline: none;
+    color: white;
     display: none;
 }
 
-#jumptotop em {
+#jumptotop #em {
     position: absolute;
     top: 50%;
     left: 50%;
