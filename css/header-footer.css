@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap');
-
 body {
     font-family: "Open Sans", segoe UI, sans-serif;
     padding: 0;
@@ -11,7 +10,8 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1rem 3rem;
+    padding: 2rem 3rem;
+    padding-bottom: 0;
 }
 
 header a,
@@ -20,7 +20,7 @@ footer a {
 }
 
 header .def-button {
-    margin-left:20px;
+    margin-left: 20px;
     color: white;
     border-radius: 3px;
     padding: 0.5rem 1rem;
@@ -53,7 +53,6 @@ header .header-links {
     color: rgba(0, 0, 0, 0.7);
     margin: 0.5rem 1rem;
     align-self: center;
-    font-size: 1.2vw;
     /* transition: 0.4s ease-out; */
 }
 
@@ -93,7 +92,6 @@ header #mobile-bars-check {
 footer {
     background-color: rgb(245, 245, 245);
     padding: 4rem 8rem;
-    
 }
 
 footer h2 {
@@ -102,7 +100,7 @@ footer h2 {
     font-weight: bold;
 }
 
-footer > nav {
+footer>nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -120,7 +118,7 @@ footer #link-list {
     flex-direction: column;
 }
 
-footer #link-list > * {
+footer #link-list>* {
     font-size: 17px;
     padding: 2px;
     align-self: flex-start;
@@ -140,7 +138,7 @@ footer .center-text {
     text-align: center;
 }
 
-footer #link-list > a:hover {
+footer #link-list>a:hover {
     color: rgb(120, 120, 120);
 }
 
@@ -154,8 +152,6 @@ footer #socials a {
     transition: 0.6s ease-out;
 }
 
-
-
 footer #socials img {
     height: 13px;
     width: 25px;
@@ -166,11 +162,10 @@ footer .footer-nav .row {
 }
 
 @media (max-width: 760px) {
-    body > * {
+    body>* {
         width: auto;
         overflow: hidden;
     }
-
     header {
         flex-direction: column;
         padding-top: 10px;
@@ -178,141 +173,83 @@ footer .footer-nav .row {
         width: auto;
         height: auto;
         overflow: hidden;
-        
+        padding-bottom: 0px;
     }
-
     header #hng-logo {
         width: 50vw;
     }
-
     header nav {
         transition: 0.4s ease-out;
         height: auto;
         justify-content: flex-start;
         padding: 1.5rem;
         flex-direction: column;
-        margin-bottom: 40px;
     }
-
-    header nav > * {
+    header nav>* {
         display: none;
     }
-
     header nav .header-links,
     header nav #join-hng {
-        font-size: 1em;
+        font-size: 2em;
         align-self: flex-end;
         margin-right: -20px;
     }
-
-    header .header-links:first-child{
+    header .header-links:first-child {
         margin-top: -20px;
     }
-
     header #mobile-bars {
         display: block;
         margin-left: 43vw;
     }
-
-    header #mobile-bars-check:checked ~ #mobile-bars > #stik1 {
+    header #mobile-bars-check:checked~#mobile-bars>#stik1 {
         transform: rotate(45deg) translateY(7px) translateX(5px);
     }
-
-    header #mobile-bars-check:checked ~ #mobile-bars > #stik2 {
+    header #mobile-bars-check:checked~#mobile-bars>#stik2 {
         width: 0;
         opacity: 0;
     }
-
-    header #mobile-bars-check:checked ~ #mobile-bars > #stik3 {
+    header #mobile-bars-check:checked~#mobile-bars>#stik3 {
         transform: rotate(-45deg) translateY(-8px) translateX(5px);
     }
-
-    header #mobile-bars-check:checked ~ nav > * {
+    header #mobile-bars-check:checked~nav>* {
         display: block;
     }
-
-    header #mobile-bars-check:checked ~ nav {
+    header #mobile-bars-check:checked~nav {
         height: 16rem;
     }
-
     footer {
         padding: 2rem 1rem;
         width: 100%;
     }
-
     footer nav {
         flex-direction: column;
         justify-content: space-between;
         height: auto;
     }
-
     footer h2 {
         font-size: 21px;
     }
-
-    footer nav > * {
+    footer nav>* {
         margin-top: 1rem;
         margin-bottom: 2rem;
     }
-
-    footer #link-list > * {
+    footer #link-list>* {
         font-size: 15px;
         padding: 2px;
     }
-
     footer .footer-nav .row {
         margin-left: 5%;
     }
 }
 
-@media (max-width: 500px)
-
-/*Smaller screens*/
-    {
-
+@media (max-width: 500px) {
     header nav a,
     header nav .header-links,
     header nav #join-hng {
         font-size: 3vw;
         align-self: flex-end;
     }
-
-    header #mobile-bars-check:checked ~ nav {
+    header #mobile-bars-check:checked~nav {
         height: 15rem;
     }
 }
-/* 
-	style for jump to top arrow
-*/
-
-#top {
-	margin: 0 auto;
-	right:10px;
-	bottom:10px;
-	cursor:pointer;
-	width:50px;
-	height:50px;
-	background-color:#3498db;
-	text-indent:-9999px;
-	display:block;
-	-webkit-border-radius:60px;
-	-moz-border-radius:60px;
-	border-radius:40px
-}
-#top span {
-	top:50%;
-	left:50%;
-	margin-left:18px;
-	margin-top:-12px;
-	height:0;
-	width:0;
-	border:8px solid transparent;
-	border-bottom-color:#ffffff;
-}
-#top:hover {
-	background-color:#0088C7;
-	opacity:1;filter:"alpha(opacity=100)";
-	-ms-filter:"alpha(opacity=100)";
-}
-
-

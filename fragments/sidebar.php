@@ -8,14 +8,14 @@
 	<nav id="lower">
 		<a href="dashboard.php">Dashboard</a>
 		<hr id="hr2">
-		<a href="registered_mentors.php">Mentors</a>
+		<a href="registered_mentors">Mentors</a>
 		<hr id="hr2">
-		<a href="registered_interns.php">Interns</a>
+		<a href="registered_interns">Interns</a>
 		<hr id="hr2">
 		<?php 
 			if($_SESSION["role"] == 1) {
 			?>
-				<a href="admins.php">Admins</a>
+				<a href="admins">Admins</a>
 			<?php
 			}
 		?>
@@ -27,6 +27,6 @@
 		</select>
 		<a href="#">Advanced</a> -->
 		<hr id="hr2">
-		<a href="./logout.php">Logout</a>
+		<a href="./logout">Logout</a>
 	</nav>
 </section>

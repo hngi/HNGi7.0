@@ -2,26 +2,7 @@
 class Intern
 {
 
-    public function DeleteIntern($intern_id)
-    {
-
-
-        global $database;
-
-        $sql = "DELETE FROM interns WHERE intern_id = '$intern_id'";
-
-        if ($query = $database->query($sql)) {
-
-            $message = "Intern Deleted successfully.";
-
-            // header('Location: registered_interns.php');
-
-            //echo '<script>window.location.href = "registered_interns.php"</script>';
-        }
-
-        // return $message;
-
-    }
+   
 
 
 
@@ -144,11 +125,9 @@ class Intern
                 $display .= '
                     <tr>
                         <td>' . $no . '</td>
-
                         <td>' . $row["name"] . '</td>
                         <td>' . $row["email"] . '</td>
                         <td>' . $row["phone_no"] . '</td>
-
                         <td>' . $row["link_to_cv"] . '</td>
                         <td>' . $row["years_of_experience"] . '</td>
                         <td>' . $row["interest"] . '</td>
@@ -156,8 +135,7 @@ class Intern
                         <td>' . $row["employment_status"] . '</td>
                         <td>' . $row["about"] . '</td>
                         <td>' . $row["timestamp"] . '</td>
-                        <td>' . '<button type="button" class="btn btn-sm btn-info"
-                              onclick="interndetails(' . $row["intern_id"] . ')">&nbsp;View&nbsp;</button>&nbsp;<a onClick=\"javacript: return confirm("Please confirm deletion");\" href="registered_interns.php?delete_id=' . $row["intern_id"] . '" class="btn btn-danger btn-sm">Delete</a>' . '</td>
+                        <td>' . '<a href="delete_intern.php?deleteInternId=' . $row["intern_id"] . '" class="btn btn-danger btn-sm">Delete</a>' . '</td>
 
                     </tr>';
             }
@@ -214,8 +192,7 @@ class Intern
                             <td>' . $row["employment_status"] . '</td>
                             <td>' . $row["about"] . '</td>
                             <td>' . $row["timestamp"] . '</td>
-                            <td>' . '<button type="button" class="btn btn-xs btn-info"
-                              onclick="interndetails(' . $row["intern_id"] . ')">&nbsp;View&nbsp;</button>&nbsp;<a onClick=\"javacript: return confirm("Please confirm deletion");\" href="registered_interns.php?delete_id=' . $row["intern_id"] . '" class="btn btn-danger btn-xs">Delete</a>' . '</td>
+                            <td>' . '&nbsp;<a  href="delete_intern.php?deleteInternId=' . $row["intern_id"] . '" class="btn btn-danger btn-xs">Delete</a>' . '</td>
 
                         </tr>';
             }
@@ -225,9 +202,38 @@ class Intern
         }
         return $display;
     }
-}
 
-if (isset($_GET["signup"])) {
-    $interns = new Interns();
-    $interns->internSignup();
+    public function getIntern($id) {
+        global $database;
+        $query = "SELECT * FROM interns WHERE intern_id = ".$id."";
+        $res = $database->query($query);
+        $count = $database->affected_rows();
+        if($count > 0) {
+          // admin exists
+          $row = mysqli_fetch_assoc($res);
+    
+          $data["name"] = $row["name"];
+          $data["email"] = $row["email"];
+          $data["phone"] = $row["phone_no"];
+    
+          return $data;
+        } else {
+          // no admin found
+          return 0;
+        }
+      }
+    
+      public function deleteIntern($id) {
+        global $database;
+        $query = "DELETE FROM interns WHERE intern_id = ".$id."";
+        $res = $database->query($query);
+        $count = $database->affected_rows();
+        if($count > 0) {
+          // deleted
+          return true;
+        } else {
+          // failed
+          return false;
+        }
+      }
 }

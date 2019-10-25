@@ -76,8 +76,8 @@ if (isset($_POST["recover-btn"])) {
 
   </head>
   <body>
-    <?php include('fragments/site_header.php'); ?>
     <section class="jumbo">
+    <?php include('fragments/site_header.php'); ?>
 
 
     </section>
