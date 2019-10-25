@@ -31,24 +31,16 @@
             <div class="container">
                 <div class="wrap">          
                         <a href="##" onclick="toggleVisibility('Menu1');">When will the internship start?</a>
-                        <p id="Menu1" style="display: none;" class="paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                        and scrambled it to make a type specimen book.
-                        It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-                        essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing .</p>
-                    <a href="##" onclick="toggleVisibility('Menu2');">Where will the internship start?</a>
-                        <p id="Menu2" style="display: none;" class="paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                        and scrambled it to make a type specimen book.
-                        It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-                        essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing .</p>
-                    <a href="##" onclick="toggleVisibility('Menu3');">How will the internship start?</a>
+                        <p id="Menu1" style="display: none;" class="paragraph">The internship is going to start early next year and it kicks off with a pre-internship program which involves students from all over the country registering with start.ng before the main internship .</p>
+                    <a href="##" onclick="toggleVisibility('Menu2');">Who can apply for the internship?</a>
+                        <p id="Menu2" style="display: none;" class="paragraph">Everyone is welcomed to participate (there is no entrance exam). Anyone can log into the internship using their laptop. Each week we give tasks. .</p>
+                    <a href="##" onclick="toggleVisibility('Menu3');">Does the internship offers certificate?</a>
                         <p id="Menu3" style="display: none;" class="paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                         industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
                         and scrambled it to make a type specimen book.
                         It has survived not only five centuries, but also the leap into electronic typesetting, remaining
                         essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing .</p>
-                    <a href="##" onclick="toggleVisibility('Menu4');">Why will the internship start?</a>
+                    <a href="##" onclick="toggleVisibility('Menu4');">How long will the internship last?</a>
                         <p id="Menu4" style="display: none;" class="paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                         industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
                         and scrambled it to make a type specimen book.
