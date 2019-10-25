@@ -41,5 +41,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
   <script src="js/mentorpage.js"></script>
 
+  <div id="jumptotop"><em></em></div>
+                <script src="./js/scroll-to-top.js"></script> 
+
 </body>
 </html>
