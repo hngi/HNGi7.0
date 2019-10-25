@@ -18,6 +18,10 @@
             margin-top: 30px;
         }
         
+        #header nav {
+            margin-right: 10px;
+        }
+        
         #home {
             display: none;
         }
