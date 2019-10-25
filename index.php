@@ -39,6 +39,11 @@
             main {
                 padding: 0;
                 margin-top: 10px;
+                padding-bottom: 20px;
+            }
+
+            .main-first-row {
+                margin-left: -10px;
             }
             #support {
                 margin-left: -5px;
