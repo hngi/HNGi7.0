@@ -65,7 +65,7 @@
                                 The HNG Internship is an ambitious attempt to change the way education is done in Africa. It’s the bridge between learning to code, and becoming the best in the world.
                             </p>
                             <button class="cta-button button--midBlue" id="buttt">
-            <a href="join-intern" id="butt">Get Started</a>
+            <a href="join-intern.php" id="butt">Get Started</a>
           </button>
                         </div>
                         <div class="image-column desktop-only">
@@ -160,7 +160,7 @@
                                         using their laptop. Each week we give tasks.
                                     </p>
                                     <button class="cta-button button--midBlue" id="buttt">
-              <a href="join-intern" id="butt">Get Started</a>
+              <a href="join-intern.php" id="butt">Get Started</a>
             </button>
                                 </div>
                                 <div class="half-a-row h222">
@@ -202,7 +202,7 @@
                                     <p class="content">The HNG internship is a 3-month remote internship designed to find and develop the most talented software developers. Everyone is welcomed to participate (there is no entrance exam). Anyone can log into the internship
                                         using their laptop. Each week we give tasks.</p>
                                     <button class="cta-button button--midBlue" id="buttt">
-                <a href="join-intern" id="butt">Get Started</a>
+                <a href="join-intern.php" id="butt">Get Started</a>
               </button>
                                 </div>
                             </div>
@@ -220,7 +220,7 @@
 
 
                                 <button class="cta-button button--midBlue" id="buttt">
-              <a href="join-intern" id="butt">Get Started</a>
+              <a href="join-intern.php" id="butt">Get Started</a>
             </button>
                             </div>
 
