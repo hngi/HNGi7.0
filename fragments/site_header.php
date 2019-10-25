@@ -1,5 +1,5 @@
 <header id="header" class="container-fluid">
-    <a href="index"><img id="hng-logo"
+    <a href="index.php"><img id="hng-logo"
             src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png"
             style="width: 50%" ></a>
     <input type="checkbox" id="mobile-bars-check" />
