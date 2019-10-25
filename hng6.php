@@ -237,11 +237,12 @@
                 </section>
             </nav>
             <p class="center-text darkblue-text">&copy 2019, HNG Internship. All rights reserved.</p>
+            <div id="jumptotop"><em></em></div>
+                <script src="./js/scroll-to-top.js"></script> 
         </footer>
 
 </body>
 
 <script type="text/javascript" src="js/hng6.js"></script>
-<script src="js/scroll-to-top.js"></script>
 
 </html>

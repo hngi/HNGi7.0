@@ -122,6 +122,8 @@ require_once 'classControllers/init.php';
 
   </div>
    <?php include_once "fragments/site_footer.php"; ?>
+   <div id="jumptotop"><em></em></div>
+                <script src="./js/scroll-to-top.js"></script> 
 </body>
 
 </html>
