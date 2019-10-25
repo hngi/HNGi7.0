@@ -13,6 +13,11 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
+    <style>
+        #home {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
