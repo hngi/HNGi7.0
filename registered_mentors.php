@@ -97,18 +97,18 @@ if (isset($_GET['delete_id'])) {
                                 <!-- <thead class="table-primary"> -->
                                 <thead>
                                     <tr>
-                                    <th data-heading="sn">SN<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-                                    <th data-heading="expertise">Area Of Expertise<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-                                    <th data-heading="photo">Photo<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-                                    <th data-heading="name">Name<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-                                    <th data-heading="email">Email<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-                                    <th data-heading="phone">Phone<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
+                                    <th data-heading="sn">SN<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                    <th data-heading="expertise">Area Of Expertise<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                    <th data-heading="photo">Photo<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                    <th data-heading="name">Name<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                    <th data-heading="email">Email<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                    <th data-heading="phone">Phone<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
                                     <!-- <th>Link To Linkedin</th> -->
-                                    <th data-heading="cv">Link To Cv<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-                                    <th data-heading="Interest">Why Interested<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-                                    <th data-heading="state">Current State<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-                                    <th data-heading="employment-status">Employment Status<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
-                                    <th data-heading="timeStamp">Timestamp<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i></th>
+                                    <th data-heading="cv">Link To Cv<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                    <th data-heading="Interest">Why Interested<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                    <th data-heading="state">Current State<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                    <th data-heading="employment-status">Employment Status<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                    <th data-heading="timeStamp">Timestamp<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
                                         <th>Action</th>
 
 
