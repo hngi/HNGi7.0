@@ -1,7 +1,6 @@
 <header id="header" class="container-fluid">
     <a href="index.php"><img id="hng-logo"
-            src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png"
-            style="width: 50%" ></a>
+            src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png"></a>
     <input type="checkbox" id="mobile-bars-check" />
     <label for="mobile-bars-check" id="mobile-bars">
         <!--img src="images/bars-icon.png" height="23px"-->
