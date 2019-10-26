@@ -221,7 +221,7 @@
     }
     header #mobile-bars {
         display: block;
-        margin-left: 43vw;
+        margin-left: 35vw;
     }
     header #mobile-bars-check:checked~#mobile-bars>#stik1 {
         transform: rotate(45deg) translateY(7px) translateX(5px);
@@ -264,4 +264,9 @@
     footer .footer-nav .row {
         margin-left: 5%;
     }
+}
+
+@media screen and (min-width: 500px){
+    header #mobile-bars {
+        margin-left: 42vw;
 }
