@@ -90,6 +90,9 @@
                 <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722558/gallery-first_gldujn.png">
                 <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722589/gallery-second_nkrosi.png">
                 <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722618/gallery-third_oqgaiv.png">
+                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722558/gallery-first_gldujn.png">
+                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722589/gallery-second_nkrosi.png">
+
             </div>
             <div class="center-text gallery-grid" id="more-images">
                 <img src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng1_rbfvik.jpg">
@@ -98,6 +101,9 @@
                 <img src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng4_tlrjyf.jpg">
                 <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722618/gallery-third_oqgaiv.png">
                 <img src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng5_qvzjfy.jpg">
+                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722558/gallery-first_gldujn.png">
+                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722589/gallery-second_nkrosi.png">
+
             </div>
             <!-- <p class="center-text"><a class="def-button shadowed">View more photos</a></p> -->
             <p class="center-text"><button class="def-button shadowed" onclick="myFunction()">View more photos</button></p>
@@ -164,7 +170,7 @@
                 <a href="mentorpage.php" class="def-button shadowed">See all Mentors</a>
             </div>
         </section>
-
+        
         <section id="slack-channels">
             <h2 class="center-text blue-text" id="slack-title"><span>HNG 6 Internship Popular Channels - SLACK </span><img id="slack-logo" src="https://res.cloudinary.com/jaycodist/image/upload/v1570722732/slack-icon_hwxoui.svg"></h2>
             <div id="channel-list">
@@ -178,7 +184,6 @@
                 <div class="skyblue-text">#underworld</div>
             </div>
         </section>
-        
         <section class="section4">
             <h2 class="center-text blue-text">HNG 6.0 Internship Sponsors</h2>
             <div id="sponsor-flex-top">
