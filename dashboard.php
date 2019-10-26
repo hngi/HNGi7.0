@@ -2,7 +2,7 @@
 require 'classControllers/init.php';
 // check if session is set
 if(!isset($_SESSION["role"])) {
-	header('Location:login.php'); 
+	header('Location:admin_login'); 
 }
 
 	
@@ -105,21 +105,21 @@ if(!isset($_SESSION["role"])) {
 
 			<div class="container">
 				<div class="row">
-					<a href="registered_interns.php">
+					<a href="registered_interns">
 						<div class="col-md-2 card">
 							<p><?php echo $noOfInterns; ?></p>
 							Registered Interns
 						</div>
 					</a>
 
-					<a href="registered_mentors.php">
+					<a href="registered_mentors">
 						<div class="col-md-2 card">
 							<p><?php echo $noOfMentors; ?></p>
 							Registered Mentors
 						</div>
 					</a>
 					
-					<a href="admins.php">
+					<a href="admins">
 						<div class="col-md-2 card">
 							<p><?php echo $noOfAdmins; ?></p>
 							Registered Admins

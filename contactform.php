@@ -33,7 +33,7 @@ if (isset($_POST['contact-btn'])) {
       //here is the function to send mail to admin email
 
       contactMail($email, $ticket, $name, $subject, $body);
-      $mess = '<p style="text-align:center;">Message Sent you get a feedback from us thank you!</a>';
+      $mess = 'Message Sent you get a feedback from us thank you!';
 
     }
   }
@@ -60,7 +60,7 @@ if (isset($_POST['contact-btn'])) {
 
 </head>
 
-<body class="container-fluid">
+<body>
 <?php
     include_once "fragments/site_header.php";
 ?>
@@ -72,26 +72,23 @@ if (isset($_POST['contact-btn'])) {
           <h1>Not a Frequently Asked Question?</h1>
           <h1> contact us below</h1>
         </div>
-
-        <?php
-
-if (!empty($error)) {
-  echo "<h4 class='text-danger text-center'>" . $error . "</h4>";
-}
-if (!empty($mess)) {
-  echo "<center><h4 class='text-success text-center success' style='background: #D3ECDB; color: #2B5036; padding: 10px;'>" . $mess . "</h4></center>";
-}
-if (!empty($msg)) {
-  echo "<h4 class='text-danger text-center' style='color: red;'>" . $msg . "</h4>";
-}
-if (!empty($msg2)) {
-  echo "<h4 class='text-danger text-center' style='color: red;'>" . $msg2 . "</h4>";
-}
-?>
-
         <form class="inputs-wrap" method="post">
           <div id="contact-message">
-           
+            <?php
+
+            if (!empty($error)) {
+              echo "<h4 class='text-danger text-center'>" . $error . "</h4>";
+            }
+            if (!empty($mess)) {
+              echo "<h4 class='text-success text-center success' style='color: green;'>" . $mess . "</h4>";
+            }
+            if (!empty($msg)) {
+              echo "<h4 class='text-danger text-center' style='color: red;'>" . $msg . "</h4>";
+            }
+            if (!empty($msg2)) {
+              echo "<h4 class='text-danger text-center' style='color: red;'>" . $msg2 . "</h4>";
+            }
+            ?>
           </div>
           <input type="text" placeholder="Name" name="name" required>
           <input type="email" placeholder="Email" name="email"  required>
@@ -108,12 +105,12 @@ if (!empty($msg2)) {
       <section>
         <h2 class="skyblue-text">Quick Links</h2>
         <div id="link-list">
-          <a href="join-intern.php" class="skyblue-text">Join HNGi7.0</a>
-          <a href="index.php" class="skyblue-text">About HNG</a>
+          <a href="join-intern" class="skyblue-text">Join HNGi7.0</a>
+          <a href="index" class="skyblue-text">About HNG</a>
           <a href="donate.html" class="skyblue-text">Become a Sponsor</a>
-          <a href="MentorSetUpPage2.php" class="skyblue-text">Sign up as Mentor</a>
-          <a href="faq.php" class="skyblue-text">FAQ</a>
-          <a href="intern-experience.php" class="skyblue-text">Past Intern Experience</a>
+          <a href="MentorSetUpPage2" class="skyblue-text">Sign up as Mentor</a>
+          <a href="faq" class="skyblue-text">FAQ</a>
+          <a href="intern-experience" class="skyblue-text">Past Intern Experience</a>
 
         </div>
       </section>

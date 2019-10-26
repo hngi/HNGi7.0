@@ -37,6 +37,13 @@ border:1px solid #00aeff;
 transition:box-shadow .5s  ease-in-out,border .5s  ease-in-out; ;
 }
 
+#login-input .form-container  input{
+  width: 100%;
+}
+#login-input .form-container button {
+  width: 50%;
+}
+
 form.form-container > button {
  margin: 30px auto;
  display: block;

@@ -4,7 +4,7 @@
     $interns = new Intern;
 
     if(!isset($_SESSION["role"])) {
-        header('Location:admin_login.php'); 
+        header('Location:admin_login'); 
     }
 
     if(isset($_GET["deleteInternId"])) {
@@ -16,7 +16,7 @@
         $id = $_GET["yesDeleteId"];
         $deleteRes = $interns->deleteIntern($id);
         if($deleteRes == true) {
-            header("Location:registered_interns.php");
+            header("Location:registered_interns");
         } else {
             $respose = '<div><p> Error;  Please try again</p></div>';
         }

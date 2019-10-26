@@ -4,7 +4,7 @@
     $mentors = new Mentor;
 
     if(!isset($_SESSION["role"])) {
-        header('Location:admin_login.php'); 
+        header('Location:admin_login'); 
     }
 
     if(isset($_GET["deleteMentorId"])) {
@@ -16,7 +16,7 @@
         $id = $_GET["yesDeleteId"];
         $deleteRes = $mentors->deleteMentor($id);
         if($deleteRes == true) {
-            header("Location:registered_mentors.php");
+            header("Location:registered_mentors");
         } else {
             $respose = '<div><p> Error;  Please try again</p></div>';
         }
