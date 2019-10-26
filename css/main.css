@@ -1,7 +1,7 @@
     @import url('https://fonts.googleapis.com/css?family=Oswald');
     @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap');
 
-    
+
     @media screen and (min-width: 0) {
         * {
             margin: 0;
@@ -251,6 +251,10 @@
             height: 300px;
         }
 
+        .main-seventh-row button {
+            margin: 10px auto;
+        }
+
         .main-eighth-row {
             width: 100%;
             margin-top: 80px;
@@ -268,6 +272,9 @@
         .main-eighth-row .row_8 .row_8--one a i:last-of-type {
             border: 1px solid #3C6B9C;
             border-radius: 100%;
+            margin-right: 10px;
+            padding: 1px 3px;
+            margin-bottom: 20px;
         }
 
         .main-eighth-row img {
@@ -279,6 +286,7 @@
         .support {
             background-color: #3c6b9c;
             width: 100%;
+            padding: 50px;
             text-align: center;
         }
         .support__header {
@@ -287,14 +295,14 @@
             font-size: 24px;
         }
         .support__items {
-            display: inline-flex;
-            align-items: center;
-            width: 99%;
+            display: grid;
+            grid-template-columns: 1fr;
+            width: 100%;
             margin: 0;
             padding: 3rem 0;
         }
         .support__items .support__item {
-            flex-basis: 50%;
+            margin-bottom: 50px;
         }
         .support__items .support__item-icon {
             border-radius: 50%;
@@ -341,6 +349,7 @@
             text-decoration: none;
             font-size: 1rem;
             color: #8ddbff;
+            margin-left: 10px;
         }
         .support__items .support__item-link a:hover {
             color: #c0ebff;
@@ -520,6 +529,15 @@
             z-index: 10;
             transform: rotate(-135deg);
         }
+
+        .section1 .half-a-row {
+            margin: 20px auto;
+            width: 100%;
+        }
+
+        .section1 table {
+            margin: 0 auto;
+        }
     }
     
     @media screen and (min-width: 760px) {
@@ -574,6 +592,7 @@
             padding-left: 20px;
             margin-bottom: 60px;
         }
+
         .subheading {
             font-size: 1.4em;
         }
@@ -606,6 +625,11 @@
         .main-second-row {
             margin-left: 0;
             margin-top: 0px;
+        }
+
+        .support__items {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
         }
         /* sponsor section by hayjay */
         #sponsor-flex-top,
