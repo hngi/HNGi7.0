@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['hng-admin'])){
-    header("location:login.php");
+    header("location:login");
     exit();
 }
 require 'classControllers/init.php';
@@ -14,7 +14,7 @@ $my_role = $_SESSION['hng-admin']['role'];
 if($my_role != 1){
     //not a super admin
     $_SESSION['err_msg'] = "<div class='alert alert-warning'>This task is only available for a super admin!</div>";
-    header("location:test_home.php");
+    header("location:test_home");
     exit();
 }
 
@@ -43,7 +43,7 @@ if($my_role != 1){
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.php">HngI7</a>
+        <a class="navbar-brand" href="index">HngI7</a>
     </div>
 
     </div><!-- /.navbar-collapse -->

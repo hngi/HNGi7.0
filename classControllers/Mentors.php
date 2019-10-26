@@ -30,7 +30,7 @@ class Mentor
                         <td>' . $row["current_state"] . '</td>
                         <td>' . $row["employment_status"] . '</td>
                         <td>' . $row["timestamp"] . '</td>
-                        <td>' . '<a href="delete_mentor.php?deleteMentorId=' . $row["mentor_id"] . '" class="btn btn-danger btn-sm">Delete</a>' . '</td>
+                        <td>' . '<a href="delete_mentor?deleteMentorId=' . $row["mentor_id"] . '" class="btn btn-danger btn-sm">Delete</a>' . '</td>
                         
 
                     </tr>';

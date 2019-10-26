@@ -7,10 +7,11 @@ if (isset($_POST["recover-btn"])) {
   $email = $database->escape_string($_POST["email"]);
   $query = $database->query("SELECT * FROM admins WHERE email = '$email'");
   $row = mysqli_fetch_assoc($query);
-  $fullname = $row["firstname"] . ' ' . $row["lastname"];
+  $firstname = $row["firstname"];
+  $lastname = $row["lastname"];
   $count = mysqli_num_rows($query);
   if ($count > 0) {
-     $url = "http://hngi7.hng.tech/resetpassword.php?code=$code";
+     $url = "https://hngi7.herokuapp.com/resetpassword?code=$code";
     $subject = 'YOUR PASSWORD REST LINK';
     $body = "<html>
         <head>
@@ -32,7 +33,7 @@ if (isset($_POST["recover-btn"])) {
                       <table border='0' cellpadding='0' cellspacing='0' width='100%'>
                         <tr>
                           <td style='color: #153643; font-family: Arial, sans-serif; font-size: 24px;'>
-                            <b>Dear,  $fullname .</b>
+                            <b>Dear,  $fisrtname  $lastname .</b>
                           </td>
                         </tr>
                         <tr>
@@ -116,11 +117,11 @@ if (isset($_POST["recover-btn"])) {
       <section>
         <h2 class="skyblue-text">Quick Links</h2>
         <div id="link-list">
-          <a href="join-intern.php" class="skyblue-text">Join HNG</a>
-          <a href="index.php" class="skyblue-text">About HNG</a>
-          <a href="donate.html" class="skyblue-text">Become a Sponsor</a>
-          <a href="MentorSetUpPage2.php" class="skyblue-text">Sign up as Mentor</a>
-          <a href="faq.php" class="skyblue-text">FAQ</a>
+          <a href="join-intern" class="skyblue-text">Join HNG</a>
+          <a href="index" class="skyblue-text">About HNG</a>
+          <a href="donate" class="skyblue-text">Become a Sponsor</a>
+          <a href="MentorSetUpPage2" class="skyblue-text">Sign up as Mentor</a>
+          <a href="faq" class="skyblue-text">FAQ</a>
         </div>
       </section>
       <section id="contact-section">
