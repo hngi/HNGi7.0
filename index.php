@@ -495,7 +495,7 @@
 
                         <div>
                             <a href="hng6.php">
-                                <i class="fa fa-angle-right px-1"></i>Learn more</a>
+                                <i class="fa fa-angle-right "></i>Learn more</a>
                         </div>
 
                     </div>
@@ -519,7 +519,7 @@
                             </h4>
                             <span class="support__item-link">
                                 <i class="fa fa-chevron-circle-right"></i>
-                                <a href="donate.html" class="text-light">Get Started</a>
+                                <a href="donate.php" class="text-light">Get Started</a>
                             </span>
                         </div>
                     </div>
@@ -533,7 +533,7 @@
                             </h4>
                             <span class="support__item-link">
                                 <i class="fa fa-chevron-circle-right"></i>
-                                <a href="donate.html" class="text-light">Get Started</a>
+                                <a href="donate.php" class="text-light">Get Started</a>
                             </span>
                         </div>
                     </div>
@@ -547,7 +547,7 @@
                             </h4>
                             <span class="support__item-link">
                                 <i class="fa fa-chevron-circle-right"></i>
-                                <a href="donate.html" class="text-light">Get Started</a>
+                                <a href="donate.php" class="text-light">Get Started</a>
                             </span>
                         </div>
                     </div>
