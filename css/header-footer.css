@@ -265,3 +265,8 @@
         margin-left: 5%;
     }
 }
+
+@media screen and (min-width: 500px){
+    header #mobile-bars {
+        margin-left: 42vw;
+}
