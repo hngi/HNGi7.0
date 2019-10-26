@@ -2,30 +2,22 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The HNG Internship</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
-    <title>HNG 6.0</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
-    <link rel="icon" type="img/png" href="images/hng-favicon.png">
-    <link rel="stylesheet" href="css/hng6.css">
-    <link rel="stylesheet" href="css/header-footer.css">
-    <style>
-        @media screen and (max-width: 760px) {
-            #join-hng {
-                display: none;
-                margin-top: 8px;
-            }
-        }
-    </style>
-
+    <link rel="stylesheet" href="css/hngsix.css">
+    <link rel="stylesheet" type="text/css" href="css/header-footer.css">
 </head>
 
-<body class="container-fluid">
-    <?php
-		include('fragments/site_header.php');
-	?>
+<body>
+    <?php include('fragments/site_header.php'); ?>
+
+    <main>
         <section id="countdown-section">
             <h2 class="darkblue-text center-text" id="countdown-intro">Countdown to HNGi7.0 </h2>
 
@@ -70,6 +62,7 @@
 
             <h2 class="center-text"><a href="join-intern.php" class="skyblue-text" id="countdown-register">REGISTER FOR HNGi7.0 NOW</a></h2>
         </section>
+
         <section id="home-about">
             <h1 class="blue-text">HNG 6.0 Internship</h1>
             <div id="about-container">
@@ -82,11 +75,14 @@
                         <a href="mentorpage.php" class="skyblue-text">Mentors</a>, their job was to guide and inspire participatants when needed and also to properly coordinate the event.
                     </p>
                 </article>
+                <article>
                 <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722500/home-forum_wmrsfj.png">
+                </article>
             </div>
         </section>
+
         <section class="section2">
-            <h2 class="center-text blue-text">How it All Happened</h2>
+            <h2 class="blue-text">How it All Happened</h2>
             <div class="center-text gallery-grid">
                 <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722558/gallery-first_gldujn.png">
                 <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722589/gallery-second_nkrosi.png">
@@ -94,38 +90,50 @@
                 <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722558/gallery-first_gldujn.png">
                 <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722589/gallery-second_nkrosi.png">
                 <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722618/gallery-third_oqgaiv.png">
+                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722558/gallery-first_gldujn.png">
+                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722589/gallery-second_nkrosi.png">
+
             </div>
-            <div class="center-text gallery-grid" id="more-images" style="display: none;">
+            <div class="center-text gallery-grid" id="more-images">
                 <img src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng1_rbfvik.jpg">
                 <img src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng2_rva54w.jpg">
                 <img src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng3_blzemp.jpg">
                 <img src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng4_tlrjyf.jpg">
                 <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722618/gallery-third_oqgaiv.png">
                 <img src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng5_qvzjfy.jpg">
+                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722558/gallery-first_gldujn.png">
+                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722589/gallery-second_nkrosi.png">
+
             </div>
             <!-- <p class="center-text"><a class="def-button shadowed">View more photos</a></p> -->
             <p class="center-text"><button class="def-button shadowed" onclick="myFunction()">View more photos</button></p>
         </section>
+
         <section id="participate-section">
-            <article>
+            <div>
                 <h2 class="blue-text">Participation</h2>
                 <p>
                     More than 5000 intellectuals participated in the HNG 6.0 internship programme. <br /><br /> We had people living in Africa, Europe and Asia sign up for the programme. <br /><br /> Participation was achieved remotely via the popular
                     collaboration tool called Slack.
                 </p>
-                <br />
                 <p id="p-link"><a href="join-intern.php" class="def-button">Join HNGi7.0</a></p>
-            </article>
+            </div>
+            <div>
             <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722649/home-geeks_vld6nt.png" id="geek-img">
+            </div>
         </section>
+        
         <section class="section3">
             <h2 class="blue-text center-text">HNG 6 Internship Tracks (Curriculum)</h2>
             <div id="curriculum-flex">
+                <div>
                 <p>
                     Those who participated in HNG 6.0 Internship program were divided into groups according to their interests.
-                    <br /><br /> Those groups were popularly known as tracks in HNG 6.0 Internship and the following were some of the tracks featured.
-                    <br /><br /> At various points in the program, collaboration between participants in different tracks is achieved.
                 </p>
+                <p> Those groups were popularly known as tracks in HNG 6.0 Internship and the following were some of the tracks featured.</p>
+                <p> At various points in the program, collaboration between participants in different tracks is achieved.
+                </p>
+                </div>
                 <div id="track-list">
                     <a href="#">BACK END TRACK</a>
                     <a href="#">UI / UX DESIGN TRACK</a>
@@ -136,15 +144,16 @@
                 </div>
             </div>
         </section>
+        
         <section id="mentor-section">
-            <article>
+            <div>
                 <h2 class="blue-text">HNG 6.0 Internship Mentors</h2>
                 <p>
                     Mentors are responsible for day-to-day running of the HNG Internship programme.
                     <br /><br /> They are usually recruited from past editions of HNG Internship programmes
                     <br /><br /> They oversee all activities in the programme and ensure interns adhere to the rules and regulations of the programme
                 </p>
-            </article>
+            </div>
             <div id="mentor-wrapper">
                 <div id="mentor-flex">
                     <div id="mentor-div">
@@ -158,9 +167,10 @@
                         <p class="mentor-desc center-text">Mentor, HNG 6.0</p>
                     </div>
                 </div>
-                <center><a href="mentorpage.php" class="def-button shadowed">See all Mentors</a></center>
+                <a href="mentorpage.php" class="def-button shadowed">See all Mentors</a>
             </div>
         </section>
+        
         <section id="slack-channels">
             <h2 class="center-text blue-text" id="slack-title"><span>HNG 6 Internship Popular Channels - SLACK </span><img id="slack-logo" src="https://res.cloudinary.com/jaycodist/image/upload/v1570722732/slack-icon_hwxoui.svg"></h2>
             <div id="channel-list">
@@ -189,8 +199,8 @@
             </div>
             <p class="center-text"><a href="donate.html" class="def-button shadowed center">Become a Sponsor</a></p>
         </section>
-
-        <footer>
+    </main>
+        <!--<footer>
             <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722444/hng-brand-logo_gnplmq.svg">
             <nav>
                 <section>
@@ -239,7 +249,8 @@
             <p class="center-text darkblue-text">&copy 2019, HNG Internship. All rights reserved.</p>
             <div id="jumptotop"><em></em></div>
                 <script src="./js/scroll-to-top.js"></script> 
-        </footer>
+        </footer>-->
+    <?php include('fragments/site_footer.php'); ?>
 
 </body>
 
