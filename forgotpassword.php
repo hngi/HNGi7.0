@@ -79,8 +79,6 @@ if (isset($_POST["recover-btn"])) {
     <section class="container-fluid">
     <section class="jumbo">
     <?php include('fragments/site_header.php'); ?>
-
-
     </section>
 
     <div class="form-area">
@@ -110,6 +108,7 @@ if (isset($_POST["recover-btn"])) {
       </form>
     </div>
 
-
+      <?php include('fragments/site_footer.php'); ?>
+          </section>
         </body>
   </html>

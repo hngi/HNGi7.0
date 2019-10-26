@@ -65,7 +65,7 @@ if (isset($_POST['contact-btn'])) {
 </head>
 
 <body>
-  <section class="cotainer-fluid">
+  <section class="container-fluid">
 <?php
     include "fragments/site_header.php";
 ?>
