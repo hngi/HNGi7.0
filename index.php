@@ -21,6 +21,7 @@
 </head>
 
 <body>
+    <section class="container-fluid">
     <?php include('fragments/site_header.php');?>
     <div class="container-fluid">
         <img src="https://bit.ly/2OC3tWo" id="corner-circle" alt="Graphic at the top right corner">
@@ -552,7 +553,8 @@
                     </div>
                 </div>
             </div>
-            <div>
+
+            <div class="sponsor">
                 <h2 class="center-text blue-text">HNG 6.0 Internship Sponsors</h2>
                 <div id="sponsor-flex-top">
                     <a href="#"><img
@@ -575,37 +577,28 @@
                 <p class="center-text"><a href="donate.html" class="def-button shadowed center no-underline">Become a
                         Sponsor</a></p>
             </div>
+
         </main>
-
-
-
-
-
-
-
-
-
-
-
 
     </div>
     <?php include('fragments/site_footer.php'); ?>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
-    <script src="js/main.js"></script>
-    <div id="jumptotop"><em></em></div>
-    <script src="./js/scroll-to-top.js"></script>
 
+    </section>
 </body>
 
 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+<script src="js/main.js"></script>
+<div id="jumptotop"><em></em></div>
+<script src="./js/scroll-to-top.js"></script>
 </html>

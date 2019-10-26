@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <section class="container-fluid">
     <?php include('fragments/site_header.php'); ?>
 
     <main>
@@ -251,7 +252,7 @@
                 <script src="./js/scroll-to-top.js"></script> 
         </footer>-->
     <?php include('fragments/site_footer.php'); ?>
-
+</section>
 </body>
 
 <script type="text/javascript" src="js/hng6.js"></script>
