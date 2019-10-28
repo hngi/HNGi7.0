@@ -1,3 +1,43 @@
+<?php
+    require 'classControllers/init.php';
+    $internExperience = new InternExperience();
+    if(isset($_POST['ok'])){
+        $names = $database->escape_string($_POST["names"]);
+        $stack = $database->escape_string($_POST["stack"]);
+        $experience = $database->escape_string($_POST['experience']);
+
+        if(isset($_FILES['image']['name']) && $_FILES['image']['name'] != ""){
+            $folder = "./uploads/interns/";
+            $ext = strtolower(end(explode(".",$_FILES['image']['name'])));
+            $allowed = array('jpg','jpeg','png');
+            if(in_array($ext,$allowed)){
+                $image_name = uniqid().$_FILES['image']['name'];
+                $destination = $folder."/".$image_name;
+                $source = $_FILES['image']['tmp_name'];
+
+                if(move_uploaded_file($source,$destination)){
+                    $image = $image_name;
+                }else{
+                    $image = "";
+                }
+            }else{
+                $image = "";
+            }
+
+        }else{
+            $image = "";
+        }
+
+        $internExperience->saveExperience("$names","$stack","$image","$experience");
+
+        $_SESSION['msg'] = "<div class='alert alert-success'>Your experience has been submitted successfully!</div>";
+        header("location:intern-experience.php");
+        exit();
+    }
+
+    $all_experiences = $internExperience->fetch_experiences();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,128 +57,100 @@
 </head>
 
 <body>
-
-    <?php
-          include('fragments/site_header.php');
-        ?>
+    <section class="container-fluid">
+    <?php include('fragments/site_header.php');?>
     <div class="jumbotron" id="landing-page">
         <div class="">
             <h2>Experience Recap From Past Interns</h2>
             <p class="lead">Testimonies From Ex HNG Internship Finalists</p>
+            <a href="#modal-id" data-toggle="modal" class="btn btn-primary">Submit Experience</a> <!--button to add experience-->
         </div>
 
     </div>
 
+    <!--modal here-->
+    <div class="modal fade" id="modal-id">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Submit Your HNG Internship Experience</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post" role="form" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="name">Full name</label>
+                            <input type="text" name="names" class="form-control" required placeholder="Full Name" id="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="stack">Your Stack</label>
+                            <input type="text" name="stack" class="form-control" required placeholder="Your Stack" id="stack">
+                        </div>
+                        <div class="form-group">
+                            <label for="exp">Your Experience</label>
+                            <textarea name="experience" class="form-control" required placeholder="Your Experience" id="exp" maxlength="300"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="image">Your Picture(Optional)</label>
+                            <br>
+                            <input type="file" name="image" accept="image/*">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" name="ok" class="btn btn-success" value="Submit Experience">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
     <main>
         <section>
             <section class="mentors-section">
+                <div class="container">
+                    <?php
+                    if(isset($_SESSION['msg'])){
+                        echo $_SESSION['msg'];
+                        unset($_SESSION['msg']);
+                    }
+                    ?>
+                </div>
                 <div class="wrapper">
-                    <div class="wrapper-child"  >
-                        <img class="image" src="https://res.cloudinary.com/izik4004/image/upload/v1571823964/12.png">
-                        <h4>Stephen Azubuike</h4>
-                        <p>UI/UX Designer</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
-                            quaerat eaque dolor? Praesentium, necessitatibus. Aut ratione dolorum ab voluptas
-                            doloremque, atque obcaecati?
-                        </p>
-                    </div>
-                    <div class="wrapper-child"  >
-                        <img class="image"
-                            src="https://res.cloudinary.com/izik4004/image/upload/v1571823755/7.png">
-                        <h4>Oluwatoni Atunrase</h4>
-                        <p>Web Developer</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
-                            quaerat eaque dolor? Praesentium, necessitatibus. Aut ratione dolorum ab voluptas
-                            doloremque, atque obcaecati?
-                        </p>
-                    </div>
-                    <div class="wrapper-child"  >
-                        <img class="image" src="https://res.cloudinary.com/izik4004/image/upload/v1571823755/10.png">
-                        <h4>Aboagye</h4>
-                        <p>Web Developer</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
-                            quaerat eaque dolor? Praesentium, necessitatibus. Aut ratione dolorum ab voluptas
-                            doloremque, atque obcaecati?</p>
-                    </div>
-                    <div class="wrapper-child"  >
-                        <img class="image" src="https://res.cloudinary.com/izik4004/image/upload/v1571823755/9.png">
-                        <h4>John Ademoye</h4>
-                        <p>Web Developer</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
-                            quaerat eaque dolor? Praesentium, necessitatibus. Aut ratione dolorum ab voluptas
-                            doloremque, atque obcaecati?</p>
-                    </div>
-                    <div class="wrapper-child"  >
-                        <img class="image" src="https://res.cloudinary.com/izik4004/image/upload/v1571823755/8.png">
-                        <h4>Adeyefa Oluwatoba</h4>
-                        <p>Web Developer</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
-                            quaerat eaque dolor? Praesentium, necessitatibus. Aut ratione dolorum ab voluptas
-                            doloremque, atque obcaecati?</p>
-                    </div>
-                    <div class="wrapper-child"  >
-                        <img class="image" src="https://res.cloudinary.com/izik4004/image/upload/v1571823755/11.png">
-                        <h4>Adolphus Chris</h4>
-                        <p>Web Developer</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
-                            quaerat eaque dolor? Praesentium, necessitatibus. Aut ratione dolorum ab voluptas
-                            doloremque, atque obcaecati?</p>
-                    </div>
-                    <div class="wrapper-child"  >
-                        <img class="image" src="https://res.cloudinary.com/izik4004/image/upload/v1571822336/myAvatar.png">
-                        <h4>Ogundiji Bolade</h4>
-                        <p>Web Developer</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
-                            quaerat eaque dolor? Praesentium, necessitatibus. Aut ratione dolorum ab voluptas
-                            doloremque, atque obcaecati?</p>
-                    </div>
-                    <div class="wrapper-child"  >
-                        <img class="image" src="https://res.cloudinary.com/izik4004/image/upload/v1571822336/6.png">
-                        <h4>Ajayi Jeremiah</h4>
-                        <p>Backend Developer</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
-                            quaerat eaque dolor? Praesentium, necessitatibus. Aut ratione dolorum ab voluptas
-                            doloremque, atque obcaecati?</p>
-                    </div>
-                    <div class="wrapper-child"  >
-                        <img class="image" src="https://res.cloudinary.com/izik4004/image/upload/v1571822336/4.png">
-                        <h4>Patrick Aziken</h4>
-                        <p>Software Tester</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
-                            quaerat eaque dolor? Praesentium, necessitatibus. Aut ratione dolorum ab voluptas
-                            doloremque, atque obcaecati?</p>
-                    </div>
-                    <div class="wrapper-child"  >
-                        <img class="image" src="https://res.cloudinary.com/izik4004/image/upload/v1571822336/5.png">
-                        <h4>Everitus Olumese</h4>
-                        <p>Developer</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
-                            quaerat eaque dolor? Praesentium, necessitatibus. Aut ratione dolorum ab voluptas
-                            doloremque, atque obcaecati?</p>
-                    </div>
-                    <div class="wrapper-child"  >
-                        <img class="image" src="https://res.cloudinary.com/izik4004/image/upload/v1571822336/3.png">
-                        <h4>Albert Oboh</h4>
-                        <p>Web Developer</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
-                            quaerat eaque dolor? Praesentium, necessitatibus. Aut ratione dolorum ab voluptas
-                            doloremque, atque obcaecati?</p>
-                    </div>
-                    <div class="wrapper-child"  >
-                        <img class="image" src="https://res.cloudinary.com/izik4004/image/upload/v1571822336/2.png">
-                        <h4>Osumgha Chiamaka</h4>
-                        <p>Web Developer</p>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis illo vero facilis
-                            quaerat eaque dolor? Praesentium, necessitatibus. Aut ratione dolorum ab voluptas
-                            doloremque, atque obcaecati?</p>
-                    </div>
+                    <?php
+                        foreach ($all_experiences as $all_experience){
+                            $image = $all_experience['image'];
+                            $names = $all_experience['names'];
+
+                            if($image == ""){
+                                $img_src = "https://via.placeholder.com/150x150.png?text=$names";
+                            }else{
+                                $img_src = "uploads/interns/$image";
+                            }
+                            ?>
+                            <div class="wrapper-child"  >
+                                <img class="image" src="<?php echo $img_src;?>">
+                                <h4><?php echo $all_experience['names'];?></h4>
+                                <p><?php echo $all_experience['stack'];?></p>
+                                <p>
+                                    <?php echo nl2br($all_experience['experience']);?>
+                                </p>
+                            </div>
+                            <?php
+                        }
+                    ?>
+
             </section>
         </section>
         <?php include('fragments/site_footer.php'); ?>
 
     </main>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    </section>
+</body>
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -148,6 +160,4 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="js/intern-experience.js"></script>
-</body>
-
 </html>

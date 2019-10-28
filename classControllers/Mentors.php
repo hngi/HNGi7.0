@@ -4,24 +4,6 @@
 class Mentor
 {
 
-  public function DeleteMentor($mentor_id)
-  {
-
-
-    global $database;
-
-    $sql = "DELETE FROM mentors WHERE mentor_id='$mentor_id'";
-    if ($query = $database->query($sql)) {
-
-      $message = "Mentor Deleted successfully.";
-
-      header('Location: registered_mentors.php');
-    }
-
-    // return $message;
-
-  }
-
 
   public function allMentors()
   {
@@ -48,7 +30,7 @@ class Mentor
                         <td>' . $row["current_state"] . '</td>
                         <td>' . $row["employment_status"] . '</td>
                         <td>' . $row["timestamp"] . '</td>
-                        <td>' . '<button type="button" class="btn btn-info btn-xs" onClick="displayEach(' . $row["mentor_id"] . ');">&nbsp;View&nbsp;</button>&nbsp;<a onClick=\"javacript: return confirm("Please confirm deletion");\" href="registered_mentors.php?delete_id=' . $row["mentor_id"] . '" class="btn btn-danger btn-xs">Delete</a>' . '</td>
+                        <td>' . '<a href="delete_mentor.php?deleteMentorId=' . $row["mentor_id"] . '" class="btn btn-danger btn-sm">Delete</a>' . '</td>
                         
 
                     </tr>';
@@ -61,9 +43,41 @@ class Mentor
 
     return $display;
   }
+
+  public function getMentor($id) {
+    global $database;
+    $query = "SELECT * FROM mentors WHERE mentor_id = ".$id."";
+    $res = $database->query($query);
+    $count = $database->affected_rows();
+    if($count > 0) {
+      // admin exists
+      $row = mysqli_fetch_assoc($res);
+
+      $data["name"] = $row["name"];
+      $data["email"] = $row["email"];
+      $data["phone"] = $row["phone_no"];
+
+      return $data;
+    } else {
+      // no admin found
+      return 0;
+    }
+  }
+
+  public function deleteMentor($id) {
+    global $database;
+    $query = "DELETE FROM mentors WHERE mentor_id = ".$id."";
+    $res = $database->query($query);
+    $count = $database->affected_rows();
+    if($count > 0) {
+      // deleted
+      return true;
+    } else {
+      // failed
+      return false;
+    }
+  }
+
+
 }
 
-if (isset($_GET["signup"])) {
-  $interns = new Interns();
-  $interns->internSignup();
-}

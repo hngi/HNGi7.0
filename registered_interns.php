@@ -1,243 +1,196 @@
 <?php
-require 'classControllers/init.php';
+    require 'classControllers/init.php';
+    if (!isset($_SESSION["role"])) {
+        header('Location:admin_login.php');
+    }
 
-if (!isset($_SESSION["role"])) {
-  header('Location:admin_login.php');
-}
-// include('backend/Interns.php');
-$interns = new Intern;
-$display = $interns->allInterns();
+    $interns = new Intern;
+    $display = $interns->allInterns();
 
-if (isset($_POST['search'])) {
-  $interns = new Intern;
-  $display = $interns->search($_POST['search']);
-}
+    if (isset($_POST['search'])) {
+        $interns = new Intern;
+        $display = $interns->search($_POST['search']);
+    }
 
-if (isset($_GET['delete_id'])) {
-  $intern_id = $_GET['delete_id'];
+    if (isset($_GET['delete_id'])) {
+        $intern_id = $_GET['delete_id'];
 
-  $message = $interns->DeleteIntern($intern_id);
-}
-
+        $message = $interns->DeleteIntern($intern_id);
+    }
 ?>
 <!DOCTYPE html>
 <html>
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Interns</title>
-  <link rel="icon" type="img/png" href="images/hng-favicon.png">
-  <link rel="stylesheet" href="css/dashboard.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Interns</title>
+    <link rel="icon" type="img/png" href="images/hng-favicon.png">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="css/newDashboard.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    
 
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- This version required for Pagination -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <!-- please do not change from maxcdn bootstrap-->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <!-- jQuery library -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   
+    <style type="text/css">
+        .card {
+            height: 150px;
+            background: #ccc;
+            margin: 15px;
+            padding: 10px;
+            border-radius: 15px;
 
-
-  <script type="text/javascript" src="js/dashboard.js"></script>
-  <style type="text/css">
-    .card {
-      height: 150px;
-      background: #ccc;
-      margin: 15px;
-      padding: 10px;
-      border-radius: 15px;
-
-    }
-  </style>
-
-  <script language="javascript" type="text/javascript">
-    function printDiv(divID) {
-      //Get the HTML of div
-      var divElements = document.getElementById(divID).innerHTML;
-      //Get the HTML of whole page
-      var oldPage = document.body.innerHTML;
-
-      //Reset the page's HTML with div's HTML only
-      document.body.innerHTML =
-        "<html><head><title></title></head><body><br><br><br>" + divElements + "</body>";
-
-      //Print Page
-      window.print();
-
-      //Restore orignal HTML
-      document.body.innerHTML = oldPage;
-    }
-  </script>
+        }
+    </style>
 
 </head>
 
 <body>
-  <main class="reg">
-    <section id="overview-section">
-      <h1>Registered Interns</h1>
-      <div class="register-container">
-        <div class="row">
-
-          <?php
-          if ($display == "0") {
-            echo "<h2>There are no Registered Interns</h2>";
-          } else {
-            ?>
-            <!--<div class="col-md-3">-->
-            <!--    <a href="exports/export-to-excel.php">-->
-            <!--        <button type="button" id="export">Export to Spreadsheet</button>-->
-            <!--    </a>-->
-            <!--</div>-->
-            <div class="col-md-12">
-              <!--<a href="exports/export-to-pdf.php">-->
-              <a href="#" onclick="javascript:printDiv('printablediv')">
-                <button type="button" class="btn btn-primary text-right" id="export">Export to PDF</button>
-
-              </a>
+    <main class="reg">
+    <div id="overlay"></div>
+        <div id="export-modal">
+            <div>
+                <input type="radio" id="csv" name="exportOptions"><label for="csv">Export to CSV</label>
             </div>
-
-
-            <div class="col-md-12">
-              <div class="row justify-content-end">
-                <div class=" col-md-4 offset-md-4">
-                  <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" role="search" method="POST">
-                    <div class="input-group add-on">
-                      <input class="form-control" placeholder="Search by name or Location" name="search" type="text">
-                      <div class="input-group-btn">
-                        <button class="btn btn-primary" type="submit">Search</button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-            <div class="table-responsive" id="printablediv">
-
-              <table class="table table-hover table-bordered  mt-3 mb-1 table-condensed">
-                <thead class="table-primary">
-                  <tr>
-                    <th>S/N</th>
-                    <th>Intern ID</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <!-- <th>Porfolio</th> -->
-                    <th>CV</th>
-                    <th>Experience</th>
-                    <th>Interest</th>
-                    <th>Location</th>
-                    <th>Employment Status</th>
-                    <th>About</th>
-                    <th>Registration Date</th>
-                    <th>Action</th>
-
-                  </tr>
-                </thead>
-                <tbody>
-                  <?php
-                    echo $display;
-                    ?>
-                </tbody>
-              </table>
-            </div>
-
-          <?php
-          }
-          ?>
+            <div>
+                <input type="radio" id="pdf" name="exportOptions"><label for="pdf">Export to PDF</label>
+            </div> 
+            <p id="message"></p>
+            <button type="button" class="exports" id="download">Download</button>
         </div>
-      </div>
-      <br /><br />
-      <!-- <button id="export">Export to Spreadsheet</button> -->
+        <input type="text" class="searchBox"><i class="fas fa-search"></i>
+        <section id="overview-section">
+            <!-- <h1>Dashboard</h1> -->
+            <h2>Registered Interns </h2>
+            <!-- <section id="intern-section">
+				Populated by `js/dashboard.js` 
+			</section> -->
 
-    </section>
+            <div class="container">
+                <div class="row">
 
-    <!-- <section id="details-section">
-			<div id="details-back">
-                <div>
-                    <a href="overview.html" id="newitem-go-back" title="Go back">
-                        <div></div>
-                    </a>
+                    <?php
+                    if ($display == "0") {
+                        echo "<h2>There are no Registered Interns</h2>";
+                    } else {
+                        ?>
+                        <!--<div class="col-md-3">-->
+                        <!--    <a href="exports/export-to-excel-mentors.php">-->
+                        <!--        <button type="button" id="export">Export to Spreadsheet</button>-->
+                        <!--    </a>-->
+                        <!--</div>-->
+                        <!-- <div class="col-md-3">
+                            
+                            <a href="#" onclick="javascript:printDiv('printablediv')">
+                                <button type="button" class="btn btn-primary btn-sm" id="export">Export to PDF</button>
+                            </a> -->
+                        </div>
+                        <!-- <div id="printablediv" class="table-responsive"> -->
+                        <div id="printablediv">
+                            <div class="scroll">
+                            <!-- <table id="my-table" class="table table-hover table-bordered mt-3 mb-1"> -->
+                            <table id="my-table" class="table table-hover">
+                                <!-- <thead class="table-primary"> -->
+                                <thead>
+                                    <tr>
+                                    <th data-heading="sn">SN<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                    <th data-heading="name">Name<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                    <th data-heading="email">Email<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                    <th data-heading="phone">Phone No<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                    <th data-heading="cv">CV<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                    <th data-heading="experience">Experience<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                    <!-- <th>Link To Linkedin</th> -->
+                                    <th data-heading="interest">Interest<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                    <th data-heading="location">Location<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                    <th data-heading="employmentStatus">Employment Status<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                    <th data-heading="about">About<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                    <th data-heading="timeStamp">Registration Date<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                        <th>Action</th>
+
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                        echo $display;
+                                        ?>
+
+                                </tbody>
+                            </table>
+                          </div>
+                        </div>
+                    <?php
+                    }
+                    ?>
+                    <div class="buttonDiv">
+                                <!--<a href="exports/export-to-pdf-mentors.php">-->
+                                <a href="#" onclick="javascript:printDiv('printablediv')">
+                                    <button type="button" class="exports" id="export">Print</button>
+                                </a>
+                                <a href="#" >
+                                    <button type="button" class="exports" id="exportAs">Export</button>
+                                </a>
+                        </div>            
                 </div>
             </div>
-			<h2>Intern application details</h2>
-			<em id="no-intern">No intern selected</em>
-			<br />
-			<p>Name: <span id="details-name"></span></p>
-			<p>Email: <span id="details-email"></span></p>
-			<p>Age: <span id="details-age"></span></p>
-			<p>Phone Number: <span id="details-number"></span></p>
-			<p>Track of interest: <span id="details-track"></span></p>
-			<p>CV link: <span id="details-CV-link"></span></p>
-			<p>State of residence: <span id="details-state-of-residence"></span></p>
-			<div href="" id="details-return">Back to Overview</div>
-		</section> -->
-  </main>
 
-  <input type="checkbox" id="mobile-bars-check" />
-  <label for="mobile-bars-check" id="mobile-bars">
-    <div class="stix" id="stik1"></div>
-    <div class="stix" id="stik2"></div>
-    <div class="stix" id="stik3"></div>
-  </label>
+            <!-- <button id="export">Export to Spreadsheet</button> -->
 
-  <?php include('fragments/sidebar.php'); ?>
+        </section>
+        <section id="details-section">
+			<div id="details-back" class="details-back">
+                <div class="details-back">
+                    <!-- <a href="overview.html" id="newitem-go-back" title="Go back">
+                        <div></div>
+                    </a> -->
+                </div>
+            </div>
+            <div id="centralize">
+			<h2>Intern Details</h2>
+			<em id="no-intern">No Intern selected</em>
+            <br />
 
+			<p class="details">Name: <span id="name"></span></p>
+			<p class="details">Email: <span id="email"></span></p>
+			<p class="details">Phone Number: <span id="phone"></span></p>
+			<p class="details">CV Link: <span id="cv"></span></p>
+			<p class="details">Experience: <span id="experience"></span></p>
+            <p class="details">Interest: <span id="interest"></span></p>
+            <p class="details">Location: <span id="location"></span></p>
+            <p class="details">Employment Status: <span id="employmentStatus"></span></p>
+            <p class="details">About: <span id="about"></span></p>
+            <p class="details">Registration Date: <span id="timeStamp"></span></p>
+            <!-- <div href="" id="details-return">Back to Overview</div> -->
+            <div id="navigator">
+                <i class="fas fa-chevron-left fa-2x left navigator"></i> 
+                <p class="details"><span id="sn"></span></p>
+                <i class="fas fa-chevron-right fa-2x right navigator"></i>
+            </div>
+            </div>
+		</section>
+    </main>
 
-  <div id="modal-div"></div>
-  <button id="trigger" type="button" class="btn btn-primary" data-toggle="modal" data-target="#details-modal" style="display: none;">
-  </button>
+    <input type="checkbox" id="mobile-bars-check" />
+    <label for="mobile-bars-check" id="mobile-bars">
+        <div class="stix" id="stik1"></div>
+        <div class="stix" id="stik2"></div>
+        <div class="stix" id="stik3"></div>
+    </label>
 
-  <script>
-    // Ajax request from Modal To display the each intern.
-    function interndetails(id) {
-      $.get("modal.php", {
-        id: id
-      }, function(data) {
-        console.log(data);
-        $("#modal-div").html(data);
-        //jQuery('#mentor-modal').modal('toggle');
-        //setTimeout(function() {
-        $('#trigger').trigger('click');
-        //}, 500);
-      });
-      //   var data = {
-      //     "id": id
-      //   };
-      //   $.ajax({
-      //     url: '',
-      //     method: "get",
-      //     data: data,
-      //     success: function(data) {
-      //       $('body').append(data);
-      //       $('#details-modal').modal('show');
-      //     },
-      //     error: function() {
-      //       alert("Something went wrong!")
-      //     },
-      //   });
-      // }
-
-
-      // // To close the display of each intern
-      // function closeModel() {
-      //   jQuery('#details-modal').modal('hide');
-      //   setTimeout(function() {
-      //     jQuery('#details-modal').remove();
-      //     jQuery('.modal-backdrop').remove();
-      //   }, 500);
-    }
-  </script>
-
-
-
+    <?php include('fragments/sidebar.php'); ?>
 
 </body>
 
 </html>
+<script src="js/jspdf.js"></script>
+<script src="js/jspdf.plugin.autotable.min.js"></script>
+<script src="js/paginator.js"></script>
+<script type="text/javascript" src="js/newDashboard.js"></script>

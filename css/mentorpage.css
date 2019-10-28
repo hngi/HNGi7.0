@@ -27,15 +27,15 @@
     }
 
     .wrapper {
-      margin: 100px 0 19.13px 0;
+      margin: 50px;
     }
 
     .wrapper-child {
-      margin-bottom: 4rem;
+      margin: 2rem;
     }
 
     .wrapper-child h4 {
-      margin: 19px 0 11px 0;
+      margin: 19px 1rem 11px 1rem;
     }
 
     .social-icons {
@@ -141,7 +141,7 @@
 
      
      #img {
-       margin-left: 1rem !important;
+       /* margin-left: 1rem !important; */
        width: 150px;
      }
      
@@ -193,17 +193,39 @@
      }
 
 
+@media (max-width: 767.98px) {
+  .wrapper {
+    margin: 0 !important;
+  }
 
+  .wrapper-child {
+    margin: 0.5rem;
+  }
+      .image {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        margin: 1rem 0;
+      }
+
+}
     @media (min-width: 700px) {
       .wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        margin:0!important;
       }
-
+      .wrapper-child {
+      margin: 0.5rem;
+    }
       .collapse {
         display: flex;
         justify-content:flex-end;
       }
+
+       #landing-page {
+         min-height: 25vh;
+     } 
      
      #landing-page  h2 {
         font-size: 45px;
@@ -225,13 +247,30 @@
   /*  .land {
         bottom: 6rem;
     }*/
+@media (max-width: 991.98px) {
+  .wrapper {
+    margin: 0 !important;
+  }
 
+  .wrapper-child {
+    margin: 0.5rem;
+  }
+  span{
+    margin:0px 5px;
+  }
+ }
     @media (min-width: 1000px) {
       .wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin:0!important;
       }
-
+      .wrapper-child {
+        margin: 0.5rem;
+      }
+      span{
+        margin:0px 5px;
+      }
       li {
         padding: 0 1.5rem;
       }
@@ -251,7 +290,7 @@
      }
      
      #landing-page {
-         min-height: 45vh;
+         min-height: 25vh;
      }
      
      .land {
