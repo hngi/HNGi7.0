@@ -64,5 +64,6 @@
             $count = $database->affected_rows();
             return $count;
         }
+
     }
 ?>
