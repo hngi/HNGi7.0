@@ -19,7 +19,7 @@ class Mentors
 	{
 		global $database;
 		$res = $database->query("INSERT INTO mentors()
-			VALUES(NULL, '$this->area_of_expertise', '$this->photo_url', '$this->name', '$this->email', '$this->phone_no', '$this->link_to_portfolio', '$this->link_to_linkedin', '$this->link_to_cv', '$this->why_interested', '$this->current_state', '$this->employment_status', '$this->timestamp')");
+			VALUES(NULL, '$this->area_of_expertise', '$this->photo_url', '$this->name', '$this->email', '$this->phone_no', '$this->link_to_portfolio', '$this->link_to_linkedin', '$this->link_to_cv', '$this->why_interested', '$this->current_state', '$this->employment_status', 0 ,'$this->timestamp')");
 		return $res;
 	}
 	public function showAll_mentors()

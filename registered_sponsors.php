@@ -7,16 +7,10 @@ if (!isset($_SESSION["role"])) {
 $mentors = new Mentor;
 $display = $mentors->allMentors();
 
-if (isset($_GET['acceptMentorId'])) {
-    $mentor_id = $_GET['acceptMentorId'];
+if (isset($_GET['delete_id'])) {
+    $mentor_id = $_GET['delete_id'];
 
-    $message = $mentors->AcceptMentor($mentor_id);
-}
-
-if (isset($_GET['rejectMentorId'])) {
-    $mentor_id = $_GET['rejectMentorId'];
-
-    $message = $mentors->RejectMentor($mentor_id);
+    $message = $mentors->DeleteMentor($mentor_id);
 }
 
 ?>
@@ -27,7 +21,7 @@ if (isset($_GET['rejectMentorId'])) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Mentors</title>
+    <title>Sponsors</title>
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link href="css/newDashboard.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
@@ -71,7 +65,7 @@ if (isset($_GET['rejectMentorId'])) {
         <input type="text" class="searchBox"><i class="fas fa-search"></i>
         <section id="overview-section">
             <!-- <h1>Dashboard</h1> -->
-            <h2>Registered Mentors </h2>
+            <h2>Registered Sponsors </h2>
             <!-- <section id="intern-section">
 				Populated by `js/dashboard.js` 
 			</section> -->
@@ -81,11 +75,11 @@ if (isset($_GET['rejectMentorId'])) {
 
                     <?php
                     if ($display == "0") {
-                        echo "<h2>There are no Registered Interns</h2>";
+                        echo "<h2>There are no Registered Sponsors</h2>";
                     } else {
                         ?>
                         <!--<div class="col-md-3">-->
-                        <!--    <a href="exports/export-to-excel-mentors.php">-->
+                        <!--    <a href="exports/export-to-excel-sponsors.php">-->
                         <!--        <button type="button" id="export">Export to Spreadsheet</button>-->
                         <!--    </a>-->
                         <!--</div>-->
@@ -121,9 +115,38 @@ if (isset($_GET['rejectMentorId'])) {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php
-                                        echo $display;
-                                        ?>
+                                <tr>
+                        <td>1</td>
+                        <td> Marketing Officer </td>
+                        <td><img src="uploads/5db802bf1a6d53.33443776.jpg" style="width: 50px; height: 50px;"></td>
+                        <td> Joel</td>
+                        <td>Joelokon123@yahoo.com</td>
+                        <td>08153471606</td>
+                        <td>http://www.linkedin.com</td>
+                        <td>i want to support</td>
+                        <td>Lagos</td>
+                        <td>employed</td>
+                        <td>2019-10-29 09:13:35</td>
+                        <td><a href="delete_mentor.php?deleteMentorId=31" class="btn btn-danger btn-sm">Delete</a></td>
+                        
+
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td> CEO techBAM </td>
+                        <td><img src="uploads/5db802bf1a6d53.33443776.jpg" style="width: 50px; height: 50px;"></td>
+                        <td>Victor</td>
+                        <td>victorade@yahoo.com</td>
+                        <td>0815897536</td>
+                        <td>http://www.linkedin.com</td>
+                        <td>i want to support</td>
+                        <td>Abuja</td>
+                        <td>employed</td>
+                        <td>2019-10-29 09:13:45</td>
+                        <td><a href="delete_mentor.php?deleteMentorId=31" class="btn btn-danger btn-sm">Delete</a></td>
+                        
+
+                    </tr>
 
                                 </tbody>
                             </table>
@@ -133,7 +156,7 @@ if (isset($_GET['rejectMentorId'])) {
                     }
                     ?>
                     <div class="buttonDiv">
-                                <!--<a href="exports/export-to-pdf-mentors.php">-->
+                                <!--<a href="exports/export-to-pdf-sponsors.php">-->
                                 <a href="#" onclick="javascript:printDiv('printablediv')">
                                     <button type="button" class="exports" id="export">Print</button>
                                 </a>
@@ -156,8 +179,8 @@ if (isset($_GET['rejectMentorId'])) {
                 </div>
             </div>
             <div id="centralize">
-			<h2>Mentor Details</h2>
-			<em id="no-intern">No mentor selected</em>
+			<h2>sponsor Details</h2>
+			<em id="no-intern">No sponsor selected</em>
             <br />
             <p class="details" style="margin-left:10%;"><span id="photo"></span></p>
 			<p class="details">Name: <span id="name"></span></p>
