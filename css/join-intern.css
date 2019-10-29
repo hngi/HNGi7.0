@@ -5,7 +5,6 @@
  list-style: none;
  box-sizing: border-box;
 }
-
 body {
  font-family: "Open Sans", sans-serif;
 }
@@ -22,7 +21,7 @@ body {
 /* styling of individual input field and textarea */
 .form-container input,
 textarea {
- width: 350px;
+ width: 100%;
  padding: 10px 20px;
  margin: 10px auto;
  font-family: inherit;
@@ -30,7 +29,6 @@ textarea {
  border-radius: 4px;
  border:1px solid #0a0a0a86;
  resize: none;
- transition: 0.4s ease-out;
 }
 /* when user click on a field box */
 .form-container input:focus, .form-container textarea:focus {
@@ -42,7 +40,7 @@ transition:box-shadow .5s  ease-in-out,border .5s  ease-in-out; ;
 form.form-container > button {
  margin: 30px auto;
  display: block;
- width: 350px;
+ width: 60%;
  padding: 10px 30px;
  font-size: 16px;
  cursor: pointer;
@@ -116,11 +114,11 @@ section.jumbo > p.para2 > a {
    width: 90%;
  }
  .form-container input, textarea {
-     width: 350px;
+     width: 90%;
    }
  .form-container button
  {
-   width: 350px;
+   width: 100%;
  }
 }
 
@@ -147,18 +145,17 @@ section.jumbo > p.para2 > a {
    }
    .form-container input,
    textarea {
-     width: 300px;
+     width: 100%;
      padding: 10px 20px;
      margin: 10px auto;
      font-family: inherit;
      font-size: 16px;
-     transition: 0.4s ease-out;
    }
    
    form.form-container > button {
      margin: 30px auto;
      display: block;
-     width: 300px;
+     width: 60%;
      padding: 10px 30px;
      font-size: 16px;
      cursor: pointer;

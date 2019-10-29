@@ -7,6 +7,8 @@ if (isset($_POST['login'])) {
   $errors = '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: #F7CFCF; color: #6A0E0D; width: 80% !important; text-align: center;">Wrong Credentials</p>';
 }
 
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -71,12 +73,12 @@ if (isset($_POST['login'])) {
       <p id="result"></p>
       <div class="inputWithIcon">
       <i class="fa fa-envelope" aria-hidden="true"></i>
-      <input type="email" name="email" id="email" placeholder="Enter your Email" required />
+      <input type="email" name="email" id="email" placeholder="enter your Email" required />
       </div>
 
       <div class="inputWithIcon">
         <i class="fa fa-key" aria-hidden="true"></i>
-        <input type="password" name="password" id="password" placeholder="Enter your Password" required>
+        <input type="password" name="password" id="password" placeholder="enter your password" required>
       </div>
       
       <button type="submit" onclick="signup()" name="login">LOG IN</button>
