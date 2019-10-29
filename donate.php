@@ -27,6 +27,7 @@
 
   <body>
   <section class="container-fluid">
+  <!-- <div class="body-container"> -->
     <section class="jumbo">
     <?php include "fragments/site_header.php" ?>
      </section>
@@ -151,7 +152,7 @@
     </script>
 
      <?php include "fragments/site_footer.php" ?>
-    
+     <!-- </div> -->
     </section>
   </body>
     <script
