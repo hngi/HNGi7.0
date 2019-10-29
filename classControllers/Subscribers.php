@@ -12,7 +12,7 @@ class Subscribers
         global $database;
         $sql = "INSERT INTO subscription(email) VALUES('$email')";
         if($query = $database->query($sql)){
-            send_welcome_email($email);
+            @$this->send_welcome_email($email);
         }
 
     }
