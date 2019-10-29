@@ -14,6 +14,8 @@
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="stylesheet" href="css/newContact.css">
     <link rel="stylesheet" href="css/faq.css">
+    <link rel="icon" type="img/png" href="images/hng-favicon.png">
+
 
 </head>
 
