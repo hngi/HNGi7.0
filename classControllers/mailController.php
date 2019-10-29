@@ -322,7 +322,7 @@ function forGetPasswordMail($url,$subject,$email,$fullname)
 
 
 
-function send_general_email($subject,$email,$message)
+function send_general_email($subject,$email,$message, $bcc = false) //Add blind copy to email
 { //function to send
     global $mail;
 
