@@ -5,7 +5,21 @@ if(!isset($_SESSION["role"])) {
 	header('Location:login.php'); 
 }
 
-	
+
+if(isset($_POST['ok'])){
+
+    $subscriber = new Subscribers();
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+
+    $subscription_list = $subscriber->fetch_list();
+
+    send_general_email("$subject","no-reply@hng.tech",$message,$subscription_list);
+
+    $_SESSION['msg'] = "<div class='alert alert-info'>New update sent successfully!</div>";
+    header("location:news_update.php");
+    exit();
+}
 
 
 ?>
@@ -59,7 +73,7 @@ if(!isset($_SESSION["role"])) {
                         <?php
                             if(isset($_SESSION['msg'])){
                                 echo $_SESSION['msg'];
-                                exit();
+                                unset($_SESSION['msg']);
                             }
                         ?>
                         <form action="" method="post" role="form">
@@ -70,7 +84,7 @@ if(!isset($_SESSION["role"])) {
 
                             <div class="form-group">
                                 <label for="">Message</label>
-                                <textarea name="message" id="" class="form-control" required placeholder="Message"></textarea>
+                                <textarea name="message" id="" class="form-control textarea" placeholder="Message"></textarea>
                             </div>
 
                             <div class="form-group">
@@ -93,6 +107,8 @@ if(!isset($_SESSION["role"])) {
     </label>
 	<?php include('fragments/sidebar.php'); ?>
 
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>tinymce.init({selector:'.textarea'});</script>
 </body>
 </html>
 
