@@ -37,7 +37,7 @@
           access to them. They keep the internship going and help us keep
           finding and nurturing talent.
         </p>
-        <a href="#form" class="button-primary">Donate</a>
+        <a href="#form" class="button-primary" id="moshe1">Donate</a>
       </div>
     </div>
 
@@ -57,7 +57,7 @@
           <li>Prizes</li>
           <li>Meetups</li>
         </ul>
-        <a href="#form" class="button-primary">Donate</a>
+        <a href="#form" class="button-primary" id="moshe1">Donate</a>
       </div>
     </section>
 
@@ -67,7 +67,7 @@
         During HNGi6.0, we raised a total of ₦2,000,000 naira in total. With
         your help, we can raise even more.
       </p>
-      <a href="#form" class="button-primary">Donate</a>
+      <a href="#form" class="button-primary" id="moshe1">Donate</a>
     </section>
 
     <section class="women">
@@ -84,7 +84,7 @@
           <li>Women</li>
           <li>People with disabilities</li>
         </ul>
-        <a href="#form" class="button-primary">Donate</a>
+        <a href="#form" class="button-primary" id="moshe1">Donate</a>
       </div>
     </section>
 

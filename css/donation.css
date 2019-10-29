@@ -27,6 +27,12 @@ body {
     width: 400px;
     background-color: #0088C7;
 }
+#moshe1:hover {
+	 background: #0088C7 ;
+	text-decoration: none ;
+	color: #ffff ;
+	box-shadow: none ;
+}
 @media screen and (max-width: 770px) {
     .center-div{
         width: 400px;

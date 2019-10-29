@@ -11,6 +11,13 @@
   background-color: rgb(29, 180, 250);
 
 }
+#moshe1:hover {
+ background: #0088C7 ;
+	text-decoration: none ;
+	color: #ffff ;
+	box-shadow: none ;
+
+}
 
 .jumb {
   padding-top: 100px;
