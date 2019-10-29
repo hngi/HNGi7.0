@@ -53,22 +53,8 @@
         </style>
     </head>
     <body>
-        <header>
-            <a href="index.php"><img id="hng-logo" src="https://res.cloudinary.com/jaycodist/image/upload/v1570722444/hng-brand-logo_gnplmq.svg"></a>
-            <input type="checkbox" id="mobile-bars-check" />
-            <label for="mobile-bars-check" id="mobile-bars">
-                <div class="stix" id="stik1"></div>
-                <div class="stix" id="stik2"></div>
-                <div class="stix" id="stik3"></div>
-            </label>
-            <nav>
-                <a href="index.php" class="header-links">Home</a>
-                <a href="hng6.php" class="header-links">HNG 6</a>
-                <a href="mentorpage.php" class="header-links">Mentors</a>
-                <a href="contactform.php" class="header-links">Contact</a>
-                <a href="join-intern.php" id="join-hng" class="def-button">Join HNG</a>
-            </nav>
-        </header>
+        <section class="container-fluid">
+        <?php include "fragments/site_header.php"?>
 
         <div class="error-container">
             <h1>4&#128562;4 </h1>
@@ -76,8 +62,6 @@
             <P> <i>The page you are looking for is currently <br> under maintenance. Please come back later.</i> </P>
             <button><a href="index.php" id="join-hng" class="def-button">HOME</a></button>
         </div>
-
-        
-
+        </section>
     </body>
 </html>

@@ -4,7 +4,7 @@ require_once 'classControllers/init.php';
 
 
 if(!isset($_SESSION["role"])) {
-    header('Location:admin_login.php');
+    header('Location:admin_login');
 }
 
 $admin = new Admins();
@@ -14,7 +14,7 @@ if(isset($_GET["blockAdminId"])) {
     $id = $_GET["blockAdminId"];
     $blockAdminRes = $admin->blockAdmin($id);
     if($blockAdminRes == true) {
-        header("Location:admins.php");
+        header("Location:admins");
     }
 }
 
@@ -22,7 +22,7 @@ if(isset($_GET["activateAdminId"])) {
     $id = $_GET["activateAdminId"];
     $activateAdminRes = $admin->activateAdmin($id);
     if($activateAdminRes == true) {
-        header("Location:admins.php");
+        header("Location:admins");
     }
 }
 
@@ -36,7 +36,7 @@ if(isset($_GET["blockAdminId"])) {
     $id = $_GET["blockAdminId"];
     $blockAdminRes = $admin->blockAdmin($id);
     if($blockAdminRes == true) {
-        header("Location:admins.php");
+        header("Location:admins");
     }
 }
 
@@ -44,7 +44,7 @@ if(isset($_GET["activateAdminId"])) {
     $id = $_GET["activateAdminId"];
     $activateAdminRes = $admin->activateAdmin($id);
     if($activateAdminRes == true) {
-        header("Location:admins.php");
+        header("Location:admins");
     }
 }
 
@@ -91,24 +91,6 @@ if(isset($_GET["activateAdminId"])) {
     </style>
 
 
-    <script language="javascript" type="text/javascript">
-        function printDiv(divID) {
-            //Get the HTML of div
-            var divElements = document.getElementById(divID).innerHTML;
-            //Get the HTML of whole page
-            var oldPage = document.body.innerHTML;
-
-            //Reset the page's HTML with div's HTML only
-            document.body.innerHTML =
-                "<html><head><title></title></head><body><br><br><br>" + divElements + "</body>";
-
-            //Print Page
-            window.print();
-
-            //Restore orignal HTML
-            document.body.innerHTML = oldPage;
-        }
-    </script>
 </head>
 
 <body>
@@ -136,12 +118,7 @@ if(isset($_GET["activateAdminId"])) {
                     </a>
                 </div>
                 <div class="col-md-8"></div>
-                <div class="col-md-2">
-                    <!--<a href="exports/export-to-pdf-mentors.php">-->
-                    <a href="#" onclick="javascript:printDiv('printablediv')">
-                        <button type="button" class="btn btn-primary btn-sm" id="export">Export to PDF</button>
-                    </a>
-                </div>
+                
             </div> <br /><br />
             <div class="row" id="table-row">
                 <div class="table-responsive" id="printablediv">

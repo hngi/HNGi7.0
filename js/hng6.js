@@ -1,6 +1,6 @@
 const countDownDate = new Date("January 1,2020 22:0:0").getTime(); // Change later
 const defaultDegStart = 45;
-const activeColor = "#00AEFF";
+const activeColor = "#06F4CC";
 const backColor = "rgba(240, 240, 240)";
 
 const daySymbol = document.getElementById("day-symbol");
@@ -114,12 +114,3 @@ showDay(Math.floor(timeLeft / (1000 * 60 * 60 * 24)));
 showHour(Math.floor((timeLeft % (1000 * 60 * 60 * 24)) /(1000 * 60 * 60)));
 showMinute(Math.floor((timeLeft % (1000 * 60 * 60)) /(1000 * 60)));
 showSecond(Math.floor((timeLeft % (1000 * 60)) / 1000));
-
-function myFunction() {
-  var x = document.getElementById("more-images");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}

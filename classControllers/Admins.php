@@ -125,8 +125,8 @@ class Admins
                                 </div>';
     } else {
       // email is available, good, proceed to register
-      $password = rand(123456, 789654);
-      $query = "INSERT INTO admins (firstname, lastname, email, password, role, timestamp) VALUES ('" . $firstname . "', '" . $lastname . "', '" . $email . "', '" . $password . "', '" . $role . "', now())";
+     
+      $query = "INSERT INTO admins (firstname, lastname, email, role, timestamp) VALUES ('" . $firstname . "', '" . $lastname . "', '" . $email . "', '" . $role . "', now())";
       $res = $database->query($query);
       $count = $database->affected_rows();
 
@@ -158,10 +158,10 @@ class Admins
                         </tr>
                         <tr>
                           <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
-                                            You have been registered as an admin on HNG INTERSHIP site, kindly find your registration details below and login. We recommend you change your password after you login.<br> Thank you.
+                                            You have been registered as an admin on HNG INTERSHIP site, kindly find your registration details below. We recommend you change your password with link below.<br> Thank you.
                           </td>
                                         </tr>";
-        sendNewAdminMail($email, $password, $subject, $body);
+        sendNewAdminMail($email, $subject, $body);
 
         $resp = '<div class="alert alert-success" role="alert">
                                 Admin Created Successfully
@@ -238,6 +238,7 @@ class Admins
       return false;
     }
   }
+  
   public function isAdminExist($email){
     global $database;
     //global $con;
