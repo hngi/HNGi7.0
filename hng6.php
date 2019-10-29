@@ -15,10 +15,16 @@
     <link rel="stylesheet" href="css/hngsix.css">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
-
+    <style>
+        .body-container {
+                margin: 0;
+                background-color: white;
+            }
+    </style>
 </head>
 
 <body>
+<div class="body-container">
     <section class="container-fluid">
         <?php include('fragments/site_header.php'); ?>
 
@@ -309,6 +315,7 @@
                 images.style.display = "grid";
             }
         }</script>
+    </div>
 </body>
 
 </html>

@@ -19,10 +19,17 @@
         #home {
             display: none;
         }
+
+    
+            .body-container {
+                margin: 0;
+            }
+        
     </style>
 </head>
 
 <body>
+    <div class="body-container">
     <section class="container-fluid">
     <?php include('fragments/site_header.php');?>
     <div class="container-fluid">
@@ -587,6 +594,7 @@
 
     </section>
 </body>
+</div>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

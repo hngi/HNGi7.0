@@ -135,6 +135,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
   <section class="container-fluid">
+  <div class="body-continer">
   <div class="hero">
 
     <?php include('fragments/site_header.php'); ?>
@@ -278,6 +279,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
   </form>
   <?php include('fragments/site_footer.php'); ?>
+  </div>
   </section>
 </body>
   <script src="https://kit.fontawesome.com/85682eb992.js" crossorigin="anonymous"></script>
