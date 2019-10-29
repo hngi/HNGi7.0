@@ -81,9 +81,15 @@ class Mentor
   public function AcceptMentor($mentor_id) {
     global $database;
     $query = "UPDATE mentors SET status = 2 WHERE mentor_id = '$mentor_id'";
+    $query2 = $database->query("SELECT * FROM mentors WHERE mentor_id = '$mentor_id' ");
     $res = $database->query($query);
     $count = $database->affected_rows();
+    $row = mysqli_fetch_array($query2);
+    $fullname = $row['name'];
+    $email = $row['email'];
     if($count > 0) {
+      $body = "Your registration as a mentor on the HNGi7 platform has been approval and accepted. Thank you";
+      acceptMentorMail($body,$fullname,$email);
       // updated
       //return true;
       header('Location: registered_mentors.php');
@@ -96,9 +102,15 @@ class Mentor
   public function RejectMentor($mentor_id) {
     global $database;
     $query = "UPDATE mentors SET status = 1 WHERE mentor_id = '$mentor_id'";
+    $query2 = $database->query("SELECT * FROM mentors WHERE mentor_id = '$mentor_id' ");
     $res = $database->query($query);
     $count = $database->affected_rows();
+     $row = mysqli_fetch_array($query2);
+        $fullname = $row['name'];
+        $email = $row['email'];
     if($count > 0) {
+      $body = "Your registration as a mentor on the HNGi7 platform has been disapproval or pendding. Thank you";
+      rejectMentorMail($email, $fullname, $body);
       // updated
       //return true;
       header('Location: registered_mentors.php');

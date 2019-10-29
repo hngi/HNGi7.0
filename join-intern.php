@@ -72,7 +72,7 @@ require_once 'classControllers/init.php';
     if (strpos($errMsg, 'join-intern.php?successful') !== false) {
       // echo "<div style='text-align:center; font-size:1.3em; color:#084482'>Thank You for completing the form, we will get back to You soon!</div>";
       echo '<div style="margin:auto 30vw; background: green; padding: 5px 10px 5px 10px; width: 40vw !important; text-align: center; color: white; ">
-                Your registration was  successful. We will get back to you as soon as possible.
+                Your registration was  successful and an email has been sent to your mail. We will get back to you as soon as possible.
             </div>';
 }
     $errMsg = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];

@@ -91,9 +91,11 @@ class Intern
             // there are no errors
             $query = "INSERT INTO interns (name, email, phone_no, link_to_portfolio, link_to_cv, years_of_experience, interest, current_location, employment_status, about, timestamp)
                 VALUES('" . $fullname . "', '" . $email . "', '" . $phoneNo . "', '" . $linkPort . "', '" . $linkCV . "', '" . $exp . "', '" . $interest . "', '" . $location . "', '" . $empStatus . "', '" . $about . "', '" . $date . "' ) ";
-
+            $body = "Your registration as an intern on the HNGi7 platform is been checked for an approval kindly hold on, you will recieve an email within 24hrs about your registration status. Thank you";
+            sendInternMail($email,$fullname,$body);
             $res = $database->query($query);
             $count = $database->affected_rows();
+            
             header('Location: join-intern.php?successful');
             if ($count > 0) {
                 // intern created
@@ -240,9 +242,15 @@ class Intern
       public function RejectIntern($intern_id) {
         global $database;
         $query = "UPDATE interns SET status = 1 WHERE intern_id = '$intern_id'";
+        $query2 = $database->query("SELECT * FROM interns WHERE intern_id = '$intern_id' ");
         $res = $database->query($query);
+        $row = mysqli_fetch_array($query2);
+        $fullname = $row['firstname']. ' ' . $row['lastname'];
+        $email = $row['email'];
         $count = $database->affected_rows();
         if($count > 0) {
+            $body = "Your registration as an interns on the HNGi7 platform has been disapproval or pendding. Thank you";
+            rejectInternMail($email, $fullname, $body);
           // updated
           //return true;
           header('Location: registered_interns.php');
@@ -255,9 +263,15 @@ class Intern
       public function AcceptIntern($intern_id) {
         global $database;
         $query = "UPDATE interns SET status = 2 WHERE intern_id = '$intern_id'";
+        $query2 = $database->query("SELECT * FROM interns WHERE intern_id = '$intern_id' ");
         $res = $database->query($query);
         $count = $database->affected_rows();
+        $row = mysqli_fetch_array($query2);
+        $fullname = $row['firstname'] . ' ' . $row['lastname'];
+        $email = $row['email'];
         if($count > 0) {
+            $body = "Your registration as an interns on the HNGi7 platform has been approvalled and accepted. Thank you";
+            acceptInternMail($email, $fullname, $body);
           // updated
          // return true;
          header('Location: registered_interns.php');
