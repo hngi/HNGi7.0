@@ -337,6 +337,8 @@ function send_general_email($subject,$email,$message)
         $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
         $mail->Port       = 587;                                    // TCP port to connect to
 
+        $url = "https://".$_SERVER['HTTP_HOST'];
+
         //Recipients
         $mail->setFrom('alisataylorm.m@gmail.com',$url);
         $mail->addAddress("$email");     // Add a recipient
