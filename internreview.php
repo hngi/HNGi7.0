@@ -8,8 +8,28 @@ if(!isset($_SESSION["role"])) {
 }
 
 $admin = new InternExperience();
-$display = $admin->allExperience();
 
+if(isset($_GET['action']) && isset($_GET['id'])){
+    $act = $_GET['action'];
+
+    switch ($act){
+        case 'approve':
+            $admin->approveExperience($_GET['id']);
+            break;
+        case 'delete':
+            $admin->deleteExperience($_GET['id']);
+            break;
+    }
+
+    $_SESSION['msg'] = "<div class='alert alert-success'>Action performed successfully</div>";
+    header("location:internreview.php");
+    exit();
+}
+
+
+$display = $admin->load_experiences();
+
+/*
 if(isset($_GET["editExperiences"])) {
     $id = $_GET["editExperiences"];
     $editExperiencesRes = $InternExperience->editExperiences($id);
@@ -47,7 +67,7 @@ if(isset($_GET["ApproveExperiences"])) {
         header("Location:internreview");
     }
 }
-
+*/
 
 
 ?>
@@ -108,18 +128,19 @@ if(isset($_GET["ApproveExperiences"])) {
             <div class="row">
 
                 <?php
-                if ($display == "0") {
+                if(isset($_SESSION['msg'])){
+                    echo $_SESSION['msg'];
+                    unset($_SESSION['msg']);
+                }
+                if (count($display) == "0") {
                     echo "<h2>There are no Intern Reviews</h2>";
                 } else {
                 ?>
-                <div class="col-md-2">
-                    <a href="new_admin.php">
-                        <button type="button" class="btn btn-primary btn-sm" id="export">&#43; Intern Experiences</button>
-                    </a>
-                </div>
+
                 <div class="col-md-8"></div>
-                
-            </div> <br /><br />
+
+            </div>
+            <br /><br />
             <div class="row" id="table-row">
                 <div class="table-responsive" id="printablediv">
                     <table class="table table-hover mt-3 mb-1 table-condensed">
@@ -129,12 +150,47 @@ if(isset($_GET["ApproveExperiences"])) {
                             <th>Names</th>
                             <th>Track</th>
                             <th>Experience</th>
-                            <th colspan="2">Action</th>
+                            <th>Status</th>
+                            <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
                         <?php
-                        echo $display;
+                        //echo $display;
+                            //var_dump($display);
+                            $n = 0;
+                            foreach ($display as $item){
+                                ?>
+                                <tr>
+                                    <td><?php echo ++$n;?></td>
+                                    <td>
+                                        <?php echo $item['names']; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $item['stack']; ?>
+                                    </td>
+
+                                    <td>
+                                        <?php echo $item['experience']; ?>
+                                    </td>
+
+                                    <td>
+                                        <?php echo $item['status'] == 1 ? "Approved" : "Pending"; ?>
+                                    </td>
+                                    <td>
+                                        <a href="edit_experience?id=<?php echo $item['id']; ?>" class="btn btn-sm btn-info">Edit</a>
+                                        <a href="?action=delete&id=<?php echo $item['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete the record?')">Delete</a>
+                                        <?php
+                                            if($item['status'] == 0){
+                                                ?>
+                                                <a onclick="return confirm('Are you sure you want to approve the experience?')" href="?action=approve&id=<?php echo $item['id']; ?>" class="btn btn-sm btn-info">Approve</a>
+                                                <?php
+                                            }
+                                        ?>
+                                    </td>
+                                </tr>
+                                <?php
+                            }
                         ?>
                         </tbody>
                     </table>
