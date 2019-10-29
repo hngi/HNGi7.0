@@ -89,8 +89,9 @@ class Intern
             }
         } else {
             // there are no errors
+            $status = 0;
             $query = "INSERT INTO interns (name, email, phone_no, link_to_portfolio, link_to_cv, years_of_experience, interest, current_location, employment_status, about, timestamp)
-                VALUES('" . $fullname . "', '" . $email . "', '" . $phoneNo . "', '" . $linkPort . "', '" . $linkCV . "', '" . $exp . "', '" . $interest . "', '" . $location . "', '" . $empStatus . "', '" . $about . "', '" . $date . "' ) ";
+                VALUES('" . $fullname . "', '" . $email . "', '" . $phoneNo . "', '" . $linkPort . "', '" . $linkCV . "', '" . $exp . "', '" . $interest . "', '" . $location . "', '" . $empStatus . "', '" . $about . "','". $status ."' ,'" . $date . "' ) ";
 
             $res = $database->query($query);
             $count = $database->affected_rows();
@@ -135,7 +136,7 @@ class Intern
                         <td>' . $row["employment_status"] . '</td>
                         <td>' . $row["about"] . '</td>
                         <td>' . $row["timestamp"] . '</td>
-                        <td>' . '<a href="delete_intern.php?deleteInternId=' . $row["intern_id"] . '" class="btn btn-danger btn-sm">Delete</a>' . '</td>
+                        <td>' . '<a href="registered_interns.php?acceptInternId=' . $row["intern_id"] . '" class="btn btn-primary btn-sm" style="margin-right:5px;">Accept</a>' .'<a href="registered_interns.php?rejectInternId=' . $row["intern_id"] . '" class="btn btn-warning btn-sm" style="margin-right:5px;">Reject</a>' .'<a href="delete_intern.php?deleteInternId=' . $row["intern_id"] . '" class="btn btn-danger btn-sm">Delete</a>' . '</td>
 
                     </tr>';
             }
@@ -231,6 +232,36 @@ class Intern
         if($count > 0) {
           // deleted
           return true;
+        } else {
+          // failed
+          return false;
+        }
+      }
+
+      public function RejectIntern($intern_id) {
+        global $database;
+        $query = "UPDATE interns SET status = 1 WHERE intern_id = '$intern_id'";
+        $res = $database->query($query);
+        $count = $database->affected_rows();
+        if($count > 0) {
+          // updated
+          //return true;
+          header('Location: registered_interns.php');
+        } else {
+          // failed
+          return false;
+        }
+      }
+    
+      public function AcceptIntern($intern_id) {
+        global $database;
+        $query = "UPDATE interns SET status = 2 WHERE intern_id = '$intern_id'";
+        $res = $database->query($query);
+        $count = $database->affected_rows();
+        if($count > 0) {
+          // updated
+         // return true;
+         header('Location: registered_interns.php');
         } else {
           // failed
           return false;

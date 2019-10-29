@@ -7,10 +7,16 @@ if (!isset($_SESSION["role"])) {
 $mentors = new Mentor;
 $display = $mentors->allMentors();
 
-if (isset($_GET['delete_id'])) {
-    $mentor_id = $_GET['delete_id'];
+if (isset($_GET['acceptMentorId'])) {
+    $mentor_id = $_GET['acceptMentorId'];
 
-    $message = $mentors->DeleteMentor($mentor_id);
+    $message = $mentors->AcceptMentor($mentor_id);
+}
+
+if (isset($_GET['rejectMentorId'])) {
+    $mentor_id = $_GET['rejectMentorId'];
+
+    $message = $mentors->RejectMentor($mentor_id);
 }
 
 ?>
@@ -163,6 +169,7 @@ if (isset($_GET['delete_id'])) {
             <p class="details">Employment Status: <span id="employment-status"></span></p>
             <p class="details">Why Interested: <span id="Interest"></span></p>
             <p class="details">Timestamp: <span id="timeStamp"></span></p>
+
             <!-- <div href="" id="details-return">Back to Overview</div> -->
             <div id="navigator">
                 <i class="fas fa-chevron-left fa-2x left navigator"></i> 
