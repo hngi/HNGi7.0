@@ -55,11 +55,6 @@ require_once 'classControllers/init.php';
 
 <body>
   <section class="container-fluid">
-<<<<<<< HEAD
-  <div class="body-container">
-
-=======
->>>>>>> f1394d23e52a617d8e07fbfac93253a57ca883a1
   <section class="jumbo">  
     <?php include('fragments/site_header.php'); ?>
 
