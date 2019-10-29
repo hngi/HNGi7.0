@@ -32,6 +32,16 @@ class Mentors
 		}
 		return $array;
 	}
+	public static function emailExists($email)
+	{
+		global $database;
+		$database->query("SELECT * FROM `mentors` WHERE `email` = '$email' ");
+		if ($database->affected_rows() > 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 	public function ById($id = 0)
 	{
 		global $database;
