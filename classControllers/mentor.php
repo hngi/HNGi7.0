@@ -12,6 +12,7 @@ class Mentors
 	public $why_interested;
 	public $current_state;
 	public $employment_status;
+	public $status = 0;
 	public $timestamp;
 
 
@@ -19,8 +20,18 @@ class Mentors
 	{
 		global $database;
 		$res = $database->query("INSERT INTO mentors()
-			VALUES(NULL, '$this->area_of_expertise', '$this->photo_url', '$this->name', '$this->email', '$this->phone_no', '$this->link_to_portfolio', '$this->link_to_linkedin', '$this->link_to_cv', '$this->why_interested', '$this->current_state', '$this->employment_status', 0 ,'$this->timestamp')");
+			VALUES(NULL, '$this->area_of_expertise', '$this->photo_url', '$this->name', '$this->email', '$this->phone_no', '$this->link_to_portfolio', '$this->link_to_linkedin', '$this->link_to_cv', '$this->why_interested', '$this->current_state', '$this->employment_status', '$this->status' ,'$this->timestamp')");
 		return $res;
+	}
+	public static function emailExists($email)
+	{
+		global $database;
+		$database->query("SELECT * FROM `mentors` WHERE `email` = '$email' ");
+		if ($database->affected_rows() > 0) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 	public function showAll_mentors()
 	{
