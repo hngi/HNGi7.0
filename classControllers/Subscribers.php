@@ -32,4 +32,9 @@ class Subscribers
         $message .= "<br>You will be receiving periodic update about the internship";
         send_general_email($subject,$email,$message);
     }
+
+
+    public function fetch_list(){ //function to fetch all list
+
+    }
 }
