@@ -125,6 +125,12 @@ if(!isset($_SESSION["role"])) {
 							Registered Admins
 						</div>
 					</a>
+					<a href="registered_sponsors.php">
+						<div class="col-md-2 card">
+						 <p><?php echo  2 ?></p> 
+							Registered Sponsors
+						</div>
+					</a>
 				</div>
 			</div>
 
