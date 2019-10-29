@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 * {
-<<<<<<< HEAD
-=======
->>>>>>> 4e283c1de9e75b8cdb82655a22aa05c86c1c18d1
+  
  padding: 0;
  margin: 0;
  text-decoration: none;
@@ -11,24 +8,6 @@
 }
 body {
  font-family: "Open Sans", sans-serif;
- background-color: rgb(241, 235, 235);
-}
-
-/*Small screen - any screen size below 768px*/    
-@media ( max-width: 768px ) {
-  .body-container{
-      background-color: white;
-      margin: 30px; 
-      
-  }
-}
-
-/*Medium  screen and upward*/ 
-@media ( min-width: 768px ) {
- .body-container{
-      background-color: white;
-      margin: 40px 60px;
-      }
 }
 
 .form-container {
@@ -42,7 +21,7 @@ body {
 }
 /* styling of individual input field and textarea */
 .form-container input,
-textarea {
+textarea, select {
  width: 100%;
  padding: 10px 20px;
  margin: 10px auto;
@@ -53,7 +32,7 @@ textarea {
  resize: none;
 }
 /* when user click on a field box */
-.form-container input:focus, .form-container textarea:focus {
+.form-container input:focus, .form-container textarea:focus, select:focus {
 box-shadow: 0px 0px 10px #45758b;
 border:1px solid #00aeff;
 transition:box-shadow .5s  ease-in-out,border .5s  ease-in-out; ;
@@ -135,7 +114,7 @@ section.jumbo > p.para2 > a {
  {
    width: 90%;
  }
- .form-container input, textarea {
+ .form-container input, textarea, select {
      width: 90%;
    }
  .form-container button
@@ -166,14 +145,14 @@ section.jumbo > p.para2 > a {
      margin: 1rem auto;
    }
    .form-container input,
-   textarea {
+   textarea, select {
      width: 100%;
      padding: 10px 20px;
      margin: 10px auto;
      font-family: inherit;
      font-size: 16px;
    }
-   
+
    form.form-container > button {
      margin: 30px auto;
      display: block;
@@ -199,55 +178,30 @@ section.jumbo > p.para2 > a {
      width: 100%;
      margin-top: 0px;
    }
-   
+
    section.jumbo > h2.heading {
      /* margin-top: 100px; */
      margin-bottom: 30px;
      font-size: 40px;
      color: #084482;
    }
-   
+
    section.jumbo > p.para {
      text-align: center;
      margin-bottom: 0px;
      padding: 0 5px;
    }
-   
+
    section.jumbo > p.para2 {
      text-align: center;
      margin-top: 0px;
      margin-bottom: 50px;
    }
-<<<<<<< HEAD
-    
-=======
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  list-style: none;
-  box-sizing: border-box;
- }
- 
- body {
-  font-family: "Open Sans", sans-serif;
- }
- 
- .form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 50px;
-  width: 40vw;
-  margin: 1rem auto;
->>>>>>> f1394d23e52a617d8e07fbfac93253a57ca883a1
-=======
 
->>>>>>> 4e283c1de9e75b8cdb82655a22aa05c86c1c18d1
  }
  /* styling of individual input field and textarea */
  .form-container input,
- textarea {
+ textarea, select {
   width: 350px;
   padding: 10px 20px;
   margin: 10px auto;
@@ -259,12 +213,12 @@ section.jumbo > p.para2 > a {
   transition: 0.4s ease-out;
  }
  /* when user click on a field box */
- .form-container input:focus, .form-container textarea:focus {
+ .form-container input:focus, .form-container textarea:focus, select:focus {
  box-shadow: 0px 0px 10px #45758b;
  border:1px solid #00aeff;
  transition:box-shadow .5s  ease-in-out,border .5s  ease-in-out; ;
  }
- 
+
  form.form-container > button {
   margin: 30px auto;
   display: block;
@@ -290,41 +244,26 @@ section.jumbo > p.para2 > a {
   width: 100%;
   margin-top: 0px;
  }
- 
+
  .login-heading {
   width: 100%;
   text-align: center;
  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4e283c1de9e75b8cdb82655a22aa05c86c1c18d1
  #check:checked ~ ul {
    left: 0;
  }
  @media only screen and (max-width: 400px) {
    section.jumbo > h2.heading {
-     font-size: 30px; 
-<<<<<<< HEAD
-=======
- 
- section.jumbo > h2.heading {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  font-size: 40px;
-  color: #084482;
->>>>>>> f1394d23e52a617d8e07fbfac93253a57ca883a1
-=======
->>>>>>> 4e283c1de9e75b8cdb82655a22aa05c86c1c18d1
+     font-size: 30px;
  }
- 
+
  section.jumbo > p.para {
   text-align: center;
   margin-bottom: 0px;
   padding: 0 5px;
  }
- 
+
  section.jumbo > p.para2 {
   text-align: center;
   margin-top: 0.5rem;
@@ -340,7 +279,7 @@ section.jumbo > p.para2 > a {
     transition: 0.4s ease-out;
     margin-top: 2rem;
  }
- 
+
  .social-icon {
   margin-right: 1rem;
   color: #00aeff;
@@ -351,13 +290,13 @@ section.jumbo > p.para2 > a {
     0px 1px 3px rgba(0, 0, 0, 0.08);
   border-radius: 50%;
  }
- 
+
  @media (max-width: 860px) {
   .form-container
   {
     width: 90%;
   }
-  .form-container input, textarea {
+  .form-container input, textarea, select {
       width: 350px;
     }
   .form-container button
@@ -365,7 +304,7 @@ section.jumbo > p.para2 > a {
     width: 350px;
   }
  }
- 
+
   /*Smaller screens*/
   @media screen and (max-width: 578px) {
     * {
@@ -388,7 +327,7 @@ section.jumbo > p.para2 > a {
       margin: 1rem auto;
     }
     .form-container input,
-    textarea {
+    textarea, select {
       width: 300px;
       padding: 10px 20px;
       margin: 10px auto;
@@ -396,7 +335,7 @@ section.jumbo > p.para2 > a {
       font-size: 16px;
       transition: 0.4s ease-out;
     }
-    
+
     form.form-container > button {
       margin: 30px auto;
       display: block;
@@ -422,36 +361,36 @@ section.jumbo > p.para2 > a {
       width: 100%;
       margin-top: 0px;
     }
-    
+
     section.jumbo > h2.heading {
       /* margin-top: 100px; */
       margin-bottom: 30px;
       font-size: 40px;
       color: #084482;
     }
-    
+
     section.jumbo > p.para {
       text-align: center;
       margin-bottom: 0px;
       padding: 0 5px;
     }
-    
+
     section.jumbo > p.para2 {
       text-align: center;
       margin-top: 0px;
       margin-bottom: 50px;
     }
-     
+
   }
- 
+
   @media (max-width: 952px) {
     nav ul li a {
       font-size: 16px;
     }
   }
- 
+
  @media (max-width: 858px) {
- 
+
   .checkbtn {
     display: block;
   }
@@ -483,7 +422,7 @@ section.jumbo > p.para2 > a {
   }
   @media only screen and (max-width: 400px) {
     section.jumbo > h2.heading {
-      font-size: 30px; 
+      font-size: 30px;
   }
   section.jumbo > p.para {
     font-size: .85em;
@@ -491,7 +430,7 @@ section.jumbo > p.para2 > a {
   section.jumbo > p.para2 {
     font-size: .85em;
   }
-  
+
   }
  }
  .inputWithIcon{
@@ -500,24 +439,14 @@ section.jumbo > p.para2 > a {
  .inputWithIcon input[type="email"], input[type="password"]{
    padding-left:3rem;
  }
-<<<<<<< HEAD
-<<<<<<< HEAD
- 
-=======
-=======
 
->>>>>>> 4e283c1de9e75b8cdb82655a22aa05c86c1c18d1
  .inputWithIcon i{
    position: absolute;
    left:0;
    top: 16px;
    color:#8898aa;
    padding:9px 8px;
-<<<<<<< HEAD
->>>>>>> f1394d23e52a617d8e07fbfac93253a57ca883a1
-=======
 
->>>>>>> 4e283c1de9e75b8cdb82655a22aa05c86c1c18d1
  }
  /* overiding text-danger */
  .small-text{
