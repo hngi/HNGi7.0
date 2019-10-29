@@ -15,7 +15,11 @@ class Subscribers
     }
 
 
-    public function subscriberExists($email){
-
+    public function subscriberExists($email){ //Method to check if subscriber exists!
+        global $database;
+        $query = "SELECT null FROM subscription WHERE email = '$email'";
+        $stmt = $database->query("$query");
+        $rows = $stmt->num_rows;
+        return $rows;
     }
 }
