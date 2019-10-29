@@ -8,7 +8,6 @@
 body {
  font-family: "Open Sans", sans-serif;
 }
-
 .form-container {
  display: flex;
  flex-direction: column;
@@ -20,7 +19,7 @@ body {
 }
 /* styling of individual input field and textarea */
 .form-container input,
-textarea {
+textarea, select {
  width: 100%;
  padding: 10px 20px;
  margin: 10px auto;
@@ -31,7 +30,7 @@ textarea {
  resize: none;
 }
 /* when user click on a field box */
-.form-container input:focus, .form-container textarea:focus {
+.form-container input:focus, .form-container textarea:focus, select:focus {
 box-shadow: 0px 0px 10px #45758b;
 border:1px solid #00aeff;
 transition:box-shadow .5s  ease-in-out,border .5s  ease-in-out; ;
@@ -113,7 +112,7 @@ section.jumbo > p.para2 > a {
  {
    width: 90%;
  }
- .form-container input, textarea {
+ .form-container input, textarea, select {
      width: 90%;
    }
  .form-container button
@@ -144,14 +143,14 @@ section.jumbo > p.para2 > a {
      margin: 1rem auto;
    }
    .form-container input,
-   textarea {
+   textarea, select {
      width: 100%;
      padding: 10px 20px;
      margin: 10px auto;
      font-family: inherit;
      font-size: 16px;
    }
-   
+
    form.form-container > button {
      margin: 30px auto;
      display: block;
@@ -177,26 +176,26 @@ section.jumbo > p.para2 > a {
      width: 100%;
      margin-top: 0px;
    }
-   
+
    section.jumbo > h2.heading {
      /* margin-top: 100px; */
      margin-bottom: 30px;
      font-size: 40px;
      color: #084482;
    }
-   
+
    section.jumbo > p.para {
      text-align: center;
      margin-bottom: 0px;
      padding: 0 5px;
    }
-   
+
    section.jumbo > p.para2 {
      text-align: center;
      margin-top: 0px;
      margin-bottom: 50px;
    }
-    
+
  }
 
  @media (max-width: 952px) {
@@ -238,7 +237,7 @@ section.jumbo > p.para2 > a {
  }
  @media only screen and (max-width: 400px) {
    section.jumbo > h2.heading {
-     font-size: 30px; 
+     font-size: 30px;
  }
  section.jumbo > p.para {
    font-size: .85em;
@@ -246,7 +245,7 @@ section.jumbo > p.para2 > a {
  section.jumbo > p.para2 {
    font-size: .85em;
  }
- 
+
  }
 }
 .inputWithIcon{
