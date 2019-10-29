@@ -38,8 +38,6 @@
                         </div>
                     </form>
                 </section>
-                <section id="subscribe-feedback"></section>
-
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -47,3 +45,11 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+    });
+</script>
