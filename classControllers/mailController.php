@@ -340,7 +340,7 @@ function send_general_email($subject,$email,$message, $bcc = false) //Add blind 
         $url = "https://".$_SERVER['HTTP_HOST'];
 
         //Recipients
-        $mail->setFrom('alisataylorm.m@gmail.com',$url);
+        $mail->setFrom('alisataylorm.m@gmail.com',"HNGi7");
         $mail->addAddress("$email");     // Add a recipient
         // $mail->addAddress('ellen@example.com');               // Name is optional
         $mail->addReplyTo('no-reply@gmail.com', 'No-Reply');
