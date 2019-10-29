@@ -183,6 +183,8 @@
             width: 100%;
             height: auto;
             margin: 15px auto;
+            transition: width 2s;
+
         }
 
          .gallery #hidden_images {

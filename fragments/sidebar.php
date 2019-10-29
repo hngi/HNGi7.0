@@ -16,8 +16,7 @@
         <a href="news_update.php">News Update</a> <!--Added news update to admin menu-->
 
 		<hr id="hr2">
-
-		<?php 
+	<?php 
 
 	
 

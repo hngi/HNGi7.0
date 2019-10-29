@@ -49,14 +49,12 @@
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/facebook-logo_bw1hal.svg"></a>
                     <a href="https://dribble.com"><img title="Follow on Dribble!"
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/dribble-logo_w4vwuz.svg"></a>
-                </div>
+                </div>  <br>
                 <?php include_once __DIR__."/subscribe.php"; //create subscribe link ?>
             </div>
         </div>
-    </nav>
-
-    <p class="center-text darkblue-text">&copy 2019, HNG Internship. All rights reserved.</p>
-
+    </nav> <br> <br>
+    <p class="center-text darkblue-text phileo">&copy 2019, HNG Internship. All rights reserved.</p>
     <div id="jumptotop"><a id="em"><span></span></a></div>
     
     <script src="./js/scroll-to-top.js"></script>
