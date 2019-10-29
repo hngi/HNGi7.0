@@ -20,13 +20,13 @@
 
     if (isset($_GET['acceptInternId'])) {
         $mentor_id = $_GET['acceptInternId'];
-    
+
         $message = $interns->AcceptIntern($mentor_id);
     }
-    
+
     if (isset($_GET['rejectInternId'])) {
         $mentor_id = $_GET['rejectInternId'];
-    
+
         $message = $interns->RejectIntern($mentor_id);
     }
 ?>
@@ -41,7 +41,7 @@
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link href="css/newDashboard.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
-    
+
 
     <!-- This version required for Pagination -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -51,7 +51,7 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-   
+
     <style type="text/css">
         .card {
             height: 150px;
@@ -74,7 +74,7 @@
             </div>
             <div>
                 <input type="radio" id="pdf" name="exportOptions"><label for="pdf">Export to PDF</label>
-            </div> 
+            </div>
             <p id="message"></p>
             <button type="button" class="exports" id="download">Download</button>
         </div>
@@ -83,7 +83,7 @@
             <!-- <h1>Dashboard</h1> -->
             <h2>Registered Interns </h2>
             <!-- <section id="intern-section">
-				Populated by `js/dashboard.js` 
+				Populated by `js/dashboard.js`
 			</section> -->
 
             <div class="container">
@@ -100,7 +100,7 @@
                         <!--    </a>-->
                         <!--</div>-->
                         <!-- <div class="col-md-3">
-                            
+
                             <a href="#" onclick="javascript:printDiv('printablediv')">
                                 <button type="button" class="btn btn-primary btn-sm" id="export">Export to PDF</button>
                             </a> -->
@@ -114,12 +114,12 @@
                                 <thead>
                                     <tr>
                                     <th data-heading="sn">SN<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
+                                    <th data-heading="id">ID<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
                                     <th data-heading="name">Name<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
                                     <th data-heading="email">Email<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
                                     <th data-heading="phone">Phone No<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
                                     <th data-heading="cv">CV<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
-                                    <th data-heading="experience">Experience<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
-                                    <!-- <th>Link To Linkedin</th> -->
+                                  <!-- <th>Link To Linkedin</th> -->
                                     <th data-heading="interest">Interest<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
                                     <th data-heading="location">Location<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
                                     <th data-heading="employmentStatus">Employment Status<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
@@ -150,7 +150,7 @@
                                 <a href="#" >
                                     <button type="button" class="exports" id="exportAs">Export</button>
                                 </a>
-                        </div>            
+                        </div>
                 </div>
             </div>
 
@@ -171,6 +171,7 @@
             <br />
 
 			<p class="details">Name: <span id="name"></span></p>
+			<p class="details">Intern ID: <span id="id"></span></p>
 			<p class="details">Email: <span id="email"></span></p>
 			<p class="details">Phone Number: <span id="phone"></span></p>
 			<p class="details">CV Link: <span id="cv"></span></p>
@@ -182,7 +183,7 @@
             <p class="details">Registration Date: <span id="timeStamp"></span></p>
             <!-- <div href="" id="details-return">Back to Overview</div> -->
             <div id="navigator">
-                <i class="fas fa-chevron-left fa-2x left navigator"></i> 
+                <i class="fas fa-chevron-left fa-2x left navigator"></i>
                 <p class="details"><span id="sn"></span></p>
                 <i class="fas fa-chevron-right fa-2x right navigator"></i>
             </div>
