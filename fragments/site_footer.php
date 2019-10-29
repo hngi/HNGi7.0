@@ -50,6 +50,7 @@
                     <a href="https://dribble.com"><img title="Follow on Dribble!"
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/dribble-logo_w4vwuz.svg"></a>
                 </div>
+                <?php include_once __DIR__."/subscribe.php"; //create subscribe link ?>
             </div>
         </div>
     </nav>
