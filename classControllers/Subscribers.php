@@ -35,6 +35,11 @@ class Subscribers
 
 
     public function fetch_list(){ //function to fetch all list
+        global $database;
+        $sql = "SELECT email FROM subscription ORDER BY id DESC";
+        $query = $database->query($sql);
+        $result = $query->fetch_all(MYSQLI_ASSOC);
 
+        return $result;
     }
 }
