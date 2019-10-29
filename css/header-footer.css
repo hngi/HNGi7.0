@@ -1,88 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap');
 
-<<<<<<< HEAD
-body {
-    font-family: "Open Sans", segoe UI, sans-serif;
-    padding: 0;
-    margin: 0;
-    scroll-behavior: smooth;
-}
-
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1rem 3rem;
-}
-
-header a,
-footer a {
-    text-decoration: none;
-}
-
-header .def-button {
-    margin-left:20px;
-    color: white;
-    border-radius: 3px;
-    padding: 0.5rem 1rem;
-    background-color: #00AEFF;
-    outline: none;
-    border: none;
-    transition: 0.4s ease-out;
-    width: auto;
-}
-
-header .def-button:hover {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    text-decoration: none;
-}
-
-header nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    transition: 0.5s ease-out;
-    height: auto;
-    width: auto;
-}
-
-header #hng-logo {
-    width: 22vw;
-}
-
-header .header-links {
-    color: rgba(0, 0, 0, 0.7);
-    margin: 0.5rem 1rem;
-    align-self: center;
-    font-size: 1.2vw;
-    /* transition: 0.4s ease-out; */
-}
-
-header .header-links:hover {
-    /* transform: scale(1.2); */
-    text-decoration: none;
-}
-
-header #join-hng {
-    align-self: center;
-}
-#join-hng:hover {
-	background: #0088C7 ;
-	text-decoration: none ;
-	color: #ffff ;
-}
-
-header #mobile-bars {
-    position: absolute;
-    left: 45vw;
-    font-size: 25px;
-    color: rgba(0, 0, 0, 0.7);
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
-}
-=======
 @media screen and (min-width: 0) {
     /* HEADER STYLE STARTS */
     body {
@@ -166,7 +83,6 @@ header #mobile-bars {
         display: none;
     }
     /* HEADER STYLE ENDS */
->>>>>>> c09ff990f87af5ab474b3737bf7a98a6018c9dc4
 
 
     /*FOOTER STYLE STARTS */
