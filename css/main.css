@@ -2,6 +2,27 @@
     @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap');
 
 
+    body{
+        background-color: rgb(241, 235, 235);
+    }
+
+  
+    /*Small screen - any screen size below 768px*/    
+    @media ( max-width: 768px ) {
+        .body-container{
+            background-color: white;
+            margin: 30px; 
+            
+        }
+    }
+
+    /*Medium  screen and upward*/ 
+    @media ( min-width: 768px ) {
+       .body-container{
+            background-color: white;
+            margin: 40px 60px;
+            }
+    }
     @media screen and (min-width: 0) {
         * {
             margin: 0;

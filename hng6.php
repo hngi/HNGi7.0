@@ -17,6 +17,7 @@
 </head>
 
 <body>
+<div class="body-container">
     <section class="container-fluid">
         <?php include('fragments/site_header.php'); ?>
 
@@ -307,6 +308,7 @@
                 images.style.display = "grid";
             }
         }</script>
+    </div>
 </body>
 
 </html>

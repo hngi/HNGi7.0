@@ -17,6 +17,7 @@
 
 <body>
   <section class="container-fluid">
+  <div class="body-container">
   <?php include('fragments/site_header.php'); ?>
 
   <div class="jumbotron" id="landing-page">
@@ -38,6 +39,7 @@
   </main>
 
   <?php include('fragments/site_footer.php'); ?>
+  </div>
 </section>
 </body>
 
