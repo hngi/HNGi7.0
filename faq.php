@@ -64,19 +64,11 @@
 
 </head>
 
-<<<<<<< HEAD
 <body class="">
     <div class="containers-fluid ">
    <div class="header_container">
    <?php include('fragments/site_header.php'); ?>
     <section class="hero pt-4">
-=======
-<body>
-    <section class="container-fluid">
-    <div class="body-container">
-    <?php include('fragments/site_header.php'); ?>
-    <section class="hero">
->>>>>>> fa1afcb5b02a1dd92bc7b4f5714a8565d8c84988
         <div class="container">
             <div class="wrap my-5">
                 <h1>Frequently Asked Questions
@@ -134,13 +126,8 @@
  
     <?php include('fragments/site_footer.php'); ?>
 
-<<<<<<< HEAD
 
     </div>
-=======
-    </div>
-    </section>
->>>>>>> fa1afcb5b02a1dd92bc7b4f5714a8565d8c84988
 </body>
 <script>
         // var acc = document.getElementsByClassName("accordion");
