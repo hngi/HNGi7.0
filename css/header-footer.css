@@ -147,6 +147,16 @@
         width: 100%;
     }
 
+     footer #address a{
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    footer #address a:hover {
+        opacity: .9;
+        text-decoration: none;
+        }
+
     #jumptotop {
         right: 10px;
         bottom: 10px;
