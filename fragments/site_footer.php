@@ -17,6 +17,7 @@
             </div>
             <div class="col-sm-3 pb-3" id="contact-section">
                 <h2 class="skyblue-text">Contact Us</h2>
+<<<<<<< HEAD
                 <div>
                     <a href="tel:+2348123456789">
                         <strong>
@@ -32,6 +33,25 @@
                         interns@hng.tech
                     </a>
                 </div>
+=======
+                <div class="col-sm-3 pb-3" id="contact-section">
+                            <h2 class="skyblue-text">Contact Us</h2>
+                            <div>
+                                <a href="tel:+2348123456789">
+                                    <strong>
+                                        Phone: <br />
+                                    </strong>
+                                    +234 812 345 6789
+                                </a>
+                                <br />
+                                <strong>
+                                    Email: <br />
+
+                                </strong>
+                                 <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=interns@hng.tech" target="_blank">interns@hng.tech</a>
+                          </div>
+                              </div>
+>>>>>>> 78cf117c2c36f580028166759fd8250dfeec8fa3
             </div>
             <div class="col-sm-3 pb-3">
                 <h2 class="skyblue-text">Office Address</h2>
@@ -58,4 +78,8 @@
     <div id="jumptotop"><a id="em"><span></span></a></div>
     
     <script src="./js/scroll-to-top.js"></script>
+<<<<<<< HEAD
 </footer>
+=======
+</footer>
+>>>>>>> 78cf117c2c36f580028166759fd8250dfeec8fa3
