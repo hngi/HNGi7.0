@@ -1,0 +1,37 @@
+body {
+    font-family: "Open Sans", segoe UI, sans-serif;
+   background-color: #d1f0f6; 
+    }
+.top-image{
+    left: 4%;
+    margin-top: 30px;
+}
+.center-div{
+    /* width: 70%;
+    height: 50%; */
+    width: 520px;
+    height: 600px;
+    background-color: white;
+	color: black;
+	top: 70%;
+    left: 50%;
+    border-radius: 5px;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.38);
+    padding: 30px 20px;
+    margin-bottom: 100px;
+}
+.donate-btn{
+    width: 400px;
+    background-color: #0088C7;
+}
+@media screen and (max-width: 770px) {
+    .center-div{
+        width: 400px;
+    }
+    .donate-btn{
+        width: 300px;
+    }
+}
