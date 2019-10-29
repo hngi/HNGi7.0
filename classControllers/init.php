@@ -11,3 +11,6 @@ require_once "oursponsors.php";
 require_once "InternExperience.php";
 require_once "LockRegForm.php";
 require_once "validation.php";
+
+require_once "Subscribers.php"; //Load subscriber file
+require_once "CountdownTimer.php";

@@ -8,8 +8,25 @@
         margin: 0;
         padding: 0;
         font-family: "Open Sans", segoe UI, sans-serif;
-        background-color: #fff;
+        background-color: rgb(241, 235, 235);
         color: rgba(0, 0, 0, 0.8);
+    }
+  
+    /*Small screen - any screen size below 768px*/    
+    @media ( max-width: 768px ) {
+        .body-container{
+            background-color: white;
+            margin: 30px; 
+            
+        }
+    }
+
+    /*Medium  screen and upward*/ 
+    @media ( min-width: 768px ) {
+       .body-container{
+            background-color: white;
+            margin: 40px 60px;
+            }
     }
 
     main {
@@ -166,6 +183,8 @@
             width: 100%;
             height: auto;
             margin: 15px auto;
+            transition: width 2s;
+
         }
 
          .gallery #hidden_images {

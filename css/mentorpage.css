@@ -6,7 +6,43 @@
     body {
       font-family: 'Open Sans', sans-serif;
     }
+<<<<<<< HEAD
 
+    body{
+      background-color: rgb(241, 235, 235);
+  }
+
+
+  /*Small screen - any screen size below 768px*/    
+  @media ( max-width: 768px ) {
+      .body-container{
+          background-color: white;
+          margin: 30px; 
+          
+      }
+  }
+
+  /*Medium  screen and upward*/ 
+  @media ( min-width: 768px ) {
+     .body-container{
+          background-color: white;
+          margin: 40px 60px;
+          }
+  }
+
+=======
+    .content{
+      
+    }
+ @keyframes Slide_up{
+                0%{
+                    transform: translateY(250px);
+                }
+                100%{
+                    transform: translateY(0);
+                }
+            }
+>>>>>>> f1394d23e52a617d8e07fbfac93253a57ca883a1
     a {
       text-decoration: none;
     }
@@ -24,6 +60,7 @@
 
     .mentors-section {
       text-align: center;
+      animation: Slide_up 2.1s ease ;
     }
 
     .wrapper {
@@ -139,7 +176,7 @@
        margin-bottom: 1rem
      }
 
-     
+    
      #img {
        /* margin-left: 1rem !important; */
        width: 150px;
@@ -233,6 +270,10 @@
      #landing-page  p {
         padding-bottom: 25px;
         font-size: 25px;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 33px;
+        text-align: center;
      }
 
       li {

@@ -13,14 +13,31 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
+    <link rel="icon" type="img/png" href="images/hng-favicon.png">
+
     <style>
         #home {
             display: none;
         }
+        .body-container {
+                margin: 0;
+            }
+
+        .card-header {
+            color: white !important;
+
+        }
+
+        .card-header button:hover {
+            color: white !important;
+            text-decoration: none !important;
+        }
+        
     </style>
 </head>
 
 <body>
+    <div class="body-container">
     <section class="container-fluid">
     <?php include('fragments/site_header.php');?>
     <div class="container-fluid">
@@ -585,6 +602,7 @@
 
     </section>
 </body>
+</div>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
