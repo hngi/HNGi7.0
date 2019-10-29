@@ -22,4 +22,9 @@ class Subscribers
         $rows = $stmt->num_rows;
         return $rows;
     }
+
+    public function send_welcome_email($email){ //function to send welcome message to subscriber!
+        $subject = "HNGi7 Internship Subscription"
+        send ($email, $subject, $body);
+    }
 }
