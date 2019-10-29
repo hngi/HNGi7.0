@@ -8,54 +8,6 @@
 body {
  font-family: "Open Sans", sans-serif;
 }
-<<<<<<< HEAD
-header {
- background: #d1f0f6;
- width: 100%;
-}
-#moshe1:hover {
-	background: #0088C7 ;
-	text-decoration: none ;
-	color: #ffff ;
-	box-shadow: none ;
-}
-nav ul {
- float: right;
- margin-right: 20px;
-}
-nav ul li {
- display: inline-block;
- line-height: 80px;
- margin: 0 5px;
-}
-nav ul li a {
- color: #474747;
- font-size: 16px;
- padding: 15px 20px;
- border-radius: 3px;
- opacity: 0.95;
-}
-nav ul li a.active,
-nav ul li a:hover {
- background: #00aeff;
- transition: 0.5s;
- color: white;
-}
-.checkbtn {
- font-size: 30px;
- color: white;
- float: right;
- line-height: 80px;
- margin-right: 40px;
- cursor: pointer;
- display: none;
-}
-#check {
- display: none;
-}
-=======
-
->>>>>>> c09ff990f87af5ab474b3737bf7a98a6018c9dc4
 .form-container {
  display: flex;
  flex-direction: column;
@@ -67,7 +19,7 @@ nav ul li a:hover {
 }
 /* styling of individual input field and textarea */
 .form-container input,
-textarea {
+textarea, select {
  width: 100%;
  padding: 10px 20px;
  margin: 10px auto;
@@ -78,7 +30,7 @@ textarea {
  resize: none;
 }
 /* when user click on a field box */
-.form-container input:focus, .form-container textarea:focus {
+.form-container input:focus, .form-container textarea:focus, select:focus {
 box-shadow: 0px 0px 10px #45758b;
 border:1px solid #00aeff;
 transition:box-shadow .5s  ease-in-out,border .5s  ease-in-out; ;
@@ -160,7 +112,7 @@ section.jumbo > p.para2 > a {
  {
    width: 90%;
  }
- .form-container input, textarea {
+ .form-container input, textarea, select {
      width: 90%;
    }
  .form-container button
@@ -191,14 +143,14 @@ section.jumbo > p.para2 > a {
      margin: 1rem auto;
    }
    .form-container input,
-   textarea {
+   textarea, select {
      width: 100%;
      padding: 10px 20px;
      margin: 10px auto;
      font-family: inherit;
      font-size: 16px;
    }
-   
+
    form.form-container > button {
      margin: 30px auto;
      display: block;
@@ -224,26 +176,26 @@ section.jumbo > p.para2 > a {
      width: 100%;
      margin-top: 0px;
    }
-   
+
    section.jumbo > h2.heading {
      /* margin-top: 100px; */
      margin-bottom: 30px;
      font-size: 40px;
      color: #084482;
    }
-   
+
    section.jumbo > p.para {
      text-align: center;
      margin-bottom: 0px;
      padding: 0 5px;
    }
-   
+
    section.jumbo > p.para2 {
      text-align: center;
      margin-top: 0px;
      margin-bottom: 50px;
    }
-    
+
  }
 
  @media (max-width: 952px) {
@@ -285,7 +237,7 @@ section.jumbo > p.para2 > a {
  }
  @media only screen and (max-width: 400px) {
    section.jumbo > h2.heading {
-     font-size: 30px; 
+     font-size: 30px;
  }
  section.jumbo > p.para {
    font-size: .85em;
@@ -293,7 +245,7 @@ section.jumbo > p.para2 > a {
  section.jumbo > p.para2 {
    font-size: .85em;
  }
- 
+
  }
 }
 .inputWithIcon{
