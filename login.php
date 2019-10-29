@@ -27,6 +27,13 @@ if (isset($_POST['login'])) {
   <link rel="stylesheet" type="text/css" href="css/header-footer.css">
   <link rel="stylesheet" href="css/join-intern.css">
   <link rel="stylesheet" href="css/loginadmin.css">
+  <style>
+     @media screen and (max-width:500px){
+            .body-container {
+                margin: 0;
+            }
+        }
+    </style>
   <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <script>
     function signup() {
@@ -49,7 +56,7 @@ if (isset($_POST['login'])) {
 <body>
 
  <section class="container-fluid">
- <div class="body-container">
+ <div class="body-continer">
   <?php include('fragments/site_header.php'); ?>
 
 

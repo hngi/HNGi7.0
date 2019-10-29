@@ -135,7 +135,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
   <section class="container-fluid">
-  <div class="body-container">
+  <div class="body-continer">
   <div class="hero">
 
     <?php include('fragments/site_header.php'); ?>

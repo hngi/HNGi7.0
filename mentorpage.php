@@ -19,7 +19,7 @@
 
 <body>
   <section class="container-fluid">
-  <div class="body-container">
+  <div class="body-cotainer">
   <?php include('fragments/site_header.php'); ?>
 
   <div class="jumbotron" id="landing-page">

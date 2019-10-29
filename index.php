@@ -19,6 +19,12 @@
         #home {
             display: none;
         }
+
+    
+            .body-container {
+                margin: 0;
+            }
+        
     </style>
 </head>
 

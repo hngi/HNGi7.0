@@ -54,11 +54,18 @@
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="stylesheet" href="css/intern-experience.css">
     <title>Experience Page</title>
+    <style>
+     @media screen and (max-width:500px){
+            .body-container {
+                margin: 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <section class="container-fluid">
-    <div class="body-container">
+    <div class="body-cotainer">
     <section class="jumbo">  
     <?php include('fragments/site_header.php');?>
             <h2>Experience Recap From Past Interns</h2>

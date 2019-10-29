@@ -63,6 +63,12 @@ if (isset($_POST['contact-btn'])) {
         #home {
             display: none;
         }
+
+        @media screen and (max-width:500px){
+            .body-container {
+                margin: 0;
+            }
+        }
     </style>
 </head>
 
