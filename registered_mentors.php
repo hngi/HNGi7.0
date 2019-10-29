@@ -7,10 +7,16 @@ if (!isset($_SESSION["role"])) {
 $mentors = new Mentor;
 $display = $mentors->allMentors();
 
-if (isset($_GET['delete_id'])) {
-    $mentor_id = $_GET['delete_id'];
+if (isset($_GET['acceptMentorId'])) {
+    $mentor_id = $_GET['acceptMentorId'];
 
-    $message = $mentors->DeleteMentor($mentor_id);
+    $message = $mentors->AcceptMentor($mentor_id);
+}
+
+if (isset($_GET['rejectMentorId'])) {
+    $mentor_id = $_GET['rejectMentorId'];
+
+    $message = $mentors->RejectMentor($mentor_id);
 }
 
 ?>

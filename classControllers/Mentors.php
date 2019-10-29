@@ -30,7 +30,7 @@ class Mentor
                         <td>' . $row["current_state"] . '</td>
                         <td>' . $row["employment_status"] . '</td>
                         <td>' . $row["timestamp"] . '</td>
-                        <td>' . '<a href="delete_mentor.php?deleteMentorId=' . $row["mentor_id"] . '" class="btn btn-danger btn-sm">Delete</a>' . '</td>
+                        <td>' . '<a href="registered_mentors.php?acceptMentorId=' . $row["mentor_id"] . '" class="btn btn-primary btn-sm" style="margin-right: 5px;">Accept</a>' .'<a href="registered_mentors.php?rejectMentorId=' . $row["mentor_id"] . '" class="btn btn-warning btn-sm" style="margin-right: 5px;">Reject</a>' .'<a href="delete_mentor.php?deleteMentorId=' . $row["mentor_id"] . '" class="btn btn-danger btn-sm">Delete</a>' . '</td>
                         
 
                     </tr>';
@@ -77,6 +77,37 @@ class Mentor
       return false;
     }
   }
+
+  public function AcceptMentor($mentor_id) {
+    global $database;
+    $query = "UPDATE mentors SET status = 2 WHERE mentor_id = '$mentor_id'";
+    $res = $database->query($query);
+    $count = $database->affected_rows();
+    if($count > 0) {
+      // updated
+      //return true;
+      header('Location: registered_mentors.php');
+    } else {
+      // failed
+      return false;
+    }
+  }
+
+  public function RejectMentor($mentor_id) {
+    global $database;
+    $query = "UPDATE mentors SET status = 1 WHERE mentor_id = '$mentor_id'";
+    $res = $database->query($query);
+    $count = $database->affected_rows();
+    if($count > 0) {
+      // updated
+      //return true;
+      header('Location: registered_mentors.php');
+    } else {
+      // failed
+      return false;
+    }
+  }
+
 
 
 }
