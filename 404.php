@@ -39,11 +39,6 @@
                 font-size: 20px;
                 text-decoration: none;
             }
-            #join-hng:hover {
-				background: #0088C7;
-				text-decoration: none;
-				color: #ffff;
-			}
             a{
                 color: #fff;
             }
