@@ -64,6 +64,12 @@ a.button-primary:hover,
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   text-decoration: none;
 }
+.moshe1:hover {
+	background: #0088C7 ;
+	text-decoration: none ;
+	color: #ffff ;
+	box-shadow: none ;
+}
 
 .whatwe {
   display: flex;

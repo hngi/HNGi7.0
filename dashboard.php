@@ -84,13 +84,13 @@ if(!isset($_SESSION["role"])) {
 								// form is open
 								?>
 									<input type="hidden" name="status" value="close" />
-									<button style="background: #b31329;" type="submit" name="lockopenform" id="export">Registration is Open, Lock Now</button>
+									<button type="submit" name="lockopenform" id="export">Registration is Open, Lock Now</button>
 								<?php
 							} else if($status == 0) {
 								// form is closed
 								?>
 									<input type="hidden" name="status" value="open" />
-									<button style="background: #5cb85c;" type="submit" name="lockopenform" id="export">Registration Locked, Open Now</button>
+									<button type="submit" name="lockopenform" id="export">Registration Locked, Open Now</button>
 								<?php
 							}
 						?>
@@ -123,6 +123,12 @@ if(!isset($_SESSION["role"])) {
 						<div class="col-md-2 card">
 							<p><?php echo $noOfAdmins; ?></p>
 							Registered Admins
+						</div>
+					</a>
+					<a href="registered_sponsors.php">
+						<div class="col-md-2 card">
+						 <p><?php echo  2 ?></p> 
+							Registered Sponsors
 						</div>
 					</a>
 				</div>
