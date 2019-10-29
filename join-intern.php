@@ -94,6 +94,7 @@ require_once 'classControllers/init.php';
         <input type="url" name="linkCV" id="linkCV" required placeholder="Link to your CV (Linkedin profile or any other link)" />
         <select class="interest" name="interest" required>
           <option value="">What area are you interested in</option>
+          <option value="Devops">Devops</option>
           <option value="Backend">Backend</option>
           <option value="Digital Marketing">Digital Marketing</option>
           <option value="Frontend">Frontend</option>
