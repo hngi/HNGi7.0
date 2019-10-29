@@ -347,6 +347,12 @@ function send_general_email($subject,$email,$message, $bcc = false) //Add blind 
         // $mail->addCC('cc@example.com');
         // $mail->addBCC('bcc@example.com');
 
+        if(is_array($bcc)){
+            foreach ($bcc as $bc){
+                $mail->addBCC("$bc");
+            }
+        }
+
         // Attachments
         // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
         // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
