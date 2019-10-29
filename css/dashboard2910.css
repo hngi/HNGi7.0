@@ -19,7 +19,7 @@ main
 	/* background-color: #2a2b3d; */
 	margin-left: 15vw; /* Same as sidebar width*/
 	padding: 2rem;
-	height: 100vh;
+	min-height: 100vh;
 }
 h1
 {
