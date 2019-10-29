@@ -8,5 +8,14 @@
 
 class Subscribers
 {
+    public function saveSubscriber($email){ //Method to save subscriber
+        global $database;
+        $sql = "INSERT INTO subscription(email) VALUES('$email')";
+        $query = $database->query($sql);
+    }
 
+
+    public function subscriberExists($email){
+
+    }
 }
