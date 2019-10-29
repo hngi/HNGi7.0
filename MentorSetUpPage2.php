@@ -132,39 +132,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
+  <section class="container-fluid">
   <div class="hero">
-    <!--Header-->
-    <!--header>
-            <div class="container">
-                <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
-                    <a class="navbar-brand text-center mt-2" href="index.html">
-                        <img src="https://res.cloudinary.com/kuic/image/upload/v1570690973/HNG/brand-logo_nbp2ci.png" alt="HNG Internship" class="logo">
-                    </a>
-                    <button class="navbar-toggler mt-3" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fa fa-bars fa-lg"></i>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav list-unstyled text-uppercase pt-3 pt-lg-0 ml-auto text-center">
-                            <li class="nav-item  text-center mr-3">
-                                <a class="nav-link" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item mr-3">
-                                <a class="nav-link" href="hng6.html" style="text-transform:uppercase;">HNG6</a>
-                            </li>
-                            <li class="nav-item mr-3">
-                                <a class="nav-link" href="mentorpage.html">Mentors</a>
-                            </li>
-                            <li class="nav-item mr-3">
-                                <a class="nav-link" href="contactform.html">Contact</a>
-                            </li>
-                            <li class="nav-item join mr-3">
-                                <a class="nav-link"href="join-intern.html"><button class="btn btn-primary text-center" type="submit">Join HNG</button></a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav> 
-            </div> 
-        </header-->
 
     <?php include('fragments/site_header.php'); ?>
 
@@ -306,21 +275,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </div>
     </div>
   </form>
-
-
-  <!--FooterSection-->
-
-  <!-- Footer -->
   <?php include('fragments/site_footer.php'); ?>
-
-
-
-
+  </section>
+</body>
   <script src="https://kit.fontawesome.com/85682eb992.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="js/mentorSetupPage.js"></script>
-</body>
-
 </html>

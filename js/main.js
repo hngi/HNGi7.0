@@ -1,5 +1,4 @@
-          //darkangel cc.
-        const daysElem = document.querySelector('#days'), //Edit this selector to pick the days element in your HTML.
+    const daysElem = document.querySelector('#days'), //Edit this selector to pick the days element in your HTML.
     hoursElem = document.querySelector('#hours'),
     minutesElem = document.querySelector('#minutes'),
     secondsElem = document.querySelector('#seconds'),
