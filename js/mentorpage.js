@@ -112,42 +112,42 @@
    {
      name: "Everitus Olumese",
      stack: "Developer",
-     imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570663334/Capture01_c3eyb9.jpg?fbclid=IwAR3Nezb-_XUEm6rt6hGAnTYreD7V60pzHF-rfkQOtP3ao28UnuIteVrcf_Yalt=""'
+     imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk""'
    },
    {
      name: "Osumgha Chiamaka",
      stack: "Web Developer",
-     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663265/Capture02_psr3n9.jpg?fbclid=IwAR1m1WqNFk8aF4BvBSQlk950cSazCaRy95-66fg9cBZxPG-6Cc8Ga_6neqg"
+     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663334/Capture01_c3eyb9.jpg?fbclid=IwAR3Nezb-_XUEm6rt6hGAnTYreD7V60pzHF-rfkQOtP3ao28UnuIteVrcf_Yalt="
    },
    {
      name: "Aboagye",
      stack: "Web Developer",
-     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk"
+     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663265/Capture02_psr3n9.jpg?fbclid=IwAR1m1WqNFk8aF4BvBSQlk950cSazCaRy95-66fg9cBZxPG-6Cc8Ga_6neqgk"
    },
    {
      name: "John Ademoye",
      stack: "Web Developer",
-     imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570663334/Capture01_c3eyb9.jpg?fbclid=IwAR3Nezb-_XUEm6rt6hGAnTYreD7V60pzHF-rfkQOtP3ao28UnuIteVrcf_Yalt=""'
+     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk"
    },
    {
      name: "Adeyefa Oluwatoba",
      stack: "Web Developer",
-     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663265/Capture02_psr3n9.jpg?fbclid=IwAR1m1WqNFk8aF4BvBSQlk950cSazCaRy95-66fg9cBZxPG-6Cc8Ga_6neqg"
+     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVkhttps://res.cloudinary.com/chidi6ix/image/upload/v1570663265/Capture02_psr3n9.jpg?fbclid=IwAR1m1WqNFk8aF4BvBSQlk950cSazCaRy95-66fg9cBZxPG-6Cc8Ga_6neqg"
    },
    {
      name: "Adolphus Chris",
      stack: "Web Developer",
-     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk"
+     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663334/Capture01_c3eyb9.jpg?fbclid=IwAR3Nezb-_XUEm6rt6hGAnTYreD7V60pzHF-rfkQOtP3ao28UnuIteVrcf_Yalt="
    },
    {
      name: "Ogundiji Bolade",
      stack: "Web Developer",
-     imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570663334/Capture01_c3eyb9.jpg?fbclid=IwAR3Nezb-_XUEm6rt6hGAnTYreD7V60pzHF-rfkQOtP3ao28UnuIteVrcf_Yalt=""'
+     imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570663265/Capture02_psr3n9.jpg?fbclid=IwAR1m1WqNFk8aF4BvBSQlk950cSazCaRy95-66fg9cBZxPG-6Cc8Ga_6neqgk""'
    },
    {
      name: "Ajayi Jeremiah",
      stack: "Backend Developer",
-     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663265/Capture02_psr3n9.jpg?fbclid=IwAR1m1WqNFk8aF4BvBSQlk950cSazCaRy95-66fg9cBZxPG-6Cc8Ga_6neqg"
+     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk"
    },
    {
      name: "Albert Oboh",
@@ -172,42 +172,42 @@
    {
      name: "Chinedu Ebinim",
      stack: "Web Developer",
-     imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570663334/Capture01_c3eyb9.jpg?fbclid=IwAR3Nezb-_XUEm6rt6hGAnTYreD7V60pzHF-rfkQOtP3ao28UnuIteVrcf_Yalt=""'
+     imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk""'
    },
    {
      name: "Chukwuemeka Iheonye",
      stack: "Product Designer",
-     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663265/Capture02_psr3n9.jpg?fbclid=IwAR1m1WqNFk8aF4BvBSQlk950cSazCaRy95-66fg9cBZxPG-6Cc8Ga_6neqg"
+     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663334/Capture01_c3eyb9.jpg?fbclid=IwAR3Nezb-_XUEm6rt6hGAnTYreD7V60pzHF-rfkQOtP3ao28UnuIteVrcf_Yalt="
    },
    {
      name: "Somtozech",
      stack: "Web Developer",
-     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk"
+     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663265/Capture02_psr3n9.jpg?fbclid=IwAR1m1WqNFk8aF4BvBSQlk950cSazCaRy95-66fg9cBZxPG-6Cc8Ga_6neqg"
    },
    {
      name: "Cole Solomon",
      stack: "Product Designer",
-     imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570663334/Capture01_c3eyb9.jpg?fbclid=IwAR3Nezb-_XUEm6rt6hGAnTYreD7V60pzHF-rfkQOtP3ao28UnuIteVrcf_Yalt=""'
+     imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk=""'
    },
    {
      name: "Motunrayo Da-costa",
      stack: "Frontend Developer",
-     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663265/Capture02_psr3n9.jpg?fbclid=IwAR1m1WqNFk8aF4BvBSQlk950cSazCaRy95-66fg9cBZxPG-6Cc8Ga_6neqg"
+     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk="
    },
    {
      name: "Maaruf Dauda",
      stack: "Web Developer",
-     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk"
+     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663334/Capture01_c3eyb9.jpg?fbclid=IwAR3Nezb-_XUEm6rt6hGAnTYreD7V60pzHF-rfkQOtP3ao28UnuIteVrcf_Yalt="
    },
    {
      name: "Romina Hadid",
      stack: "Marketing Strategist",
-     imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570663334/Capture01_c3eyb9.jpg?fbclid=IwAR3Nezb-_XUEm6rt6hGAnTYreD7V60pzHF-rfkQOtP3ao28UnuIteVrcf_Yalt=""'
+     imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570663265/Capture02_psr3n9.jpg?fbclid=IwAR1m1WqNFk8aF4BvBSQlk950cSazCaRy95-66fg9cBZxPG-6Cc8Ga_6neqg""'
    },
     {
      name: "Alexander Smith",
      stack: "UI/UX Designer",
-     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663265/Capture02_psr3n9.jpg?fbclid=IwAR1m1WqNFk8aF4BvBSQlk950cSazCaRy95-66fg9cBZxPG-6Cc8Ga_6neqg"
+     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk"
    },
    {
      name: "John Doe",
@@ -232,52 +232,12 @@
    {
      name: "John Doe",
      stack: "Founder and CEO",
-     imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570663334/Capture01_c3eyb9.jpg?fbclid=IwAR3Nezb-_XUEm6rt6hGAnTYreD7V60pzHF-rfkQOtP3ao28UnuIteVrcf_Yalt=""'
+     imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk""'
    },
    {
      name: "Ryan Thompson",
      stack: "Web Developer",
-     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663265/Capture02_psr3n9.jpg?fbclid=IwAR1m1WqNFk8aF4BvBSQlk950cSazCaRy95-66fg9cBZxPG-6Cc8Ga_6neqg"
-   },
-   {
-     name: "Romina Hadid",
-     stack: "Marketing Strategist",
-     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk"
-   },
-    {
-     name: "Alexander Smith",
-     stack: "UI/UX Designer",
-     imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570663334/Capture01_c3eyb9.jpg?fbclid=IwAR3Nezb-_XUEm6rt6hGAnTYreD7V60pzHF-rfkQOtP3ao28UnuIteVrcf_Yalt=""'
-   },
-   {
-     name: "John Doe",
-     stack: "Founder and CEO",
-     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663265/Capture02_psr3n9.jpg?fbclid=IwAR1m1WqNFk8aF4BvBSQlk950cSazCaRy95-66fg9cBZxPG-6Cc8Ga_6neqg"
-   },
-   {
-     name: "Ryan Thompson",
-     stack: "Web Developer",
-     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk"
-   },
-   {
-     name: "Romina Hadid",
-     stack: "Marketing Strategist",
-     imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570663334/Capture01_c3eyb9.jpg?fbclid=IwAR3Nezb-_XUEm6rt6hGAnTYreD7V60pzHF-rfkQOtP3ao28UnuIteVrcf_Yalt=""'
-   },
-    {
-     name: "Alexander Smith",
-     stack: "UI/UX Designer",
-     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663265/Capture02_psr3n9.jpg?fbclid=IwAR1m1WqNFk8aF4BvBSQlk950cSazCaRy95-66fg9cBZxPG-6Cc8Ga_6neqg"
-   },
-   {
-     name: "John Doe",
-     stack: "Founder and CEO",
-     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk"
-   },
-   {
-     name: "Ryan Thompson",
-     stack: "Web Developer",
-     imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570663334/Capture01_c3eyb9.jpg?fbclid=IwAR3Nezb-_XUEm6rt6hGAnTYreD7V60pzHF-rfkQOtP3ao28UnuIteVrcf_Yalt=""'
+     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663334/Capture01_c3eyb9.jpg?fbclid=IwAR3Nezb-_XUEm6rt6hGAnTYreD7V60pzHF-rfkQOtP3ao28UnuIteVrcf_Yalt="
    },
    {
      name: "Romina Hadid",
@@ -287,22 +247,62 @@
     {
      name: "Alexander Smith",
      stack: "UI/UX Designer",
+     imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk""'
+   },
+   {
+     name: "John Doe",
+     stack: "Founder and CEO",
+     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk"
+   },
+   {
+     name: "Ryan Thompson",
+     stack: "Web Developer",
+     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663334/Capture01_c3eyb9.jpg?fbclid=IwAR3Nezb-_XUEm6rt6hGAnTYreD7V60pzHF-rfkQOtP3ao28UnuIteVrcf_Yalt="
+   },
+   {
+     name: "Romina Hadid",
+     stack: "Marketing Strategist",
+     imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570663265/Capture02_psr3n9.jpg?fbclid=IwAR1m1WqNFk8aF4BvBSQlk950cSazCaRy95-66fg9cBZxPG-6Cc8Ga_6neqg""'
+   },
+    {
+     name: "Alexander Smith",
+     stack: "UI/UX Designer",
      imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk"
    },
    {
      name: "John Doe",
      stack: "Founder and CEO",
-     imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570663334/Capture01_c3eyb9.jpg?fbclid=IwAR3Nezb-_XUEm6rt6hGAnTYreD7V60pzHF-rfkQOtP3ao28UnuIteVrcf_Yalt=""'
+     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk"
    },
    {
      name: "Ryan Thompson",
      stack: "Web Developer",
-     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663265/Capture02_psr3n9.jpg?fbclid=IwAR1m1WqNFk8aF4BvBSQlk950cSazCaRy95-66fg9cBZxPG-6Cc8Ga_6neqg"
+     imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570663334/Capture01_c3eyb9.jpg?fbclid=IwAR3Nezb-_XUEm6rt6hGAnTYreD7V60pzHF-rfkQOtP3ao28UnuIteVrcf_Yalt=""'
    },
    {
      name: "Romina Hadid",
      stack: "Marketing Strategist",
+     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663265/Capture02_psr3n9.jpg?fbclid=IwAR1m1WqNFk8aF4BvBSQlk950cSazCaRy95-66fg9cBZxPG-6Cc8Ga_6neqg"
+   },
+    {
+     name: "Alexander Smith",
+     stack: "UI/UX Designer",
      imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk"
+   },
+   {
+     name: "John Doe",
+     stack: "Founder and CEO",
+     imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk""'
+   },
+   {
+     name: "Ryan Thompson",
+     stack: "Web Developer",
+     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663334/Capture01_c3eyb9.jpg?fbclid=IwAR3Nezb-_XUEm6rt6hGAnTYreD7V60pzHF-rfkQOtP3ao28UnuIteVrcf_Yalt"
+   },
+   {
+     name: "Romina Hadid",
+     stack: "Marketing Strategist",
+     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663265/Capture02_psr3n9.jpg?fbclid=IwAR1m1WqNFk8aF4BvBSQlk950cSazCaRy95-66fg9cBZxPG-6Cc8Ga_6neqg"
    },
     {
      name: "Alexander Smith",
@@ -312,7 +312,7 @@
    {
      name: "John Doe",
      stack: "Founder and CEO",
-     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663265/Capture02_psr3n9.jpg?fbclid=IwAR1m1WqNFk8aF4BvBSQlk950cSazCaRy95-66fg9cBZxPG-6Cc8Ga_6neqg"
+     imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk"
    },
  ];
 

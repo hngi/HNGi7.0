@@ -58,15 +58,13 @@
 
 <body>
     <section class="container-fluid">
+    <div class="body-container">
+    <section class="jumbo">  
     <?php include('fragments/site_header.php');?>
-    <div class="jumbotron" id="landing-page">
-        <div class="">
             <h2>Experience Recap From Past Interns</h2>
-            <p class="lead">Testimonies From Ex HNG Internship Finalists</p>
-            <a href="#modal-id" data-toggle="modal" class="btn btn-primary">Submit Experience</a> <!--button to add experience-->
-        </div>
-
-    </div>
+            <p class="para">Testimonies From Ex HNG Internship Finalists</p>
+            <a href="#modal-id" data-toggle="modal" class="button-primary">Submit Experience</a> <!--button to add experience-->
+   </section>
 
     <!--modal here-->
     <div class="modal fade" id="modal-id">
@@ -134,8 +132,9 @@
                             <div class="wrapper-child"  >
                                 <img class="image" src="<?php echo $img_src;?>">
                                 <h4><?php echo $all_experience['names'];?></h4>
-                                <p><?php echo $all_experience['stack'];?></p>
-                                <p>
+                                <p class="stack"><?php echo $all_experience['stack'];?></p>
+                                <hr class="hline"/>
+                                <p class="experience">
                                     <?php echo nl2br($all_experience['experience']);?>
                                 </p>
                             </div>
@@ -148,6 +147,7 @@
         <?php include('fragments/site_footer.php'); ?>
 
     </main>
+    </div>
     </section>
 </body>
  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
