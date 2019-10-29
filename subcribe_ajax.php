@@ -19,6 +19,6 @@ if(isset($_POST['add'])){
         $output['status'] = false;
         $output['message'] = "You have already subscribe to mailing list!";
     }else{
-
+        $subscriber->saveSubscriber($email); //save subscriber
     }
 }
