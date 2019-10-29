@@ -3,16 +3,12 @@ require 'classControllers/init.php';
 if (!isset($_SESSION["role"])) {
     header('Location:admin_login.php');
 }
-
 $mentors = new Mentor;
 $display = $mentors->allMentors();
-
 if (isset($_GET['delete_id'])) {
     $mentor_id = $_GET['delete_id'];
-
     $message = $mentors->DeleteMentor($mentor_id);
 }
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -43,7 +39,6 @@ if (isset($_GET['delete_id'])) {
             margin: 15px;
             padding: 10px;
             border-radius: 15px;
-
         }
     </style>
 
