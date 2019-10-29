@@ -12,6 +12,9 @@
 		<hr id="hr2">
 		<a href="registered_interns.php">Interns</a>
 		<hr id="hr2">
+		<a href="oursponsors.php">Sponsors</a>
+		<hr id="hr2">
+
 		<?php 
 			if($_SESSION["role"] == 1) {
 			?>
