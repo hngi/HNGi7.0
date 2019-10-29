@@ -7,18 +7,39 @@
  */
 
 ?>
-<a href="">Subscribe</a>
+<a class="btn btn-primary" data-toggle="modal" href="#modal-subscribe">Subscribe</a>
 
-<a class="btn btn-primary" data-toggle="modal" href="#modal-id">Trigger modal</a>
-<div class="modal fade" id="modal-id">
+<div class="modal fade" id="modal-subscribe">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title">Modal title</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="modal-body">
-                Modal body ...
+                <section class="one">
+                    <div class="logo">
+                        <img src="https://image.flaticon.com/icons/svg/143/143361.svg">
+                    </div>
+                    <h2 class="heading">
+                        please subscribe to get updates
+                    </h2>
+                    <p> signup with your email to get latest updates
+                    </p>
+                    <form>
+                        <input type='text' placeholder="enter your email"><br/>
+                        <button class="btn" role="button">
+                            subscribe
+                        </button>
+                    </form>
+                </section>
+                <section class="two">
+                    <h3>
+                        thank you for subscribing !
+                    </h3>
+                    <div class="close">
+                    </div>
+                </section>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
