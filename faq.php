@@ -18,7 +18,7 @@
 </head>
 
 <body>
-
+    <section class="container-fluid">
     <?php include('fragments/site_header.php'); ?>
     <section class="hero">
         <div class="container">
@@ -65,7 +65,9 @@
     <?php include('fragments/site_footer.php'); ?>
 
 
-    <script>
+    </section>
+</body>
+<script>
         var divs = ["Menu1", "Menu2", "Menu3", "Menu4"];
         var visibleDivId = null;
 
@@ -91,6 +93,4 @@
             }
         }
     </script>
-</body>
-
 </html>

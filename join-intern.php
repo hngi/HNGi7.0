@@ -36,10 +36,7 @@ require_once 'classControllers/init.php';
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
-  <!-- Latest compiled and minified CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-  <link rel="icon" type="img/png" href="images/hng-favicon.png">
   <link rel="stylesheet" type="text/css" href="css/header-footer.css">
   <link rel="stylesheet" href="css/join-intern.css">
   <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
@@ -55,6 +52,7 @@ require_once 'classControllers/init.php';
 </head>
 
 <body>
+  <section class="container-fluid">
   <section class="jumbo">  
     <?php include('fragments/site_header.php'); ?>
 
@@ -121,9 +119,9 @@ require_once 'classControllers/init.php';
 
 
   </div>
-   <?php include_once "fragments/site_footer.php"; ?>
+   <?php include "fragments/site_footer.php"; ?>
    <div id="jumptotop"><em></em></div>
-                <script src="./js/scroll-to-top.js"></script> 
+   </section>
 </body>
 
 </html>
