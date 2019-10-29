@@ -57,10 +57,8 @@
 </head>
 
 <body>
-
-    <?php
-          include('fragments/site_header.php');
-        ?>
+    <section class="container-fluid">
+    <?php include('fragments/site_header.php');?>
     <div class="jumbotron" id="landing-page">
         <div class="">
             <h2>Experience Recap From Past Interns</h2>
@@ -150,8 +148,9 @@
         <?php include('fragments/site_footer.php'); ?>
 
     </main>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    </section>
+</body>
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -161,6 +160,4 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="js/intern-experience.js"></script>
-</body>
-
 </html>

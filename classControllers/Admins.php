@@ -53,7 +53,7 @@ class Admins
           $_SESSION["role"] = $role;
           $_SESSION["admin_id"] = $admin_id;
 
-          echo '<script>window.location.href = "dashboard"</script>';
+          echo '<script>window.location.href = "dashboard.php"</script>';
         }
 
         
