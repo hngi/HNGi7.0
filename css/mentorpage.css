@@ -6,7 +6,17 @@
     body {
       font-family: 'Open Sans', sans-serif;
     }
-
+    .content{
+      
+    }
+ @keyframes Slide_up{
+                0%{
+                    transform: translateY(250px);
+                }
+                100%{
+                    transform: translateY(0);
+                }
+            }
     a {
       text-decoration: none;
     }
@@ -24,6 +34,7 @@
 
     .mentors-section {
       text-align: center;
+      animation: Slide_up 2.1s ease ;
     }
 
     .wrapper {
