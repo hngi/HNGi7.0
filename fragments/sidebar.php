@@ -16,19 +16,9 @@
         <a href="news_update.php">News Update</a> <!--Added news update to admin menu-->
 
 		<hr id="hr2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-		<?php 
-=======
 		<a href="registered_sponsors.php">Sponsors</a>
 		<hr id="hr2">
 		<?php
->>>>>>> f1394d23e52a617d8e07fbfac93253a57ca883a1
-=======
-		<a href="registered_sponsors.php">Sponsors</a>
-		<hr id="hr2">
-		<?php
->>>>>>> 4e283c1de9e75b8cdb82655a22aa05c86c1c18d1
 			if($_SESSION["role"] == 1) {
 			?>
 				<a href="admins.php">Admins</a>
