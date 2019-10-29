@@ -268,8 +268,8 @@
 
         .main-seventh-row img {
             border-radius: 100%;
-            width: 300px;
-            height: 300px;
+            width: 180px;
+            height: 180px;
         }
 
         .main-seventh-row button {
@@ -451,9 +451,11 @@
         #wrapper {
             background-color: #3c6b9c;
             color: #F2f5f9;
+            padding: 30px;
         }
         .activeHomepageDrop {
             background-color: #00AEFF;
+            color: white
         }
         #collapseOne li {
             color: #737373;
@@ -467,6 +469,10 @@
         }
         .card-header.buttonTwo {
             color: #fff;
+        }
+
+        .card-header.buttonTwo:hover{
+            color: white;
         }
         .para-text {
             font-size: 20px;
@@ -559,6 +565,8 @@
         .section1 table {
             margin: 0 auto;
         }
+
+        .acti
     }
     
     @media screen and (min-width: 760px) {

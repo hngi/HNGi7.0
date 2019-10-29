@@ -19,11 +19,19 @@
         #home {
             display: none;
         }
-
-    
-            .body-container {
+        .body-container {
                 margin: 0;
             }
+
+        .card-header {
+            color: white !important;
+
+        }
+
+        .card-header button:hover {
+            color: white !important;
+            text-decoration: none !important;
+        }
         
     </style>
 </head>

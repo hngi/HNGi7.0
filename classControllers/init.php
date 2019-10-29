@@ -12,3 +12,4 @@ require_once "LockRegForm.php";
 require_once "validation.php";
 
 require_once "Subscribers.php"; //Load subscriber file
+require_once "CountdownTimer.php";
