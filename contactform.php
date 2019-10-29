@@ -68,6 +68,7 @@ if (isset($_POST['contact-btn'])) {
 
 <body>
   <section class="container-fluid">
+  <div class="body-container">
 <?php
     include "fragments/site_header.php";
 ?>
@@ -110,6 +111,7 @@ if (!empty($msg2)) {
     </div>
   </section>
   <?php  include "fragments/site_footer.php";?>
+  </div>
   </section>
 </body>
 

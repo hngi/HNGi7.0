@@ -123,7 +123,8 @@ require_once 'classControllers/init.php';
   </div>
    <?php include "fragments/site_footer.php"; ?>
    <div id="jumptotop"><em></em></div>
-   </section>
+   </div> 
+  </section>
 </body>
 
 </html>

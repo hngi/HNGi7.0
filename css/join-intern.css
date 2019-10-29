@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+* {
+<<<<<<< HEAD
+=======
+>>>>>>> 4e283c1de9e75b8cdb82655a22aa05c86c1c18d1
  padding: 0;
  margin: 0;
  text-decoration: none;
@@ -6,6 +11,24 @@
 }
 body {
  font-family: "Open Sans", sans-serif;
+ background-color: rgb(241, 235, 235);
+}
+
+/*Small screen - any screen size below 768px*/    
+@media ( max-width: 768px ) {
+  .body-container{
+      background-color: white;
+      margin: 30px; 
+      
+  }
+}
+
+/*Medium  screen and upward*/ 
+@media ( min-width: 768px ) {
+ .body-container{
+      background-color: white;
+      margin: 40px 60px;
+      }
 }
 
 .form-container {
@@ -195,7 +218,32 @@ section.jumbo > p.para2 > a {
      margin-top: 0px;
      margin-bottom: 50px;
    }
+<<<<<<< HEAD
+    
+=======
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+ }
+ 
+ body {
+  font-family: "Open Sans", sans-serif;
+ }
+ 
+ .form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  width: 40vw;
+  margin: 1rem auto;
+>>>>>>> f1394d23e52a617d8e07fbfac93253a57ca883a1
+=======
 
+>>>>>>> 4e283c1de9e75b8cdb82655a22aa05c86c1c18d1
  }
  /* styling of individual input field and textarea */
  .form-container input,
@@ -247,13 +295,28 @@ section.jumbo > p.para2 > a {
   width: 100%;
   text-align: center;
  }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4e283c1de9e75b8cdb82655a22aa05c86c1c18d1
  #check:checked ~ ul {
    left: 0;
  }
  @media only screen and (max-width: 400px) {
    section.jumbo > h2.heading {
      font-size: 30px; 
+<<<<<<< HEAD
+=======
+ 
+ section.jumbo > h2.heading {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 40px;
+  color: #084482;
+>>>>>>> f1394d23e52a617d8e07fbfac93253a57ca883a1
+=======
+>>>>>>> 4e283c1de9e75b8cdb82655a22aa05c86c1c18d1
  }
  
  section.jumbo > p.para {
@@ -437,14 +500,24 @@ section.jumbo > p.para2 > a {
  .inputWithIcon input[type="email"], input[type="password"]{
    padding-left:3rem;
  }
+<<<<<<< HEAD
+<<<<<<< HEAD
+ 
+=======
+=======
 
+>>>>>>> 4e283c1de9e75b8cdb82655a22aa05c86c1c18d1
  .inputWithIcon i{
    position: absolute;
    left:0;
    top: 16px;
    color:#8898aa;
    padding:9px 8px;
+<<<<<<< HEAD
+>>>>>>> f1394d23e52a617d8e07fbfac93253a57ca883a1
+=======
 
+>>>>>>> 4e283c1de9e75b8cdb82655a22aa05c86c1c18d1
  }
  /* overiding text-danger */
  .small-text{

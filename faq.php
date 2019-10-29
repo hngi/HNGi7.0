@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="css/newContact.css"> -->
+    <link rel="stylesheet" href="css/newContact.css">
     <link rel="stylesheet" href="css/faq.css">
     <style>
         .accordions {
@@ -64,11 +64,19 @@
 
 </head>
 
+<<<<<<< HEAD
 <body class="">
     <div class="containers-fluid ">
    <div class="header_container">
    <?php include('fragments/site_header.php'); ?>
     <section class="hero pt-4">
+=======
+<body>
+    <section class="container-fluid">
+    <div class="body-container">
+    <?php include('fragments/site_header.php'); ?>
+    <section class="hero">
+>>>>>>> fa1afcb5b02a1dd92bc7b4f5714a8565d8c84988
         <div class="container">
             <div class="wrap my-5">
                 <h1>Frequently Asked Questions
@@ -126,8 +134,13 @@
  
     <?php include('fragments/site_footer.php'); ?>
 
+<<<<<<< HEAD
 
     </div>
+=======
+    </div>
+    </section>
+>>>>>>> fa1afcb5b02a1dd92bc7b4f5714a8565d8c84988
 </body>
 <script>
         // var acc = document.getElementsByClassName("accordion");

@@ -1,5 +1,55 @@
+<<<<<<< HEAD
 * {
   text-decoration: none;
+=======
+*{
+    text-decoration: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', segoe UI, sans-serif;
+
+}
+
+
+body{
+    background-color: rgb(241, 235, 235);
+}
+
+
+/*Small screen - any screen size below 768px*/    
+@media ( max-width: 768px ) {
+    .body-container{
+        background-color: white;
+        margin: 30px; 
+        
+    }
+}
+
+/*Medium  screen and upward*/ 
+@media ( min-width: 768px ) {
+   .body-container{
+        background-color: white;
+        margin: 40px 60px;
+        }
+}
+
+header, .hero{
+    background-color: #d1f0f6;
+}
+.container{
+    max-width: 75vw;
+    padding: 10px;
+    margin: auto;
+}
+header .wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+>>>>>>> fa1afcb5b02a1dd92bc7b4f5714a8565d8c84988
 }
 body {
   padding: 0;
