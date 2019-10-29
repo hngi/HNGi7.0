@@ -26,6 +26,7 @@ if (isset($_POST['login'])) {
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
   <link rel="stylesheet" type="text/css" href="css/header-footer.css">
   <link rel="stylesheet" href="css/join-intern.css">
+  <link rel="stylesheet" href="css/loginadmin.css">
   <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <script>
     function signup() {
@@ -43,7 +44,6 @@ if (isset($_POST['login'])) {
         });
     }
   </script>
-
 </head>
 
 <body>
