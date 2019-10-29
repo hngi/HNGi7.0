@@ -569,11 +569,24 @@
             max-width: 100%;
             display: block;
             height: auto;
+            animation: Slide_up 1.4s ease ;
+            overflow: hidden;
         }
+            @keyframes Slide_up{
+                0%{
+                    transform: translateY(250px);
+                }
+                100%{
+                    transform: translateY(0);
+                }
+            }
         .welcome-column {
             text-align: left;
             margin-top: 150px;
             margin-bottom: 20px;
+            animation: Slide_up 1.4s ease ;
+            overflow: hidden;
+        
         }
         .first-container,
         .second-container,

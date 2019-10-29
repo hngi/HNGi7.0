@@ -57,6 +57,8 @@ if (isset($_POST['contact-btn'])) {
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="css/faq.css">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
+    <link rel="icon" type="img/png" href="images/hng-favicon.png">
+
     <style>
         #home {
             display: none;
@@ -66,6 +68,7 @@ if (isset($_POST['contact-btn'])) {
 
 <body>
   <section class="container-fluid">
+  <div class="body-container">
 <?php
     include "fragments/site_header.php";
 ?>
@@ -108,6 +111,7 @@ if (!empty($msg2)) {
     </div>
   </section>
   <?php  include "fragments/site_footer.php";?>
+  </div>
   </section>
 </body>
 

@@ -17,6 +17,18 @@
 
         $message = $interns->DeleteIntern($intern_id);
     }
+
+    if (isset($_GET['acceptInternId'])) {
+        $mentor_id = $_GET['acceptInternId'];
+    
+        $message = $interns->AcceptIntern($mentor_id);
+    }
+    
+    if (isset($_GET['rejectInternId'])) {
+        $mentor_id = $_GET['rejectInternId'];
+    
+        $message = $interns->RejectIntern($mentor_id);
+    }
 ?>
 <!DOCTYPE html>
 <html>

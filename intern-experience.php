@@ -58,6 +58,7 @@
 
 <body>
     <section class="container-fluid">
+    <div class="body-container">
     <section class="jumbo">  
     <?php include('fragments/site_header.php');?>
             <h2>Experience Recap From Past Interns</h2>
@@ -146,6 +147,7 @@
         <?php include('fragments/site_footer.php'); ?>
 
     </main>
+    </div>
     </section>
 </body>
  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

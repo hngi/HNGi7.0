@@ -39,6 +39,8 @@ require_once 'classControllers/init.php';
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/header-footer.css">
   <link rel="stylesheet" href="css/join-intern.css">
+  <link rel="icon" type="img/png" href="images/hng-favicon.png">
+
   <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <style>
 
@@ -53,8 +55,11 @@ require_once 'classControllers/init.php';
 
 <body>
   <section class="container-fluid">
+<<<<<<< HEAD
   <div class="body-container">
 
+=======
+>>>>>>> f1394d23e52a617d8e07fbfac93253a57ca883a1
   <section class="jumbo">  
     <?php include('fragments/site_header.php'); ?>
 

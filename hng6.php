@@ -14,6 +14,8 @@
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
     <link rel="stylesheet" href="css/hngsix.css">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
+    <link rel="icon" type="img/png" href="images/hng-favicon.png">
+
 </head>
 
 <body>

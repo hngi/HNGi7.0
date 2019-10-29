@@ -6,6 +6,7 @@
     body {
       font-family: 'Open Sans', sans-serif;
     }
+<<<<<<< HEAD
 
     body{
       background-color: rgb(241, 235, 235);
@@ -29,6 +30,19 @@
           }
   }
 
+=======
+    .content{
+      
+    }
+ @keyframes Slide_up{
+                0%{
+                    transform: translateY(250px);
+                }
+                100%{
+                    transform: translateY(0);
+                }
+            }
+>>>>>>> f1394d23e52a617d8e07fbfac93253a57ca883a1
     a {
       text-decoration: none;
     }
@@ -46,6 +60,7 @@
 
     .mentors-section {
       text-align: center;
+      animation: Slide_up 2.1s ease ;
     }
 
     .wrapper {
