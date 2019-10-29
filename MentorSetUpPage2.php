@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST['employment_status'])) {
     $error['employment_status'] = "Input field is required";
   }
-  //Mentors::emailExists($_POST['email']) ? $error['email'] = "Email has been used to register before" : false;
+  Mentors::emailExists($_POST['email']) ? $error['email'] = "Email has been used to register before" : false;
   if (empty($error)) {
     $area_of_expertise = "";
 
