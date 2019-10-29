@@ -224,11 +224,13 @@ if(!isset($_SESSION["role"])) {
                         </div>
 
                         <div class="col-md-3">
+                        <a href="registered_sponsors.php">
                           <div class="box bg-primary">
                             <i class="fas fa-hand-holding-usd"></i>
                             <h3><?php echo  2 ?></h3>
                             <p class="lead">Registered Sponsors</p>
                           </div>
+                          </a>
                         </div>
                       </div>
                     </div>
