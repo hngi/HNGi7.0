@@ -10,9 +10,7 @@ require_once 'classControllers/init.php';
       $fullname = $database->escape_string($_POST['fullname']);
       $email = $database->escape_string($_POST['email']);
       $phoneNo = $database->escape_string($_POST['phoneNo']);
-      $linkPort = $database->escape_string($_POST['linkPort']);
       $linkCV = $database->escape_string($_POST['linkCV']);
-      $exp = $database->escape_string($_POST['exp']);
       $interest = $database->escape_string($_POST['interest']);
       $location = $database->escape_string($_POST['location']);
       $empStatus = $database->escape_string($_POST['empStatus']);
@@ -53,7 +51,7 @@ require_once 'classControllers/init.php';
 
 <body>
   <section class="container-fluid">
-  <section class="jumbo">  
+  <section class="jumbo">
     <?php include('fragments/site_header.php'); ?>
 
     <h2 class="heading">Join as an intern</h2>
@@ -93,10 +91,16 @@ require_once 'classControllers/init.php';
         <input type="text" name="fullname" id="fullname" required placeholder="Fullname" />
         <input type="email" name="email" id="email" required placeholder="Email" />
         <input type="text" name="phoneNo" id="phoneNo" required placeholder="Phone number" />
-        <input type="url" name="linkPort" id="linkPort" required placeholder="Link to portfolio (if you have any)" />
         <input type="url" name="linkCV" id="linkCV" required placeholder="Link to your CV (Linkedin profile or any other link)" />
-        <input type="text" name="exp" id="exp" required placeholder="How many years experience do you have" />
-        <input type="text" name="interest" id="interest" required placeholder="What area are you interested in" />
+        <select class="interest" name="interest" required>
+          <option value="">What area are you interested in</option>
+          <option value="Backend">Backend</option>
+          <option value="Digital Marketing">Digital Marketing</option>
+          <option value="Frontend">Frontend</option>
+          <option value="Machine Learning">Machine Learning</option>
+          <option value="Mobile Development">Mobile Development</option>
+          <option value="UI?UX Design">UI/UX Design</option>
+        </select>
         <input type="text" name="location" id="location" required placeholder="What state are you currently  located in?" />
         <input type="text" name="empStatus" id="empStatus" required placeholder="What is  your current employment status?" />
         <textarea name="about" id="about" required cols="30" rows="10" placeholder="Briefly tell us about yourself"></textarea>
