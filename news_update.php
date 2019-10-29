@@ -12,9 +12,15 @@ if(isset($_POST['ok'])){
     $subject = $_POST['subject'];
     $message = $_POST['message'];
 
-    $subscription_list = $subscriber->fetch_list();
+    $subscription_lists = $subscriber->fetch_list();
 
-    send_general_email("$subject","no-reply@hng.tech",$message,$subscription_list);
+    $email_lists = array();
+
+    foreach ($subscription_lists as $subscription_list){
+        $email_lists[] = $subscription_list['email'];
+    }
+
+    send_general_email("$subject","no-reply@hng.tech",$message,$email_lists);
 
     $_SESSION['msg'] = "<div class='alert alert-info'>New update sent successfully!</div>";
     header("location:news_update.php");
