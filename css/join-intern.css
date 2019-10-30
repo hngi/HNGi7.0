@@ -50,7 +50,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   color: #fff;
  }
- section.jumb {
+ section.jumbo {
   background: #d1f0f6;
   display: flex;
   flex-direction: column;
@@ -222,7 +222,7 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
       color: #fff;
     }
-    section.jumb {
+    section.jumbo {
       background: #d1f0f6;
       display: flex;
       flex-direction: column;
@@ -408,6 +408,18 @@
     font-size:0.8rem;
     color:cornflowerblue !important;
   }
+<<<<<<< HEAD
+=======
+  @media only screen and (max-width: 400px) {
+    section.jumbo > h2.heading {
+      font-size: 30px;
+  }
+  section.jumbo > p.para {
+    font-size: .85em;
+  }
+  section.jumbo > p.para2 {
+    font-size: .85em;
+>>>>>>> bd557f54d7830d77309e704a3729eaebc724016b
   }
  
  .navigation {
@@ -423,4 +435,29 @@
      padding-right: 15px !important;
    }
  }
+<<<<<<< HEAD
+=======
+ .inputWithIcon{
+   position: relative;
+ }
+ .inputWithIcon input[type="email"], input[type="password"]{
+   padding-left:3rem;
+ }
+
+ .inputWithIcon i{
+   position: absolute;
+   left:0;
+   top: 16px;
+   color:#8898aa;
+   padding:9px 8px;
+
+ }
+ /* overiding text-danger */
+ .small-text{
+   font-size:0.8rem;
+   color:cornflowerblue !important;
+ }
+ }
+
+>>>>>>> bd557f54d7830d77309e704a3729eaebc724016b
  

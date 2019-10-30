@@ -51,6 +51,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="stylesheet" href="css/intern-experience.css">
     <title>Experience Page</title>
@@ -151,6 +152,7 @@
     </main>
     </section>        
     <?php include('fragments/site_footer.php'); ?>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 </body>
  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
