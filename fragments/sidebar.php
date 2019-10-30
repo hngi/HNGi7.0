@@ -17,9 +17,10 @@
         <a href="news_update.php">News Update</a> <!--Added news update to admin menu-->
 
 		<hr id="hr2">
-		
+
 		<a href="updateCountdown.php">Countdown</a>
 		<hr id="hr2">
+
 
 		<a href="registered_sponsors.php">Sponsors</a>
 		<!-- <hr id="hr2"> -->
@@ -27,10 +28,10 @@
 
 			if($_SESSION["role"] == 1) {
 			    '<a href="admins.php">Admins</a>';
-			
+
 			}
 		?>
-		
+
 		<!-- <select>
 			<option selected="selected" disabled="disabled">Overview</option>
 			<option value="0">Mentors</option>
