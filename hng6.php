@@ -115,7 +115,7 @@ $countDownValues = $countdown->getDate();
      </div>
      <div class="gallery_items" id="hidden_images">
       <img src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng1_rbfvik.jpg">
-      <img src="https://res.cloudinary.com/yutee/image/upload/v15c71818578/low-quality/startng2_rva54w.jpg">
+      <img src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng2_rva54w.jpg">
       <img src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng3_blzemp.jpg">
       <img src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng4_tlrjyf.jpg">
       <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722618/gallery-third_oqgaiv.png">
