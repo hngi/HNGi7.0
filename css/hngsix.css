@@ -122,9 +122,9 @@
     }
     #home-about h1 {
         width: 100%;
-        font-size: 40px;
+        font-size: 25px;
         font-weight: 600;
-        text-align: center;
+        text-align: left;
         color: #084482;
         margin-bottom: 50px;
     }
@@ -154,6 +154,8 @@
    
         .gallery h2 {
             text-align: center;
+            font-size: 25px;
+            font-weight: 600;
         }
    
         .gallery_items {
@@ -437,4 +439,3 @@
        padding-right: 20px !important;
      }
    }
-   
