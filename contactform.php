@@ -58,18 +58,6 @@ if (isset($_POST['contact-btn'])) {
     <link rel="stylesheet" href="css/faq.css">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
-
-   <style>
-        #home {
-            display: none;
-        }
-
-        @media screen and (max-width:500px){
-            .body-container {
-                margin: 0;
-            }
-        }
-    </style> 
 </head>
 
 <body>
