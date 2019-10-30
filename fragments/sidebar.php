@@ -23,8 +23,8 @@
 
 		<a href="registered_sponsors.php">Sponsors</a>
 		<hr id="hr2">
-
         <?php
+
 			if($_SESSION["role"] == 1) {
 			    '<a href="admins.php">Admins</a>';
 			
