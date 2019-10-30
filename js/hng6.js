@@ -1,4 +1,8 @@
-const countDownDate = new Date("January 1,2020 22:0:0").getTime(); // Change later
+const startDate = document.getElementById("startDate").innerHTML;
+const startTime = document.getElementById("startTime").innerHTML;
+
+const countDownDate = new Date(startDate + " " + startTime).getTime(); // Change later
+
 const defaultDegStart = 45;
 const activeColor = "#06F4CC";
 const backColor = "rgba(240, 240, 240)";
