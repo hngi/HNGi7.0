@@ -58,21 +58,34 @@ if (isset($_POST['contact-btn'])) {
     <link rel="stylesheet" href="css/faq.css">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
+
+   <style>
+        #home {
+            display: none;
+        }
+
+        @media screen and (max-width:500px){
+            .body-container {
+                margin: 0;
+            }
+        }
+    </style> 
 </head>
 
 <body>
-  <section class="container-fluid">
-<?php
-    include "fragments/site_header.php";
-?>
-
-  <section class="freq-n">
-    <div class="container">
-      <div class="wrap" style="width: 100%;">
-        <div class="header">
-          <h1>Not a Frequently Asked Question?</h1>
-          <h1> contact us below</h1>
+<div class="containers-fluid ">
+   <div class="header_container">
+   <?php include('fragments/site_header.php'); ?>
+    <section class="hero pt-4">
+        <div class="container">
+            <div class="wrap my-5">
+                <h1>Not a Frequently Asked Questions?
+                </h1>
+                <p>Contact us Below</p>
+            </div>
         </div>
+    </section>
+    </div>
 
         <?php
 
@@ -89,22 +102,27 @@ if (!empty($msg2)) {
   echo "<h4 class='text-danger text-center' style='color: red;'>" . $msg2 . "</h4>";
 }
 ?>
+<section class="freq-n">
+        <div class="container">
+            
+                <form class="inputs-wrap">
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <input type="text" placeholder="Subject">
+                    <textarea name="text" id="" cols="" rows="10"></textarea>
+                    <input type="submit" id="submit" value="SEND MESSAGE" class="btn btn-block">
 
-        <form class="inputs-wrap" method="post">
-          <div id="contact-message">
-           
-          </div>
-          <input type="text" placeholder="Name" name="name" required>
-          <input type="email" placeholder="Email" name="email"  required>
-          <input type="text" placeholder="Subject" name="subject"  required>
-          <textarea id="" cols="" rows="10" name="message" required></textarea>
-          <input type="submit" id="submit" value="SEND MESSAGE" name="contact-btn">
+                </form>
+          
+        </div>
+    </section>
         </form>
       </div>
     </div>
   </section>
-  </section>  
   <?php  include "fragments/site_footer.php";?>
+  </div>
+  </section>
 </body>
 
 </html>
