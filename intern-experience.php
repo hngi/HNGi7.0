@@ -57,9 +57,13 @@
 </head>
 
 <body>
-    <section class="container-fluid">
-    <section class="jumbo">  
-    <?php include('fragments/site_header.php');?>
+
+<section class="navigation">
+   <?php include('fragments/site_header.php'); ?>
+  </section>
+
+  
+    <section class="jumb">  
             <h2>Experience Recap From Past Interns</h2>
             <p class="para">Testimonies From Ex HNG Internship Finalists</p>
             <a href="#modal-id" data-toggle="modal" class="button-primary">Submit Experience</a> <!--button to add experience-->
@@ -104,7 +108,7 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
-
+    <section class="container-fluid px-2">
     <main>
         <section>
             <section class="mentors-section">
