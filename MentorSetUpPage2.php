@@ -135,12 +135,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
   <section class="container-fluid">
-  <div class="body-continer">
   <div class="hero">
 
     <?php include('fragments/site_header.php'); ?>
 
-    <!--Welcome Section-->
     <div class="text-center mt-3 p-2 welcome">
       <div class="text-center">
         <h1 class="text-center mentor">Mentor Account Set Up</h1>
@@ -152,10 +150,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       }
 
       ?>
-      <!--<a href="#form"><i class="fas fa-arrow-circle-down mt-5"></i></a>-->
     </div>
   </div>
-  <!--Form1-->
   <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" enctype="multipart/form-data">
     <div class="container form mt-3">
       <div class="container-fluid">
@@ -278,9 +274,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </div>
     </div>
   </form>
+  </section>  
   <?php include('fragments/site_footer.php'); ?>
-  </div>
-  </section>
+
 </body>
   <script src="https://kit.fontawesome.com/85682eb992.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

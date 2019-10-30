@@ -161,35 +161,6 @@ if(!isset($_SESSION["role"])) {
 				</div>
       </div>
             </section>
-			<!-- <section id="intern-section">
-				Populated by `js/dashboard.js` 
-			 -->
-
-			<!-- <div class="container">
-				<div class="row">
-					<a href="registered_interns.php">
-						<div class="col-md-2 card">
-							<p>3</p>
-							Registered Interns
-						</div>
-					</a>
-
-					<a href="registered_mentors.php">
-						<div class="col-md-2 card">
-							<p>1</p>
-							Registered Mentors
-						</div>
-					</a>
-					
-					<a href="admins.php">
-						<div class="col-md-2 card">
-							<p>9</p>
-							Registered Admins
-						</div>
-					</a>
-				</div>
-            </div> -->
-            
             <section class='statis text-center'>
                     <div class="container-fluid">
                       <div class="row">
@@ -236,29 +207,8 @@ if(!isset($_SESSION["role"])) {
                     </div>
                   </section>
 
-			<!-- <button id="export">Export to Spreadsheet</button> -->
 		
 		</section>
-		<!-- <section id="details-section">
-			<div id="details-back">
-                <div>
-                    <a href="overview.html" id="newitem-go-back" title="Go back">
-                        <div></div>
-                    </a>
-                </div>
-            </div>
-			<h2>Intern application details</h2>
-			<em id="no-intern">No intern selected</em>
-			<br />
-			<p>Name: <span id="details-name"></span></p>
-			<p>Email: <span id="details-email"></span></p>
-			<p>Age: <span id="details-age"></span></p>
-			<p>Phone Number: <span id="details-number"></span></p>
-			<p>Track of interest: <span id="details-track"></span></p>
-			<p>CV link: <span id="details-CV-link"></span></p>
-			<p>State of residence: <span id="details-state-of-residence"></span></p>
-			<div href="" id="details-return">Back to Overview</div>
-		</section> -->
 	</main>
 
 	<input type="checkbox" id="mobile-bars-check" />
