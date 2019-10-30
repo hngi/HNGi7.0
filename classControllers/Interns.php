@@ -2,7 +2,7 @@
 class Intern
 {
 
-   
+
 
 
 
@@ -14,9 +14,7 @@ class Intern
         $fullname = $database->escape_string($_POST['fullname']);
         $email = $database->escape_string($_POST['email']);
         $phoneNo = $database->escape_string($_POST['phoneNo']);
-        $linkPort = $database->escape_string($_POST['linkPort']);
         $linkCV = $database->escape_string($_POST['linkCV']);
-        $exp = $database->escape_string($_POST['exp']);
         $interest = $database->escape_string($_POST['interest']);
         $location = $database->escape_string($_POST['location']);
         $empStatus = $database->escape_string($_POST['empStatus']);
@@ -40,16 +38,8 @@ class Intern
             array_push($errors, "Phone Number is required");
         }
 
-        if (empty($linkPort)) {
-            array_push($errors, "Link to portfolio is required");
-        }
-
         if (empty($linkCV)) {
             array_push($errors, "Link to CV is required");
-        }
-
-        if (empty($exp)) {
-            array_push($errors, "Experience is required");
         }
 
         if (empty($interest)) {
@@ -89,11 +79,14 @@ class Intern
             }
         } else {
             // there are no errors
-            $query = "INSERT INTO interns (name, email, phone_no, link_to_portfolio, link_to_cv, years_of_experience, interest, current_location, employment_status, about, timestamp)
-                VALUES('" . $fullname . "', '" . $email . "', '" . $phoneNo . "', '" . $linkPort . "', '" . $linkCV . "', '" . $exp . "', '" . $interest . "', '" . $location . "', '" . $empStatus . "', '" . $about . "', '" . $date . "' ) ";
 
+            $query = "INSERT INTO interns (name, email, phone_no, link_to_cv, interest, current_location, employment_status, about, timestamp)
+                VALUES('" . $fullname . "', '" . $email . "', '" . $phoneNo . "', '" . $linkCV . "', '" . $interest . "', '" . $location . "', '" . $empStatus . "', '" . $about . "', '" . $date . "' ) ";
+
+            
             $res = $database->query($query);
             $count = $database->affected_rows();
+            
             header('Location: join-intern.php?successful');
             if ($count > 0) {
                 // intern created
@@ -125,17 +118,17 @@ class Intern
                 $display .= '
                     <tr>
                         <td>' . $no . '</td>
+                        <td>' . $row["intern_id"] . '</td>
                         <td>' . $row["name"] . '</td>
                         <td>' . $row["email"] . '</td>
                         <td>' . $row["phone_no"] . '</td>
                         <td>' . $row["link_to_cv"] . '</td>
-                        <td>' . $row["years_of_experience"] . '</td>
                         <td>' . $row["interest"] . '</td>
                         <td>' . $row["current_location"] . '</td>
                         <td>' . $row["employment_status"] . '</td>
                         <td>' . $row["about"] . '</td>
                         <td>' . $row["timestamp"] . '</td>
-                        <td>' . '<a href="delete_intern.php?deleteInternId=' . $row["intern_id"] . '" class="btn btn-danger btn-sm">Delete</a>' . '</td>
+                        <td>' . '<a href="registered_interns.php?acceptInternId=' . $row["intern_id"] . '" class="btn btn-primary btn-sm" style="margin-right:5px;">Accept</a>' .'<a href="registered_interns.php?rejectInternId=' . $row["intern_id"] . '" class="btn btn-warning btn-sm" style="margin-right:5px;">Reject</a>' .'<a href="delete_intern.php?deleteInternId=' . $row["intern_id"] . '" class="btn btn-danger btn-sm">Delete</a>' . '</td>
 
                     </tr>';
             }
@@ -211,18 +204,18 @@ class Intern
         if($count > 0) {
           // admin exists
           $row = mysqli_fetch_assoc($res);
-    
+
           $data["name"] = $row["name"];
           $data["email"] = $row["email"];
           $data["phone"] = $row["phone_no"];
-    
+
           return $data;
         } else {
           // no admin found
           return 0;
         }
       }
-    
+
       public function deleteIntern($id) {
         global $database;
         $query = "DELETE FROM interns WHERE intern_id = ".$id."";
@@ -231,6 +224,48 @@ class Intern
         if($count > 0) {
           // deleted
           return true;
+        } else {
+          // failed
+          return false;
+        }
+      }
+
+      public function RejectIntern($intern_id) {
+        global $database;
+        $query = "UPDATE interns SET status = 1 WHERE intern_id = '$intern_id'";
+        $query2 = $database->query("SELECT * FROM interns WHERE intern_id = '$intern_id' ");
+        $res = $database->query($query);
+        $row = mysqli_fetch_array($query2);
+        $fullname = $row['firstname']. ' ' . $row['lastname'];
+        $email = $row['email'];
+        $count = $database->affected_rows();
+        if($count > 0) {
+            $body = "Your registration as an interns on the HNGi7 platform has been disapproval or pendding. Thank you";
+            rejectInternMail($email, $fullname, $body);
+          // updated
+          //return true;
+          header('Location: registered_interns.php');
+        } else {
+          // failed
+          return false;
+        }
+      }
+
+      public function AcceptIntern($intern_id) {
+        global $database;
+        $query = "UPDATE interns SET status = 2 WHERE intern_id = '$intern_id'";
+        $query2 = $database->query("SELECT * FROM interns WHERE intern_id = '$intern_id' ");
+        $res = $database->query($query);
+        $count = $database->affected_rows();
+        $row = mysqli_fetch_array($query2);
+        $fullname = $row['firstname'] . ' ' . $row['lastname'];
+        $email = $row['email'];
+        if($count > 0) {
+            $body = "Your registration as an interns on the HNGi7 platform has been approvalled and accepted. Thank you";
+            acceptInternMail($email, $fullname, $body);
+          // updated
+         // return true;
+         header('Location: registered_interns.php');
         } else {
           // failed
           return false;
