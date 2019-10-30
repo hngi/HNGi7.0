@@ -20,6 +20,7 @@
     }
     #header #logo {
         width: 250px;
+        padding-left: 30px;
     }
     #header #logo img {
         width: 100%;
@@ -28,6 +29,7 @@
         position: absolute;
         right: 5px;
         top: 30px;
+        margin-right: 40px;
     }
     .nav_button:hover, .nav-link:hover {
         opacity: .6;
@@ -43,6 +45,7 @@
         text-align: right;
         width: 100%;
         padding-bottom: 50px;
+        padding-right: 30px;
     }
     .nav-link {
         color: #474747;
@@ -148,6 +151,7 @@
             width: auto;
             float: none;
             text-align: right;
+            margin-right: 40px;
         }
 
         .menu_bar .nav-link {
@@ -159,6 +163,7 @@
             float: none;
         }
 
+       
     }
 
     @media screen and (max-width: 500px){
@@ -166,3 +171,11 @@
             padding: 50px 20px;
         }
     }
+    @media ( min-width: 768px ) {
+    .menu_bar{      
+        text-align: right;
+    width: 100%;
+    padding-bottom: 50px;
+    padding-right: 70px;
+    }
+}
