@@ -57,17 +57,19 @@ require_once 'classControllers/init.php';
 </head>
 
 <body>
-  <section class="container-fluid">
-  <section class="jumbo">
-    <?php include('fragments/site_header.php'); ?>
-
+<section class="navigation">
+   <?php include('fragments/site_header.php'); ?>
+ </section>
+ 
+  <section class="jumb px-1">
+ 
     <h2 class="heading">Join as an intern</h2>
     <p class="para">
-      Complete the form below to begin your journey as an intern.
+      Complete the form below to begin your journey as an intern.<br>
+      To become a mentor <a href="MentorSetUpPage2.php">Click here</a>
     </p>
-    <p class="para2">To become a mentor <a href="MentorSetUpPage2.php">Click here</a></p>
   </section>
-
+  <section class="container-fluid">
   <div class="form-area">
 
     <?php
@@ -95,28 +97,37 @@ require_once 'classControllers/init.php';
       <form class="form-container" action="" method="post" id="myForm">
 
 
-        <input type="text" name="fullname" id="fullname" required placeholder="Fullname" />
-        <input type="email" name="email" id="email" required placeholder="Email" />
-        <input type="text" name="phoneNo" id="phoneNo" required placeholder="Phone number" />
-        <input type="url" name="linkCV" id="linkCV" required placeholder="Link to your CV (Linkedin profile or any other link)" />
+        <input type="text" name="fullname" id="fullname" required placeholder="Full Name" />
+        <input type="email" name="email" id="email" required placeholder="E-mail Address" />
+        <input type="text" name="phoneNo" id="phoneNo" required placeholder="Phone Number" />
+        <input type="url" name="linkCV" id="linkCV" required placeholder="Link to your CV (LinkedIn Profile or any other link)" />
         <select class="interest" name="interest" required>
-          <option value="">What area are you interested in</option>
+          <option value="" disabled selected hidden>What area are you interested in?</option>
           <option value="Backend">Backend</option>
           <option value="DevOps">DevOps</option>
           <option value="Digital Marketing">Digital Marketing</option>
           <option value="Frontend">Frontend</option>
           <option value="Machine Learning">Machine Learning</option>
           <option value="Mobile Development">Mobile Development</option>
-          <option value="UI?UX Design">UI/UX Design</option>
+          <option value="UI/UX Design">UI/UX Design</option>
         </select>
-        <input type="text" name="location" id="location" required placeholder="What state are you currently  located in?" />
-        <input type="text" name="empStatus" id="empStatus" required placeholder="What is  your current employment status?" />
+        <input type="text" name="location" id="location" required placeholder="What state are you currently located in?" />
+        <select name="empStatus" id="empStatus" class="empStatus" required>
+          <option value="" disabled selected hidden>What is your current employment status?</option>
+          <option value="Recently Employed (3 months or less)">Recently Employed (3 months or less)</option>
+          <option value="Employee">Employee</option>
+          <option value="Self-employed">Self-employed</option>
+          <option value="Freelance">Freelance</option>
+          <option value="Unemployed">Unemployed</option>
+        </select>
         <textarea name="about" id="about" required cols="30" rows="10" placeholder="Briefly tell us about yourself"></textarea>
         <input type='hidden' name='date' id="date" value='<?= date('Y-m-d H:i:s'); ?>'>
 
         <p id="result"></p>
 
-        <input type="submit" name="submit" value="SUBMIT" class="submitBtn btn btn-info"/>
+        <button type="submit" name="submit" value="Submit" class="submitBtn btn">
+          Submit
+        </button>
       </form>
     <?php
 
@@ -131,11 +142,11 @@ require_once 'classControllers/init.php';
 
 
   </div>
+  </div> 
+  </section>
+   <?php include "fragments/site_footer.php"; ?>
    <div id="jumptotop"><em></em></div>
-   </div> 
-  </section>   
-  <?php include "fragments/site_footer.php"; ?>
-
+   
 </body>
 
 </html>
