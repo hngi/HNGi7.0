@@ -20,6 +20,11 @@ body {
  margin: 1rem auto;
  margin-bottom: 3rem;
 }
+@media screen and (max-width: 400px){
+  #header{
+      width:90%;
+  }
+}
 /* styling of individual input field and textarea */
 .form-container input,
 textarea, select {
