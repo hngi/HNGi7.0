@@ -110,7 +110,7 @@
         position: absolute;
         font-size: 2rem;
         font-weight: 200;
-        right: 5;
+        right: 20px;
     }
     .countdown-symbol+p {
         font-weight: 500;
