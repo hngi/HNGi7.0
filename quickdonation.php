@@ -55,8 +55,9 @@
   </div>
 </section>
 
-<?php include "fragments/site_footer.php"; ?>
 </section>
+<?php include "fragments/site_footer.php"; ?>
+
 </body>
 <script>
     const API_publicKey = "FLWPUBK_TEST-2c7dd09d63d44deae5cbf3e9728aa289-X";

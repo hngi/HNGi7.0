@@ -151,9 +151,9 @@
       });
     </script>
 
-     <?php include "fragments/site_footer.php" ?>
      <!-- </div> -->
-    </section>
+    </section>     
+    <?php include "fragments/site_footer.php" ?>
   </body>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

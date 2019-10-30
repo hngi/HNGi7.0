@@ -65,9 +65,9 @@
 </head>
 
 <body class="">
-    <div class="containers-fluid ">
+    <div class="container-fluid ">   
+        <?php include('fragments/site_header.php'); ?>
    <div class="header_container">
-   <?php include('fragments/site_header.php'); ?>
     <section class="hero pt-4">
         <div class="container">
             <div class="wrap my-5">
@@ -124,27 +124,13 @@
         </div>
     </section>
  
+
+
+    </div>    
     <?php include('fragments/site_footer.php'); ?>
 
-
-    </div>
 </body>
 <script>
-        // var acc = document.getElementsByClassName("accordion");
-        // var i;
-
-        // for (i = 0; i < acc.length; i++) {
-        // acc[i].addEventListener("click", function() {
-        //     this.classList.toggle("active");
-        //     var panel = this.nextElementSibling;
-        //     if (panel.style.display === "block") {
-        //     panel.style.display = "none";
-        //     } else {
-        //     panel.style.display = "block";
-        //     }
-        // });
-        // }
-
         function eventListener(){
             //get element
             let accordions = document.querySelector('.accordions');

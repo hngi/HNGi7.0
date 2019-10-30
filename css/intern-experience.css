@@ -7,34 +7,8 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-body{
-  background-color: rgb(241, 235, 235);
-}
-
-
-/*Small screen - any screen size below 768px*/    
-@media ( max-width: 768px ) {
-  .body-container{
-      background-color: white;
-      margin: 30px; 
-      
-  }
-}
-
-/*Medium  screen and upward*/ 
-@media ( min-width: 768px ) {
- .body-container{
-      background-color: white;
-      margin: 40px 60px;
-      }
-}
-
 a {
   text-decoration: none;
-}
-
-header {
-  background-color: #d1f0f6;
 }
 
 .image {

@@ -289,7 +289,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    </div>
   </div>
  </form>
- 
+
  <?php include('fragments/site_footer.php'); ?>
 
 </body>

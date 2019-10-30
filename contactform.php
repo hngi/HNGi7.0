@@ -58,23 +58,10 @@ if (isset($_POST['contact-btn'])) {
     <link rel="stylesheet" href="css/faq.css">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
-
-    <style>
-        #home {
-            display: none;
-        }
-
-        @media screen and (max-width:500px){
-            .body-container {
-                margin: 0;
-            }
-        }
-    </style>
 </head>
 
 <body>
   <section class="container-fluid">
-  <div class="body-container">
 <?php
     include "fragments/site_header.php";
 ?>
@@ -116,9 +103,8 @@ if (!empty($msg2)) {
       </div>
     </div>
   </section>
+  </section>  
   <?php  include "fragments/site_footer.php";?>
-  </div>
-  </section>
 </body>
 
 </html>
