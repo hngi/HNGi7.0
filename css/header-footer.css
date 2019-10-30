@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap');
+@media screen and (min-width: 0) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    /* HEADER STYLE STARTS */
+    body {
+        font-family: "Open Sans", segoe UI, sans-serif;
+        scroll-behavior: smooth;
+    }
+    a:hover {
+        text-decoration: none;
+    }
+    #header {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        position: relative;
+    }
+    #header #logo {
+        width: 250px;
+    }
+    #header #logo img {
+        width: 100%;
+    }
+    .nav_button {
+        position: absolute;
+        right: 5px;
+        top: 30px;
+    }
+    .nav_button:hover, .nav-link:hover {
+        opacity: .6;
+    }
+    .nav_button .nav_button_bar {
+        background-color: black;
+        width: 25px;
+        height: 3px;
+        margin-bottom: 4px;
+    }
+    .menu_bar {
+        display: none;
+        text-align: right;
+        width: 100%;
+        padding-bottom: 50px;
+    }
+    .nav-link {
+        color: #474747;
+        font-size: 16px;
+        line-height: 22px;
+        width: 100%;
+        font-weight: lighter;
+        text-align: right;
+    }
+    .primary-btn {
+        background: #00AEFF;
+        border-radius: 4px;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 19px;
+        color: #FFFFFF;
+        width: 150px;
+        margin-right: 16px;
+    }
+
+    .float_right {
+        float: right;
+    }
+
+    .primary-btn:hover {
+        opacity: .5;
+        color: white;
+    }
+
+    /*FOOTER STYLING */
+        #footer {
+            background-color: #FAFAFA;
+            padding: 50px 100px;
+        }
+        #footer #footer-logo {
+            width: 280px;
+        }
+
+        .footer-nav {
+            margin-top: 50px;
+            margin-bottom: 50px;
+
+        }
+
+       
+
+        .footer-nav h2 {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 34px;
+            color: #00AEFF;
+            margin-bottom: 20px;
+        }
+
+        .footer-nav #link-list a {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 17px;
+            line-height: 27px;
+            color: #00AEFF;
+            display: block;
+        }
+
+        #footer .footer-section a {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 17px;
+            line-height: 28px;        
+            color: #737373;
+        }
+
+        #footer  #socials img {
+            width: 20px;
+            margin-right: 10px;
+            margin-bottom: 30px;
+        }
+
+        .copyright {
+            text-align: center;
+        }
+    }
+
+    @media screen and (min-width:940px){
+        .container-fluid{
+            padding: 0 40px;
+        }
+        #header {
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+        }
+        .nav_button {
+            display: none;
+        }
+
+        .menu_bar {
+            display: block;
+            width: auto;
+            float: none;
+            text-align: right;
+        }
+
+        .menu_bar .nav-link {
+            display: inline;
+            min-width: 150px;
+        }
+
+        .menu_bar .float_right{
+            float: none;
+        }
+
+    }
+
+    @media screen and (max-width: 500px){
+        #footer {
+            padding: 50px 20px;
+        }
+    }
