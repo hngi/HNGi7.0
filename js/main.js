@@ -30,11 +30,3 @@
   setTimeout(updateClock, 1000);
   }
   updateClock();
-function activeDropDown(strings){
-    // let collapsebtn = 'button' + strings.split('').splice(7,6).join('').charAt(0).toUpperCase() + strings.split('').splice(8,7).join('');
-     //let collapseEl = document.getElementById(collapseId);
-      let el = document.getElementById(strings);
-      setTimeout(()=>{
-        el.classList.toggle('activeHomepageDrop')}, 200);
-        
-}

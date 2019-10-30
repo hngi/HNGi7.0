@@ -277,59 +277,39 @@
             padding: 30px;
         }
 
-        .accordion {
-            padding: 0;
+        .main-sixth-row .table_accord {
+           color: #737373;
+
         }
 
-        .accordion .card-header {
-            width: 100%;
-            padding: 0;
-            margin: 0;
-            padding: 15px 0;
+        .main-sixth-row .table_accord .card-header{
+            padding: 30px 20px;
+            font-size: 15px;
         }
 
-        .accordion button {
-            font-size: 14px;
-            margin-left: -10px;
+        .card-header img {
+            margin-right: 20px;
+            margin-top: -8px;
         }
-        .accordion_tab {
-            margin-left: 15%;
-            font-weight: 400;
-            margin-bottom: 0;
+
+        .accordion .card-body {
+            display: none;
+            background-color: #F5F4F4;
+            padding-left: 60px;
         }
+
+        .accordion .card-body li {
+            list-style-type: none;
+        }
+
         .activeHomepageDrop {
             background-color: #00AEFF;
             color: white
         }
-        #collapseOne li {
-            color: #737373;
-            list-style-type: none;
-        }
-        .buttonTwo,
-        .buttonThree,
-        .buttonFour,
-        .buttonFive {
-            color: #737373;
-        }
-        .card-header.buttonTwo {
-            color: #fff;
-        }
 
-        .card-header.buttonTwo:hover{
-            color: white;
-        }
-
-        .card-body {
-            background: #F5F4F4;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 4px;
-        }
-        .card-header {
-            background-color: #FFFFFF;
-            font-size: 15px;
-        }
         .card-header:hover {
             background-color: #0088C7;
+            color: white;
         }
 
        
@@ -601,6 +581,13 @@
             margin-top: 100px;
         }
 
+    .main-sixth-row .tracks {
+        margin-top: 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 50px;
+        }
+
         .main-seventh-row {
             margin: 50px;
         }
@@ -686,6 +673,10 @@
 
         .main-second-row {
             margin-top:-80px;
+        }
+
+        .main-sixth-row .table_accord {
+            width: 80%;
         }
         .main-seventh-row .mentor-section {
             grid-template-columns: 1fr 1fr 1fr 1fr;
