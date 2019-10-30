@@ -4,7 +4,7 @@
 html{
 	background-color: rgb(240, 240, 240);
 }
-body
+body 
 {
     font-family: "Open Sans", segoe UI, sans-serif;
     padding: 0;
@@ -37,23 +37,23 @@ a{
 .searchBox {
 	position: absolute;
 	right: 24%;
-  border-radius: 30px;
-  width:  225px;
+    border-radius: 30px;
+    width:  225px;
 	height: 30px;
 	padding-left: 25px;
 	background-color: #FFFFFF;
 	outline: none;
 	margin-top: 32px;
   }
-
+ 
  .fas.fa-search{
 	  position: absolute;
 	  right: calc(24% + 200px);
 	  top: 60px;
 	  color: grey;
-
+	  
   }
-#mobile-bars
+#mobile-bars 
 {
     position: absolute;
     left: -35vw;
@@ -66,7 +66,7 @@ a{
     display: none;
 }
 
-.stix
+.stix 
 {
     border-radius: 3px;
     height: 3px;
@@ -76,7 +76,7 @@ a{
     transition: 0.4s ease;
 }
 
-#mobile-bars-check
+#mobile-bars-check 
 {
     display: none;
 }
@@ -124,7 +124,7 @@ a{
 #my-table{
 	width: 60vw;
 	box-sizing: border-box;
-  border-collapse: separate;
+    border-collapse: separate;
 	border-spacing: 0 7px;
 	margin-left: -0.75%;
 }
@@ -154,7 +154,7 @@ a{
 }
 
 i:hover{
-    color:blue;
+    color:blue;    
 }
 
 
@@ -246,7 +246,7 @@ i:hover{
 	padding-top: 4rem;
 	display: flex;
 	justify-content: center;
-
+	
 }
 
 #details-section #details-back
@@ -301,72 +301,40 @@ i:hover{
 }
 /* #sidebar
 {
-	background: linear-gradient(180deg, #D1F0F6 0%, #00aeff 100%);
+	background: linear-gradient(180deg, #D1F0F6 0%, #11CDEF 100%);
 	position: fixed;
 	left: 0;
 	top: 0;
 	z-index: 1;
 	height: 100vh;
 	width: var(--sidebar-width);
-	padding-top: 2rem;
+	padding-top: 4rem;
 }
 #sidebar #upper
 {
 	display: flex;
 	flex-direction: column;
 }
-
-#sidebar #upper #admin-badge
-{
-	color: #084482;
-	background-color: transparent;
-	padding: 0.5rem;
-	border: 1px solid #084482;
-	border-radius: 5px;
-	font-weight: bolder;
-	margin-bottom: 2rem;
-}
 #sidebar #upper > *
 {
 	font-weight: bolder;
-	align-self: center;
+	align-self: center;	
 }
 #sidebar #upper em
 {
 	font-size: 0.8rem;
 }
-#sidebar #upper #username
-{
-	font-size: 18px;
-	color: #333333;
-}
-
-#sidebar #hr1 {
-	border: 0.5px solid white;
-	width: 80%;
-}
-
 #sidebar #lower
 {
 	display: flex;
 	flex-direction: column;
-	margin-top: 3rem;
-}
-
-#sidebar #lower #hr2 {
-	width: 80%;
-	border: 0.5px solid transparent;
-	margin: 0.7rem 1rem;
-}
-
-#sidebar #lower a {
-	font-size: 1.6rem;
+	margin-top: 4rem;
 }
 #sidebar #lower > *
 {
 	align-self: center;
+	margin-top: 1.4rem;
 }
-
 #sidebar #lower select
 {
 	font-family: inherit;
@@ -407,7 +375,7 @@ i:hover{
     margin: 1em;
 	color: #337ab7;
 	/* border: 1px solid blue; */
-
+   
 }
 .box > select{
     height: 30px;
@@ -502,7 +470,7 @@ i:hover{
 	width: 46%;
 	left: 26%;
 	top: 85%;
-
+	
 }
 #navigator.active{
 	display: flex;
@@ -532,7 +500,7 @@ i:hover{
 	#my-table{
 		width: 96%;
 		margin: 0 auto;
-
+		
 	}
 	#overview-section
 	{
@@ -545,22 +513,22 @@ i:hover{
 		font-size: 25px;
 		/* margin-left: 2%; */
 	}
-
+	
 .searchBox {
 
 	margin-top: 55px;
-
+	
 	left: 50%;
 	transform: translate(-47%);
   }
-
+ 
  .fas.fa-search{
 	  position: absolute;
 	  top: 68px;
 	  left: calc(50% - 95px);
 	  /* transform: translate(-27%); */
 	  color: grey;
-
+	  
   }
 	#overview-section .exports
 	{
@@ -569,7 +537,7 @@ i:hover{
 		border-radius: 5px;
 		margin: 3rem auto;
 	}
-
+	
 	#centralize{
 		/* border: 1px solid blue; */
 		justify-self: center;
@@ -591,7 +559,7 @@ i:hover{
 		transition: 0.4s ease-out;
 		/* left: 100vw; */
 		font-size: 17px;
-
+		
 	}
 	#details-section #details-back
 	{
@@ -615,24 +583,24 @@ i:hover{
 	{
 		font-size: 14px;
 	}
-	#mobile-bars
+	#mobile-bars 
 	{
         display: block;
         margin-left: 40vw;
         z-index: 10;
     }
-    #mobile-bars-check:checked ~ #mobile-bars > #stik1
+    #mobile-bars-check:checked ~ #mobile-bars > #stik1 
     {
         transform: rotate(45deg) translateY(7px) translateX(5px);
     }
 
-    #mobile-bars-check:checked ~ #mobile-bars > #stik2
+    #mobile-bars-check:checked ~ #mobile-bars > #stik2 
     {
         width: 0;
         opacity: 0;
     }
 
-    #mobile-bars-check:checked ~ #mobile-bars > #stik3
+    #mobile-bars-check:checked ~ #mobile-bars > #stik3 
     {
         transform: rotate(-45deg) translateY(-8px) translateX(5px);
     }
@@ -649,23 +617,23 @@ i:hover{
 		margin: 0 auto;
 		width: 80%;
 	}
-
+	
 }
 	@media (max-width: 500px){
 		#details-section{
 			font-size: 12px;
 			left: 100vw;
 		}
-
+		
 		#navigator{
 			margin-top: 0;
 		}
-		#details-section{
+		#details-section{	
 			display: grid;
 			grid-template-columns: 1fr;
-			grid-template-rows: 100px 60vh;
+			grid-template-rows: 100px 60vh;	
 		}
-
+		
 		#my-table>tbody>tr>td:nth-child(1){
 			padding-left: 15px;
 		}
@@ -678,7 +646,7 @@ i:hover{
 			grid-template-columns: 2fr 1fr;
 			width: 95vw;
 		}
-
+		
 		.box>span{
 			grid-column: 1/3;
 			text-align: center;
@@ -689,15 +657,15 @@ i:hover{
 		}
 	}
 	@media (max-width: 375px){
-		#details-section{
+		#details-section{	
 			display: grid;
 			grid-template-columns: 1fr;
-			grid-template-rows: 50px 60vh;
+			grid-template-rows: 50px 60vh;	
 		}
 		#my-table{
 			width: 98%;
 			margin: 0 auto;
-
+			
 		}
 		.scroll{
 			overflow-x: scroll;
