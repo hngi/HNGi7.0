@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+.countdown1 {
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: 500;
+    width: fit-content;
+    height: fit-content;
+    margin-right: auto;
+    text-align: center;
+    zoom: 0.7;
+    
+  }
+  
+  .countdown1 hr {
+    margin: auto;
+    width: 25%;
+  }
+  
+  .countdown1 h2 {
+    font-size: 40px;
+    font-family: Oswald;
+    font-weight: lighter;
+  }
+  
+  .countdown1 svg {
+    transform: rotate(-90deg);
+  }
+  
+  .countdown1 .seconds,
+  .countdown1 .mins,
+  .countdown1 .hours,
+  .countdown1 .days {
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    transition: all 1s linear;
+  }
+  
+  .countdown1 .item b {
+    font-size: 50px;
+  }
+  
+  .countdown1 text {
+    font-size: 50px;
+  }
+  
+  .countdown1 .desc {
+    font-size: 15px;
+  }

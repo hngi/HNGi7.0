@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
@@ -65,9 +67,10 @@
 </head>
 
 <body class="">
-    <div class="container-fluid ">   
-        <?php include('fragments/site_header.php'); ?>
+<div style="background-color: #D1F0F6 !important;"><?php include('fragments/site_header.php'); ?></div>
+        
    <div class="header_container">
+   <div class="">  
     <section class="hero pt-4">
         <div class="container">
             <div class="wrap my-5">
@@ -128,7 +131,7 @@
 
     </div>    
     <?php include('fragments/site_footer.php'); ?>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </body>
 <script>
         function eventListener(){
