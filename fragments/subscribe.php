@@ -73,6 +73,7 @@
                    let status = f.status;
 
                    if(status == true){
+                       $("#modal-subscribe").modal('hide');
                        swal('Great',f.message,{icon: 'success',  timer: 25000});
                    }else{
                        swal('Error!',f.message,{icon: 'error',  timer: 25000});
