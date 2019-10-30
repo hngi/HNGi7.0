@@ -1,3 +1,8 @@
+<?php
+require 'classControllers/init.php';
+$countdown = new CountdownTimer();
+$countDownValues = $countdown->getDate();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,6 +19,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
+
 </head>
     <style>
     #home {
@@ -21,6 +27,10 @@
     }
     </style>
 <body>
+
+    <p id="startDate" style="display: none;"><?php echo $countDownValues["startDate"]; ?></p>
+    <p id="startTime" style="display: none;"><?php echo $countDownValues["startTime"]; ?></p>
+
     <section class="container-fluid">
     <?php include('fragments/site_header.php');?>
     <div>
