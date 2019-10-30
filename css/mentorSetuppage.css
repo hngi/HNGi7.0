@@ -142,6 +142,13 @@
           color: #084482;
           font-weight: bold;
         }
+        div.m-0 textarea{
+            height: 95%;
+        }
+        .col-md-6, .col-sm-12, .col-md-4, .col-md-8{
+            padding-right: 10px;
+            padding-left: 10px;
+        }
         @media only screen and (max-width: 860px){
           input::placeholder{
           font-size: 100%;
