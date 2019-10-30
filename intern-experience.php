@@ -54,21 +54,10 @@
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="stylesheet" href="css/intern-experience.css">
     <title>Experience Page</title>
-    <style>
-     @media screen and (max-width:500px){
-            .body-container {
-                margin: 0;
-            }
-        }
-    </style>
 </head>
 
 <body>
     <section class="container-fluid">
-<<<<<<< HEAD
-=======
-    <div class="body-cotainer">
->>>>>>> 6ee7fae7c9116a910800ffd4da9fd6b149f708ed
     <section class="jumbo">  
     <?php include('fragments/site_header.php');?>
             <h2>Experience Recap From Past Interns</h2>
@@ -156,14 +145,9 @@
         </section>
 
     </main>
-<<<<<<< HEAD
     </section>        
     <?php include('fragments/site_footer.php'); ?>
 
-=======
-    </div>
-    </section>
->>>>>>> 6ee7fae7c9116a910800ffd4da9fd6b149f708ed
 </body>
  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

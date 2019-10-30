@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 
 class InternExperience
@@ -48,55 +47,4 @@ class InternExperience
         $result = $sql->fetch_assoc();
         return $result;
     }
-=======
-<?php
-
-class InternExperience
-{
-
-    public function saveExperience($names,$stack,$image,$experience){
-        global $database;
-        $sql = "INSERT INTO intern_experience(`names`,stack,`image`,experience,status) VALUES('$names','$stack','$image','$experience','1')";
-        $query = $database->query($sql);
-    }
-
-
-    function fetch_experiences(){
-        global $database;
-        //Method to fetch interns records
-        $sql = "SELECT names,stack,image,experience FROM intern_experience WHERE status = '1' ORDER BY id DESC";
-        $query = $database->query($sql);
-        $result = $query->fetch_all(MYSQLI_ASSOC);
-
-        return $result;
-    }
-
-    public function load_experiences(){
-        global $database;
-        //Method to fetch interns records
-        $sql = "SELECT * FROM intern_experience ORDER BY id ASC";
-        $query = $database->query($sql);
-        $result = $query->fetch_all(MYSQLI_ASSOC);
-        return $result;
-    }
-    public function approveExperience($id){
-        global $database;
-        $q = $database->query("UPDATE intern_experience SET status = '1' WHERE id = '$id'");
-    }
-    public function updateExperience($id,$names,$stack,$experience){
-        global $database;
-        $query = "UPDATE intern_experience SET names = '$names', stack = '$stack', experience = '$experience' WHERE id ='$id'";
-        $database->query("$query");
-    }
-    public function deleteExperience($id){
-        global $database;
-        $q = $database->query("DELETE FROM intern_experience WHERE id = '$id'");
-    }
-    public function fetchSingleExperience($id){
-        global $database;
-        $sql = $database->query("SELECT * FROM intern_experience WHERE id ='$id'");
-        $result = $sql->fetch_assoc();
-        return $result;
-    }
->>>>>>> 6ee7fae7c9116a910800ffd4da9fd6b149f708ed
 }

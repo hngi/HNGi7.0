@@ -122,7 +122,6 @@ if(!isset($_SESSION["role"])) {
             </section>
 		<!-- <section id="overview-section">
 		
-<<<<<<< HEAD
 			<div class="row" id="welcome">
 				
 				<div class="col-md-3">
@@ -139,24 +138,6 @@ if(!isset($_SESSION["role"])) {
         <section id="overview-section">
 			<!-- <h1>Dashboard</h1> -->
 			<div class="row" id="welcome">
-=======
-			<div class="row" id="welcome">
-				
-				<div class="col-md-3">
-					<form method="post">
-															<input type="hidden" name="status" value="close" />
-									<button style="background: #b31329;" type="submit" name="lockopenform" id="export">Registration is Open, Lock Now</button>
-														
-					</form>
-				</div>
-            </div>
-        </section>
-       -->
-        
-        <section id="overview-section">
-			<!-- <h1>Dashboard</h1> -->
-			<div class="row" id="welcome">
->>>>>>> 6ee7fae7c9116a910800ffd4da9fd6b149f708ed
 				<!-- <div class="col-md-9"><h2>Welcome, <?php echo $_SESSION["fullname"]; ?> !</h2></div> -->
 				<div class="col-md-3">
 					<form method="post">
@@ -180,38 +161,6 @@ if(!isset($_SESSION["role"])) {
 				</div>
       </div>
             </section>
-<<<<<<< HEAD
-=======
-			<!-- <section id="intern-section">
-				Populated by `js/dashboard.js` 
-			 -->
-
-			<!-- <div class="container">
-				<div class="row">
-					<a href="registered_interns.php">
-						<div class="col-md-2 card">
-							<p>3</p>
-							Registered Interns
-						</div>
-					</a>
-
-					<a href="registered_mentors.php">
-						<div class="col-md-2 card">
-							<p>1</p>
-							Registered Mentors
-						</div>
-					</a>
-					
-					<a href="admins.php">
-						<div class="col-md-2 card">
-							<p>9</p>
-							Registered Admins
-						</div>
-					</a>
-				</div>
-            </div> -->
-            
->>>>>>> 6ee7fae7c9116a910800ffd4da9fd6b149f708ed
             <section class='statis text-center'>
                     <div class="container-fluid">
                       <div class="row">

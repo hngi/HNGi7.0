@@ -8,28 +8,7 @@
         margin: 0;
         padding: 0;
         font-family: "Open Sans", segoe UI, sans-serif;
-<<<<<<< HEAD
-=======
-        background-color: rgb(241, 235, 235);
->>>>>>> 6ee7fae7c9116a910800ffd4da9fd6b149f708ed
         color: rgba(0, 0, 0, 0.8);
-    }
-  
-    /*Small screen - any screen size below 768px*/    
-    @media ( max-width: 768px ) {
-        .body-container{
-            background-color: white;
-            margin: 30px; 
-            
-        }
-    }
-
-    /*Medium  screen and upward*/ 
-    @media ( min-width: 768px ) {
-       .body-container{
-            background-color: white;
-            margin: 40px 60px;
-            }
     }
 
     main {

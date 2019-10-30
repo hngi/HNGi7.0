@@ -151,15 +151,9 @@
       });
     </script>
 
-<<<<<<< HEAD
      <!-- </div> -->
     </section>     
     <?php include "fragments/site_footer.php" ?>
-=======
-     <?php include "fragments/site_footer.php" ?>
-     <!-- </div> -->
-    </section>
->>>>>>> 6ee7fae7c9116a910800ffd4da9fd6b149f708ed
   </body>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
