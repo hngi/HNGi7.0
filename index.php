@@ -11,83 +11,94 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" type="text/css" href="css/countdown.css"/>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
 </head>
+<style>
+    #home {
+        display: none;
+    }
+</style>
 
 <body>
-    <section class="container-fluid">
-        <?php include('fragments/site_header.php');?>
+<?php include('fragments/site_header.php');?>
+    <section>
         <div>
             <img src="https://bit.ly/2OC3tWo" id="corner-circle" alt="Graphic at the top right corner">
 
             <main>
-                <div class="main-first-row">
-                    <div class="welcome-column">
-                        <h1 id="welcome-text" class="text__dark-blue">
-                            Welcome to HNG 7.0 Internship
-                        </h1>
-                        <p id="welcome-story">
-                            The HNG Internship is an ambitious attempt to change the way education is done in Africa.
-                            It’s the bridge between learning to code, and becoming the best in the world.
-                        </p>
-                        <button class="cta-button button--midBlue" id="buttt">
-                            <a href="join-intern.php" id="butt">Get Started</a>
-                        </button>
+
+                <div class="container">
+                    <div class="main-first-row mobile-view" data-aos="fade-up">
+                        <div class="welcome-column">
+                            <h1 id="welcome-text" class="text__dark-blue">
+                                Welcome to HNG 7.0 Internship
+                            </h1>
+                            <p id="welcome-story">
+                                The HNG Internship is an ambitious attempt to change the way education is done in Africa.
+                                It’s the bridge between learning to code, and becoming the best in the world.
+                            </p>
+                            <button class="cta-button button--midBlue" id="buttt">
+                                <a href="join-intern.php" id="butt">Get Started</a>
+                            </button>
+                        </div>
+                        <div class="image-column desktop-only">
+                            <img id="circles" src="https://bit.ly/2OzWHk7" alt="">
+                        </div>
                     </div>
-                    <div class="image-column desktop-only">
-                        <img id="circles" src="https://bit.ly/2OzWHk7" alt="">
+                
+                    <div class="main-second-row1 countdown2" data-aos="fade-up">
+                        <h3 class="countdown__heading text_center">
+                            Countdown to HNGi7.0
+                        </h3>
+                        <section id="countdown-container1" class="mt-2 mb-4">
+                            <div class="message"></div>
+                            <div class="countdown1 mb-4" data-aos="fade-up">
+                                <div class="item">
+                                    <svg class="d-svg" width="160" height="160">
+                                    <circle class="d-outer" r="70" cy="81" cx="81" stroke-width="5" stroke="#d5d5d5" fill="none" />
+                                    <circle class="days" r="70" cy="81" cx="81" stroke-width="5" stroke="#06F4CC" fill="none" />
+                                    <text class="d-inner" x="50%" y="50%" stroke="#000000" stroke-width="2px" text-anchor="middle"
+                                        transform="rotate(90,75,75)"></text>
+                                    <text class="desc" x="50%" y="63%" stroke="#000000" stroke-width="0.5px" text-anchor="middle"
+                                        transform="rotate(90,75,75)">DAYS</text>
+                                    </svg>
+                                    <svg class="h-svg" width="160" height="160">
+                                    <circle class="h-outer" r="70" cy="81" cx="81" stroke-width="5" stroke="#d5d5d5" fill="none" />
+                                    <circle class="hours" r="70" cy="81" cx="81" stroke-width="5" stroke="#06F4CC" fill="none" />
+                                    <text class="h-inner" x="50%" y="50%" stroke="#000000" stroke-width="2px" text-anchor="middle"
+                                        transform="rotate(90,75,75)"></text>
+                                    <text class="desc" x="50%" y="63%" stroke="#000000" stroke-width="0.5px" text-anchor="middle"
+                                        transform="rotate(90,75,75)">HOURS</text>
+                                    </svg>
+                                    <svg class="m-svg" width="160" height="160">
+                                    <circle class="m-outer" r="70" cy="81" cx="81" stroke-width="5" stroke="#d5d5d5" fill="none" />
+                                    <circle class="mins" r="70" cy="81" cx="81" stroke-width="5" stroke="#06F4CC" fill="none" />
+                                    <text class="m-inner" x="50%" y="50%" stroke="#000000" stroke-width="2px" text-anchor="middle"
+                                        transform="rotate(90,75,75)"></text>
+                                    <text class="desc" x="50%" y="63%" stroke="#000000" stroke-width="0.5px" text-anchor="middle"
+                                        transform="rotate(90,75,75)">MINUTES</text>
+                                    </svg>
+                                    <svg class="s-svg" width="160" height="160">
+                                    <circle class="s-outer" r="70" cy="81" cx="81" stroke-width="5" stroke="#d5d5d5" fill="none" />
+                                    <circle class="seconds" r="70" cy="81" cx="81" stroke-width="5" stroke="#06F4CC" fill="none" />
+                                    <text class="s-inner" x="50%" y="50%" stroke="#000000" stroke-width="2px" text-anchor="middle"
+                                        transform="rotate(90,75,75)"></text>
+                                    <text class="desc" x="50%" y="63%" stroke="#000000" stroke-width="0.5px" text-anchor="middle"
+                                        transform="rotate(90,75,75)">SECONDS</text>
+                                    </svg>
+                                </div>
+                            </div>
+                        </section>
                     </div>
                 </div>
 
-                <div class="main-second-row countdown">
-                    <h3 class="countdown__heading text_center">
-                        Countdown to HNGi7.0
-                    </h3>
-                    <section id="countdown-container">
-                        <div id="day-div">
-                            <div class="countdown-symbol" id="day-symbol">
-                                <div class="arcs-background"></div>
-                                <div id="day-start" class="arc arc_start"></div>
-                                <div id="day-end" class="arc arc_end"></div>
-                                <span id="day-text" class="moshe">05</span>
-                            </div>
-                            <p class="center-text">DAYS</p>
-                        </div>
-                        <div id="hour-div">
-                            <div class="countdown-symbol" id="hour-symbol">
-                                <div class="arcs-background"></div>
-                                <div id="hour-start" class="arc arc_start"></div>
-                                <div id="hour-end" class="arc arc_end"></div>
-                                <span id="hour-text">24</span>
-                            </div>
-                            <p class="center-text">HOURS</p>
-                        </div>
-                        <div id="minute-div">
-                            <div class="countdown-symbol" id="minute-symbol">
-                                <div class="arcs-background"></div>
-                                <div id="minute-start" class="arc arc_start"></div>
-                                <div id="minute-end" class="arc arc_end"></div>
-                                <span id="minute-text" class="moshe">52</span>
-                            </div>
-                            <p class="center-text">MINUTES</p>
-                        </div>
-                        <div id="second-div">
-                            <div class="countdown-symbol" id="second-symbol">
-                                <div class="arcs-background"></div>
-                                <div id="second-start" class="arc arc_start"></div>
-                                <div id="second-end" class="arc arc_end"></div>
-                                <span id="second-text">41</span>
-                            </div>
-                            <p class="center-text">SECONDS</p>
-                        </div>
-                    </section>
-
-                </div>
-
-                <div class="main-third-row ">
-                    <div class="">
+                <div class="main-third-row " data-aos="fade-up">
+                <div class="container">
+                <div class="">
                         <h3 class="subheading text_center text__dark-blue" style="font-weight: bold">
                             Unleash Your Creativity
                         </h3>
@@ -119,80 +130,81 @@
                         </div>
                     </div>
                 </div>
+                    
+                </div>
 
                 <div class="main-fourth-row">
                     <h3 id="" class="text_center">How Does It Work ?</h3>
-                    <div class="">
-                        <div class="section1">
-                            <div class="myhalf-a-row">
-                                <h4 class="apply">Apply To Become An Intern</h4>
-                                <p class="content">The HNG internship is a 3-month remote internship designed to find
-                                    and
-                                    develop the most talented software developers. Everyone is welcomed to participate
-                                    (there is no entrance exam). Anyone can log into the internship
-                                    using their laptop. Each week we give tasks.
-                                </p>
-                                <button class="cta-button button--midBlue" id="">
-                                    <a href="join-intern.php">Get Started</a>
-                                </button>
-                            </div>
-                            <div class="half-a-row">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">Event Calendar</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Registration</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Internship Starts</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Stage 1 to Stage 10</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Internship Ends</td>
-                                            <td></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                    <div class="container">
+                        <div class="">
+                            <div class="section1">
+                                <div class="myhalf-a-row mobile-view" data-aos="fade-right">
+                                    <h4 class="apply">Apply To Become An Intern</h4>
+                                    <p class="content">The HNG internship is a 3-month remote internship designed to find
+                                        and
+                                        develop the most talented software developers. Everyone is welcomed to participate
+                                        (there is no entrance exam). Anyone can log into the internship
+                                        using their laptop. Each week we give tasks.
+                                    </p>
+                                    <button class="cta-button button--midBlue" id="">
+                                        <a href="join-intern.php">Get Started</a>
+                                    </button>
+                                </div>
+                                <div class="half-a-row">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">Event Calendar</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Registration</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Internship Starts</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Stage 1 to Stage 10</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Internship Ends</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
 
+                                </div>
                             </div>
+
+                            <div class="section2">
+                                <div class="half-a-row">
+                                    <img class="intern-meet"
+                                        src="https://res.cloudinary.com/chux/image/upload/v1570646194/Rectangle_4.6_vfbtwb.png"
+                                        alt="interns" />
+                                </div>
+                                <div class="onboard my-auto mobile-view" data-aos="fade-left">
+                                    <h4 class="">Onboard And Connect With Teammates
+                                    </h4>
+                                    <p class="content">The HNG internship is a 3-month remote internship designed to find
+                                        and
+                                        develop the most talented software developers. Everyone is welcomed to participate
+                                        (there is no entrance exam). Anyone can log into the internship
+                                        using their laptop. Each week we give tasks.</p>
+                                    <button class="cta-button button--midBlue" id="buttt">
+                                        <a href="join-intern.php">Get Started</a>
+                                    </button>
+                                </div>
+                            </div>
+
                         </div>
 
-                        <div class="section2">
-                            <div class="half-a-row">
-                                <img class="intern-meet"
-                                    src="https://res.cloudinary.com/chux/image/upload/v1570646194/Rectangle_4.6_vfbtwb.png"
-                                    alt="interns" />
-                            </div>
-                            <div class="onboard">
-                                <h4 class="">Onboard And Connect With Teammates
-                                </h4>
-                                <p class="content">The HNG internship is a 3-month remote internship designed to find
-                                    and
-                                    develop the most talented software developers. Everyone is welcomed to participate
-                                    (there is no entrance exam). Anyone can log into the internship
-                                    using their laptop. Each week we give tasks.</p>
-                                <button class="cta-button button--midBlue" id="buttt">
-                                    <a href="join-intern.php">Get Started</a>
-                                </button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <div class="main-fifth-row">
+                        <div class="main-fifth-row">
                     <div class="row">
-                        <div class=" text-md-left">
+                        <div class=" text-md-left my-auto mobile-view" data-aos="fade-right">
                             <h4 class="">Build Scalable Products &
                                 Grow</h4>
                             <p class="content">The HNG Internship is a 3-months remote internship designed to find and
@@ -215,9 +227,12 @@
                         </div>
                     </div>
                 </div>
+                    </div>
+                </div>
 
-                <div class="main-sixth-row" id="wrapper">
-                    <h4 class="text-center mt-5">One of the Best Learning Curriculums in the World</h4>
+                <div class="main-sixth-row" id="wrapper" data-aos="fade-up">
+                <div class="container">
+                <h4 class="text-center mt-5">One of the Best Learning Curriculums in the World</h4>
                     <section class="tracks">
                         <div class="track_container">
                             <div class="row">
@@ -374,12 +389,15 @@
                         </div>
                     </section>
                 </div>
+                    
+                </div>
 
 
-                <div class="main-seventh-row">
+                <div class="main-seventh-row" data-aos="fade-up">
+                    <div class="container">
                     <h4>Our Dedicated Mentors
                     </h4>
-                    <section class="mentor-section">
+                    <section class="mentor-section" data-aos="fade-up">
                         <div class="mentor-image">
                             <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730807/IMG2_uiu3fj.png">
                             <p>Ryan Thompson</p>
@@ -406,38 +424,45 @@
                             <a href="mentorpage.php">See more</a>
                         </button>
                     </div>
+                    </div>
+                    
                 </div>
 
                 <div class="main-eighth-row">
+
+                <div class="container">
                     <div class="row_8">
-                        <div class="row_8--one">
-                            <h4>HNG 6.0 Internship
-                            </h4>
-                            <p><i>.....the journey so far</i></p>
-                            <p>The HNG 6.0 Internship commenced 9th September, 2019 and ended 17th November, 2019.</p>
+                            <div class="row_8--one mobile-view" data-aos="fade-right">
+                                <h4>HNG 6.0 Internship
+                                </h4>
+                                <p><i>...the journey so far</i></p>
+                                <p>The HNG 6.0 Internship commenced 9th September, 2019 and ended 17th November, 2019.</p>
 
-                            <p>
-                                A well-planned, coordinated event where young talented folks from across the globe
-                                participated remotely and were involved in learning key skills needed to becoming the
-                                best
-                                globally in programming, design thinking, machine learning and digital marketing.
-                            </p>
+                                <p>
+                                    A well-planned, coordinated event where young talented folks from across the globe
+                                    participated remotely and were involved in learning key skills needed to becoming the
+                                    best
+                                    globally in programming, design thinking, machine learning and digital marketing.
+                                </p>
 
-                            <div>
-                                <a href="hng6.php">
-                                    <i class="fa fa-angle-right "></i>Learn more</a>
+                                <div>
+                                    <a href="hng6.php">
+                                        <i class="fa fa-angle-right "></i>Learn more</a>
+                                </div>
+
                             </div>
 
+                            <div class="row_8--two">
+                                <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730841/IMG5_prmueb.png">
+                            </div>
                         </div>
-
-                        <div class="row_8--two">
-                            <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730841/IMG5_prmueb.png">
-                        </div>
-                    </div>
+                </div>
+                    
                 </div>
 
-                <div class="support">
-                    <div class="support__header">
+                <div class="support"  data-aos="fade-up">
+                <div class="container">
+                <div class="support__header">
                         <h3 class="support__header-text text-light text_center">Support the Movement</h3>
                     </div>
                     <div class="support__items">
@@ -483,10 +508,12 @@
                         </div>
                     </div>
                 </div>
+                    
+                </div>
 
                 <div class="sponsor">
                     <h2 class="text_center blue-text">HNG 6.0 Internship Sponsors</h2>
-                    <div id="sponsor-flex-top">
+                    <div id="sponsor-flex-top" data-aos="fade-up">
                         <a href="#"><img
                                 src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg"></a>
                         <a href="#"><img
@@ -496,7 +523,7 @@
                         <a href="#"><img
                                 src="https://res.cloudinary.com/jaycodist/image/upload/v1570722788/verifi-logo_nfckrw.svg"></a>
                     </div>
-                    <div id="sponsor-flex-bottom">
+                    <div id="sponsor-flex-bottom" data-aos="fade-up">
                         <a href="#"><img
                                 src="https://res.cloudinary.com/jaycodist/image/upload/v1570723653/figma-logo_iexfvh.png"></a>
                         <a href="#"><img
@@ -514,11 +541,9 @@
         </div>
     </section>
     <?php include('fragments/site_footer.php'); ?>
-</body>
 
-
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -528,8 +553,14 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>
-<script src="js/script.js"></script>
 <script src="js/main.js"></script>
+<script type="text/javascript" src="js/countdown.js"></script>
+<script src="js/script.js"></script>
+</body>
+
+
+
+
 <div id="jumptotop"><em></em></div>
 <script src="./js/scroll-to-top.js"></script>
 

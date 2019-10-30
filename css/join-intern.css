@@ -20,11 +20,6 @@ body {
  margin: 1rem auto;
  margin-bottom: 3rem;
 }
-@media screen and (max-width: 400px){
-  #header{
-      width:90%;
-  }
-}
 /* styling of individual input field and textarea */
 .form-container input,
 textarea, select {
@@ -50,7 +45,7 @@ form.form-container > button:hover {
  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
  color: #fff;
 }
-section.jumb {
+section.jumbo {
  background: #d1f0f6;
  display: flex;
  flex-direction: column;
@@ -65,32 +60,32 @@ section.jumb {
  text-align: center;
 }
 
-section.jumb > h2.heading {
- font-family: Open Sans;
- font-style: normal;
- font-weight: 600;
- font-size: 30px;
- line-height: 54px;
- text-align: center;
- color: #084482;
- padding-top: 50px;
-}
-
-section.jumb > p.para {
-  font-weight: normal;
-  font-size: 1rem;
-  text-align: center;
-  color: #474747;
+section.jumbo > h2.heading {
+  margin-top: 4em;
   margin-bottom: 30px;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 54px;
+  text-align: center;
+  color: #084482;
 }
 
-section.jumb > p.para > a {
+section.jumbo > p.para {
+ text-align: center;
+ margin-bottom: 4em;
+ padding: 0 5px;
+ font-size: 24px;
+  line-height: 33px;
+  color: #474747;
+}
+
+section.jumbo > p.para > a {
   text-decoration: underline;
   color: #00AEFF;
   font-weight: 600;
 }
 
-section.jumb > p.para > a:hover {
+section.jumbo > p.para > a:hover {
   text-decoration: underline;
   color: #084482;
   transition: all 0.5s ease-in-out;
@@ -146,7 +141,7 @@ section.jumb > p.para > a:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   color: #fff;
  }
- section.jumb {
+ section.jumbo {
   background: #d1f0f6;
   display: flex;
   flex-direction: column;
@@ -222,7 +217,7 @@ section.jumb > p.para > a:hover {
      box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
      color: #fff;
    }
-   section.jumb {
+   section.jumbo {
      background: #d1f0f6;
      display: flex;
      flex-direction: column;
@@ -232,21 +227,52 @@ section.jumb > p.para > a:hover {
      margin-top: 0px;
    }
 
+   section.jumbo > h2.heading {
+     /* margin-top: 100px; */
+     margin-bottom: 30px;
+     font-size: 40px;
+     color: #084482;
+     margin-top: 10vh;
+   }
 
+   section.jumbo > p.para {
+     text-align: center;
+     margin-bottom: 0px;
+     padding: 0 5px;
+     margin-bottom: 10vh;
+   }
 
  }
 
 
  @media only screen and (max-width: 400px) {
 
+  section.jumbo > h2.heading {
+    margin-top: 4em;
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 54px;
+    text-align: center;
+    color: #084482;
+  }
+  
+  section.jumbo > p.para {
+    text-align: center;
+    margin-bottom: 4em;
+    padding: 0 5px;
+    font-size: 24px;
+     line-height: 33px;
+     color: #474747;
+   }
    
-   section.jumb > p.para > a {
+   section.jumbo > p.para > a {
      text-decoration: underline;
      color: #00AEFF;
      font-weight: 600;
    }
    
-   section.jumb > p.para > a:hover {
+   section.jumbo > p.para > a:hover {
      text-decoration: underline;
      color: #084482;
      transition: all 0.5s ease-in-out;
@@ -323,7 +349,7 @@ section.jumb > p.para > a:hover {
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
       color: #fff;
     }
-    section.jumb {
+    section.jumbo {
       background: #d1f0f6;
       display: flex;
       flex-direction: column;
@@ -333,9 +359,20 @@ section.jumb > p.para > a:hover {
       margin-top: 0px;
     }
 
-   
+    section.jumbo > h2.heading {
+      /* margin-top: 100px; */
+      margin-bottom: 30px;
+      font-size: 40px;
+      color: #084482;
+    }
 
-    section.jumb > p.para2 {
+    section.jumbo > p.para {
+      text-align: center;
+      margin-bottom: 0px;
+      padding: 0 5px;
+    }
+
+    section.jumbo > p.para2 {
       text-align: center;
       margin-top: 0px;
       margin-bottom: 50px;
@@ -381,8 +418,13 @@ section.jumb > p.para > a:hover {
     left: 0;
   }
   @media only screen and (max-width: 400px) {
-
-  section.jumb > p.para2 {
+    section.jumbo > h2.heading {
+      font-size: 30px;
+  }
+  section.jumbo > p.para {
+    font-size: .85em;
+  }
+  section.jumbo > p.para2 {
     font-size: .85em;
   }
 
@@ -410,23 +452,4 @@ section.jumb > p.para > a:hover {
  }
  }
 
-.navigation {
-  padding-left: 40px !important;
-  padding-right: 40px !important;
-  background: #d1f0f6;
- }
-
- @media (max-width: 759px) {
-
-  .navigation {
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-  }
-}
-
- @media (max-width: 700px) {
-  .navigation {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
-}
+ 
