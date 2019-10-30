@@ -31,6 +31,8 @@
     }
     .blue-text {
         color: #084482;
+        font-size: 25px;
+        font-weight: bold;
     }
     .darkblue-text {
         color: #8898AA;
@@ -124,7 +126,7 @@
         width: 100%;
         font-size: 25px;
         font-weight: 600;
-        text-align: left;
+        text-align: center;
         color: #084482;
         margin-bottom: 50px;
     }
@@ -430,6 +432,9 @@
    @media (max-width: 400px) {
    .countdown-symbol {
    margin-right: 10px;
+   }
+   #curriculum-flex {
+       padding: 10px;
    }
    }
    
