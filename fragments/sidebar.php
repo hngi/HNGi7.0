@@ -17,27 +17,27 @@
         <a href="news_update.php">News Update</a> <!--Added news update to admin menu-->
 
 		<hr id="hr2">
-		
+
 		<a href="updateCountdown.php">Countdown Timer</a>
 
-
+	<hr id="hr2">
 		<a href="registered_sponsors.php">Sponsors</a>
 		<hr id="hr2">
         <?php
 
 			if($_SESSION["role"] == 1) {
 			    '<a href="admins.php">Admins</a>';
-			
+
 			}
 		?>
-		
+
 		<!-- <select>
 			<option selected="selected" disabled="disabled">Overview</option>
 			<option value="0">Mentors</option>
 			<option value="1">Users</option>
 		</select>
 		<a href="#">Advanced</a> -->
-		<hr id="hr2">
+		<!-- <hr id="hr2"> -->
 		<a href="./logout.php">Logout</a>
 	</nav>
 </section>
