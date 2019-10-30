@@ -43,9 +43,9 @@
             <div class="col-md-3 pb-3">
                 <h2 class="skyblue-text">Follow Us</h2>
                 <div id="socials">
-                    <span>
+                    <em>
                     <a href="https://twitter.com/hnginternship" title="Follow on Twitter!"><img
-                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/twitter-logo_m1mgzi.svg"></a></span>
+                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/twitter-logo_m1mgzi.svg"></a></em>
                     <a href="https://www.facebook.com/HNG-Internship-115577009820117/"><img title="Follow on Facebook!"
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722900/facebook-logo_bw1hal.svg"></a>
                     <a href="https://dribble.com"><img title="Follow on Dribble!"
