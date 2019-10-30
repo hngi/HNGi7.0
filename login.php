@@ -26,6 +26,14 @@ if (isset($_POST['login'])) {
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
   <link rel="stylesheet" type="text/css" href="css/header-footer.css">
   <link rel="stylesheet" href="css/join-intern.css">
+  <link rel="stylesheet" href="css/loginadmin.css">
+  <style>
+     @media screen and (max-width:500px){
+            .body-container {
+                margin: 0;
+            }
+        }
+    </style>
   <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <script>
     function signup() {
@@ -43,11 +51,12 @@ if (isset($_POST['login'])) {
         });
     }
   </script>
-
 </head>
 
 <body>
+
  <section class="container-fluid">
+ <div class="body-continer">
   <?php include('fragments/site_header.php'); ?>
 
 
@@ -73,12 +82,12 @@ if (isset($_POST['login'])) {
       <p id="result"></p>
       <div class="inputWithIcon">
       <i class="fa fa-envelope" aria-hidden="true"></i>
-      <input type="email" name="email" id="email" placeholder="enter your Email" required />
+      <input type="email" name="email" id="email" placeholder="Enter your Email" required />
       </div>
 
       <div class="inputWithIcon">
         <i class="fa fa-key" aria-hidden="true"></i>
-        <input type="password" name="password" id="password" placeholder="enter your password" required>
+        <input type="password" name="password" id="password" placeholder="Enter your Password" required>
       </div>
       
       <button type="submit" onclick="signup()" name="login">LOG IN</button>
@@ -87,7 +96,9 @@ if (isset($_POST['login'])) {
   </div>
 
   <?php include('fragments/site_footer.php'); ?>
+  </div>
   </section>
+  
 </body>
 
 </html>

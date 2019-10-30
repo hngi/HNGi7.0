@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+<<<<<<< HEAD
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -42,6 +43,67 @@
       <img id="circles" src="https://bit.ly/2OzWHk7" alt="">
      </div>
     </div>
+=======
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The HNG Internship</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/header-footer.css">
+    <link rel="icon" type="img/png" href="images/hng-favicon.png">
+
+    <style>
+        #home {
+            display: none;
+        }
+        .body-container {
+                margin: 0;
+            }
+
+        .card-header {
+            color: white !important;
+
+        }
+
+        .card-header button:hover {
+            color: white !important;
+            text-decoration: none !important;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="body-container">
+    <section class="container-fluid">
+    <?php include('fragments/site_header.php');?>
+    <div class="container-fluid">
+        <img src="https://bit.ly/2OC3tWo" id="corner-circle" alt="Graphic at the top right corner">
+
+        <main>
+            <div class="main-first-row">
+                <div class="welcome-column">
+                    <h1 id="welcome-text" class="text__dark-blue">
+                        Welcome to HNG 7.0 Internship
+                    </h1>
+                    <p id="welcome-story">
+                        The HNG Internship is an ambitious attempt to change the way education is done in Africa.
+                        It’s the bridge between learning to code, and becoming the best in the world.
+                    </p>
+                    <button class="cta-button button--midBlue" id="buttt">
+                        <a href="join-intern.php" id="butt">Get Started</a>
+                    </button>
+                </div>
+                <div class="image-column desktop-only">
+                    <img id="circles" src="https://bit.ly/2OzWHk7" alt="">
+                </div>
+            </div>
+>>>>>>> 698f2f0be7f0e72434b5e581123458f050904f90
 
     <div class="main-second-row countdown">
      <h3 class="countdown__heading text_center">
@@ -533,6 +595,7 @@
 
  </section>
 </body>
+</div>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

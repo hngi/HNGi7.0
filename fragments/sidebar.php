@@ -12,11 +12,26 @@
 		<hr id="hr2">
 		<a href="registered_interns.php">Interns</a>
 		<hr id="hr2">
-		<?php 
+		<a href="internreview.php">Interns Experiences</a>
+        <hr id="hr2">
+        <a href="news_update.php">News Update</a> <!--Added news update to admin menu-->
+
+		<hr id="hr2">
+		
+		<a href="updateCountdown.php">Countdown Timer</a>
+	<?php 
+
+	
+
+
+		'<a href="registered_sponsors.php">Sponsors</a>
+		<hr id="hr2">';
+	
+
 			if($_SESSION["role"] == 1) {
-			?>
-				<a href="admins.php">Admins</a>
-			<?php
+			
+				'<a href="admins.php">Admins</a>';
+			
 			}
 		?>
 		
