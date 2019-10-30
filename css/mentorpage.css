@@ -20,6 +20,7 @@
           margin: 30px; 
           
       }
+   
   }
 
   /*Medium  screen and upward*/ 
@@ -27,6 +28,12 @@
      .body-container{
           background-color: white;
           margin: 40px 60px;
+          }
+          .nav_button {
+            position: absolute;
+            right: 5px;
+            top: 30px;
+            margin-right: 80px;
           }
   }
 
@@ -144,6 +151,8 @@
       background-color: #D1F0F6;
       position: relative;
       min-height: 40vh;
+      margin-right: -50px;
+      margin-left: -50px;
      }
      
      .land {
@@ -361,3 +370,23 @@
      }
 
     }
+
+    @media (min-width: 375px) {
+      #landing-page{
+        align-items: center;
+        padding-right: 10vw;
+        padding-left: 15vw;
+    }
+      }
+
+    
+    @media (min-width: 320px) {
+      #landing-page{
+        align-items: center;
+        padding-right: 10vw;
+        padding-left: 15vw;
+    }
+      }
+
+    
+

@@ -66,7 +66,8 @@
             $query = "SELECT * FROM countdown";
             $res = $database->query($query);
             $count = $database->affected_rows();
-
+            return $count;
+            
             if($count > 0) {
 
                 $row = mysqli_fetch_assoc($res);
@@ -82,5 +83,25 @@
 
         }
 
+        public function getDate() {
+            global $database;
+            $query = "SELECT * FROM countdown";
+            $res = $database->query($query);
+            $count = $database->affected_rows();
+            if($count > 0) {
+
+                $row = mysqli_fetch_assoc($res);
+
+                $data["startDate"] = $row["start_date"];
+                $data["startTime"] = $row["start_time"];
+                
+                return $data;
+            } else {
+                return 0;
+            }
+        }
+
     }
+
+
 ?>
