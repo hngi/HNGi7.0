@@ -14,10 +14,10 @@ html
 }
 main
 {
-	background-color: rgb(240, 240, 240);
-	margin-left: var(--sidebar-width);
+	background-color: rgb(255, 255, 255) ;
+	margin-left: 15vw; /* Same as sidebar width*/
 	padding: 2rem;
-	height: 90vh;
+	height: 100vh;
 }
 h1
 {
@@ -29,7 +29,7 @@ h1
 }
 #mobile-bars 
 {
-    position: fixed;
+    position: absolute;
     left: -35vw;
     top: 3vh;
     font-size: 25px;
@@ -56,11 +56,10 @@ h1
 }
 #overview-section
 {
-	width: 60vw;
+	width: 82vw;
 }
 #overview-section #export
 {
-	background-color: rgb(80, 80, 130);
 	color: white;
 	padding: 0.5rem 1rem;
 	outline: none;
@@ -73,14 +72,30 @@ h1
 	display: block;
 	transition: 0.6s ease-out;
 }
-#overview-section #export:hover
-{
-	background-color: rgb(110, 110, 160);
+
+#overview-section h1 {
+	background-color: #f3f3f3;
+	margin-top: 1rem;
+	font-size: 30px;
+	padding: 5px;
+	padding-left: 7px;
+	border-radius: 5px;
+	box-shadow: 1px 0 3px rgba(0,0,0,0.3);
+}
+
+#overview-section h2 {
+	font-size: 24px;
 }
 #overview-section h1, #overview-section h2, #details-section h2
 {
-	color: rgb(80, 80, 130);
+	color: #333333;
 }
+
+#overview-section #welcome {
+	margin: -1rem 1px;
+	padding: 0;
+}
+
 #intern-section
 {
 	max-height: 50vh;
@@ -189,14 +204,14 @@ h1
 }
 #sidebar
 {
-	background: linear-gradient(180deg, #D1F0F6 0%, #11CDEF 100%);
+	background: linear-gradient(180deg, #D1F0F6 0%, #00aeff 100%);
 	position: fixed;
 	left: 0;
 	top: 0;
 	z-index: 1;
 	height: 100vh;
-	width: var(--sidebar-width);
-	padding-top: 4rem;
+	width: 15vw;
+	padding-top: 2rem;
 }
 #sidebar #upper
 {
@@ -208,21 +223,45 @@ h1
 	font-weight: bolder;
 	align-self: center;	
 }
-#sidebar #upper em
+#sidebar #upper #admin-badge
 {
-	font-size: 0.8rem;
+	color: #084482;
+	background-color: transparent;
+	padding: 0.5rem;
+	border: 1px solid #084482;
+	border-radius: 5px;
+	font-weight: bolder;
+	margin-bottom: 2rem;
 }
+
+#sidebar #upper #username 
+{
+	font-size: 18px;
+	color: #333333;
+}
+
+#sidebar #hr1 {
+	border: 0.5px solid white;
+	width: 80%;
+}
+
+#sidebar #lower #hr2 {
+	width: 80%;
+	border: 0.5px solid transparent;
+	margin: 1rem;
+}
+
 #sidebar #lower
 {
 	display: flex;
 	flex-direction: column;
-	margin-top: 4rem;
+	margin-top: 3rem;
 }
 #sidebar #lower > *
 {
 	align-self: center;
-	margin-top: 1.4rem;
 }
+
 #sidebar #lower select
 {
 	font-family: inherit;
@@ -243,12 +282,23 @@ h1
 #sidebar img
 {
 	border-radius: 50%;
+	margin-bottom: 0.5rem;
 }
 #sidebar a
 {
 	text-decoration: none;
-	color: black;
-	font-weight: bolder;
+	color: #333333;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+#table-row {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#table-row th {
+	background-color: #D1F0F6;
 }
 
 @media (max-width: 860px)
@@ -257,12 +307,12 @@ h1
 	{
 		margin-left: 0;
 		padding: 0.5rem;
-		min-height: 105vh;
+		min-height: 100vh;
 	}
 	#overview-section
 	{
+		margin: 0 2rem;
 		width: 90vw;
-		bottom-padding: 1rem;
 	}
 	#overview-section h1, #overview-section h2
 	{
@@ -273,7 +323,7 @@ h1
 		padding: 0.5rem 1.5rem;
 		font-size: 16px;
 		border-radius: 5px;
-		margin: 3rem auto 0;
+		margin: 3rem auto;
 	}
 	#intern-section
 	{
@@ -320,10 +370,11 @@ h1
 
 	#sidebar
 	{
-		width: 50vw;
+		width: 40vw;
 		left: -100vw;
 		transition: 0.4s ease-out;
 		z-index: 5;
+		padding-top: 4rem;
 	}
 	#sidebar a
 	{
