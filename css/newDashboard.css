@@ -299,7 +299,7 @@ i:hover{
 	margin: 0 auto;
 	color: crimson;
 }
-#sidebar
+/* #sidebar
 {
 	background: linear-gradient(180deg, #D1F0F6 0%, #11CDEF 100%);
 	position: fixed;
@@ -333,7 +333,7 @@ i:hover{
 #sidebar #lower > *
 {
 	align-self: center;
-	margin-top: 0;
+	margin-top: 1.4rem;
 }
 #sidebar #lower select
 {
@@ -361,7 +361,7 @@ i:hover{
 	text-decoration: none;
 	color: black;
 	font-weight: bolder;
-}
+} */
 
 .box{
     display: flex;
