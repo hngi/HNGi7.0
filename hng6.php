@@ -1,3 +1,8 @@
+<?php
+require 'classControllers/init.php';
+$countdown = new CountdownTimer();
+$countDownValues = $countdown->getDate();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -17,6 +22,15 @@
 </head>
 
 <body>
+<<<<<<< HEAD
+=======
+
+    <p id="startDate" style="display: none;"><?php echo $countDownValues["startDate"]; ?></p>
+    <p id="startTime" style="display: none;"><?php echo $countDownValues["startTime"]; ?></p>
+
+    <section class="container-fluid">
+        <?php include('fragments/site_header.php'); ?>
+>>>>>>> 5058326c07ce0a6f3f4c130d52b8a48f64b87b25
 
 <section class="navigation">
    <?php include('fragments/site_header.php'); ?>
