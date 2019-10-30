@@ -15,9 +15,20 @@
     <link rel="stylesheet" href="css/hngsix.css">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
+<<<<<<< HEAD
+=======
+    <style>
+        .body-container {
+                margin: 0;
+                background-color: white;
+            }
+    </style>
+</head>
+>>>>>>> 6ee7fae7c9116a910800ffd4da9fd6b149f708ed
 
 </head>
 <body>
+<div class="body-container">
     <section class="container-fluid">
         <?php include('fragments/site_header.php'); ?>
 
@@ -260,6 +271,13 @@
             } else {
                 images.style.display = "grid";
             }
+<<<<<<< HEAD
         }
     </script>
+=======
+        }</script>
+    </div>
+</body>
+
+>>>>>>> 6ee7fae7c9116a910800ffd4da9fd6b149f708ed
 </html>

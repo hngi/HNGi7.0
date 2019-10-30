@@ -19,6 +19,7 @@
 
 <body>
   <section class="container-fluid">
+  <div class="body-cotainer">
   <?php include('fragments/site_header.php'); ?>
 
   <div class="jumbotron" id="landing-page">
@@ -39,10 +40,16 @@
     </section>
   </main>
 
+<<<<<<< HEAD
   </div>
 </section>  
 
 <?php include('fragments/site_footer.php'); ?>
+=======
+  <?php include('fragments/site_footer.php'); ?>
+  </div>
+</section>
+>>>>>>> 6ee7fae7c9116a910800ffd4da9fd6b149f708ed
 </body>
 
 

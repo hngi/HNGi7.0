@@ -7,10 +7,42 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+<<<<<<< HEAD
+=======
+body{
+  background-color: rgb(241, 235, 235);
+}
+
+
+/*Small screen - any screen size below 768px*/    
+@media ( max-width: 768px ) {
+  .body-container{
+      background-color: white;
+      margin: 30px; 
+      
+  }
+}
+
+/*Medium  screen and upward*/ 
+@media ( min-width: 768px ) {
+ .body-container{
+      background-color: white;
+      margin: 40px 60px;
+      }
+}
+
+>>>>>>> 6ee7fae7c9116a910800ffd4da9fd6b149f708ed
 a {
   text-decoration: none;
 }
 
+<<<<<<< HEAD
+=======
+header {
+  background-color: #d1f0f6;
+}
+
+>>>>>>> 6ee7fae7c9116a910800ffd4da9fd6b149f708ed
 .image {
   width: 170px;
   height: 170px;

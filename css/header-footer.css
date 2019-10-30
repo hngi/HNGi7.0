@@ -65,7 +65,32 @@
         margin-right: 16px;
     }
 
+<<<<<<< HEAD
     .float_right {
+=======
+     footer #address a{
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    footer #address a:hover {
+        opacity: .9;
+        text-decoration: none;
+        }
+
+    #jumptotop {
+        right: 10px;
+        bottom: 10px;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        background-color: #209cee63;
+        display: flex;
+        align-items: center;
+        -webkit-border-radius: 60px;
+        -moz-border-radius: 60px;
+        border-radius: 40px;
+>>>>>>> 6ee7fae7c9116a910800ffd4da9fd6b149f708ed
         float: right;
     }
 

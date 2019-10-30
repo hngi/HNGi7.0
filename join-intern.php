@@ -133,9 +133,13 @@ require_once 'classControllers/init.php';
   </div>
    <div id="jumptotop"><em></em></div>
    </div> 
+<<<<<<< HEAD
   </section>   
   <?php include "fragments/site_footer.php"; ?>
 
+=======
+  </section>
+>>>>>>> 6ee7fae7c9116a910800ffd4da9fd6b149f708ed
 </body>
 
 </html>
