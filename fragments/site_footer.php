@@ -13,7 +13,7 @@
                     <a href="donate.php" class="skyblue-text">Become a Sponsor</a>
                     <a href="MentorSetUpPage2.php" class="skyblue-text">Sign up as Mentor</a>
                     <a href="faq.php" class="skyblue-text">FAQ</a>
-                    <a href="intern-experience.php" class="skyblue-text">Past Intern Experience</a>
+                    <a href="new-intern-experience.php" class="skyblue-text">Past Intern Experience</a>
                     <a href="request_certificate.php">Request Certificate</a>
 
                 </div>
