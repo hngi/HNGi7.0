@@ -46,7 +46,7 @@ class Admins
 
         if($block == 1) {
           // admin is blocked, cannot login
-          header("Location: admin_login.php?blocked");
+          header("Location: login.php?blocked");
         } else {
           // admin can login
           $_SESSION["fullname"] = $fullname;

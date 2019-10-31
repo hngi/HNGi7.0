@@ -106,7 +106,46 @@ class Intern
         global $con;
         global $database;
         $display = '';
-        $query = 'SELECT * FROM interns ORDER BY intern_id DESC';
+        $query = 'SELECT * FROM interns WHERE status = 2 ORDER BY intern_id DESC';
+        //$res = mysqli_query($con, $query) or die(mysqli_error($con));
+        $res = $database->query($query);
+        $count = mysqli_num_rows($res);
+        if ($count > 0) {
+            // inters exist
+            $no = '';
+            while ($row = mysqli_fetch_assoc($res)) {
+                $no++;
+                $display .= '
+                    <tr>
+                        <td>' . $no . '</td>
+                        <td>' . $row["intern_id"] . '</td>
+                        <td>' . $row["name"] . '</td>
+                        <td>' . $row["email"] . '</td>
+                        <td>' . $row["phone_no"] . '</td>
+                        <td>' . $row["link_to_cv"] . '</td>
+                        <td>' . $row["interest"] . '</td>
+                        <td>' . $row["current_location"] . '</td>
+                        <td>' . $row["employment_status"] . '</td>
+                        <td>' . $row["about"] . '</td>
+                        <td>' . $row["timestamp"] . '</td>
+                        <td>'  .'<a href="registered_interns.php?rejectInternId=' . $row["intern_id"] . '" class="btn btn-danger btn-sm" style="margin-right:5px;">Deactivate</a>' . '</td>
+
+                    </tr>';
+            }
+        } else {
+            // there are no interns
+            $display = "0";
+        }
+
+        return $display;
+    }
+
+    public function pendingInterns()
+    {
+        global $con;
+        global $database;
+        $display = '';
+        $query = 'SELECT * FROM interns WHERE status = 0 ORDER BY intern_id DESC';
         //$res = mysqli_query($con, $query) or die(mysqli_error($con));
         $res = $database->query($query);
         $count = mysqli_num_rows($res);
@@ -129,6 +168,45 @@ class Intern
                         <td>' . $row["about"] . '</td>
                         <td>' . $row["timestamp"] . '</td>
                         <td>' . '<a href="registered_interns.php?acceptInternId=' . $row["intern_id"] . '" class="btn btn-primary btn-sm" style="margin-right:5px;">Accept</a>' .'<a href="registered_interns.php?rejectInternId=' . $row["intern_id"] . '" class="btn btn-warning btn-sm" style="margin-right:5px;">Reject</a>' .'<a href="delete_intern.php?deleteInternId=' . $row["intern_id"] . '" class="btn btn-danger btn-sm">Delete</a>' . '</td>
+
+                    </tr>';
+            }
+        } else {
+            // there are no interns
+            $display = "0";
+        }
+
+        return $display;
+    }
+
+    public function declinedInterns()
+    {
+        global $con;
+        global $database;
+        $display = '';
+        $query = 'SELECT * FROM interns WHERE status = 1 ORDER BY intern_id DESC';
+        //$res = mysqli_query($con, $query) or die(mysqli_error($con));
+        $res = $database->query($query);
+        $count = mysqli_num_rows($res);
+        if ($count > 0) {
+            // inters exist
+            $no = '';
+            while ($row = mysqli_fetch_assoc($res)) {
+                $no++;
+                $display .= '
+                    <tr>
+                        <td>' . $no . '</td>
+                        <td>' . $row["intern_id"] . '</td>
+                        <td>' . $row["name"] . '</td>
+                        <td>' . $row["email"] . '</td>
+                        <td>' . $row["phone_no"] . '</td>
+                        <td>' . $row["link_to_cv"] . '</td>
+                        <td>' . $row["interest"] . '</td>
+                        <td>' . $row["current_location"] . '</td>
+                        <td>' . $row["employment_status"] . '</td>
+                        <td>' . $row["about"] . '</td>
+                        <td>' . $row["timestamp"] . '</td>
+                        <td>' . '<a href="registered_interns.php?acceptInternId=' . $row["intern_id"] . '" class="btn btn-primary btn-sm" style="margin-right:5px;">Activate</a>' .'<a href="delete_intern.php?deleteInternId=' . $row["intern_id"] . '" class="btn btn-danger btn-sm">Delete</a>' . '</td>
 
                     </tr>';
             }
@@ -240,10 +318,11 @@ class Intern
         $email = $row['email'];
         $count = $database->affected_rows();
         if($count > 0) {
-            $body = "Your registration as an interns on the HNGi7 platform has been disapproval or pendding. Thank you";
+            $body = "Your registration as an intern on the HNGi7 platform has been disapproved or pending. Thank you";
             rejectInternMail($email, $fullname, $body);
           // updated
-          //return true;
+         // $reject_message = 'Intern Rejected Successfully.';
+          //return $message;
           header('Location: registered_interns.php');
         } else {
           // failed
@@ -261,10 +340,11 @@ class Intern
         $fullname = $row['firstname'] . ' ' . $row['lastname'];
         $email = $row['email'];
         if($count > 0) {
-            $body = "Your registration as an interns on the HNGi7 platform has been approvalled and accepted. Thank you";
+            $body = "Your registration as an intern on the HNGi7 platform has been approved and accepted. Thank you";
             acceptInternMail($email, $fullname, $body);
           // updated
-         // return true;
+          $accept_message = "Intern Accepted successfully.";
+          //return $message;
          header('Location: registered_interns.php');
         } else {
           // failed

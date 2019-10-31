@@ -1,0 +1,39 @@
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', segoeUI, sans-serif;
+  }
+  
+  .wrap {
+    color: #084482;
+  }
+  .wrap .header {
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 30px;
+  
+  }
+  
+   .wrap form {
+    margin-top: 50px;
+  }
+  
+  form input, textarea {
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+  }
+  
+  form input[type=submit]{
+    background-color: #00AEFF;
+    padding: 10px;
+    color: white;
+    border: none;
+  }
+  
+  @media screen and (min-width : 600px){
+    .wrap form {
+      width: 60%;
+      margin: 30px auto;
+    }
+  }
