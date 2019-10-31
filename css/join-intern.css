@@ -97,23 +97,11 @@
    font-weight: 600;
  }
  
- .social-icon {
-  margin-right: 1rem;
-  color: #00aeff;
-  background: white;
-  padding: 0.5rem;
-  border: 5px solid white;
-  box-shadow: 0px 4px 4px rgba(50, 50, 93, 0.11),
-    0px 1px 3px rgba(0, 0, 0, 0.08);
-  border-radius: 50%;
- }
- 
- 
  
   /* styling of individual input field and textarea */
   .form-container input,
   textarea, select {
-   width: 100%;
+   width: 60%;
    padding: 10px 20px;
    margin: 10px auto;
    font-family: inherit;
@@ -131,6 +119,7 @@
   }
  
   form.form-container > button {
+    width: 60%;
    margin: 30px auto;
    display: block;
    padding: 10px 40px;
