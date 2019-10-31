@@ -89,7 +89,7 @@
                             inspire participatants when needed and also to properly coordinate the event.
                         </p>
                     </article>
-                    <article>
+                    <article id="banner-img">
                         <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722500/home-forum_wmrsfj.png">
                     </article>
                 </div>

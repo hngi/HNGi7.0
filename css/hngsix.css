@@ -1,4 +1,4 @@
-@media screen and (min-width: 0) {
+
     html {
         box-sizing: border-box;
         scroll-behavior: smooth;
@@ -86,7 +86,7 @@
         margin-top: 40px;
     }
     #countdown-container {
-        width: 50vw;
+        width: 60vw;
         margin: 50px auto;
         display: flex;
         flex-direction: row;
@@ -238,7 +238,7 @@
         grid-template-columns: 1fr;
         text-align: left;
         background-color: rgb(245, 245, 245);
-        margin: 50px auto;
+        margin: 50px -60px;
     }
     #mentor-section h2 {
         text-align: left;
@@ -328,8 +328,15 @@
     #sponsor-flex-top img, #sponsor-flex-bottom img {
         max-width: 15vw;
     }
-} 
 
+@media screen and (min-width: 400px){
+    .gallery_items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 25px;
+        width: 100%;
+    }
+}
 @media screen and (min-width: 760px){
 
     #about-container {
@@ -414,6 +421,37 @@
 
     #about-container article img {
         height: 600px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    #countdown-section {
+        margin-top: 20px;
+    }
+    #countdown-container {
+        width: 60vw;
+        margin: 30px auto;
+    }
+    #countdown-intro{
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 760px){
+    section#mentor-section div:nth-of-type(1){
+        padding: 20px 50px;
+    }
+
+    article#banner-img{
+        display: none;
+    }
+
+    section#home-about{
+        margin-top:30px ;
+        text-align: justify;
+    }
+    section#home-about h1{
+       margin-bottom: 30px;
     }
 }
 
