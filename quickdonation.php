@@ -11,6 +11,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="stylesheet" href="css/join-intern.css">
+    <link rel="icon" type="img/png" href="images/hng-favicon.png">
     <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
     <style>
       .jumbo {
@@ -54,8 +55,9 @@
   </div>
 </section>
 
-<?php include "fragments/site_footer.php"; ?>
 </section>
+<?php include "fragments/site_footer.php"; ?>
+
 </body>
 <script>
     const API_publicKey = "FLWPUBK_TEST-2c7dd09d63d44deae5cbf3e9728aa289-X";

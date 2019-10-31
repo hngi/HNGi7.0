@@ -12,6 +12,29 @@
             padding: 0;
             background-color: #F4F5F7 !important;
         }
+
+body{
+    background-color: rgb(241, 235, 235);
+}
+
+
+/*Small screen - any screen size below 768px*/    
+@media ( max-width: 768px ) {
+    .body-container{
+        background-color: white;
+        margin: 30px; 
+        
+    }
+}
+
+/*Medium  screen and upward*/ 
+@media ( min-width: 768px ) {
+   .body-container{
+        background-color: white;
+        margin: 40px 60px;
+        }
+}
+
         #form-contner
         {
             border-bottom: 1px solid rgba(0, 0, 0, 0.1)
@@ -179,6 +202,13 @@
         .fab:hover{
           color: #084482;
           font-weight: bold;
+        }
+        div.m-0 textarea{
+            height: 95%;
+        }
+        .col-md-6, .col-sm-12, .col-md-4, .col-md-8{
+            padding-right: 10px;
+            padding-left: 10px;
         }
         @media only screen and (max-width: 860px){
              input::placeholder{

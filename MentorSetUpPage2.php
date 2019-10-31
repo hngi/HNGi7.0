@@ -47,6 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST['employment_status'])) {
     $error['employment_status'] = "Input field is required";
   }
+  Mentors::emailExists($_POST['email']) ? $error['email'] = "Email has been used to register before" : false;
   if (empty($error)) {
     $area_of_expertise = "";
 
@@ -93,8 +94,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mentor->timestamp = strftime("%Y-%m-%d %H:%M:%S", time());
 
             if ($mentor->Apply_mentor()) {
+              mailMentor($mentor->email, $mentor->name);
               header("location:MentorSetUpPage2.php?message=Application Successful");
-              echo "<script>alert('Image uploaded successfully!')</script>";
+              //echo "<script>alert('Image uploaded successfully!')</script>";
             }
           } else {
             $error['image'] = "image failed to upload";
@@ -137,7 +139,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <?php include('fragments/site_header.php'); ?>
 
-    <!--Welcome Section-->
     <div class="text-center mt-3 p-2 welcome">
       <div class="text-center">
         <h1 class="text-center mentor">Mentor Account Set Up</h1>
@@ -149,10 +150,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       }
 
       ?>
-      <!--<a href="#form"><i class="fas fa-arrow-circle-down mt-5"></i></a>-->
     </div>
   </div>
-  <!--Form1-->
   <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" enctype="multipart/form-data">
     <div class="container form mt-3">
       <div class="container-fluid">
@@ -266,7 +265,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                                                                                                                                 } ?>" maxlength="15"></div>
             <div class="col-sm-12">
               <input name="employment_status" type="text" class="form-control mt-2" id="validationCustom10" placeholder="What is your current employment status?" required value="<?php if (isset($_POST['employment_status'])) {
-                                                                                                                                                                                    echo $_POST['email'];
+                                                                                                                                                                                    echo $_POST['employment_status'];
                                                                                                                                                                                   } ?>" maxlength="15"></div>
             <center><button class="btn btn-primary mt-3" type="submit">Submit</button></center>
 
@@ -275,8 +274,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </div>
     </div>
   </form>
+  </section>  
   <?php include('fragments/site_footer.php'); ?>
-  </section>
+
 </body>
   <script src="https://kit.fontawesome.com/85682eb992.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -1,4 +1,4 @@
-@media screen and (min-width: 0) {
+
     html {
         box-sizing: border-box;
         scroll-behavior: smooth;
@@ -8,7 +8,6 @@
         margin: 0;
         padding: 0;
         font-family: "Open Sans", segoe UI, sans-serif;
-        background-color: #fff;
         color: rgba(0, 0, 0, 0.8);
     }
 
@@ -36,6 +35,7 @@
     .darkblue-text {
         color: #8898AA;
     }
+    /*COUNT DOWN STYLING STARTS */
 
     #countdown-section {
         width: 100%;
@@ -47,6 +47,7 @@
         width: 3.5rem;
         font-size: 1.5rem;
         font-family: Oswald, segoe UI, sans-serif;
+        margin-right: 30px;
     }
     .countdown-symbol>span {
         position: absolute;
@@ -56,7 +57,8 @@
     .countdown-symbol+p {
         font-weight: lighter;
         font-size: 13px;
-        margin-left: 15px;
+        text-align: left;
+        margin-left: 10px;
         font-family: Oswald, segoe UI, sans-serif;
     }
     .arc, .arcs-background {
@@ -84,11 +86,11 @@
         margin-top: 40px;
     }
     #countdown-container {
-        width: 50vw;
-        margin: 3rem auto 4.5rem;
+        width: 60vw;
+        margin: 50px auto;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
     }
     #countdown-intro {
         font-size: 20px;
@@ -105,24 +107,31 @@
     #countdown-register:hover {
         color: white;
         background-color: #00AEFF;
+        text-decoration: none;
     }
   
+    /*COUNT DOWN STYLING ENDS */
+
+    /*ABOUT PAGE STARTS*/
+
     #home-about {
         width: 100%;
-        margin: 20px auto;
+        margin: 50px auto;
+
     }
     #home-about h1 {
         width: 100%;
-        text-align: center;
         font-size: 40px;
         font-weight: 600;
+        text-align: center;
         color: #084482;
+        margin-bottom: 50px;
     }
 
     #about-container {
         display: grid;
         grid-template-columns: 1fr;
-        text-align: center;
+        text-align: left;
         width: 100%;
         margin: 0 auto;
     }
@@ -134,45 +143,41 @@
         height: 100%;
     }
 
-    .section2 {
-        width: 100%;
-    }
-    .section2 h2 {
-        width: 100%;
-        text-align:center;
-        font-size: 25px;
-        font-weight: bold;
-        margin: 50px auto;
-    }
-    .section2 button {
-        background: #00AEFF;
-        box-shadow: 0px 4px 6px rgba(50, 50, 93, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08);
-        border-radius: 4px;
-        font-weight: bold;
-        margin-top: 10px;
-    }
-    .gallery-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 20px;
-        width: 100%;
-    }
+        /*ABOUT PAGE ENDS */
+        /*GALLERY STARTS HERE */
+        .gallery {
+           width: 100%;
+           text-align: center;
 
-    .gallery-grid img {
-        width: 99%;
-    }
+        }
 
-    #more-images {
-        display: none;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 20px;
-        width: 100%;
-    }
+        .gallery h2 {
+            text-align: center;
+        }
 
-    #more-images img {
-        margin-top: 20px;
-    }
+        .gallery_items {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .gallery_items img {
+            width: 100%;
+            height: auto;
+            margin: 15px auto;
+            transition: width 2s;
+
+        }
+
+         .gallery #hidden_images {
+            display: none;
+        }
+
+        .gallery .def-button {
+            border: none;
+        }
+        /*GAKKERY ENDS HERE */
+
 
     #participate-section {
         display: grid;
@@ -180,7 +185,7 @@
         width: 100%;
         margin: 50px auto;
         font-size: 17px;
-        text-align: center;
+        text-align: left;
     }
 
     #participate-section article {
@@ -191,7 +196,8 @@
         font-size: 25px;
         font-weight: bold;
         width: 100%;
-        margin: 0 auto;
+        margin: 20px auto;
+        text-align: left;
     }
     #participate-section p {
         font-size: 16px;
@@ -212,7 +218,7 @@
         display: grid;
         grid-template-columns: 1fr;
         font-size: 18px;
-        text-align: center;
+        text-align: left;
     }
     #curriculum-flex p {
         width: 100%;
@@ -230,21 +236,27 @@
     #mentor-section {
         display: grid;
         grid-template-columns: 1fr;
-        text-align: center;
+        text-align: left;
         background-color: rgb(245, 245, 245);
-        margin: 50px auto;
+        margin: 50px -60px;
+    }
+    #mentor-section h2 {
+        text-align: left;
+        margin-bottom: 50px;
     }
 
     #mentor-section #mentor-wrapper {
         width: 100%;
         margin-top: 50px;
         padding-bottom: 50px;
+        text-align: center;
     }
     #mentor-section #mentor-flex {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+        display: grid;
+        grid-template-columns: 1fr;
         width: 100%;
         margin-bottom: 20px;
+        text-align: center;
     }
     #mentor-flex img {
         border-radius: 50%;
@@ -316,8 +328,15 @@
     #sponsor-flex-top img, #sponsor-flex-bottom img {
         max-width: 15vw;
     }
-} 
 
+@media screen and (min-width: 400px){
+    .gallery_items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 25px;
+        width: 100%;
+    }
+}
 @media screen and (min-width: 760px){
 
     #about-container {
@@ -329,22 +348,14 @@
         display: block;
         padding: 20px;
     }
-    .gallery-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 20px;
-        width: 100%;
-    }
 
-    #more-images {
-        display: none;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 20px;
-        width: 100%;
+    #home-about article:first-child{
+        margin-top: -50px;
     }
-    #about-container img {
-        height: 100%;
+    .gallery_items {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 25px;
         width: 100%;
     }
 
@@ -366,12 +377,6 @@
         padding: 50px 100px;
     }
 
-    #more-images {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        width: 100%;
-    }
-
     #curriculum-flex div:first-child {
         text-align: left;
     }
@@ -381,9 +386,26 @@
     }
     #mentor-section {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 30px;
+        grid-template-columns: 2fr 3fr;
+        column-gap: 50px;
         padding: 50px;
+    }
+
+    #mentor-section #mentor-wrapper {
+        padding-left: 80px;
+
+    }
+
+    #mentor-section #mentor-flex {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+
+    }
+
+    #mentor-section #mentor-flex img {
+        width: 70%;
+        height: auto;
     }
     #mentor-section > div:first-child {
         margin-top: 50px;
@@ -394,21 +416,42 @@
 @media screen and (min-width : 1200px){
     #about-container article:first-child {
         margin: 0 auto;
-        margin-top: 150px;
-        width: 70%;
-        
+        margin-top: -50px;        
     }
 
-    .gallery-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-gap: 20px;
-        width: 100%;
+    #about-container article img {
+        height: 600px;
     }
-    #more-images {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        width: 100%;
+}
+
+@media screen and (max-width: 700px){
+    #countdown-section {
+        margin-top: 20px;
+    }
+    #countdown-container {
+        width: 60vw;
+        margin: 30px auto;
+    }
+    #countdown-intro{
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 760px){
+    section#mentor-section div:nth-of-type(1){
+        padding: 20px 50px;
+    }
+
+    article#banner-img{
+        display: none;
+    }
+
+    section#home-about{
+        margin-top:30px ;
+        text-align: justify;
+    }
+    section#home-about h1{
+       margin-bottom: 30px;
     }
 }
 

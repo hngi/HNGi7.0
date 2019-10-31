@@ -21,7 +21,9 @@ html {
 
 .hero {
   background: var(--light-blue);
+
 }
+
 
 .hero-cont {
   margin-top: 10vh;
@@ -30,20 +32,32 @@ html {
   padding-bottom: 40px;
   text-align: center;
   color: var(--dark-blue);
+ 
 }
 
+
 .hero-cont .title {
+  animation: Slide_up 1.4s ease ;
   font-weight: 600;
   font-size: 30px;
 }
 
+@keyframes Slide_up{
+  0%{
+      transform: translateY(250px)
+  }
+  100%{
+      transform: translateY(0)
+  }
+}
+
 .hero-cont .desc {
+  animation: Slide_up 1.4s ease ;
   color: #474747;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1rem;
-
   font-size: 16px;
 }
 
@@ -57,6 +71,7 @@ a.button-primary,
   outline: none;
   border: none;
   transition: 0.4s ease-out;
+  animation: Slide_up 1.4s ease ;
 }
 
 a.button-primary:hover,
@@ -69,6 +84,7 @@ a.button-primary:hover,
   display: flex;
   flex-direction: row-reverse;
   height: 70vh;
+  animation: Slide_up 1.4s ease ;
 
   /* margin: 20px auto; */
 }
