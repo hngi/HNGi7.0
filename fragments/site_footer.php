@@ -14,6 +14,7 @@
                     <a href="MentorSetUpPage2.php" class="skyblue-text">Sign up as Mentor</a>
                     <a href="faq.php" class="skyblue-text">FAQ</a>
                     <a href="intern-experience.php" class="skyblue-text">Past Intern Experience</a>
+                    <a href="request_certificate.php">Request Certificate</a>
 
                 </div>
             </div>
@@ -39,7 +40,7 @@
                 <h2 class="skyblue-text">Office Address</h2>
                 <p id="address">
                     <a href="https://www.google.com/maps/place/Hotels.ng/@6.5091808,3.3795046,17z/data=!4m13!1m7!3m6!1s0x103b8cf61c9c63c5:0xb2ef3a96e7eb315e!2s3+Birrel+Ave,+Yaba+100001,+Lagos!3b1!8m2!3d6.5091808!4d3.3795046!3m4!1s0x103b8c58aa4e0931:0x9ddabc4518c15d14!8m2!3d6.5091808!4d3.3795046">3 Birrel Avenue <br /> Sabo, Yaba, <br /> Lagos state</a> <br>
-                    <a href="request_certificate.php" style="color:rgb(0, 142, 207);">Request Certificate</a>
+                    
  
                 </p>
             </div>
