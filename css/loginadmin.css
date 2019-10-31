@@ -1,3 +1,28 @@
+
+
+.form-container {
+    width: 70%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.form-container h2 {
+    color: #084482;
+    margin-bottom: 50px;
+}
+
+.inputWithIcon {
+    border: 1px solid grey;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.inputWithIcon i {
+    margin-left: 0;
+    color: #00aeff;
+    margin-left: 10px;
+}
+
 .inputWithIcon input {
     border: none !important;
     border-bottom: 1px solid grey !important; 

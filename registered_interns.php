@@ -3,30 +3,22 @@
     if (!isset($_SESSION["role"])) {
         header('Location:admin_login.php');
     }
-
     $interns = new Intern;
     $display = $interns->allInterns();
-
     if (isset($_POST['search'])) {
         $interns = new Intern;
         $display = $interns->search($_POST['search']);
     }
-
     if (isset($_GET['delete_id'])) {
         $intern_id = $_GET['delete_id'];
-
         $message = $interns->DeleteIntern($intern_id);
     }
-
     if (isset($_GET['acceptInternId'])) {
         $mentor_id = $_GET['acceptInternId'];
-
         $message = $interns->AcceptIntern($mentor_id);
     }
-
     if (isset($_GET['rejectInternId'])) {
         $mentor_id = $_GET['rejectInternId'];
-
         $message = $interns->RejectIntern($mentor_id);
     }
 ?>
@@ -40,6 +32,9 @@
     <title>Interns</title>
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+    <!--This contains the styling for the side bar -->
+    <link href="css/dashboard.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <link href="css/newDashboard.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 
 
@@ -59,7 +54,6 @@
             margin: 15px;
             padding: 10px;
             border-radius: 15px;
-
         }
     </style>
 
@@ -100,7 +94,6 @@
                         <!--    </a>-->
                         <!--</div>-->
                         <!-- <div class="col-md-3">
-
                             <a href="#" onclick="javascript:printDiv('printablediv')">
                                 <button type="button" class="btn btn-primary btn-sm" id="export">Export to PDF</button>
                             </a> -->

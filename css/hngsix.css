@@ -12,7 +12,19 @@
     }
 
     main {
-        padding: 0 20px;
+        padding: 0;
+    }
+
+    .countdown1 {
+        font-family: Oswald;
+        font-style: normal;
+        font-weight: 500;
+        width: fit-content;
+        height: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin-bottom: 3em;
     }
 
     a {
@@ -31,8 +43,6 @@
     }
     .blue-text {
         color: #084482;
-        font-size: 25px;
-        font-weight: bold;
     }
     .darkblue-text {
         color: #8898AA;
@@ -84,9 +94,7 @@
         z-index: 10;
         transform: rotate(-135deg);
     }
-    #countdown-section {
-        margin-top: 40px;
-    }
+    
     #countdown-container {
         width: 50vw;
         margin: 50px auto;
@@ -123,10 +131,10 @@
     }
     #home-about h1 {
         width: 100%;
-        font-size: 25px;
+        font-size: 40px;
         font-weight: 600;
-        text-align: center;
         color: #084482;
+        margin-right: auto;
         margin-bottom: 50px;
     }
 
@@ -136,18 +144,21 @@
         text-align: left;
         width: 100%;
         margin: 0 auto;
+        margin-top: 8em;
     }
     #about-container article {
         font-size: 15px;
     }
-    #about-container img {
-        width: 100%;
-        height: 100%;
-    }
 
+    #about-container article img {
+        position: absolute !important;
+        width: 50vw;
+        right: 0!important;
+    }
         /*ABOUT PAGE ENDS */
         /*GALLERY STARTS HERE */
         .gallery {
+            margin-top: 15em;
            width: 100%;
            text-align: center;
 
@@ -237,13 +248,21 @@
         margin-bottom: 1rem;
         font-size: 16px;
     }
+
+    #main-mentor-section {
+        width: 100%;
+        background-color: rgb(245, 245, 245);
+    }
+
     #mentor-section {
         display: grid;
         grid-template-columns: 1fr;
         text-align: left;
+        width: 90%;
         background-color: rgb(245, 245, 245);
         margin: 50px auto;
     }
+    
     #mentor-section h2 {
         text-align: left;
         margin-bottom: 50px;

@@ -3,22 +3,16 @@ require 'classControllers/init.php';
 if (!isset($_SESSION["role"])) {
     header('Location:admin_login.php');
 }
-
 $mentors = new Mentor;
 $display = $mentors->allMentors();
-
 if (isset($_GET['acceptMentorId'])) {
     $mentor_id = $_GET['acceptMentorId'];
-
     $message = $mentors->AcceptMentor($mentor_id);
 }
-
 if (isset($_GET['rejectMentorId'])) {
     $mentor_id = $_GET['rejectMentorId'];
-
     $message = $mentors->RejectMentor($mentor_id);
 }
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,6 +24,10 @@ if (isset($_GET['rejectMentorId'])) {
     <title>Mentors</title>
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+    <!--This contains the styling for the side bar -->
+    <link href="css/dashboard.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    
     <link href="css/newDashboard.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     
 
@@ -49,7 +47,6 @@ if (isset($_GET['rejectMentorId'])) {
             margin: 15px;
             padding: 10px;
             border-radius: 15px;
-
         }
     </style>
 

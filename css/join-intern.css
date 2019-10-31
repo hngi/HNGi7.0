@@ -426,18 +426,6 @@
     font-size:0.8rem;
     color:cornflowerblue !important;
   }
-<<<<<<< HEAD
-=======
-  @media only screen and (max-width: 400px) {
-    section.jumbo > h2.heading {
-      font-size: 30px;
-  }
-  section.jumbo > p.para {
-    font-size: .85em;
-  }
-  section.jumbo > p.para2 {
-    font-size: .85em;
->>>>>>> bd557f54d7830d77309e704a3729eaebc724016b
   }
  
  .navigation {
@@ -453,8 +441,7 @@
      padding-right: 15px !important;
    }
  }
-<<<<<<< HEAD
-=======
+
  .inputWithIcon{
    position: relative;
  }
@@ -475,7 +462,4 @@
    font-size:0.8rem;
    color:cornflowerblue !important;
  }
- }
-
->>>>>>> bd557f54d7830d77309e704a3729eaebc724016b
  

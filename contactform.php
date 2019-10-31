@@ -33,7 +33,7 @@ if (isset($_POST['contact-btn'])) {
       //here is the function to send mail to admin email
 
       contactMail($email, $ticket, $name, $subject, $body);
-      $mess = '<p style="text-align:center;">Message Sent you get a feedback from us thank you!</a>';
+      $mess = '<p style="text-align:center;">Message Sent! you will get a feedback from us thank you!</a>';
 
     }
   }
@@ -46,18 +46,18 @@ if (isset($_POST['contact-btn'])) {
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="css/faq.css">
-    <link rel="stylesheet" type="text/css" href="css/header-footer.css">
-    <link rel="icon" type="img/png" href="images/hng-favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="css/contactform.css">
+  <link rel="stylesheet" type="text/css" href="css/header-footer.css">
+  <link rel="icon" type="img/png" href="images/hng-favicon.png">
 </head>
 
 <body>
@@ -66,15 +66,10 @@ if (isset($_POST['contact-btn'])) {
   <section class="container-fluid">
 
 
-  <section class="freq-n">
-    <div class="container">
-      <div class="wrap" style="width: 100%;">
-        <div class="header">
-          <h1>Not a Frequently Asked Question?</h1>
-          <h1> contact us below</h1>
-        </div>
 
-        <?php
+      <form class="inputs-wrap" method="post">
+        <div id="contact-message">
+          <?php
 
 if (!empty($error)) {
   echo "<h4 class='text-danger text-center'>" . $error . "</h4>";
@@ -89,21 +84,15 @@ if (!empty($msg2)) {
   echo "<h4 class='text-danger text-center' style='color: red;'>" . $msg2 . "</h4>";
 }
 ?>
-
-        <form class="inputs-wrap" method="post">
-          <div id="contact-message">
-           
-          </div>
-          <input type="text" placeholder="Name" name="name" required>
-          <input type="email" placeholder="Email" name="email"  required>
-          <input type="text" placeholder="Subject" name="subject"  required>
-          <textarea id="" cols="" rows="10" name="message" required></textarea>
-          <input type="submit" id="submit" value="SEND MESSAGE" name="contact-btn">
-        </form>
-      </div>
+        </div>
+        <input type="text" placeholder="Name" name="name" required>
+        <input type="email" placeholder="Email" name="email" required>
+        <input type="text" placeholder="Subject" name="subject" required>
+        <textarea id="" placeholder="Write message" cols="" rows="10" name="message" required></textarea>
+        <input type="submit" id="submit" value="SEND MESSAGE" name="contact-btn">
+      </form>
     </div>
   </section>
-  </section>  
   <?php  include "fragments/site_footer.php";?>
 </body>
 

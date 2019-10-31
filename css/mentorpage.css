@@ -7,8 +7,11 @@
       font-family: 'Open Sans', sans-serif;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 7a98253332f16943e134f9d63a06d5e17fdce43e
  @keyframes Slide_up{
                 0%{
                     transform: translateY(250px);
@@ -17,7 +20,10 @@
                     transform: translateY(0);
                 }
             }
+<<<<<<< HEAD
 >>>>>>> bd557f54d7830d77309e704a3729eaebc724016b
+=======
+>>>>>>> 7a98253332f16943e134f9d63a06d5e17fdce43e
     a {
       text-decoration: none;
     }

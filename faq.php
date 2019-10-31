@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FAQ2</title>
+    <title>FAQ</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
@@ -20,47 +21,48 @@
     <link rel="stylesheet" href="css/newContact.css">
     <link rel="stylesheet" href="css/faq.css">
     <style>
-        .accordions {
+        .myaccordion {
+            box-shadow: 0 0 1px rgba(51, 8, 8, 0.1);
             margin: 0 auto;
-            margin-top: 50px;
-             padding-left: 10%;
-            width: 90%;
+            max-width: 750px;
         }
-        .accordion {
-                /* background-color: #eee; */
-                cursor: pointer;
-                /* width: 100%;                */
-                text-align: left;
-                outline: none;
-                transition: 0.4s;
-                color: #00AEFF;
-                font-weight: 600;
-                font-size: 20px;
-                display: inline-block;
-                margin-right: 20px;
-                vertical-align: middle;
-                padding: 20px;
+        
+        .myaccordion .card,
+        .myaccordion .card:last-child .card-header {
+            border: none;
             
-
-             }
-
-              [class*="fa-angle"] {
-                color: #00AEFF;
-                 font-size: 30px;
-                 vertical-align: middle;
-                 font-weight: 600;
-             }
-        .active, .accordion:hover {
-            color: #00AEFF; 
-}
-        .panel {
-        /* padding: 0 18px; */
-        display: none;
-        background-color: white;
-        overflow: hidden;
-        width: 60%;
-        padding-left: 20px;
-        padding-right: 20px;
+        }
+        
+        .myaccordion .card-header {
+            border-bottom-color: #EDEFF0;
+            background: transparent;
+        }
+        
+        .myaccordion .fa-stack {
+            font-size: 20px;
+        }
+        
+        .myaccordion .btn {
+            width: 100%;
+            font-weight: bold;
+            color: #00AEFF;
+            padding: 0;
+            font-weight: 600;
+            font-size: 20px;
+            display: inline-block;
+            margin-right: 10px;
+            vertical-align: middle;
+            padding: 20px;
+        }
+        
+        .myaccordion .btn-link:hover,
+        .myaccordion .btn-link:focus {
+            text-decoration: none;
+        }
+        
+        .myaccordion li+li {
+            margin-top: 20px;
+         
         }
     </style>
 
@@ -81,30 +83,95 @@
         </div>
     </section>
     </div>
-    <div class="accordions">
-       
-    <span class="accordion">When will the internship start? </span>
-     <i class="fa fa-angle-down"></i>
-   
-                 <div class="panel">
-                <p>The official date for HNGi7 will be communicated later when adequate preparations have been made</p>
+    </div>
+    <div class="col-md-12 text-black">
+        <div class="container">
+            <div id="accordion" class="myaccordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                When will the internship start?
+                                <span class="fa-stack fa-sm">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fas fa-angle-down fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            <p class="text-muted"> The official date for HNGi7 will be communicated later when adequate preparations have been made.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-       <div class="d-block mb-1"></div>
-    <span class="accordion">When will the internship start?</span>
-    <i class="fa fa-angle-down"></i>
-                <div class="panel">
-                <p>Everyone is welcomed to participate (there is no entrance exam).You just have to register and get prepared for the internship. Each week tasks are given out and successful interns are promoted to next stages</p>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                When will the internship start?
+                                <span class="fa-stack fa-2x">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fas fa-angle-down fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                            <p class="text-muted">
+                                The official date for HNGi7 will be communicated later when adequate preparations have been made.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="d-block mb-1"></div>
-    <span class="accordion">When will the internship start?</span>  <i class="fa fa-angle-down"></i>
-                <div class="panel">
-                <p>Yes, certificates are offerred to interns who successfully complete task to a certain stage on the internship.</p>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">  
+                                When will the internship start?
+                                <span class="fa-stack fa-2x">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fas fa-angle-down fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+                            <p class="text-muted">
+                                The official date for HNGi7 will be communicated later when adequate preparations have been made.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="d-block mb-1"></div>
-    <span class="accordion">When will the internship start?</span>  <i class="fa fa-angle-down"></i>
-                <div class="panel">
-                <p>The HNG Internship is a 3-months remote internship.</p>
+                <div class="card">
+                    <div class="card-header" id="headingFour">
+                        <h2 class="mb-0">
+                            <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                When will the internship start?
+                                <span class="fa-stack fa-2x">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fas fa-angle-down fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                        <div class="card-body">
+                            <p class="text-muted">
+                                The official date for HNGi7 will be communicated later when adequate preparations have been made.
+                            </p>
+                        </div>
                 </div>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
                 
     </div>
     <section class="freq-n">
@@ -133,7 +200,7 @@
     <?php include('fragments/site_footer.php'); ?>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </body>
-<script>
+<!-- <script>
         function eventListener(){
             //get element
             let accordions = document.querySelector('.accordions');
@@ -161,6 +228,12 @@
 
         
             //call function
-            eventListener();
-    </script>
+            eventListener(); 
+    </script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
 </html>
