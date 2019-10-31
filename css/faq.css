@@ -1,192 +1,68 @@
-* {
-  text-decoration: none;
-}
-body {
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Open Sans", segoe UI, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap');
 
-.container {
-  max-width: 75vw;
-  padding: 10px;
-  margin: auto;
-}
-
-
-.hero {
-  background-color: #d1f0f6;
-}
-
-.hero .wrap {
+.header_container {
+  background-color: #D1F0F6;
   text-align: center;
+  padding-bottom: 20px;
 }
-.hero .wrap h1 {
-  /* text-transform: capitalize;
-    color: #084482;
-    font-size: 40px;
-    margin-top: 50px; */
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  font-size: 40px;
+
+.header_container h1 {
   color: #084482;
-  padding-left: 4px;
-  padding-right: 4px;
+  font-weight: bolder;
 }
-.hero .wrap p {
-  margin-top: 20px;
-  max-width: 650px;
+
+.header_container p {
   color: #474747;
-  font-size: 20px;
-  margin: auto;
-  margin-bottom: 20px;
-}
-.freq {
-  width: auto;
-  /* text-align: center; */
-  margin: 1rem auto;
-}
-.freq .wrap {
-  display: flex;
-  flex-flow: column;
-}
-.freq .wrap a {
-  padding: 20px 0px;
-  text-decoration: none;
-  color: #00aeff;
-  font-weight: 600;
-  font-size: 20px;
-  /* align-self: center; */
-  /* text-align: center; */
-  text-transform: capitalize;
-  transition: 0.4s ease-out;
-}
-.freq .wrap a:hover {
-  color: rgb(150, 150, 150);
-}
-.freq .wrap a::after {
-  content: url(./images/Vector.png);
-  margin-left: 50px;
-}
-.paragraph {
-  color: #7b7c7d;
-  line-height: 2rem;
-  transition: 1s ease;
-}
-.freq-n h1 {
-  text-align: center;
-  width: 100%;
-  margin: auto;
-  text-transform: capitalize;
-  color: #084482;
-  font-weight: 600;
-  font-size: 30px;
-}
-.freq-n .header {
-  padding-top: 90px;
-}
-.freq-n .wrap {
-  display: flex;
-  flex-flow: column;
-}
-.freq-n .wrap .inputs-wrap {
-  display: flex;
-  flex-flow: column;
-}
-.inputs-wrap {
-  margin-bottom: 3rem;
-}
-.inputs-wrap > * {
-  width: 100%;
-  font-size: 16px;
-}
-.inputs-wrap input {
-  font-family: inherit;
-  padding: 10px 16px;
-  margin-bottom: 20px;
-  border-radius: 3px;
-  align-self: center;
-  border: 2px solid rgba(0, 0, 0, 0.1);
-}
-.inputs-wrap textarea {
-  padding: 10px 16px;
-  align-self: center;
-  border-radius: 3px;
-  margin-bottom: 20px;
-  border: 2px solid rgba(0, 0, 0, 0.1);
-}
-.inputs-wrap #submit {
-  color: white;
-  cursor: pointer;
-  background: #00aeff;
-  box-shadow: 0px 4px 6px rgba(50, 50, 93, 0.11),
-    0px 1px 3px rgba(0, 0, 0, 0.08);
-  border-radius: 4px;
-  border: none;
-  transition: 0.4s ease-out;
-  width: 100% !important;
-}
-.inputs-wrap #submit:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
 }
 
-.final {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-.quick {
-  display: flex;
-  flex-flow: column;
-}
-.final h2 {
-  text-transform: capitalize;
-  color: #00aeff;
-}
-.final div {
-  flex-basis: 22%;
-}
-.quick a {
-  color: #00aeff;
-  padding: 10px 0px;
-}
-.rights {
-  margin-bottom: 0;
-  color: #8898aa;
-  text-align: center;
-  font-size: 14px;
-}
-.img img {
-  width: 20px;
+
+
+.myaccordion {
+    box-shadow: 0 0 1px rgba(51, 8, 8, 0.1);
+    width: 100%;
+    margin: 80px 0;
 }
 
-@media (max-width: 860px) {
-  header .nav a {
-    font-size: 10px;
-  }
-  .final {
-    flex-wrap: wrap;
-  }
-  .final div {
-    flex-basis: 45%;
-    font-size: 14px;
-  }
-  .inputs-wrap > * {
-    width: 80vw;
-    font-size: 16px;
-  }
-  .final a {
-    font-size: 14px;
-  }
-  .freq .wrap a {
-    font-size: 15px;
-  }
-  .freq .wrap a::after {
-    content: url(./images/Vector.png);
-    margin-left: 5px;
-  }
-  .freq {
-    text-align: center;
-  }
+.myaccordion .card,
+.myaccordion .card:last-child .card-header {
+    border: none;
+  
+    
+}
+
+.myaccordion .card-header {
+    border-bottom-color: #EDEFF0;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+.myaccordion .fa-stack {
+    font-size: 20px;
+}
+
+.myaccordion .btn {
+    width: 100%;
+    font-weight: bold;
+    color: #00AEFF;
+    padding: 0;
+    font-size: 23px;
+    font-family: Open Sans;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.myaccordion .btn i {
+  margin-left: 30px;
+}
+
+.myaccordion .btn-link:hover,
+.myaccordion .btn-link:focus {
+    text-decoration: none;
+}
+
+.myaccordion li+li {
+    margin-top: 20px;
+ 
 }
