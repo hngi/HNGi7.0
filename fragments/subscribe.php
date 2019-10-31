@@ -16,7 +16,7 @@
         <input type='email' class="form-control" required placeholder="enter your email" id="subscribe-form">
     </div>
     <div class="form-group">
-        <button class="btn btn-primary" role="button" id="subscribe">
+        <button class="btn btn-primary" role="button" id="subscribe" style="background-color:#00AEFF; border: none">
             <i class="fa fa-check"></i> Subscribe
         </button>
     </div>
