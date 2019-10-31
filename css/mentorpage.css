@@ -6,9 +6,6 @@
     body {
       font-family: 'Open Sans', sans-serif;
     }
-<<<<<<< HEAD
-
-=======
  @keyframes Slide_up{
                 0%{
                     transform: translateY(250px);
@@ -17,7 +14,6 @@
                     transform: translateY(0);
                 }
             }
->>>>>>> bd557f54d7830d77309e704a3729eaebc724016b
     a {
       text-decoration: none;
     }
