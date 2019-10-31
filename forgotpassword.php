@@ -42,7 +42,7 @@ if (isset($_POST["recover-btn"])) {
                                         </tr>";
     $admin->forGetpassword($email, $code);
     forGetPasswordMail($subject, $body,$email,$url,$fullname);
-    $mess = '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: green; color: #fff; width: 80% !important; text-align: center;">A reset password link has been sent to your email thank you!</p>';
+    $mess = '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: green; color: #fff; width: 100% !important; text-align: center;">A reset password link has been sent to your email thank you!</p>';
   }else{
      $errors = '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: #F7CFCF; color: #6A0E0D; width: 80% !important; text-align: center;">Wrong email entered</p>';
   }
