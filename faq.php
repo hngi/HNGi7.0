@@ -177,7 +177,7 @@
 </div>
                 
     </div>
-    <section class="freq-n">
+  <!--  <section class="freq-n">
         <div class="container">
             <div class="wrap" style="width: 100%;">
                 <div class="header mb-5">
@@ -195,7 +195,7 @@
                 </form>
             </div>
         </div>
-    </section>
+    </section> -->
  
 
 
