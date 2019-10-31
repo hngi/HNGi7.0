@@ -15,8 +15,6 @@
     <link rel="stylesheet" type="text/css" href="css/header-footer.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/donate.css" />
-    <link rel="icon" type="img/png" href="images/hng-favicon.png">
-
     <style>
     .jumbo {
       background-color: #d1f0f6;
@@ -27,7 +25,6 @@
 
   <body>
   <section class="container-fluid">
-  <!-- <div class="body-container"> -->
     <section class="jumbo">
     <?php include "fragments/site_header.php" ?>
      </section>
@@ -151,9 +148,9 @@
       });
     </script>
 
-     <!-- </div> -->
-    </section>     
-    <?php include "fragments/site_footer.php" ?>
+     <?php include "fragments/site_footer.php" ?>
+    
+    </section>
   </body>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

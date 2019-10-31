@@ -36,5 +36,4 @@ function activeDropDown(strings){
       let el = document.getElementById(strings);
       setTimeout(()=>{
         el.classList.toggle('activeHomepageDrop')}, 200);
-        
 }
