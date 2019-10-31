@@ -478,11 +478,12 @@ h1
     width: 100%;
   }
   .statis a{
-		color: white;
+		color: rgba(0,174,255,0.8);
 	}
-  .statis a:hover{
+  .statis a:hover,
+  .statis a:active{
 		text-decoration: none;
-		color: rgb(226, 226, 226);
+		color: rgba(0,174,255,1);
 	}
   .statis .box {
     position: relative;
@@ -491,14 +492,15 @@ h1
     border-radius: 3px;
 	margin-bottom: 25px;
 	box-shadow: 1px 0 3px rgba(0,0,0,0.3);
-	background-color: #00aeff !important;
+	/* background-color: #00aeff !important; */
+	background-color: #fefefe !important;
   }
   .statis .box h3:after {
     content: "";
     height: 2px;
     width: 70%;
     margin: auto;
-    background-color: rgba(255, 255, 255, 0.12);
+    background-color: rgba(0, 174, 255, 0.15);
     display: block;
     margin-top: 10px;
   }
@@ -510,7 +512,7 @@ h1
     padding: 15px;
     top: -25px;
     left: -25px;
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(0, 174, 255, 0.15);
     line-height: 60px;
     text-align: right;
     border-radius: 50%;
@@ -538,6 +540,7 @@ h1
   .navbar-default {
 	/* background-color: #337ab7 !important; */
 	background-color:#00aeff !important;
+	/* background: linear-gradient(180deg, #D1F0F6 0%, #00aeff 100%); */
     border: none !important;
     border-radius: 0 !important;
 	margin: 0 !important;
@@ -674,13 +677,35 @@ h1
 	}
   }
 
-  #statistics{
-	width: 500px;
-	height: 400px;
-	margin-left: 16vw;
-	border: 1px solid red;
+.charts{
+	margin-top: 2rem;
+	background-color:#fefefe;
+	box-shadow: 1px 0 3px rgba(0,0,0,0.3);
 }
 
 .intern-table, .mentor-table{
 	display: none;
+}
+
+.options{
+	text-align: center;
+}
+.options label, 
+.options input[type="radio"]{
+	display: inline-block;
+	margin-left: 1em;
+	margin-right: 0.5em;
+	color: rgba(0,174,255,1)
+}
+#count_by_state,
+#count_by_state2,
+#count_by_track,
+#count_by_track2{
+	display: none !important;
+}
+#count_by_state.active,
+#count_by_state2.active,
+#count_by_track.active,
+#count_by_track2.active{
+	display: block !important;
 }
