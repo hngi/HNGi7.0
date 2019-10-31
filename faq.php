@@ -12,103 +12,42 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/newContact.css">
     <link rel="stylesheet" href="css/faq.css">
-    <style>
-        .accordions {
-            margin: 0 auto;
-            margin-top: 50px;
-             padding-left: 10%;
-            width: 90%;
-        }
-        .accordion {
-                /* background-color: #eee; */
-                cursor: pointer;
-                /* width: 100%;                */
-                text-align: left;
-                outline: none;
-                transition: 0.4s;
-                color: #00AEFF;
-                font-weight: 600;
-                font-size: 20px;
-                display: inline-block;
-                margin-right: 20px;
-                vertical-align: middle;
-                padding: 20px;
-            
-
-             }
-
-              [class*="fa-angle"] {
-                color: #00AEFF;
-                 font-size: 30px;
-                 vertical-align: middle;
-                 font-weight: 600;
-             }
-        .active, .accordion:hover {
-            color: #00AEFF; 
-}
-        .panel {
-        /* padding: 0 18px; */
-        display: none;
-        background-color: white;
-        overflow: hidden;
-        width: 60%;
-        padding-left: 20px;
-        padding-right: 20px;
-        }
-    </style>
 
 </head>
 
-<body class="">
-    <div class="container-fluid ">   
-        <?php include('fragments/site_header.php'); ?>
-   <div class="header_container">
-    <section class="hero pt-4">
+<body>
+    <section class="container-fluid">
+    <?php include('fragments/site_header.php'); ?>
+    <section class="hero">
         <div class="container">
-            <div class="wrap my-5">
-                <h1>Frequently Asked Questions
+            <div class="wrap">
+                <h1>frequently asked questions
                 </h1>
                 <p>Here are some of the most frequently asked questions on HNG 7.0</p>
             </div>
         </div>
     </section>
-    </div>
-    <div class="accordions">
-       
-    <span class="accordion">When will the internship start? </span>
-     <i class="fa fa-angle-down"></i>
-   
-                 <div class="panel">
-                <p>The official date for HNGi7 will be communicated later when adequate preparations have been made</p>
-                </div>
-       <div class="d-block mb-1"></div>
-    <span class="accordion">When will the internship start?</span>
-    <i class="fa fa-angle-down"></i>
-                <div class="panel">
-                <p>Everyone is welcomed to participate (there is no entrance exam).You just have to register and get prepared for the internship. Each week tasks are given out and successful interns are promoted to next stages</p>
-                </div>
-                <div class="d-block mb-1"></div>
-    <span class="accordion">When will the internship start?</span>  <i class="fa fa-angle-down"></i>
-                <div class="panel">
-                <p>Yes, certificates are offerred to interns who successfully complete task to a certain stage on the internship.</p>
-                </div>
-                <div class="d-block mb-1"></div>
-    <span class="accordion">When will the internship start?</span>  <i class="fa fa-angle-down"></i>
-                <div class="panel">
-                <p>The HNG Internship is a 3-months remote internship.</p>
-                </div>
-                
-    </div>
+    <section class="freq">
+        <div class="container">
+            <div class="wrap">
+                <a href="##" onclick="toggleVisibility('Menu1');">When will the internship start?</a>
+                <p id="Menu1" style="display: none;" class="paragraph">The official date for HNGi7 will be communicated later when adequate preparations have been made</p>
+                <a href="##" onclick="toggleVisibility('Menu2');">Who can apply for the internship?</a>
+                <p id="Menu2" style="display: none;" class="paragraph">Everyone is welcomed to participate (there is no entrance exam).You just have to register and get prepared for the internship. Each week tasks are given out and successful interns are promoted to next stages</p>
+                <a href="##" onclick="toggleVisibility('Menu3');">Does the internship offers certificate?</a>
+                <p id="Menu3" style="display: none;" class="paragraph">Yes, certificates are offerred to interns who successfully complete task to a certain stage on the internship .</p>
+                <a href="##" onclick="toggleVisibility('Menu4');">How long will the internship last?</a>
+                <p id="Menu4" style="display: none;" class="paragraph">The HNG Internship is a 3-months remote internship.</p>
+            </div>
+        </div>
+    </section>
     <section class="freq-n">
         <div class="container">
             <div class="wrap" style="width: 100%;">
-                <div class="header mb-5">
-                    <h1>not a frequently asked question?<br />
+                <div class="header">
+                    <h1>not a frequently asked question?
                         contact us below
                     </h1>
                 </div>
@@ -117,47 +56,41 @@
                     <input type="email" placeholder="Email">
                     <input type="text" placeholder="Subject">
                     <textarea name="text" id="" cols="" rows="10"></textarea>
-                    <input type="submit" id="submit" value="SEND MESSAGE" class="btn btn-block">
+                    <input type="submit" id="submit" value="SEND MESSAGE">
 
                 </form>
             </div>
         </div>
     </section>
- 
-
-
-    </div>    
     <?php include('fragments/site_footer.php'); ?>
 
+
+    </section>
 </body>
 <script>
-        function eventListener(){
-            //get element
-            let accordions = document.querySelector('.accordions');
+        var divs = ["Menu1", "Menu2", "Menu3", "Menu4"];
+        var visibleDivId = null;
 
-            //add click event to element
-            accordions.addEventListener('click' , toggleAccordion)
+        function toggleVisibility(divId) {
+            if (visibleDivId === divId) {
+
+            } else {
+                visibleDivId = divId;
+            }
+            hideNonVisibleDivs();
         }
 
-            function toggleAccordion(e) {
-                //get dom element
-                let target = e.target;
-          
-                    if(target.classList.contains('fa-angle-down')){
-                     let panel = target.nextElementSibling; 
-                    panel.style.display = "block";
-                    target.classList.add('fa-angle-up');
-                   target.classList.remove('fa-angle-down');
-                    }else{ 
-                        let panel = target.nextElementSibling;
-                    panel.style.display = "none";
-                    target.classList.add('fa-angle-down');
-                   target.classList.remove('fa-angle-up');
-                    }
+        function hideNonVisibleDivs() {
+            var i, divId, div;
+            for (i = 0; i < divs.length; i++) {
+                divId = divs[i];
+                div = document.getElementById(divId);
+                if (visibleDivId === divId) {
+                    div.style.display = "block";
+                } else {
+                    div.style.display = "none";
+                }
             }
-
-        
-            //call function
-            eventListener();
+        }
     </script>
 </html>

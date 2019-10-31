@@ -69,6 +69,7 @@ if (isset($_POST["recover-btn"])) {
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="stylesheet" href="css/join-intern.css">
+
     <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
 
    
@@ -107,7 +108,7 @@ if (isset($_POST["recover-btn"])) {
       </form>
     </div>
 
-          </section>      
-          <?php include('fragments/site_footer.php'); ?>
+      <?php include('fragments/site_footer.php'); ?>
+          </section>
         </body>
   </html>

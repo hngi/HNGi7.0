@@ -114,3 +114,12 @@ showDay(Math.floor(timeLeft / (1000 * 60 * 60 * 24)));
 showHour(Math.floor((timeLeft % (1000 * 60 * 60 * 24)) /(1000 * 60 * 60)));
 showMinute(Math.floor((timeLeft % (1000 * 60 * 60)) /(1000 * 60)));
 showSecond(Math.floor((timeLeft % (1000 * 60)) / 1000));
+
+function myFunction() {
+  var x = document.getElementById("more-images");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}

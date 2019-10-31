@@ -13,17 +13,17 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
-    <link rel="icon" type="img/png" href="images/hng-favicon.png">
-</head>
     <style>
-    #home {
-        display: none;
-    }
+        #home {
+            display: none;
+        }
     </style>
+</head>
+
 <body>
     <section class="container-fluid">
     <?php include('fragments/site_header.php');?>
-    <div>
+    <div class="container-fluid">
         <img src="https://bit.ly/2OC3tWo" id="corner-circle" alt="Graphic at the top right corner">
 
         <main>
@@ -90,9 +90,9 @@
 
             </div>
 
-            <div class="main-third-row ">
+            <div class="main-third-row text_center">
                 <div class="">
-                    <h3 class="subheading text_center text__dark-blue" style="font-weight: bold">
+                    <h3 class="subheading text__dark-blue" style="font-weight: bold">
                         Unleash Your Creativity
                     </h3>
                 </div>
@@ -125,7 +125,7 @@
             </div>
 
             <div class="main-fourth-row">
-                <h3 id="" class="text_center">How Does It Work ?</h3>
+                <h3 id="main-fourth-row_text">How Does It Work ?</h3>
                 <div class="">
                     <div class="section1">
                         <div class="myhalf-a-row">
@@ -135,15 +135,15 @@
                                 (there is no entrance exam). Anyone can log into the internship
                                 using their laptop. Each week we give tasks.
                             </p>
-                            <button class="cta-button button--midBlue" id="">
-                                <a href="join-intern.php">Get Started</a>
+                            <button class="cta-button button--midBlue" id="buttt">
+                                <a href="join-intern.php" id="butt">Get Started</a>
                             </button>
                         </div>
-                        <div class="half-a-row">
+                        <div class="half-a-row h222">
                             <table>
                                 <thead>
-                                    <tr>
-                                        <th colspan="2">Event Calendar</th>
+                                    <tr style="padding: 0">
+                                        <th style="padding: 1.5em 1.5em" colspan="2">Event Calendar</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -175,15 +175,15 @@
                                 src="https://res.cloudinary.com/chux/image/upload/v1570646194/Rectangle_4.6_vfbtwb.png"
                                 alt="interns" />
                         </div>
-                        <div class="onboard">
-                            <h4 class="">Onboard And Connect With Teammates
+                        <div class="half-a-row">
+                            <h4 class="" style="color: darkblue; margin-top: 10px; ">Onboard And Connect With Teammates
                             </h4>
                             <p class="content">The HNG internship is a 3-month remote internship designed to find and
                                 develop the most talented software developers. Everyone is welcomed to participate
                                 (there is no entrance exam). Anyone can log into the internship
                                 using their laptop. Each week we give tasks.</p>
                             <button class="cta-button button--midBlue" id="buttt">
-                                <a href="join-intern.php">Get Started</a>
+                                <a href="join-intern.php" id="butt">Get Started</a>
                             </button>
                         </div>
                     </div>
@@ -192,10 +192,10 @@
             </div>
 
 
-            <div class="main-fifth-row">
+            <div class="main-fifth-row text-align">
                 <div class="row">
-                    <div class=" text-md-left">
-                        <h4 class="">Build Scalable Products &
+                    <div class="text-center text-md-left col-12 col-md-6 col" style="padding-top: 35px;">
+                        <h4 style="color: darkblue; margin-bottom: 20px; margin-right: 10px;">Build Scalable Products &
                             Grow</h4>
                         <p class="content">The HNG Internship is a 3-months remote internship designed to find and
                             develop the most talented software developers. Everyone is welcoming to participate(there is
@@ -203,16 +203,21 @@
                             using their laptop. Each week, we give tasks.</p>
 
 
-                        <button class="cta-button button--midBlue">
-                            <a href="join-intern.php">Get Started</a>
+                        <button class="cta-button button--midBlue" id="buttt">
+                            <a href="join-intern.php" id="butt">Get Started</a>
                         </button>
                     </div>
 
-                    <div class="">
-                            <div>
-                                <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730626/img1_cpa8nj.png">
+                    <div class="col-12 mt-md-5 mt-lg-0 col-md-6 ">
+                        <div class="row">
+                            <div class="col-12 myImage" style="padding-bottom: 6em; padding-top: 12px">
+                                <img style="width:100%;"
+                                    src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730626/img1_cpa8nj.png">
                             </div>
+                        </div>
+
                     </div>
+
                 </div>
             </div>
 
@@ -286,17 +291,14 @@
                                     </div>
                                     <div class="col-md-6 col-sm-12 mb-5 mt-5 table_accord">
                                         <div class="accordion" id="accordionExample">
-
                                             <div class="card" id="card0">
                                                 <div class="card-header" id="headingOne">
                                                     <h2 class="mb-0">
-
                                                         <img onclick="activeDropDown('headingOne')" class="btn"
                                                             data-toggle="collapse" data-target="#collapseOne"
                                                             aria-expanded="true" aria-controls="collapseOne"
                                                             src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png"
                                                             class="arrow1">
-                                                            
                                                         <button onclick="activeDropDown('headingOne')"
                                                             class="btn btn-link collapsed buttonTwo" type="button"
                                                             data-toggle="collapse" data-target="#collapseOne"
@@ -448,7 +450,7 @@
             <div class="main-seventh-row">
                 <h4>Our Dedicated Mentors
                 </h4>
-                <section class="mentor-section">
+                <div class="mentor-section">
                     <div class="mentor-image">
                         <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730807/IMG2_uiu3fj.png">
                         <p>Ryan Thompson</p>
@@ -469,9 +471,9 @@
                         <p>John Doe </p>
                         <p>Founder and CEO</p>
                     </div>
-                </section>  
+                </div>
                 <div>
-                    <button class="button--midBlue cta-button" id="mentorButton">
+                    <button class="button--midBlue cta-button">
                         <a href="mentorpage.php">See more</a>
                     </button>
                 </div>
@@ -506,7 +508,7 @@
 
             <div class="support">
                 <div class="support__header">
-                    <h3 class="support__header-text text-light text_center">Support the Movement</h3>
+                    <h3 class="support__header-text text-light">Support the Movement</h3>
                 </div>
                 <div class="support__items">
                     <div class="support__item">
@@ -553,7 +555,7 @@
             </div>
 
             <div class="sponsor">
-                <h2 class="text_center blue-text">HNG 6.0 Internship Sponsors</h2>
+                <h2 class="center-text blue-text">HNG 6.0 Internship Sponsors</h2>
                 <div id="sponsor-flex-top">
                     <a href="#"><img
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg"></a>
@@ -572,18 +574,17 @@
                     <a href="#"><img
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg"></a>
                 </div>
-                <button class="cta-button button--midBlue">
-                    <a href="donate.php" class="text_center">Become Sponsor</a>
-                </button>
+                <p class="center-text"><a href="donate.html" class="def-button shadowed center no-underline">Become a
+                        Sponsor</a></p>
             </div>
 
         </main>
 
     </div>
-    </section>    
     <?php include('fragments/site_footer.php'); ?>
-</body>
 
+    </section>
+</body>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
