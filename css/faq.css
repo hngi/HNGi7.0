@@ -7,49 +7,12 @@ body {
   font-family: "Open Sans", segoe UI, sans-serif;
 }
 
-.header_section {
-  margin-top: 20px;
-}
-header {
-  background-color: #d1f0f6;
-  padding-left: 20px !important;
-  padding-right: 20px;
-}
 .container {
   max-width: 75vw;
   padding: 10px;
   margin: auto;
 }
-header .wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-header .wrap a {
-  text-decoration: none;
-  color: black;
-  padding: 10px;
-}
-header .wrap .logo img {
-  width: 100%;
-}
-header .wrap .nav {
-  flex-basis: 45%;
-  display: flex;
-  justify-content: space-between;
-}
-header .wrap .logo {
-  flex-basis: 30%;
-}
-.nav .nav-btn {
-  padding: 5px 10px;
-  background: #00aeff;
-  border: 1px solid #00aeff;
-  border-radius: 4px;
-  color: white;
-  font-weight: 500;
-}
+
 
 .hero {
   background-color: #d1f0f6;

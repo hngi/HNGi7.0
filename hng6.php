@@ -25,11 +25,10 @@ $countDownValues = $countdown->getDate();
 
 </head>
 <body>
+        <?php include('fragments/site_header.php'); ?>
 
     <p id="startDate" style="display: none;"><?php echo $countDownValues["startDate"]; ?></p>
     <p id="startTime" style="display: none;"><?php echo $countDownValues["startTime"]; ?></p>
-
-    <?php include('fragments/site_header.php'); ?>
 
     <section>
         <main>
