@@ -65,12 +65,12 @@
 
   
     <section class="jumb">  
-            <h2>Experience Recap From Past Interns</h2>
-            <p class="para">Testimonies From Ex HNG Internship Finalists</p>
-            <a href="#modal-id" data-toggle="modal" class="button-primary">Submit Experience</a> <!--button to add experience-->
+            <h2>Past Interns Experience</h2>
+            <p class="para">Testimonies From Ex-HNG Internship Finalists</p>
+            <p class="text-center"><a href="admin_internexperience.php">Submit Experience</a></p>
    </section>
 
-    <!--modal here-->
+    
     <div class="modal fade" id="modal-id">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -134,10 +134,9 @@
                             }
                             ?>
                             <div class="wrapper-child"  >
-                                <img class="image" src="<?php echo $img_src;?>">
-                                <h4><?php echo $all_experience['names'];?></h4>
-                                <p class="stack"><?php echo $all_experience['stack'];?></p>
-                                <hr class="hline"/>
+                                <img class="image" src="<?php echo $img_src;?>" alt = "intern img">
+                                <h4 class="name"><?php echo $all_experience['names'];?></h4>
+                                <p class="stack"><?php echo $all_experience['stack'];?></p> <hr>
                                 <p class="experience">
                                     <?php echo nl2br($all_experience['experience']);?>
                                 </p>
