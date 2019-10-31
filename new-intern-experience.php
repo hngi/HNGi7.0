@@ -23,7 +23,7 @@
       <div class="container main-header-content">
         <h1 class="text-center main-heading">Past Interns Experience</h1>
         <p class="text-center mt-4 mb-1">Testimonies From Ex-HNG Internship Finalists</p>
-        <p class="text-center"><a href="admin_internexperience.php">Submit Experience</a></p> 
+        <p class="text-center" id="submitExp" onclick="message()"><a href="#" >Submit Experience</a></p> 
       </div>
       </div>
 
@@ -91,5 +91,11 @@
     
   <?php  include "fragments/site_footer.php";?>
 </body>
+
+<script>
+  function message (){
+    alert("Function under construction!");
+  }
+</script>
 
 </html>
