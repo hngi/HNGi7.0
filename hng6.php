@@ -146,7 +146,7 @@ $countDownValues = $countdown->getDate();
                     </div>
                 </section> <br>
                 <div  data-aos="fade-up">
-                    <button class="def-button shadowed" onclick="showImage()">View more photos</button></div>
+                    <button class="def-button shadowed" onclick="showImage()" id="view_more">View more photos</button></div>
             </section>
 
             <section id="participate-section" class="container">
@@ -290,5 +290,19 @@ $countDownValues = $countdown->getDate();
                 images.style.display = "grid";
             }
         }
+
+
+          let view_btn =  $("#view_more");
+          view_btn.on("click", function(){
+          let view_btn_text =  view_btn.text();
+              if (view_btn_text === "View more photos"){
+                view_btn.text("View less photos");
+              }else {
+                  view_btn.text("View more photos")
+              }
+          })
+         
+        
+
     </script>
 </html>
