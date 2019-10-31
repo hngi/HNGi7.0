@@ -11,6 +11,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+<form action="" method="post">
+    <div class="form-group">
+        <input type='email' class="form-control" required placeholder="enter your email" id="subscribe-form">
+    </div>
+    <div class="form-group">
+        <button class="btn btn-info" role="button" id="subscribe">
+            <i class="fa fa-check"></i> Subscribe
+        </button>
+    </div>
+</form>
 <a class="btn btn-primary" data-toggle="modal" href="#modal-subscribe">Subscribe</a>
 
 <div class="modal fade" id="modal-subscribe">
