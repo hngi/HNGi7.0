@@ -41,6 +41,8 @@
         finding and nurturing talent.
       </p>
       <a href="#form" class="button-primary">Donate</a>
+      <a href="newsponsor.php" class="button-primary">Register as Sponsor(Brand)</a>
+
     </div>
 
     <section class="whatwe">
@@ -107,6 +109,8 @@
         </select>
         <input type="submit" /> <br>
         <a href="quickdonation.php">Donate via Flutter</a>
+        <a href="newsponsor.php">Register as Sponsor(Brand)</a>
+       
       </form>
     </section>
 
