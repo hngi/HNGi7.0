@@ -26,18 +26,18 @@ html {
 
 
 .hero-cont {
-  margin-top: 10vh;
+  padding-top: 10vh;
   padding-left: 32px;
   padding-right: 32px;
   padding-bottom: 40px;
   text-align: center;
+  background-color: #D1F0F6 !important;
   color: var(--dark-blue);
  
 }
 
 
 .hero-cont .title {
-  animation: Slide_up 1.4s ease ;
   font-weight: 600;
   font-size: 30px;
 }
@@ -52,7 +52,6 @@ html {
 }
 
 .hero-cont .desc {
-  animation: Slide_up 1.4s ease ;
   color: #474747;
   max-width: 600px;
   margin-left: auto;
@@ -61,7 +60,16 @@ html {
   font-size: 16px;
 }
 
-a.button-primary,
+a.button-primary {
+  display: inline-block;
+  color: white;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  background-color: var(--blue);
+  outline: none;
+  border: none;
+}
+
 .banner.form form input[type='submit'] {
   display: inline-block;
   color: white;

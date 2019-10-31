@@ -61,10 +61,10 @@ if (isset($_POST['contact-btn'])) {
 </head>
 
 <body>
+<div style="background-color: #D1F0F6 !important;"><?php include('fragments/site_header.php'); ?></div>
+
   <section class="container-fluid">
-<?php
-    include "fragments/site_header.php";
-?>
+
 
   <section class="freq-n">
     <div class="container">

@@ -2,3 +2,20 @@
     border: none !important;
     border-bottom: 1px solid grey !important; 
 }
+.inputWithIcon{
+    position: relative;
+}
+.inputWithIcon i{
+    position: absolute;
+    top: 25px;
+    left: 5px;
+}
+ input::placeholder {
+  padding-left: 5px;
+}
+#password, #email{
+    padding-left: 30px;
+}
+button {
+     width: 230px !important;
+}

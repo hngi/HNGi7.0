@@ -1,24 +1,26 @@
-<header id="header">
-    <!--Logo-->
-    <section id="logo">
-        <a href="index.php"><img id="hng-logo"
-                src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png"></a>
-    </section>
-    <!--ends here-->
-    <section class="nav_button" onclick="toggleMenu()">
-        <div class="nav_button_bar"></div>
-        <div class="nav_button_bar"></div>
-        <div class="nav_button_bar"></div>
-    </section>
-    <nav class="menu_bar" id="navMenu">
-        <a href="index.php" class="nav-link" id="home">Home</a>
-        <a href="hng6.php" class="nav-link">HNGi 6.0</a>
-        <a href="mentorpage.php" class="nav-link">Mentors</a>
-        <a href="contactform.php" class="nav-link">Contact</a>
-        <a href="login.php" class="nav-link">Login</a>
-        <a href="join-intern.php" class="nav-link primary-btn float_right">Join HNGi7.0</a>
-    </nav>
-</header>
+<div class="container">
+    <header id="header">
+        <!--Logo-->
+        <section id="logo">
+            <a href="index.php"><img id="hng-logo"
+                    src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png"></a>
+        </section>
+        <!--ends here-->
+        <section class="nav_button" onclick="toggleMenu()">
+            <div class="nav_button_bar"></div>
+            <div class="nav_button_bar"></div>
+            <div class="nav_button_bar"></div>
+        </section>
+        <nav class="menu_bar" id="navMenu">
+            <a href="index.php" class="nav-link" id="home">Home</a>
+            <a href="hng6.php" class="nav-link">HNGi 6.0</a>
+            <a href="mentorpage.php" class="nav-link">Mentors</a>
+            <a href="contactform.php" class="nav-link">Contact</a>
+            <a href="login.php" class="nav-link">Login</a>
+            <a href="join-intern.php" class="nav-link primary-btn float_right">Join HNGi7.0</a>
+        </nav>
+    </header>
+</div>
 
 <script>
     function toggleMenu(){

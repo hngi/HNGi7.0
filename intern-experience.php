@@ -51,15 +51,20 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="stylesheet" href="css/intern-experience.css">
     <title>Experience Page</title>
 </head>
 
 <body>
-    <section class="container-fluid">
-    <section class="jumbo">  
-    <?php include('fragments/site_header.php');?>
+
+<section class="navigation">
+   <?php include('fragments/site_header.php'); ?>
+  </section>
+
+  
+    <section class="jumb">  
             <h2>Experience Recap From Past Interns</h2>
             <p class="para">Testimonies From Ex HNG Internship Finalists</p>
             <a href="#modal-id" data-toggle="modal" class="button-primary">Submit Experience</a> <!--button to add experience-->
@@ -104,7 +109,7 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
-
+    <section class="container-fluid px-2">
     <main>
         <section>
             <section class="mentors-section">
@@ -147,6 +152,7 @@
     </main>
     </section>        
     <?php include('fragments/site_footer.php'); ?>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 </body>
  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

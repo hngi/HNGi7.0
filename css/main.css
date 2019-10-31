@@ -384,6 +384,7 @@
         padding: 50px;
         text-align: center;
         margin-bottom: 50px;
+        margin-top: 0;
     }
     .support__header {
         width: 100%;
@@ -668,7 +669,18 @@
     }
    
 }
+@media screen and (max-width: 502px) {
 
+    #countdown-container1 {
+        zoom: 0.7;
+    }
+
+    .countdown1 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
 @media screen and (min-width: 1000px){
 
     .main-second-row {
@@ -697,5 +709,11 @@
 @media screen and (min-width:1400px){
     .main-second-row {
         margin-top:-300px;
+    }
+}
+
+@media screen and (max-width:759px){
+    .mobile-view {
+        text-align: center;
     }
 }

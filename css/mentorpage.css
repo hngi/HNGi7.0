@@ -8,39 +8,7 @@
     }
 <<<<<<< HEAD
 
-    body{
-      background-color: rgb(241, 235, 235);
-  }
-
-
-  /*Small screen - any screen size below 768px*/    
-  @media ( max-width: 768px ) {
-      .body-container{
-          background-color: white;
-          margin: 30px; 
-          
-      }
-   
-  }
-
-  /*Medium  screen and upward*/ 
-  @media ( min-width: 768px ) {
-     .body-container{
-          background-color: white;
-          margin: 40px 60px;
-          }
-          .nav_button {
-            position: absolute;
-            right: 5px;
-            top: 30px;
-            margin-right: 80px;
-          }
-  }
-
 =======
-    .content{
-      
-    }
  @keyframes Slide_up{
                 0%{
                     transform: translateY(250px);
@@ -49,7 +17,7 @@
                     transform: translateY(0);
                 }
             }
->>>>>>> f1394d23e52a617d8e07fbfac93253a57ca883a1
+>>>>>>> bd557f54d7830d77309e704a3729eaebc724016b
     a {
       text-decoration: none;
     }
@@ -151,8 +119,7 @@
       background-color: #D1F0F6;
       position: relative;
       min-height: 40vh;
-      margin-right: -50px;
-      margin-left: -50px;
+      width: 100vw !important;
      }
      
      .land {
@@ -203,12 +170,7 @@
          color: #3BB9FF;
      }
      
-     
-     
-     .btn {
-         Background: #3BB9FF !important;
-         Border: #3Bb9ff !important;
-     }
+
      ul {
          list-style: none;
      }
@@ -235,6 +197,7 @@
      #footer {
         /* background: none !important; */
         min-height: 60vh;
+        padding: 1rem;
      }
 
 
@@ -369,23 +332,3 @@
      }
 
     }
-
-    @media (min-width: 375px) {
-      #landing-page{
-        align-items: center;
-        padding-right: 10vw;
-        padding-left: 15vw;
-    }
-      }
-
-    
-    @media (min-width: 320px) {
-      #landing-page{
-        align-items: center;
-        padding-right: 10vw;
-        padding-left: 15vw;
-    }
-      }
-
-    
-

@@ -57,9 +57,10 @@ require_once 'classControllers/init.php';
 </head>
 
 <body>
-  <section class="container-fluid">
+<div style="background-color: #D1F0F6 !important;"><?php include('fragments/site_header.php'); ?></div>
+
+  <section class="container-fluid1">
   <section class="jumbo">
-    <?php include('fragments/site_header.php'); ?>
 
     <h2 class="heading">Join as an intern</h2>
     <p class="para">
