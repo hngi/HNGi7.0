@@ -31,6 +31,8 @@
     }
     .blue-text {
         color: #084482;
+        font-size: 25px;
+        font-weight: bold;
     }
     .darkblue-text {
         color: #8898AA;
@@ -121,7 +123,7 @@
     }
     #home-about h1 {
         width: 100%;
-        font-size: 40px;
+        font-size: 25px;
         font-weight: 600;
         text-align: center;
         color: #084482;
@@ -153,6 +155,8 @@
 
         .gallery h2 {
             text-align: center;
+            font-size: 25px;
+            font-weight: bold;
         }
 
         .gallery_items {

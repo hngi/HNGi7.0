@@ -16,10 +16,27 @@
   align-items: center;
   justify-content: center;
   padding-top: 50px;
-  width: 80vw;
+  width: 60vw;
   margin: 1rem auto;
   margin-bottom: 3rem;
  }
+ .def-button {
+  color: white;
+  background-color: #00AEFF;
+  padding: 2px 10px;
+  border-radius: 4px;
+}
+.def-button:hover {
+  text-decoration: none;
+  color: white;
+  opacity: .7;
+}
+.headingh2{
+  font-size: px !important;
+  font-weight: bold !important;
+  padding-bottom: 5px;
+}
+ 
  @media screen and (max-width: 400px){
    #header{
        width:90%;
@@ -58,6 +75,7 @@
   align-items: center;
   width: 100%;
   margin-top: 0px;
+  padding: 30px;
  }
  
  .login-heading {

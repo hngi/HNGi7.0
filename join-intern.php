@@ -62,10 +62,10 @@ require_once 'classControllers/init.php';
   <section class="container-fluid1">
   <section class="jumbo">
 
-    <h2 class="heading">Join as an intern</h2>
+    <h2 class="headingh2">Join as an intern</h2>
     <p class="para">
       Complete the form below to begin your journey as an intern.<br>
-      To become a mentor <a href="MentorSetUpPage2.php">Click here</a>
+      To become a mentor <a href="MentorSetUpPage2.php" class="def-button shadowed">Click here</a>
     </p>
   </section>
 
