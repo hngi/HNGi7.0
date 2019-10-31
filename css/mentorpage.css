@@ -6,6 +6,9 @@
     body {
       font-family: 'Open Sans', sans-serif;
     }
+<<<<<<< HEAD
+
+=======
  @keyframes Slide_up{
                 0%{
                     transform: translateY(250px);
@@ -14,6 +17,7 @@
                     transform: translateY(0);
                 }
             }
+>>>>>>> bd557f54d7830d77309e704a3729eaebc724016b
     a {
       text-decoration: none;
     }
@@ -166,12 +170,7 @@
          color: #3BB9FF;
      }
      
-     
-     
-     .btn {
-         Background: #3BB9FF !important;
-         Border: #3Bb9ff !important;
-     }
+
      ul {
          list-style: none;
      }

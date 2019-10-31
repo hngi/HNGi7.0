@@ -17,12 +17,6 @@
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
 </head>
-<style>
-    #home {
-        display: none;
-    }
-</style>
-
 <body>
 <?php include('fragments/site_header.php');?>
     <section>
