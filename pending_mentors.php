@@ -4,7 +4,7 @@ if (!isset($_SESSION["role"])) {
     header('Location:admin_login.php');
 }
 $mentors = new Mentor;
-$display = $mentors->allMentors();
+$display = $mentors->pendingMentors();
 if (isset($_GET['acceptMentorId'])) {
     $mentor_id = $_GET['acceptMentorId'];
     $message = $mentors->AcceptMentor($mentor_id);
@@ -68,9 +68,9 @@ if (isset($_GET['rejectMentorId'])) {
         <input type="text" class="searchBox"><i class="fas fa-search"></i>
         <section id="overview-section">
             <!-- <h1>Dashboard</h1> -->
-            <h2>Active Mentors </h2>
+            <h2>Pending Mentors </h2>
             <div style="margin-bottom : 10px;">
-                <a href="pending_mentors.php" class="btn btn-default">Pending Mentors</a>
+                <a href="registered_mentors.php" class="btn btn-default">Active Mentors</a>
                 <a href="declined_mentors.php" class="btn btn-default">Declined Mentors</a>
             </div>
             <!-- <section id="intern-section">
@@ -82,7 +82,7 @@ if (isset($_GET['rejectMentorId'])) {
 
                     <?php
                     if ($display == "0") {
-                        echo "<h2>There are no Active Mentors</h2>";
+                        echo "<h2>There are no pending mentors</h2>";
                     } else {
                         ?>
                         <!--<div class="col-md-3">-->

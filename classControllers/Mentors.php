@@ -10,7 +10,7 @@ class Mentor
 
     global $database;
     $display = '';
-    $query = 'SELECT * FROM mentors ORDER BY mentor_id DESC';
+    $query = 'SELECT * FROM mentors WHERE status = 2 ORDER BY mentor_id DESC';
     $res = $database->query($query);
     $count = $database->affected_rows();
     if ($count > 0) {
@@ -30,7 +30,7 @@ class Mentor
                         <td>' . $row["current_state"] . '</td>
                         <td>' . $row["employment_status"] . '</td>
                         <td>' . $row["timestamp"] . '</td>
-                        <td>' . '<a href="registered_mentors.php?acceptMentorId=' . $row["mentor_id"] . '" class="btn btn-primary btn-sm" style="margin-right: 5px;">Accept</a>' .'<a href="registered_mentors.php?rejectMentorId=' . $row["mentor_id"] . '" class="btn btn-warning btn-sm" style="margin-right: 5px;">Reject</a>' .'<a href="delete_mentor.php?deleteMentorId=' . $row["mentor_id"] . '" class="btn btn-danger btn-sm">Delete</a>' . '</td>
+                        <td>' .'<a href="registered_mentors.php?rejectMentorId=' . $row["mentor_id"] . '" class="btn btn-danger btn-sm" style="margin-right: 5px;">Deactivate</a>' . '</td>
                         
 
                     </tr>';
@@ -38,6 +38,81 @@ class Mentor
       }
     } else {
       // there are no mentors
+      $display = "0";
+    }
+
+    return $display;
+  }
+
+  public function declinedMentors(){
+    global $database;
+    $display = '';
+    $query = 'SELECT * FROM mentors WHERE status = 1 ORDER BY mentor_id DESC';
+    $res = $database->query($query);
+    $count = $database->affected_rows();
+    if ($count > 0) {
+      // declined mentors exist
+      $sn = 1;
+      while ($row = mysqli_fetch_assoc($res)) {
+        $display .= '
+                    <tr>
+                        <td>' . $sn . '</td>
+                        <td>' . $row["area_of_expertise"] . '</td>
+                        <td><img src="' . $row["photo_url"] . '" style="width: 50px; height: 50px;"></td>
+                        <td>' . $row["name"] . '</td>
+                        <td>' . $row["email"] . '</td>
+                        <td>' . $row["phone_no"] . '</td>
+                        <td>' . $row["link_to_cv"] . '</td>
+                        <td>' . $row["why_interested"] . '</td>
+                        <td>' . $row["current_state"] . '</td>
+                        <td>' . $row["employment_status"] . '</td>
+                        <td>' . $row["timestamp"] . '</td>
+                        <td>' . '<a href="registered_mentors.php?acceptMentorId=' . $row["mentor_id"] . '" class="btn btn-primary btn-sm" style="margin-right: 5px;">Activate</a>' .'<a href="delete_mentor.php?deleteMentorId=' . $row["mentor_id"] . '" class="btn btn-danger btn-sm">Delete</a>' . '</td>
+                        
+
+                    </tr>';
+        $sn++;
+      }
+    } else {
+      // there are no declined mentors
+      $display = "0";
+    }
+
+    return $display;
+  }
+
+  public function pendingMentors(){
+    global $database;
+    $display = '';
+    $query = 'SELECT * FROM mentors WHERE status = 0 ORDER BY mentor_id DESC';
+    $res = $database->query($query);
+    $count = $database->affected_rows();
+    if ($count > 0) {
+      // declined mentors exist
+      $sn = 1;
+      while ($row = mysqli_fetch_assoc($res)) {
+        $display .= '
+                    <tr>
+                        <td>' . $sn . '</td>
+                        <td>' . $row["area_of_expertise"] . '</td>
+                        <td><img src="' . $row["photo_url"] . '" style="width: 50px; height: 50px;"></td>
+                        <td>' . $row["name"] . '</td>
+                        <td>' . $row["email"] . '</td>
+                        <td>' . $row["phone_no"] . '</td>
+                        <td>' . $row["link_to_cv"] . '</td>
+                        <td>' . $row["why_interested"] . '</td>
+                        <td>' . $row["current_state"] . '</td>
+                        <td>' . $row["employment_status"] . '</td>
+                        <td>' . $row["timestamp"] . '</td>
+                        <td>' . '<a href="registered_mentors.php?acceptMentorId=' . $row["mentor_id"] . '" class="btn btn-primary btn-sm" style="margin-right: 5px;">Accept</a>' .'<a href="registered_mentors.php?rejectMentorId=' . $row["mentor_id"] . '" class="btn btn-warning btn-sm" style="margin-right: 5px;">Reject</a>' .'</td>
+                        
+                        
+
+                    </tr>';
+        $sn++;
+      }
+    } else {
+      // there are no declined mentors
       $display = "0";
     }
 
@@ -91,7 +166,7 @@ class Mentor
       $body = "Your registration as a mentor on the HNGi7 platform has been approval and accepted. Thank you";
       acceptMentorMail($body,$fullname,$email);
       // updated
-      //return true;
+      return true;
       header('Location: registered_mentors.php');
     } else {
       // failed
@@ -112,7 +187,7 @@ class Mentor
       $body = "Your registration as a mentor on the HNGi7 platform has been disapproval or pendding. Thank you";
       rejectMentorMail($email, $fullname, $body);
       // updated
-      //return true;
+      return true;
       header('Location: registered_mentors.php');
     } else {
       // failed
