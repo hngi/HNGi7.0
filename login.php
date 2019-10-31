@@ -4,7 +4,7 @@ if (isset($_POST['login'])) {
   $email = $_POST["email"];
   $password = $_POST["password"];
   $login = $interns->adminLogin($email, $password);
-  $errors = '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: #F7CFCF; color: #6A0E0D; width: 80% !important; text-align: center;">Wrong Credentials</p>';
+  $errors = '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: #F7CFCF; color: #6A0E0D; width: 98% !important; text-align: center;">Wrong Credentials</p>';
 }
 
 
@@ -25,7 +25,6 @@ if (isset($_POST['login'])) {
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
   <link rel="stylesheet" type="text/css" href="css/header-footer.css">
-  <link rel="stylesheet" href="css/join-intern.css">
   <link rel="stylesheet" href="css/loginadmin.css">
   <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <script>
@@ -47,13 +46,9 @@ if (isset($_POST['login'])) {
 </head>
 
 <body>
-
- <section class="container-fluid">
- <div class="body-continer">
   <?php include('fragments/site_header.php'); ?>
 
-
-  <div class="form-area">
+ <section class="container-fluid">
 
     <form class="form-container" method="post">
 
@@ -68,27 +63,24 @@ if (isset($_POST['login'])) {
       }
 
       if (isset($_GET["blocked"])) {
-        echo  '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: #F7CFCF; color: #6A0E0D; width: 80% !important; text-align: center;">Your account has been de-activated, Please contact a super admin.</p>';
+        echo  '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: #F7CFCF; color: #6A0E0D; width: 100% !important; text-align: center;">Your account has been de-activated, Please contact a super admin.</p>';
       }
 
       ?>
       <p id="result"></p>
       <div class="inputWithIcon">
-      <i class="fa fa-envelope" aria-hidden="true"></i>
+      <i class="fa fa-envelope"></i>
       <input type="email" name="email" id="email" placeholder="Enter your Email" required />
       </div>
 
       <div class="inputWithIcon">
-        <i class="fa fa-key" aria-hidden="true"></i>
+        <i class="fa fa-key"></i>
         <input type="password" name="password" id="password" placeholder="Enter your Password" required>
       </div>
       
       <button type="submit" onclick="signup()" name="login">LOG IN</button>
       <a href="forgotpassword.php" class="text-danger small-text">Forgot Password?</a>
     </form>
-  </div>
-
-  </div>
   </section>
     <?php include('fragments/site_footer.php'); ?>
 
