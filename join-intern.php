@@ -43,21 +43,12 @@ require_once 'classControllers/init.php';
   <link rel="stylesheet" type="text/css" href="css/header-footer.css">
   <link rel="stylesheet" href="css/join-intern.css">
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
-
   <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-  <style>
-
-    #socials a {
-        display: inline-block;
-        margin-top: 10px;
-    }
-
-  </style>
-
 </head>
 
 <body>
-<div style="background-color: #D1F0F6 !important;"><?php include('fragments/site_header.php'); ?></div>
+<div style="background-color: #D1F0F6;">
+<?php include('fragments/site_header.php'); ?></div>
 
   <section class="container-fluid1">
   <section class="jumbo">
