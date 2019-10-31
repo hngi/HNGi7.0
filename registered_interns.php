@@ -15,11 +15,11 @@
     }
     if (isset($_GET['acceptInternId'])) {
         $mentor_id = $_GET['acceptInternId'];
-        $message = $interns->AcceptIntern($mentor_id);
+        $accept_message = $interns->AcceptIntern($mentor_id);
     }
     if (isset($_GET['rejectInternId'])) {
         $mentor_id = $_GET['rejectInternId'];
-        $message = $interns->RejectIntern($mentor_id);
+        $reject_message = $interns->RejectIntern($mentor_id);
     }
 ?>
 <!DOCTYPE html>
@@ -75,7 +75,11 @@
         <input type="text" class="searchBox"><i class="fas fa-search"></i>
         <section id="overview-section">
             <!-- <h1>Dashboard</h1> -->
-            <h2>Registered Interns </h2>
+            <h2>Active Interns </h2>
+            <div style="margin-bottom : 10px;">
+                <a href="pending_interns.php" class="btn btn-default">Pending Interns</a>
+                <a href="declined_interns.php" class="btn btn-default">Declined Interns</a>
+            </div>
             <!-- <section id="intern-section">
 				Populated by `js/dashboard.js`
 			</section> -->
