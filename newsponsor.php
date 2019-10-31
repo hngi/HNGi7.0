@@ -89,7 +89,8 @@ if (!empty($msg2)) {
 }
 ?>
         </div>
-        <input type="text" placeholder="Sponsor Logo" name="Sponsor Logo" required>
+        <label for="sponsor_logo">Upload Your logo</label>
+        <input type="file" placeholder="Sponsor Logo" name="Sponsor Logo" required>
         <input type="text" placeholder="Name" name="name" required>
         <input type="email" placeholder="Email" name="email" required>
         <input type="text" placeholder="Business Address" name="Business Address" required>
