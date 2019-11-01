@@ -21,7 +21,8 @@ main
 }
 h1
 {
-	font-size: 35px;
+	font-size: 25px;
+}
 }
 .center-text
 {
@@ -72,11 +73,22 @@ h1
 	display: block;
 	transition: 0.6s ease-out;
 }
+.searchBox {
+    position: absolute;
+    right: 24%;
+    border-radius: 30px;
+    width: 225px;
+    height: 30px;
+    padding-left: 25px;
+    background-color: #FFFFFF;
+    outline: blue;
+    margin-top: 32px;
+}
 
 #overview-section h1 {
 	background-color: #f3f3f3;
 	margin-top: 1rem;
-	font-size: 30px;
+	font-size: 25px;
 	padding: 5px;
 	padding-left: 7px;
 	border-radius: 5px;
@@ -316,8 +328,8 @@ h1
 		margin: 0 2rem;
 		width: 90vw;
 	}
-	#overview-section h1, #overview-section h2
-	{
+	#overview-section h1,#overview-section h2 {
+		font-size: 20px;
 		text-align: center;
 	}
 	#overview-section #export
