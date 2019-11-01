@@ -81,6 +81,7 @@ hr {
   font-family: sans-serif;
   z-index: 1;
   opacity: 0.2;
+  display: none;
 }
 
 .wrapper-child h4 {
@@ -167,18 +168,24 @@ section.jumb {
 .jumb h2 {
  font-family: Open Sans;
  font-style: normal;
- font-weight: 500;
+ font-weight: 600;
  font-size: 30px;
  line-height: 54px;
  text-align: center;
  color: #084482;
  padding-top: 50px;
+
 }
 
 .para {
- text-align: center;
- margin-bottom: 0px;
- padding: 0 5px;
+  text-align: center;
+  margin-bottom: 0px;
+  padding: 0 5px;
+  color: #474747;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px
 }
 
 #img {
