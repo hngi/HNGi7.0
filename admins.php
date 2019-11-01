@@ -14,7 +14,7 @@ if(isset($_GET["blockAdminId"])) {
     $id = $_GET["blockAdminId"];
     $blockAdminRes = $admin->blockAdmin($id);
     if($blockAdminRes == true) {
-        header("Location:admins");
+        header("Location:admins.php");
     }
 }
 
@@ -22,7 +22,7 @@ if(isset($_GET["activateAdminId"])) {
     $id = $_GET["activateAdminId"];
     $activateAdminRes = $admin->activateAdmin($id);
     if($activateAdminRes == true) {
-        header("Location:admins");
+        header("Location:admins.php");
     }
 }
 
@@ -36,7 +36,7 @@ if(isset($_GET["blockAdminId"])) {
     $id = $_GET["blockAdminId"];
     $blockAdminRes = $admin->blockAdmin($id);
     if($blockAdminRes == true) {
-        header("Location:admins");
+        header("Location:admins.php");
     }
 }
 
@@ -44,7 +44,7 @@ if(isset($_GET["activateAdminId"])) {
     $id = $_GET["activateAdminId"];
     $activateAdminRes = $admin->activateAdmin($id);
     if($activateAdminRes == true) {
-        header("Location:admins");
+        header("Location:admins.php");
     }
 }
 
