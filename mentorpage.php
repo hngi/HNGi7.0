@@ -16,7 +16,7 @@
   <link rel="stylesheet" type="text/css" href="css/mentorpage.css">
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
 
-  <title>Mentors Page</title>
+  <title>Mentors</title>
 </head>
 
 <body>
