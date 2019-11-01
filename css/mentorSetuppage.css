@@ -251,6 +251,8 @@ a:hover {
   .navigation {
     padding-left: 20px !important;
     padding-right: 20px !important;
+    margin-left: -15px !important;
+    margin-right: -10px !important;
   }
 
   .wrap {
