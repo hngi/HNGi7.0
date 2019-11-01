@@ -21,7 +21,10 @@
     <style>
     .jumbo {
       background-color: #d1f0f6;
-      padding-bottom: 20px;
+      padding-bottom: 20px;    
+    }
+    .hero-cont a.button-primary{
+      margin-bottom: 10px !important;
     }
     </style>
   </head>
