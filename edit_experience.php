@@ -4,7 +4,7 @@ require_once 'classControllers/init.php';
 
 
 if(!isset($_SESSION["role"])) {
-    header('Location:admin_login');
+    header('Location:login.php');
 }
 
 if(!isset($_GET['id'])){
@@ -24,7 +24,7 @@ if(isset($_POST['ok'])){
     $admin->updateExperience("$id","$names","$stack","$experience");
 
     $_SESSION['msg'] = "<div class='alert alert-success'>Experience updated successfully!</div>";
-    header("location:edit_experience.php?id=$id");
+    header("location:internreview.php");
     exit();
 }
 
@@ -117,7 +117,7 @@ $the_experience = $admin->fetchSingleExperience($id);
                         </div>
 
                         <div class="form-group">
-                            <input type="submit" name="ok" class="btn btn-success" value="Update Experience">
+                            <input type="submit" name="ok" class="btn btn-success" value="Update Experience" >
                         </div>
                     </form>
                 </div>
