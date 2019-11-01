@@ -43,7 +43,7 @@
                             <img id="circles" src="https://bit.ly/2OzWHk7" alt="">
                         </div>
                     </div>
-                
+
                     <div class="main-second-row1 countdown2" data-aos="fade-up">
                         <h3 class="countdown__heading text_center">
                             Countdown to HNGi7.0
@@ -124,7 +124,7 @@
                         </div>
                     </div>
                 </div>
-                    
+
                 </div>
 
                 <div class="main-fourth-row">
@@ -383,7 +383,7 @@
                         </div>
                     </section>
                 </div>
-                    
+
                 </div>
 
 
@@ -419,7 +419,7 @@
                         </button>
                     </div>
                     </div>
-                    
+
                 </div>
 
                 <div class="main-eighth-row">
@@ -451,7 +451,7 @@
                             </div>
                         </div>
                 </div>
-                    
+
                 </div>
 
                 <div class="support"  data-aos="fade-up">
@@ -502,7 +502,7 @@
                         </div>
                     </div>
                 </div>
-                    
+
                 </div>
 
                 <div class="sponsor">
