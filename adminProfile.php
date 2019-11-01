@@ -21,6 +21,8 @@ if(isset($_POST["update"])) {
 
 
 
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -124,6 +126,29 @@ if(isset($_POST["update"])) {
 
                 </div>
 
+                <div class="col-md-6">
+                       
+                    <div class="col-md-10" style="margin-bottom: 20px; margin-top: 20px;">
+                        <img src="adminProfilePics/default.jpg" />
+                    </div>
+                    
+                    <div class="row">
+                        <?php   
+                            if($display["hasPic"] == 0) {
+                                // admin has NO picture
+                                echo '
+                                <button class="btn btn-warning" data-toggle="modal" data-target="#myModal">Upload Profile Picture</button>';
+                            } else {
+                                // admin has picture
+                                echo '
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Change Profile Picture</button>';
+                            }
+                        ?>
+                        
+                    </div>
+                                
+                </div>
+
             </div>
         </div>
         <br /><br />
@@ -140,6 +165,38 @@ if(isset($_POST["update"])) {
 </label>
 
 <?php include('fragments/sidebar.php'); ?>
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Select Profile Picture</h4>
+      </div>
+      <div class="modal-body">
+      <form method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="">First Name: </label>
+                <input type="file" name="image" id="image" required class="form-control">
+            </div>
+            
+
+            <input type="submit" class="btn btn-success" id="submit" name="uploadPicture" value="Submit">
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 
 </body>
 

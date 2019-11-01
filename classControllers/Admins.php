@@ -190,6 +190,7 @@ class Admins
       $data["lastname"] = $row["lastname"];
       $data["email"] = $row["email"];
       $data["role"] = $row["role"];
+      $data["hasPic"] = $row["hasPic"];
       return $data;
     } else {
       // no admin found
@@ -272,6 +273,17 @@ class Admins
         // failed
         header("Location: adminProfile.php?failed");
       }
+  }
+
+  public function uploadImage() {
+    global $database;
+
+    if (move_uploaded_file($_FILES["image"]["tmp_name"], "/adminProfilePics")) {
+        
+    } else {
+        echo "Sorry, there was an error uploading your file.";
+    }
+
   }
 }
 
