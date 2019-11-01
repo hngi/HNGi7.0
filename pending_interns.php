@@ -76,7 +76,7 @@
         <section id="overview-section">
             <!-- <h1>Dashboard</h1> -->
             <h2>Pending Interns </h2>
-            <div style="margin-bottom : 10px;">
+            <div style="margin : 5rem 0 1rem 1.5rem;">
                 <a href="registered_interns.php" class="btn btn-default">Active Interns</a>
                 <a href="declined_interns.php" class="btn btn-default">Declined Interns</a>
             </div>

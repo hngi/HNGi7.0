@@ -53,6 +53,15 @@
               id="email">
           </div>
         </div>
+
+        <div class="form-group ">
+          <div class="mx-auto row">
+            <label class="mx-auto col-md-8 pl-0" for="text">Slack username</label>
+          </div>
+          <div class="mx-auto row">
+            <input type="text" required class=" mx-auto col-md-8 form-control" placeholder="Enter your Slack username" name="text" id="name">
+          </div>
+        </div>
       
         <div class="form-group ">
           <div class="mx-auto row">
