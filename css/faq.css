@@ -47,7 +47,7 @@
     font-weight: bold;
     color: #00AEFF;
     padding: 0;
-    font-size: 23px;
+    font-size: 15px;
     font-family: Open Sans;
     text-align: left;
     margin-bottom: 20px;
@@ -65,4 +65,16 @@
 .myaccordion li+li {
     margin-top: 20px;
  
+}
+.freq-n h3{
+text-transform: capitalize;
+}
+.freq-n h3 a {
+  color: white;
+  background-color: #00AEFF;
+}
+
+.freq-n h3 a:hover {
+  color: white;
+  opacity: .7;
 }

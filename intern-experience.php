@@ -54,7 +54,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="stylesheet" href="css/intern-experience.css">
-    <title>Experience Page</title>
+    <title>Intern Experience</title>
 </head>
 
 <body>
@@ -67,7 +67,7 @@
     <section class="jumb">  
             <h2>Past Interns Experience</h2>
             <p class="para">Testimonies From Ex-HNG Internship Finalists</p>
-            <p class="text-center" onclick="message()"><a href="#">Submit Experience</a></p>
+            <p class="text-center" onclick="message()"><a href="#" class="experiencetext">Submit Experience</a></p>
    </section>
 
     

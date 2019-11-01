@@ -34,7 +34,7 @@ if (isset($_POST['login'])) {
       var password = $('#password').val();
 
       $.post($login.
-          '?login=yes", {
+          '?login=yes', {
           email: email,
           password: password
         },
@@ -43,6 +43,11 @@ if (isset($_POST['login'])) {
         });
     }
   </script>
+  <style>
+  .inputWithIcon i{
+    margin-left: 2.5px;
+  }
+  </style>
 </head>
 
 <body>
@@ -77,7 +82,7 @@ if (isset($_POST['login'])) {
         <i class="fa fa-key"></i>
         <input type="password" name="password" id="password" placeholder="Enter your Password" required>
       </div>
-      
+
       <button type="submit" onclick="signup()" name="login">LOG IN</button>
       <a href="forgotpassword.php" class="text-danger small-text">Forgot Password?</a>
     </form>

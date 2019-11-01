@@ -17,8 +17,7 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/contactform.css">
-
+    <!--<link rel="stylesheet" href="css/contactform.css">-->
     <link rel="stylesheet" href="css/faq.css">
 
 
@@ -39,7 +38,7 @@
     </div>
 
     <div class="col-md-12 text-black">
-        <div class="container">
+        <div class="">
             <div id="accordion" class="myaccordion">
                 <div class="card">
                     <div class="card-header" id="headingOne">
@@ -47,7 +46,7 @@
                             <button class="btn btn-link collapsed"
                                 data-toggle="collapse" data-target="#collapseOne" aria-expanded="false"
                                 aria-controls="collapseOne">
-                                When will the internship start?
+                                What is HNGI all about?
                                 <span class="fa-stack fa-sm">
                                     <i class="fas fa-angle-down"></i>
                                 </span>
@@ -56,8 +55,7 @@
                     </div>
                     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                         <div class="card-body">
-                            <p class="text-muted"> The official date for HNGi7 will be communicated later when adequate
-                                preparations have been made.
+                            <p class="text-muted"> A Remote internship that enables you learn or improve skill by working on real-world projects
                             </p>
                         </div>
                     </div>
@@ -69,7 +67,7 @@
                                 <button class="btn btn-link collapsed"
                                 data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
                                 aria-controls="collapseTwo">
-                                When will the internship start?
+                                When will the Internship begin?
                                 <span class="fa-stack fa-sm">
                                         <i class="fas fa-angle-down"></i>
                                 </span>                            
@@ -79,12 +77,12 @@
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                         <div class="card-body">
                             <p class="text-muted">
-                                The official date for HNGi7 will be communicated later when adequate preparations have
-                                been made.
+                            Follow @hnginternship on twitter for more information about the starting date (Check countdown on homepage)
                             </p>
                         </div>
                     </div>
                 </div>
+                
 
                 <div class="card">
                     <div class="card-header" id="headingThree">
@@ -92,7 +90,7 @@
                                 <button class="btn btn-link collapsed"
                                 data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
                                 aria-controls="collapseThree">
-                                When will the internship start?
+                                What benefits can I get on this internship?
                                 <span class="fa-stack fa-sm">
                                         <i class="fas fa-angle-down"></i>
                                 </span>                            
@@ -102,8 +100,7 @@
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                         <div class="card-body">
                             <p class="text-muted">
-                                The official date for HNGi7 will be communicated later when adequate preparations have
-                                been made.
+                            Benefits upon completion include access to HNG network comprising of past finalists, improving your portfolio (via the product/project you worked on), access to job opportunities and occasional data stipends depending on performance during the internship
                             </p>
                         </div>
                     </div>
@@ -115,7 +112,7 @@
                                 <button class="btn btn-link collapsed"
                                 data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
                                 aria-controls="collapseFour">
-                                When will the internship start?
+                                How long does the internship lasts?
                                 <span class="fa-stack fa-sm">
                                         <i class="fas fa-angle-down"></i>
                                 </span>
@@ -125,14 +122,58 @@
                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
                         <div class="card-body">
                             <p class="text-muted">
-                                The official date for HNGi7 will be communicated later when adequate preparations have
-                                been made.
+                            About 3 months.
                             </p>
                         </div>
                     </div>
 
                 </div>
 
+                <div class="card">
+                    <div class="card-header" id="headingFour">
+                        <h2 class="mb-0">
+                                <button class="btn btn-link collapsed"
+                                data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+                                aria-controls="collapseFour">
+                                I am a newbie, I have no idea about coding/design/digital marketing and so on... Can this internship help me?
+                                <span class="fa-stack fa-sm">
+                                        <i class="fas fa-angle-down"></i>
+                                </span>
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                        <div class="card-body">
+                            <p class="text-muted">
+                            Learning new things is the spice of the world, and this internship is medium to try out something new.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="headingFour">
+                        <h2 class="mb-0">
+                                <button class="btn btn-link collapsed"
+                                data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+                                aria-controls="collapseFour">
+                                Do we get certificates upon completion of the internship?
+                                <span class="fa-stack fa-sm">
+                                        <i class="fas fa-angle-down"></i>
+                                </span>
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                        <div class="card-body">
+                            <p class="text-muted">
+                          Yes, Certifcates are awarded to the finalists
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
@@ -141,18 +182,18 @@
         <div class="container">
             <div class="wrap" style="width: 100%;">
                 <div class="header mb-5">
-                    <h1>not a frequently asked question?<br />
-                        contact us below
-                    </h1>
+                    <h3 class="text-center">not a frequently asked question?<br />
+                        contact us <a href="contactform.php" class="btn">Here</a>
+                    </h3>
                 </div>
-                <form class="inputs-wrap">
+                <!-- <form class="inputs-wrap">
                     <input type="text" placeholder="Name">
                     <input type="email" placeholder="Email">
                     <input type="text" placeholder="Subject">
                     <textarea name="text" id="" cols="" rows="10"></textarea>
                     <input type="submit" id="submit" value="SEND MESSAGE" class="btn btn-block">
 
-                </form>
+                </form> -->
             </div>
         </div>
     </section>

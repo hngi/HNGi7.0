@@ -66,6 +66,7 @@ a.button-primary {
   border-radius: 3px;
   padding: 0.5rem 1rem;
   background-color: var(--blue);
+  margin-right: 10%;
   outline: none;
   border: none;
 }
