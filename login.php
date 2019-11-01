@@ -43,6 +43,11 @@ if (isset($_POST['login'])) {
         });
     }
   </script>
+  <style>
+  .inputWithIcon i{
+    margin-left: 2.5px;
+  }
+  </style>
 </head>
 
 <body>
