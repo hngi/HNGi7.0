@@ -54,7 +54,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="stylesheet" href="css/intern-experience.css">
-    <title>Experience Page</title>
+    <title>Intern Experience</title>
 </head>
 
 <body>
