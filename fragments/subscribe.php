@@ -50,6 +50,7 @@
                    if(status == true){
 
                        swal('Great',f.message,{icon: 'success',  timer: 25000});
+                       $("#subscribe-form").val(''); //Clear text field after confirmed subscription
                    }else{
                        swal('Error!',f.message,{icon: 'error',  timer: 25000});
                    }
