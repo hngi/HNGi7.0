@@ -190,6 +190,7 @@ class Admins
       $data["lastname"] = $row["lastname"];
       $data["email"] = $row["email"];
       $data["role"] = $row["role"];
+      $data["hasPic"] = $row["hasPic"];
       return $data;
     } else {
       // no admin found
@@ -256,6 +257,33 @@ class Admins
       $res = $database->query($query);
       $row = mysqli_fetch_assoc($res);
       return $row;
+  }
+
+  // Write by JohnEbri; 1/11/2019 6:56PM
+  public function updateProfile($firstname, $lastname, $email, $id) {
+    global $database;
+
+      $query = "UPDATE admins SET firstname = '".$firstname."', lastname = '".$lastname."', email = '".$email."' WHERE admin_id = '".$id."' ";
+      $res = $database->query($query);
+      $count = $database->affected_rows();
+      if($count > 0) {
+        // edited
+        header("Location: adminProfile.php?updated");
+      } else {
+        // failed
+        header("Location: adminProfile.php?failed");
+      }
+  }
+
+  public function uploadImage() {
+    global $database;
+
+    if (move_uploaded_file($_FILES["image"]["tmp_name"], "/adminProfilePics")) {
+        
+    } else {
+        echo "Sorry, there was an error uploading your file.";
+    }
+
   }
 }
 

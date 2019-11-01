@@ -20,7 +20,7 @@
 .inputWithIcon i {
     margin-left: 0;
     color: #00aeff;
-    margin-left: 10px;
+    margin-left: 2px;
 }
 
 .inputWithIcon input {
@@ -28,6 +28,7 @@
     width: 90%;
     padding: 10px;
     outline: none;
+    background-color: transparent;
 }
 
 button {

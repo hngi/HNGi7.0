@@ -36,6 +36,14 @@ if(!isset($_SESSION["role"])) {
         $lockForm->setStatus($sval);
     }
 
+    // get pending interns
+    $pendingInterns = $interns->getPendingInterns();    
+
+    // get pending mentors
+    $pendingMentors = $mentors->getPendingMentors();
+
+    $totalNotification = $pendingInterns + $pendingMentors;
+
 ?>
 
 <!DOCTYPE html>
@@ -95,7 +103,7 @@ if(!isset($_SESSION["role"])) {
                             <li class="dropdown">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My profile <span class="caret"></span></a>
                               <ul class="dropdown-menu">
-                                <li><a href="#"><i class="fas fa-user-circle fw"></i> My account</a></li>
+                                <li><a href="adminProfile.php"><i class="fas fa-user-circle fw"></i> My account</a></li>
                                 <li><a href="#"><i class="fas fa-envelope fw"></i> My inbox</a></li>
                                 <li><a href="#"><i class="fas fa-question-circle fw"></i> Help</a></li>
                                 
@@ -103,8 +111,25 @@ if(!isset($_SESSION["role"])) {
                                 <li><a href="./logout.php"><i class="fa fa-sign-out"></i> Log out</a></li>
                               </ul>
                             </li>
-                            <li><a href="#"><i class="fa fa-comments"></i><span>10</span></a></li>
-                            <li><a href="#"><i class="fas fa-bell"></i><span>18</span></a></li>
+
+                            <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-bell"></i><span><?php echo $totalNotification; ?></span> </a>
+                              <ul class="dropdown-menu">
+                                <?php
+                                  if($totalNotification > 0) {
+                                    ?>
+                                      <li><a href="pending_interns.php"> New Interns <?php echo $pendingInterns; ?></a></li>
+                                      <li><a href="pending_mentors.php"> New Mentors <?php echo $pendingMentors; ?></a></li>
+                                    <?php
+                                  }
+                                ?>                                
+                              </ul>
+                            </li>
+
+                            
+                            <!-- <li><a href="#"><i class="fa fa-comments"></i><span>10</span></a></li> -->
+                            <!-- <li><a href="#"><i class="fas fa-bell"></i><span>18</span></a></li> -->
                             <!-- <li><a href="#"><i data-show="show-side-navigation1" class="fa fa-bars show-side-btn"></i></a></li> -->
                           </ul>
                         </div>
