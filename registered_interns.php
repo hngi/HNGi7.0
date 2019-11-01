@@ -76,7 +76,7 @@
         <section id="overview-section">
             <!-- <h1>Dashboard</h1> -->
             <h2>Active Interns </h2>
-            <div style="margin-bottom : 10px;">
+            <div class="intern-buttons">
                 <a href="pending_interns.php" class="btn btn-default">Pending Interns</a>
                 <a href="declined_interns.php" class="btn btn-default">Declined Interns</a>
             </div>
@@ -84,7 +84,7 @@
 				Populated by `js/dashboard.js`
 			</section> -->
 
-            <div class="container">
+            <div >
                 <div class="row">
 
                     <?php
@@ -106,7 +106,7 @@
                         <div id="printablediv">
                             <div class="scroll">
                             <!-- <table id="my-table" class="table table-hover table-bordered mt-3 mb-1"> -->
-                            <table id="my-table" class="table table-hover">
+                            <table id="my-table" class="table table-hover intern-table">
                                 <!-- <thead class="table-primary"> -->
                                 <thead>
                                     <tr>
@@ -122,7 +122,7 @@
                                     <th data-heading="employmentStatus">Employment Status<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
                                     <th data-heading="about">About<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
                                     <th data-heading="timeStamp">Registration Date<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
-                                        <th>Action</th>
+                                        <th >Action</th>
 
 
                                     </tr>
