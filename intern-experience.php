@@ -67,7 +67,7 @@
     <section class="jumb">  
             <h2>Past Interns Experience</h2>
             <p class="para">Testimonies From Ex-HNG Internship Finalists</p>
-            <p class="text-center" onclick="message()"><a href="#">Submit Experience</a></p>
+            <p class="text-center" onclick="message()"><a href="#" class="experiencetext">Submit Experience</a></p>
    </section>
 
     
