@@ -128,12 +128,17 @@
                     </div>
 
                 </div>
-                <div class="card">
-                    <div class="card-header" id="headingFive">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+                    <div class="card-header" id="headingFour">
                         <h2 class="mb-0">
                                 <button class="btn btn-link collapsed"
-                                data-toggle="collapse" data-target="#collapseFive" aria-expanded="false"
-                                aria-controls="collapseFive">
+                                data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+                                aria-controls="collapseFour">
                                 I am a newbie, I have no idea about coding/design/digital marketing and so on... Can this internship help me?
                                 <span class="fa-stack fa-sm">
                                         <i class="fas fa-angle-down"></i>
@@ -141,7 +146,7 @@
                             </button>
                         </h2>
                     </div>
-                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
                         <div class="card-body">
                             <p class="text-muted">
                             I am a newbie, I have no idea about coding/design/digital marketing and so on... Can this internship help me?
@@ -150,12 +155,17 @@
                     </div>
 
                 </div>
-                <div class="card">
-                    <div class="card-header" id="headingSix">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+                    <div class="card-header" id="headingFour">
                         <h2 class="mb-0">
                                 <button class="btn btn-link collapsed"
-                                data-toggle="collapse" data-target="#collapseSix" aria-expanded="false"
-                                aria-controls="collapseSix">
+                                data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+                                aria-controls="collapseFour">
                                 Do we get certificates upon completion of the internship?
                                 <span class="fa-stack fa-sm">
                                         <i class="fas fa-angle-down"></i>
@@ -163,7 +173,7 @@
                             </button>
                         </h2>
                     </div>
-                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
                         <div class="card-body">
                             <p class="text-muted">
                           Yes
@@ -172,18 +182,17 @@
                     </div>
 
                 </div>
+
             </div>
         </div>
     </div>
-           
-      
-   
+
     <section class="freq-n">
         <div class="container">
             <div class="wrap" style="width: 100%;">
                 <div class="header mb-5">
                     <h1>not a frequently asked question?<br />
-                        contact us <a href="contactform.php" id="btn-here" class="btn btn-primary">Here</a>
+                        contact us <a href="contactform.php" class="btn btn-primary">Here</a>
                     </h1>
                 </div>
                 <!-- <form class="inputs-wrap">
