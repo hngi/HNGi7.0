@@ -17,7 +17,7 @@
     </div>
     <div class="form-group">
         <button class="btn btn-primary" role="button" id="subscribe" style="background-color:#00AEFF; border: none">
-            <i class="fa fa-check"></i> Subscribe
+            <i class="fa fa-envelope"></i> Follow Our Newsletter
         </button>
     </div>
 </form>
