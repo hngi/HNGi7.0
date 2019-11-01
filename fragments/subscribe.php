@@ -31,6 +31,7 @@
            let email = $("#subscribe-form").val();
            if(email == ""){
                swal('Error!',"Kindly enter your email",{icon: 'error',  timer: 2500});
+               return; //Prevent submission if field is empty
            }
 
 
@@ -49,6 +50,7 @@
                    if(status == true){
 
                        swal('Great',f.message,{icon: 'success',  timer: 25000});
+                       $("#subscribe-form").val(''); //Clear text field after confirmed subscription
                    }else{
                        swal('Error!',f.message,{icon: 'error',  timer: 25000});
                    }

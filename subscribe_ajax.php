@@ -15,7 +15,10 @@ if(isset($_POST['add'])){
     $output = array();
     $email = $database->escape_string($_POST['email']);
 
-    if($subscriber->subscriberExists($email)){
+    if($email == ""){
+        $output['status'] = false;
+        $output['message'] = "Kindly enter your email address"; //Prevent submission of empty field to the database
+    }elseif ($subscriber->subscriberExists($email)){
         $output['status'] = false;
         $output['message'] = "You have already subscribe to mailing list!";
     }else{
