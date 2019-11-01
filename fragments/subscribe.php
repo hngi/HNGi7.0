@@ -31,6 +31,7 @@
            let email = $("#subscribe-form").val();
            if(email == ""){
                swal('Error!',"Kindly enter your email",{icon: 'error',  timer: 2500});
+               return; //Prevent submission if field is empty
            }
 
 
