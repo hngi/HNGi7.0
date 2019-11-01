@@ -16,6 +16,7 @@
     }
     body {
         font-family: "Open Sans", segoe UI, sans-serif;
+        overflow-x: hidden; 
     }
     .desktop-only {
         display: none;
