@@ -67,7 +67,7 @@
     <section class="jumb">  
             <h2>Past Interns Experience</h2>
             <p class="para">Testimonies From Ex-HNG Internship Finalists</p>
-            <p class="text-center"><a href="admin_internexperience.php">Submit Experience</a></p>
+            <p class="text-center" onclick="message()"><a href="#">Submit Experience</a></p>
    </section>
 
     
@@ -163,5 +163,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="js/intern-experience.js"></script>
+    <script src="js/intern-experience.js">
+    </script>
+    <script>
+          function message (){
+            alert("Function under construction check back later!");
+        }
+    </script>
 </html>
