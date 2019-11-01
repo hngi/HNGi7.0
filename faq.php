@@ -17,8 +17,7 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/contactformf.css">
-
+    <!--<link rel="stylesheet" href="css/contactform.css">-->
     <link rel="stylesheet" href="css/faq.css">
 
 
@@ -39,7 +38,7 @@
     </div>
 
     <div class="col-md-12 text-black">
-        <div class="container">
+        <div class="">
             <div id="accordion" class="myaccordion">
                 <div class="card">
                     <div class="card-header" id="headingOne">
@@ -56,7 +55,7 @@
                     </div>
                     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                         <div class="card-body">
-                            <p class="text-muted">  Remote internship that enables you learn or improve skill by working on real-world projects
+                            <p class="text-muted"> A Remote internship that enables you learn or improve skill by working on real-world projects
                             </p>
                         </div>
                     </div>
@@ -78,11 +77,12 @@
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                         <div class="card-body">
                             <p class="text-muted">
-                            Follow @hnginternship on twitter for more information about the starting date
+                            Follow @hnginternship on twitter for more information about the starting date (Check countdown on homepage)
                             </p>
                         </div>
                     </div>
                 </div>
+                
 
                 <div class="card">
                     <div class="card-header" id="headingThree">
@@ -129,11 +129,7 @@
 
                 </div>
 
-            </div>
-        </div>
-    </div>
-
-    <div class="card">
+                <div class="card">
                     <div class="card-header" id="headingFour">
                         <h2 class="mb-0">
                                 <button class="btn btn-link collapsed"
@@ -149,18 +145,14 @@
                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
                         <div class="card-body">
                             <p class="text-muted">
-                            I am a newbie, I have no idea about coding/design/digital marketing and so on... Can this internship help me?
+                            Learning new things is the spice of the world, and this internship is medium to try out something new.
                             </p>
                         </div>
                     </div>
 
                 </div>
 
-            </div>
-        </div>
-    </div>
-
-    <div class="card">
+                <div class="card">
                     <div class="card-header" id="headingFour">
                         <h2 class="mb-0">
                                 <button class="btn btn-link collapsed"
@@ -176,13 +168,12 @@
                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
                         <div class="card-body">
                             <p class="text-muted">
-                          Yes
+                          Yes, Certifcates are awarded to the finalists
                             </p>
                         </div>
                     </div>
 
                 </div>
-
             </div>
         </div>
     </div>
@@ -191,9 +182,9 @@
         <div class="container">
             <div class="wrap" style="width: 100%;">
                 <div class="header mb-5">
-                    <h1>not a frequently asked question?<br />
-                        contact us <a href="contactform.php" class="btn btn-primary">Here</a>
-                    </h1>
+                    <h3 class="text-center">not a frequently asked question?<br />
+                        contact us <a href="contactform.php" class="btn">Here</a>
+                    </h3>
                 </div>
                 <!-- <form class="inputs-wrap">
                     <input type="text" placeholder="Name">
