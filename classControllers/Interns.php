@@ -351,4 +351,13 @@ class Intern
           return false;
         }
       }
+
+      // get pending interns : written by John Ebri. Date : 1/11/2019 6:02PM
+      public function getPendingInterns() {
+          global $database;
+          $query = "SELECT * FROM interns WHERE status = 0";
+          $res = $database->query($query);
+          $count = $database->affected_rows();
+          return $count;
+      }
 }

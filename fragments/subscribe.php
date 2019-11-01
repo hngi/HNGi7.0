@@ -17,7 +17,7 @@
     </div>
     <div class="form-group">
         <button class="btn btn-primary" role="button" id="subscribe" style="background-color:#00AEFF; border: none">
-            <i class="fa fa-check"></i> Subscribe
+            <i class="fa fa-envelope"></i> Follow Our Newsletter
         </button>
     </div>
 </form>
@@ -31,6 +31,7 @@
            let email = $("#subscribe-form").val();
            if(email == ""){
                swal('Error!',"Kindly enter your email",{icon: 'error',  timer: 2500});
+               return; //Prevent submission if field is empty
            }
 
 
@@ -49,6 +50,7 @@
                    if(status == true){
 
                        swal('Great',f.message,{icon: 'success',  timer: 25000});
+                       $("#subscribe-form").val(''); //Clear text field after confirmed subscription
                    }else{
                        swal('Error!',f.message,{icon: 'error',  timer: 25000});
                    }

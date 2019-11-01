@@ -1,9 +1,18 @@
 <div class="container">
+ <style type="text/css">
+
+  @media (max-width: 420px) {
+   #hng-logo {
+    max-width: 100% !important;
+    width: 70% !important;
+   }
+  }
+  </style>
     <header id="header">
         <!--Logo-->
         <section id="logo">
             <a href="index.php"><img id="hng-logo"
-                    src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png"></a>
+                    src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png" ></a>
         </section>
         <!--ends here-->
         <section class="nav_button" onclick="toggleMenu()">
