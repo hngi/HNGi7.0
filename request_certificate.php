@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Request For Certificate</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/header-footer.css">
+    <link rel="stylesheet" type="text/css" href="css/request_certificate.css">
+  <link rel="icon" type="img/png" href="images/hng-favicon.png">
+</head>
+
+<body>
+  <div class="heading">  
+    <?php include('fragments/site_header.php'); ?>
+
+      <div class="container main-header-content">
+        <h1 class="text-center main-heading">Request for your HNG Certificate</h1>
+        <p class="text-center mt-4 mb-1">Thanks for taking part in the HNG Internship and making it to the end.</p>
+        <p class="text-center">Kindly fill the form below.</p>
+        
+      </div>
+      
+    </div>
+
+    <main class="main">
+    <div class="container  pb-5">
+      <form class="main-form">
+      <small class="please-note text-center mb-5 ">Kindly note that this Certificate will be issued to only those who completed the
+        program.</small>
+
+        <div class="form-group ">
+          <div class="mx-auto row">
+            <label class="mx-auto col-md-8 pl-0" for="name">Your Full Name</label>
+          </div>
+          <div class="mx-auto row">
+            <input type="text" required class=" mx-auto col-md-8 form-control" placeholder="Enter your Name" name="name" id="name">
+          </div>
+        </div>
+      
+        <div class="form-group ">
+          <div class="mx-auto row">
+<label class="mx-auto col-md-8 pl-0" for="email">Your Email</label>
+          </div>
+          <div class="mx-auto row">
+            <input type="email" required class=" mx-auto col-md-8 form-control" placeholder="Enter your email address" name="email"
+              id="email">
+          </div>
+        </div>
+      
+        <div class="form-group ">
+          <div class="mx-auto row">
+            <label class="mx-auto col-md-8 pl-0" for="year">What Date did you finish?</label>
+          </div>
+          <div class="row mx-auto">
+<input type="date" required class=" mx-auto col-md-8 form-control" placeholder="Enter the Date you were an intern"
+  name="year" id="year">
+          </div>
+          
+        </div> 
+
+    
+        <input type="submit" class="btn submit-btn px-5 mt-4 mx-auto" value="Submit">
+        
+      </form>
+    </div>
+  </main>
+    
+  <?php  include "fragments/site_footer.php";?>
+</body>
+
+</html>

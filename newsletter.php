@@ -55,49 +55,48 @@ if (isset($_POST['contact-btn'])) {
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-  <link rel="stylesheet" href="css/contactform.css">
+  <link rel="stylesheet" href="css/newsponsor.css">
   <link rel="stylesheet" type="text/css" href="css/header-footer.css">
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
+  <link rel="stylesheet" type="text/css" href="css/newsletter.css">
+
 </head>
 
 <body>
-  <?php include('fragments/site_header.php'); ?>
+        <?php include('fragments/site_header.php'); ?>
 
-  <section class="container-fluid">
-    <div class="wrap">
-      <div class="header">
-        <h1>Not a Frequently Asked Question?</h1>
-        <h1> contact us below</h1>
-      </div>
-
-
-      <form class="inputs-wrap" method="post">
-        <div id="contact-message">
-          <?php
-
-if (!empty($error)) {
-  echo "<h4 class='text-danger text-center'>" . $error . "</h4>";
-}
-if (!empty($mess)) {
-  echo "<center><h4 class='text-success text-center success' style='background: #D3ECDB; color: #2B5036; padding: 10px;'>" . $mess . "</h4></center>";
-}
-if (!empty($msg)) {
-  echo "<h4 class='text-danger text-center' style='color: red;'>" . $msg . "</h4>";
-}
-if (!empty($msg2)) {
-  echo "<h4 class='text-danger text-center' style='color: red;'>" . $msg2 . "</h4>";
-}
-?>
+    <div class="white-container">
+        <div class="container">
+            <ul>
+                <li><img src ="images/image 3.png" alt="image" class="image">
+                        <p>Get inspired by these fantastic email newsletter examples from real companies. ... newsletters to inspire you to make the best email newsletter for your company possible. ..... </p>
+                        <img src="images/image 4.png" alt="HNG" class="images">
+                        <p>Originally published Mar 3, 2019 10:30:00 PM, updated July 23 2019.</p>
+                        <a href="#" class="button">READ MORE</a>
+                </li>
+                <li>
+                        <img src ="images/image 7.png" alt="image"  class="image">
+                        <p>Get inspired by these fantastic email newsletter examples from real companies. ... newsletters to inspire you to make the best email newsletter for your company possible. ..... </p>
+                        <img src="images/image 5.png" alt="HNG" class="images">
+                        <p>Originally published Mar 3, 2019 10:30:00 PM, updated July 23 2019.</p>
+                        <a href="#" class="button">READ MORE</a>
+                </li>
+                <li>
+                        <img src ="images/image 8.png" alt="image" class="image">
+                        <p>Get inspired by these fantastic email newsletter examples from real companies. ...newsletters to inspire you to make the best email newsletter for your company possible. ..... </p>
+                        <img src="images/image 6.png" alt="HNG" class="images">
+                        <p>Originally published Mar 3, 2019 10:30:00 PM, updated July 23 2019.</p>
+                        <a href="#" class="button">READ MORE</a>
+                </li>
+            </ul>
         </div>
-        <input type="text" placeholder="Name" name="name" required>
-        <input type="email" placeholder="Email" name="email" required>
-        <input type="text" placeholder="Subject" name="subject" required>
-        <textarea id="" placeholder="Write message" cols="" rows="10" name="message" required></textarea>
-        <input type="submit" id="submit" value="SEND MESSAGE" name="contact-btn">
-      </form>
     </div>
-  </section>
-  <?php  include "fragments/site_footer.php";?>
 </body>
-
 </html>
+
+
+
+
+
+
+

@@ -1,110 +1,30 @@
 * {
   
- padding: 0;
- margin: 0;
- text-decoration: none;
- list-style: none;
- box-sizing: border-box;
-}
-body {
- font-family: "Open Sans", sans-serif;
-}
-
-.form-container {
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- padding-top: 50px;
- width: 80vw;
- margin: 1rem auto;
- margin-bottom: 3rem;
-}
-/* styling of individual input field and textarea */
-.form-container input,
-textarea, select {
- width: 100%;
- padding: 10px 20px;
- margin: 10px auto;
- font-family: inherit;
- font-size: 16px;
- border-radius: 4px;
- border:1px solid #0a0a0a86;
- resize: none;
-}
-/* when user click on a field box */
-.form-container input:focus, .form-container textarea:focus, select:focus {
-box-shadow: 0px 0px 10px #45758b;
-border:1px solid #00aeff;
-transition:box-shadow .5s  ease-in-out,border .5s  ease-in-out; ;
-}
-
-/* form.form-container select:invalid { color: gray; } */
-
-form.form-container > button:hover {
- box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
- color: #fff;
-}
-section.jumbo {
- background: #d1f0f6;
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- width: 100%;
- margin-top: 0px;
-}
-
-.login-heading {
- width: 100%;
- text-align: center;
-}
-
-section.jumbo > h2.heading {
-  margin-top: 4em;
-  margin-bottom: 30px;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 54px;
-  text-align: center;
-  color: #084482;
-}
-
-section.jumbo > p.para {
- text-align: center;
- margin-bottom: 4em;
- padding: 0 5px;
- font-size: 24px;
-  line-height: 33px;
-  color: #474747;
-}
-
-section.jumbo > p.para > a {
-  text-decoration: underline;
-  color: #00AEFF;
-  font-weight: 600;
-}
-
-section.jumbo > p.para > a:hover {
-  text-decoration: underline;
-  color: #084482;
-  transition: all 0.5s ease-in-out;
-  font-weight: 600;
-}
-
-.social-icon {
- margin-right: 1rem;
- color: #00aeff;
- background: white;
- padding: 0.5rem;
- border: 5px solid white;
- box-shadow: 0px 4px 4px rgba(50, 50, 93, 0.11),
-   0px 1px 3px rgba(0, 0, 0, 0.08);
- border-radius: 50%;
-}
-
-
-
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+ }
+ body {
+  font-family: "Open Sans", sans-serif;
+ }
+ 
+ .form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  width: 80vw;
+  margin: 1rem auto;
+  margin-bottom: 3rem;
+ }
+ @media screen and (max-width: 400px){
+   #header{
+       width:90%;
+   }
+ }
  /* styling of individual input field and textarea */
  .form-container input,
  textarea, select {
@@ -116,7 +36,6 @@ section.jumbo > p.para > a:hover {
   border-radius: 4px;
   border:1px solid #0a0a0a86;
   resize: none;
-  transition: 0.4s ease-out;
  }
  /* when user click on a field box */
  .form-container input:focus, .form-container textarea:focus, select:focus {
@@ -124,19 +43,9 @@ section.jumbo > p.para > a:hover {
  border:1px solid #00aeff;
  transition:box-shadow .5s  ease-in-out,border .5s  ease-in-out; ;
  }
-
- form.form-container > button {
-  margin: 30px auto;
-  display: block;
-  padding: 10px 40px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 4px;
-  background: #00aeff;
-  border: 0px;
-  color: #fff;
-  transition: 0.4s ease-out;
- }
+ 
+ /* form.form-container select:invalid { color: gray; } */
+ 
  form.form-container > button:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   color: #fff;
@@ -150,157 +59,111 @@ section.jumbo > p.para > a:hover {
   width: 100%;
   margin-top: 0px;
  }
-
+ 
  .login-heading {
   width: 100%;
   text-align: center;
  }
-
- #check:checked ~ ul {
-   left: 0;
+ 
+ section.jumb > h2.heading {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 54px;
+  text-align: center;
+  color: #084482;
+  padding-top: 50px;
  }
-
- @media (max-width: 860px) {
-  .form-container
-  {
-    width: 90%;
+ 
+ section.jumb > p.para {
+   font-weight: normal;
+   font-size: 1rem;
+   text-align: center;
+   color: #474747;
+   margin-bottom: 30px;
+ }
+ 
+ section.jumb > p.para > a {
+   text-decoration: underline;
+   color: #00AEFF;
+   font-weight: 600;
+ }
+ 
+ section.jumb > p.para > a:hover {
+   text-decoration: underline;
+   color: #084482;
+   transition: all 0.5s ease-in-out;
+   font-weight: 600;
+ }
+ 
+ 
+  /* styling of individual input field and textarea */
+  .form-container input,
+  textarea, select {
+   width: 60%;
+   padding: 10px 20px;
+   margin: 10px auto;
+   font-family: inherit;
+   font-size: 16px;
+   border-radius: 4px;
+   border:1px solid #0a0a0a86;
+   resize: none;
+   transition: 0.4s ease-out;
   }
-  .form-container input, textarea, select {
-      width: 90%;
-    }
- }
-
- /*Smaller screens*/
- @media screen and (max-width: 578px) {
-   * {
-     padding: 0;
-     margin: 0;
-     text-decoration: none;
-     list-style: none;
-     box-sizing: border-box;
-   }
-   body {
-     font-family: "Open Sans", sans-serif;
-   }
-   .form-container {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     padding-top: 50px;
+  /* when user click on a field box */
+  .form-container input:focus, .form-container textarea:focus, select:focus {
+  box-shadow: 0px 0px 10px #45758b;
+  border:1px solid #00aeff;
+  transition:box-shadow .5s  ease-in-out,border .5s  ease-in-out; ;
+  }
+ 
+  form.form-container > button {
+    width: 60%;
+   margin: 30px auto;
+   display: block;
+   padding: 10px 40px;
+   font-size: 16px;
+   cursor: pointer;
+   border-radius: 4px;
+   background: #00aeff;
+   border: 0px;
+   color: #fff;
+   transition: 0.4s ease-out;
+  }
+  form.form-container > button:hover {
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+   color: #fff;
+  }
+  section.jumb {
+   background: #d1f0f6;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   margin-top: 0px;
+  }
+ 
+  .login-heading {
+   width: 100%;
+   text-align: center;
+  }
+ 
+  #check:checked ~ ul {
+    left: 0;
+  }
+ 
+  @media (max-width: 860px) {
+   .form-container
+   {
      width: 90%;
-     margin: 1rem auto;
-     margin-bottom: 3rem;
    }
-   .form-container input,
-   textarea, select {
-     width: 100%;
-     padding: 10px 20px;
-     margin: 10px auto;
-     font-family: inherit;
-     font-size: 16px;
-   }
-
-   form.form-container > button {
-     margin: 30px auto;
-     display: block;
-     padding: 10px 40px;
-     font-size: 16px;
-     cursor: pointer;
-     border-radius: 4px;
-     background: #00aeff;
-     border: 0px;
-     color: #fff;
-     transition: 0.4s ease-out;
-   }
-   form.form-container > button:hover {
-     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-     color: #fff;
-   }
-   section.jumbo {
-     background: #d1f0f6;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     width: 100%;
-     margin-top: 0px;
-   }
-
-   section.jumbo > h2.heading {
-     /* margin-top: 100px; */
-     margin-bottom: 30px;
-     font-size: 40px;
-     color: #084482;
-     margin-top: 10vh;
-   }
-
-   section.jumbo > p.para {
-     text-align: center;
-     margin-bottom: 0px;
-     padding: 0 5px;
-     margin-bottom: 10vh;
-   }
-
- }
-
-
- @media only screen and (max-width: 400px) {
-
-  section.jumbo > h2.heading {
-    margin-top: 4em;
-    margin-bottom: 30px;
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 54px;
-    text-align: center;
-    color: #084482;
+   .form-container input, textarea, select {
+       width: 90%;
+     }
   }
-  
-  section.jumbo > p.para {
-    text-align: center;
-    margin-bottom: 4em;
-    padding: 0 5px;
-    font-size: 24px;
-     line-height: 33px;
-     color: #474747;
-   }
-   
-   section.jumbo > p.para > a {
-     text-decoration: underline;
-     color: #00AEFF;
-     font-weight: 600;
-   }
-   
-   section.jumbo > p.para > a:hover {
-     text-decoration: underline;
-     color: #084482;
-     transition: all 0.5s ease-in-out;
-     font-weight: 600;
-   }
-   
-
- .social-icon {
-  margin-right: 1rem;
-  color: #00aeff;
-  background: white;
-  padding: 0.5rem;
-  border: 5px solid white;
-  box-shadow: 0px 4px 4px rgba(50, 50, 93, 0.11),
-    0px 1px 3px rgba(0, 0, 0, 0.08);
-  border-radius: 50%;
- }
-
- @media (max-width: 860px) {
-  .form-container
-  {
-    width: 90%;
-  }
-  .form-container input, textarea, select {
-      width: 350px;
-    }
- }
-
+ 
   /*Smaller screens*/
   @media screen and (max-width: 578px) {
     * {
@@ -325,18 +188,17 @@ section.jumbo > p.para > a:hover {
     }
     .form-container input,
     textarea, select {
-      width: 300px;
+      width: 100%;
       padding: 10px 20px;
       margin: 10px auto;
       font-family: inherit;
       font-size: 16px;
-      transition: 0.4s ease-out;
     }
-
+ 
     form.form-container > button {
       margin: 30px auto;
       display: block;
-      padding: 10px 30px;
+      padding: 10px 40px;
       font-size: 16px;
       cursor: pointer;
       border-radius: 4px;
@@ -358,64 +220,182 @@ section.jumbo > p.para > a:hover {
       width: 100%;
       margin-top: 0px;
     }
-
-    section.jumbo > h2.heading {
-      /* margin-top: 100px; */
-      margin-bottom: 30px;
-      font-size: 40px;
+ 
+ 
+ 
+  }
+ 
+ 
+  @media only screen and (max-width: 400px) {
+ 
+    
+    section.jumb > p.para > a {
+      text-decoration: underline;
+      color: #00AEFF;
+      font-weight: 600;
+    }
+    
+    section.jumb > p.para > a:hover {
+      text-decoration: underline;
       color: #084482;
+      transition: all 0.5s ease-in-out;
+      font-weight: 600;
     }
-
-    section.jumbo > p.para {
-      text-align: center;
-      margin-bottom: 0px;
-      padding: 0 5px;
-    }
-
-    section.jumbo > p.para2 {
-      text-align: center;
-      margin-top: 0px;
-      margin-bottom: 50px;
-    }
-
+    
+ 
+  .social-icon {
+   margin-right: 1rem;
+   color: #00aeff;
+   background: white;
+   padding: 0.5rem;
+   border: 5px solid white;
+   box-shadow: 0px 4px 4px rgba(50, 50, 93, 0.11),
+     0px 1px 3px rgba(0, 0, 0, 0.08);
+   border-radius: 50%;
   }
-
-  @media (max-width: 952px) {
-    nav ul li a {
-      font-size: 16px;
-    }
+ 
+  @media (max-width: 860px) {
+   .form-container
+   {
+     width: 90%;
+   }
+   .form-container input, textarea, select {
+       width: 350px;
+     }
   }
-
- @media (max-width: 858px) {
-
-  .checkbtn {
-    display: block;
+ 
+   /*Smaller screens*/
+   @media screen and (max-width: 578px) {
+     * {
+       padding: 0;
+       margin: 0;
+       text-decoration: none;
+       list-style: none;
+       box-sizing: border-box;
+     }
+     body {
+       font-family: "Open Sans", sans-serif;
+     }
+     .form-container {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       padding-top: 50px;
+       width: 90%;
+       margin: 1rem auto;
+       margin-bottom: 3rem;
+     }
+     .form-container input,
+     textarea, select {
+       width: 300px;
+       padding: 10px 20px;
+       margin: 10px auto;
+       font-family: inherit;
+       font-size: 16px;
+       transition: 0.4s ease-out;
+     }
+ 
+     form.form-container > button {
+       margin: 30px auto;
+       display: block;
+       padding: 10px 30px;
+       font-size: 16px;
+       cursor: pointer;
+       border-radius: 4px;
+       background: #00aeff;
+       border: 0px;
+       color: #fff;
+       transition: 0.4s ease-out;
+     }
+     form.form-container > button:hover {
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+       color: #fff;
+     }
+     section.jumb {
+       background: #d1f0f6;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       width: 100%;
+       margin-top: 0px;
+     }
+ 
+    
+ 
+     section.jumb > p.para2 {
+       text-align: center;
+       margin-top: 0px;
+       margin-bottom: 50px;
+     }
+ 
+   }
+ 
+   @media (max-width: 952px) {
+     nav ul li a {
+       font-size: 16px;
+     }
+   }
+ 
+  @media (max-width: 858px) {
+ 
+   .checkbtn {
+     display: block;
+   }
+   nav ul {
+     position: fixed;
+     width: 100%;
+     height: 100vh;
+     background: #d1f0f6;
+     top: 80px;
+     left: -100%;
+     text-align: center;
+     transition: all 0.5s;
+   }
+   nav ul li {
+     display: block;
+     margin: 50px 0;
+     line-height: 30px;
+   }
+   nav ul li a {
+     font-size: 20px;
+   }
+   nav ul li a:hover,
+   nav ul li a.active {
+     background: none;
+     color: #00aeff;
+   }
+   #check:checked ~ ul {
+     left: 0;
+   }
+   @media only screen and (max-width: 400px) {
+ 
+   section.jumb > p.para2 {
+     font-size: .85em;
+   }
+ 
+   }
   }
-  nav ul {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #d1f0f6;
-    top: 80px;
-    left: -100%;
-    text-align: center;
-    transition: all 0.5s;
+  .inputWithIcon{
+    position: relative;
   }
-  nav ul li {
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
+  .inputWithIcon input[type="email"], input[type="password"]{
+    padding-left:3rem;
   }
-  nav ul li a {
-    font-size: 20px;
+ 
+  .inputWithIcon i{
+    position: absolute;
+    left:0;
+    top: 16px;
+    color:#8898aa;
+    padding:9px 8px;
+ 
   }
-  nav ul li a:hover,
-  nav ul li a.active {
-    background: none;
-    color: #00aeff;
-  }
-  #check:checked ~ ul {
-    left: 0;
+  /* overiding text-danger */
+  .small-text{
+    font-size:0.8rem;
+    color:cornflowerblue !important;
   }
   @media only screen and (max-width: 400px) {
     section.jumbo > h2.heading {
@@ -427,8 +407,19 @@ section.jumbo > p.para > a:hover {
   section.jumbo > p.para2 {
     font-size: .85em;
   }
-
+ 
+ .navigation {
+   padding-left: 40px !important;
+   padding-right: 40px !important;
+   background: #d1f0f6;
   }
+ 
+  @media (max-width: 759px) {
+ 
+   .navigation {
+     padding-left: 15px !important;
+     padding-right: 15px !important;
+   }
  }
  .inputWithIcon{
    position: relative;
@@ -451,5 +442,5 @@ section.jumbo > p.para > a:hover {
    color:cornflowerblue !important;
  }
  }
-
+  }
  

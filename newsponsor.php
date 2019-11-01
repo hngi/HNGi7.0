@@ -55,7 +55,7 @@ if (isset($_POST['contact-btn'])) {
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-  <link rel="stylesheet" href="css/contactform.css">
+  <link rel="stylesheet" href="css/newsponsor.css">
   <link rel="stylesheet" type="text/css" href="css/header-footer.css">
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
 </head>
@@ -66,8 +66,8 @@ if (isset($_POST['contact-btn'])) {
   <section class="container-fluid">
     <div class="wrap">
       <div class="header">
-        <h1>Not a Frequently Asked Question?</h1>
-        <h1> contact us below</h1>
+        <h1>Sponsor Registration</h1>
+        <p> Fill the form below to become a sponsor</p>
       </div>
 
 
@@ -89,11 +89,13 @@ if (!empty($msg2)) {
 }
 ?>
         </div>
+        <label for="sponsor_logo">Upload Your logo</label>
+        <input type="file" placeholder="Sponsor Logo" name="Sponsor Logo" required>
         <input type="text" placeholder="Name" name="name" required>
         <input type="email" placeholder="Email" name="email" required>
-        <input type="text" placeholder="Subject" name="subject" required>
-        <textarea id="" placeholder="Write message" cols="" rows="10" name="message" required></textarea>
-        <input type="submit" id="submit" value="SEND MESSAGE" name="contact-btn">
+        <input type="text" placeholder="Business Address" name="Business Address" required>
+        <textarea id="" placeholder="Tell us about youself" cols="" rows="10" name="Tell us about youself" required></textarea>
+        <input type="submit" id="submit" value="REGISTER" name="contact-btn">
       </form>
     </div>
   </section>

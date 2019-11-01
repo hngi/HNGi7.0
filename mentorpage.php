@@ -10,7 +10,9 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="css/header-footer.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/header-footer.css">
   <link rel="stylesheet" type="text/css" href="css/mentorpage.css">
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
 
@@ -18,11 +20,13 @@
 </head>
 
 <body>
-  <section class="container-fluid">
-  <?php include('fragments/site_header.php'); ?>
+  <div style="background-color: #D1F0F6 !important;"><?php include('fragments/site_header.php'); ?></div>
+
+  <section class="container1">
+  
 
   <div class="jumbotron" id="landing-page">
-    <div class>
+    <div class="container">
       <h2>Our Mentors</h2>
       <p class="lead">Our mentors who are experienced in various sector contributes their
         time and knowledge in making sure the interns get the best guide as
@@ -32,7 +36,7 @@
   </div>
 
   <main>
-    <section class="mentors-section">
+    <section class="mentors-section container">
       <div class="wrapper">
 
       </div>
@@ -43,6 +47,7 @@
 </section>  
 
 <?php include('fragments/site_footer.php'); ?>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </body>
 
 

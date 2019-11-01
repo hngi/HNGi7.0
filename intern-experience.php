@@ -51,21 +51,26 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="stylesheet" href="css/intern-experience.css">
     <title>Experience Page</title>
 </head>
 
 <body>
-    <section class="container-fluid">
-    <section class="jumbo">  
-    <?php include('fragments/site_header.php');?>
-            <h2>Experience Recap From Past Interns</h2>
-            <p class="para">Testimonies From Ex HNG Internship Finalists</p>
-            <a href="#modal-id" data-toggle="modal" class="button-primary">Submit Experience</a> <!--button to add experience-->
+
+<section class="navigation">
+   <?php include('fragments/site_header.php'); ?>
+  </section>
+
+  
+    <section class="jumb">  
+            <h2>Past Interns Experience</h2>
+            <p class="para">Testimonies From Ex-HNG Internship Finalists</p>
+            <p class="text-center" onclick="message()"><a href="#">Submit Experience</a></p>
    </section>
 
-    <!--modal here-->
+    
     <div class="modal fade" id="modal-id">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -104,7 +109,7 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
-
+    <section class="container-fluid px-2">
     <main>
         <section>
             <section class="mentors-section">
@@ -129,10 +134,9 @@
                             }
                             ?>
                             <div class="wrapper-child"  >
-                                <img class="image" src="<?php echo $img_src;?>">
-                                <h4><?php echo $all_experience['names'];?></h4>
-                                <p class="stack"><?php echo $all_experience['stack'];?></p>
-                                <hr class="hline"/>
+                                <img class="image" src="<?php echo $img_src;?>" alt = "intern img">
+                                <h4 class="name"><?php echo $all_experience['names'];?></h4>
+                                <p class="stack"><?php echo $all_experience['stack'];?></p> <hr>
                                 <p class="experience">
                                     <?php echo nl2br($all_experience['experience']);?>
                                 </p>
@@ -147,6 +151,7 @@
     </main>
     </section>        
     <?php include('fragments/site_footer.php'); ?>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 </body>
  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -158,5 +163,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="js/intern-experience.js"></script>
+    <script src="js/intern-experience.js">
+    </script>
+    <script>
+          function message (){
+            alert("Function under construction check back later!");
+        }
+    </script>
 </html>

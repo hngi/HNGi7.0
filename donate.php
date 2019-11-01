@@ -12,6 +12,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"/>
     <link rel="stylesheet" type="text/css"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" type="text/css" href="css/header-footer.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/donate.css" />
@@ -26,22 +27,22 @@
   </head>
 
   <body>
-  <section class="container-fluid">
-  <!-- <div class="body-container"> -->
-    <section class="jumbo">
-    <?php include "fragments/site_header.php" ?>
-     </section>
 
-      <div class="hero-cont">
-        <h2 class="title">Donate to HNG</h2>
-        <p class="desc">
-          Your donations go towards providing adequate resources, such as
-          electricity, internet, laptops and tutorials to interns who don't have
-          access to them. They keep the internship going and help us keep
-          finding and nurturing talent.
-        </p>
-        <a href="#form" class="button-primary">Donate</a>
-      </div>
+  <div style="background-color: #D1F0F6 !important;"><?php include('fragments/site_header.php'); ?></div>
+
+  <section class="container-fluid1" >
+  <!-- <div class="body-container"> -->
+    <div class="hero-cont">
+      <h2 class="title">Donate to HNG</h2>
+      <p class="desc">
+        Your donations go towards providing adequate resources, such as
+        electricity, internet, laptops and tutorials to interns who don't have
+        access to them. They keep the internship going and help us keep
+        finding and nurturing talent.
+      </p>
+      <a href="#form" class="button-primary">Donate</a>
+      <a href="newsponsor.php" class="button-primary">Register as Sponsor(Brand)</a>
+
     </div>
 
     <section class="whatwe">
@@ -108,6 +109,8 @@
         </select>
         <input type="submit" /> <br>
         <a href="quickdonation.php">Donate via Flutter</a>
+        <a href="newsponsor.php">Register as Sponsor(Brand)</a>
+       
       </form>
     </section>
 
@@ -154,6 +157,7 @@
      <!-- </div> -->
     </section>     
     <?php include "fragments/site_footer.php" ?>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   </body>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

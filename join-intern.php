@@ -43,27 +43,35 @@ require_once 'classControllers/init.php';
   <link rel="stylesheet" type="text/css" href="css/header-footer.css">
   <link rel="stylesheet" href="css/join-intern.css">
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
-
   <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
   <style>
+        h2.heading {
+          color: #084482;
+          font-weight: bolder;
+          margin-top: 50px;
+        }
 
-    #socials a {
-        display: inline-block;
-        margin-top: 10px;
-    }
+        p.para {
+          width: 100%;
+          text-align: center;
+          margin-top: 20px;
+          margin-bottom: 100px;
 
+        }
   </style>
-
 </head>
 
 <body>
-  <section class="container-fluid">
-  <section class="jumbo">
-    <?php include('fragments/site_header.php'); ?>
+<div style="background-color: #D1F0F6;">
+<?php include('fragments/site_header.php'); ?></div>
 
-    <h2 class="heading">Join as an intern</h2>
+  <section class="container-fluid1">
+  <section class="jumbo">
+
+    <h2 class="heading">Join as an Intern</h2>
     <p class="para">
-      Complete the form below to begin your journey as an intern.<br>
+      Complete the form below to begin your journey as an Intern.<br>
       To become a mentor <a href="MentorSetUpPage2.php">Click here</a>
     </p>
   </section>

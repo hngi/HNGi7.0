@@ -42,7 +42,7 @@ if (isset($_POST["recover-btn"])) {
                                         </tr>";
     $admin->forGetpassword($email, $code);
     forGetPasswordMail($subject, $body,$email,$url,$fullname);
-    $mess = '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: green; color: #fff; width: 80% !important; text-align: center;">A reset password link has been sent to your email thank you!</p>';
+    $mess = '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: green; color: #fff; width: 100% !important; text-align: center;">A reset password link has been sent to your email thank you!</p>';
   }else{
      $errors = '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: #F7CFCF; color: #6A0E0D; width: 80% !important; text-align: center;">Wrong email entered</p>';
   }
@@ -57,28 +57,34 @@ if (isset($_POST["recover-btn"])) {
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FORGOT PASSWORD</title>
-    <link rel="shortcut icon" href="https://res.cloudinary.com/dekillerj/image/upload/v1570648980/brand-logo.png"/>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-      crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
-    <link rel="icon" type="img/png" href="images/hng-favicon.png">
-    <link rel="stylesheet" type="text/css" href="css/header-footer.css">
-    <link rel="stylesheet" href="css/join-intern.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forgot Password</title>
+  <link rel="shortcut icon" href="https://res.cloudinary.com/dekillerj/image/upload/v1570648980/brand-logo.png" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="icon" type="img/png" href="images/hng-favicon.png">
+  <link rel="stylesheet" type="text/css" href="css/header-footer.css">
+  <link rel="stylesheet" href="css/loginadmin.css">
     <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" ></script>
-
+  <style>
+        #email {
+          margin-bottom: 20px;
+          width: 100%;
+          padding: 10px;
+        }
+  </style>
    
 
   </head>
-  <body>
-    <section class="container-fluid">
-    <section class="jumbo">
+  <body><section class="jumbo">
     <?php include('fragments/site_header.php'); ?>
     </section>
+    <section class="container-fluid">
+    
 
     <div class="form-area">
 
@@ -100,7 +106,7 @@ if (isset($_POST["recover-btn"])) {
         ?>
         <p id="result"></p>
 
-        <input type="email" name="email" id="email" placeholder="enter your Email"/>
+        <input type="email" name="email" id="email" placeholder="Enter your Email"/> <br>
         <button type="submit" onclick="signup()" name="recover-btn">RECOVER PASSWORD</button>
 
 
