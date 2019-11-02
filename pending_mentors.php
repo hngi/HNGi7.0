@@ -69,7 +69,7 @@ if (isset($_GET['rejectMentorId'])) {
         <section id="overview-section">
             <!-- <h1>Dashboard</h1> -->
             <h2>Pending Mentors </h2>
-            <div class="mentor-buttons">
+            <div style="margin : 5rem 0 1rem 1.5rem;">
                 <a href="registered_mentors.php" class="btn btn-default">Active Mentors</a>
                 <a href="declined_mentors.php" class="btn btn-default">Declined Mentors</a>
             </div>
@@ -77,7 +77,7 @@ if (isset($_GET['rejectMentorId'])) {
 				Populated by `js/dashboard.js`
 			</section> -->
 
-            <div>
+            <div class="container">
                 <div class="row">
 
                     <?php
@@ -100,7 +100,7 @@ if (isset($_GET['rejectMentorId'])) {
                         <div id="printablediv">
                             <div class="scroll">
                             <!-- <table id="my-table" class="table table-hover table-bordered mt-3 mb-1"> -->
-                            <table id="my-table" class="table table-hover mentor-table">
+                            <table id="my-table" class="table table-hover">
                                 <!-- <thead class="table-primary"> -->
                                 <thead>
                                     <tr>

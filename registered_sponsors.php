@@ -69,7 +69,7 @@ if (isset($_GET['delete_id'])) {
 				Populated by `js/dashboard.js` 
 			</section> -->
 
-            <div>
+            <div class="container">
                 <div class="row">
 
                     <?php
@@ -89,10 +89,10 @@ if (isset($_GET['delete_id'])) {
                             </a> -->
                         </div>
                         <!-- <div id="printablediv" class="table-responsive"> -->
-                        <div id="printablediv" class="sponsors">
+                        <div id="printablediv">
                             <div class="scroll">
                             <!-- <table id="my-table" class="table table-hover table-bordered mt-3 mb-1"> -->
-                            <table id="my-table" class="table table-hover sponsor-table">
+                            <table id="my-table" class="table table-hover">
                                 <!-- <thead class="table-primary"> -->
                                 <thead>
                                     <tr>
@@ -131,7 +131,7 @@ if (isset($_GET['delete_id'])) {
 
                     </tr>
                     <tr>
-                        <td>2</td>
+                        <td>1</td>
                         <td> CEO techBAM </td>
                         <td><img src="uploads/5db802bf1a6d53.33443776.jpg" style="width: 50px; height: 50px;"></td>
                         <td>Victor</td>
@@ -178,7 +178,7 @@ if (isset($_GET['delete_id'])) {
                 </div>
             </div>
             <div id="centralize">
-			<h2>Sponsor Details</h2>
+			<h2>sponsor Details</h2>
 			<em id="no-intern">No sponsor selected</em>
             <br />
             <p class="details" style="margin-left:10%;"><span id="photo"></span></p>

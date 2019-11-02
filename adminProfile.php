@@ -11,16 +11,6 @@ $adminId = $_SESSION["admin_id"];
 $admin = new Admins();
 $display = $admin->getAdmin($adminId);
 
-
-if($display["hasPic"] == 0) {
-    // admin has NO picture, show default
-    $_SESSION["hasPic"] = "no";
-} else {
-    // admin has picture
-     $_SESSION["hasPic"] = "yes";
-}
-
-
 if(isset($_POST["update"])) {
     $firstname = $_POST["firstname"];
     $lastname = $_POST["lastname"];
@@ -29,15 +19,6 @@ if(isset($_POST["update"])) {
     $updateResult = $admin->updateProfile($firstname, $lastname, $email, $adminId);
 }
 
-
-if(isset($_POST["uploadPicture"])) {
-    $fileName = $adminId. ".jpg";
-    if (move_uploaded_file($_FILES["image"]["tmp_name"], "adminProfilePics/".$fileName."")) {
-        $admin->imageUPloaded($adminId);
-    } else {
-        echo "Sorry, there was an error uploading your file.";
-    }
-}
 
 
 
@@ -146,37 +127,12 @@ if(isset($_POST["uploadPicture"])) {
                 </div>
 
                 <div class="col-md-6">
-
-                   <?php
-                        if(isset($_GET["picSaved"])) {
-                            echo '
-                            <div class="alert alert-success">
-                                <strong>Done!</strong> Profile Picture uploaded Successfully
-                            </div>';
-                        }
-
-                        if(isset($_GET["changed"])) {
-                            echo '
-                            <div class="alert alert-success">
-                                <strong>Done!</strong> Profile Picture updated Successfully
-                            </div>';
-                        }
-                    ?>
                        
                     <div class="col-md-10" style="margin-bottom: 20px; margin-top: 20px;">
-                        <?php
-                            if($display["hasPic"] == 0) {
-                                // admin has NO picture, show default
-                                echo '<img src="adminProfilePics/default.jpg" />';
-                            } else {
-                                // admin has picture
-                                echo '<img src="adminProfilePics/'.$adminId.'.jpg" class="img-circle img-responsive" />';
-                            }
-                        ?>
-                        
+                        <img src="adminProfilePics/default.jpg" />
                     </div>
                     
-                    <div class="row" style="padding-left: 70px;">
+                    <div class="row">
                         <?php   
                             if($display["hasPic"] == 0) {
                                 // admin has NO picture
