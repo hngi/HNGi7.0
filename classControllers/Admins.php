@@ -275,19 +275,14 @@ class Admins
       }
   }
 
-  public function imageUPloaded($id) {
+  public function uploadImage() {
     global $database;
-    $query = "UPDATE admins SET hasPic = 1 WHERE admin_id = ".$id."";
-    $res = $database->query($query);
-    $count = $database->affected_rows();
-    if($count > 0) {
-      // uploaded
-      header("Location: adminProfile.php?picSaved");
+
+    if (move_uploaded_file($_FILES["image"]["tmp_name"], "/adminProfilePics")) {
+        
     } else {
-      // failed
-      header("Location: adminProfile.php?changed");
+        echo "Sorry, there was an error uploading your file.";
     }
-    
 
   }
 }

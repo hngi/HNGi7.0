@@ -186,6 +186,14 @@ i:hover{
 }
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+#my-table td:nth-child(3),
+#my-table th:nth-child(3){
+	display:none;
+}
+=======
+>>>>>>> 0ac0d145fe9cd6c5cca978e39732513583334f8d
 
 .mentor-table th:nth-child(2),
 .mentor-table th:nth-child(3),
@@ -207,9 +215,15 @@ i:hover{
 	display: none;
 }
 
+<<<<<<< HEAD
+#my-table td:nth-child(12),
+#my-table th:nth-child(12){
+	display:block;
+=======
+>>>>>>> 0ac0d145fe9cd6c5cca978e39732513583334f8d
 
 
-.intern-table th:nth-child(2),
+intern-table th:nth-child(2);
 .intern-table th:nth-child(5),
 .intern-table th:nth-child(6),
 .intern-table th:nth-child(7),
@@ -593,6 +607,14 @@ i:hover{
 	}
 	
 }
+<<<<<<< HEAD
+	@media (max-width: 500px){
+		#details-section{
+			font-size: 12px;
+			left: 100vw;
+		}
+=======
+>>>>>>> 0ac0d145fe9cd6c5cca978e39732513583334f8d
 
 @media (min-width: 500px) and (max-width: 859px){
 
@@ -657,6 +679,31 @@ i:hover{
 	#my-table{
 		width: 100%;
 		margin: 0 auto;
+<<<<<<< HEAD
+		
+		#navigator{
+			margin-top: 0;
+		}
+		#details-section{	
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: 100px 60vh;	
+		}
+		
+		#my-table>tbody>tr>td:nth-child(1){
+			padding-left: 15px;
+		}
+		#my-table td:nth-child(2),
+		#my-table th:nth-child(2){
+			display: none;
+		}
+		.box{
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+			width: 95vw;
+		}
+=======
+>>>>>>> 0ac0d145fe9cd6c5cca978e39732513583334f8d
 		
 	}
 	.scroll{

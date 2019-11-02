@@ -70,6 +70,11 @@
 .freq-n h3{
 text-transform: capitalize;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 0ac0d145fe9cd6c5cca978e39732513583334f8d
 
 #btn-here{
   background-color: #00AEFF;
@@ -79,6 +84,10 @@ text-transform: capitalize;
     opacity: .5;
     color: white;
 
+<<<<<<< HEAD
+>>>>>>> 27b1f149cdc2c3d6702a3991c0825f4d6d064c0f
+=======
+>>>>>>> 0ac0d145fe9cd6c5cca978e39732513583334f8d
 .freq-n h3 a {
   color: white;
   background-color: #00AEFF;
@@ -87,5 +96,12 @@ text-transform: capitalize;
 .freq-n h3 a:hover {
   color: white;
   opacity: .7;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> 27b1f149cdc2c3d6702a3991c0825f4d6d064c0f
+=======
+
+>>>>>>> 0ac0d145fe9cd6c5cca978e39732513583334f8d
 }

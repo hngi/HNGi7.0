@@ -5,19 +5,6 @@ if(!isset($_SESSION["role"])) {
 	header('Location:login.php'); 
 }
 
-$adminId = $_SESSION["admin_id"];
-$admin = new Admins();
-$display = $admin->getAdmin($adminId);
-
-
-if($display["hasPic"] == 0) {
-    // admin has NO picture, show default
-    $_SESSION["hasPic"] = "no";
-} else {
-    // admin has picture
-     $_SESSION["hasPic"] = "yes";
-}
-
 	
     $mentors = new Mentor;
     $displaym = $mentors->allMentors();
