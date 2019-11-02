@@ -34,7 +34,7 @@ if(isset($_GET["editExperiences"])) {
     $id = $_GET["editExperiences"];
     $editExperiencesRes = $InternExperience->editExperiences($id);
     if($editExperiencesRes == true) {
-        header("Location:internreview");
+        header("Location:internreview.php");
     }
 }
 
