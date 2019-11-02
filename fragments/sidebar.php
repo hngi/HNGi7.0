@@ -28,18 +28,7 @@
 
 			}
 		?>
-<<<<<<< HEAD
 				<hr id="hr2">
-=======
-
-		<!-- <select>
-			<option selected="selected" disabled="disabled">Overview</option>
-			<option value="0">Mentors</option>
-			<option value="1">Users</option>
-		</select>
-		<a href="#">Advanced</a> -->
-		<hr id="hr2">
->>>>>>> 174b94f4568d142b0cfe1a24fe69bbc832483495
 		<a href="./logout.php">Logout</a>
 	</nav>
 </section>
