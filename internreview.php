@@ -56,7 +56,7 @@ if(isset($_GET["editExperiences"])) {
     $id = $_GET["editExperiences"];
     $editExperiencesRes = $InternExperience->editExperiences($id);
     if($editExperiencesRes == true) {
-        header("Location:internreview");
+        header("Location:internreview.php");
     }
 }
 
@@ -64,7 +64,7 @@ if(isset($_GET["ApproveExperiences"])) {
     $id = $_GET["ApproveExperiences"];
     $ApproveExperiences= $InternExperience->ApproveExperiences($id);
     if($ApproveExperiencesRes == true) {
-        header("Location:internreview");
+        header("Location:internreview.php");
     }
 }
 */
