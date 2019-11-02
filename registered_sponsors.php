@@ -103,17 +103,23 @@ $data = $sponsors->getAllSponsor();
                                     <th data-heading="sn">SN
                                         <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
                                     </th>
-                                    <th data-heading="photo">Logo
-                                        <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
-                                    </th>
                                     <th data-heading="name">Name
                                         <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
                                     </th>
-                                    <th data-heading="email">Address
+                                    <th data-heading="email">Email
                                         <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
                                     </th>
-                                    <th colspan="3">Action</th>
+                                    <th data-heading="address">Address
+                                        <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
+                                    </th>
 
+                                    <th colspan="3">Action</th>
+                                    <th data-heading="about">
+                                        <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
+                                    </th>
+                                    <th data-heading="photo">logo
+                                        <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
+                                    </th>
 
 
 
@@ -157,16 +163,12 @@ $data = $sponsors->getAllSponsor();
                 <h2>sponsor Details</h2>
                 <em id="no-intern">No sponsor selected</em>
                 <br />
-                <p class="details" style="margin-left:10%;"><span id="photo"></span></p>
+
                 <p class="details">Name: <span id="name"></span></p>
                 <p class="details">Email: <span id="email"></span></p>
-                <p class="details">Phone Number: <span id="phone"></span></p>
-                <p class="details">Expertise: <span id="expertise"></span></p>
-                <p class="details">CV link: <span id="cv"></span></p>
-                <p class="details">State of residence: <span id="state"></span></p>
-                <p class="details">Employment Status: <span id="employment-status"></span></p>
-                <p class="details">Why Interested: <span id="Interest"></span></p>
-                <p class="details">Timestamp: <span id="timeStamp"></span></p>
+                <p class="details">Address: <span id="address"></span></p>
+                <p class="details">About sponsor: <span id="about"></span></p>
+                <p class="details" style="margin-left:10%;"><span id="photo"></span></p>
                 <!-- <div href="" id="details-return">Back to Overview</div> -->
                 <div id="navigator">
                     <i class="fas fa-chevron-left fa-2x left navigator"></i>
