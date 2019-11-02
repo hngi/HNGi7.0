@@ -35,7 +35,7 @@
     function toggleMenu(){
         let menuBar = $("#navMenu");
         let closeButton = $(".nav_button");
-        menuBar.toggle();
+        menuBar.slideToggle(700);
         closeButton.toggleClass("closefunction");
         
     }
