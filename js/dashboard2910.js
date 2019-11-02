@@ -86,22 +86,22 @@ const collateByTrack =(element, dataArray, area, title)=>{
       if(event.target.name === "byLocation" || event.type === "load"){
        
           if(_mentorLocation.checked){
-            byLocation("count_by_state2", mentorData, "state", "Mentor count by location")
+            byLocation("count_by_state2", mentorData, "state", "Active Mentor Count By Location")
             internStateCanvas.classList.remove('active')
             mentorStateCanvas.classList.add('active')
         }else if(_internLocation.checked){
-            byLocation("count_by_state", internData, "location", "Intern Count by location")
+            byLocation("count_by_state", internData, "location", "Active Intern Count By Location")
             internStateCanvas.classList.add('active')
             mentorStateCanvas.classList.remove('active')
         }
       }
       if(event.target.name === "byTrack" || event.type === "load"){
         if(_mentorTrack.checked){      
-          collateByTrack("count_by_track2", mentorData, "expertise","Mentor Count by area of expertise")
+          collateByTrack("count_by_track2", mentorData, "expertise","Active Mentor Count By Area Of Expertise")
           internTrackCanvas.classList.remove('active')
           mentorTrackCanvas.classList.add('active')
         }else if(_internTrack.checked){
-          collateByTrack("count_by_track",internData, "interest", "Intern count by area of Interest")
+          collateByTrack("count_by_track",internData, "interest", "Active Intern Count By Area Of Interest")
           internTrackCanvas.classList.add('active')
           mentorTrackCanvas.classList.remove('active')
       } 
