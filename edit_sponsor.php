@@ -102,7 +102,7 @@ if (isset($_POST["sponsor-update"])) {
                 <input type="file" class="form-control" name="file" id="lastname">
               </div>
               <button type="submit" class="btn btn-primary" name="sponsor-update">Submit</button>
-              <a href="registered_sponsors.php" class="btn" style="background: gray; color:#fff;">cancle</a>
+              <a href="registered_sponsors.php" class="btn" style="background: gray; color:#fff;">Cancel</a>
             </form>
           </div>
         </div>
