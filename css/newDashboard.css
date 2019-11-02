@@ -210,7 +210,6 @@ i:hover{
 
 
 .intern-table th:nth-child(2),
-
 .intern-table th:nth-child(5),
 .intern-table th:nth-child(6),
 .intern-table th:nth-child(7),
@@ -230,25 +229,8 @@ i:hover{
 	display: none;
 }
 
-
-.sponsor-table th:nth-child(2),
-.sponsor-table th:nth-child(3),
-.sponsor-table th:nth-child(5),
-.sponsor-table th:nth-child(6),
-.sponsor-table th:nth-child(7),
-.sponsor-table th:nth-child(8),
-.sponsor-table th:nth-child(9),
-.sponsor-table th:nth-child(10),
-.sponsor-table th:nth-child(11),
-.sponsor-table td:nth-child(2),
-.sponsor-table td:nth-child(3),
-.sponsor-table td:nth-child(5),
-.sponsor-table td:nth-child(6),
-.sponsor-table td:nth-child(7),
-.sponsor-table td:nth-child(8),
-.sponsor-table td:nth-child(9),
-.sponsor-table td:nth-child(10),
-.sponsor-table td:nth-child(11){
+.sponsor-table th:nth-child(4),
+.sponsor-table td:nth-child(4){
 	display: none;
 }
 
@@ -613,6 +595,7 @@ i:hover{
 }
 
 @media (min-width: 500px) and (max-width: 859px){
+
 	#my-table tr,
 	#my-table>thead>tr>th{
 		text-align: center ;
@@ -620,6 +603,10 @@ i:hover{
 }
 
 @media (max-width: 500px){
+	.sponsor-table th:nth-child(2),
+	.sponsor-table td:nth-child(2){
+			display: none;
+	}
 	#details-section{
 		font-size: 12px;
 		left: 100vw;
