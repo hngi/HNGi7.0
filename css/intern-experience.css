@@ -374,3 +374,25 @@ h4 {
 }
 
 
+/* MODAL FORM STYLING HERE */
+
+#submitExperience {
+  position: Fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  z-index: 2;
+  background-color: white;
+  padding-top: 100px;
+  display: none;
+}
+
+.modal-content {
+  border: 3px solid green;
+  box-shadow: 3px 3px 5px grey;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: -60px;
+}

@@ -131,14 +131,18 @@
 
                 <div class="card">
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <div class="card-header" id="headingFour">
 =======
                     <div class="card-header" id="headingFive">
 >>>>>>> 27b1f149cdc2c3d6702a3991c0825f4d6d064c0f
+=======
+                    <div class="card-header" id="headingFive">
+>>>>>>> 0ac0d145fe9cd6c5cca978e39732513583334f8d
                         <h2 class="mb-0">
                                 <button class="btn btn-link collapsed"
-                                data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
-                                aria-controls="collapseFour">
+                                data-toggle="collapse" data-target="#collapseFive" aria-expanded="false"
+                                aria-controls="collapseFive">
                                 I am a newbie, I have no idea about coding/design/digital marketing and so on... Can this internship help me?
                                 <span class="fa-stack fa-sm">
                                         <i class="fas fa-angle-down"></i>
@@ -146,7 +150,7 @@
                             </button>
                         </h2>
                     </div>
-                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
                         <div class="card-body">
                             <p class="text-muted">
                             Learning new things is the spice of the world, and this internship is medium to try out something new.
@@ -158,14 +162,18 @@
 
                 <div class="card">
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <div class="card-header" id="headingFour">
 =======
                     <div class="card-header" id="headingSix">
 >>>>>>> 27b1f149cdc2c3d6702a3991c0825f4d6d064c0f
+=======
+                    <div class="card-header" id="headingSix">
+>>>>>>> 0ac0d145fe9cd6c5cca978e39732513583334f8d
                         <h2 class="mb-0">
                                 <button class="btn btn-link collapsed"
-                                data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
-                                aria-controls="collapseFour">
+                                data-toggle="collapse" data-target="#collapseSix" aria-expanded="false"
+                                aria-controls="collapseSix">
                                 Do we get certificates upon completion of the internship?
                                 <span class="fa-stack fa-sm">
                                         <i class="fas fa-angle-down"></i>
@@ -173,7 +181,7 @@
                             </button>
                         </h2>
                     </div>
-                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
                         <div class="card-body">
                             <p class="text-muted">
                           Yes, Certifcates are awarded to the finalists

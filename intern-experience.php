@@ -67,15 +67,22 @@
     <section class="jumb">  
             <h2>Past Interns Experience</h2>
             <p class="para">Testimonies From Ex-HNG Internship Finalists</p>
+<<<<<<< HEAD
             <p class="text-center"><a href="#" data-toggle="modal" data-target="#modalExample">Submit Experience</a></p>
    </section>
     
 <div id="modalExample" class="modal fade" role="dialog">
+=======
+            <p class="text-center" onclick="modalForm()"><a href="#" class="experiencetext">Submit Experience</a></p>
+   </section>
+
+    <div class="submitExperience" id="submitExperience">
+>>>>>>> 0ac0d145fe9cd6c5cca978e39732513583334f8d
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Submit Your HNG Internship Experience</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="closeForm()">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form action="" method="post" role="form" enctype="multipart/form-data">
@@ -103,7 +110,7 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="closeForm()">Close</button>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
@@ -169,6 +176,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+<<<<<<< HEAD
 
     <script src="js/intern-experience.js">
 
@@ -176,5 +184,18 @@
           function message (){
             alert("Function under construction check back later!");
         }
+=======
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>    
+    
+    <script>
+        let formBox = $(".submitExperience");
+            function modalForm (){
+                formBox.slideToggle(100);
+            }
+
+            function closeForm (){
+                formBox.css("display", "none")
+            }
+>>>>>>> 0ac0d145fe9cd6c5cca978e39732513583334f8d
     </script>
 </html>

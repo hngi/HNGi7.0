@@ -72,7 +72,7 @@ $data = $sponsors->getAllSponsor();
 
             ?>
 
-            <div class="container">
+            <div>
                 <div class="row">
 
                     <?php
