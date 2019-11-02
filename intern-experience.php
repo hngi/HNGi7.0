@@ -58,20 +58,19 @@
 </head>
 
 <body>
-
 <section class="navigation">
    <?php include('fragments/site_header.php'); ?>
   </section>
-
   
+
+
     <section class="jumb">  
             <h2>Past Interns Experience</h2>
             <p class="para">Testimonies From Ex-HNG Internship Finalists</p>
-            <p class="text-center" onclick="message()"><a href="#" class="experiencetext">Submit Experience</a></p>
+            <p class="text-center"><a href="#" data-toggle="modal" data-target="#modalExample">Submit Experience</a></p>
    </section>
-
     
-    <div class="modal fade" id="modal-id">
+<div id="modalExample" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -154,7 +153,7 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 </body>
- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -164,10 +163,5 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="js/intern-experience.js">
-    </script>
-    <script>
-          function message (){
-            alert("Function under construction check back later!");
-        }
     </script>
 </html>
