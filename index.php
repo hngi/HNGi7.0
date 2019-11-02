@@ -27,7 +27,7 @@
     <p id="startTime" style="display: none;"><?php echo $countDownValues["startTime"]; ?></p>
 
 <?php include('fragments/site_header.php');?>
-    <section>
+    <section class="body-section">
         <div>
             <img src="https://bit.ly/2OC3tWo" id="corner-circle" alt="Graphic at the top right corner">
 
