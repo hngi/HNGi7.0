@@ -76,7 +76,7 @@
         <section id="overview-section">
             <!-- <h1>Dashboard</h1> -->
             <h2>Pending Interns </h2>
-            <div style="margin : 5rem 0 1rem 1.5rem;">
+            <div class="intern-buttons">
                 <a href="registered_interns.php" class="btn btn-default">Active Interns</a>
                 <a href="declined_interns.php" class="btn btn-default">Declined Interns</a>
             </div>
@@ -84,7 +84,7 @@
 				Populated by `js/dashboard.js`
 			</section> -->
 
-            <div class="container">
+            <div>
                 <div class="row">
 
                     <?php
@@ -106,7 +106,7 @@
                         <div id="printablediv">
                             <div class="scroll">
                             <!-- <table id="my-table" class="table table-hover table-bordered mt-3 mb-1"> -->
-                            <table id="my-table" class="table table-hover">
+                            <table id="my-table" class="table table-hover intern-table">
                                 <!-- <thead class="table-primary"> -->
                                 <thead>
                                     <tr>

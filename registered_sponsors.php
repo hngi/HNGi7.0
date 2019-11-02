@@ -1,27 +1,10 @@
 <?php
-    require 'classControllers/init.php';
-    if (!isset($_SESSION["role"])) {
-        header('Location:login.php');
-    }
-    $sponsors = new classSponsor;
-    $display = $sponsors->allsponsors();
-    if (isset($_POST['search'])) {
-        $sponsors = new classSponsor;
-        $display = $sponsors->search($_POST['search']);
-    }
-    if (isset($_GET['delete_id'])) {
-        $sponsor_id = $_GET['delete_id'];
-        $message = $sponsors->Deletesponsor($sponsor_id);
-    }
-    if (isset($_GET['acceptsponsorId'])) {
-        $mentor_id = $_GET['acceptsponsorId'];
-        $accept_message = $sponsors->Acceptsponsor($sponsor_id);
-    }
-    if (isset($_GET['rejectsponsorId'])) {
-        $sponsor_id = $_GET['rejectsponsorId'];
-        $reject_message = $sponsors->Rejectsponsor($sponsor_id);
-    }
-
+require 'classControllers/init.php';
+if (!isset($_SESSION["role"])) {
+    header('Location:admin_login.php');
+}
+$sponsors = new sponsors;
+$data = $sponsors->getAllSponsor();
 ?>
 <!DOCTYPE html>
 <html>
@@ -35,10 +18,10 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
     <!--This contains the styling for the side bar -->
-    <link href="css/dashboard.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
-    
+    <link href="css/dashboard02.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+
     <link href="css/newDashboard.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
-    
+
 
     <!-- This version required for Pagination -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -48,7 +31,7 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-   
+
     <style type="text/css">
         .card {
             height: 150px;
@@ -63,7 +46,14 @@
 
 <body>
     <main class="reg">
-    <div id="overlay"></div>
+        <div id="overlay"></div>
+        <div id="export-modal">
+            <div>
+                <input type="radio" id="csv" name="exportOptions"><label for="csv">Export to CSV</label>
+            </div>
+            <div>
+                <input type="radio" id="pdf" name="exportOptions"><label for="pdf">Export to PDF</label>
+            </div>
             <p id="message"></p>
             <button type="button" class="exports" id="download">Download</button>
         </div>
@@ -71,54 +61,98 @@
         <section id="overview-section">
             <!-- <h1>Dashboard</h1> -->
             <h2>Registered Sponsors </h2>
-            <!-- <section id="sponsor-section">
+            <!-- <section id="intern-section">
 				Populated by `js/dashboard.js` 
-			</section> -->
+            </section> -->
+            <?php
+            if (isset($_SESSION['success'])) {
+                echo $_SESSION['success'];
+                unset($_SESSION['success']);
+            }
 
-            <div class="container">
+            ?>
+
+            <div>
                 <div class="row">
 
                     <?php
-                    if ($display == "0") {
+                    if ($data == "0") {
                         echo "<h2>There are no Registered Sponsors</h2>";
-                    } 
-                    else {
-                    
+                    } else {
                         ?>
-                        </div>
-                            <div class="scroll">
-                            <!-- <table id="my-table" class="table table-hover table-bordered mt-3 mb-1"> -->
-                            <table class="table table-hover">
-                                <!-- <thead class="table-primary"> -->
-                                <thead>
-                                    <tr>
-                                    <th data-heading="sponsor_id">SN<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
-                                    <th data-heading="sponsor_name">Your company name<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
-                                    <th data-heading="sponsor_email">Email Address<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
-                                    <th data-heading="sponsor_logo">company logo<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
-                                    <th data-heading="business_address">Your company address<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
-                                    <th data-heading="about_you">About your company<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
-                                    <th data-heading="updated_at">Date<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                <?php
-                                      echo $display;
-                                        ?>
-                                </tbody>
-                            </table>
-                          </div>
-                        </div>
-                    <?php
-                    }
-                    ?>
-           
+                        <!--<div class="col-md-3">-->
+                        <!--    <a href="exports/export-to-excel-sponsors.php">-->
+                        <!--        <button type="button" id="export">Export to Spreadsheet</button>-->
+                        <!--    </a>-->
+                        <!--</div>-->
+                        <!-- <div class="col-md-3">
+                            
+                            <a href="#" onclick="javascript:printDiv('printablediv')">
+                                <button type="button" class="btn btn-primary btn-sm" id="export">Export to PDF</button>
+                            </a> -->
                 </div>
+                <!-- <div id="printablediv" class="table-responsive"> -->
+                <div id="printablediv">
+                    <div class="scroll">
+                        <!-- <table id="my-table" class="table table-hover table-bordered mt-3 mb-1"> -->
+                        <table id="my-table" class="table table-hover sponsor-table">
+                            <!-- <thead class="table-primary"> -->
+                            <thead>
+                                <tr>
+
+                                    <th data-heading="sn">SN
+                                        <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
+                                    </th>
+                                    <th data-heading="name">Name
+                                        <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
+                                    </th>
+                                    <th data-heading="email">Email
+                                        <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
+                                    </th>
+                                    <th data-heading="address">Address
+                                        <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
+                                    </th>
+
+                                    <th colspan="3">Action</th>
+                                    <th data-heading="about">
+                                        <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
+                                    </th>
+                                    <th data-heading="photo">logo
+                                        <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
+                                    </th>
+
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <?= $data; ?>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            <?php
+            }
+            ?>
+            <div class="buttonDiv">
+                <!--<a href="exports/export-to-pdf-sponsors.php">-->
+                <a href="#" onclick="javascript:printDiv('printablediv')">
+                    <button type="button" class="exports" id="export">Print</button>
+                </a>
+                <a href="#">
+                    <button type="button" class="exports" id="exportAs">Export</button>
+                </a>
             </div>
-       </section>
+            </div>
+            </div>
+
+            <!-- <button id="export">Export to Spreadsheet</button> -->
+
+        </section>
         <section id="details-section">
-			<div id="details-back" class="details-back">
+            <div id="details-back" class="details-back">
                 <div class="details-back">
                     <!-- <a href="overview.html" id="newitem-go-back" title="Go back">
                         <div></div>
@@ -126,21 +160,23 @@
                 </div>
             </div>
             <div id="centralize">
-			<h2>sponsor Details</h2>
-			<em id="no-sponsor">No sponsor selected</em>
-            <br />
-            <p class="details" style="margin-left:10%;"><span id="photo"></span></p>
-			<p class="details">Name: <span id="name"></span></p>
-			<p class="details">Email: <span id="email"></span></p>
-            <p class="details">Timestamp: <span id="timeStamp"></span></p>
-            <!-- <div href="" id="details-return">Back to Overview</div> -->
-            <div id="navigator">
-                <i class="fas fa-chevron-left fa-2x left navigator"></i> 
-                <p class="details"><span id="sn"></span></p>
-                <i class="fas fa-chevron-right fa-2x right navigator"></i>
+                <h2>sponsor Details</h2>
+                <em id="no-intern">No sponsor selected</em>
+                <br />
+
+                <p class="details">Name: <span id="name"></span></p>
+                <p class="details">Email: <span id="email"></span></p>
+                <p class="details">Address: <span id="address"></span></p>
+                <p class="details">About sponsor: <span id="about"></span></p>
+                <p class="details" style="margin-left:10%;"><span id="photo"></span></p>
+                <!-- <div href="" id="details-return">Back to Overview</div> -->
+                <div id="navigator">
+                    <i class="fas fa-chevron-left fa-2x left navigator"></i>
+                    <p class="details"><span id="sn"></span></p>
+                    <i class="fas fa-chevron-right fa-2x right navigator"></i>
+                </div>
             </div>
-            </div>
-		</section>
+        </section>
     </main>
 
     <input type="checkbox" id="mobile-bars-check" />
