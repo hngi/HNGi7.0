@@ -15,10 +15,7 @@ require_once 'classControllers/init.php';
       $about = $database->escape_string($_POST['about']);
       $date = $database->escape_string($_POST['date']);
       $insertInterns = $intern->internSignup();
-      if ($insertInterns) {
-      $body = "Your registration as an intern on the HNGi7 platform is been checked for an approval kindly hold on, you will recieve an email within 24hrs about your registration status. Thank you";
-      sendInternMail($email, $fullname, $body);
-      }
+      
       
     }
 ?>
