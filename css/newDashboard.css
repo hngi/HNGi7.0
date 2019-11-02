@@ -452,6 +452,12 @@ i:hover{
 	font-size: 18px;
 }
 
+#centralize{
+	justify-self: center;
+	word-wrap: break-word;
+	width: 90%;
+}
+
 @media (max-width: 860px)
 {
 	main
@@ -528,10 +534,6 @@ i:hover{
 		margin: 3rem auto;
 	}
 	
-	#centralize{
-		/* border: 1px solid blue; */
-		justify-self: center;
-	}
 	#details-back{
 		
 		justify-self: self-start;
