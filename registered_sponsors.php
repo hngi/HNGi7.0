@@ -18,7 +18,7 @@ $data = $sponsors->getAllSponsor();
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
     <!--This contains the styling for the side bar -->
-    <link href="css/dashboard02.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="css/dashboard.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 
     <link href="css/newDashboard.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 
@@ -92,7 +92,7 @@ $data = $sponsors->getAllSponsor();
                             </a> -->
                 </div>
                 <!-- <div id="printablediv" class="table-responsive"> -->
-                <div id="printablediv">
+                <div id="printablediv" class="sponsors">
                     <div class="scroll">
                         <!-- <table id="my-table" class="table table-hover table-bordered mt-3 mb-1"> -->
                         <table id="my-table" class="table table-hover sponsor-table">
@@ -157,10 +157,10 @@ $data = $sponsors->getAllSponsor();
                 <h2>sponsor Details</h2>
                 <em id="no-intern">No sponsor selected</em>
                 <br />
-                <p class="details" style="margin-left:10%;"><span id="photo"></span></p>
+                <p class="details" style="margin-left:10%;"><span id="logo"></span></p>
                 <p class="details">Name: <span id="name"></span></p>
-                <p class="details">address: <span id="email"></span></p>
-                <p class="details">Phone Number: <span id="address"></span></p>
+                <p class="details">address: <span id="address"></span></p>
+                
 
                 <!-- <div href="" id="details-return">Back to Overview</div> -->
                 <div id="navigator">
