@@ -283,12 +283,9 @@ $countDownValues = $countdown->getDate();
 <script type="text/javascript" src="js/hng6.js"></script>
     <script>
         function showImage() {
-            var images = document.getElementById("hidden_images");
-            if (images.style.display === "grid") {
-                images.style.display = "none";
-            } else {
-                images.style.display = "grid";
-            }
+            var images = $("#hidden_images");
+            images.slideToggle(1000).css("display", "grid");
+
         }
 
 

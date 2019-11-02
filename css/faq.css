@@ -69,6 +69,18 @@
 .freq-n h3{
 text-transform: capitalize;
 }
+<<<<<<< HEAD
+=======
+
+#btn-here{
+  background-color: #00AEFF;
+  border: 0;
+}
+#btn-here:hover{
+    opacity: .5;
+    color: white;
+
+>>>>>>> 27b1f149cdc2c3d6702a3991c0825f4d6d064c0f
 .freq-n h3 a {
   color: white;
   background-color: #00AEFF;
@@ -77,4 +89,8 @@ text-transform: capitalize;
 .freq-n h3 a:hover {
   color: white;
   opacity: .7;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 27b1f149cdc2c3d6702a3991c0825f4d6d064c0f
 }

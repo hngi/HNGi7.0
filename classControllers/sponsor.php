@@ -29,20 +29,23 @@ class sponsors
         $sponsor_name = $row['sponsor_name'];
         $sponsor_logo = $row['sponsor_logo'];
         $about_you = $row['about_you'];
-        $buisness_address = $row['business_address'];
+        $business_address = $row['business_address'];
         $sponsor_id = $row['sponsor_id'];
+        $sponsor_email = $row['sponsor_email'];
         $data .= "
 
        <tr>
             <td>$no</td>
-
-            <td><img src='$sponsor_logo' style='width: 100px; height: 50px;''></td>
-            <td> $sponsor_name</td>
-            <td>$buisness_address</td>
-            <td>
+            <td>$sponsor_name</td>
+            <td>$sponsor_email</td>
+            <td>$business_address</td>
+             <td>
              <a href='edit_sponsor.php?editSponsorId=$sponsor_id' class='btn btn-primary btn-sm'>Edit</a>
             <a href='delete_sponsor.php?deleteSponsorId=$sponsor_id' class='btn btn-danger btn-sm'>Delete</a>
             </td>
+            <td>$about_you</td>
+             <td><img src='$sponsor_logo' style='width:20%;'></td>
+            
         </tr>
        
        ";
