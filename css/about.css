@@ -9,15 +9,17 @@ body{
 }
 
 /* BEGINNING HEADER SECTION */
-
-#header {
+.jumbo {
     background: #D1F0F6;
-    padding: 20px 20px 50px 20px;
+}
+
+main {
+    width: 100%;
 }
 
 .row_header {
     background: #D1F0F6;
-    padding: 20px 20px 50px 20px;
+    width: 100%;
 }
 
 /* STYLING About SECTION */
