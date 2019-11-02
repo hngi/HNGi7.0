@@ -18,7 +18,7 @@ $data = $sponsors->getAllSponsor();
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
     <!--This contains the styling for the side bar -->
-    <link href="css/dashboard.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="css/dashboard02.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 
     <link href="css/newDashboard.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 
@@ -72,7 +72,7 @@ $data = $sponsors->getAllSponsor();
 
             ?>
 
-            <div class="container">
+            <div>
                 <div class="row">
 
                     <?php
@@ -95,7 +95,7 @@ $data = $sponsors->getAllSponsor();
                 <div id="printablediv">
                     <div class="scroll">
                         <!-- <table id="my-table" class="table table-hover table-bordered mt-3 mb-1"> -->
-                        <table id="my-table" class="table table-hover">
+                        <table id="my-table" class="table table-hover sponsor-table">
                             <!-- <thead class="table-primary"> -->
                             <thead>
                                 <tr>
