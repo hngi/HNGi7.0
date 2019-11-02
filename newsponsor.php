@@ -1,7 +1,7 @@
 <?php
 require 'classControllers/init.php';
 
-$contact_mail = new AdminClass;
+$sponsor = new classSponsor;
 $validation = new Validation();
 
 if (isset($_POST['contact-btn'])) {
@@ -11,31 +11,22 @@ if (isset($_POST['contact-btn'])) {
     return substr ((date('dmys')), 0, $length_of_string); 
   } 
   //use this as an example to get form input data
+  $logo = $database->escape_string($_POST["sponsor_logo"]);
   $name = $database->escape_string($_POST["name"]);
   $email = $database->escape_string($_POST["email"]);
-  $subject = $database->escape_string($_POST["subject"]);
+  $address = $database->escape_string($_POST["sponsor_address"]);
   $message = $database->escape_string($_POST["message"]);
   $ticket = random_strings(10);
   //validation of data
-  $msg = $validation->check_empty($_POST, array('name', 'email', 'subject', 'message'));
+  $msg = $validation->check_empty($_POST, array('sponsor_logo','name', 'email', 'sponsor_address', 'message'));
   $check_email = $validation->is_email_valid($_POST['email']);
   // checking empty fields
   if ($msg != null) { } elseif (!$check_email) {
-    $msg2 = 'Please provide proper email.';
+    $msg2 = 'Please provide correct email Address.';
   } else {
 
     //here is method that will submit mail to database table and you can find it in adminClass
-    $send = $contact_mail->contactFormMailer($name, $email, $subject, $message);
-    if ($send) {
-      $name = $name;
-      $subject = $subject;
-      $body = $message;
-      //here is the function to send mail to admin email
-
-      contactMail($email, $ticket, $name, $subject, $body);
-      $mess = '<p style="text-align:center;">Message Sent! you will get a feedback from us thank you!</a>';
-
-    }
+    $message = $sponsor->sponsorsignup($logo,$name, $email, $address, $message);
   }
 }
 
@@ -70,8 +61,7 @@ if (isset($_POST['contact-btn'])) {
         <p> Fill the form below to become a sponsor</p>
       </div>
 
-
-      <form class="inputs-wrap" method="post">
+      <form class="inputs-wrap" method="post" action="newsponsor.php">
         <div id="contact-message">
           <?php
 
@@ -87,14 +77,18 @@ if (!empty($msg)) {
 if (!empty($msg2)) {
   echo "<h4 class='text-danger text-center' style='color: red;'>" . $msg2 . "</h4>";
 }
+if (!empty($message)) {
+  echo "<h4 class='alert alert-success text-center'>" . $message . "</h4>";
+}
+
 ?>
         </div>
         <label for="sponsor_logo">Upload Your logo</label>
-        <input type="file" placeholder="Sponsor Logo" name="Sponsor Logo" required>
+        <input type="file" placeholder="sponsor logo" name="sponsor_logo" required>
         <input type="text" placeholder="Name" name="name" required>
         <input type="email" placeholder="Email" name="email" required>
-        <input type="text" placeholder="Business Address" name="Business Address" required>
-        <textarea id="" placeholder="Tell us about youself" cols="" rows="10" name="Tell us about youself" required></textarea>
+        <input type="text" placeholder="Business Address" name="sponsor_address" required>
+        <textarea id="" placeholder="Tell us about youself" cols="" rows="10" name="message" required></textarea>
         <input type="submit" id="submit" value="REGISTER" name="contact-btn">
       </form>
     </div>
