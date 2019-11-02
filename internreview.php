@@ -162,23 +162,24 @@ if(isset($_GET["ApproveExperiences"])) {
                             foreach ($display as $item){
                                 ?>
                                 <tr>
-                                    <td><?php echo ++$n;?></td>
-                                    <td>
+                                    <td data-label="S/N"><?php echo ++$n;?></td>
+                                    <td data-label="Names" data-label="">
                                         <?php echo $item['names']; ?>
                                     </td>
-                                    <td>
+                                    <td data-label="Track">
                                         <?php echo $item['stack']; ?>
                                     </td>
 
-                                    <td>
+                                    <td data-label="Experience">
                                         <?php echo $item['experience']; ?>
                                     </td>
 
-                                    <td>
+                                    <td data-label="Status">
                                         <?php echo $item['status'] == 1 ? "Approved" : "Pending"; ?>
                                     </td>
-                                    <td>
-                                        <a href="edit_experience.php?id=<?php echo $item['id']; ?>" class="btn btn-sm btn-info">Edit</a>
+
+                                    <td data-label="Action">
+                                        <a href="edit_experience?id=<?php echo $item['id']; ?>" class="btn btn-sm btn-info">Edit</a>
                                         <a href="?action=delete&id=<?php echo $item['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete the record?')">Delete</a>
                                         <?php
                                             if($item['status'] == 0){

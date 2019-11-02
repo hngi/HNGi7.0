@@ -41,6 +41,37 @@ h1
     display: none;
 }
 
+/* Golden Touch */
+
+
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.table td, .table th {
+	padding: 12px 15px;
+	border: 1px solid #ddd;
+	text-align: center;
+	font-size: 16px;
+}
+
+.table td {
+	font-size: 13px;
+}
+
+.table th {
+	background-color: dodgerblue;
+	color: #fff;
+}
+
+.table tbody tr:nth-child(even) {
+	background-color: #f5f5f5;
+}
+
+
+
 .stix
 {
     border-radius: 3px;
@@ -305,7 +336,7 @@ h1
 	font-weight: bold;
 	font-size: 16px;
 }
-
+/*
 #table-row {
 	padding-left: 20px;
 	padding-right: 20px;
@@ -314,6 +345,7 @@ h1
 #table-row th {
 	background-color: #D1F0F6;
 }
+*/
 
 @media (max-width: 860px)
 {
@@ -428,3 +460,39 @@ h1
         left: 0;
     }
 }
+
+@media screen and (min-width: 315px) and (max-width: 899px) {
+	.table thead {
+		display: none;
+	}
+
+	.table, .table tbody, .table tr, .table td {
+		display: block;
+		width: 100%;
+	}
+
+	.table tr {
+		margin-bottom: 15px;
+	}
+
+	.table td {
+		text-align: right;
+		padding-left: 50%;
+		position: relative;
+	}
+
+	.table td::before {
+		content: attr(data-label);
+		position: absolute;
+		left: 0;
+		padding-left: 15px;
+		font-size: 15px;
+		font-weight: bold;
+	}
+
+}
+
+
+/* Fixing Break with TD */
+
+@media screen and (min-width: 556px) and (max-width: )
