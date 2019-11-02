@@ -3,12 +3,8 @@ require 'classControllers/init.php';
 if (!isset($_SESSION["role"])) {
     header('Location:admin_login.php');
 }
-$mentors = new Mentor;
-$display = $mentors->allMentors();
-if (isset($_GET['delete_id'])) {
-    $mentor_id = $_GET['delete_id'];
-    $message = $mentors->DeleteMentor($mentor_id);
-}
+$sponsors = new sponsors;
+$data = $sponsors->getAllSponsor();
 ?>
 <!DOCTYPE html>
 <html>
@@ -23,9 +19,9 @@ if (isset($_GET['delete_id'])) {
 
     <!--This contains the styling for the side bar -->
     <link href="css/dashboard.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
-    
+
     <link href="css/newDashboard.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
-    
+
 
     <!-- This version required for Pagination -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -35,7 +31,7 @@ if (isset($_GET['delete_id'])) {
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-   
+
     <style type="text/css">
         .card {
             height: 150px;
@@ -50,14 +46,14 @@ if (isset($_GET['delete_id'])) {
 
 <body>
     <main class="reg">
-    <div id="overlay"></div>
+        <div id="overlay"></div>
         <div id="export-modal">
             <div>
                 <input type="radio" id="csv" name="exportOptions"><label for="csv">Export to CSV</label>
             </div>
             <div>
                 <input type="radio" id="pdf" name="exportOptions"><label for="pdf">Export to PDF</label>
-            </div> 
+            </div>
             <p id="message"></p>
             <button type="button" class="exports" id="download">Download</button>
         </div>
@@ -67,13 +63,20 @@ if (isset($_GET['delete_id'])) {
             <h2>Registered Sponsors </h2>
             <!-- <section id="intern-section">
 				Populated by `js/dashboard.js` 
-			</section> -->
+            </section> -->
+            <?php
+            if (isset($_SESSION['success'])) {
+                echo $_SESSION['success'];
+                unset($_SESSION['success']);
+            }
+
+            ?>
 
             <div>
                 <div class="row">
 
                     <?php
-                    if ($display == "0") {
+                    if ($data == "0") {
                         echo "<h2>There are no Registered Sponsors</h2>";
                     } else {
                         ?>
@@ -87,6 +90,7 @@ if (isset($_GET['delete_id'])) {
                             <a href="#" onclick="javascript:printDiv('printablediv')">
                                 <button type="button" class="btn btn-primary btn-sm" id="export">Export to PDF</button>
                             </a> -->
+<<<<<<< HEAD
                         </div>
                         <!-- <div id="printablediv" class="table-responsive"> -->
                         <div id="printablediv" class="sponsors">
@@ -163,14 +167,65 @@ if (isset($_GET['delete_id'])) {
                                     <button type="button" class="exports" id="exportAs">Export</button>
                                 </a>
                         </div>            
+=======
                 </div>
+                <!-- <div id="printablediv" class="table-responsive"> -->
+                <div id="printablediv">
+                    <div class="scroll">
+                        <!-- <table id="my-table" class="table table-hover table-bordered mt-3 mb-1"> -->
+                        <table id="my-table" class="table table-hover">
+                            <!-- <thead class="table-primary"> -->
+                            <thead>
+                                <tr>
+
+                                    <th data-heading="sn">SN
+                                        <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
+                                    </th>
+                                    <th data-heading="photo">Logo
+                                        <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
+                                    </th>
+                                    <th data-heading="name">Name
+                                        <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
+                                    </th>
+                                    <th data-heading="email">Address
+                                        <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
+                                    </th>
+                                    <th colspan="3">Action</th>
+
+
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <?= $data; ?>
+
+                            </tbody>
+                        </table>
+                    </div>
+>>>>>>> dfd4bf4ffac8d91277286a8549a9cdf0a994fca3
+                </div>
+            <?php
+            }
+            ?>
+            <div class="buttonDiv">
+                <!--<a href="exports/export-to-pdf-sponsors.php">-->
+                <a href="#" onclick="javascript:printDiv('printablediv')">
+                    <button type="button" class="exports" id="export">Print</button>
+                </a>
+                <a href="#">
+                    <button type="button" class="exports" id="exportAs">Export</button>
+                </a>
+            </div>
+            </div>
             </div>
 
             <!-- <button id="export">Export to Spreadsheet</button> -->
 
         </section>
         <section id="details-section">
-			<div id="details-back" class="details-back">
+            <div id="details-back" class="details-back">
                 <div class="details-back">
                     <!-- <a href="overview.html" id="newitem-go-back" title="Go back">
                         <div></div>
@@ -178,6 +233,7 @@ if (isset($_GET['delete_id'])) {
                 </div>
             </div>
             <div id="centralize">
+<<<<<<< HEAD
 			<h2>Sponsor Details</h2>
 			<em id="no-intern">No sponsor selected</em>
             <br />
@@ -197,8 +253,29 @@ if (isset($_GET['delete_id'])) {
                 <p class="details"><span id="sn"></span></p>
                 <i class="fas fa-chevron-right fa-2x right navigator"></i>
             </div>
+=======
+                <h2>sponsor Details</h2>
+                <em id="no-intern">No sponsor selected</em>
+                <br />
+                <p class="details" style="margin-left:10%;"><span id="photo"></span></p>
+                <p class="details">Name: <span id="name"></span></p>
+                <p class="details">Email: <span id="email"></span></p>
+                <p class="details">Phone Number: <span id="phone"></span></p>
+                <p class="details">Expertise: <span id="expertise"></span></p>
+                <p class="details">CV link: <span id="cv"></span></p>
+                <p class="details">State of residence: <span id="state"></span></p>
+                <p class="details">Employment Status: <span id="employment-status"></span></p>
+                <p class="details">Why Interested: <span id="Interest"></span></p>
+                <p class="details">Timestamp: <span id="timeStamp"></span></p>
+                <!-- <div href="" id="details-return">Back to Overview</div> -->
+                <div id="navigator">
+                    <i class="fas fa-chevron-left fa-2x left navigator"></i>
+                    <p class="details"><span id="sn"></span></p>
+                    <i class="fas fa-chevron-right fa-2x right navigator"></i>
+                </div>
+>>>>>>> dfd4bf4ffac8d91277286a8549a9cdf0a994fca3
             </div>
-		</section>
+        </section>
     </main>
 
     <input type="checkbox" id="mobile-bars-check" />
