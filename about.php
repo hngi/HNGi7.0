@@ -23,7 +23,7 @@
         <section class="jumbo"> <?php include('fragments/site_header.php'); ?></section>
 
         <main>
-            <div class="row row_heade">
+            <div class="row row_header">
                 <div class="col-md-2 col-lg-3"></div>
                 <div class="col-md-8 col-lg-6">
                     <h2>About HNG</h2>
