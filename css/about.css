@@ -16,6 +16,9 @@ body{
 main {
     width: 100%;
 }
+.row{
+    margin : 0;
+}
 
 .row_header {
     background: #D1F0F6;
