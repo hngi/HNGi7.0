@@ -4,9 +4,7 @@ require_once 'classControllers/init.php';
     $intern = new Intern;
     $lockForm = new LockRegForm();
     $status = $lockForm->checkStatus();
-
     if (isset($_POST['submit'])) {
-
       $fullname = $database->escape_string($_POST['fullname']);
       $email = $database->escape_string($_POST['email']);
       $phoneNo = $database->escape_string($_POST['phoneNo']);
@@ -17,12 +15,8 @@ require_once 'classControllers/init.php';
       $about = $database->escape_string($_POST['about']);
       $date = $database->escape_string($_POST['date']);
       $insertInterns = $intern->internSignup();
-      if ($insertInterns) {
-      $body = "Your registration as an intern on the HNGi7 platform is been checked for an approval kindly hold on, you will recieve an email within 24hrs about your registration status. Thank you";
-      sendInternMail($email, $fullname, $body);
-      }
       
-
+      
     }
 ?>
 
@@ -51,13 +45,11 @@ require_once 'classControllers/init.php';
           font-weight: bolder;
           margin-top: 50px;
         }
-
         p.para {
           width: 100%;
           text-align: center;
           margin-top: 20px;
           margin-bottom: 100px;
-
         }
   </style>
 </head>
@@ -92,12 +84,10 @@ require_once 'classControllers/init.php';
       echo '<div style="margin:auto 30vw; background: red; padding: 5px 10px 5px 10px; width: 40vw !important; text-align: center; color: white; ">
                 Your registration failed because Email already exist.
             </div>';
-
     }
     ?>
 
     <?php
-
     if ($status == 1) {
       ?>
       <form class="form-container" action="" method="post" id="myForm">
@@ -107,7 +97,7 @@ require_once 'classControllers/init.php';
         <input type="email" name="email" id="email" required placeholder="E-mail Address" />
         <input type="text" name="phoneNo" id="phoneNo" required placeholder="Phone Number" />
         <input type="url" name="linkCV" id="linkCV" required placeholder="Link to your CV (LinkedIn Profile or any other link)" />
-        <select class="interest" name="interest" required>
+        <select class="interest" name="interest" multiple>
           <option value="" disabled selected hidden>What area are you interested in?</option>
           <option value="Backend">Backend</option>
           <option value="DevOps">DevOps</option>
@@ -136,7 +126,6 @@ require_once 'classControllers/init.php';
         </button>
       </form>
     <?php
-
     } else {
       ?>
       <div style="width: 100%; margin: 0 auto; text-align: center; padding: 30px; color: #6F0503; ">

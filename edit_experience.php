@@ -24,7 +24,7 @@ if(isset($_POST['ok'])){
     $admin->updateExperience("$id","$names","$stack","$experience");
 
     $_SESSION['msg'] = "<div class='alert alert-success'>Experience updated successfully!</div>";
-    header("location:edit_experience.php?id=$id");
+    header("location:internreview.php");
     exit();
 }
 

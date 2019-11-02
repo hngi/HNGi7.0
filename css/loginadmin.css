@@ -28,6 +28,7 @@
     width: 90%;
     padding: 10px;
     outline: none;
+    background-color: transparent;
 }
 
 button {

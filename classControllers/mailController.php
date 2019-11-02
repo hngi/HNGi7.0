@@ -220,7 +220,7 @@ function forGetPasswordMail($url,$subject,$email,$fullname)
     $mail->Port       = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('alisataylorm.m@gmail.com',$url);
+    $mail->setFrom('alisataylorm.m@gmail.com','HNG 7.0');
     $mail->addAddress("$email");     // Add a recipient
     // $mail->addAddress('ellen@example.com');               // Name is optional
     $mail->addReplyTo('no-reply@gmail.com', 'No-Reply');
@@ -264,7 +264,7 @@ function forGetPasswordMail($url,$subject,$email,$fullname)
                        <p>You recently requested to reset your password for your HNGi account.<br>
                         Use the link below to reset it.<br>
                         This password reset is only valid for the next 24 hours.
-                        Reset your password $fullname<br><br></p>
+                        Reset your password $url <br><br></p>
 
                        <p>For security, If you did not request a password reset, please ignore this email or <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
 

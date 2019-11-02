@@ -14,7 +14,7 @@ if(isset($_GET["blockAdminId"])) {
     $id = $_GET["blockAdminId"];
     $blockAdminRes = $admin->blockAdmin($id);
     if($blockAdminRes == true) {
-        header("Location:admins");
+        header("Location:admins.php");
     }
 }
 
@@ -22,7 +22,7 @@ if(isset($_GET["activateAdminId"])) {
     $id = $_GET["activateAdminId"];
     $activateAdminRes = $admin->activateAdmin($id);
     if($activateAdminRes == true) {
-        header("Location:admins");
+        header("Location:admins.php");
     }
 }
 
@@ -36,7 +36,7 @@ if(isset($_GET["blockAdminId"])) {
     $id = $_GET["blockAdminId"];
     $blockAdminRes = $admin->blockAdmin($id);
     if($blockAdminRes == true) {
-        header("Location:admins");
+        header("Location:admins.php");
     }
 }
 
@@ -44,7 +44,7 @@ if(isset($_GET["activateAdminId"])) {
     $id = $_GET["activateAdminId"];
     $activateAdminRes = $admin->activateAdmin($id);
     if($activateAdminRes == true) {
-        header("Location:admins");
+        header("Location:admins.php");
     }
 }
 
@@ -57,7 +57,7 @@ if(isset($_GET["activateAdminId"])) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Dashboard</title>
+    <title>Admin Dashboard</title>
 
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
     <link rel="stylesheet" href="css/dashboard.css">
