@@ -103,17 +103,23 @@ $data = $sponsors->getAllSponsor();
                                     <th data-heading="sn">SN
                                         <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
                                     </th>
-                                    <th data-heading="logo">Logo
+                                    <th data-heading="name">Name
                                         <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
                                     </th>
-                                    <th data-heading="name">Name
+                                    <th data-heading="email">Email
                                         <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
                                     </th>
                                     <th data-heading="address">Address
                                         <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
                                     </th>
-                                    <th colspan="3">Action</th>
 
+                                    <th colspan="3">Action</th>
+                                    <th data-heading="about">
+                                        <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
+                                    </th>
+                                    <th data-heading="photo">logo
+                                        <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
+                                    </th>
 
 
 
@@ -157,11 +163,11 @@ $data = $sponsors->getAllSponsor();
                 <h2>sponsor Details</h2>
                 <em id="no-intern">No sponsor selected</em>
                 <br />
-                <p class="details" style="margin-left:10%;"><span id="logo"></span></p>
                 <p class="details">Name: <span id="name"></span></p>
-                <p class="details">address: <span id="address"></span></p>
-                
-
+                <p class="details">Email: <span id="email"></span></p>
+                <p class="details">Address: <span id="address"></span></p>
+                <p class="details">About sponsor: <span id="about"></span></p>
+                <p class="details" style="margin-left:10%;"><span id="photo"></span></p>
                 <!-- <div href="" id="details-return">Back to Overview</div> -->
                 <div id="navigator">
                     <i class="fas fa-chevron-left fa-2x left navigator"></i>
