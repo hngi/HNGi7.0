@@ -36,11 +36,11 @@
 
   </head>
 
-<body>
-  <section class="container-fluid">
-<section class="jumbo">
+<body><section class="jumbo">
       <?php include "fragments/site_header.php"; ?>
 </section>
+  <section class="container-fluid">
+
 
 <section class="payWithRave">
   <h2 class="heading">Click the button below to donate</h2>
@@ -59,6 +59,7 @@
 <?php include "fragments/site_footer.php"; ?>
 
 </body>
+
 <script>
     const API_publicKey = "FLWPUBK_TEST-2c7dd09d63d44deae5cbf3e9728aa289-X";
 
