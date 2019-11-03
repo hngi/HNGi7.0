@@ -377,22 +377,32 @@ h4 {
 /* MODAL FORM STYLING HERE */
 
 #submitExperience {
-  position: Fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   margin: 0 auto;
   z-index: 2;
-  background-color: white;
+  background-color: transparent;
   padding-top: 100px;
   display: none;
 }
 
 .modal-content {
-  border: 3px solid green;
+  border: 3px solid #00AEFF;
   box-shadow: 3px 3px 5px grey;
   width: 90%;
   margin: 0 auto;
   margin-top: -60px;
+}
+
+.modal-button {
+  background-color: #00AEFF;
+  border-color: #00AEFF;
+}
+
+.modal-button:hover {
+  background-color: #00AEFF;
+  border-color: #00AEFF;
 }
