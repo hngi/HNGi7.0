@@ -31,7 +31,7 @@
 
     .mentors-section {
       text-align: center;
-      font-size: 30px;
+      font-size: 13px;
       animation: Slide_up 2.1s ease ;
     }
 
@@ -117,7 +117,7 @@
       position: relative;
       min-height: 40vh;
       width: 100vw !important;
-      font-size: 20px;
+      font-size: 30px;
      }
      
      .land {
@@ -134,6 +134,7 @@
       background-color: #D1F0F6 !important;
       color: #474747 !important;
       font-weight: bold;
+      font-size: 15px;
      }
 
      .navbar-toggler {
