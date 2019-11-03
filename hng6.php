@@ -206,15 +206,15 @@ $countDownValues = $countdown->getDate();
                     <div id="mentor-flex">
                         <div id="mentor-div">
                             <img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722683/mentors-first_qlquq9.png">
-                            <p class="mentor-name center-text">Samuel L. Jackson</p>
-                            <p class="mentor-desc center-text">Mentor, HNG 5.0</p>
+                                src="https://res.cloudinary.com/memz/image/upload/v1572710761/Mentors/Seyi_Onifade_u8pndn.jpg">
+                           <p class="mentor-name center-text">Seyi Onifade</p>
+                            <p class="mentor-desc center-text">Devops and CEO, HNG 6.0</p>
                         </div>
                         <div id="mentor-div">
                             <img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722685/mentors-second_frnhpz.png">
-                            <p class="mentor-name center-text">Taraji P. Henson</p>
-                            <p class="mentor-desc center-text">Mentor, HNG 6.0</p>
+                                src="https://res.cloudinary.com/memz/image/upload/v1572710145/Mentors/Tomisin_olpwrk.jpg">
+                            <p class="mentor-name center-text">Tomisin Lalude</p>
+                            <p class="mentor-desc center-text">Frontend Development</p>
                         </div>
                     </div>
                     <a href="mentorpage.php" class="def-button shadowed">See all Mentors</a>
