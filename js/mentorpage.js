@@ -120,7 +120,7 @@
        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572709814/Mentors/David_orphejjshasu_ib0liq.jpg"
      },
      {
-       name: "idris Lawal",
+       name: "Idris Lawal",
        stack: "Backend Development",
        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572709894/Mentors/Idris2_nfne5a.jpg"
      },
