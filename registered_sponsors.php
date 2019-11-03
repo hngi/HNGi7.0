@@ -60,7 +60,7 @@ $data = $sponsors->getAllSponsor();
         <input type="text" class="searchBox"><i class="fas fa-search"></i>
         <section id="overview-section">
             <!-- <h1>Dashboard</h1> -->
-            <h2>Registered Sponsors </h2>
+            <h2 class="register">Registered Sponsors </h2>
             <!-- <section id="intern-section">
             Populated by `js/dashboard.js`
         </section> -->
@@ -72,7 +72,7 @@ $data = $sponsors->getAllSponsor();
 
             ?>
 
-            <div class="container">
+            <div>
                 <div class="row">
 
                     <?php
@@ -92,10 +92,10 @@ $data = $sponsors->getAllSponsor();
                     </a> -->
                 </div>
                 <!-- <div id="printablediv" class="table-responsive"> -->
-                <div id="printablediv">
+                <div id="printablediv" class="sponsors">
                     <div class="scroll">
                         <!-- <table id="my-table" class="table table-hover table-bordered mt-3 mb-1"> -->
-                        <table id="my-table" class="table table-hover">
+                        <table id="my-table" class="table table-hover sponsor-table">
                             <!-- <thead class="table-primary"> -->
                             <thead>
                                 <tr>
