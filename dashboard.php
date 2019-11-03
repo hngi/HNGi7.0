@@ -76,6 +76,10 @@ if($display["hasPic"] == 0) {
 	<title>Dashboard</title>
 	<link rel="icon" type="img/png" href="images/hng-favicon.png">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    
+    <!--This contains the styling for the side bar -->
+    <link href="css/dashboard.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    
     <link href="css/dashboard2910.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 
 	<!-- Latest compiled and minified CSS -->
@@ -126,7 +130,7 @@ if($display["hasPic"] == 0) {
                               <ul class="dropdown-menu">
                                 <li><a href="adminProfile.php"><i class="fas fa-user-circle fw"></i> My account</a></li>
                                 <li><a href="#"><i class="fas fa-envelope fw"></i> My inbox</a></li>
-                                <li><a href="#"><i class="fas fa-question-circle fw"></i> Help</a></li>
+                                <!-- <li><a href="#"><i class="fas fa-question-circle fw"></i> Help</a></li> -->
                                 
                                 <li role="separator" class="divider"></li>
                                 <li><a href="./logout.php"><i class="fa fa-sign-out"></i> Log out</a></li>
@@ -214,7 +218,7 @@ if($display["hasPic"] == 0) {
             </section>
             <section class='statis text-center'>
                     <div class="container-fluid">
-                      <div class="row">
+                      <div class="row first">
                         <div class="col-md-3">
                         <a href="registered_interns.php">
                           <div class="box">

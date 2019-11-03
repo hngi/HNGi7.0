@@ -233,10 +233,10 @@ i:hover{
 
 .sponsor-table th:nth-child(4),
 .sponsor-table td:nth-child(4),
+.sponsor-table th:nth-child(5),
+.sponsor-table td:nth-child(5),
 .sponsor-table th:nth-child(6),
-.sponsor-table td:nth-child(6),
-.sponsor-table th:nth-child(7),
-.sponsor-table td:nth-child(7){
+.sponsor-table td:nth-child(6){
 	display: none;
 }
 
