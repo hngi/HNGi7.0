@@ -101,7 +101,7 @@
     {
       name: "Seyi Onifade",
       stack: "Devops and CEO, HNG Tech",
-      imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710761/Mentors/Seyi_Onifade_u8pndn.jpg"
+      imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572796363/Mentors/20191103_165148_auawdc.jpg"
     },
     {
        name: "Ephraim Aigbefo",
@@ -120,11 +120,11 @@
      },
      {
        name: "Ominiabohs David",
-       stack: "Backend Development and Digital Marketing",
+       stack: "Backend Dev. and Digital Marketing",
        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572709814/Mentors/David_orphejjshasu_ib0liq.jpg"
      },
      {
-       name: "idris Lawal",
+       name: "Idris Lawal",
        stack: "Backend Development",
        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572709894/Mentors/Idris2_nfne5a.jpg"
      },
