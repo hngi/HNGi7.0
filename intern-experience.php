@@ -92,7 +92,7 @@
                             <textarea name="experience" class="form-control" required placeholder="Your Experience" id="exp" maxlength="300"></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="image">Your Picture</label>
+                            <label for="image">Your Picture (Optional) </label>
                             <br>
                             <input type="file" name="image" accept="image/*">
                         </div>
