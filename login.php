@@ -76,7 +76,7 @@ if (isset($_POST['login'])) {
       </div>
 
       <div class="inputWithIcon">
-        <i class="fa fa-key"></i>
+        <i class="fa fa-lock"></i>
         <input type="password" name="password" id="password" placeholder="Password" required>
       </div>
 
