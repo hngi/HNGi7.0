@@ -30,7 +30,7 @@
     // addition of links to the social icons
     a1.setAttribute("href", "https://twitter.com");
     a2.setAttribute("href", "https://facebook.com");
-    a3.setAttribute("href", "https://github.com");
+    a3.setAttribute("href", "https://dribbble.com");
     // end
 
     let iconOne = document.createElement('i');
