@@ -221,9 +221,9 @@ const collateByTrack =(element, dataArray, area, title)=>{
             label: title,
             data: yArray,
             backgroundColor:  [
-              "rgba(0, 255, 0, 1)",
-              "rgba(255, 255, 0, 1)",
-              "rgba(255, 0, 0, 1)"
+              "rgba(98, 255, 98, 1)",
+              "rgba(255, 225, 25, 1)",
+              "rgba(237, 2, 11, 1)"
             ],
             borderColor:  "rgba(209,240,246,1)",
             borderWidth: 1
