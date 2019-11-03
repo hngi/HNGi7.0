@@ -141,7 +141,7 @@
      }
 
      #landing-page h2 {
-       
+       font-size: 1em !important;
        font-weight: bold;
        color: #084482 !important;
        margin-top: 0;
