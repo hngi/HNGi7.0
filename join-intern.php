@@ -55,8 +55,9 @@ require_once 'classControllers/init.php';
 </head>
 
 <body>
-<div style="background-color: #D1F0F6;">
-<?php include('fragments/site_header.php'); ?></div>
+<section class="navigation">
+   <?php include('fragments/site_header.php'); ?>
+  </section>
 
   <section class="container-fluid1">
   <section class="jumbo">

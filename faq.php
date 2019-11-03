@@ -24,8 +24,12 @@
 </head>
 
 <body>
+
+<section class="navigation">
+   <?php include('fragments/site_header.php'); ?>
+</section>
+
     <div class="header_container">
-        <?php include('fragments/site_header.php'); ?>
         <section class="hero pt-4">
             <div class="container">
                 <div class="wrap my-5">
