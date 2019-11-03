@@ -1,10 +1,7 @@
 <section id="sidebar">
-<div class="badger">
-			<h5 id="admin-badge">ADMINISTRATOR</h5>
-		</div>
-		<div class="nav">
-<div id="upper">
-		
+	<div id="upper">
+		<h5 id="admin-badge">ADMINISTRATOR</h5>
+
 		<?php
 		    if($_SESSION["hasPic"] == "no") {
 		        // admin has NO picture, show default
@@ -53,7 +50,4 @@
 		<hr id="hr2">
 		<a href="./logout.php">Logout</a>
 	</nav>
-		</div>
-	
-		
 </section>
