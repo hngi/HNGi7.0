@@ -557,14 +557,6 @@
 <script src="js/main.js"></script>
 <script type="text/javascript" src="js/countdown.js"></script>
 <script src="js/script.js"></script>
-</body>
-
-
-
-
-<div id="jumptotop"><em></em></div>
-<script src="./js/scroll-to-top.js"></script>
-
 <script>
     let accord_target = $(".card-header");
     let accord_body = accord_target.next();
@@ -575,5 +567,5 @@
     })
     }
 </script>
-
+</body>
 </html>
