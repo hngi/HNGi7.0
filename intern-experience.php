@@ -55,6 +55,19 @@
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="stylesheet" href="css/intern-experience.css">
     <title>Intern Experience</title>
+
+
+    <style>
+        h2.heading {
+          color: #084482;
+          font-weight: bolder;
+        }
+        p.para {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 100px !important;
+        }
+  </style>
 </head>
 
 <body>
@@ -64,10 +77,11 @@
   </section>
 
   
-    <section class="jumb">  
-            <h2>Past Interns Experience</h2>
-            <p class="para">Testimonies From Ex-HNG Internship Finalists</p>
-            <p class="text-center" onclick="modalForm()"><a href="#" class="experiencetext">Submit Experience</a></p>
+    <section class="jumbo">  
+            <h2 class="heading">Past Interns Experience</h2>
+            <p class="para">Testimonies From Ex-HNG Internship Finalists<br>
+            <a href="#" onclick="modalForm()" class="experiencetext">Submit Experience</a>
+            </p>
    </section>
 
     <div class="submitExperience" id="submitExperience">

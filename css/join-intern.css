@@ -409,17 +409,11 @@
   }
  
  .navigation {
-   padding-left: 40px !important;
-   padding-right: 40px !important;
    background: #d1f0f6;
   }
  
   @media (max-width: 759px) {
  
-   .navigation {
-     padding-left: 15px !important;
-     padding-right: 15px !important;
-   }
  }
  .inputWithIcon{
    position: relative;

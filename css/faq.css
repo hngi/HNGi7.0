@@ -78,7 +78,7 @@ text-transform: capitalize;
 #btn-here:hover{
     opacity: .5;
     color: white;
-
+}
 .freq-n h3 a {
   color: white;
   background-color: #00AEFF;
@@ -87,5 +87,12 @@ text-transform: capitalize;
 .freq-n h3 a:hover {
   color: white;
   opacity: .7;
+}
 
+.contact-heading {
+  font-weight:bold;
+  font-size: 25px;
+  text-align: center;
+  line-height: 32px;
+  color: #084482;
 }

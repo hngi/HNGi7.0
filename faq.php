@@ -37,6 +37,7 @@
         </section>
     </div>
 
+    <div class="container">
     <div class="col-md-12 text-black">
         <div class="">
             <div id="accordion" class="myaccordion">
@@ -182,8 +183,8 @@
         <div class="container">
             <div class="wrap" style="width: 100%;">
                 <div class="header mb-5">
-                    <h3 class="text-center">not a frequently asked question?<br />
-                        contact us <a href="contactform.php" class="btn">Here</a>
+                    <h3 class="text-center contact-heading">not a frequently asked question?<br />
+                        Contact Us <a href="contactform.php" class="btn contact-us">Here</a>
                     </h3>
                 </div>
                 <!-- <form class="inputs-wrap">
@@ -197,6 +198,9 @@
             </div>
         </div>
     </section>
+    </div>
+
+    
 
 
 
