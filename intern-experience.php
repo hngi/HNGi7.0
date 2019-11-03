@@ -54,7 +54,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="stylesheet" href="css/intern-experience.css">
-    <title>Experience Page</title>
+    <title>Intern Experience</title>
 </head>
 
 <body>
@@ -67,16 +67,15 @@
     <section class="jumb">  
             <h2>Past Interns Experience</h2>
             <p class="para">Testimonies From Ex-HNG Internship Finalists</p>
-            <p class="text-center" onclick="message()"><a href="#" class="experiencetext">Submit Experience</a></p>
+            <p class="text-center" onclick="modalForm()"><a href="#" class="experiencetext">Submit Experience</a></p>
    </section>
 
-    
-    <div class="modal fade" id="modal-id">
+    <div class="submitExperience" id="submitExperience">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Submit Your HNG Internship Experience</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="closeForm()">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form action="" method="post" role="form" enctype="multipart/form-data">
@@ -104,7 +103,7 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="closeForm()">Close</button>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
@@ -154,20 +153,28 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 </body>
- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/countdown.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="js/intern-experience.js">
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>    
+    
     <script>
-          function message (){
-            alert("Function under construction check back later!");
-        }
+        let formBox = $(".submitExperience");
+            function modalForm (){
+                formBox.slideToggle(100);
+            }
+
+            function closeForm (){
+                formBox.css("display", "none")
+            }
     </script>
 </html>

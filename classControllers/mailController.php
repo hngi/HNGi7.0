@@ -255,7 +255,7 @@ function forGetPasswordMail($url,$subject,$email,$fullname)
                   <table border='0' cellpadding='0' cellspacing='0' width='100%'>
                     <tr>
                       <td style='color: #153643; font-family: Arial, sans-serif; font-size: 24px;'>
-                        <b>Dear, User </b>
+                        <b>Dear, $fullname </b>
                       </td>
                     </tr>
                   <tr>
@@ -264,7 +264,7 @@ function forGetPasswordMail($url,$subject,$email,$fullname)
                        <p>You recently requested to reset your password for your HNGi account.<br>
                         Use the link below to reset it.<br>
                         This password reset is only valid for the next 24 hours.
-                        Reset your password $fullname<br><br></p>
+                        Reset your password <br><br></p>
 
                        <p>For security, If you did not request a password reset, please ignore this email or <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
 
@@ -463,7 +463,7 @@ function sendInternMail($email, $fullname, $body)
       // Content
     ;
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = "WELCOME TO HNGi7";
+    $mail->Subject = "WELCOME TO HNG INTERNSHIP";
     $mail->Body    =  "<html>
     <head>
     <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
@@ -576,7 +576,7 @@ function  rejectInternMail($email, $fullname, $body)
       // Content
     ;
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = "WELCOME TO HNGi7";
+    $mail->Subject = "HNG INTERNSHIP";
     $mail->Body    =  "<html>
     <head>
     <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
@@ -688,7 +688,7 @@ function acceptInternMail($email, $fullname, $body)
       // Content
     ;
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = "WELCOME TO HNGi7";
+    $mail->Subject = "HNG INTERNSHIP";
     $mail->Body    =  "<html>
     <head>
     <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />

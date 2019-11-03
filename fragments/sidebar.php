@@ -1,7 +1,22 @@
 <section id="sidebar">
-	<div id="upper">
-		<h5 id="admin-badge">ADMINISTRATOR</h5>
-		<img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722683/mentors-first_qlquq9.png" height="110px">
+<div class="badger">
+			<h5 id="admin-badge">ADMINISTRATOR</h5>
+		</div>
+		<div class="nav">
+<div id="upper">
+		
+		<?php
+		    if($_SESSION["hasPic"] == "no") {
+		        // admin has NO picture, show default
+		        echo '<img src="adminProfilePics/default.jpg" height="90px" width="90px"/>';
+		    } else if($_SESSION["hasPic"] == "yes"){
+		        // admin has picture
+		        echo '<img src="adminProfilePics/'.$_SESSION["admin_id"].'.jpg" class="img-circle img-responsive" height="90px" width="90px" />';
+		    }
+		?>
+
+
+		<!-- <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722683/mentors-first_qlquq9.png" height="110px"> -->
 		<div id="username"><?php echo $_SESSION["fullname"]; ?></div>
 	</div>
 	<hr id="hr1">
@@ -38,4 +53,7 @@
 		<hr id="hr2">
 		<a href="./logout.php">Logout</a>
 	</nav>
+		</div>
+	
+		
 </section>

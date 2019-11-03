@@ -15,7 +15,7 @@
                     src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png" ></a>
         </section>
         <!--ends here-->
-        <section class="nav_button" onclick="toggleMenu()">
+        <section class="nav_button " onclick="toggleMenu()">
             <div class="nav_button_bar"></div>
             <div class="nav_button_bar"></div>
             <div class="nav_button_bar"></div>
@@ -34,7 +34,10 @@
 <script>
     function toggleMenu(){
         let menuBar = $("#navMenu");
-        menuBar.toggle();
+        let closeButton = $(".nav_button");
+        menuBar.slideToggle(700);
+        closeButton.toggleClass("closefunction");
+        
     }
 
 
