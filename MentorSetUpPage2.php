@@ -49,13 +49,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  }
  Mentors::emailExists($_POST['email']) ? $error['email'] = "Email has been used to register before" : false;
  if (empty($error)) {
-  $area_of_expertise = "";
-
-  foreach ($_POST['area_of_expertise'] as $value) {
-   $area_of_expertise .= $value . " ";
-  }
-
-
+    $area_of_expertise = "";
+    $count = count($_POST['area_of_expertise']);
+    foreach ($_POST['area_of_expertise'] as $value) {
+    $area_of_expertise .= $value ." | ";
+    }
+    // for ($i = 0; $i < $count; $i++) {
+    //     $area_of_expertise .= $_POST['area_of_expertise'][$i] . " | ";
+    // }
+    $area_of_expertise = substr($area_of_expertise, 0, -3);
   $file = $_FILES['image'];
   $fileName = $_FILES['image']['name'];
   $fileTmpName = $_FILES['image']['tmp_name'];
