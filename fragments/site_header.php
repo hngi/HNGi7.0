@@ -12,7 +12,7 @@
         <!--Logo-->
         <section id="logo">
             <a href="index.php"><img id="hng-logo"
-                    src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png" ></a>
+                    src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572768106/hng_logo-min.png" ></a>
         </section>
         <!--ends here-->
         <section class="nav_button " onclick="toggleMenu()">
