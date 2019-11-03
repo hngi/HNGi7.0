@@ -18,7 +18,7 @@ if (isset($_GET["code"])) {
     header("location: admin_login?getmess".$getmess);
   }
 }else{
-   exit("Can't find page");
+   
 }
 
 ?>
