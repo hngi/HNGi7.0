@@ -3,13 +3,15 @@
 
 .navigation {
   background: #d1f0f6;
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
  }
 
  .navbar-toggler-icon {
   border-radius: none;
   box-shadow: none;
+  margin: 0;
+  padding: 0;
 }
 
 

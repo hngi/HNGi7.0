@@ -61,13 +61,13 @@
         h2.heading {
           color: #084482;
           font-weight: bolder;
-          padding: 0 1em;
+          padding: 0 4px;
         }
         p.para {
           width: 100%;
           text-align: center;
           margin-bottom: 100px !important;
-          padding: 0 1em;
+          padding: 0 4px;
         }
   </style>
 </head>
