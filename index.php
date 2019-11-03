@@ -400,22 +400,22 @@
                     </h4>
                     <section class="mentor-section" data-aos="fade-up">
                         <div class="mentor-image">
-                            <img src="https://res.cloudinary.com/memz/image/upload/v1572710761/Mentors/Seyi_Onifade_u8pndn.jpg">
+                            <img src="https://res.cloudinary.com/nkechi-christabel/image/upload/v1572798510/cifbamq7qj8h538ka8k9.jpg">
                             <p>Seyi Onifade</p>
                             <p>Devops and CEO, HNG Tech</p>
                         </div>
                         <div class="mentor-image">
-                            <img src="https://res.cloudinary.com/memz/image/upload/v1572710145/Mentors/Tomisin_olpwrk.jpg">
+                            <img src="https://res.cloudinary.com/nkechi-christabel/image/upload/v1572798691/foutw9umk4hcfntupffn.jpg">
                             <p>Tomisin Lalude </p>
                             <p>Frontend Development</p>
                         </div>
                         <div class="mentor-image">
-                            <img src="https://res.cloudinary.com/memz/image/upload/v1572709955/Mentors/Kev_Chike7_ymlrik.jpg">
+                            <img src="https://res.cloudinary.com/nkechi-christabel/image/upload/v1572798407/y7kp4jm0rmqolkcmprvc.jpg">
                             <p>Kevin Chike</p>
                             <p>Backend Development</p>
                         </div>
                         <div class="mentor-image">
-                            <img src="https://res.cloudinary.com/memz/image/upload/v1572709726/Mentors/Ephraim_phd0oq.jpg">
+                            <img src="https://res.cloudinary.com/nkechi-christabel/image/upload/v1572798710/zodqqfrro1lwuntitiaw.jpg">
                             <p>Ephraim Aigbefo</p>
                             <p>Fullstack Development</p>
                         </div>
