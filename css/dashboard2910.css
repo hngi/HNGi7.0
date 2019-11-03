@@ -609,6 +609,12 @@ h1
 	.welcome .col-md-9{
 		margin-left: 0;
 	  }
+	.row{
+		margin-top:0;
+	}
+	.statis .box {
+	  margin-bottom: 25px; 
+	}
   }
 
   @media(min-width:768px) and (max-width:991px){
