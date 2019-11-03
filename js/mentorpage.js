@@ -26,12 +26,6 @@
     let a1 = document.createElement('a');
     let a2 = document.createElement('a');
     let a3 = document.createElement('a');
-    
-    // addition of links to the social icons
-    a1.setAttribute("href", "https://twitter.com");
-    a2.setAttribute("href", "https://facebook.com");
-    a3.setAttribute("href", "https://dribbble.com");
-    // end
 
     let iconOne = document.createElement('i');
     let iconTwo = document.createElement('i');
