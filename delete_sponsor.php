@@ -90,7 +90,7 @@ if (isset($_GET["yesDeleteId"])) {
 
             <div>
               <div class="col-md-12 text-warning">
-                <h4>Are you sure you want to delete mentor with the following details?</h4>
+                <h4>Are you sure you want to delete sponsor with the following details?</h4>
               </div>
             </div>
 
