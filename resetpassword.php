@@ -68,8 +68,8 @@ if (isset($_GET["code"])) {
         ?>
         <p id="result"></p>
 
-        <input type="password" name="password" id="email" placeholder="enter your Pawword" required/>
-         <input type="password" name="confirm_password" id="email" placeholder="enter your Retype Password" required/>
+        <input type="password" name="password" id="email" placeholder="enter your Password" required/>
+         <input type="password" name="confirm_password" id="email" placeholder="Retype Password" required/>
         <button type="submit" onclick="signup()" name="reset_password">RESET PASSWORD</button>
 
 
