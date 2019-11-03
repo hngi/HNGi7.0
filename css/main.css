@@ -108,52 +108,6 @@
     .countdown1 {
         margin-bottom: 6em;
     }
-    .countdown-symbol {
-        border-radius: 50%;
-        position: relative;
-        height: 4rem;
-        width: 4rem;
-        font-size: 2rem;
-        font-weight: bolder;
-        margin-left: 10px;
-        font-family: Oswald, segoe UI, sans-serif;
-    }
-    .countdown-symbol>span {
-        position: absolute;
-        font-size: 2rem;
-        font-weight: 200;
-        right: 5;
-    }
-    .countdown-symbol+p {
-        font-weight: 500;
-        font-size: 13px;
-        font-family: Oswald, segoe UI, sans-serif;
-        color: #676767;
-        text-align: center;
-    }
-    .arc,
-    .arcs-background {
-        position: absolute;
-        top: -0.4rem;
-        width: 100%;
-        height: 100%;
-        border-radius: 100%;
-        border: 0.4rem solid;
-        border-color: #06F4CC #06F4CC transparent transparent;
-    }
-    .arcs-background {
-        border-color: rgba(240, 240, 240);
-        border-width: 0.4rem;
-    }
-    .arc_start {
-        transform: rotate(45deg);
-    }
-    .arc_end {
-        z-index: 10;
-        transform: rotate(-135deg);
-    }
-
-   
     .main-third-row {
         width: 100%;
         text-align: left;
@@ -794,12 +748,13 @@
     }
 
     .main-eighth-row .row_8--one p {
-        padding: auto;
+        padding: 0;
     }
 
     .support {
-        margin-top: 400px;
+        margin-top: 34.5vh;
         width: 100%;
+        z-index: 2;
         text-align: center;
     }
 
