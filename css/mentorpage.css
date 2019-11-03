@@ -116,6 +116,7 @@
       position: relative;
       min-height: 40vh;
       width: 100vw !important;
+      font-size: 18px;
      }
      
      .land {
@@ -180,7 +181,7 @@
      
      h4 {
          font-weight: bold;
-         font-size: 15px;
+         font-size: 18px;
      }
      
      .bottom-icons span {
