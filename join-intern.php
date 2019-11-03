@@ -55,19 +55,19 @@ require_once 'classControllers/init.php';
 </head>
 
 <body>
-<section class="navigation">
-   <?php include('fragments/site_header.php'); ?>
-  </section>
+    <section class="navigation">
+      <?php include('fragments/site_header.php'); ?>
+    </section>
 
-  <section class="container-fluid1">
-  <section class="jumbo">
+    <section class="container-fluid1">
+    <section class="jumbo">
 
-    <h2 class="heading">Join as an Intern</h2>
-    <p class="para">
-      Complete the form below to begin your journey as an Intern.<br>
-      To become a mentor <a href="MentorSetUpPage2.php">Click here</a>
-    </p>
-  </section>
+      <h2 class="heading">Join as an Intern</h2>
+      <p class="para">
+        Complete the form below to begin your journey as an Intern.<br>
+        To become a mentor <a href="MentorSetUpPage2.php">Click here</a>
+      </p>
+    </section>
 
   <div class="form-area">
 
@@ -139,8 +139,6 @@ require_once 'classControllers/init.php';
 
   </div>
    <?php include "fragments/site_footer.php"; ?>
-   <div id="jumptotop"><em></em></div>
-   </div> 
   </section>
 </body>
 
