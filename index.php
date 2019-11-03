@@ -515,21 +515,21 @@
                 <div class="sponsor">
                     <div class="container"><h2 class="text_center">HNG 6.0 Internship Sponsors</h2></div>
                     <div id="sponsor-flex-top" data-aos="fade-up">
-                        <a href="#"><img
+                        <a><img
                                 src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg"></a>
-                        <a href="#"><img
+                        <a><img
                                 src="https://res.cloudinary.com/jaycodist/image/upload/v1570722780/akwa-ibom-logo_yzz8ny.svg"></a>
-                        <a href="#"><img
+                        <a><img
                                 src="https://res.cloudinary.com/jaycodist/image/upload/v1570722785/imo-logo_rvxpil.svg"></a>
-                        <a href="#"><img
+                        <a><img
                                 src="https://res.cloudinary.com/jaycodist/image/upload/v1570722788/verifi-logo_nfckrw.svg"></a>
                     </div>
                     <div id="sponsor-flex-bottom" data-aos="fade-up">
-                        <a href="#"><img
+                        <a><img
                                 src="https://res.cloudinary.com/jaycodist/image/upload/v1570723653/figma-logo_iexfvh.png"></a>
-                        <a href="#"><img
+                        <a><img
                                 src="https://res.cloudinary.com/jaycodist/image/upload/v1570722855/bluechip-logo_rw62cu.svg"></a>
-                        <a href="#"><img
+                        <a><img
                                 src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg"></a>
                     </div>
                     <button class="cta-button button--midBlue">

@@ -774,12 +774,4 @@
         margin-right: auto;
         margin-left: auto;
     }
-
-    .sponsor #sponsor-flex-top img,
-    .sponsor #sponsor-flex-bottom img{
-        margin-bottom: 1em;
-        display: block;
-        flex-direction: column;
-        justify-content: center;
-    }
 }
