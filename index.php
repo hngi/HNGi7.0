@@ -37,7 +37,7 @@
                     <div class="main-first-row mobile-view" data-aos="fade-up">
                         <div class="welcome-column">
                             <h1 id="welcome-text" class="text__dark-blue">
-                                Welcome to HNG 7.0 Internship
+                                Welcome to<br>HNG 7.0 Internship
                             </h1>
                             <p id="welcome-story">
                                 The HNG Internship is an ambitious attempt to change the way education is done in Africa.
@@ -58,7 +58,7 @@
                         </h3>
                         <section id="countdown-container1" class="mt-2 mb-4">
                             <div class="message"></div>
-                            <div class="countdown1 mb-4" data-aos="fade-up">
+                            <div class="countdown1">
                                 <div class="item">
                                     <svg class="d-svg" width="160" height="160">
                                     <circle class="d-outer" r="70" cy="81" cx="81" stroke-width="5" stroke="#d5d5d5" fill="none" />
@@ -237,7 +237,7 @@
                 <h4 class="text-center mt-5">One of the Best Learning Curriculums in the World</h4>
                     <section class="tracks">
                         <div class="track_container">
-                            <div class="row">
+                            <div class="row" data-aos="fade-right">
                                 <div class="col-2">
                                     <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/frontend_hzyzio.png"
                                         width="50px" class="img-fluid">
@@ -249,7 +249,7 @@
                                 </div>
 
                             </div>
-                            <div class="row">
+                            <div class="row" data-aos="fade-right">
                                 <div class="col-2">
                                     <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/backend_orn4az.png"
                                         width="50px" class="img-fluid">
@@ -261,7 +261,7 @@
                                     </P>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row" data-aos="fade-right">
                                 <div class="col-2">
                                     <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/ml_sdviij.png"
                                         width="30px" class="img-fluid ml-2">
@@ -273,7 +273,7 @@
                                     </P>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row" data-aos="fade-right">
                                 <div class="col-2">
                                     <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/ui-ux_xq64bx.png"
                                         width="50px" class="img-fluid">
@@ -284,7 +284,7 @@
                                         exciting User Interfaces for great User Experience.</P>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row" data-aos="fade-right">
                                 <div class="col-2">
                                     <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/dm_bxzzr2.png"
                                         width="50px" class="img-fluid">
@@ -402,23 +402,23 @@
                     <section class="mentor-section" data-aos="fade-up">
                         <div class="mentor-image">
                             <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730807/IMG2_uiu3fj.png">
-                            <p>Ryan Thompson</p>
-                            <p>web Developer</p>
+                            <p class="mentor-name">Ryan Thompson</p>
+                            <p class="mentor-jd">web Developer</p>
                         </div>
                         <div class="mentor-image">
                             <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730833/IMG4_kvttgt.png">
-                            <p>Romina Hadid </p>
-                            <p>Marketing Strategist</p>
+                            <p class="mentor-name">Romina Hadid </p>
+                            <p class="mentor-jd">Marketing Strategist</p>
                         </div>
                         <div class="mentor-image">
                             <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730816/IMG3_cerrem.png">
-                            <p>Alexander Smith</p>
-                            <p>UI/UX Designer</p>
+                            <p class="mentor-name">Alexander Smith</p>
+                            <p class="mentor-jd">UI/UX Designer</p>
                         </div>
                         <div class="mentor-image">
                             <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730816/IMG3_cerrem.png">
-                            <p>John Doe </p>
-                            <p>Founder and CEO</p>
+                            <p class="mentor-name">John Doe </p>
+                            <p class="mentor-jd">Founder and CEO</p>
                         </div>
                     </section>
                     <div>
@@ -437,7 +437,7 @@
                             <div class="row_8--one mobile-view" data-aos="fade-right">
                                 <h4>HNG 6.0 Internship
                                 </h4>
-                                <p><i>...the journey so far</i></p>
+                                <p class="so-far">...the journey so far</p>
                                 <p>The HNG 6.0 Internship commenced 9th September, 2019 and ended 17th November, 2019.</p>
 
                                 <p>
@@ -514,7 +514,7 @@
                 </div>
 
                 <div class="sponsor">
-                    <h2 class="text_center blue-text">HNG 6.0 Internship Sponsors</h2>
+                    <h2 class="text_center">HNG 6.0 Internship Sponsors</h2>
                     <div id="sponsor-flex-top" data-aos="fade-up">
                         <a href="#"><img
                                 src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg"></a>
