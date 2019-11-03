@@ -28,35 +28,34 @@ class Admins
 
     if(count($errors) === 0){
       // there are no errors
-      $query = 'SELECT * FROM admins WHERE email="' . $email . '" AND password="' . $password . '" ';
-
+      $query = "SELECT * FROM admins WHERE email= '$email' ";
       $res = $database->query($query);
+      $row = mysqli_fetch_assoc($res);
       $count = $database->affected_rows();
-
       if ($count > 0) {
         // user exist
         // get user details and create session
+        if(password_verify($password, $row['password'])){
 
-        $row = mysqli_fetch_assoc($res);
+          $fullname = $row["firstname"] . ' ' . $row["lastname"];
+          $role = $row["role"];
+          $admin_id = $row["admin_id"];
+          $block = $row['block'];
 
-        $fullname = $row["firstname"] . ' ' . $row["lastname"];
-        $role = $row["role"];
-        $admin_id = $row["admin_id"];
-        $block = $row['block'];
+          if ($block == 1) {
+            // admin is blocked, cannot login
+            header("Location: login.php?blocked");
+          } else {
+            // admin can login
+            $_SESSION["fullname"] = $fullname;
+            $_SESSION["role"] = $role;
+            $_SESSION["admin_id"] = $admin_id;
 
-        if($block == 1) {
-          // admin is blocked, cannot login
-          header("Location: login.php?blocked");
-        } else {
-          // admin can login
-          $_SESSION["fullname"] = $fullname;
-          $_SESSION["role"] = $role;
-          $_SESSION["admin_id"] = $admin_id;
+            echo '<script>window.location.href = "dashboard.php"</script>';
+          }
 
-          echo '<script>window.location.href = "dashboard.php"</script>';
         }
-
-        
+               
       }
     }
   }
