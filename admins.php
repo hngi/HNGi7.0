@@ -182,6 +182,8 @@ if(isset($_GET["activateAdminId"])) {
     <div class="stix" id="stik3"></div>
 </label>
 
+           
+
 <?php include('fragments/sidebar.php'); ?>
 
 </body>
