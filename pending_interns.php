@@ -172,7 +172,7 @@
 			<p class="details">Email: <span id="email"></span></p>
 			<p class="details">Phone Number: <span id="phone"></span></p>
 			<p class="details">CV Link: <span id="cv"></span></p>
-			<p class="details">Experience: <span id="experience"></span></p>
+			<!-- <p class="details">Experience: <span id="experience"></span></p> -->
             <p class="details">Interest: <span id="interest"></span></p>
             <p class="details">Location: <span id="location"></span></p>
             <p class="details">Employment Status: <span id="employmentStatus"></span></p>
