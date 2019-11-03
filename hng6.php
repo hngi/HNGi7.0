@@ -206,9 +206,9 @@ $countDownValues = $countdown->getDate();
                     <div id="mentor-flex">
                         <div id="mentor-div">
                             <img
-                                src="https://res.cloudinary.com/memz/image/upload/v1572710761/Mentors/Seyi_Onifade_u8pndn.jpg">
+                                src="https://res.cloudinary.com/memz/image/upload/v1572796363/Mentors/20191103_165148_auawdc.jpg">
                            <p class="mentor-name center-text">Seyi Onifade</p>
-                            <p class="mentor-desc center-text">Devops and CEO, HNG 6.0</p>
+                            <p class="mentor-desc center-text">Devops and CEO, HNG Tech</p>
                         </div>
                         <div id="mentor-div">
                             <img
@@ -239,26 +239,55 @@ $countDownValues = $countdown->getDate();
                 </div>
             </section>
             <section class="section4">
-                <h2 class="center-text blue-text"  data-aos="fade-up">HNG 6.0 Internship Sponsors</h2>
-                <div id="sponsor-flex-top"  data-aos="fade-up">
-                    <a href="#"><img
-                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg"></a>
-                    <a href="#"><img
-                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722780/akwa-ibom-logo_yzz8ny.svg"></a>
-                    <a href="#"><img
-                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722785/imo-logo_rvxpil.svg"></a>
-                    <a href="#"><img
-                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722788/verifi-logo_nfckrw.svg"></a>
+            <div class="sponsor">
+                    <div class="container">
+                        <h2 class="center-text blue-text">HNG 6.0 Internship Sponsors</h2>
+                        <div class="row section-row text-center mx-auto" data-aos="fade-up">
+                            <div class="col-md-3">
+                                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722780/akwa-ibom-logo_yzz8ny.svg">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722785/imo-logo_rvxpil.svg">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722788/verifi-logo_nfckrw.svg">
+                            </div>
+                        </div>
+                    <div class="row second-row text-center mx-auto" data-aos="fade-up">
+                        <div class="col-md-4">
+                            <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570723653/figma-logo_iexfvh.png">                    </div>
+                        <div class="col-md-4">
+                            <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722855/bluechip-logo_rw62cu.svg">                    </div>
+                        <div class="col-md-4">
+                            <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg">                    </div>
+                    </div>
+                    <p class="center-text"  data-aos="fade-up"><a href="donate.php" class="def-button shadowed center">Become a Sponsor</a></p>
+                    </div>
+
+                    <!--
+                    <div id="sponsor-flex-top" data-aos="fade-up">
+                        <a><img
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg"></a>
+                        <a><img
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722780/akwa-ibom-logo_yzz8ny.svg"></a>
+                        <a><img
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722785/imo-logo_rvxpil.svg"></a>
+                        <a><img
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722788/verifi-logo_nfckrw.svg"></a>
+                    </div>
+                    <div id="sponsor-flex-bottom" data-aos="fade-up">
+                        <a><img
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570723653/figma-logo_iexfvh.png"></a>
+                        <a><img
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722855/bluechip-logo_rw62cu.svg"></a>
+                        <a><img
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg"></a>
+                    </div>
+-->
                 </div>
-                <div id="sponsor-flex-bottom"  data-aos="fade-up">
-                    <a href="#"><img
-                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570723653/figma-logo_iexfvh.png"></a>
-                    <a href="#"><img
-                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722855/bluechip-logo_rw62cu.svg"></a>
-                    <a href="#"><img
-                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg"></a>
-                </div>
-                <p class="center-text"  data-aos="fade-up"><a href="donate.php" class="def-button shadowed center">Become a Sponsor</a></p>
             </section>
         </main>
        

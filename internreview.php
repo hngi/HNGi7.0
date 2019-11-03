@@ -4,7 +4,7 @@ require_once 'classControllers/init.php';
 
 
 if(!isset($_SESSION["role"])) {
-    header('Location:login');
+    header('Location:login.php');
 }
 
 $admin = new InternExperience();
