@@ -92,13 +92,13 @@
                             <textarea name="experience" class="form-control" required placeholder="Your Experience" id="exp" maxlength="300"></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="image">Your Picture(Optional)</label>
+                            <label for="image">Your Picture</label>
                             <br>
                             <input type="file" name="image" accept="image/*">
                         </div>
 
                         <div class="form-group">
-                            <input type="submit" name="ok" class="btn btn-success" value="Submit Experience">
+                            <input type="submit" name="ok" class="btn btn-success modal-button" value="Submit Experience">
                         </div>
                     </form>
                 </div>
