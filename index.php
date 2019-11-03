@@ -185,7 +185,7 @@
                             <div class="section2">
                                 <div class="half-a-row">
                                     <img class="intern-meet"
-                                        src="https://res.cloudinary.com/chux/image/upload/v1570646194/Rectangle_4.6_vfbtwb.png"
+                                        src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572767613/Rectangle_4.6_vfbtwb-min.png"
                                         alt="interns" />
                                 </div>
                                 <div class="onboard my-auto mobile-view" data-aos="fade-left">
@@ -224,8 +224,9 @@
                         <div class="">
                             <div>
                                 <img
-                                    src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572767613/Rectangle_4.6_vfbtwb-min.png">
+                                    src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572767613/img1_cpa8nj-min.png">
                             </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -239,7 +240,7 @@
                         <div class="track_container">
                             <div class="row">
                                 <div class="col-2">
-                                    <img src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572767613/img1_cpa8nj-min.png"
+                                    <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/frontend_hzyzio.png"
                                         width="50px" class="img-fluid">
                                 </div>
                                 <div class="col-10">
