@@ -45,11 +45,17 @@ $data = $sponsors->getAllSponsor();
 </head>
 
 <body>
-<main class="reg">
-    <div id="overlay"></div>
-    <div id="export-modal">
-        <div>
-            <input type="radio" id="csv" name="exportOptions"><label for="csv">Export to CSV</label>
+    <main class="reg">
+        <div id="overlay"></div>
+        <div id="export-modal">
+            <div>
+                <input type="radio" id="csv" name="exportOptions"><label for="csv">Export to CSV</label>
+            </div>
+            <div>
+                <input type="radio" id="pdf" name="exportOptions"><label for="pdf">Export to PDF</label>
+            </div>
+            <p id="message"></p>
+            <button type="button" class="exports" id="download">Download</button>
         </div>
         <input type="text" class="searchBox"><i class="fas fa-search"></i>
         <section id="overview-section">
@@ -127,7 +133,6 @@ $data = $sponsors->getAllSponsor();
                         </table>
                     </div>
                 </div>
-            </div>
             <?php
             }
             ?>
@@ -140,48 +145,48 @@ $data = $sponsors->getAllSponsor();
                     <button type="button" class="exports" id="exportAs">Export</button>
                 </a>
             </div>
-        </div>
-        </div>
-
-        <!-- <button id="export">Export to Spreadsheet</button> -->
-
-    </section>
-    <section id="details-section">
-        <div id="details-back" class="details-back">
-            <div class="details-back">
-                <!-- <a href="overview.html" id="newitem-go-back" title="Go back">
-                    <div></div>
-                </a> -->
             </div>
-        </div>
-        <div id="centralize">
-            <h2>sponsor Details</h2>
-            <em id="no-intern">No sponsor selected</em>
-            <br />
-
-            <p class="details">Name: <span id="name"></span></p>
-            <p class="details">Email: <span id="email"></span></p>
-            <p class="details">Address: <span id="address"></span></p>
-            <p class="details">About sponsor: <span id="about"></span></p>
-            <p class="details" style="margin-left:10%;"><span id="photo"></span></p>
-            <!-- <div href="" id="details-return">Back to Overview</div> -->
-            <div id="navigator">
-                <i class="fas fa-chevron-left fa-2x left navigator"></i>
-                <p class="details"><span id="sn"></span></p>
-                <i class="fas fa-chevron-right fa-2x right navigator"></i>
             </div>
-        </div>
-    </section>
-</main>
 
-<input type="checkbox" id="mobile-bars-check" />
-<label for="mobile-bars-check" id="mobile-bars">
-    <div class="stix" id="stik1"></div>
-    <div class="stix" id="stik2"></div>
-    <div class="stix" id="stik3"></div>
-</label>
+            <!-- <button id="export">Export to Spreadsheet</button> -->
 
-<?php include('fragments/sidebar.php'); ?>
+        </section>
+        <section id="details-section">
+            <div id="details-back" class="details-back">
+                <div class="details-back">
+                    <!-- <a href="overview.html" id="newitem-go-back" title="Go back">
+                        <div></div>
+                    </a> -->
+                </div>
+            </div>
+            <div id="centralize">
+                <h2>sponsor Details</h2>
+                <em id="no-intern">No sponsor selected</em>
+                <br />
+
+                <p class="details">Name: <span id="name"></span></p>
+                <p class="details">Email: <span id="email"></span></p>
+                <p class="details">Address: <span id="address"></span></p>
+                <p class="details">About sponsor: <span id="about"></span></p>
+                <p class="details" style="margin-left:10%;"><span id="photo"></span></p>
+                <!-- <div href="" id="details-return">Back to Overview</div> -->
+                <div id="navigator">
+                    <i class="fas fa-chevron-left fa-2x left navigator"></i>
+                    <p class="details"><span id="sn"></span></p>
+                    <i class="fas fa-chevron-right fa-2x right navigator"></i>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <input type="checkbox" id="mobile-bars-check" />
+    <label for="mobile-bars-check" id="mobile-bars">
+        <div class="stix" id="stik1"></div>
+        <div class="stix" id="stik2"></div>
+        <div class="stix" id="stik3"></div>
+    </label>
+
+    <?php include('fragments/sidebar.php'); ?>
 
 </body>
 

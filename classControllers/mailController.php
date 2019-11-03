@@ -204,7 +204,7 @@ function contactMail($email, $ticket, $name, $subject, $body)
 
 
 //for contact us form
-function forGetPasswordMail($url,$subject,$email,$body)
+function forGetPasswordMail($url,$subject,$email,$fullname)
 {
   global $mail;
 
@@ -220,7 +220,7 @@ function forGetPasswordMail($url,$subject,$email,$body)
     $mail->Port       = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('alisataylorm.m@gmail.com','HNG 7.0');
+    $mail->setFrom('alisataylorm.m@gmail.com',$url);
     $mail->addAddress("$email");     // Add a recipient
     // $mail->addAddress('ellen@example.com');               // Name is optional
     $mail->addReplyTo('no-reply@gmail.com', 'No-Reply');
@@ -232,7 +232,7 @@ function forGetPasswordMail($url,$subject,$email,$body)
       // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 
       // Content
-    $url = $url;
+    ;
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = $subject;
     $mail->Body    = "<html>
@@ -255,14 +255,14 @@ function forGetPasswordMail($url,$subject,$email,$body)
                   <table border='0' cellpadding='0' cellspacing='0' width='100%'>
                     <tr>
                       <td style='color: #153643; font-family: Arial, sans-serif; font-size: 24px;'>
-                        <b>Dear, User </b>
+                        <b>Dear, $fullname </b>
                       </td>
                     </tr>
                   <tr>
     <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
-                      <p>$body</p>
+                      
                        <p>You recently requested to reset your password for your HNGi account.<br>
-                        Use the link above to reset it.<br>
+                        Use the link below to reset it.<br>
                         This password reset is only valid for the next 24 hours.
                         Reset your password <br><br></p>
 
