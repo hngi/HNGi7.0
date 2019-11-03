@@ -513,7 +513,7 @@
                 </div>
 
                 <div class="sponsor">
-                    <h2 class="text_center">HNG 6.0 Internship Sponsors</h2>
+                    <div class="container"><h2 class="text_center">HNG 6.0 Internship Sponsors</h2></div>
                     <div id="sponsor-flex-top" data-aos="fade-up">
                         <a href="#"><img
                                 src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg"></a>

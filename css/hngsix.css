@@ -501,7 +501,7 @@
     }
 
     #about-container article img {
-        display: none;
+        display: none !important;
     }
 
     .gallery {
