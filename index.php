@@ -400,7 +400,7 @@
                     </h4>
                     <section class="mentor-section" data-aos="fade-up">
                         <div class="mentor-image">
-                            <img src="https://res.cloudinary.com/memz/image/upload/v1572710761/Mentors/Seyi_Onifade_u8pndn.jpg">
+                            <img src="https://res.cloudinary.com/memz/image/upload/v1572796363/Mentors/20191103_165148_auawdc.jpg">
                             <p>Seyi Onifade</p>
                             <p>Devops and CEO, HNG Tech</p>
                         </div>

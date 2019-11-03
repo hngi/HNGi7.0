@@ -101,7 +101,7 @@
     {
       name: "Seyi Onifade",
       stack: "Devops and CEO, HNG 6.0",
-      imgUrl: '"https://res.cloudinary.com/memz/image/upload/v1572710761/Mentors/Seyi_Onifade_u8pndn.jpg"'
+      imgUrl: '"https://res.cloudinary.com/memz/image/upload/v1572796363/Mentors/20191103_165148_auawdc.jpg"'
     },
     {
        name: "Ephraim Aigbefo",
