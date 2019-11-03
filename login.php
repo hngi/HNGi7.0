@@ -61,7 +61,10 @@ if (isset($_POST['login'])) {
         echo $errors;
       }
       if(isset($_GET['getmess'])){
-        echo $_GET['getmess'];
+
+        echo '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: green; color: #fff; width: 98% !important; text-align: center;>'.$_GET['getmess'].'</p>';
+
+        
       }
 
       if (isset($_GET["blocked"])) {

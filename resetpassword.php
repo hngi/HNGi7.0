@@ -14,11 +14,11 @@ if (isset($_GET["code"])) {
       $err = '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: #F7CFCF; color: #6A0E0D; width: 80% !important; text-align: center;">Password not match</p>';
     }
     $message = $admin->createNewPassword($password, $code);
-     $getmess = '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: green; color: #fff; width: 80% !important; text-align: center;"></p>';
-    header("location: admin_login?getmess".$getmess);
+    header("location: login.php?getmess?=Your password was reset succefully");
   }
 }else{
-   
+  
+   exit('Page does not exist');
 }
 
 ?>

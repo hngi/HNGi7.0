@@ -400,7 +400,7 @@
                     </h4>
                     <section class="mentor-section" data-aos="fade-up">
                         <div class="mentor-image">
-                            <img src="https://res.cloudinary.com/memz/image/upload/v1572710761/Mentors/Seyi_Onifade_u8pndn.jpg">
+                            <img src="https://res.cloudinary.com/memz/image/upload/v1572796363/Mentors/20191103_165148_auawdc.jpg">
                             <p>Seyi Onifade</p>
                             <p>Devops and CEO, HNG Tech</p>
                         </div>
@@ -513,7 +513,36 @@
                 </div>
 
                 <div class="sponsor">
-                    <div class="container"><h2 class="text_center">HNG 6.0 Internship Sponsors</h2></div>
+                    <div class="container">
+                        <h2 class="text_center blue-text">HNG 6.0 Internship Sponsors</h2>
+                        <div class="row section-row text-center mx-auto" data-aos="fade-up">
+                            <div class="col-md-3">
+                                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722780/akwa-ibom-logo_yzz8ny.svg">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722785/imo-logo_rvxpil.svg">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722788/verifi-logo_nfckrw.svg">
+                            </div>
+                        </div>
+                    <div class="row second-row text-center mx-auto" data-aos="fade-up">
+                        <div class="col-md-4">
+                            <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570723653/figma-logo_iexfvh.png">                    </div>
+                        <div class="col-md-4">
+                            <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722855/bluechip-logo_rw62cu.svg">                    </div>
+                        <div class="col-md-4">
+                            <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg">                    </div>
+                    </div>
+                    <button class="cta-button button--midBlue">
+                        <a href="donate.php" class="text_center">Become Sponsor</a>
+                    </button>
+                    </div>
+
+                    <!--
                     <div id="sponsor-flex-top" data-aos="fade-up">
                         <a><img
                                 src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg"></a>
@@ -532,9 +561,7 @@
                         <a><img
                                 src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg"></a>
                     </div>
-                    <button class="cta-button button--midBlue">
-                        <a href="donate.php" class="text_center">Become Sponsor</a>
-                    </button>
+-->
                 </div>
 
             </main>

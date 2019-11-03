@@ -6,6 +6,9 @@
 		<div class="nav">
 <div id="upper">
 		
+	<div id="upper">
+		<h5 id="admin-badge">ADMINISTRATOR</h5>
+
 		<?php
 		    if($_SESSION["hasPic"] == "no") {
 		        // admin has NO picture, show default
@@ -54,7 +57,4 @@
 		
 		<a href="./logout.php">Logout</a>
 	</nav>
-		</div>
-	
-		
 </section>
