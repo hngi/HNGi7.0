@@ -428,6 +428,14 @@ h1
 }
 
 */
+@media (min-width:860px) and (max-width:1076px){
+	
+	#sidebar .badger #admin-badge{
+		font-size: 10px;
+		text-align: left;
+	}
+	
+}
 @media (max-width: 860px)
 {
 	main
@@ -497,7 +505,7 @@ h1
 
 	#sidebar
 	{
-		width: 40vw;
+		width: 50vw;
 		left: -100vw;
 		transition: 0.4s ease-out;
 		z-index: 5;
