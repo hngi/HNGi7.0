@@ -40,6 +40,86 @@ h1
     cursor: pointer;
     display: none;
 }
+/*Table Styles */
+
+.prime-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.prime-table td, .prime-table th {
+	padding: 12px 15px;
+	border: 1px solid #ddd;
+	text-align: center;
+	font-size: 16px;
+}
+
+.prime-table th {
+	background-color:  rgb(22, 203, 239);
+	color: #fff;
+}
+
+.prime-table tbody tr:nth-child(even) {
+	background-color: #f5f5f5;
+	border: none;
+}
+/*
+.prime-table tbody tr:nth-child(even) td {
+	border: none;
+}
+
+*/
+
+
+/* Table Made Responsive */ 
+
+
+@media screen and (min-width: 315px) and (max-width: 850px) {
+	.prime-table thead {
+		display: none;
+	}
+
+	.prime-table, 
+	.prime-table tbody, 
+	.prime-table tr, 
+	.prime-table td {
+		display: block;
+		width: 100%;
+	} 
+	 data-label=""
+
+	.prime-table tr {
+		margin-bottom: 15px;
+	}
+
+	.prime-table td {
+		text-align: right;
+		padding-left: 50%;
+		text-align: right;
+	}
+
+	.prime-table td::before {
+		content: attr(data-label);
+		position: absolute;
+		left: 15px;
+		text-align: left;
+		width: 50%;
+	}
+
+	.prime-table td:nth-last-child(1) {
+		display: inline-block; 
+	}
+}
+
+@media screen and (min-width: 480px) {
+	.prime-table td {
+		right: 20px;
+	}
+}
+
+
+
+
 
 .stix
 {
@@ -306,6 +386,8 @@ h1
 	font-size: 16px;
 }
 
+/*
+
 #table-row {
 	padding-left: 20px;
 	padding-right: 20px;
@@ -315,6 +397,7 @@ h1
 	background-color: #D1F0F6;
 }
 
+*/
 @media (max-width: 860px)
 {
 	main
