@@ -12,11 +12,11 @@ if (isset($_POST["sponsor-btn"])) {
   $target_file = 'uploads/sponsor-img/' .  $image;
   // Allow certain file formats
   if ( $image != "jpeg" &&  $image != "png" &&  $image != "jpg") {
-    $errors[] = "Sorry, only JPG, JPEG, PNG  files are allowed.";
+   
   
   }
   if (empty($_POST["sponsor_name"]) || empty($_POST["sponsor_email"]) || empty($_POST["business"]) || empty($_POST["about_you"])) {
-    $errors[] = "All feild are required";
+    
   }
 
   if (empty($error)) {

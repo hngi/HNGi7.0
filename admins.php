@@ -122,7 +122,7 @@ if(isset($_GET["activateAdminId"])) {
             </div> <br /><br />
             <div class="row" id="table-row">
                 <div class="table-responsive" id="printablediv">
-                    <table class="table table-hover mt-3 mb-1 table-condensed">
+                    <table class="table table-hover mt-3 mb-1 table-condensed table-bordered">
                         <thead class="table-primary">
                         <tr>
                             <th>S/N</th>
@@ -131,7 +131,7 @@ if(isset($_GET["activateAdminId"])) {
                             <th>Email</th>
                             <th>Role</th>
                             <th>Registration Date</th>
-                            <th colspan="2">Action</th>
+                            <th colspan="3">Action</th>
                         </tr>
                         </thead>
                         <tbody>
