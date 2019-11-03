@@ -116,7 +116,7 @@
      },
      {
        name: "Ominiabohs David",
-       stack: "Backend Development and Digital Marketing",
+       stack: "Backend Dev. and Digital Marketing",
        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572709814/Mentors/David_orphejjshasu_ib0liq.jpg"
      },
      {
