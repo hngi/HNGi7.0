@@ -123,6 +123,7 @@ if(isset($_GET["activateAdminId"])) {
             </div> <br /><br />
             <div class="row" id="table-row">
                 <div class="table-responsive" id="printablediv">
+
                     <table class="prime-table table-hover mt-3 mb-1 table-condensed">
                         <thead class="table-primary">
                         <tr>

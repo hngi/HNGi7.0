@@ -12,12 +12,12 @@ if (isset($_POST["recover-btn"])) {
   if ($count > 0) {
      $url = "http://hngi7.hng.tech/resetpassword.php?code=$code";
     $subject = 'YOUR PASSWORD REST LINK';
-    $body = " You recieve this email because you request for a reset password link, Kindly find bellow a link to reset your password.<br> Thank you.";
+    $body = " You are receiving this email because you request for a reset password link, Kindly use this link to reset your password. Thank you. <i>Click <a href='$url'> link </a> to reset your password";
     $admin->forGetpassword($email, $code);
     forGetPasswordMail($subject, $body,$email,$url,$fullname);
-    $mess = '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: green; color: #fff; width: 100% !important; text-align: center;">A reset password link has been sent to your email thank you!</p>';
+    $mess = '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: green; color: #fff; width: 98% !important; text-align: center;">A reset password link has been sent to your email thank you!</p>';
   }else{
-     $errors = '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: #F7CFCF; color: #6A0E0D; width: 80% !important; text-align: center;">Wrong email entered</p>';
+     $errors = '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: #F7CFCF; color: #6A0E0D; width: 98% !important; text-align: center;">Provide a correct email</p>';
   }
   
  
