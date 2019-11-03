@@ -20,13 +20,21 @@ if($display["hasPic"] == 0) {
 
 	
     $mentors = new Mentor;
-    $displaym = $mentors->allMentors();
+    $displaymActive = $mentors->allMentors();
+    $displaymPending = $mentors->pendingMentors();
+    $displaymDeclined = $mentors->declinedMentors();
+
+
+    $interns = new Intern;
+    $displayiActive = $interns->allInterns();
+    $displayiPending = $interns->pendingInterns();
+    $displayiDeclined = $interns->declinedInterns();
 
     $interns = new Intern;
     $displayi = $interns->allInterns();
 
     $lockForm = new LockRegForm();
-	$status = $lockForm->checkStatus();
+	  $status = $lockForm->checkStatus();
 	
 	$noOfInterns = $lockForm->getNoOfInterns();
 	$noOfMentors = $lockForm->getNoOfMentors();
@@ -253,58 +261,57 @@ if($display["hasPic"] == 0) {
 		
 		</section>
 
-    <table class="mentor-table">
-        <thead>
-            <tr>
-            <th data-heading="sn">SN</th>
-            <th data-heading="expertise">Area Of Expertise</th>
-            <th data-heading="photo">Photo</th>
-            <th data-heading="name">Name</th>
-            <th data-heading="email">Email</th>
-            <th data-heading="phone">Phone</th>
-            <th data-heading="cv">Link To Cv</th>
-            <th data-heading="Interest">Why Interested</th>
-            <th data-heading="state">Current State</th>
-            <th data-heading="employment-status">Employment Status</th>
-            <th data-heading="timeStamp">Timestamp</th>
-            <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-                echo $displaym;
-                ?>
-
-        </tbody>
-      </table>
-
-      <table class="intern-table"> 
-       <thead>
-           <tr>
-           <th data-heading="sn">SN</th>
-           <th data-heading="name">Name</th>
-           <th data-heading="email">Email</th>
-           <th data-heading="phone">Phone No</th>
-           <th data-heading="cv">CV</th>
-           <th data-heading="experience">Experience</th>
-           <th data-heading="interest">Interest</th>
-           <th data-heading="location">Location</th>
-           <th data-heading="employmentStatus">Employment Status</th>
-           <th data-heading="about">About</th>
-           <th data-heading="timeStamp">Registration Date</th>
-           <th>Action</th>
-           </tr>
-       </thead>
-       <tbody>
-           <?php
-               echo $displayi;
-               ?>
-
-       </tbody>
-     </table>
-     <section id="statistics">
+    
+    <section id="statistics">
         <div class="container-fluid">
-          <div class="row">
+         
+        <div class="row">
+            <div class="col-md-6">
+              <div class="charts">
+                <canvas id="intern-breakdown-bar" class="active">
+
+                </canvas>
+
+                <canvas id="intern-breakdown-pie" >
+
+                </canvas>
+              
+                <div class="options">
+                  <label for="intern-breakdown-pie-input">
+                    <input type="radio" name="intern-breakdown" id="intern-breakdown-pie-input" value="Pie" checked/> Pie
+                  </label>
+                  <label for="intern-breakdown-bar-input">
+                    <input type="radio" name="intern-breakdown" id="intern-breakdown-bar-input" value="Bar" /> Bar
+                  </label>
+               </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="charts">
+        
+                <canvas id="mentor-breakdown-bar" class="active">
+
+                </canvas>
+
+                <canvas id="mentor-breakdown-pie">
+
+                </canvas>
+              
+              <div class="options">
+
+              <label for="mentor-breakdown-pie-input">
+                  <input type="radio" name="mentor-breakdown" id="mentor-breakdown-pie-input" value="Pie" checked/> Pie
+                </label>
+
+                <label for="mentor-breakdown-bar-input">
+                  <input type="radio" name="mentor-breakdown" id="mentor-breakdown-bar-input" value="Bar" /> Bar
+                </label>
+               </div>
+              </div>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-md-6">
               <div class="charts">
                 <canvas id="count_by_state" class="active">
@@ -372,7 +379,146 @@ if($display["hasPic"] == 0) {
 			<option value="1">Users</option>
 		</select>
 		<a href="#">Advanced</a> -->
-		
+    <table class="mentor-table">
+        <thead>
+            <tr>
+            <th data-heading="sn">SN</th>
+            <th data-heading="expertise">Area Of Expertise</th>
+            <th data-heading="photo">Photo</th>
+            <th data-heading="name">Name</th>
+            <th data-heading="email">Email</th>
+            <th data-heading="phone">Phone</th>
+            <th data-heading="cv">Link To Cv</th>
+            <th data-heading="Interest">Why Interested</th>
+            <th data-heading="state">Current State</th>
+            <th data-heading="employment-status">Employment Status</th>
+            <th data-heading="timeStamp">Timestamp</th>
+            <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+                echo $displaymActive;
+                ?>
+        </tbody>
+      </table>
+      <table class="mentor-table">
+        <thead>
+            <tr>
+            <th data-heading="sn">SN</th>
+            <th data-heading="expertise">Area Of Expertise</th>
+            <th data-heading="photo">Photo</th>
+            <th data-heading="name">Name</th>
+            <th data-heading="email">Email</th>
+            <th data-heading="phone">Phone</th>
+            <th data-heading="cv">Link To Cv</th>
+            <th data-heading="Interest">Why Interested</th>
+            <th data-heading="state">Current State</th>
+            <th data-heading="employment-status">Employment Status</th>
+            <th data-heading="timeStamp">Timestamp</th>
+            <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+                echo $displaymPending;
+                ?>
+        </tbody>
+      </table>
+      <table class="mentor-table">
+        <thead>
+            <tr>
+            <th data-heading="sn">SN</th>
+            <th data-heading="expertise">Area Of Expertise</th>
+            <th data-heading="photo">Photo</th>
+            <th data-heading="name">Name</th>
+            <th data-heading="email">Email</th>
+            <th data-heading="phone">Phone</th>
+            <th data-heading="cv">Link To Cv</th>
+            <th data-heading="Interest">Why Interested</th>
+            <th data-heading="state">Current State</th>
+            <th data-heading="employment-status">Employment Status</th>
+            <th data-heading="timeStamp">Timestamp</th>
+            <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+                echo $displaymDeclined;
+                ?>
+        </tbody>
+      </table>
+      <table class="intern-table"> 
+       <thead>
+           <tr>
+           <th data-heading="sn">SN</th>
+           <th data-heading="name">Name</th>
+           <th data-heading="email">Email</th>
+           <th data-heading="phone">Phone No</th>
+           <th data-heading="cv">CV</th>
+           <th data-heading="experience">Experience</th>
+           <th data-heading="interest">Interest</th>
+           <th data-heading="location">Location</th>
+           <th data-heading="employmentStatus">Employment Status</th>
+           <th data-heading="about">About</th>
+           <th data-heading="timeStamp">Registration Date</th>
+           <th>Action</th>
+           </tr>
+       </thead>
+       <tbody>
+           <?php
+               echo $displayiActive;
+               ?>
+       </tbody>
+     </table>
+     <table class="intern-table"> 
+       <thead>
+           <tr>
+           <th data-heading="sn">SN</th>
+           <th data-heading="name">Name</th>
+           <th data-heading="email">Email</th>
+           <th data-heading="phone">Phone No</th>
+           <th data-heading="cv">CV</th>
+           <th data-heading="experience">Experience</th>
+           <th data-heading="interest">Interest</th>
+           <th data-heading="location">Location</th>
+           <th data-heading="employmentStatus">Employment Status</th>
+           <th data-heading="about">About</th>
+           <th data-heading="timeStamp">Registration Date</th>
+           <th>Action</th>
+           </tr>
+       </thead>
+       <tbody>
+           <?php
+               echo $displayiPending;
+               ?>
+       </tbody>
+     </table>
+     <table class="intern-table"> 
+       <thead>
+           <tr>
+           <th data-heading="sn">SN</th>
+           <th data-heading="name">Name</th>
+           <th data-heading="email">Email</th>
+           <th data-heading="phone">Phone No</th>
+           <th data-heading="cv">CV</th>
+           <th data-heading="experience">Experience</th>
+           <th data-heading="interest">Interest</th>
+           <th data-heading="location">Location</th>
+           <th data-heading="employmentStatus">Employment Status</th>
+           <th data-heading="about">About</th>
+           <th data-heading="timeStamp">Registration Date</th>
+           <th>Action</th>
+           </tr>
+       </thead>
+       <tbody>
+           <?php
+               echo    $displayiDeclined;
+               ?>
+       </tbody>
+     </table>
+
+
 
 </body>
 </html>

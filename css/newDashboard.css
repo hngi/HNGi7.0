@@ -229,8 +229,14 @@ i:hover{
 	display: none;
 }
 
+
+
 .sponsor-table th:nth-child(4),
-.sponsor-table td:nth-child(4){
+.sponsor-table td:nth-child(4),
+.sponsor-table th:nth-child(6),
+.sponsor-table td:nth-child(6),
+.sponsor-table th:nth-child(7),
+.sponsor-table td:nth-child(7){
 	display: none;
 }
 
@@ -468,6 +474,10 @@ i:hover{
 	.mentor-table td:nth-child(5){
 		display: none;
 	}
+	.sponsor-table th:nth-child(3),
+	.sponsor-table td:nth-child(3){
+		display: none;
+	}
 	#printablediv{
 		width: 100%;
 	}
@@ -603,10 +613,7 @@ i:hover{
 }
 
 @media (max-width: 500px){
-	.sponsor-table th:nth-child(2),
-	.sponsor-table td:nth-child(2){
-			display: none;
-	}
+	
 	#details-section{
 		font-size: 12px;
 		left: 100vw;
@@ -624,10 +631,17 @@ i:hover{
 	#my-table>tbody>tr>td:nth-child(1){
 		padding-left: 15px;
 	}
-	#my-table td:nth-child(2),
+	/* #my-table td:nth-child(2),
 	#my-table th:nth-child(2){
 		display: none;
+	} */
+	.intern-table th:nth-child(2),
+	.intern-table td:nth-child(2),
+	.mentor-table th:nth-child(2),
+	.mentor-table td:nth-child(2){
+		display: none;
 	}
+	
 	.box{
 		display: grid;
 		grid-template-columns: 2fr 1fr;
@@ -661,5 +675,8 @@ i:hover{
 	}
 	.scroll{
 		overflow-x: scroll;
+	}
+	#overview-section h2.register{
+		font-size: 24px;
 	}
 }

@@ -18,7 +18,7 @@ $data = $sponsors->getAllSponsor();
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
     <!--This contains the styling for the side bar -->
-    <link href="css/dashboard02.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    <link href="css/dashboard.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 
     <link href="css/newDashboard.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 
@@ -60,7 +60,7 @@ $data = $sponsors->getAllSponsor();
         <input type="text" class="searchBox"><i class="fas fa-search"></i>
         <section id="overview-section">
             <!-- <h1>Dashboard</h1> -->
-            <h2>Registered Sponsors </h2>
+            <h2 class="register">Registered Sponsors </h2>
             <!-- <section id="intern-section">
 				Populated by `js/dashboard.js` 
             </section> -->
@@ -92,10 +92,10 @@ $data = $sponsors->getAllSponsor();
                             </a> -->
                 </div>
                 <!-- <div id="printablediv" class="table-responsive"> -->
-                <div id="printablediv">
+                <div id="printablediv" class="sponsors">
                     <div class="scroll">
                         <!-- <table id="my-table" class="table table-hover table-bordered mt-3 mb-1"> -->
-                        <table id="my-table" class="table table-hover sponsor-table">
+                        <table data-target id="my-table" class="table table-hover sponsor-table">
                             <!-- <thead class="table-primary"> -->
                             <thead>
                                 <tr>
@@ -113,8 +113,8 @@ $data = $sponsors->getAllSponsor();
                                         <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
                                     </th>
 
-                                    <th colspan="3">Action</th>
-                                    <th data-heading="about">
+                                    <th>Action</th>
+                                    <th data-heading="about">About
                                         <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
                                     </th>
                                     <th data-heading="photo">logo
