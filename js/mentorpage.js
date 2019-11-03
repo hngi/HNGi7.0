@@ -48,6 +48,10 @@
     spanTwo.appendChild(a2)
     spanThree.appendChild(a3)
 
+    a1.setAttribute('href','https://twitter.com')
+    a2.setAttribute('href','https://facebook.com')
+    a3.setAttribute('href','https://dribbble.com')
+
     const socialIcons = document.createElement('div');
     socialIcons.classList.add('social-icons');
 
