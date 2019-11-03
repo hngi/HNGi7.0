@@ -48,7 +48,7 @@
                             </button>
                         </div>
                         <div class="image-column desktop-only">
-                            <img id="circles" src="https://bit.ly/2OzWHk7" alt="">
+                            <img id="circles" src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572646825/circles_yknmsg-min.png" alt="">
                         </div>
                     </div>
 
@@ -107,7 +107,7 @@
                     </div>
                     <div class="main-card__container">
                         <div class=".card__container">
-                            <img class="card1-image" src="https://bit.ly/33gP99W" alt="">
+                            <img class="card1-image" src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572765853/card-image-1_qmzasp-min.jpg" alt="">
                             <h5 class="card1-heading text__dark-blue">Remote Learning</h5>
                             <p class="card1-text">
                                 The HNG internship is a 3-month remote internship designed to find and develop the most
@@ -115,7 +115,7 @@
                             </p>
                         </div>
                         <div class=".card__container">
-                            <img class="card1-image" src="https://bit.ly/2IAGSFN" alt="">
+                            <img class="card1-image" src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572766772/card-image-2_e9bamu-min.jpg" alt="">
                             <h5 class="card1-heading text__dark-blue">Collaborate with Creatives</h5>
                             <p class="card1-text" id="tess">
                                 The HNG internship is a 3-month remote internship designed to find and develop the most
@@ -123,7 +123,7 @@
                             </p>
                         </div>
                         <div class=".card__container">
-                            <img class="card1-image" src="https://bit.ly/2Vug2Vf" alt="">
+                            <img class="card1-image" src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572766774/card-image-3_vqi4zm-min.jpg" alt="">
                             <h5 class="card1-heading text__dark-blue">Build Portfolio</h5>
                             <p class="card1-text">
                                 The HNG internship is a 3-month remote internship designed to find and develop the most
@@ -184,9 +184,7 @@
 
                             <div class="section2">
                                 <div class="half-a-row">
-                                    <img class="intern-meet"
-                                        src="https://res.cloudinary.com/chux/image/upload/v1570646194/Rectangle_4.6_vfbtwb.png"
-                                        alt="interns" />
+                                    <img class="intern-meet" src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572767613/Rectangle_4.6_vfbtwb-min.png" alt="interns" />
                                 </div>
                                 <div class="onboard my-auto mobile-view" data-aos="fade-left">
                                     <h4 class="">Onboard And Connect With Teammates
@@ -224,8 +222,9 @@
                         <div class="">
                             <div>
                                 <img
-                                    src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730626/img1_cpa8nj.png">
+                                    src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572767613/img1_cpa8nj-min.png">
                             </div>
+                            
                         </div>
                     </div>
                 </div>
