@@ -40,6 +40,86 @@ h1
     cursor: pointer;
     display: none;
 }
+/*Table Styles */
+
+.prime-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.prime-table td, .prime-table th {
+	padding: 12px 15px;
+	border: 1px solid #ddd;
+	text-align: center;
+	font-size: 16px;
+}
+
+.prime-table th {
+	background-color:  rgb(22, 203, 239);
+	color: #fff;
+}
+
+.prime-table tbody tr:nth-child(even) {
+	background-color: #f5f5f5;
+	border: none;
+}
+/*
+.prime-table tbody tr:nth-child(even) td {
+	border: none;
+}
+
+*/
+
+
+/* Table Made Responsive */ 
+
+
+@media screen and (min-width: 315px) and (max-width: 850px) {
+	.prime-table thead {
+		display: none;
+	}
+
+	.prime-table, 
+	.prime-table tbody, 
+	.prime-table tr, 
+	.prime-table td {
+		display: block;
+		width: 100%;
+	} 
+	 data-label=""
+
+	.prime-table tr {
+		margin-bottom: 15px;
+	}
+
+	.prime-table td {
+		text-align: right;
+		padding-left: 50%;
+		text-align: right;
+	}
+
+	.prime-table td::before {
+		content: attr(data-label);
+		position: absolute;
+		left: 15px;
+		text-align: left;
+		width: 50%;
+	}
+
+	.prime-table td:nth-last-child(1) {
+		display: inline-block; 
+	}
+}
+
+@media screen and (min-width: 480px) {
+	.prime-table td {
+		right: 20px;
+	}
+}
+
+
+
+
 
 .stix
 {
@@ -49,6 +129,27 @@ h1
     background-color: dimgray;
     margin: 5px 0;
     transition: 0.4s ease;
+}
+
+/* Edit to Navbar */
+.badger {
+	width: 100%;
+	padding: 10px;
+	background-color: #00aeff;
+	border: none;
+	letter-spacing: 3px;
+	
+	color: #fff;
+	border-radius: none;
+	margin-bottom: 5em;
+	position: absolute;
+	text-align: center;
+	top: 0;
+}
+
+.nav {
+	background-color: #23282d;
+	color: #fff;
 }
 
 #mobile-bars-check
@@ -218,7 +319,8 @@ h1
 /* Sidebar begins here */
 #sidebar
 {
-	background: linear-gradient(180deg, #D1F0F6 0%, #00aeff 100%);
+	background-color: #23282d;
+	color: #fff;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -231,6 +333,7 @@ h1
 {
 	display: flex;
 	flex-direction: column;
+	margin-top: 50px;
 }
 #sidebar #upper > *
 {
@@ -241,21 +344,19 @@ h1
 {
 	color: #084482;
 	background-color: transparent;
-	padding: 0.5rem;
-	border: 1px solid #084482;
-	border-radius: 5px;
+	border: none;
+	letter-spacing: 3px;
 	font-weight: bolder;
-	margin-bottom: 1.5rem;
 }
 
 #sidebar #upper #username
 {
 	font-size: 1.7rem;
-	color: #333333;
+	color: #535353;
 }
 
 #sidebar #hr1 {
-	border: 0.5px solid white;
+	border: 0.25px solid rgb(70, 69, 69);
 	width: 80%;
 }
 
@@ -263,6 +364,7 @@ h1
 	width: 80%;
 	border: 0.5px solid transparent;
 	margin: 0.5rem;
+	
 }
 
 #sidebar #lower
@@ -273,7 +375,11 @@ h1
 }
 #sidebar #lower > *
 {
-	align-self: center;
+	align-self: flex-start;
+	margin-left: 50px;
+	color: rgb(229, 228, 228);
+	
+
 }
 
 #sidebar #lower select
@@ -297,14 +403,20 @@ h1
 {
 	border-radius: 50%;
 	margin-bottom: 0.5rem;
+	height: 100px;
+	width: 100px;
 }
 #sidebar a
 {
 	text-decoration: none;
 	color: #333333;
-	font-weight: bold;
 	font-size: 16px;
 }
+/* AuGhost Touches */ 
+
+
+
+/*
 
 #table-row {
 	padding-left: 20px;
@@ -315,6 +427,7 @@ h1
 	background-color: #D1F0F6;
 }
 
+*/
 @media (max-width: 860px)
 {
 	main

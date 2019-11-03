@@ -51,87 +51,81 @@ $data = $sponsors->getAllSponsor();
         <div>
             <input type="radio" id="csv" name="exportOptions"><label for="csv">Export to CSV</label>
         </div>
-        <div>
-            <input type="radio" id="pdf" name="exportOptions"><label for="pdf">Export to PDF</label>
-        </div>
-        <p id="message"></p>
-        <button type="button" class="exports" id="download">Download</button>
-    </div>
-    <input type="text" class="searchBox"><i class="fas fa-search"></i>
-    <section id="overview-section">
-        <!-- <h1>Dashboard</h1> -->
-        <h2>Registered Sponsors </h2>
-        <!-- <section id="intern-section">
-            Populated by `js/dashboard.js`
-        </section> -->
-        <?php
-        if (isset($_SESSION['success'])) {
-            echo $_SESSION['success'];
-            unset($_SESSION['success']);
-        }
+        <input type="text" class="searchBox"><i class="fas fa-search"></i>
+        <section id="overview-section">
+            <!-- <h1>Dashboard</h1> -->
+            <h2 class="register">Registered Sponsors </h2>
+            <!-- <section id="intern-section">
+				Populated by `js/dashboard.js` 
+            </section> -->
+            <?php
+            if (isset($_SESSION['success'])) {
+                echo $_SESSION['success'];
+                unset($_SESSION['success']);
+            }
 
-        ?>
+            ?>
 
-        <div class="container">
-            <div class="row">
+            <div>
+                <div class="row">
 
-                <?php
-                if ($data == "0") {
-                    echo "<h2>There are no Registered Sponsors</h2>";
-                } else {
-                ?>
-                <!--<div class="col-md-3">-->
-                <!--    <a href="exports/export-to-excel-sponsors.php">-->
-                <!--        <button type="button" id="export">Export to Spreadsheet</button>-->
-                <!--    </a>-->
-                <!--</div>-->
-                <!-- <div class="col-md-3">
+                    <?php
+                    if ($data == "0") {
+                        echo "<h2>There are no Registered Sponsors</h2>";
+                    } else {
+                        ?>
+                        <!--<div class="col-md-3">-->
+                        <!--    <a href="exports/export-to-excel-sponsors.php">-->
+                        <!--        <button type="button" id="export">Export to Spreadsheet</button>-->
+                        <!--    </a>-->
+                        <!--</div>-->
+                        <!-- <div class="col-md-3">
+                            
+                            <a href="#" onclick="javascript:printDiv('printablediv')">
+                                <button type="button" class="btn btn-primary btn-sm" id="export">Export to PDF</button>
+                            </a> -->
+                </div>
+                <!-- <div id="printablediv" class="table-responsive"> -->
+                <div id="printablediv" class="sponsors">
+                    <div class="scroll">
+                        <!-- <table id="my-table" class="table table-hover table-bordered mt-3 mb-1"> -->
+                        <table data-target id="my-table" class="table table-hover sponsor-table">
+                            <!-- <thead class="table-primary"> -->
+                            <thead>
+                                <tr>
 
-                    <a href="#" onclick="javascript:printDiv('printablediv')">
-                        <button type="button" class="btn btn-primary btn-sm" id="export">Export to PDF</button>
-                    </a> -->
-            </div>
-            <!-- <div id="printablediv" class="table-responsive"> -->
-            <div id="printablediv">
-                <div class="scroll">
-                    <!-- <table id="my-table" class="table table-hover table-bordered mt-3 mb-1"> -->
-                    <table id="my-table" class="table table-hover">
-                        <!-- <thead class="table-primary"> -->
-                        <thead>
-                        <tr>
+                                    <th data-heading="sn">SN
+                                        <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
+                                    </th>
+                                    <th data-heading="name">Name
+                                        <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
+                                    </th>
+                                    <th data-heading="email">Email
+                                        <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
+                                    </th>
+                                    <th data-heading="address">Address
+                                        <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
+                                    </th>
 
-                            <th data-heading="sn">SN
-                                <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
-                            </th>
-                            <th data-heading="name">Name
-                                <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
-                            </th>
-                            <th data-heading="email">Email
-                                <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
-                            </th>
-                            <th data-heading="address">Address
-                                <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
-                            </th>
-
-
-                            <th data-heading="about">About
-                                <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
-                            </th>
-                            <th data-heading="photo">logo
-                                <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
-                            </th>
-                            <th colspan="3">Action</th>
+                                    <th>Action</th>
+                                    <th data-heading="about">About
+                                        <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
+                                    </th>
+                                    <th data-heading="photo">logo
+                                        <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
+                                    </th>
 
 
 
-                        </tr>
-                        </thead>
-                        <tbody>
+                                </tr>
+                            </thead>
+                            <tbody>
 
-                        <?= $data; ?>
+                                <?= $data; ?>
 
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
             <?php

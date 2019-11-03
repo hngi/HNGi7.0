@@ -80,13 +80,13 @@ class Admins
         }
         $display .= '
                     <tr>
-                        <td>' . $sn . '</td>
-                        <td>' . $row["firstname"] . '</td>
-                        <td>' . $row["lastname"] . '</td>
-                        <td>' . $row["email"] . '</td>
-                        <td>' . $role . '</td>
-                        <td>' . $row["timestamp"] . '</td>
-                        <td><a href="admin_view.php?editAdminId='.$row["admin_id"].'"><button class="btn btn-success btn-sm">View</button></a></td>';
+                        <td data-label="S/N">' . $sn . '</td>
+                        <td data-label="First Name">' . $row["firstname"] . '</td>
+                        <td data-label="Last Name">' . $row["lastname"] . '</td>
+                        <td data-label="Email">' . $row["email"] . '</td>
+                        <td data-label="Role">' . $role . '</td>
+                        <td data-label="Registration Date">' . $row["timestamp"] . '</td>
+                        <td data-label="Actions"><a href="admin_view.php?editAdminId='.$row["admin_id"].'"><button class="btn btn-success btn-sm">View</button></a></td>';
                         if($row["block"] == 0) {
                           $display .='
                           <td><a href="admins.php?blockAdminId='.$row["admin_id"].'"><button class="btn btn-warning btn-sm">Block</button></a></td>';

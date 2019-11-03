@@ -60,10 +60,11 @@ if(isset($_GET["activateAdminId"])) {
     <title>Admin Dashboard</title>
 
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
-    <link rel="stylesheet" href="css/dashboard.css">
+    
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/dashboard.css">
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -122,7 +123,8 @@ if(isset($_GET["activateAdminId"])) {
             </div> <br /><br />
             <div class="row" id="table-row">
                 <div class="table-responsive" id="printablediv">
-                    <table class="table table-hover mt-3 mb-1 table-condensed table-bordered">
+
+                    <table class="prime-table table-hover mt-3 mb-1 table-condensed">
                         <thead class="table-primary">
                         <tr>
                             <th>S/N</th>
@@ -131,7 +133,7 @@ if(isset($_GET["activateAdminId"])) {
                             <th>Email</th>
                             <th>Role</th>
                             <th>Registration Date</th>
-                            <th colspan="3">Action</th>
+                            <th colspan="3">Actions</th>
                         </tr>
                         </thead>
                         <tbody>
