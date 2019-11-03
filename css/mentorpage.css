@@ -31,6 +31,7 @@
 
     .mentors-section {
       text-align: center;
+      font-size: 13px;
       animation: Slide_up 2.1s ease ;
     }
 
@@ -125,8 +126,7 @@
          left: 50%;
          top: 20px;
          transform: translateX(-50%);
-         width: 100%; 
-
+         width: 100%;        
          margin-top: 1rem;
      }
 
@@ -134,6 +134,7 @@
       background-color: #D1F0F6 !important;
       color: #474747 !important;
       font-weight: bold;
+      font-size: 15px;
      }
 
      .navbar-toggler {
@@ -147,6 +148,7 @@
        color: #084482 !important;
        margin-top: 0;
        margin-bottom: 1rem;
+       font-size: 40rem;
      }
 
     
