@@ -31,6 +31,7 @@
 
     .mentors-section {
       text-align: center;
+      font-size: 13px;
       animation: Slide_up 2.1s ease ;
     }
 
@@ -116,6 +117,7 @@
       position: relative;
       min-height: 40vh;
       width: 100vw !important;
+      font-size: 30px;
      }
      
      .land {
@@ -124,8 +126,7 @@
          left: 50%;
          top: 20px;
          transform: translateX(-50%);
-         width: 100%;
-         
+         width: 100%;        
          margin-top: 1rem;
      }
 
@@ -133,6 +134,7 @@
       background-color: #D1F0F6 !important;
       color: #474747 !important;
       font-weight: bold;
+      font-size: 15px;
      }
 
      .navbar-toggler {
@@ -145,7 +147,8 @@
        font-weight: bold;
        color: #084482 !important;
        margin-top: 0;
-       margin-bottom: 1rem
+       margin-bottom: 1rem;
+       font-size: 40rem;
      }
 
     
@@ -180,6 +183,7 @@
      
      h4 {
          font-weight: bold;
+         font-size: 15px;
      }
      
      .bottom-icons span {
@@ -232,13 +236,13 @@
      } 
      
      #landing-page  h2 {
-        font-size: 45px;
+        font-size: 20px;
      } 
      #landing-page  p {
         padding-bottom: 25px;
-        font-size: 25px;
+        font-size: 15px;
         font-weight: normal;
-        font-size: 24px;
+        font-size: 30px;
         line-height: 33px;
         text-align: center;
      }
