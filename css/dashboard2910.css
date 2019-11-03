@@ -6,7 +6,8 @@ body
     padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-    --sidebar-width: 10vw;
+	--sidebar-width: 10vw;
+	background-color: rgb(226, 226, 226) !important;
 }
 html
 {
@@ -16,7 +17,6 @@ html
 main
 {
 	background-color: rgb(226, 226, 226) ;
-	/* background-color: #2a2b3d; */
 	margin-left: 15vw; /* Same as sidebar width*/
 	padding: 2rem;
 	min-height: 100vh;
@@ -312,6 +312,10 @@ h1
 	background-color: #D1F0F6;
 }
 
+.row{
+	margin-top:15px;
+}
+
 @media (max-width: 860px)
 {
 	main
@@ -480,7 +484,7 @@ h1
  /* mentor, intern, admin statistics  */
   .statis {
     color: #EEE;
-    margin-top: 15px;
+    /* margin-top: 15px; */
     width: 100%;
   }
   .statis a{
@@ -496,7 +500,7 @@ h1
     padding: 15px;
     overflow: hidden;
     border-radius: 3px;
-	margin-bottom: 25px;
+	/* margin-bottom: 25px; */
 	box-shadow: 1px 0 3px rgba(0,0,0,0.3);
 	/* background-color: #00aeff !important; */
 	background-color: #fefefe !important;
@@ -713,5 +717,19 @@ h1
 #count_by_state2.active,
 #count_by_track.active,
 #count_by_track2.active{
+	display: block !important;
+}
+
+#intern-breakdown-pie,
+#intern-breakdown-bar,
+#mentor-breakdown-bar,
+#mentor-breakdown-pie{
+	display: none !important;
+}
+
+#intern-breakdown-pie.active,
+#intern-breakdown-bar.active,
+#mentor-breakdown-bar.active,
+#mentor-breakdown-pie.active{
 	display: block !important;
 }
