@@ -142,7 +142,7 @@
      {
        name: "Victor Ugwueze",
        stack: "Backend Development and Devops",
-       imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572709971/Mentors/Victor_Ugwu_ojtwyy.jpg"
+       imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572786926/Mentors/Victor_Ugwueze_qwmfgu.jpg"
      },
      {
        name: "Tobi Anifowose",
