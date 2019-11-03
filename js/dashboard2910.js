@@ -79,8 +79,9 @@ const collateByTrack =(element, dataArray, area, title)=>{
   interests = {};
   for(let i=1; i<dataArray.length; i++){
   
-    if(dataArray[i][area].trim().includes(' ')){
-    let tracks = dataArray[i][area].trim().split(' ');
+    if(dataArray[i][area].trim().includes('|')){
+    let tracks = dataArray[i][area].trim().split('|');
+    
       for(track of tracks){
         trackCount(track)
       }
@@ -115,7 +116,7 @@ const collateByTrack =(element, dataArray, area, title)=>{
   // console.log(Object.keys(regInterns))
   // console.log(Object.values(regInterns))
   // console.log(Object.keys(regMentors))
-  console.log(Object.values(regMentors))
+  
 
 
 
