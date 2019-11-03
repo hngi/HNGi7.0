@@ -117,6 +117,7 @@
       position: relative;
       min-height: 40vh;
       width: 100vw !important;
+      font-size: 30px;
      }
      
      .land {
