@@ -400,24 +400,24 @@
                     </h4>
                     <section class="mentor-section" data-aos="fade-up">
                         <div class="mentor-image">
-                            <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730807/IMG2_uiu3fj.png">
-                            <p>Ryan Thompson</p>
-                            <p>web Developer</p>
+                            <img src="https://res.cloudinary.com/memz/image/upload/v1572710761/Mentors/Seyi_Onifade_u8pndn.jpg">
+                            <p>Seyi Onifade</p>
+                            <p>Devops and CEO, HNG 6.0</p>
                         </div>
                         <div class="mentor-image">
-                            <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730833/IMG4_kvttgt.png">
-                            <p>Romina Hadid </p>
-                            <p>Marketing Strategist</p>
+                            <img src="https://res.cloudinary.com/memz/image/upload/v1572710145/Mentors/Tomisin_olpwrk.jpg">
+                            <p>Tomisin Lalude </p>
+                            <p>Frontend Development</p>
                         </div>
                         <div class="mentor-image">
-                            <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730816/IMG3_cerrem.png">
-                            <p>Alexander Smith</p>
-                            <p>UI/UX Designer</p>
+                            <img src="https://res.cloudinary.com/memz/image/upload/v1572709955/Mentors/Kev_Chike7_ymlrik.jpg">
+                            <p>Kevin Chike</p>
+                            <p>Backend Development</p>
                         </div>
                         <div class="mentor-image">
-                            <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730816/IMG3_cerrem.png">
-                            <p>John Doe </p>
-                            <p>Founder and CEO</p>
+                            <img src="https://res.cloudinary.com/memz/image/upload/v1572709726/Mentors/Ephraim_phd0oq.jpg">
+                            <p>Ephraim Aigbefo</p>
+                            <p>Fullstack Development</p>
                         </div>
                     </section>
                     <div>
