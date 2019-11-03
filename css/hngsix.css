@@ -166,7 +166,7 @@
         /*ABOUT PAGE ENDS */
         /*GALLERY STARTS HERE */
         .gallery {
-            margin-top: 10em;
+            margin-top: 8em;
            width: 100%;
            text-align: center;
 
@@ -501,19 +501,16 @@
     }
 
     #about-container article img {
-        width: 100%;
-        
+        display: none !important;
     }
 
     .gallery {
-        margin-top: 600px ;
        width: 100%;
        text-align: center;
-
+       margin-top: 4em;
     }
 
     .gallery h2 {
         text-align: center;
-        margin-top: 22em;
     }
 }
