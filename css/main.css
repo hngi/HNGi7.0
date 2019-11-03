@@ -743,7 +743,7 @@
     }
 
     .main-eighth-row img {
-        width: 100%;
+        display: none;
         
     }
 
@@ -752,7 +752,6 @@
     }
 
     .support {
-        margin-top: 34.5vh;
         width: 100%;
         z-index: 2;
         text-align: center;

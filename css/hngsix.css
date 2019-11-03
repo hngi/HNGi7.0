@@ -501,19 +501,15 @@
     }
 
     #about-container article img {
-        width: 100%;
-        
+        display: none;
     }
 
     .gallery {
-       margin-top: 400px;
        width: 100%;
        text-align: center;
-
     }
 
     .gallery h2 {
         text-align: center;
-        margin-top: 22em;
     }
 }
