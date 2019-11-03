@@ -416,9 +416,9 @@
                             <p>UI/UX Designer</p>
                         </div>
                         <div class="mentor-image">
-                            <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730816/IMG3_cerrem.png">
-                            <p>John Doe </p>
-                            <p>Founder and CEO</p>
+                            <img src="https://res.cloudinary.com/memz/image/upload/v1572796363/Mentors/20191103_165148_auawdc.jpg">
+                            <p>Seyi Onifade </p>
+                            <p>CEO, HNG Tech</p>
                         </div>
                     </section>
                     <div>
