@@ -5,30 +5,36 @@ $sponsor = new sponsors;
 if (!isset($_SESSION["role"])) {
   header('Location:login.php');
 }
-$sponsor_id = $database->escape_string($_GET['editSponsorId']);
-$getdetail = $sponsor->getSponsorsById($sponsor_id);
-$sponsor_name = $getdetail['sponsor_name'];
-$sponsor_logo = $getdetail['sponsor_logo'];
-
-if (isset($_POST["sponsor-update"])) {
-  $errors = [];
-  $sponsor_name = $database->escape_string($_POST["name"]);
-  $image = $_FILES['file']['name'];
-  $target = 'uploads/sponsor-img/' .  $image;
-  // Allow certain file formats
-  if ($image != "gif" &&  $image != "jpeg" &&  $image != "png" &&  $image != "jpg") {
-    $errors[] = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-    $uploadOk = 0;
+if (isset($_GET['editSponsorId'])) {
+  $sponsor_id = $database->escape_string($_GET['editSponsorId']);
+  $getdetail = $sponsor->getSponsorsById($sponsor_id);
+  if (isset($_POST["sponsor-update"])) {
+    $errors = [];
+    $sponsor->sponsor_name = $_POST["name"];
+    $sponsor->sponsor_email = $_POST["sponsor_email"];
+    $sponsor->business_address = $_POST["business_address"];
+    $sponsor->about_you = $_POST["about_you"];
+    $resp = $sponsor->updateSponsor();
+    if ($resp) {
+      header("location: registered_sponsors.php");
+      $_SESSION['success'] = "<h3 class='alert alert-success'>Sponsor was updated succefully</h3>";
+    } else {
+      $errors[] = "Upload not successful";
+    }
   }
-  if (move_uploaded_file($_FILES["file"]["tmp_name"], $target)) {
-    $resp = $sponsor->updateSponsor($sponsor_id, $target, $sponsor_name);
-    header("location: registered_sponsors.php");
-    $_SESSION['success'] = "<h3 class='alert alert-success'>Sponsor was updated succefully</h3>";
-  } else {
-    $errors[] = "Upload not successful";
+  if (isset($_POST['update_photo'])) {
+    $sponsor_id = $database->escape_string($_GET['editSponsorId']);
+    $image = $_FILES['file']['name'];
+    $target_file = 'uploads/sponsor-img/' .  $image;
+    if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
+      $sponsor->updateSponsorImg($target_file);
+      header("location: registered_sponsors.php");
+      $_SESSION['success'] = "<h3 class='alert alert-success'>Sponsor Logo was updated succefully</h3>";
+    } else {
+      $errors[] = "Upload not successful";
+    }
   }
 }
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -91,18 +97,34 @@ if (isset($_POST["sponsor-update"])) {
 
               <div class="form-group">
                 <label for="email">Sponsor Name</label>
-                <input type="text" class="form-control" name="name" id="firstname" value="<?= $sponsor_name ?>">
+                <input type="text" class="form-control" name="name" id="firstname" value="<?= $getdetail['sponsor_name']; ?>">
               </div>
-
               <div class="form-group">
-
-                <img src="<?= $sponsor_logo; ?>" alt="" style="margin-bottom:10px; width: 30%;">
-
-
-                <input type="file" class="form-control" name="file" id="lastname">
+                <label for="email">Sponsor Address</label>
+                <input type="text" class="form-control" name="business_address" id="firstname" value="<?= $getdetail['business_address']; ?>">
               </div>
+              <div class="form-group">
+                <label for="email">About Sponsor</label>
+                <input type="text" class="form-control" name="about_you" id="firstname" value="<?= $getdetail['about_you']; ?>">
+              </div>
+              <div class="form-group">
+                <label for="email">Sponsor Email</label>
+                <input type="email" class="form-control" name="sponsor_email" id="firstname" value="<?= $getdetail['sponsor_email']; ?>">
+              </div>
+              <div class="form-group">
+                <img src="<?= $getdetail['sponsor_logo']; ?>" alt="" style="margin-bottom:4px; width: 30%;"><br>
+                <div class="">
+                  <input type="file" class="" name="file" id="lastname">
+                  <input type="submit" class="btn btn-light" style="font-size:12px; margin-top:5px; color:blue" name="update_photo" value="update-image">
+
+                </div>
+
+              </div>
+
               <button type="submit" class="btn btn-primary" name="sponsor-update">Submit</button>
-              <a href="registered_sponsors.php" class="btn" style="background: gray; color:#fff;">cancle</a>
+
+
+              <a href="registered_sponsors.php" class="btn mb-4" style="background: gray; color:#fff;">cancle</a>
             </form>
           </div>
         </div>

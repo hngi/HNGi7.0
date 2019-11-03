@@ -11,7 +11,7 @@ $countDownValues = $countdown->getDate();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HNGi6.0</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css"
@@ -108,7 +108,7 @@ $countDownValues = $countdown->getDate();
             </section>
 
             <section class="gallery">
-                <h2 class="blue-text"  data-aos="fade-up">How it All Happened</h2>
+                <h2 class="blue-text"  data-aos="fade-up">How It All Happened</h2>
                 <section class="container">
                     <div class="gallery_items"  data-aos="fade-up">
                         <img
@@ -206,15 +206,15 @@ $countDownValues = $countdown->getDate();
                     <div id="mentor-flex">
                         <div id="mentor-div">
                             <img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722683/mentors-first_qlquq9.png">
-                            <p class="mentor-name center-text">Samuel L. Jackson</p>
-                            <p class="mentor-desc center-text">Mentor, HNG 5.0</p>
+                                src="https://res.cloudinary.com/memz/image/upload/v1572710761/Mentors/Seyi_Onifade_u8pndn.jpg">
+                           <p class="mentor-name center-text">Seyi Onifade</p>
+                            <p class="mentor-desc center-text">Devops and CEO, HNG Tech</p>
                         </div>
                         <div id="mentor-div">
                             <img
-                                src="https://res.cloudinary.com/memz/image/upload/v1572796363/Mentors/20191103_165148_auawdc.jpg">
-                            <p class="mentor-name center-text">Seyi Onifade</p>
-                            <p class="mentor-desc center-text">Mentor, HNG 6.0</p>
+                                src="https://res.cloudinary.com/memz/image/upload/v1572710145/Mentors/Tomisin_olpwrk.jpg">
+                            <p class="mentor-name center-text">Tomisin Lalude</p>
+                            <p class="mentor-desc center-text">Frontend Development</p>
                         </div>
                     </div>
                     <a href="mentorpage.php" class="def-button shadowed">See all Mentors</a>

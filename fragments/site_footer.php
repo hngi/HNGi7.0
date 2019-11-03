@@ -1,7 +1,7 @@
 <footer id="footer">
     <div class="container">
 
-    <img id="footer-logo" src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png">
+    <img id="footer-logo" src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572768106/hng_logo-min.png">
 
     <nav class="footer-nav">
         <div class="row">
