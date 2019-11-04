@@ -5,7 +5,7 @@ $admin = new AdminClass;
 if (isset($_GET["code"])) {
   
   if (isset($_POST['reset_password'])) {
-
+    $err = '';
     $code = $_GET["code"];
     $password = $_POST['password'];
     $retype =  $_POST['confirm_password'];
