@@ -75,14 +75,6 @@ input:invalid, input:required {
     color: grey;
 }
 
-
-
-.inputWithIcon input {
-   
-
-}
-
-
 .full {
     height: 74vh;
 }
