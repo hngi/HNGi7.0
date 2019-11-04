@@ -26,7 +26,7 @@ class InternExperience
         $sql = "SELECT * FROM intern_experience WHERE status = '1' ORDER BY id DESC";
         $query = $database->query($sql);
         $result = $query->fetch_all(MYSQLI_ASSOC);
-// var_dump($result);
+
         return $result;
     }
 
