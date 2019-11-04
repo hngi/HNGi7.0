@@ -12,7 +12,7 @@ if (isset($_POST["recover-btn"])) {
   if ($count > 0) {
      $url = "http://hngi7.hng.tech/resetpassword.php?code=$code";
     $subject = 'YOUR PASSWORD REST LINK';
-    $body = " You recieve this email because you request for a reset password link, Kindly find bellow a link to reset your password.<br> Thank you.";
+    $body = "YOUR PASSWORD REST LINK";
     $admin->forGetpassword($email, $code);
     forGetPasswordMail($subject, $body,$email,$url,$fullname);
     $mess = '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: green; color: #fff; width: 100% !important; text-align: center;">A reset password link has been sent to your email thank you!</p>';
