@@ -71,7 +71,7 @@ h1
 */
 
 
-/* Table Made Responsive */ 
+/* Table Made Responsive */
 
 
 @media screen and (min-width: 315px) and (max-width: 850px) {
@@ -79,14 +79,14 @@ h1
 		display: none;
 	}
 
-	.prime-table, 
-	.prime-table tbody, 
-	.prime-table tr, 
+	.prime-table,
+	.prime-table tbody,
+	.prime-table tr,
 	.prime-table td {
 		display: block;
 		width: 100%;
-	} 
-	 
+	}
+
 
 	.prime-table tr {
 		margin-bottom: 15px;
@@ -107,7 +107,7 @@ h1
 	}
 
 	.prime-table td:nth-last-child(1) {
-		display: inline-block; 
+		display: inline-block;
 	}
 }
 
@@ -157,7 +157,7 @@ h1
 @media screen and (min-width: 861px) and (max-width: 1081px) {
 	#admin-badge {
 		font-size: calc(1vw + 1px);
-		
+
 	}
 }
 
@@ -372,7 +372,7 @@ h1
 	font-family: Helvetica;
 	text-shadow: 2px 4px 3px rgba(2, 2, 2, 0.3);
 	text-transform: uppercase;
-	
+
 }
 
 #sidebar #hr1, #sidebar #hr2 {
@@ -384,7 +384,7 @@ h1
 #sidebar #hr1 {
 	border: 0.5px solid white;
 	width: 80%;
-	
+
 }
 
 #sidebar #lower #hr2 {
@@ -402,8 +402,8 @@ h1
 }
 #sidebar #lower > *
 {
-	align-self: flex-start;	
-	color: rgb(112, 112, 112);	
+	align-self: flex-start;
+	color: rgb(112, 112, 112);
 	align-self: center;
 }
 
@@ -444,7 +444,7 @@ h1
 }
 
 
-/* AuGhost Touches */ 
+/* AuGhost Touches */
 #sidebar a:hover {
 	background-color: rgb(34, 34, 34);
 	color: whitesmoke;
@@ -465,12 +465,12 @@ h1
 
 */
 @media (min-width:860px) and (max-width:1076px){
-	
+
 	#sidebar .badger #admin-badge{
 		font-size: 10px;
 		text-align: left;
 	}
-	
+
 }
 @media (max-width: 860px)
 {
