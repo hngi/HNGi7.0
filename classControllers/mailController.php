@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\Exception;
 require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
-require '../config/constants.php';
+// require '../config/database.php';
 
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer(true);
@@ -21,8 +21,8 @@ function sendNewAdminMail($email, $subject, $body)
     $mail->isSMTP();                                            // Set mailer to use SMTP
     $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username = USERNAME;
-    $mail->Password = PASSWORD;                               // SMTP password
+    $mail->Username = 'alisataylorm.m@gmail.com';
+    $mail->Password = 'alisa1074';                               // SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 587;                                    // TCP port to connect to
 
@@ -104,8 +104,8 @@ function contactMail($email, $ticket, $name, $subject, $body)
     $mail->isSMTP();                                            // Set mailer to use SMTP
     $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username = USERNAME;
-    $mail->Password = PASSWORD;                              // SMTP password
+    $mail->Username = 'alisataylorm.m@gmail.com';
+    $mail->Password = 'alisa1074';                              // SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 587;                                    // TCP port to connect to
 
@@ -215,8 +215,8 @@ function forGetPasswordMail($url, $subject, $email, $body)
     $mail->isSMTP();                                            // Set mailer to use SMTP
     $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username = USERNAME;
-    $mail->Password = PASSWORD;                               // SMTP password
+    $mail->Username = 'alisataylorm.m@gmail.com';
+    $mail->Password = 'alisa1074';                              // SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 587;                                    // TCP port to connect to
 
@@ -261,9 +261,8 @@ function forGetPasswordMail($url, $subject, $email, $body)
                     </tr>
                   <tr>
     <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
-                      <p>You recieve this email because you request for a reset password link, Kindly use the link provided to reset your password.Thank you.</p>
-                       
-                      <p>$body</p>
+                      
+                       <p>$body</p>
 
                        <p>For security, If you did not request a password reset, please ignore this email or <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
 
@@ -330,8 +329,8 @@ function send_general_email($subject, $email, $message, $bcc = false) //Add blin
     $mail->isSMTP();                                            // Set mailer to use SMTP
     $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username = USERNAME;
-    $mail->Password = PASSWORD;                            // SMTP password
+    $mail->Username = 'alisataylorm.m@gmail.com';
+    $mail->Password = 'alisa1074';                              // SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 587;                                    // TCP port to connect to
 
@@ -442,8 +441,8 @@ function sendInternMail($email, $fullname, $body)
     $mail->isSMTP();                                            // Set mailer to use SMTP
     $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username = USERNAME;
-    $mail->Password = PASSWORD;                             // SMTP password
+    $mail->Username = 'alisataylorm.m@gmail.com';
+    $mail->Password = 'alisa1074';                              // SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 587;                                    // TCP port to connect to
 
@@ -555,8 +554,8 @@ function  rejectInternMail($email, $fullname, $body)
     $mail->isSMTP();                                            // Set mailer to use SMTP
     $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username = USERNAME;
-    $mail->Password = PASSWORD;                              // SMTP password
+    $mail->Username = 'alisataylorm.m@gmail.com';
+    $mail->Password = 'alisa1074';                              // SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 587;                                    // TCP port to connect to
 
@@ -667,8 +666,8 @@ function acceptInternMail($email, $fullname, $body)
     $mail->isSMTP();                                            // Set mailer to use SMTP
     $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username = USERNAME;
-    $mail->Password = PASSWORD;                             // SMTP password
+    $mail->Username = 'alisataylorm.m@gmail.com';
+    $mail->Password = 'alisa1074';                              // SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 587;                                    // TCP port to connect to
 
@@ -781,8 +780,8 @@ function   rejectMentorMail($body, $fullname, $email)
     $mail->isSMTP();                                            // Set mailer to use SMTP
     $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username = USERNAME;
-    $mail->Password = PASSWORD;                               // SMTP password
+    $mail->Username = 'alisataylorm.m@gmail.com';
+    $mail->Password = 'alisa1074';                              // SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 587;                                    // TCP port to connect to
 
@@ -896,8 +895,8 @@ function   acceptMentorMail($body, $fullname, $email)
     $mail->isSMTP();                                            // Set mailer to use SMTP
     $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username = USERNAME;
-    $mail->Password = PASSWORD;                              // SMTP password
+    $mail->Username = 'alisataylorm.m@gmail.com';
+    $mail->Password = 'alisa1074';                              // SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 587;                                    // TCP port to connect to
 
@@ -1005,8 +1004,8 @@ function mailMentor($email, $name)
     $mail->isSMTP();                                            // Set mailer to use SMTP
     $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username = USERNAME;
-    $mail->Password = PASSWORD;                               // SMTP password
+    $mail->Username = 'alisataylorm.m@gmail.com';
+    $mail->Password = 'alisa1074';                              // SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
     $mail->Port       = 587;                                    // TCP port to connect to
 
