@@ -1,6 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap');
 
+.navigation {
+  background: #d1f0f6;
+  margin: 0 !important;
+  padding: 0 !important;
+ }
+
+ .navbar-toggler-icon {
+  border-radius: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+
+
 .header_container {
   background-color: #D1F0F6;
   text-align: center;
@@ -16,12 +30,24 @@
   color: #474747;
 }
 
+#nav {
+  background-color: #d1f0f6;
+  color: #474747;
+  font-weight: bold;
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
 
 
 .myaccordion {
     box-shadow: 0 0 1px rgba(51, 8, 8, 0.1);
     width: 100%;
     margin: 80px 0;
+    padding:1rem;
 }
 
 .myaccordion .card,
@@ -47,7 +73,7 @@
     font-weight: bold;
     color: #00AEFF;
     padding: 0;
-    font-size: 23px;
+    font-size: 15px;
     font-family: Open Sans;
     text-align: left;
     margin-bottom: 20px;
@@ -65,4 +91,33 @@
 .myaccordion li+li {
     margin-top: 20px;
  
+}
+.freq-n h3{
+text-transform: capitalize;
+}
+
+#btn-here{
+  background-color: #00AEFF;
+  border: 0;
+}
+#btn-here:hover{
+    opacity: .5;
+    color: white;
+}
+.freq-n h3 a {
+  color: white;
+  background-color: #00AEFF;
+}
+
+.freq-n h3 a:hover {
+  color: white;
+  opacity: .7;
+}
+
+.contact-heading {
+  font-weight:bold;
+  font-size: 25px;
+  text-align: center;
+  line-height: 32px;
+  color: #084482;
 }

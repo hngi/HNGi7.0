@@ -83,6 +83,13 @@ if(!isset($_SESSION["role"])) {
 								<strong>Done!</strong> Countdown timer updated Successfully
 							</div>';
 						}
+
+						if(isset($_GET["invalid"])) {
+							echo '
+							<div class="alert alert-danger">
+								<strong>Error! Update Failed. </strong> Selected date and time cannot be in the past.
+							</div>';
+						}
 					?>
 
 					<div class="col-md-5">

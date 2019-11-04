@@ -86,7 +86,8 @@ class Intern
             
             $res = $database->query($query);
             $count = $database->affected_rows();
-            
+            $body = "Your registration as an intern on the HNGi7 platform is pendding for an approval kindly hold on, you will recieve an email within 24hrs about your registration status. Thank you";
+            sendInternMail($email, $fullname, $body);
             header('Location: join-intern.php?successful');
             if ($count > 0) {
                 // intern created
@@ -318,7 +319,7 @@ class Intern
         $email = $row['email'];
         $count = $database->affected_rows();
         if($count > 0) {
-            $body = "Your registration as an intern on the HNGi7 platform has been disapproved or pending. Thank you";
+            $body = "Your registration as an intern on the HNG 7.0 internship has been disapproved. Thank you";
             rejectInternMail($email, $fullname, $body);
           // updated
          // $reject_message = 'Intern Rejected Successfully.';
@@ -340,7 +341,7 @@ class Intern
         $fullname = $row['firstname'] . ' ' . $row['lastname'];
         $email = $row['email'];
         if($count > 0) {
-            $body = "Your registration as an intern on the HNGi7 platform has been approved and accepted. Thank you";
+            $body = "Your registration as an intern on the HNG 7.0 platform has been approved . Thank you";
             acceptInternMail($email, $fullname, $body);
           // updated
           $accept_message = "Intern Accepted successfully.";
@@ -350,5 +351,14 @@ class Intern
           // failed
           return false;
         }
+      }
+
+      // get pending interns : written by John Ebri. Date : 1/11/2019 6:02PM
+      public function getPendingInterns() {
+          global $database;
+          $query = "SELECT * FROM interns WHERE status = 0";
+          $res = $database->query($query);
+          $count = $database->affected_rows();
+          return $count;
       }
 }

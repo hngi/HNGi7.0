@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=McLaren&display=swap');
 
 
+body {
+    backface-visibility: hidden;
+}
 .form-container {
     width: 70%;
     margin: 50px auto;
@@ -10,37 +14,122 @@
     color: #084482;
     margin-bottom: 50px;
 }
+/* Aughost touch */
 
-.inputWithIcon {
-    border: 1px solid grey;
-    margin-bottom: 20px;
-    text-align: left;
-}
 
-.inputWithIcon i {
-    margin-left: 0;
-    color: #00aeff;
-    margin-left: 10px;
-}
-
-.inputWithIcon input {
+input {
+    width: 100px;    
     border: none;
-    width: 90%;
-    padding: 10px;
+    background-color: transparent;
+    border: none;
+    width: 90%;   
+    color: gray;
+    
+}
+
+input::placeholder {
+ color: rgb(95, 95, 95);
+}
+
+input:invalid, input:required {
+    box-shadow: none;
     outline: none;
 }
 
+
+
+.inputWithIcon {
+    display: flex;
+    background-color: rgb(236, 236, 236);
+    margin-bottom: 20px;
+    font-family: Helvetica, sans-serif;
+    text-align: left;
+    padding: 15px 20px;
+    align-content: center;
+    border-radius: 4px;
+}
+
+.form-container {
+    width: 20%;
+}
+
+.form-container a:nth-child(2) {
+    text-align: right;
+}
+
+
+
+.inputWithIcon i {
+    margin-top: 5px;
+    color: #00aeff;
+    margin-left: 2px;
+    padding: 0 10px 0 5px;
+    
+      
+}
+
+.login-heading {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: McLaren;
+    color: grey;
+}
+
+
+
+.inputWithIcon input {
+   
+
+}
+
+
+.full {
+    height: 74vh;
+}
+
+.small-swag {
+    font-family: McLaren;
+    font-size: 14px;
+    color: grey;
+}
+
+.small-swag:hover {
+    color: #333;
+}
+
+
 button {
     width: 100%;
+    outline: none;
     border: none;
+    font-weight: bold;
     color: white;
     background-color: #00aeff;
     padding: 10px;
     margin-bottom: 20px;
+    border-radius: 2px;
+    box-shadow: -1px 3px 5px 0px rgb(153, 153, 153);
+    transition: 100ms;
 }
 
-@media screen and (min-width: 700px){
+button:hover {
+    color: #00aeff;
+    background-color: #fff;
+    border: 3px solid #00aeff;
+    border-radius: 2px;
+    box-shadow: none;
+}
+
+
+
+@media screen and (min-width: 315px) and (max-width: 700px) {
     .form-container {
-        width: 40%;
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 701px) and (max-width: 1290px) {
+    .form-container {
+        width: 60vh;
     }
 }

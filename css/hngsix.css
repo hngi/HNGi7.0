@@ -150,15 +150,23 @@
         font-size: 15px;
     }
 
+    #about-container h1 {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 54px;
+    }
+    
     #about-container article img {
         position: absolute !important;
         width: 50vw;
         right: 0!important;
+        max-width: 794px;
+        max-height: 711px;
     }
         /*ABOUT PAGE ENDS */
         /*GALLERY STARTS HERE */
         .gallery {
-            margin-top: 15em;
+            margin-top: 8em;
            width: 100%;
            text-align: center;
 
@@ -166,6 +174,9 @@
 
         .gallery h2 {
             text-align: center;
+            font-weight: bold;
+            font-size: 25px;
+            line-height: 34px;
         }
 
         .gallery_items {
@@ -206,8 +217,9 @@
         width: 100%;
     }
     #participate-section h2 {
-        font-size: 25px;
         font-weight: bold;
+        font-size: 25px;
+        line-height: 34px;
         width: 100%;
         margin: 20px auto;
         text-align: left;
@@ -224,8 +236,9 @@
         width: 100%;
     }
     .section3 h2 {
-        font-size: 25px;
         font-weight: bold;
+        font-size: 25px;
+        line-height: 34px;
     }
     #curriculum-flex {
         display: grid;
@@ -262,6 +275,9 @@
     }
     
     #mentor-section h2 {
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 34px;
         text-align: left;
         margin-bottom: 50px;
     }
@@ -300,7 +316,7 @@
         color: white;
         background-color: #00AEFF;
         padding: 10px 20px;
-        border-radius: 10px;
+        border-radius: 4px;
     }
 
     .def-button:hover {
@@ -309,10 +325,11 @@
         opacity: .7;
     }
     .section4 {
-        margin: 60px auto;
+        margin: 100px auto;
         width: 100%;
     }
     .section4 h2 {
+        line-height: 34px;
         font-size: 25px;
         font-weight: bold;
         margin-top: -20px;
@@ -320,6 +337,11 @@
     #slack-channels #slack-title {
         position: relative;
         padding: 0.5rem;
+    }
+    #slack-channels h2 {
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 34px;
     }
     #slack-channels #slack-logo {
         position: absolute;
@@ -336,18 +358,26 @@
         padding-top: 1.5rem;
         font-size: 17px;
     }
-    #sponsor-flex-top, #sponsor-flex-bottom {
-        margin-top: 3rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+    .sponsor {
+        margin-bottom: 3em;
     }
-    #sponsor-flex-bottom {
-        width: 80vw;
-        margin: 4rem auto 6rem;
+
+    .sponsor h2 {
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 34px;
+        color: #3C6B9C;
+        margin-bottom: 2em;
+    } 
+    .sponsor button {
+        margin: 20px auto;
     }
-    #sponsor-flex-top img, #sponsor-flex-bottom img {
-        max-width: 15vw;
+
+    .sponsor .second-row {
+        margin-top: 5em;
+        width: 70%;
+        padding-left: 0;
+        margin-bottom: 4em;
     }
 } 
 
@@ -466,13 +496,50 @@
     }
 
     #about-container article img {
-        width: 100%;
+        display: none !important;
     }
 
     .gallery {
-        margin-top: 600px ;
        width: 100%;
        text-align: center;
+       margin-top: 4em;
+    }
 
+    .gallery h2 {
+        text-align: center;
+    }
+
+    .sponsor h2 {
+        margin-bottom: 3em;
+    } 
+
+    .sponsor .second-row {
+        margin-top: 0;
+        width: 100%;
+        padding: auto;  
+    }
+
+    .sponsor img {
+        margin-bottom: 4em;
+    }
+}
+
+@media screen and (max-width: 1199px){
+    .support {
+        margin-top: 5em;
+        width: 100%;
+        z-index: 2;
+        text-align: center;
+    }
+
+    .sponsor .second-row {
+        margin-top: 0;
+        width: 100%;
+        padding: auto;
+        margin: auto;
+    }
+
+    .sponsor img {
+        margin-bottom: 4em;
     }
 }

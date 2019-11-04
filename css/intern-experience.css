@@ -17,6 +17,46 @@ a {
   position: relative;
 }
 
+section.jumbo {
+  background: #d1f0f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 0px;
+ }
+
+ section.jumbo > h2.heading {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  text-align: center;
+  color: #084482;
+  padding-top: 50px;
+ }
+ 
+ section.jumbo > p.para {
+   font-weight: normal;
+   font-size: 1rem;
+   text-align: center;
+   color: #474747;
+ }
+ 
+ section.jumbo > p.para > a {
+   text-decoration: underline;
+   color: #00AEFF;
+   font-weight: 600;
+ }
+ 
+ section.jumbo > p.para > a:hover {
+   text-decoration: underline;
+   color: #084482;
+   transition: all 0.5s ease-in-out;
+   font-weight: 600;
+ }
+
 .mentors-section {
   text-align: center;
 }
@@ -81,6 +121,7 @@ hr {
   font-family: sans-serif;
   z-index: 1;
   opacity: 0.2;
+  display: none;
 }
 
 .wrapper-child h4 {
@@ -89,17 +130,6 @@ hr {
 
 .social-icons {
   margin-top: 46.75px;
-}
-
-span {
-  color: #ffffff;
-  padding: 0.7rem 0.9rem;
-  /* //background: #FB6340; */
-  box-shadow: 0px 4px 4px rgba(50, 50, 93, 0.11),
-    0px 1px 3px rgba(0, 0, 0, 0.08);
-  margin: 0 14.5px;
-  border-radius: 50%;
-  text-align: center;
 }
 
 .navbar-toggler-icon {
@@ -167,18 +197,23 @@ section.jumb {
 .jumb h2 {
  font-family: Open Sans;
  font-style: normal;
- font-weight: 500;
+ font-weight: 600;
  font-size: 30px;
- line-height: 54px;
  text-align: center;
  color: #084482;
  padding-top: 50px;
+
 }
 
 .para {
- text-align: center;
- margin-bottom: 0px;
- padding: 0 5px;
+  text-align: center;
+  margin-bottom: 0px;
+  padding: 0 5px;
+  color: #474747;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px
 }
 
 #img {
@@ -255,7 +290,9 @@ h4 {
     margin-right: 3rem;
   }
 }
-
+.experiencetext {
+  color: #00AEFF;
+}
 
 /*  .land {
         bottom: 6rem;
@@ -351,17 +388,42 @@ h4 {
 
 
 .navigation {
-  padding-left: 40px !important;
-  padding-right: 40px !important;
   background: #d1f0f6;
  }
 
 @media (max-width: 759px) {
-
- .navigation {
-   padding-left: 15px !important;
-   padding-right: 15px !important;
- }
 }
 
 
+/* MODAL FORM STYLING HERE */
+
+#submitExperience {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  z-index: 2;
+  background-color: transparent;
+  padding-top: 100px;
+  display: none;
+}
+
+.modal-content {
+  border: 3px solid #00AEFF;
+  box-shadow: 3px 3px 5px grey;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: -60px;
+}
+
+.modal-button {
+  background-color: #00AEFF;
+  border-color: #00AEFF;
+}
+
+.modal-button:hover {
+  background-color: #00AEFF;
+  border-color: #00AEFF;
+}

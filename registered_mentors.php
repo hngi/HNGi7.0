@@ -21,7 +21,7 @@ if (isset($_GET['rejectMentorId'])) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Mentors</title>
+    <title>Registered Mentors</title>
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
@@ -69,7 +69,7 @@ if (isset($_GET['rejectMentorId'])) {
         <section id="overview-section">
             <!-- <h1>Dashboard</h1> -->
             <h2>Active Mentors </h2>
-            <div style="margin : 5rem 0 1rem 1.5rem;">
+            <div class="mentor-buttons">
                 <a href="pending_mentors.php" class="btn btn-default">Pending Mentors</a>
                 <a href="declined_mentors.php" class="btn btn-default">Declined Mentors</a>
             </div>
@@ -77,7 +77,7 @@ if (isset($_GET['rejectMentorId'])) {
 				Populated by `js/dashboard.js`
 			</section> -->
 
-            <div class="container">
+            <div>
                 <div class="row">
 
                     <?php
@@ -100,7 +100,7 @@ if (isset($_GET['rejectMentorId'])) {
                         <div id="printablediv">
                             <div class="scroll">
                             <!-- <table id="my-table" class="table table-hover table-bordered mt-3 mb-1"> -->
-                            <table id="my-table" class="table table-hover">
+                            <table id="my-table" class="table table-hover mentor-table">
                                 <!-- <thead class="table-primary"> -->
                                 <thead>
                                     <tr>
@@ -116,7 +116,7 @@ if (isset($_GET['rejectMentorId'])) {
                                     <th data-heading="state">Current State<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
                                     <th data-heading="employment-status">Employment Status<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
                                     <th data-heading="timeStamp">Timestamp<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
-                                        <th>Action</th>
+                                        <th> Action</th>
 
 
                                     </tr>
