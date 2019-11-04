@@ -24,8 +24,9 @@ if (isset($_POST['login'])) {
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
-  <link rel="stylesheet" type="text/css" href="css/header-footer.css">
   <link rel="stylesheet" href="css/loginadmin.css">
+  <link rel="stylesheet" type="text/css" href="css/header-footer.css">
+  
   <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <script>
     function signup() {
@@ -43,21 +44,17 @@ if (isset($_POST['login'])) {
         });
     }
   </script>
-  <style>
-  .inputWithIcon i{
-    margin-left: 2.5px;
-  }
-  </style>
+ 
 </head>
 
 <body>
   <?php include('fragments/site_header.php'); ?>
 
- <section class="container-fluid">
-
+ <section class="container-fluid full">
+<h2 class="login-heading">Login as Admin</h2>
     <form class="form-container" method="post">
 
-      <h2 class="login-heading">Login as an Admin</h2>
+      
       <?php
       if (!empty($errors)) {
 
@@ -78,16 +75,17 @@ if (isset($_POST['login'])) {
       <p id="result"></p>
       <div class="inputWithIcon">
       <i class="fa fa-envelope"></i>
-      <input type="email" name="email" id="email" placeholder="Enter your Email" required />
+      <input type="email" name="email" id="email" placeholder="Email" required />
       </div>
 
       <div class="inputWithIcon">
-        <i class="fa fa-key"></i>
-        <input type="password" name="password" id="password" placeholder="Enter your Password" required>
+        <i class="fa fa-lock"></i>
+        <input type="password" name="password" id="password" placeholder="Password" required>
       </div>
-
-      <button type="submit" onclick="signup()" name="login">LOG IN</button>
-      <a href="forgotpassword.php" class="text-danger small-text">Forgot Password?</a>
+      <button type="submit" onclick="signup()" name="login">LOGIN</button>
+      <span class="swag-daddy">
+        <a href="forgotpassword.php" class="small-swag small-text">Forgot Password?</a>
+      </span>
     </form>
   </section>
     <?php include('fragments/site_footer.php'); ?>
