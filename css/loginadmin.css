@@ -1,135 +1,118 @@
-@import url('https://fonts.googleapis.com/css?family=McLaren&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap');
 
 body {
-    backface-visibility: hidden;
+	font-family: 'Open sans', sans-serif;
+	backface-visibility: hidden;
 }
 .form-container {
-    width: 70%;
-    margin: 50px auto;
-    text-align: center;
+	width: 70%;
+	margin: 50px auto;
+	text-align: center;
 }
 
 .form-container h2 {
-    color: #084482;
-    margin-bottom: 50px;
+	color: #084482;
+	margin-bottom: 50px;
 }
 /* Aughost touch */
 
-
 input {
-    width: 100px;    
-    border: none;
-    background-color: transparent;
-    border: none;
-    width: 90%;   
-    color: gray;
-    
+	width: 100px;
+	border: none;
+	background-color: transparent;
+	border: none;
+	width: 90%;
+	color: gray;
 }
 
 input::placeholder {
- color: rgb(95, 95, 95);
+	color: rgb(95, 95, 95);
 }
 
-input:invalid, input:required {
-    box-shadow: none;
-    outline: none;
+input:invalid,
+input:required {
+	box-shadow: none;
+	outline: none;
 }
-
-
 
 .inputWithIcon {
-    display: flex;
-    background-color: rgb(236, 236, 236);
-    margin-bottom: 20px;
-    font-family: Helvetica, sans-serif;
-    text-align: left;
-    padding: 15px 20px;
-    align-content: center;
-    border-radius: 4px;
+	display: flex;
+	background-color: rgb(236, 236, 236);
+	margin-bottom: 20px;
+
+	text-align: left;
+	padding: 15px 20px;
+	align-content: center;
+	border-radius: 4px;
 }
 
 .form-container {
-    width: 20%;
+	width: 20%;
 }
 
 .form-container a:nth-child(2) {
-    text-align: right;
+	text-align: right;
 }
 
-
-
 .inputWithIcon i {
-    margin-top: 5px;
-    color: #00aeff;
-    margin-left: 2px;
-    padding: 0 10px 0 5px;
-    
-      
+	margin-top: 5px;
+	color: #00aeff;
+	margin-left: 2px;
+	padding: 0 10px 0 5px;
 }
 
 .login-heading {
-    text-transform: uppercase;
-    text-align: center;
-    font-family: McLaren;
-    color: grey;
+	text-transform: uppercase;
+	text-align: center;
+	color: grey;
 }
-
-
 
 .inputWithIcon input {
-   
-
 }
 
-
 .full {
-    height: 74vh;
+	height: 74vh;
 }
 
 .small-swag {
-    font-family: McLaren;
-    font-size: 14px;
-    color: grey;
+	font-size: 14px;
+	color: grey;
 }
 
 .small-swag:hover {
-    color: #333;
+	color: #333;
 }
 
-
 button {
-    width: 100%;
-    outline: none;
-    border: none;
-    font-weight: bold;
-    color: white;
-    background-color: #00aeff;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 2px;
-    box-shadow: -1px 3px 5px 0px rgb(153, 153, 153);
-    transition: 100ms;
+	width: 100%;
+	outline: none;
+	border: none;
+	font-weight: bold;
+	color: white;
+	background-color: #00aeff;
+	padding: 10px;
+	margin-bottom: 20px;
+	border-radius: 2px;
+	box-shadow: -1px 3px 5px 0px rgb(153, 153, 153);
+	transition: 100ms;
 }
 
 button:hover {
-    color: #00aeff;
-    background-color: #fff;
-    border: 3px solid #00aeff;
-    border-radius: 2px;
-    box-shadow: none;
+	color: #00aeff;
+	background-color: #fff;
+	border: 3px solid #00aeff;
+	border-radius: 2px;
+	box-shadow: none;
 }
 
-
-
 @media screen and (min-width: 315px) and (max-width: 700px) {
-    .form-container {
-        width: 80%;
-    }
+	.form-container {
+		width: 80%;
+	}
 }
 
 @media screen and (min-width: 701px) and (max-width: 1290px) {
-    .form-container {
-        width: 60vh;
-    }
+	.form-container {
+		width: 60vh;
+	}
 }
