@@ -400,23 +400,23 @@
                     </h4>
                     <section class="mentor-section" data-aos="fade-up">
                         <div class="mentor-image">
-                            <img src="https://res.cloudinary.com/memz/image/upload/v1572796363/Mentors/20191103_165148_auawdc.jpg">
-                            <p>Seyi Onifade</p>
+                            <img src="https://res.cloudinary.com/joshuafolorunsho/image/upload/c_scale,w_200/v1572870951/20191103_165148_auawdc-min.jpg">
+                            <p class="font-weight-bold">Seyi Onifade</p>
                             <p>Devops and CEO, HNG Tech</p>
                         </div>
                         <div class="mentor-image">
-                            <img src="https://res.cloudinary.com/memz/image/upload/v1572710145/Mentors/Tomisin_olpwrk.jpg">
-                            <p>Tomisin Lalude </p>
+                            <img src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572871094/foutw9umk4hcfntupffn.jpg">
+                            <p class="font-weight-bold">Tomisin Lalude </p>
                             <p>Frontend Development</p>
                         </div>
                         <div class="mentor-image">
-                            <img src="https://res.cloudinary.com/memz/image/upload/v1572709955/Mentors/Kev_Chike7_ymlrik.jpg">
-                            <p>Kevin Chike</p>
+                            <img src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572871095/y7kp4jm0rmqolkcmprvc.jpg">
+                            <p class="font-weight-bold">Kevin Chike</p>
                             <p>Backend Development</p>
                         </div>
                         <div class="mentor-image">
-                            <img src="https://res.cloudinary.com/memz/image/upload/v1572709726/Mentors/Ephraim_phd0oq.jpg">
-                            <p>Ephraim Aigbefo</p>
+                            <img src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572871096/zodqqfrro1lwuntitiaw.jpg">
+                            <p class="font-weight-bold">Ephraim Aigbefo</p>
                             <p>Fullstack Development</p>
                         </div>
                     </section>
