@@ -2,33 +2,40 @@
     require 'classControllers/init.php';
     $internExperience = new InternExperience();
     if(isset($_POST['ok'])){
+
+
+      $file = $_FILES['image'];
+      $fileName = $file['name'];
+      $fileTmpName = $file['tmp_name'];
+      $fileSize = $file['size'];
+      $fileError = $file['error'];
+      $fileType = $file['type'];
+
+        $fileExtension = explode('.', $fileName);
+        $fileActualExtension = strtolower(end($fileExtension));
+
+        $allowed = array('jpg', 'jpeg', 'png');
+
+        if(in_array($fileActualExtension, $allowed)){
+
+        $fileNewName = uniqid('', true).".".$fileActualExtension;
+
+
+        $fileDestination = 'uploads/interns/'.$fileNewName;
+        move_uploaded_file($fileTmpName, $fileDestination);
+
+
+
+        // $internExperience->uploadImage($fileDestination);
         $names = $database->escape_string($_POST["names"]);
         $stack = $database->escape_string($_POST["stack"]);
         $experience = $database->escape_string($_POST['experience']);
 
-        if(isset($_FILES['image']['name']) && $_FILES['image']['name'] != ""){
-            $folder = "./uploads/interns/";
-            $ext = strtolower(end(explode(".",$_FILES['image']['name'])));
-            $allowed = array('jpg','jpeg','png');
-            if(in_array($ext,$allowed)){
-                $image_name = uniqid().$_FILES['image']['name'];
-                $destination = $folder."/".$image_name;
-                $source = $_FILES['image']['tmp_name'];
+      }
 
-                if(move_uploaded_file($source,$destination)){
-                    $image = $image_name;
-                }else{
-                    $image = "";
-                }
-            }else{
-                $image = "";
-            }
-
-        }else{
-            $image = "";
-        }
-
-        $internExperience->saveExperience("$names","$stack","$image","$experience");
+          $fileDe = 'uploads/interns/'.$fileNewName;
+          move_uploaded_file($fileTmpName, $fileDe);
+        $internExperience->saveExperience($names,$stack,$fileDe,$experience);
 
         $_SESSION['msg'] = "<div class='alert alert-success'>Your experience has been submitted successfully!</div>";
         header("location:intern-experience.php");
@@ -78,11 +85,11 @@
    <?php include('fragments/site_header.php'); ?>
   </section>
 
-  
-    <section class="jumbo">  
+
+    <section class="jumbo">
             <h2 class="heading">Past Interns Experience</h2>
             <p class="para">Testimonies From Ex-HNG Internship Finalists<br>
-            <a href="#" onclick="modalForm()" class="experiencetext">Submit Experience</a>
+            <a href="" onclick="modalForm()" class="experiencetext">Submit Experience</a>
             </p>
    </section>
 
@@ -107,11 +114,14 @@
                             <label for="exp">Your Experience</label>
                             <textarea name="experience" class="form-control" required placeholder="Your Experience" id="exp" maxlength="300"></textarea>
                         </div>
-                        <div class="form-group">
-                            <label for="image">Your Picture (Optional) </label>
-                            <br>
-                            <input type="file" name="image" accept="image/*">
-                        </div>
+
+
+                          <div class="form-group">
+                              <label for="image">Your Picture (Optional) </label>
+                              <br>
+                              <input type="file" name="image" >
+                          </div>
+
 
                         <div class="form-group">
                             <input type="submit" name="ok" class="btn btn-success modal-button" value="Submit Experience">
@@ -145,15 +155,15 @@
                             if($image == ""){
                                 $img_src = "https://via.placeholder.com/150x150.png?text=$names";
                             }else{
-                                $img_src = "uploads/interns/$image";
+                                $img_src = "$image";
                             }
                             ?>
-                            <div class="wrapper-child"  >
-                                <img class="image" src="<?php echo $img_src;?>" alt = "intern img">
-                                <h4 class="name"><?php echo $all_experience['names'];?></h4>
-                                <p class="stack"><?php echo $all_experience['stack'];?></p> <hr>
+                            <div class="wrapper-child col-sm-12"  >
+                                <img class="image" src="<?= $img_src;?>" alt = "intern img">
+                                <h4 class="name"><?= $all_experience['names'];?></h4>
+                                <p class="stack"><?= $all_experience['stack'];?></p> <hr>
                                 <p class="experience">
-                                    <?php echo nl2br($all_experience['experience']);?>
+                                    <?= nl2br($all_experience['experience']);?>
                                 </p>
                             </div>
                             <?php
@@ -164,7 +174,7 @@
         </section>
 
     </main>
-    </section>        
+    </section>
     <?php include('fragments/site_footer.php'); ?>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
@@ -181,8 +191,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>    
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>
+
     <script>
         let formBox = $(".submitExperience");
             function modalForm (){
