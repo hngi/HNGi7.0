@@ -72,7 +72,7 @@ input:required {
 }
 
 .full {
-	height: 50vh;
+	height: 65vh;
 	margin-top: 80px;
 }
 
@@ -113,8 +113,8 @@ button:hover {
 	}
 }
 
-@media screen and (min-width: 701px) and (max-width: 1290px) {
+@media screen and (min-width: 701px){
 	.form-container {
-		width: 60vh;
+		width: 50%;
 	}
 }

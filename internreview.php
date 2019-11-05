@@ -152,7 +152,7 @@ if(isset($_GET["ApproveExperiences"])) {
                             <th>Track</th>
                             <th>Experience</th>
                             <th>Status</th>
-                            <th>Action</th>
+                            <th colspan="2">Action</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -180,6 +180,8 @@ if(isset($_GET["ApproveExperiences"])) {
                                     </td>
                                     <td>
                                         <a href="edit_experience.php?id=<?php echo $item['id']; ?>" class="btn btn-sm btn-info">Edit</a>
+                                    </td>
+                                    <td>
                                         <a href="?action=delete&id=<?php echo $item['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete the record?')">Delete</a>
                                         <?php
                                             if($item['status'] == 0){
