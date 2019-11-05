@@ -29,11 +29,10 @@
 				<a href="admins.php"><i class="fas fa-user-shield"></i>Admins</a>
 				<a href="registered_interns.php"> <i class="fas fa-user-graduate"></i>Interns</a>
 				<a href="registered_mentors.php"><i class="fas fa-hands-helping"></i>Mentors</a>
+				<a href="registered_sponsors.php"><i class="fas fa-hand-holding-usd"></i>Sponsors</a>
 			</div>
 		</li>
-		<li class="item" id="sponsors">
-			<a href="registered_sponsors.php" class="btns menu-headings"><i class="fas fa-hand-holding-usd"></i>Sponsors</a>
-		</li>
+
 		<li class="item" id="features">
 			<a href="#features" class="btns menu-headings"><i class="fas fa-tools"></i>Features<span class="chevron"></span></a>
 			<div class="submenu">

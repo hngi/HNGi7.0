@@ -86,8 +86,7 @@ h1
 		display: block;
 		width: 100%;
 	} 
-	 data-label=""
-
+	 
 	.prime-table tr {
 		margin-bottom: 15px;
 	}
@@ -638,7 +637,7 @@ h1
 }
 
 .item.active .submenu{
-    max-height: 15em !important;
+    max-height: 17em !important;
 } 
 
 @media (min-width:860px) and (max-width:1024px){
