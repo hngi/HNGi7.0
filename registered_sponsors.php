@@ -60,10 +60,10 @@ $data = $sponsors->getAllSponsor();
         <input type="text" class="searchBox"><i class="fas fa-search"></i>
         <section id="overview-section">
             <!-- <h1>Dashboard</h1> -->
-            <h2>Registered Sponsors </h2>
+            <h2 class="register">Registered Sponsors </h2>
             <!-- <section id="intern-section">
-				Populated by `js/dashboard.js` 
-            </section> -->
+            Populated by `js/dashboard.js`
+        </section> -->
             <?php
             if (isset($_SESSION['success'])) {
                 echo $_SESSION['success'];
@@ -72,7 +72,7 @@ $data = $sponsors->getAllSponsor();
 
             ?>
 
-            <div class="container">
+            <div>
                 <div class="row">
 
                     <?php
@@ -86,16 +86,16 @@ $data = $sponsors->getAllSponsor();
                         <!--    </a>-->
                         <!--</div>-->
                         <!-- <div class="col-md-3">
-                            
-                            <a href="#" onclick="javascript:printDiv('printablediv')">
-                                <button type="button" class="btn btn-primary btn-sm" id="export">Export to PDF</button>
-                            </a> -->
+
+                    <a href="#" onclick="javascript:printDiv('printablediv')">
+                        <button type="button" class="btn btn-primary btn-sm" id="export">Export to PDF</button>
+                    </a> -->
                 </div>
                 <!-- <div id="printablediv" class="table-responsive"> -->
-                <div id="printablediv">
+                <div id="printablediv" class="sponsors">
                     <div class="scroll">
                         <!-- <table id="my-table" class="table table-hover table-bordered mt-3 mb-1"> -->
-                        <table id="my-table" class="table table-hover">
+                        <table id="my-table" class="table table-hover sponsor-table">
                             <!-- <thead class="table-primary"> -->
                             <thead>
                                 <tr>
@@ -103,17 +103,24 @@ $data = $sponsors->getAllSponsor();
                                     <th data-heading="sn">SN
                                         <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
                                     </th>
-                                    <th data-heading="photo">Logo
-                                        <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
-                                    </th>
                                     <th data-heading="name">Name
                                         <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
                                     </th>
-                                    <th data-heading="email">Address
+                                    <th data-heading="email">Email
+                                        <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
+                                    </th>
+                                    <th data-heading="address">Address
+                                        <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
+                                    </th>
+
+
+                                    <th data-heading="about">About
+                                        <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
+                                    </th>
+                                    <th data-heading="photo">logo
                                         <!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>-->
                                     </th>
                                     <th colspan="3">Action</th>
-
 
 
 
@@ -149,24 +156,20 @@ $data = $sponsors->getAllSponsor();
             <div id="details-back" class="details-back">
                 <div class="details-back">
                     <!-- <a href="overview.html" id="newitem-go-back" title="Go back">
-                        <div></div>
-                    </a> -->
+                    <div></div>
+                </a> -->
                 </div>
             </div>
             <div id="centralize">
                 <h2>sponsor Details</h2>
                 <em id="no-intern">No sponsor selected</em>
                 <br />
-                <p class="details" style="margin-left:10%;"><span id="photo"></span></p>
+
                 <p class="details">Name: <span id="name"></span></p>
                 <p class="details">Email: <span id="email"></span></p>
-                <p class="details">Phone Number: <span id="phone"></span></p>
-                <p class="details">Expertise: <span id="expertise"></span></p>
-                <p class="details">CV link: <span id="cv"></span></p>
-                <p class="details">State of residence: <span id="state"></span></p>
-                <p class="details">Employment Status: <span id="employment-status"></span></p>
-                <p class="details">Why Interested: <span id="Interest"></span></p>
-                <p class="details">Timestamp: <span id="timeStamp"></span></p>
+                <p class="details">Address: <span id="address"></span></p>
+                <p class="details">About sponsor: <span id="about"></span></p>
+                <p class="details" style="margin-left:10%;"><span id="photo"></span></p>
                 <!-- <div href="" id="details-return">Back to Overview</div> -->
                 <div id="navigator">
                     <i class="fas fa-chevron-left fa-2x left navigator"></i>
@@ -192,4 +195,5 @@ $data = $sponsors->getAllSponsor();
 <script src="js/jspdf.js"></script>
 <script src="js/jspdf.plugin.autotable.min.js"></script>
 <script src="js/paginator.js"></script>
+<script  type="text/javascript" src="js/sidebar.js"></script>
 <script type="text/javascript" src="js/newDashboard.js"></script>

@@ -25,7 +25,8 @@ if(!isset($_SESSION["role"])) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>Update Countdown</title>
 	<link rel="icon" type="img/png" href="images/hng-favicon.png">
-	<link rel="stylesheet" href="css/dashboard.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+	<link href="css/dashboard.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -162,5 +163,5 @@ if(!isset($_SESSION["role"])) {
 
 </body>
 </html>
-
+<script  type="text/javascript" src="js/sidebar.js"></script>
 <script type="text/javascript" src="js/dashboard.js"></script>

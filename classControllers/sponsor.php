@@ -8,7 +8,7 @@ class sponsors
 
   public $sponsor_name;
   public $about_you;
-  public $buisness_address;
+  public $business_address;
   public $sponsor_id;
   public $sponsor_logo;
   public $update_at;
@@ -29,20 +29,24 @@ class sponsors
         $sponsor_name = $row['sponsor_name'];
         $sponsor_logo = $row['sponsor_logo'];
         $about_you = $row['about_you'];
-        $buisness_address = $row['business_address'];
+        $business_address = $row['business_address'];
         $sponsor_id = $row['sponsor_id'];
+        $sponsor_email = $row['sponsor_email'];
         $data .= "
 
        <tr>
             <td>$no</td>
-
-            <td><img src='$sponsor_logo' style='width: 100px; height: 50px;''></td>
-            <td> $sponsor_name</td>
-            <td>$buisness_address</td>
-            <td>
+            <td>$sponsor_name</td>
+            <td>$sponsor_email</td>
+            <td>$business_address</td>
+            
+            <td>$about_you</td>
+             <td><img src='$sponsor_logo' style='width:10%; height:40px;'></td>
+              <td>
              <a href='edit_sponsor.php?editSponsorId=$sponsor_id' class='btn btn-primary btn-sm'>Edit</a>
             <a href='delete_sponsor.php?deleteSponsorId=$sponsor_id' class='btn btn-danger btn-sm'>Delete</a>
             </td>
+            
         </tr>
        
        ";
@@ -62,17 +66,25 @@ class sponsors
     return $data;
   }
 
-  public function updateSponsor($target_file)
+  public function updateSponsor()
   {
     global $database;
     $sponsor_id = $database->escape_string($_GET['editSponsorId']);
     $name = $database->escape_string($this->sponsor_name);
-    $target_file = $database->escape_string($target_file);
     $sponsor_email = $database->escape_string($this->sponsor_email);
     $about_you = $database->escape_string($this->about_you);
     $address = $database->escape_string($this->business_address);
-    $updated_at = $database->escape_string($this->update_at);
-    $data = $database->query("UPDATE " . self::$database_table . " SET sponsor_name = '$name', sponsor_logo = '$target_file',about_you = '$about_you',business_address = '$address', updated_at = '$updated_at' WHERE sponsor_id = '$sponsor_id' ");
+    $data = $database->query("UPDATE " . self::$database_table . " SET sponsor_name = '$name',about_you = '$about_you',business_address = '$address', sponsor_email = '$sponsor_email' WHERE sponsor_id = '$sponsor_id' ");
+    return $data;
+  }
+
+  public function updateSponsorImg($target_file)
+  {
+    global $database;
+    $sponsor_id = $database->escape_string($_GET['editSponsorId']);
+    $target_file = $database->escape_string($target_file);
+
+    $data = $database->query("UPDATE " . self::$database_table . " SET sponsor_logo = '$target_file' WHERE sponsor_id = '$sponsor_id' ");
     return $data;
   }
 
@@ -85,7 +97,7 @@ class sponsors
     $address = $database->escape_string($this->business_address);
     $sponsor_email = $database->escape_string($this->sponsor_email);
     $update_at = $database->escape_string($this->update_at);
-    $query = $database->query("INSERT INTO " . self::$database_table . "(sponsor_name,sponsor_logo,business_address,about_you,sponsor_email) VALUES('$name','$target_file','$address','$about_you','$sponsor_email') ");
+    $query = $database->query("INSERT INTO " . self::$database_table . "(sponsor_name,sponsor_logo,business_address,about_you,sponsor_email) VALUES('$name','$target_file','$address','$about_you','$sponsor_email')");
     return $query;
   }
 
@@ -96,4 +108,14 @@ class sponsors
     $data = $database->query("DELETE  FROM " . self::$database_table . " WHERE sponsor_id = '$sponsor_id' ");
     return $data;
   }
+
+  // Written by JohnEbri, 5/11/2019 9:16:20AM
+  public function countSponsor() {
+    global $database;
+    $query = "SELECT * FROM sponsors";
+    $count = $database->affected_rows();
+    return $count;
+  }
+
+
 }
