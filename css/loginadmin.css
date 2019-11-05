@@ -10,6 +10,10 @@ body {
 	text-align: center;
 }
 
+.full {
+	margin-bottom: 4em;
+}
+
 .form-container h2 {
 	color: #084482;
 	margin-bottom: 50px;
@@ -84,7 +88,7 @@ input:required {
 button {
 	width: 100%;
 	outline: none;
-	border: none;
+	border: 3px solid #00aeff;
 	font-weight: bold;
 	color: white;
 	background-color: #00aeff;
