@@ -36,20 +36,20 @@ section.jumbo {
   color: #084482;
   padding-top: 50px;
  }
- 
+
  section.jumbo > p.para {
    font-weight: normal;
    font-size: 1rem;
    text-align: center;
    color: #474747;
  }
- 
+
  section.jumbo > p.para > a {
    text-decoration: underline;
    color: #00AEFF;
    font-weight: 600;
  }
- 
+
  section.jumbo > p.para > a:hover {
    text-decoration: underline;
    color: #084482;
@@ -76,6 +76,12 @@ section.jumbo {
   margin-bottom: 0;
   padding-bottom: 2rem;
   border-radius: 0.7rem;
+}
+
+.wrapper-child img {
+  border-radius: 50%;
+  width: 15rem;
+  height: 15rem;
 }
 
 .name {
