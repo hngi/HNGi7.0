@@ -31,7 +31,7 @@ h1
 {
 	text-align: center;
 }
-#mobile-bars
+/* #mobile-bars
 {
     position: absolute;
     left: -35vw;
@@ -42,7 +42,7 @@ h1
     margin-right: 40px;
     cursor: pointer;
     display: none;
-}
+} */
 
 .stix
 {
@@ -694,12 +694,18 @@ h1
 
 
   @media (max-width: 440px) {
-	.content h2{
-		font-size: 25px;
-		text-align: center;
-	}
+	
+	.welcome .content {
+		padding: 15px 10px 15px 10px;
+	  }
 	.navbar-default .container-fluid .navbar-header>*{
 		margin-left: calc(36% - 56px);
+	}
+  }
+
+  @media (max-width: 360px){
+	  .content h2{
+		font-size: 22px;
 	}
   }
 
