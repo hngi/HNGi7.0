@@ -284,7 +284,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <option value="Adamawa">Adamawa</option>
       <option value="Akwa Ibom">Akwa Ibom</option>
       <option value="Anambra">Anambra</option>
-      <option value="Bauchi	">Bauchi</option>
+      <option value="Bauchi">Bauchi</option>
       <option value=Bayelsa">Bayelsa</option>
       <option value="Benue">Benue</option>
       <option value="Borno">Borno</option>
