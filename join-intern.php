@@ -15,10 +15,7 @@ require_once 'classControllers/init.php';
       $about = $database->escape_string($_POST['about']);
       $date = $database->escape_string($_POST['date']);
       $insertInterns = $intern->internSignup();
-      if ($insertInterns) {
-      $body = "Your registration as an intern on the HNGi7 platform is been checked for an approval kindly hold on, you will recieve an email within 24hrs about your registration status. Thank you";
-      sendInternMail($email, $fullname, $body);
-      }
+      
       
     }
 ?>
@@ -58,18 +55,19 @@ require_once 'classControllers/init.php';
 </head>
 
 <body>
-<div style="background-color: #D1F0F6;">
-<?php include('fragments/site_header.php'); ?></div>
+    <section class="navigation">
+      <?php include('fragments/site_header.php'); ?>
+    </section>
 
-  <section class="container-fluid1">
-  <section class="jumbo">
+    <section class="container-fluid1">
+    <section class="jumbo">
 
-    <h2 class="heading">Join as an Intern</h2>
-    <p class="para">
-      Complete the form below to begin your journey as an Intern.<br>
-      To become a mentor <a href="MentorSetUpPage2.php">Click here</a>
-    </p>
-  </section>
+      <h2 class="heading">Join as an Intern</h2>
+      <p class="para">
+        Complete the form below to begin your journey as an Intern.<br>
+        To become a mentor <a href="MentorSetUpPage2.php">Click here</a>
+      </p>
+    </section>
 
   <div class="form-area">
 
@@ -141,8 +139,6 @@ require_once 'classControllers/init.php';
 
   </div>
    <?php include "fragments/site_footer.php"; ?>
-   <div id="jumptotop"><em></em></div>
-   </div> 
   </section>
 </body>
 

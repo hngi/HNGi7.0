@@ -1,7 +1,7 @@
 <footer id="footer">
     <div class="container">
 
-    <img id="footer-logo" src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png">
+    <img id="footer-logo" src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572768106/hng_logo-min.png">
 
     <nav class="footer-nav">
         <div class="row">
@@ -9,7 +9,7 @@
                 <h2 class="skyblue-text">Quick Links</h2>
                 <div id="link-list">
                     <a href="join-intern.php" class="skyblue-text">Join HNG</a>
-                    <a href="index.php" class="skyblue-text">About HNG</a>
+                    <a href="about.php" class="skyblue-text">About HNG</a>
                     <a href="donate.php" class="skyblue-text">Become a Sponsor</a>
                     <a href="MentorSetUpPage2.php" class="skyblue-text">Sign up as Mentor</a>
                     <a href="faq.php" class="skyblue-text">FAQ</a>

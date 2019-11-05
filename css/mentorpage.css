@@ -1,11 +1,8 @@
-      * {
-      padding: 0;
-      margin: 0;
-    } 
 
     body {
       font-family: 'Open Sans', sans-serif;
-    }
+    } 
+
  @keyframes Slide_up{
                 0%{
                     transform: translateY(250px);
@@ -22,309 +19,81 @@
       background-color: #D1F0F6 !important;
     }
 
-    .image {
-      border-radius: 50%;
-      width: 170px;
-      height: 170px;
-      margin: 1rem 0;
-    }
-
-    .mentors-section {
-      text-align: center;
+    .mentor{
       animation: Slide_up 2.1s ease ;
     }
 
-    .wrapper {
-      margin: 50px;
-    }
+    
 
-    .wrapper-child {
-      margin: 2rem;
-    }
-
-    .wrapper-child h4 {
-      margin: 19px 1rem 11px 1rem;
-    }
-
-    .social-icons {
-      margin-top: 46.75px;
-    }
-
-    span {
-      color: #ffffff;
-      padding: 1rem 1.2rem;
-      /* //background: #FB6340; */
-      box-shadow: 0px 4px 4px rgba(50, 50, 93, 0.11), 0px 1px 3px rgba(0, 0, 0, 0.08);
-      margin: 0 14.5px;
-      border-radius: 50%;
-      text-align: center;
-    }
-
-    .navbar-toggler-icon {
-      border-radius: none;
-      box-shadow: none;
-    }
-
-    i {
-      color: #ffffff;
-    }
-
-    .fa-facebook-square {
-      position: relative;
-      left: 2px;
-    }
-
-    .first-color {
-      background: #FB6340;
-      cursor: pointer;
-    }
-
-    .second-color {
-      background: #5E72E4;
-      cursor: pointer;
-    }
-
-    .third-color {
-      background: #11CDEF;
-      cursor: pointer;
-    }
-
-    .fourth-color {
-      background: rgb(98, 255, 98);
-      cursor: pointer;
-    }
-
-    .first-color:hover {
-      background: rgb(226, 91, 61);
-      transition: .5s ease-in-out;
-    }
-    .second-color:hover {
-      background: rgb(83, 102, 204);
-      transition: .5s ease-in-out;
-    }
-    .third-color:hover {
-      background: rgb(17, 179, 207);
-      transition: .5s ease-in-out;
-    }
-    .fourth-color:hover {
-      background: rgb(82, 216, 82);
-      transition: .5s ease-in-out;
-    }
      #landing-page {
       text-align: center;
       background-color: #D1F0F6;
       position: relative;
       min-height: 40vh;
       width: 100vw !important;
-     }
-     
-     .land {
-         position: absolute;
-         bottom: 2rem;
-         left: 50%;
-         top: 20px;
-         transform: translateX(-50%);
-         width: 100%;
-         
-         margin-top: 1rem;
-     }
-
-     #nav {
-      background-color: #D1F0F6 !important;
-      color: #474747 !important;
-      font-weight: bold;
-     }
-
-     .navbar-toggler {
-       border: none !important;
-       outline: none !important;
+      font-size: 30px;
      }
 
      #landing-page h2 {
-       
-       font-weight: bold;
-       color: #084482 !important;
-       margin-top: 0;
-       margin-bottom: 1rem
-     }
+      font-size: 1em !important;
+      font-weight: bold;
+      color: #084482 !important;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 40rem;
+    }
 
-    
-     #img {
-       /* margin-left: 1rem !important; */
-       width: 150px;
-     }
-     
-     .footer-brand {
-         margin-top: 1rem;
-     }
-     
-     #sections {
-         margin-top: 1rem;
-     }
-     
-     .blue{
-         color: #3BB9FF;
-     }
-     
-
-     ul {
-         list-style: none;
-     }
-     
-     #section-one,
-     #section-two,
-     #section-three,
-     #section-four {
-         margin: 3rem 0;
-     }
-     
-     h4 {
-         font-weight: bold;
-     }
-     
-     .bottom-icons span {
-         background:#3BB9FF;
-     }
-     
-      #bottom {
-         margin-top: 1rem;
-     }
-     
-     #footer {
-        /* background: none !important; */
-        min-height: 60vh;
-        padding: 1rem;
-     }
-
-
-@media (max-width: 767.98px) {
-  .wrapper {
-    margin: 0 !important;
+  #landing-page  h2 {
+     font-size: 20px;
+  } 
+  #landing-page  p {
+     padding-bottom: 25px;
+     font-size: 15px;
+     font-weight: normal;
+     font-size: 30px;
+     line-height: 33px;
+     text-align: center;
   }
+     
 
-  .wrapper-child {
-    margin: 0.5rem;
-  }
-      .image {
-        border-radius: 50%;
-        width: 150px;
-        height: 150px;
-        margin: 1rem 0;
-      }
 
+
+
+.social-link i {
+    color: white;
 }
-    @media (min-width: 700px) {
-      .wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin:0!important;
-      }
-      .wrapper-child {
-      margin: 0.5rem;
-    }
-      .collapse {
-        display: flex;
-        justify-content:flex-end;
-      }
 
-       #landing-page {
-         min-height: 25vh;
-     } 
-     
-     #landing-page  h2 {
-        font-size: 45px;
-     } 
-     #landing-page  p {
-        padding-bottom: 25px;
-        font-size: 25px;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 33px;
-        text-align: center;
-     }
+.s-link1 {
+    background-color: #FB6340;
+}
 
-      li {
-        padding: 0 1.5rem;
-      }
+.s-link2 {
+    background-color: #5E72E4;
+}
 
-      ul {
-        margin-right: 3rem;
-      }
-    }
-    
-  /*  .land {
-        bottom: 6rem;
-    }*/
-@media (max-width: 991.98px) {
-  .wrapper {
-    margin: 0 !important;
-  }
+.s-link3 {
+    background-color: #11CDEF;
+}
 
-  .wrapper-child {
-    margin: 0.5rem;
-  }
-  span{
-    margin:0px 5px;
-  }
- }
-    @media (min-width: 1000px) {
-      .wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        margin:0!important;
-      }
-      .wrapper-child {
-        margin: 0.5rem;
-      }
-      span{
-        margin:0px 5px;
-      }
-      li {
-        padding: 0 1.5rem;
-      }
+.s-link4 {
+    background-color: rgb(98, 255, 98);
+}
 
-      ul {
-        margin-right: 3rem;
-      }
 
-      .collapse {
-        display: flex;
-        justify-content:flex-end;
-      }
+.social-link {
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
 
-      #img {
-       margin-left: 4rem !important;
-       width: 200px;
-     }
-     
-     #landing-page {
-         min-height: 25vh;
-     }
-     
-     .land {
-         margin: 0 auto;
-         width: 650px !important;
-         bottom: 1rem;
-     }
-     .footer-brand {
-         margin-left: -2.2rem;
-     }
-     
-     #sections {
-         display: flex;
-         justify-content: space-evenly;
-         text-align: left;
-     }
-     
-     #bottom {
-         text-align: center;
-     }
-     
-     #section-one,
-     #section-two,
-     #section-three,
-     #section-four {
-         padding: 0 1rem;
-     }
-
-    }
+.social-link:hover,
+.social-link:focus {
+    opacity: 0.5;
+    text-decoration: none;
+}
