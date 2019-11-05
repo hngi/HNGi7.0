@@ -203,4 +203,5 @@
 <script src="js/jspdf.js"></script>
 <script src="js/jspdf.plugin.autotable.min.js"></script>
 <script src="js/paginator.js"></script>
+<script  type="text/javascript" src="js/sidebar.js"></script>
 <script type="text/javascript" src="js/newDashboard.js"></script>

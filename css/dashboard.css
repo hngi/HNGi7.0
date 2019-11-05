@@ -23,7 +23,7 @@ h1
 {
 	font-size: 25px;
 }
-}
+
 .center-text
 {
 	text-align: center;
@@ -87,7 +87,6 @@ h1
 		width: 100%;
 	} 
 	 
-
 	.prime-table tr {
 		margin-bottom: 15px;
 	}
@@ -121,7 +120,8 @@ h1
 
 
 
-.stix {
+.stix
+{
     border-radius: 3px;
     height: 3px;
     width: 30px;
@@ -137,8 +137,8 @@ h1
 	background-color: #00aeff;
 	border: none;
 	letter-spacing: 3px;
-	font-weight: bold;
-	color: black;
+	
+	color: #fff;
 	border-radius: none;
 	margin-bottom: 5em;
 	position: absolute;
@@ -146,22 +146,10 @@ h1
 	top: 0;
 }
 
-@media screen and (min-width:300px) and (max-width:450px) {
-	#admin-badge {
-		font-size: 10px;
-		font-weight: bold;
-	}
-
+.nav {
+	background-color: #23282d;
+	color: #fff;
 }
-
-@media screen and (min-width: 861px) and (max-width: 1081px) {
-	#admin-badge {
-		font-size: calc(1vw + 1px);
-		
-	}
-}
-
-
 
 #mobile-bars-check
 {
@@ -330,7 +318,8 @@ h1
 /* Sidebar begins here */
 #sidebar
 {
-	background: linear-gradient(180deg, #D1F0F6 0%, #00aeff 100%);
+	background-color: #23282d;
+	color: #fff;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -343,6 +332,7 @@ h1
 {
 	display: flex;
 	flex-direction: column;
+	margin-top: 50px;
 }
 #sidebar #upper > *
 {
@@ -354,43 +344,26 @@ h1
 	color: #084482;
 	background-color: transparent;
 	border: none;
-	font-size: 2vw;
 	letter-spacing: 3px;
-	padding: 0.5rem;
-	border: 1px solid #084482;
-	border-radius: 5px;
 	font-weight: bolder;
-	margin-bottom: 1.5rem;
 }
 
 #sidebar #upper #username
 {
-	font-size: 1.3rem;
-	letter-spacing: 2px;
-	color: #535353;
-	font-weight: bold;
-	font-family: Helvetica;
-	text-shadow: 2px 4px 3px rgba(2, 2, 2, 0.3);
-	text-transform: uppercase;
-	
-}
-
-#sidebar #hr1, #sidebar #hr2 {
-	border: 0.25px solid rgb(70, 69, 69);
 	font-size: 1.7rem;
-	color: #333333;
+	color: #535353;
 }
 
 #sidebar #hr1 {
-	border: 0.5px solid white;
+	border: 0.25px solid rgb(70, 69, 69);
 	width: 80%;
-	
 }
 
 #sidebar #lower #hr2 {
 	width: 80%;
-	border: 0.5px solid white
+	border: 0.5px solid transparent;
 	margin: 0.5rem;
+	
 }
 
 #sidebar #lower
@@ -398,13 +371,14 @@ h1
 	display: flex;
 	flex-direction: column;
 	margin-top: 2rem;
-	overflow-x: hidden;
 }
 #sidebar #lower > *
 {
-	align-self: flex-start;	
-	color: rgb(112, 112, 112);	
-	align-self: center;
+	align-self: flex-start;
+	margin-left: 50px;
+	color: rgb(229, 228, 228);
+	
+
 }
 
 #sidebar #lower select
@@ -428,28 +402,16 @@ h1
 {
 	border-radius: 50%;
 	margin-bottom: 0.5rem;
-	height: 70px;
-	width: 70px;
-	border: 2px solid grey;
+	height: 100px;
+	width: 100px;
 }
 #sidebar a
 {
-	width: 100%;
 	text-decoration: none;
-	color: #3d3c3c;
-	color: #333333;
-	font-weight: bold;
 	font-size: 16px;
-	padding: 10px 25px;
 }
-
-
 /* AuGhost Touches */ 
-#sidebar a:hover {
-	background-color: rgb(34, 34, 34);
-	color: whitesmoke;
-	border-left: 3px solid #00aeff;
-}
+
 
 
 /*
@@ -479,6 +441,9 @@ h1
 		margin-left: 0;
 		padding: 0.5rem;
 		min-height: 100vh;
+	}
+	.badger{
+		height: 59.5px;
 	}
 	#overview-section
 	{
@@ -545,7 +510,6 @@ h1
 		left: -100vw;
 		transition: 0.4s ease-out;
 		z-index: 5;
-		overflow-X: hidden;
 		padding-top: 4rem;
 	}
 	#sidebar a
@@ -585,4 +549,108 @@ h1
     {
         left: 0;
     }
+}
+
+
+/* styling for new sidebar */
+.menu{
+    width: 100%;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 20px;
+    
+}
+.menu a{
+    text-decoration: none;
+    color: white;
+    padding-left: Calc(50% - 49px);
+}
+.menu a:hover{
+	color: #00aeff;
+}
+.item{
+	
+    border-top: 1px solid rgba(225,225,225,0.05);
+    overflow: hidden;
+    background: rgba(35,40,45,0);
+}
+
+
+.btns{
+    display: block;
+    padding: 16px 20px;
+    color: white;
+    position: relative;
+}
+
+.btns::before{
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #23282d;
+    left: 25px;
+    bottom: -7px;
+    transform: rotate(45deg);
+}
+.item span::after{
+	position: absolute;
+    content: "\f078";
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+	color:#00aeff;
+	left: 80%;
+}
+.item.active span::after{
+    content: "\f077";
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+   
+}
+.btns i, .submenu i{
+    margin-right: 7px;
+}
+.submenu{
+    background: #313348;
+    overflow: hidden;
+    transition: max-height 0.3s;
+    max-height: 0;
+}
+.submenu a{
+    display: block;
+    padding: 16px 26px;
+    color: white;
+    font-size: 14px;
+    margin: 4px 0;
+    position: relative;
+}
+
+.item a:after{
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #00aeff;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+    opacity: 0;
+}
+.item a:hover::after{
+    opacity: 1;
+}
+
+.item.active .submenu{
+    max-height: 17em !important;
+} 
+
+@media (min-width:860px) and (max-width:1024px){
+	#sidebar a{
+		/* font-size: 14px; */
+		padding-left: 6px;
+		padding-right: 0px;
+	}
+	.news{
+		font-size: 15px;
+	}
 }
