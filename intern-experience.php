@@ -89,7 +89,7 @@
     <section class="jumbo">
             <h2 class="heading">Past Interns Experience</h2>
             <p class="para">Testimonies From Ex-HNG Internship Finalists<br>
-            <a href="" onclick="modalForm()" class="experiencetext">Submit Experience</a>
+            <a href="#" onclick="modalForm()" class="experiencetext">Submit Experience</a>
             </p>
    </section>
 
@@ -117,9 +117,9 @@
 
 
                           <div class="form-group">
-                              <label for="image">Your Picture (Optional) </label>
+                              <label for="image">Your Picture </label>
                               <br>
-                              <input type="file" name="image" >
+                              <input type="file" name="image" required />
                           </div>
 
 
@@ -176,7 +176,6 @@
     </main>
     </section>
     <?php include('fragments/site_footer.php'); ?>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 </body>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
