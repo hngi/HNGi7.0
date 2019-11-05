@@ -530,6 +530,8 @@ i:hover{
 		
 		justify-self: self-start;
 		align-self: center;
+		margin-top: 3em;
+		zoom: 0.7;
 		/* margin-bottom: 0; */
 	}
 	#details-section
@@ -541,7 +543,7 @@ i:hover{
 		z-index: 5;
 		width: 100vw;
 		transition: 0.4s ease-out;
-		/* left: 100vw; */
+		left: 100vw;
 		font-size: 17px;
 		
 	}
