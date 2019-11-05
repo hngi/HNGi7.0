@@ -479,44 +479,19 @@
         font-size: 25px;
         line-height: 34px;
         color: #3C6B9C;
-    }
-    #sponsor-flex-top,
-    #sponsor-flex-bottom {
-        margin-top: 3rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    #sponsor-flex-bottom {
-        width: 80vw;
-        margin: 4rem auto 6rem;
-    }
-    #sponsor-flex-top img,
-    #sponsor-flex-bottom img {
-        max-width: 15vw;
-    }
-    .figma_logo {
-        /* line-height: 26.84px ; */
-        font-size: 30px;
-        height: 55px;
-        margin: 0;
-        padding: 0;
-        margin-bottom: 25px;
-    }
-    .bluechip_logo {
-        height: 55px;
-        width: 163.8px !important;
-        margin-bottom: 25px;
-    }
-    .flutter_logo {
-        height: 55px;
-        width: 298.16px !important;
-        margin-bottom: 25px;
-    }  
-
+        margin-bottom: 2em;
+    } 
     .sponsor button {
         margin: 20px auto;
     }
+
+    .sponsor .second-row {
+        margin-top: 5em;
+        width: 70%;
+        padding-left: 0;
+        margin-bottom: 4em;
+    }
+    
 
 }
 
@@ -631,21 +606,6 @@
         grid-template-columns: 1fr 1fr 1fr;
     }
     /* sponsor section by hayjay */
-    #sponsor-flex-top,
-    #sponsor-flex-bottom {
-        margin-top: 3rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    #sponsor-flex-bottom {
-        width: 80vw;
-        margin: 4rem auto 6rem;
-    }
-    #sponsor-flex-top img,
-    #sponsor-flex-bottom img {
-        max-width: 15vw;
-    }
     h2.center-text,
     .center-text {
         text-align: center;
@@ -674,21 +634,6 @@
     }
 
     /* sponsor section by hayjay */
-    #sponsor-flex-top,
-    #sponsor-flex-bottom {
-        margin-top: 3rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    #sponsor-flex-bottom {
-        width: 80vw;
-        margin: 4rem auto 6rem;
-    }
-    #sponsor-flex-top img,
-    #sponsor-flex-bottom img {
-        max-width: 15vw;
-    }
    
 }
 @media screen and (max-width: 502px) {
@@ -773,5 +718,40 @@
     .cta-button {
         margin-right: auto;
         margin-left: auto;
+    }
+
+    .sponsor h2 {
+        margin-bottom: 3em;
+    } 
+
+    .sponsor .second-row {
+        margin-top: 0;
+        width: 100%;
+        padding-left: 0;
+        padding-right:0; 
+    }
+
+    .sponsor img {
+        margin-bottom: 4em;
+    }
+}
+
+@media screen and (max-width: 1199px){
+    .support {
+        margin-top: 5em;
+        width: 100%;
+        z-index: 2;
+        text-align: center;
+    }
+
+    .sponsor .second-row {
+        margin-top: 0;
+        width: 100%;
+        padding: auto;
+        margin: auto;
+    }
+
+    .sponsor img {
+        margin-bottom: 4em;
     }
 }

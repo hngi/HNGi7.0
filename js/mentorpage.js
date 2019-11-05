@@ -1,3 +1,4 @@
+
 const wrapper = document.querySelector('.wrapper');
 wrapper.classList.add('wrapper');
 
@@ -26,12 +27,6 @@ const displayMentors = (data) => {
         let a2 = document.createElement('a');
         let a3 = document.createElement('a');
 
-        // addition of links to the social icons
-        a1.setAttribute("href", "https://twitter.com");
-        a2.setAttribute("href", "https://facebook.com");
-        a3.setAttribute("href", "https://github.com");
-        // end
-
         let iconOne = document.createElement('i');
         let iconTwo = document.createElement('i');
         let iconThree = document.createElement('i');
@@ -52,6 +47,10 @@ const displayMentors = (data) => {
         spanOne.appendChild(a1)
         spanTwo.appendChild(a2)
         spanThree.appendChild(a3)
+
+        a1.setAttribute('href','https://twitter.com')
+        a2.setAttribute('href','https://facebook.com')
+        a3.setAttribute('href','https://dribbble.com')
 
         const socialIcons = document.createElement('div');
         socialIcons.classList.add('social-icons');
@@ -97,230 +96,257 @@ const displayMentors = (data) => {
     })
 }
 
-// adding real contents to mentors
 
 const mentorsArr = [
     {
         name: "Seyi Onifade",
-        stack: "Web Developer",
-        imgUrl: 'https://res.cloudinary.com/mirakul1/image/upload/v1572714005/pvrvbhm2gzf3di8exdic.jpg'
+        stack: "Devops and CEO, HNG Tech",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572796363/Mentors/20191103_165148_auawdc.jpg"
     },
     {
-        name: "Wisdom Ebong",
-        stack: "Software Developer",
-        imgUrl: "https://res.cloudinary.com/mirakul1/image/upload/v1572708194/jwbv5vvnyhobkahj2wfe.jpg"
+        name: "Ephraim Aigbefo",
+        stack: "Fullstack Development",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572709726/Mentors/Ephraim_phd0oq.jpg"
     },
     {
-        name: "Oluwatoba Adeyefa",
-        stack: "Software Engineer",
-        imgUrl: "https://res.cloudinary.com/mirakul1/image/upload/v1572708376/uc1euapilfxdltt2f6vv.jpg"
+        name: "Onwuora Okechukwu",
+        stack: "Fullstack Development",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572709748/Mentors/Okechukwu_mr4ivs.jpg"
     },
     {
-        name: "Albert Oboh",
-        stack: "Mobile Developer",
-        imgUrl: 'https://res.cloudinary.com/mirakul1/image/upload/v1572708379/hl9cyc0wvwfnsqwyx2ut.jpg'
+        name: "Nedy Udombat",
+        stack: "Fullstack Development",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572709768/Mentors/Nedy_ypwx7h.jpg"
     },
     {
-        name: "Chiamaka Osumgba",
-        stack: "Web Developer",
-        imgUrl: "https://res.cloudinary.com/mirakul1/image/upload/v1572708383/lgunrk85fbmakmzovoyo.jpg"
-    },
-    {
-        name: "Obinna Okoh",
-        stack: "UI Designer",
-        imgUrl: "https://res.cloudinary.com/mirakul1/image/upload/v1572709453/o8hizwuab9chkdbbjmgv.jpg"
-    },
-    {
-        name: "Kelvin Chikezie",
-        stack: "Web Developer",
-        imgUrl: "https://res.cloudinary.com/mirakul1/image/upload/v1572709450/tea5kdnvp06hn93uwrec.jpg"
-    },
-    {
-        name: "Jeffrey Ogah",
-        stack: "Web Developer",
-        imgUrl: "https://res.cloudinary.com/mirakul1/image/upload/v1572708316/xxtsmer2gqklhcudgejb.jpg"
-    },
-    {
-        name: "Amujo Dotun",
-        stack: "Web Developer",
-        imgUrl: "https://res.cloudinary.com/mirakul1/image/upload/v1572708383/zbes6mtacyac6uusr0ap.jpg"
-    },
-    {
-        name: "Da-costa Motun",
-        stack: "Frontend Developer",
-        imgUrl: 'https://res.cloudinary.com/mirakul1/image/upload/v1572709490/wnlodfcoo8libbsyz7ne.jpg'
-    },
-    {
-        name: "John Ademoye",
-        stack: "Web Developer",
-        imgUrl: "https://res.cloudinary.com/mirakul1/image/upload/v1572709556/qqyar0cs2blvnv854ex1.jpg"
-    },
-    {
-        name: "Sherif Dauda",
-        stack: "UI/UX Designer",
-        imgUrl: "https://res.cloudinary.com/mirakul1/image/upload/v1572709448/b7rmlwwaexpvvjq90wrc.jpg"
-    },
-    {
-        name: "Edidiong Etuk",
-        stack: "Machine Learning",
-        imgUrl: 'https://res.cloudinary.com/mirakul1/image/upload/v1572708384/sik1br0sntsdxc3j2osb.jpg'
-    },
-    {
-        name: "Chinedu Ebinim",
-        stack: "Web Developer",
-        imgUrl: "https://res.cloudinary.com/mirakul1/image/upload/v1572708615/ero23yofvizjekktou3j.jpg"
-    },
-    {
-        name: "Iheonye Emeka",
-        stack: "Product Designer",
-        imgUrl: "https://res.cloudinary.com/mirakul1/image/upload/v1572708340/pnyyg84mak5bxlnmpcqy.png"
+        name: "Ominiabohs David",
+        stack: "Backend Dev. and Digital Marketing",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572709814/Mentors/David_orphejjshasu_ib0liq.jpg"
     },
     {
         name: "Idris Lawal",
-        stack: "Software Engineer",
-        imgUrl: 'https://res.cloudinary.com/mirakul1/image/upload/v1572709502/eahcxdsjgpkz24c9e8bf.jpg'
+        stack: "Backend Development",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572709894/Mentors/Idris2_nfne5a.jpg"
     },
     {
-        name: "Oluwaseyi Pelumi",
-        stack: "Devops Engineer",
-        imgUrl: "https://res.cloudinary.com/mirakul1/image/upload/v1572714007/mjgnktps2zyo1zedz9qb.png"
-    },
-
-    // end of real contents
-    {
-        name: "Somtozech",
-        stack: "Web Developer",
-        imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663265/Capture02_psr3n9.jpg?fbclid=IwAR1m1WqNFk8aF4BvBSQlk950cSazCaRy95-66fg9cBZxPG-6Cc8Ga_6neqg"
+        name: "Oluwasomidotun Amujo",
+        stack: "Backend Development",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572709908/Mentors/Dotun_xaq8p0.jpg"
     },
     {
-        name: "Cole Solomon",
-        stack: "Product Designer",
-        imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk=""'
+        name: "Paul Chibiuke Igweze",
+        stack: "Backend Development",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572709990/Mentors/PorH_h74cio.jpg"
     },
     {
-        name: "Motunrayo",
-        stack: "Frontend Developer",
-        imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk="
+        name: "Kev Chike",
+        stack: "Backend Development",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572709955/Mentors/Kev_Chike7_ymlrik.jpg"
     },
     {
-        name: "Maaruf Dauda",
-        stack: "Web Developer",
-        imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663334/Capture01_c3eyb9.jpg?fbclid=IwAR3Nezb-_XUEm6rt6hGAnTYreD7V60pzHF-rfkQOtP3ao28UnuIteVrcf_Yalt="
+        name: "Victor Ugwueze",
+        stack: "Backend Development and Devops",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572786926/Mentors/Victor_Ugwueze_qwmfgu.jpg"
     },
     {
-        name: "Romina Hadid",
-        stack: "Marketing Strategist",
-        imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570663265/Capture02_psr3n9.jpg?fbclid=IwAR1m1WqNFk8aF4BvBSQlk950cSazCaRy95-66fg9cBZxPG-6Cc8Ga_6neqg""'
+        name: "Tobi Anifowose",
+        stack: "Backend Development",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710008/Mentors/Tobi_Ani_fby8rf.jpg"
     },
     {
-        name: "Alex Smith",
-        stack: "UI/UX Designer",
-        imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk"
+        name: "Elijah Okokon",
+        stack: "Backend Development",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710026/Mentors/Elijah_cz1qrz.jpg"
     },
     {
-        name: "John Doe",
-        stack: "Founder and CEO",
-        imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk"
+        name: "Chinedu Ebinim",
+        stack: "Backend Development",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710042/Mentors/Chinedu_Ebinim_g3phzf.jpg"
     },
     {
-        name: "Thompson",
-        stack: "Web Developer",
-        imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570663334/Capture01_c3eyb9.jpg?fbclid=IwAR3Nezb-_XUEm6rt6hGAnTYreD7V60pzHF-rfkQOtP3ao28UnuIteVrcf_Yalt=""'
+        name: "Wisdom Ebong",
+        stack: "Backend Development and Devops",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710056/Mentors/Wisdom_kdfvyv.jpg"
     },
     {
-        name: "Romina Hadid",
-        stack: "Marketing Strategist",
-        imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663265/Capture02_psr3n9.jpg?fbclid=IwAR1m1WqNFk8aF4BvBSQlk950cSazCaRy95-66fg9cBZxPG-6Cc8Ga_6neqg"
+        name: "Chigozie Ekwonu",
+        stack: "Backend Development",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710070/Mentors/Chigozie_iej3ny.jpg"
     },
     {
-        name: "Alex Smith",
-        stack: "UI/UX Designer",
-        imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk"
+        name: "Victor Akintunde",
+        stack: "Frontend Development and Design",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710087/Mentors/Akintunde_vic_tzhhlw.jpg"
     },
     {
-        name: "John Doe",
-        stack: "Founder and CEO",
-        imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk""'
+        name: "Oghenero Paul-Ejukorlem",
+        stack: "Frontend Development",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710105/Mentors/Oghene_Paul_nf0ras.jpg"
     },
     {
-        name: "Thompson",
-        stack: "Web Developer",
-        imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663334/Capture01_c3eyb9.jpg?fbclid=IwAR3Nezb-_XUEm6rt6hGAnTYreD7V60pzHF-rfkQOtP3ao28UnuIteVrcf_Yalt="
+        name: "Marow Mars",
+        stack: "Frontend Development",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710122/Mentors/Marow_xsmq2h.jpg"
     },
     {
-        name: "Romina Hadid",
-        stack: "Marketing Strategist",
-        imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663265/Capture02_psr3n9.jpg?fbclid=IwAR1m1WqNFk8aF4BvBSQlk950cSazCaRy95-66fg9cBZxPG-6Cc8Ga_6neqg"
+        name: "Tomisin Lalude",
+        stack: "Frontend Development",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710145/Mentors/Tomisin_olpwrk.jpg"
     },
     {
-        name: "Alex Smith",
-        stack: "UI/UX Designer",
-        imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk""'
+        name: "Edmond Ekott",
+        stack: "Frontend Development",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710158/Mentors/Edmund_bfekba.jpg"
     },
     {
-        name: "John Doe",
-        stack: "Founder and CEO",
-        imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk"
+        name: "Motunrayo Adeyemi",
+        stack: "Frontend Development",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710169/Mentors/Motun_xtjzf1.jpg"
     },
     {
-        name: "Thompson",
-        stack: "Web Developer",
-        imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663334/Capture01_c3eyb9.jpg?fbclid=IwAR3Nezb-_XUEm6rt6hGAnTYreD7V60pzHF-rfkQOtP3ao28UnuIteVrcf_Yalt="
+        name: "Samuel Weke",
+        stack: "Frontend Development",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710186/Mentors/Samuel_weke_w12cdg.jpg"
     },
     {
-        name: "Romina Hadid",
-        stack: "Marketing Strategist",
-        imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570663265/Capture02_psr3n9.jpg?fbclid=IwAR1m1WqNFk8aF4BvBSQlk950cSazCaRy95-66fg9cBZxPG-6Cc8Ga_6neqg""'
+        name: "Austin Asoluka",
+        stack: "Frontend Development",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710210/Mentors/Austim_l7cucu.jpg"
     },
     {
-        name: "Alex Smith",
-        stack: "UI/UX Designer",
-        imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk"
+        name: "Jimi Bogadeji",
+        stack: "Frontend Development",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710227/Mentors/Jimi_cz8syf.jpg"
     },
     {
-        name: "John Doe",
-        stack: "Founder and CEO",
-        imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk"
+        name: "Onyebinamma Ebuka Peter",
+        stack: "Frontend Development",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710244/Mentors/Onyebinamma_hq11xg.jpg"
     },
     {
-        name: "Thompson",
-        stack: "Web Developer",
-        imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570663334/Capture01_c3eyb9.jpg?fbclid=IwAR3Nezb-_XUEm6rt6hGAnTYreD7V60pzHF-rfkQOtP3ao28UnuIteVrcf_Yalt=""'
+        name: "Jeffrey Ogah",
+        stack: "Frontend Development",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710264/Mentors/Jeff_o8s8y0.jpg"
     },
     {
-        name: "Romina Hadid",
-        stack: "Marketing Strategist",
-        imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663265/Capture02_psr3n9.jpg?fbclid=IwAR1m1WqNFk8aF4BvBSQlk950cSazCaRy95-66fg9cBZxPG-6Cc8Ga_6neqg"
+        name: "Patrick Aziken",
+        stack: "Design",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710293/Mentors/Patrick_xjxbfr.jpg"
     },
     {
-        name: "Alex Smith",
-        stack: "UI/UX Designer",
-        imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk"
+        name: "Sherif Dauda",
+        stack: "Design",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710330/Mentors/Sherif_acatts.jpg"
     },
     {
-        name: "John Doe",
-        stack: "Founder and CEO",
-        imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk""'
+        name: "Chukwuemeka Iheonye",
+        stack: "Design",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710312/Mentors/Iheonye_illbpp.jpg"
     },
     {
-        name: "Thompson",
-        stack: "Web Developer",
-        imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663334/Capture01_c3eyb9.jpg?fbclid=IwAR3Nezb-_XUEm6rt6hGAnTYreD7V60pzHF-rfkQOtP3ao28UnuIteVrcf_Yalt"
+        name: "Somto Promise",
+        stack: "Design",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710349/Mentors/Promise_3_mjqxkr.jpg"
     },
     {
-        name: "Romina Hadid",
-        stack: "Marketing Strategist",
-        imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570663265/Capture02_psr3n9.jpg?fbclid=IwAR1m1WqNFk8aF4BvBSQlk950cSazCaRy95-66fg9cBZxPG-6Cc8Ga_6neqg"
+        name: "Ife Olusola",
+        stack: "Design",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710365/Mentors/Ife_axq8kn.jpg"
     },
     {
-        name: "Alex Smith",
-        stack: "UI/UX Designer",
-        imgUrl: 'https://res.cloudinary.com/chidi6ix/image/upload/v1570663334/Capture01_c3eyb9.jpg?fbclid=IwAR3Nezb-_XUEm6rt6hGAnTYreD7V60pzHF-rfkQOtP3ao28UnuIteVrcf_Yalt=""'
+        name: "Iyabode Atoyebi",
+        stack: "Design",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710382/Mentors/Iyabode_srymcv.jpg"
     },
     {
-        name: "John Doe",
-        stack: "Founder and CEO",
-        imgUrl: "https://res.cloudinary.com/chidi6ix/image/upload/v1570662632/Capture03_ynye5x.jpg?fbclid=IwAR3I7yne9-EHBck93MMh__3kx5Bmrjg2epvFPNXY3K1QqgxHVIYTJ98kZVk"
+        name: "Oluwatoni Atunrase",
+        stack: "Design",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710397/Mentors/Toni_b2twuz.jpg"
+    },
+    {
+        name: "Chiamaka Osumgba",
+        stack: "Frontend Development and Devops",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710412/Mentors/Chaimaka_vm3zwx.jpg"
+    },
+    {
+        name: "Tobiloba Williams",
+        stack: "Design",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710429/Mentors/Willaims_kygtth.jpg"
+    },
+    {
+        name: "Ovie Paul-Ejukorlem",
+        stack: "Design",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710458/Mentors/Ovie_imhvdv.jpg"
+    },
+    {
+        name: "Adolphus Chris",
+        stack: "Design and Mobile Development",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710472/Mentors/Adolphus_cpvncb.jpg"
+    },
+    {
+        name: "Kelvin Pere",
+        stack: "Mobile Development",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710532/Mentors/Kelvin_cy3aml.jpg"
+    },
+    {
+        name: "Albert Oboh",
+        stack: "Mobile Development",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710567/Mentors/Albert_t7aluc.jpg"
+    },
+    {
+        name: "David Ibukun Kuforiji",
+        stack: "Mobile Development",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710582/Mentors/Kuforiji_slicer.jpg"
+    },
+    {
+        name: "Frank Arinze",
+        stack: "Mobile Development",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710614/Mentors/Frank_rwwqeb.jpg"
+    },
+    {
+        name: "Loveth Nwokike",
+        stack: "Mobile Development",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710646/Mentors/Nwokike_kokt2y.jpg"
+    },
+    {
+        name: "Edidiong Ekut",
+        stack: "Machine Learning",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710660/Mentors/Edidiong_qnat7x.jpg"
+    },
+    {
+        name: "Munirat Sulaimon",
+        stack: "Machine Learning",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710675/Mentors/Munirat_b1rw9s.jpg"
+    },
+    {
+        name: "Izuchukwu Stephen Azubuike",
+        stack: "Digital Marketing",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710687/Mentors/Izuchukwy_vxn25q.jpg"
+    },
+    {
+        name: "Oluwaseyi Oluwapelumi",
+        stack: "Devops",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710699/Mentors/Oluwaseyi_dgvqdm.jpg"
+    },
+    {
+        name: "Paul Rapuluchukwu",
+        stack: "Fullstack Development",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710733/Mentors/Rapulu_h5jg9r.jpg"
+    },
+    {
+        name: "Alexander Garuba",
+        stack: "Frontend Development and Design",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710776/Mentors/Alexander_fyowzc.jpg"
+    },
+    {
+        name: "Jesutomiwa Salam",
+        stack: "Backend Development",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572723180/Mentors/Jesutomiwa_su6cnb.jpg"
+    },
+    {
+        name: "Obinna Dennis Okoh",
+        stack: "Digital Marketing",
+        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572723192/Mentors/Onions_Dennis_zk7gqz.jpg"
     },
 ];
 

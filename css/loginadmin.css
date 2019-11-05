@@ -1,47 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap');
 
-
+body {
+	font-family: 'Open sans', sans-serif;
+	backface-visibility: hidden;
+}
 .form-container {
-    width: 70%;
-    margin: 50px auto;
-    text-align: center;
+	width: 70%;
+	margin: 50px auto;
+	text-align: center;
 }
 
 .form-container h2 {
-    color: #084482;
-    margin-bottom: 50px;
+	color: #084482;
+	margin-bottom: 50px;
+}
+/* Aughost touch */
+
+input {
+	width: 100px;
+	border: none;
+	background-color: transparent;
+	border: none;
+	width: 90%;
+	color: gray;
+}
+
+input::placeholder {
+	color: rgb(95, 95, 95);
+}
+
+input:invalid,
+input:required {
+	box-shadow: none;
+	outline: none;
 }
 
 .inputWithIcon {
-    border: 1px solid grey;
-    margin-bottom: 20px;
-    text-align: left;
+	display: flex;
+	background-color: rgb(236, 236, 236);
+	margin-bottom: 20px;
+
+	text-align: left;
+	padding: 15px 20px;
+	align-content: center;
+	border-radius: 4px;
+}
+
+.form-container {
+	width: 20%;
+}
+
+.form-container a:nth-child(2) {
+	text-align: right;
 }
 
 .inputWithIcon i {
-    margin-left: 0;
-    color: #00aeff;
-    margin-left: 2px;
+	margin-top: 5px;
+	color: #00aeff;
+	margin-left: 2px;
+	padding: 0 10px 0 5px;
 }
 
-.inputWithIcon input {
-    border: none;
-    width: 90%;
-    padding: 10px;
-    outline: none;
-    background-color: transparent;
+.login-heading {
+	text-transform: uppercase;
+	text-align: center;
+	color: grey;
+}
+
+.full {
+	height: 50vh;
+	margin-top: 80px;
+}
+
+.small-swag {
+	font-size: 14px;
+	color: grey;
+}
+
+.small-swag:hover {
+	color: #333;
 }
 
 button {
-    width: 100%;
-    border: none;
-    color: white;
-    background-color: #00aeff;
-    padding: 10px;
-    margin-bottom: 20px;
+	width: 100%;
+	outline: none;
+	border: none;
+	font-weight: bold;
+	color: white;
+	background-color: #00aeff;
+	padding: 10px;
+	margin-bottom: 20px;
+	border-radius: 2px;
+	box-shadow: -1px 3px 5px 0px rgb(153, 153, 153);
+	transition: 100ms;
 }
 
-@media screen and (min-width: 700px){
-    .form-container {
-        width: 40%;
-    }
+button:hover {
+	color: #00aeff;
+	background-color: #fff;
+	border: 3px solid #00aeff;
+	border-radius: 2px;
+	box-shadow: none;
+}
+
+@media screen and (min-width: 315px) and (max-width: 700px) {
+	.form-container {
+		width: 80%;
+	}
+}
+
+@media screen and (min-width: 701px) and (max-width: 1290px) {
+	.form-container {
+		width: 60vh;
+	}
 }
