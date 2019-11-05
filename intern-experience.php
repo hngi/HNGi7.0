@@ -108,7 +108,17 @@
                         </div>
                         <div class="form-group">
                             <label for="stack">Your Stack</label>
-                            <input type="text" name="stack" class="form-control" required placeholder="Your Stack" id="stack">
+                            
+                            <select class="interest form-control" name="stack" id="stack" required multiple>
+                              <option value="" disabled selected hidden>Your Stack</option>
+                              <option value="Backend">Backend</option>
+                              <option value="DevOps">DevOps</option>
+                              <option value="Digital Marketing">Digital Marketing</option>
+                              <option value="Frontend">Frontend</option>
+                              <option value="Machine Learning">Machine Learning</option>
+                              <option value="Mobile Development">Mobile Development</option>
+                              <option value="UI/UX Design">UI/UX Design</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="exp">Your Experience</label>

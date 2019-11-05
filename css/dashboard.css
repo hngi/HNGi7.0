@@ -32,7 +32,8 @@ h1
 {
     position: absolute;
     left: -35vw;
-    top: 3vh;
+	/* top: 3vh; */
+	top: 14px;
     font-size: 25px;
     color: rgba(0, 0, 0, 0.7);
     line-height: 80px;
@@ -443,7 +444,7 @@ h1
 		min-height: 100vh;
 	}
 	.badger{
-		height: 59.5px;
+		height: 56px;
 	}
 	#overview-section
 	{
@@ -654,3 +655,24 @@ h1
 		font-size: 15px;
 	}
 }
+@media(max-width:767px){
+	.badger{
+		height: 59px;
+	}
+}
+@media(max-width:580px){
+	#sidebar{
+		width: 60vw;
+	}
+}
+@media(max-width:440px){
+	#sidebar{
+		width: 70vw;
+	}
+}
+@media(max-width:360px){
+	#sidebar{
+		width: 75vw;
+	}
+}
+
