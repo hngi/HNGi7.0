@@ -48,6 +48,7 @@ if (isset($_POST["recover-btn"])) {
           margin-bottom: 20px;
           width: 100%;
           padding: 10px;
+          border: 1px solid #00aeff;
         }
   </style>
    

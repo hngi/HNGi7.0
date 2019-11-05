@@ -65,7 +65,7 @@ a{
 .row h2{
 	margin-left: 15px;
 }
-
+/* 
 #mobile-bars 
 {
     position: absolute;
@@ -77,7 +77,7 @@ a{
     margin-right: 40px;
     cursor: pointer;
     display: none;
-}
+} */
 
 .stix 
 {
@@ -530,6 +530,8 @@ i:hover{
 		
 		justify-self: self-start;
 		align-self: center;
+		margin-top: 3em;
+		zoom: 0.7;
 		/* margin-bottom: 0; */
 	}
 	#details-section
@@ -541,7 +543,7 @@ i:hover{
 		z-index: 5;
 		width: 100vw;
 		transition: 0.4s ease-out;
-		/* left: 100vw; */
+		left: 100vw;
 		font-size: 17px;
 		
 	}
@@ -558,7 +560,7 @@ i:hover{
 
 	#sidebar
 	{
-		width: 50vw;
+		
 		left: -100vw;
 		transition: 0.4s ease-out;
 		z-index: 5;
