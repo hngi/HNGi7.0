@@ -10,7 +10,7 @@ class InternExperience
         return $query;
     }
 
-    // new
+   
     public function uploadImage($destination) {
       global $database;
         $sql = "INSERT INTO intern_experience (image) VALUES ('$destination')";
