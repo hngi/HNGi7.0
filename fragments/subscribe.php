@@ -13,7 +13,7 @@
 
 <form action="" method="post" id="subscribe-form">
     <div class="form-group">
-        <input type="email" class="form-control" required placeholder="enter your email" id="subscribe-form">
+        <input type="email" class="form-control" required placeholder="enter your email" id="subscribe-text">
     </div>
     <div class="form-group">
         <button type="submit" class="btn btn-primary" role="button" id="subscribe" style="background-color:#00AEFF; border: none">
@@ -28,7 +28,7 @@
     $(document).ready(function () {
         $("#subscribe-form").on("submit",function (e) {
             e.preventDefault();
-           let email = $("#subscribe-form").val();
+           let email = $("#subscribe-text").val();
            if(email == ""){
                swal('Error!',"Kindly enter your email",{icon: 'error',  timer: 2500});
                return; //Prevent submission if field is empty
@@ -50,7 +50,7 @@
                    if(status == true){
 
                        swal('Great',f.message,{icon: 'success',  timer: 25000});
-                       $("#subscribe-form").val(''); //Clear text field after confirmed subscription
+                       $("#subscribe-text").val(''); //Clear text field after confirmed subscription
                    }else{
                        swal('Error!',f.message,{icon: 'error',  timer: 25000});
                    }
