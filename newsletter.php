@@ -96,7 +96,7 @@ if (isset($_POST['contact-btn'])) {
                 HNG Internship CEO</h5>
                 <p>Get inspired by these fantastic email newsletter examples from real companies. ... newsletters to inspire you to make the best email newsletter for your company possible. ..... </p>
         </div>   
-        <div>
+        <div class="images2">
                 <img src="images/imaage 5.png" alt="HNG" class="images" >
         </div>
         <div class="para">
@@ -117,7 +117,7 @@ if (isset($_POST['contact-btn'])) {
                 HNG Internship CEO</h5>
                 <p>Get inspired by these fantastic email newsletter examples from real companies. ... newsletters to inspire you to make the best email newsletter for your company possible. ..... </p>
         </div>   
-        <div>
+        <div class="images3">
                 <img src="images/image 6.png" alt="HNG" class="images">
         </div>
         <div class="para">

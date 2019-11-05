@@ -68,6 +68,15 @@ body{
     
 }
  @media only screen and (min-width: 1024px){ 
+     .container{
+         display: flex;
+     }
+     .images2 {
+         margin: -40px;
+     }
+     .images3 {
+         margin: -10px;
+     }
     .cards {
         width: 33%;
         background-color: rgb(212, 206, 206);
