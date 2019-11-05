@@ -20,7 +20,7 @@ body{
     position: absolute;
     top: 10%;
     right: 30%;
-    transform: transla te(-50% , -50%);
+    /* transform: transla te(-50% , -50%); */
 }
 .heading h5{
     position: absolute;
