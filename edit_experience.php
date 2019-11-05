@@ -109,9 +109,10 @@ $the_experience = $admin->fetchSingleExperience($id);
                         </div>
                         <div class="form-group">
                             <label for="stack">Stack</label>
-                            <select class="interest form-control" name="stack" id="stack" required multiple>
+                           <!--  <input type="text" value="<?php echo $the_experience['stack'];?>" name="stack" class="form-control" required placeholder="Your Stack" id="stack"> -->
+                            <select class="interest form-control" name="stack" id="stack" required>
                               <option value="" disabled selected hidden>Your Stack</option>
-                              <option value="<?php echo $the_experience['stack'];?>">Backend</option>
+                              <option value="Backend">Backend</option>
                               <option value="<?php echo $the_experience['stack'];?>">DevOps</option>
                               <option value="<?php echo $the_experience['stack'];?>">Digital Marketing</option>
                               <option value="<?php echo $the_experience['stack'];?>">Frontend</option>
