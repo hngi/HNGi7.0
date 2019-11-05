@@ -1,0 +1,201 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background: white;
+    font-family: sans-serif; 
+}
+.cards {
+    width: 100%;
+    background-color: white;
+    box-shadow: silver;
+    position: relative; 
+    margin-top: -5px;
+    display: inline-block;
+}
+.image{
+    width: 100%;
+    position: relative;
+}
+.heading h3 {
+    position: absolute;
+    top: 10%;
+    right: 30%;
+    transform: transla te(-50% , -50%);
+}
+.heading h5{
+    position: absolute;
+    top: 15%;
+    right: 25%;
+}
+.heading {
+    text-align: center;
+    /* position: absolute;
+    top: 0; */
+}
+.heading p {
+    padding: 10px;
+}
+
+.images{
+    width: 50%;
+    margin-left: 25%;;
+}
+
+.para{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.para p{
+    padding: 10px;
+}
+.button{
+    background-color: black;
+    color: white;
+    box-shadow: black;
+    padding: .5em 2em
+}
+
+@media only screen and (min-width: 650px){
+    .heading p, .para p {
+       font-size: 1.6em;
+    }
+    .heading h3, .heading h5{
+        font-size: 50px;
+    }
+    .button{
+       font-size: 25px;
+    }
+    
+}
+ @media only screen and (min-width: 1024px){ 
+    .cards {
+        width: 33%;
+        background-color: white;
+        display: inline-block;
+        padding: 30px;
+        box-shadow: silver;
+        margin-top: -20px;
+    }
+    .cards .images {
+        width: 50%;
+    }
+    .heading p, .para p {
+        font-size: .9em;
+     }
+     .heading h3, .heading h5{
+         font-size: 20px;
+     }
+     .button{
+        font-size: 25px;
+     }
+     .button{
+        font-size: 15px;
+     }
+}
+@media only screen and (min-width: 1600px){
+
+} 
+
+/* .heading-text{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    color: whi te;
+    margin-top: ;
+    top:;
+    bottom: 250;
+    right: 50%;
+    transform: translate(30%, -50%);
+} */
+
+/* p {
+    font-size: .9em;
+    line-height: 1.6em;
+    margin-top: 25px;
+    text-align: left;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    text-align: center;
+    padding: .8em 1.2em;
+    margin-top: 10px;
+}
+.image {
+    width: 100%;
+    margin-top: 50px;
+}
+.images{
+    width: 40%;
+    margin-top: 15px;
+}
+.button{
+    border-radius: 4px;
+    background: black;
+    text-align: center;
+    margin: 2.5em 0;
+    padding: .5em 2.5em;
+    color: white; */
+
+/* @media only screen and (min-width: 450px){
+    .image {
+        width: 90%;
+        margin-top: 50px;
+    }
+    .images{
+        width: 30%;
+        margin-top: 15px;
+    }
+
+}
+@media only screen and (min-width: 600px){
+    .images{
+        width: 60%;
+    }
+    .image{
+        width: 100%;
+        padding-right: .8em;
+        padding-left: .8em;
+    }
+    p{
+        font-size: .7em;
+        margin-bottom: 1em ;
+        padding: .8em 1.2em;
+    }
+    .button{
+        margin: 2.5em 0;
+        padding: .5em 1.5em;
+    }
+    .container ul{
+        display: flex;
+        margin-top: -30px;
+    }
+    .container{
+        padding: 0;
+    } 
+    .container ul li:nth-child(2) .images2 {
+        width: 45%;
+    }
+}
+@media only screen and (min-width: 768px){
+    .container ul li:nth-child(2) .images2 {
+        width: 40%;
+    }
+}
+@media only screen and (min-width: 875px){
+.container ul {
+    margin: 0 0 4% 0;
+}
+p{
+    font-size: .9em;
+    margin-bottom: .5em ;
+    padding: .8em 1.2em;
+}
+.container ul li:nth-child(2) .images2 {
+    width: 50%;
+}
+
+} */
