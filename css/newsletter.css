@@ -6,7 +6,7 @@ body{
 }
 .cards {
     width: 100%;
-    background-color: white;
+    background-color: rgb(212, 206, 206);
     box-shadow: silver;
     position: relative; 
     margin-top: -5px;
@@ -70,9 +70,9 @@ body{
  @media only screen and (min-width: 1024px){ 
     .cards {
         width: 33%;
-        background-color: white;
+        background-color: rgb(212, 206, 206);
         display: inline-block;
-        padding: 30px;
+        padding: 10px;
         box-shadow: silver;
         margin-top: -20px;
     }
