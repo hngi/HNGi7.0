@@ -19,6 +19,8 @@ main
 	background-color: rgb(226, 226, 226) ;
 	margin-left: 15vw; /* Same as sidebar width*/
 	padding: 2rem;
+	padding-top: 0;
+	padding-right: 0;
 	min-height: 100vh;
 }
 h1
@@ -29,7 +31,7 @@ h1
 {
 	text-align: center;
 }
-#mobile-bars
+/* #mobile-bars
 {
     position: absolute;
     left: -35vw;
@@ -40,7 +42,7 @@ h1
     margin-right: 40px;
     cursor: pointer;
     display: none;
-}
+} */
 
 .stix
 {
@@ -213,7 +215,7 @@ h1
 	margin: 0 auto;
 	color: crimson;
 }
-#sidebar
+/* #sidebar
 {
 	background: linear-gradient(180deg, #D1F0F6 0%, #00aeff 100%);
 	position: fixed;
@@ -301,7 +303,7 @@ h1
 	color: #333333;
 	font-weight: bold;
 	font-size: 16px;
-}
+} */
 
 #table-row {
 	padding-left: 20px;
@@ -315,6 +317,9 @@ h1
 .row{
 	margin-top:15px;
 }
+.row.first{
+	margin-top:0;
+}
 
 @media (max-width: 860px)
 {
@@ -323,6 +328,7 @@ h1
 		margin-left: 0;
 		padding: 0.5rem;
 		min-height: 100vh;
+		padding-top: 0;
 	}
 	#overview-section
 	{
@@ -386,7 +392,7 @@ h1
 		color: rgb(80, 80, 130);
 	}
 
-	#sidebar
+	/* #sidebar
 	{
 		width: 40vw;
 		left: -100vw;
@@ -403,7 +409,7 @@ h1
     width: 80%;
     border: 0.5px solid transparent;
     margin: 0.35rem;
-  }
+  } */
 
 	#mobile-bars
 	{
@@ -543,9 +549,13 @@ h1
 
     /*////////////////// Nav-bar////////////////////////////////// */
 
+
   .navbar-right .dropdown-menu {
     right: auto !important;
     left: 0 !important;
+  }
+  .nav.navbar-nav{
+	background-color:#00aeff !important;
   }
   .navbar-default {
 	/* background-color: #337ab7 !important; */
@@ -684,12 +694,18 @@ h1
 
 
   @media (max-width: 440px) {
-	.content h2{
-		font-size: 25px;
-		text-align: center;
-	}
+	
+	.welcome .content {
+		padding: 15px 10px 15px 10px;
+	  }
 	.navbar-default .container-fluid .navbar-header>*{
 		margin-left: calc(36% - 56px);
+	}
+  }
+
+  @media (max-width: 360px){
+	  .content h2{
+		font-size: 22px;
 	}
   }
 

@@ -37,7 +37,7 @@
                     <div class="main-first-row mobile-view" data-aos="fade-up">
                         <div class="welcome-column">
                             <h1 id="welcome-text" class="text__dark-blue">
-                                Welcome to HNG 7.0 Internship
+                                Welcome to<br>HNG 7.0 Internship
                             </h1>
                             <p id="welcome-story">
                                 The HNG Internship is an ambitious attempt to change the way education is done in Africa.
@@ -58,7 +58,7 @@
                         </h3>
                         <section id="countdown-container1" class="mt-2 mb-4">
                             <div class="message"></div>
-                            <div class="countdown1 mb-4" data-aos="fade-up">
+                            <div class="countdown1">
                                 <div class="item">
                                     <svg class="d-svg" width="160" height="160">
                                     <circle class="d-outer" r="70" cy="81" cx="81" stroke-width="5" stroke="#d5d5d5" fill="none" />
@@ -236,7 +236,7 @@
                 <h4 class="text-center mt-5">One of the Best Learning Curriculums in the World</h4>
                     <section class="tracks">
                         <div class="track_container">
-                            <div class="row">
+                            <div class="row" data-aos="fade-right">
                                 <div class="col-2">
                                     <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/frontend_hzyzio.png"
                                         width="50px" class="img-fluid">
@@ -248,7 +248,7 @@
                                 </div>
 
                             </div>
-                            <div class="row">
+                            <div class="row" data-aos="fade-right">
                                 <div class="col-2">
                                     <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/backend_orn4az.png"
                                         width="50px" class="img-fluid">
@@ -260,7 +260,7 @@
                                     </P>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row" data-aos="fade-right">
                                 <div class="col-2">
                                     <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/ml_sdviij.png"
                                         width="30px" class="img-fluid ml-2">
@@ -272,7 +272,7 @@
                                     </P>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row" data-aos="fade-right">
                                 <div class="col-2">
                                     <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/ui-ux_xq64bx.png"
                                         width="50px" class="img-fluid">
@@ -283,7 +283,7 @@
                                         exciting User Interfaces for great User Experience.</P>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row" data-aos="fade-right">
                                 <div class="col-2">
                                     <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/dm_bxzzr2.png"
                                         width="50px" class="img-fluid">
@@ -400,24 +400,24 @@
                     </h4>
                     <section class="mentor-section" data-aos="fade-up">
                         <div class="mentor-image">
-                            <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730807/IMG2_uiu3fj.png">
-                            <p>Ryan Thompson</p>
-                            <p>web Developer</p>
+                            <img src="https://res.cloudinary.com/joshuafolorunsho/image/upload/c_scale,w_200/v1572870951/20191103_165148_auawdc-min.jpg">
+                            <p class="font-weight-bold">Seyi Onifade</p>
+                            <p>Devops and CEO, HNG Tech</p>
                         </div>
                         <div class="mentor-image">
-                            <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730833/IMG4_kvttgt.png">
-                            <p>Romina Hadid </p>
-                            <p>Marketing Strategist</p>
+                            <img src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572871094/foutw9umk4hcfntupffn.jpg">
+                            <p class="font-weight-bold">Tomisin Lalude </p>
+                            <p>Frontend Development</p>
                         </div>
                         <div class="mentor-image">
-                            <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730816/IMG3_cerrem.png">
-                            <p>Alexander Smith</p>
-                            <p>UI/UX Designer</p>
+                            <img src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572871095/y7kp4jm0rmqolkcmprvc.jpg">
+                            <p class="font-weight-bold">Kevin Chike</p>
+                            <p>Backend Development</p>
                         </div>
                         <div class="mentor-image">
-                            <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730816/IMG3_cerrem.png">
-                            <p>John Doe </p>
-                            <p>Founder and CEO</p>
+                            <img src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572871096/zodqqfrro1lwuntitiaw.jpg">
+                            <p class="font-weight-bold">Ephraim Aigbefo</p>
+                            <p>Fullstack Development</p>
                         </div>
                     </section>
                     <div>
@@ -436,7 +436,7 @@
                             <div class="row_8--one mobile-view" data-aos="fade-right">
                                 <h4>HNG 6.0 Internship
                                 </h4>
-                                <p><i>...the journey so far</i></p>
+                                <p class="so-far">...the journey so far</p>
                                 <p>The HNG 6.0 Internship commenced 9th September, 2019 and ended 17th November, 2019.</p>
 
                                 <p>
@@ -513,28 +513,55 @@
                 </div>
 
                 <div class="sponsor">
-                    <h2 class="text_center blue-text">HNG 6.0 Internship Sponsors</h2>
-                    <div id="sponsor-flex-top" data-aos="fade-up">
-                        <a href="#"><img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg"></a>
-                        <a href="#"><img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722780/akwa-ibom-logo_yzz8ny.svg"></a>
-                        <a href="#"><img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722785/imo-logo_rvxpil.svg"></a>
-                        <a href="#"><img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722788/verifi-logo_nfckrw.svg"></a>
-                    </div>
-                    <div id="sponsor-flex-bottom" data-aos="fade-up">
-                        <a href="#"><img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570723653/figma-logo_iexfvh.png"></a>
-                        <a href="#"><img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722855/bluechip-logo_rw62cu.svg"></a>
-                        <a href="#"><img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg"></a>
+                    <div class="container">
+                        <h2 class="text_center blue-text">HNG 6.0 Internship Sponsors</h2>
+                        <div class="row section-row text-center mx-auto" data-aos="fade-up">
+                            <div class="col-md-3">
+                                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722780/akwa-ibom-logo_yzz8ny.svg">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722785/imo-logo_rvxpil.svg">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722788/verifi-logo_nfckrw.svg">
+                            </div>
+                        </div>
+                    <div class="row second-row text-center mx-auto" data-aos="fade-up">
+                        <div class="col-md-4">
+                            <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570723653/figma-logo_iexfvh.png">                    </div>
+                        <div class="col-md-4">
+                            <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722855/bluechip-logo_rw62cu.svg">                    </div>
+                        <div class="col-md-4">
+                            <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg">                    </div>
                     </div>
                     <button class="cta-button button--midBlue">
                         <a href="donate.php" class="text_center">Become Sponsor</a>
                     </button>
+                    </div>
+
+                    <!--
+                    <div id="sponsor-flex-top" data-aos="fade-up">
+                        <a><img
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg"></a>
+                        <a><img
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722780/akwa-ibom-logo_yzz8ny.svg"></a>
+                        <a><img
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722785/imo-logo_rvxpil.svg"></a>
+                        <a><img
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722788/verifi-logo_nfckrw.svg"></a>
+                    </div>
+                    <div id="sponsor-flex-bottom" data-aos="fade-up">
+                        <a><img
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570723653/figma-logo_iexfvh.png"></a>
+                        <a><img
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722855/bluechip-logo_rw62cu.svg"></a>
+                        <a><img
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg"></a>
+                    </div>
+-->
                 </div>
 
             </main>
@@ -549,9 +576,6 @@
     crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>
 <script src="js/main.js"></script>

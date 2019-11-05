@@ -38,7 +38,10 @@ if($display["hasPic"] == 0) {
 	
 	$noOfInterns = $lockForm->getNoOfInterns();
 	$noOfMentors = $lockForm->getNoOfMentors();
-	$noOfAdmins = $lockForm->getNoOfAdmins();
+  $noOfAdmins = $lockForm->getNoOfAdmins();
+  
+  $sponsorsObj = new sponsors;
+  $noOfSponsors = $sponsorsObj->countSponsor();
 
     if($status == 1) {
         // echo "<p>The form is Open for Registration</p>";
@@ -76,6 +79,10 @@ if($display["hasPic"] == 0) {
 	<title>Dashboard</title>
 	<link rel="icon" type="img/png" href="images/hng-favicon.png">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    
+    <!--This contains the styling for the side bar -->
+    <link href="css/dashboard.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+    
     <link href="css/dashboard2910.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 
 	<!-- Latest compiled and minified CSS -->
@@ -126,7 +133,7 @@ if($display["hasPic"] == 0) {
                               <ul class="dropdown-menu">
                                 <li><a href="adminProfile.php"><i class="fas fa-user-circle fw"></i> My account</a></li>
                                 <li><a href="#"><i class="fas fa-envelope fw"></i> My inbox</a></li>
-                                <li><a href="#"><i class="fas fa-question-circle fw"></i> Help</a></li>
+                                <!-- <li><a href="#"><i class="fas fa-question-circle fw"></i> Help</a></li> -->
                                 
                                 <li role="separator" class="divider"></li>
                                 <li><a href="./logout.php"><i class="fa fa-sign-out"></i> Log out</a></li>
@@ -214,7 +221,7 @@ if($display["hasPic"] == 0) {
             </section>
             <section class='statis text-center'>
                     <div class="container-fluid">
-                      <div class="row">
+                      <div class="row first">
                         <div class="col-md-3">
                         <a href="registered_interns.php">
                           <div class="box">
@@ -249,7 +256,7 @@ if($display["hasPic"] == 0) {
                         <a href="registered_sponsors.php">
                           <div class="box">
                             <i class="fas fa-hand-holding-usd"></i>
-                            <h3><?php echo  2 ?></h3>
+                            <h3><?php echo  $noOfSponsors; ?></h3>
                             <p class="lead">Registered Sponsors</p>
                           </div>
                           </a>
@@ -524,4 +531,5 @@ if($display["hasPic"] == 0) {
 </html>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+<script  type="text/javascript" src="js/sidebar.js"></script>
 <script type="text/javascript" src="js/dashboard2910.js"></script>

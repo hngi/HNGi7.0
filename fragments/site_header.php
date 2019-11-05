@@ -1,6 +1,15 @@
 <div class="container">
  <style type="text/css">
-
+    .primary-btn{
+        background: #00AEFF;    
+        transition: all 1s;
+        color: #fff;
+    }
+    .primary-btn:hover {
+        opacity: 1;
+        background: #0088C7;
+        color: white;
+    }
   @media (max-width: 420px) {
    #hng-logo {
     max-width: 100% !important;
