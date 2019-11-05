@@ -1,12 +1,10 @@
 <section id="sidebar">
-
-
-		<div class="nav">
-	<div class="badger">
+<div class="badger">
 			<h5 id="admin-badge">ADMINISTRATOR</h5>
-		</div>	
-	<div id="upper">
-
+		</div>
+		<div class="nav">
+<div id="upper">
+		
 		<?php
 		    if($_SESSION["hasPic"] == "no") {
 		        // admin has NO picture, show default
@@ -21,24 +19,29 @@
 		<!-- <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722683/mentors-first_qlquq9.png" height="110px"> -->
 		<div id="username"><?php echo $_SESSION["fullname"]; ?></div>
 	</div>
-	<hr id="hr1">
-	<nav id="lower">
-		<a class="active" href="dashboard.php">Dashboard</a>
-		
-		<a href="admins.php">Admins</a>
-		
-		<a href="registered_mentors.php">Mentors</a>
-		
-		<a href="registered_interns.php">Interns</a>
-		
-		<a href="internreview.php">Reviews</a>
-    
-    <a href="news_update.php">News Update</a> <!--Added news update to admin menu-->
-		
-		<a href="updateCountdown.php">Countdown</a>
-		
-		<a href="registered_sponsors.php">Sponsors</a>
-		
+	<div class="menu">
+		<li class="item" id="dashboard">
+			<a href="dashboard.php" class="btns menu-headings"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
+		</li>
+		<li class="item" id="users">
+			<a href="#users" class="btns menu-headings"><i class="fas fa-users"></i>Users<span class="chevron"></span></a>
+			<div class="submenu">
+				<a href="admins.php"><i class="fas fa-user-shield"></i>Admins</a>
+				<a href="registered_interns.php"> <i class="fas fa-user-graduate"></i>Interns</a>
+				<a href="registered_mentors.php"><i class="fas fa-hands-helping"></i>Mentors</a>
+			</div>
+		</li>
+		<li class="item" id="sponsors">
+			<a href="registered_sponsors.php" class="btns menu-headings"><i class="fas fa-hand-holding-usd"></i>Sponsors</a>
+		</li>
+		<li class="item" id="features">
+			<a href="#features" class="btns menu-headings"><i class="fas fa-tools"></i>Features<span class="chevron"></span></a>
+			<div class="submenu">
+				<a href="internreview.php"><i class="fas fa-history"></i>Reviews</a>
+				<a href="updateCountdown.php"><i class="far fa-clock"></i>CountDown</a>
+				<a class="news" href="news_update.php" ><i class="far fa-newspaper"></i>News Update</a>
+			</div>
+		</li>
         <?php
 			if($_SESSION["role"] == 1) {
 			    '<a href="admins.php">Admins</a>';
@@ -46,13 +49,14 @@
 			}
 		?>
 
-		<!-- <select>
-			<option selected="selected" disabled="disabled">Overview</option>
-			<option value="0">Mentors</option>
-			<option value="1">Users</option>
-		</select>
-		<a href="#">Advanced</a> -->
 		
-		<a href="./logout.php">Logout</a>
-	</nav>
+		<li class="item">
+			<a href="./logout.php" class="btns"><i class="fas fa-sign-out-alt"></i>Logout</a>
+		</li>
+     </div>
+	
+		
+       
+    
+		
 </section>

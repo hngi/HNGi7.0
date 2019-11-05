@@ -23,7 +23,7 @@ h1
 {
 	font-size: 25px;
 }
-}
+
 .center-text
 {
 	text-align: center;
@@ -389,7 +389,7 @@ h1
 
 #sidebar #lower #hr2 {
 	width: 80%;
-	border: 0.5px solid white
+	border: 0.5px solid white;
 	margin: 0.5rem;
 }
 
@@ -585,4 +585,106 @@ h1
     {
         left: 0;
     }
+}
+
+
+/* styling for new sidebar */
+.menu{
+    width: 100%;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 20px;
+    
+}
+.menu a{
+    text-decoration: none;
+    color: white;
+    padding-left: Calc(50% - 49px);
+}
+.menu a:hover{
+	color: #00aeff;
+}
+.item{
+   
+    border-top: 1px solid rgba(225,225,225,0.05);
+    overflow: hidden;
+    background: rgba(35,40,45,0);
+}
+
+
+.btns{
+    display: block;
+    padding: 16px 20px;
+    color: white;
+    position: relative;
+}
+
+.btns::before{
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #23282d;
+    left: 25px;
+    bottom: -7px;
+    transform: rotate(45deg);
+}
+.item span::after{
+    content: "\f078";
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    color:#00aeff;
+    padding-left: 7px;
+}
+.item.active span::after{
+    content: "\f077";
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+   
+}
+.btns i, .submenu i{
+    margin-right: 7px;
+}
+.submenu{
+    background: #313348;
+    overflow: hidden;
+    transition: max-height 0.3s;
+    max-height: 0;
+}
+.submenu a{
+    display: block;
+    padding: 16px 26px;
+    color: white;
+    font-size: 14px;
+    margin: 4px 0;
+    position: relative;
+}
+
+.item a:after{
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #00aeff;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+    opacity: 0;
+}
+.item a:hover::after{
+    opacity: 1;
+}
+
+.item.active .submenu{
+    max-height: 15em !important;
+} 
+
+@media (min-width:860px) and (max-width:1024px){
+	#sidebar a{
+		padding-left: 6px;
+		padding-right: 0px;
+	}
+	.news{
+		font-size: 15px;
+	}
 }
