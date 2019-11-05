@@ -110,7 +110,7 @@ $the_experience = $admin->fetchSingleExperience($id);
                         <div class="form-group">
                             <label for="stack">Stack</label>
                            
-                            <select class="interest form-control" name="stack" id="stack" required>
+                            <select class="interest form-control" name="stack" id="stack" required multiple>
                               <option value="" disabled selected hidden>Your Stack</option>
                               <option value="Backend">Backend</option>
                               <option value="DevOps">DevOps</option>
