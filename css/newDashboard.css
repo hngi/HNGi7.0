@@ -528,8 +528,10 @@ i:hover{
 	
 	#details-back{
 		
-		justify-self: self-end;
+		justify-self: self-start;
 		align-self: center;
+		margin-top: 3em;
+		zoom: 0.7;
 		/* margin-bottom: 0; */
 	}
 	#details-section
