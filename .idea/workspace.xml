@@ -2,59 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3340ae33-6e59-49ef-aaf7-8ef2d89eda61" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/sidebar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/5dbe73420139f2.84710591.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/interns/5dc0ad4b4492e6.52354261.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/sponsor-img/1477134951180542241images.hi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/sponsor-img/IMG_45u2nt.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/sponsor-img/John Ebri.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/sponsor-img/super - Copy.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/sponsor-img/super.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/add_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/add_admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admins.php" beforeDir="false" afterPath="$PROJECT_DIR$/admins.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classControllers/Admins.php" beforeDir="false" afterPath="$PROJECT_DIR$/classControllers/Admins.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classControllers/InternExperience.php" beforeDir="false" afterPath="$PROJECT_DIR$/classControllers/InternExperience.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classControllers/adminClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/classControllers/adminClass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classControllers/mailController.php" beforeDir="false" afterPath="$PROJECT_DIR$/classControllers/mailController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classControllers/sponsor.php" beforeDir="false" afterPath="$PROJECT_DIR$/classControllers/sponsor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/dashboard2910.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/dashboard2910.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/faq.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/faq.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/hngsix.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/hngsix.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/intern-experience.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/intern-experience.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/join-intern.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/join-intern.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/loginadmin.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/loginadmin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/mentorpage.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/mentorpage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/newDashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/newDashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/declined_interns.php" beforeDir="false" afterPath="$PROJECT_DIR$/declined_interns.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/declined_mentors.php" beforeDir="false" afterPath="$PROJECT_DIR$/declined_mentors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edit_experience.php" beforeDir="false" afterPath="$PROJECT_DIR$/edit_experience.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faq.php" beforeDir="false" afterPath="$PROJECT_DIR$/faq.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fragments/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/fragments/sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fragments/site_header.php" beforeDir="false" afterPath="$PROJECT_DIR$/fragments/site_header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hng6.php" beforeDir="false" afterPath="$PROJECT_DIR$/hng6.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/intern-experience.php" beforeDir="false" afterPath="$PROJECT_DIR$/intern-experience.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internreview.php" beforeDir="false" afterPath="$PROJECT_DIR$/internreview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/join-intern.php" beforeDir="false" afterPath="$PROJECT_DIR$/join-intern.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/dashboard2910.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/dashboard2910.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/mentorpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/mentorpage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/newDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/newDashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/new_admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/news_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newsponsor.php" beforeDir="false" afterPath="$PROJECT_DIR$/newsponsor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pending_interns.php" beforeDir="false" afterPath="$PROJECT_DIR$/pending_interns.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pending_mentors.php" beforeDir="false" afterPath="$PROJECT_DIR$/pending_mentors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registered_interns.php" beforeDir="false" afterPath="$PROJECT_DIR$/registered_interns.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registered_mentors.php" beforeDir="false" afterPath="$PROJECT_DIR$/registered_mentors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registered_sponsors.php" beforeDir="false" afterPath="$PROJECT_DIR$/registered_sponsors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resetpassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/resetpassword.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/superadmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/superadmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/updateCountdown.php" beforeDir="false" afterPath="$PROJECT_DIR$/updateCountdown.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fragments/subscribe.php" beforeDir="false" afterPath="$PROJECT_DIR$/fragments/subscribe.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,11 +19,13 @@
         <counts>
           <entry key="gitignore" value="2" />
           <entry key="js" value="3" />
+          <entry key="php" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JavaScript" value="3" />
+          <entry key="PHP" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
@@ -83,11 +33,13 @@
         <counts>
           <entry key="gitignore" value="51" />
           <entry key="js" value="32" />
+          <entry key="php" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JavaScript" value="32" />
+          <entry key="PHP" value="32" />
           <entry key="PLAIN_TEXT" value="51" />
         </counts>
       </usages-collector>
@@ -103,19 +55,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/mentorpage.js">
+        <entry file="file://$PROJECT_DIR$/fragments/subscribe.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="176" column="6" lean-forward="true" selection-start-line="176" selection-start-column="6" selection-end-line="176" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+            <state relative-caret-position="323">
+              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
             </state>
           </provider>
         </entry>
@@ -128,8 +71,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/mentorpage.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/js/mentorpage.js" />
+        <option value="$PROJECT_DIR$/fragments/subscribe.php" />
       </list>
     </option>
   </component>
@@ -163,6 +107,11 @@
             <path>
               <item name="HNGi7.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="HNGi7.0" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HNGi7.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HNGi7.0" type="462c0819:PsiDirectoryNode" />
+              <item name="fragments" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -209,16 +158,15 @@
       <option name="presentableId" value="Default" />
       <updated>1572672528055</updated>
       <workItem from="1572672548561" duration="1513000" />
-      <workItem from="1572977101383" duration="379000" />
+      <workItem from="1572977101383" duration="641000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2935000" />
+    <option name="totallyTimeSpent" value="3197000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24886535" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -249,13 +197,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/fragments/subscribe.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/mentorpage2.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -266,6 +207,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/mentorpage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="339" column="6" lean-forward="true" selection-start-line="339" selection-start-column="6" selection-end-line="339" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -273,10 +221,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/mentorpage.js">
+    <entry file="file://$PROJECT_DIR$/fragments/subscribe.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="176" column="6" lean-forward="true" selection-start-line="176" selection-start-column="6" selection-end-line="176" selection-end-column="6" />
+        <state relative-caret-position="323">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
         </state>
       </provider>
     </entry>
