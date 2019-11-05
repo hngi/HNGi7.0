@@ -76,6 +76,7 @@ section.jumbo {
   margin-bottom: 0;
   padding-bottom: 2rem;
   border-radius: 0.7rem;
+  height: 30rem;
 }
 
 .wrapper-child img {
@@ -85,10 +86,13 @@ section.jumbo {
 }
 
 .name {
-    font-size: 15px;
-    font-weight: 700px;
+    font-size: 1.2rem;
+    font-weight: 900px;
     margin-top: 8px;
     margin-bottom: -2px;
+    margin: auto 0.3rem;
+    padding: auto;
+    max-height: 3rem;
 }
 
 .stack {
@@ -96,10 +100,11 @@ section.jumbo {
   width: 150px;
   margin: auto;
   text-align: center;
-  font-size: 12px;
+  font-size: 1.1rem;
   margin-bottom: -12px;
   color: #007bff;
   margin-top: -10px;
+  height: 3rem;
 }
 
 hr {
@@ -112,8 +117,9 @@ hr {
   width: 200px;
   position: relative;
   margin: auto;
-  font-size: 13px;
+  font-size: 1rem;
   margin-top: -5px;
+  height: 10rem;
 }
 
 .experience::before {
