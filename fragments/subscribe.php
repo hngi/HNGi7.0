@@ -11,12 +11,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-<form action="" method="post">
+<form action="" method="post" id="subscribe-form">
     <div class="form-group">
-        <input type='email' class="form-control" required placeholder="enter your email" id="subscribe-form">
+        <input type="email" class="form-control" required placeholder="enter your email" id="subscribe-form">
     </div>
     <div class="form-group">
-        <button class="btn btn-primary" role="button" id="subscribe" style="background-color:#00AEFF; border: none">
+        <button type="submit" class="btn btn-primary" role="button" id="subscribe" style="background-color:#00AEFF; border: none">
             <i class="fa fa-envelope"></i> Follow Our Newsletter
         </button>
     </div>
@@ -26,7 +26,7 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
-        $("#subscribe").on("click",function (e) {
+        $("#subscribe-form").on("submit",function (e) {
             e.preventDefault();
            let email = $("#subscribe-form").val();
            if(email == ""){
