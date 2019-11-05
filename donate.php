@@ -79,7 +79,7 @@
 
     <section class="women">
       <figure>
-        <img src="https://hng.tech/app/img/support/intro.png" alt="Computer" />
+        <img src="https://res.cloudinary.com/cloud-y/image/upload/v1572988274/images_cq2tcg.jpg" alt="Computer" />
       </figure>
       <div class="text">
         <h3 class="title">Donate to specific groups</h3>
