@@ -117,7 +117,60 @@ h1
 	}
 }
 
+@media screen and (min-width: 315px) and (max-width: 800px) {
+	.prime-table td:nth-child(7),
+	.prime-table td:nth-child(8),
+	.prime-table td:nth-child(9) {
+		display: inline;
+		box-sizing: border-box;
+	}
+	.btn-success {
+		margin-left: 36%;
+	}
+}
 
+@media screen and (min-width: 351px) and (max-width: 400px) {
+	.btn-success {
+		margin-left: 38%;
+	}
+}
+
+@media screen and (device-width: 360px) {
+	.btn-success {
+		margin-left: 39%;
+	}
+}
+@media screen and (device-width: 375px) {
+	.btn-success {
+		margin-left: 44%;
+	}
+}
+@media screen and (min-width: 401px) and (max-width: 475px) {
+	.btn-success {
+		margin-left: 48%;
+	}
+}
+@media screen and (min-width: 476px) and (max-width: 609px) {
+	.btn-success {
+		margin-left: 55%;
+	}
+}
+@media screen and (min-width: 610px) and (max-width: 767px) {
+	.btn-success {
+		margin-left: 65%;
+	}
+}
+
+@media screen and (device-width: 768px) {
+	.btn-success {
+		margin-left: 72%;
+	}
+}
+@media screen and (min-width: 769px) and (max-width: 800px) {
+	.btn-success {
+		margin-left: 72%;
+	}
+}
 
 
 
