@@ -67,11 +67,9 @@ input:required {
 	color: grey;
 }
 
-.inputWithIcon input {
-}
-
 .full {
-	height: 74vh;
+	height: 50vh;
+	margin-top: 80px;
 }
 
 .small-swag {
