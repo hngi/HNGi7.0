@@ -100,8 +100,8 @@
   const mentorsArr = [
     {
       name: "Seyi Onifade",
-      stack: "Devops and CEO, HNG 6.0",
-      imgUrl: '"https://res.cloudinary.com/memz/image/upload/v1572710761/Mentors/Seyi_Onifade_u8pndn.jpg"'
+      stack: "Devops and CEO, HNG Tech",
+      imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572796363/Mentors/20191103_165148_auawdc.jpg"
     },
     {
        name: "Ephraim Aigbefo",
@@ -116,15 +116,15 @@
      {
        name: "Nedy Udombat",
        stack: "Fullstack Development",
-       imgUrl: '"https://res.cloudinary.com/memz/image/upload/v1572709768/Mentors/Nedy_ypwx7h.jpg"'
+       imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572709768/Mentors/Nedy_ypwx7h.jpg"
      },
      {
        name: "Ominiabohs David",
-       stack: "Backend Development and Digital Marketing",
+       stack: "Backend Dev. and Digital Marketing",
        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572709814/Mentors/David_orphejjshasu_ib0liq.jpg"
      },
      {
-       name: "idris Lawal",
+       name: "Idris Lawal",
        stack: "Backend Development",
        imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572709894/Mentors/Idris2_nfne5a.jpg"
      },
@@ -146,7 +146,7 @@
      {
        name: "Victor Ugwueze",
        stack: "Backend Development and Devops",
-       imgUrl: 'https://res.cloudinary.com/memz/image/upload/v1572709971/Mentors/Victor_Ugwu_ojtwyy.jpg""'
+       imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572786926/Mentors/Victor_Ugwueze_qwmfgu.jpg"
      },
      {
        name: "Tobi Anifowose",
@@ -161,7 +161,7 @@
      {
        name: "Chinedu Ebinim",
        stack: "Backend Development",
-       imgUrl: 'https://res.cloudinary.com/memz/image/upload/v1572710042/Mentors/Chinedu_Ebinim_g3phzf.jpg""'
+       imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710042/Mentors/Chinedu_Ebinim_g3phzf.jpg"
      },
      {
        name: "Wisdom Ebong",
@@ -176,7 +176,7 @@
      {
        name: "Victor Akintunde",
        stack: "Frontend Development and Design",
-       imgUrl: 'https://res.cloudinary.com/memz/image/upload/v1572710087/Mentors/Akintunde_vic_tzhhlw.jpg""'
+       imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710087/Mentors/Akintunde_vic_tzhhlw.jpg"
      },
      {
        name: "Oghenero Paul-Ejukorlem",
@@ -191,7 +191,7 @@
      {
        name: "Tomisin Lalude",
        stack: "Frontend Development",
-       imgUrl: 'https://res.cloudinary.com/memz/image/upload/v1572710145/Mentors/Tomisin_olpwrk.jpg""'
+       imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710145/Mentors/Tomisin_olpwrk.jpg"
      },
      {
        name: "Edmond Ekott",
@@ -206,7 +206,7 @@
      {
        name: "Samuel Weke",
        stack: "Frontend Development",
-       imgUrl: 'https://res.cloudinary.com/memz/image/upload/v1572710186/Mentors/Samuel_weke_w12cdg.jpg""'
+       imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710186/Mentors/Samuel_weke_w12cdg.jpg"
      },
       {
        name: "Austin Asoluka",
@@ -221,7 +221,7 @@
       {
        name: "Onyebinamma Ebuka Peter",
        stack: "Frontend Development",
-       imgUrl: 'https://res.cloudinary.com/memz/image/upload/v1572710244/Mentors/Onyebinamma_hq11xg.jpg""'
+       imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710244/Mentors/Onyebinamma_hq11xg.jpg"
      },
      {
        name: "Jeffrey Ogah",
@@ -236,7 +236,7 @@
      {
        name: "Sherif Dauda",
        stack: "Design",
-       imgUrl: 'https://res.cloudinary.com/memz/image/upload/v1572710330/Mentors/Sherif_acatts.jpg""'
+       imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710330/Mentors/Sherif_acatts.jpg"
      },
      {
        name: "Chukwuemeka Iheonye",
@@ -251,7 +251,7 @@
       {
        name: "Ife Olusola",
        stack: "Design",
-       imgUrl: 'https://res.cloudinary.com/memz/image/upload/v1572710365/Mentors/Ife_axq8kn.jpg""'
+       imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710365/Mentors/Ife_axq8kn.jpg"
      },
      {
        name: "Iyabode Atoyebi",
@@ -266,7 +266,7 @@
      {
        name: "Chiamaka Osumgba",
        stack: "Frontend Development and Devops",
-       imgUrl: 'https://res.cloudinary.com/memz/image/upload/v1572710412/Mentors/Chaimaka_vm3zwx.jpg""'
+       imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710412/Mentors/Chaimaka_vm3zwx.jpg"
      },
       {
        name: "Tobiloba Williams",
@@ -281,7 +281,7 @@
      {
        name: "Adolphus Chris",
        stack: "Design and Mobile Development",
-       imgUrl: 'https://res.cloudinary.com/memz/image/upload/v1572710472/Mentors/Adolphus_cpvncb.jpg""'
+       imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710472/Mentors/Adolphus_cpvncb.jpg"
      },
      {
        name: "Kelvin Pere",
@@ -296,7 +296,7 @@
      {
        name: "David Ibukun Kuforiji",
        stack: "Mobile Development",
-       imgUrl: 'https://res.cloudinary.com/memz/image/upload/v1572710582/Mentors/Kuforiji_slicer.jpg""'
+       imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710582/Mentors/Kuforiji_slicer.jpg"
      },
      {
        name: "Frank Arinze",
@@ -311,7 +311,7 @@
       {
        name: "Edidiong Ekut",
        stack: "Machine Learning",
-       imgUrl: 'https://res.cloudinary.com/memz/image/upload/v1572710660/Mentors/Edidiong_qnat7x.jpg""'
+       imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710660/Mentors/Edidiong_qnat7x.jpg"
      },
      {
        name: "Munirat Sulaimon",
@@ -326,7 +326,7 @@
      {
       name: "Oluwaseyi Oluwapelumi",
       stack: "Devops",
-      imgUrl: 'https://res.cloudinary.com/memz/image/upload/v1572710699/Mentors/Oluwaseyi_dgvqdm.jpg""'
+      imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572710699/Mentors/Oluwaseyi_dgvqdm.jpg"
     },
     {
       name: "Paul Rapuluchukwu",
@@ -341,7 +341,7 @@
      {
       name: "Jesutomiwa Salam",
       stack: "Backend Development",
-      imgUrl: 'https://res.cloudinary.com/memz/image/upload/v1572723180/Mentors/Jesutomiwa_su6cnb.jpg""'
+      imgUrl: "https://res.cloudinary.com/memz/image/upload/v1572723180/Mentors/Jesutomiwa_su6cnb.jpg"
     },
     {
       name: "Obinna Dennis Okoh",

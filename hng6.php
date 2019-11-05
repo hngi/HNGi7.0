@@ -206,9 +206,9 @@ $countDownValues = $countdown->getDate();
                     <div id="mentor-flex">
                         <div id="mentor-div">
                             <img
-                                src="https://res.cloudinary.com/memz/image/upload/v1572710761/Mentors/Seyi_Onifade_u8pndn.jpg">
+                                src="https://res.cloudinary.com/memz/image/upload/v1572796363/Mentors/20191103_165148_auawdc.jpg">
                            <p class="mentor-name center-text">Seyi Onifade</p>
-                            <p class="mentor-desc center-text">Devops and CEO, HNG 6.0</p>
+                            <p class="mentor-desc center-text">Devops and CEO, HNG Tech</p>
                         </div>
                         <div id="mentor-div">
                             <img
