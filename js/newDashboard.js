@@ -292,7 +292,7 @@
 
 
   body.addEventListener('click',(e)=>{
-      console.log(true)
+     
     const overlay = document.querySelector('#overlay');
     const exportModal = document.querySelector('#export-modal');
     const photo = document.querySelector('#photo')
@@ -320,7 +320,7 @@
                 }, 2000)
             }
         }else if(e.target.tagName === 'TD'){
-            console.log('I came here')
+            
             iterateRow(e)
             
         }else if(e.target.classList.contains("right")){
@@ -345,7 +345,7 @@
         }else if(e.target.className === "details-back"){
             document.getElementById("details-section").style.left = "105vw"
         }
-        console.log(e.target.id)
+        
 
   })
 
