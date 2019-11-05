@@ -442,6 +442,9 @@ h1
 		padding: 0.5rem;
 		min-height: 100vh;
 	}
+	.badger{
+		height: 59.5px;
+	}
 	#overview-section
 	{
 		margin: 0 2rem;
@@ -566,7 +569,7 @@ h1
 	color: #00aeff;
 }
 .item{
-   
+	
     border-top: 1px solid rgba(225,225,225,0.05);
     overflow: hidden;
     background: rgba(35,40,45,0);
@@ -591,11 +594,12 @@ h1
     transform: rotate(45deg);
 }
 .item span::after{
+	position: absolute;
     content: "\f078";
     font-family: "Font Awesome 5 free";
     font-weight: 900;
-    color:#00aeff;
-    padding-left: 7px;
+	color:#00aeff;
+	left: 80%;
 }
 .item.active span::after{
     content: "\f077";
