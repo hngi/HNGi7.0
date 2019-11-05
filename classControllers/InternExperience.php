@@ -5,7 +5,7 @@ class InternExperience
 
     public function saveExperience($names,$stack,$fileDe,$experience){
         global $database;
-        $sql = "INSERT INTO intern_experience(names,stack,image,experience,status) VALUES('$names','$stack','$image','$experience','0')";
+        $sql = "INSERT INTO intern_experience(names,stack,image,experience,status) VALUES('$names','$stack','$fileDe','$experience','0')";
         $query = $database->query($sql);
         return $query;
     }
