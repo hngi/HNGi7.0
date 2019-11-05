@@ -172,7 +172,7 @@
 			<p class="details">Email: <span id="email"></span></p>
 			<p class="details">Phone Number: <span id="phone"></span></p>
 			<p class="details">CV Link: <span id="cv"></span></p>
-			<p class="details">Experience: <span id="experience"></span></p>
+			<!-- <p class="details">Experience: <span id="experience"></span></p> -->
             <p class="details">Interest: <span id="interest"></span></p>
             <p class="details">Location: <span id="location"></span></p>
             <p class="details">Employment Status: <span id="employmentStatus"></span></p>
@@ -203,4 +203,5 @@
 <script src="js/jspdf.js"></script>
 <script src="js/jspdf.plugin.autotable.min.js"></script>
 <script src="js/paginator.js"></script>
+<script  type="text/javascript" src="js/sidebar.js"></script>
 <script type="text/javascript" src="js/newDashboard.js"></script>

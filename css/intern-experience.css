@@ -17,6 +17,46 @@ a {
   position: relative;
 }
 
+section.jumbo {
+  background: #d1f0f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 0px;
+ }
+
+ section.jumbo > h2.heading {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  text-align: center;
+  color: #084482;
+  padding-top: 50px;
+ }
+
+ section.jumbo > p.para {
+   font-weight: normal;
+   font-size: 1rem;
+   text-align: center;
+   color: #474747;
+ }
+
+ section.jumbo > p.para > a {
+   text-decoration: underline;
+   color: #00AEFF;
+   font-weight: 600;
+ }
+
+ section.jumbo > p.para > a:hover {
+   text-decoration: underline;
+   color: #084482;
+   transition: all 0.5s ease-in-out;
+   font-weight: 600;
+ }
+
 .mentors-section {
   text-align: center;
 }
@@ -36,13 +76,23 @@ a {
   margin-bottom: 0;
   padding-bottom: 2rem;
   border-radius: 0.7rem;
+  height: 30rem;
+}
+
+.wrapper-child img {
+  border-radius: 50%;
+  width: 15rem;
+  height: 15rem;
 }
 
 .name {
-    font-size: 15px;
-    font-weight: 700px;
+    font-size: 1.2rem;
+    font-weight: 900px;
     margin-top: 8px;
     margin-bottom: -2px;
+    margin: auto 0.3rem;
+    padding: auto;
+    max-height: 3rem;
 }
 
 .stack {
@@ -50,10 +100,11 @@ a {
   width: 150px;
   margin: auto;
   text-align: center;
-  font-size: 12px;
+  font-size: 1.1rem;
   margin-bottom: -12px;
   color: #007bff;
   margin-top: -10px;
+  height: 3rem;
 }
 
 hr {
@@ -66,8 +117,9 @@ hr {
   width: 200px;
   position: relative;
   margin: auto;
-  font-size: 13px;
+  font-size: 1rem;
   margin-top: -5px;
+  height: 10rem;
 }
 
 .experience::before {
@@ -90,17 +142,6 @@ hr {
 
 .social-icons {
   margin-top: 46.75px;
-}
-
-span {
-  color: #ffffff;
-  padding: 0.7rem 0.9rem;
-  /* //background: #FB6340; */
-  box-shadow: 0px 4px 4px rgba(50, 50, 93, 0.11),
-    0px 1px 3px rgba(0, 0, 0, 0.08);
-  margin: 0 14.5px;
-  border-radius: 50%;
-  text-align: center;
 }
 
 .navbar-toggler-icon {
@@ -170,7 +211,6 @@ section.jumb {
  font-style: normal;
  font-weight: 600;
  font-size: 30px;
- line-height: 54px;
  text-align: center;
  color: #084482;
  padding-top: 50px;
@@ -360,39 +400,42 @@ h4 {
 
 
 .navigation {
-  padding-left: 40px !important;
-  padding-right: 40px !important;
   background: #d1f0f6;
  }
 
 @media (max-width: 759px) {
-
- .navigation {
-   padding-left: 15px !important;
-   padding-right: 15px !important;
- }
 }
 
 
 /* MODAL FORM STYLING HERE */
 
 #submitExperience {
-  position: Fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   margin: 0 auto;
   z-index: 2;
-  background-color: white;
+  background-color: transparent;
   padding-top: 100px;
   display: none;
 }
 
 .modal-content {
-  border: 3px solid green;
+  border: 3px solid #00AEFF;
   box-shadow: 3px 3px 5px grey;
   width: 90%;
   margin: 0 auto;
   margin-top: -60px;
+}
+
+.modal-button {
+  background-color: #00AEFF;
+  border-color: #00AEFF;
+}
+
+.modal-button:hover {
+  background-color: #00AEFF;
+  border-color: #00AEFF;
 }

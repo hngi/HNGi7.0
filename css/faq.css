@@ -1,6 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap');
 
+.navigation {
+  background: #d1f0f6;
+  margin: 0 !important;
+  padding: 0 !important;
+ }
+
+ .navbar-toggler-icon {
+  border-radius: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+
+
 .header_container {
   background-color: #D1F0F6;
   text-align: center;
@@ -14,6 +28,17 @@
 
 .header_container p {
   color: #474747;
+}
+
+#nav {
+  background-color: #d1f0f6;
+  color: #474747;
+  font-weight: bold;
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
 }
 
 
@@ -70,11 +95,6 @@
 .freq-n h3{
 text-transform: capitalize;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0ac0d145fe9cd6c5cca978e39732513583334f8d
 
 #btn-here{
   background-color: #00AEFF;
@@ -83,11 +103,7 @@ text-transform: capitalize;
 #btn-here:hover{
     opacity: .5;
     color: white;
-
-<<<<<<< HEAD
->>>>>>> 27b1f149cdc2c3d6702a3991c0825f4d6d064c0f
-=======
->>>>>>> 0ac0d145fe9cd6c5cca978e39732513583334f8d
+}
 .freq-n h3 a {
   color: white;
   background-color: #00AEFF;
@@ -96,12 +112,12 @@ text-transform: capitalize;
 .freq-n h3 a:hover {
   color: white;
   opacity: .7;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+}
 
->>>>>>> 27b1f149cdc2c3d6702a3991c0825f4d6d064c0f
-=======
-
->>>>>>> 0ac0d145fe9cd6c5cca978e39732513583334f8d
+.contact-heading {
+  font-weight:bold;
+  font-size: 25px;
+  text-align: center;
+  line-height: 32px;
+  color: #084482;
 }

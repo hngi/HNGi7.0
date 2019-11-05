@@ -24,8 +24,12 @@
 </head>
 
 <body>
+
+<section class="navigation">
+   <?php include('fragments/site_header.php'); ?>
+</section>
+
     <div class="header_container">
-        <?php include('fragments/site_header.php'); ?>
         <section class="hero pt-4">
             <div class="container">
                 <div class="wrap my-5">
@@ -37,6 +41,7 @@
         </section>
     </div>
 
+    <div class="container">
     <div class="col-md-12 text-black">
         <div class="">
             <div id="accordion" class="myaccordion">
@@ -130,15 +135,7 @@
                 </div>
 
                 <div class="card">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    <div class="card-header" id="headingFour">
-=======
                     <div class="card-header" id="headingFive">
->>>>>>> 27b1f149cdc2c3d6702a3991c0825f4d6d064c0f
-=======
-                    <div class="card-header" id="headingFive">
->>>>>>> 0ac0d145fe9cd6c5cca978e39732513583334f8d
                         <h2 class="mb-0">
                                 <button class="btn btn-link collapsed"
                                 data-toggle="collapse" data-target="#collapseFive" aria-expanded="false"
@@ -161,15 +158,7 @@
                 </div>
 
                 <div class="card">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    <div class="card-header" id="headingFour">
-=======
                     <div class="card-header" id="headingSix">
->>>>>>> 27b1f149cdc2c3d6702a3991c0825f4d6d064c0f
-=======
-                    <div class="card-header" id="headingSix">
->>>>>>> 0ac0d145fe9cd6c5cca978e39732513583334f8d
                         <h2 class="mb-0">
                                 <button class="btn btn-link collapsed"
                                 data-toggle="collapse" data-target="#collapseSix" aria-expanded="false"
@@ -198,8 +187,8 @@
         <div class="container">
             <div class="wrap" style="width: 100%;">
                 <div class="header mb-5">
-                    <h3 class="text-center">not a frequently asked question?<br />
-                        contact us <a href="contactform.php" class="btn">Here</a>
+                    <h3 class="text-center contact-heading">not a frequently asked question?<br />
+                        Contact Us <a href="contactform.php" class="btn contact-us">Here</a>
                     </h3>
                 </div>
                 <!-- <form class="inputs-wrap">
@@ -213,11 +202,10 @@
             </div>
         </div>
     </section>
+    </div>
 
-
-
+    
     <?php include('fragments/site_footer.php'); ?>
-
 </body>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/main.js"></script>

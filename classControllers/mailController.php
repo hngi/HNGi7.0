@@ -6,42 +6,47 @@ use PHPMailer\PHPMailer\Exception;
 require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
-// require '../config/database.php';
+
+//require 'config/constants.php';
+
+
+
 
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer(true);
 
-function sendNewAdminMail($email, $subject, $body){
-    global $mail;
+function sendNewAdminMail($email, $subject, $body)
+{
+  global $mail;
 
 
-    try {
-      //Server settings
-      $mail->isSMTP();                                            // Set mailer to use SMTP
-      $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
-      $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-      $mail->Username = 'alisataylorm.m@gmail.com';
-      $mail->Password = 'alisa1074';                               // SMTP password
-      $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
-      $mail->Port       = 587;                                    // TCP port to connect to
+  try {
+    //Server settings
+    $mail->isSMTP();                                            // Set mailer to use SMTP
+    $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+    $mail->Username = 'alisataylorm.m@gmail.com';
+    $mail->Password = 'alisa1074';                               // SMTP password
+    $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
+    $mail->Port       = 587;                                    // TCP port to connect to
 
-      //Recipients
-      $mail->setFrom('alisataylorm.m@gmail.com', 'HNG SUPPER ADMIN');
-      $mail->addAddress("$email");     // Add a recipient
-      // $mail->addAddress('ellen@example.com');               // Name is optional
-      $mail->addReplyTo('no-reply@gmail.com', 'No-Reply');
-      // $mail->addCC('cc@example.com');
-      // $mail->addBCC('bcc@example.com');
+    //Recipients
+    $mail->setFrom('alisataylorm.m@gmail.com', 'HNG SUPPER ADMIN');
+    $mail->addAddress("$email");     // Add a recipient
+    // $mail->addAddress('ellen@example.com');               // Name is optional
+    $mail->addReplyTo('no-reply@gmail.com', 'No-Reply');
+    // $mail->addCC('cc@example.com');
+    // $mail->addBCC('bcc@example.com');
 
-      // Attachments
-      // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-      // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+    // Attachments
+    // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+    // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 
-      // Content
-      
-      $mail->isHTML(true);                                  // Set email format to HTML
-      $mail->Subject = $subject;
-      $mail->Body    = "$body
+    // Content
+
+    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->Subject = $subject;
+    $mail->Body    = "$body
                     <tr>
       <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
                         <b style='color:seablue;'>Email: $email <br></b> <br> <a href='https://hngi7.hng.tech/forgotpassword.php'>Follow this link to request for a password</a>
@@ -82,12 +87,12 @@ function sendNewAdminMail($email, $subject, $body){
   </body>
   </html>";
 
-      $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-      $mail->send();
-    } catch (Exception $e) {
-      echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-    }
+    $mail->send();
+  } catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+  }
 }
 
 
@@ -204,7 +209,7 @@ function contactMail($email, $ticket, $name, $subject, $body)
 
 
 //for contact us form
-function forGetPasswordMail($url,$subject,$email,$fullname)
+function forGetPasswordMail($url, $subject, $email, $body)
 {
   global $mail;
 
@@ -220,19 +225,19 @@ function forGetPasswordMail($url,$subject,$email,$fullname)
     $mail->Port       = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('alisataylorm.m@gmail.com',$url);
+    $mail->setFrom('alisataylorm.m@gmail.com', 'HNG 7.0');
     $mail->addAddress("$email");     // Add a recipient
     // $mail->addAddress('ellen@example.com');               // Name is optional
     $mail->addReplyTo('no-reply@gmail.com', 'No-Reply');
-      // $mail->addCC('cc@example.com');
-      // $mail->addBCC('bcc@example.com');
+    // $mail->addCC('cc@example.com');
+    // $mail->addBCC('bcc@example.com');
 
-      // Attachments
-      // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-      // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+    // Attachments
+    // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+    // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 
-      // Content
-    ;
+    // Content
+    $url = $url;
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = $subject;
     $mail->Body    = "<html>
@@ -255,16 +260,13 @@ function forGetPasswordMail($url,$subject,$email,$fullname)
                   <table border='0' cellpadding='0' cellspacing='0' width='100%'>
                     <tr>
                       <td style='color: #153643; font-family: Arial, sans-serif; font-size: 24px;'>
-                        <b>Dear, $fullname </b>
+                        <b>Dear, user </b>
                       </td>
                     </tr>
                   <tr>
     <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
                       
-                       <p>You recently requested to reset your password for your HNGi account.<br>
-                        Use the link below to reset it.<br>
-                        This password reset is only valid for the next 24 hours.
-                        Reset your password <br><br></p>
+                       <p>$body</p>
 
                        <p>For security, If you did not request a password reset, please ignore this email or <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
 
@@ -311,56 +313,56 @@ function forGetPasswordMail($url,$subject,$email,$fullname)
   </body>
   </html>";
 
-      $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-      $mail->send();
-    } catch (Exception $e) {
-      echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-    }
+    $mail->send();
+  } catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+  }
 }
 
 
 
-function send_general_email($subject,$email,$message, $bcc = false) //Add blind copy to email
+function send_general_email($subject, $email, $message, $bcc = false) //Add blind copy to email
 { //function to send
-    global $mail;
+  global $mail;
 
 
-      try {
-          //Server settings
-          $mail->isSMTP();                                            // Set mailer to use SMTP
-          $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
-          $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-          $mail->Username = 'alisataylorm.m@gmail.com';
-          $mail->Password = 'alisa1074';                              // SMTP password
-          $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
-          $mail->Port       = 587;                                    // TCP port to connect to
+  try {
+    //Server settings
+    $mail->isSMTP();                                            // Set mailer to use SMTP
+    $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+    $mail->Username = 'alisataylorm.m@gmail.com';
+    $mail->Password = 'alisa1074';                              // SMTP password
+    $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
+    $mail->Port       = 587;                                    // TCP port to connect to
 
-          $url = "https://".$_SERVER['HTTP_HOST'];
+    $url = "https://" . $_SERVER['HTTP_HOST'];
 
-          //Recipients
-          $mail->setFrom('alisataylorm.m@gmail.com',"HNGi7");
-          $mail->addAddress("$email");     // Add a recipient
-          // $mail->addAddress('ellen@example.com');               // Name is optional
-          $mail->addReplyTo('no-reply@gmail.com', 'No-Reply');
-          // $mail->addCC('cc@example.com');
-          // $mail->addBCC('bcc@example.com');
+    //Recipients
+    $mail->setFrom('alisataylorm.m@gmail.com', "HNGi7");
+    $mail->addAddress("$email");     // Add a recipient
+    // $mail->addAddress('ellen@example.com');               // Name is optional
+    $mail->addReplyTo('no-reply@gmail.com', 'No-Reply');
+    // $mail->addCC('cc@example.com');
+    // $mail->addBCC('bcc@example.com');
 
-          if(is_array($bcc)){
-              foreach ($bcc as $bc){
-                  $mail->addBCC("$bc");
-              }
-          }
+    if (is_array($bcc)) {
+      foreach ($bcc as $bc) {
+        $mail->addBCC("$bc");
+      }
+    }
 
-          // Attachments
-          // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-          // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+      // Attachments
+      // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+      // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 
-          // Content
-          ;
-          $mail->isHTML(true);                                  // Set email format to HTML
-          $mail->Subject = $subject;
-          $mail->Body    = "<html>
+      // Content
+    ;
+    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->Subject = $subject;
+    $mail->Body    = "<html>
       <head>
       <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
       <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
@@ -424,12 +426,12 @@ function send_general_email($subject,$email,$message, $bcc = false) //Add blind 
   </body>
   </html>";
 
-          $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-          $mail->send();
-      } catch (Exception $e) {
-          echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-      }
+    $mail->send();
+  } catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+  }
 }
 
 //Function to send New Interns Mail on Successful Registration
@@ -709,7 +711,7 @@ function acceptInternMail($email, $fullname, $body)
                   <table border='0' cellpadding='0' cellspacing='0' width='100%'>
                     <tr>
                       <td style='color: #153643; font-family: Arial, sans-serif; font-size: 24px;'>
-                        <b>Dear, $fullname</b>
+                        <b>Dear, User</b>
                       </td>
                     </tr>
                    
@@ -826,7 +828,7 @@ function   rejectMentorMail($body, $fullname, $email)
                   <table border='0' cellpadding='0' cellspacing='0' width='100%'>
                     <tr>
                       <td style='color: #153643; font-family: Arial, sans-serif; font-size: 24px;'>
-                        <b>Dear, $fullname</b>
+                        <b>Dear, user</b>
                       </td>
                     </tr>
                    
@@ -938,7 +940,7 @@ function   acceptMentorMail($body, $fullname, $email)
                   <table border='0' cellpadding='0' cellspacing='0' width='100%'>
                     <tr>
                       <td style='color: #153643; font-family: Arial, sans-serif; font-size: 24px;'>
-                        <b>Dear, $fullname</b>
+                        <b>Dear, user</b>
                       </td>
                     </tr>
                    

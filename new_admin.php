@@ -3,7 +3,7 @@
     $admin = new Admins();
 
     if(!isset($_SESSION["role"])) {
-        header('Location:admin_login'); 
+        header('Location:login.php');
     }
 
     if(isset($_POST["submit"])) {
@@ -41,7 +41,7 @@
 			margin: 15px;
 			padding: 10px;
 			border-radius: 15px;
-			
+
 		}
 	</style>
 
@@ -53,7 +53,7 @@
             <br><br>
 			<h2>Register a new Admin </h2>
 			<!-- <section id="intern-section">
-				Populated by `js/dashboard.js` 
+				Populated by `js/dashboard.js`
 			</section> -->
 
 			<div class="container">
@@ -93,12 +93,12 @@
 
                             <button type="submit" class="btn btn-primary" name="submit">Submit</button>
                         </form>
-                    </div> 
+                    </div>
 				</div>
 			</div>
 
 			<!-- <button id="export">Export to Spreadsheet</button> -->
-		
+
 		</section>
 		<!-- <section id="details-section">
 			<div id="details-back">
@@ -128,7 +128,7 @@
         <div class="stix" id="stik2"></div>
         <div class="stix" id="stik3"></div>
     </label>
-    
+
     <?php include('fragments/sidebar.php'); ?>
 
 </body>
