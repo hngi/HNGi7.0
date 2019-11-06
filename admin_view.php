@@ -51,7 +51,9 @@ if (isset($_GET["editAdminId"])) {
         <!-- <h1>Dashboard</h1> -->
         <br><br>
 
-          <h2 class="col-12 text-center admin__details" style="padding-left:15px">Admin Details </h2>
+          <h2 class="col-12 text-center admin__details" style="padding-left:15px">Admin Details
+          <hr class="border__bottom">
+          </h2>
 
         <!-- <section id="intern-section">
             Populated by `js/dashboard.js`
