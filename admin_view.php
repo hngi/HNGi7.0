@@ -21,6 +21,7 @@ if (isset($_GET["editAdminId"])) {
     <title>View Admin</title>
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
     <link rel="stylesheet" href="css/dashboard.css">
+  	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -51,7 +52,7 @@ if (isset($_GET["editAdminId"])) {
             <br><br>
             <h2>Admin Details </h2>
             <!-- <section id="intern-section">
-                Populated by `js/dashboard.js` 
+                Populated by `js/dashboard.js`
             </section> -->
 
             <div class="container">
@@ -142,3 +143,4 @@ if (isset($_GET["editAdminId"])) {
 </html>
 
 <script type="text/javascript" src="js/dashboard.js"></script>
+<script  type="text/javascript" src="js/sidebar.js"></script>
