@@ -1,0 +1,90 @@
+.cards {
+    width: 100%;
+    background-color: rgb(212, 206, 206);
+    box-shadow: silver;
+    position: relative; 
+    margin-top: -5px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.image{
+    width: 100%;
+    position: relative;
+}
+
+.image img{
+    max-height: 200px;
+    overflow: hidden;
+}
+.heading h3 {
+    position: absolute;
+    top: 10%;
+    right: 30%;
+    /* transform: transla te(-50% , -50%); */
+}
+.heading h5{
+    position: absolute;
+    top: 15%;
+    right: 25%;
+}
+.heading {
+    text-align: center;
+    /* position: absolute;
+    top: 0; */
+}
+.heading p {
+    padding: 10px;
+}
+
+.images{
+    width: 50%;
+    margin-left: 25%;;
+}
+
+.para{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.para p{
+    padding: 10px;
+}
+.button{
+    background-color: black;
+    color: white;
+    box-shadow: black;
+    padding: .5em 2em
+}
+
+@media only screen and (min-width: 650px){
+    .heading p, .para p {
+       font-size: 1.6em;
+    }
+    .heading h3, .heading h5{
+        font-size: 50px;
+    }
+    .button{
+       font-size: 25px;
+    }
+
+    
+}
+ @media only screen and (min-width: 1024px){ 
+     .images2 {
+         margin: -40px;
+     }
+     .images3 {
+         margin: -10px;
+     }
+    .heading p, .para p {
+        font-size: .9em;
+     }
+     .heading h3, .heading h5{
+         font-size: 20px;
+     }
+     .button{
+        font-size: 25px;
+     }
+     .button{
+        font-size: 15px;
+     }
+}

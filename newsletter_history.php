@@ -31,6 +31,7 @@ $all_news = $newsletter->fetch_newsletter();
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/newsletter_fixed.css">
 
     <style type="text/css">
         .card {
@@ -61,7 +62,7 @@ $all_news = $newsletter->fetch_newsletter();
 
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-9">
+                <div class="col-md-12">
                     <div class="row">
                         <?php
                             if(is_array($all_news)){
