@@ -173,6 +173,7 @@ h1
 }
 
 
+
 .stix
 {
     border-radius: 3px;
@@ -190,8 +191,7 @@ h1
 	background-color: #00aeff;
 	border: none;
 	letter-spacing: 3px;
-	font-weight: bold;
-	color: rgb(65, 65, 65)
+
 	color: #fff;
 	border-radius: none;
 	margin-bottom: 5em;
@@ -201,31 +201,9 @@ h1
 }
 
 .nav {
-	position: relative;
-	top: 50px;
-}
-
-@media screen and (min-width:300px) and (max-width:450px) {
-	#admin-badge {
-		font-size: 10px;
-		font-weight: bold;
-	}
-
-}
-
-@media screen and (min-width: 861px) and (max-width: 1081px) {
-	#admin-badge {
-		font-size: calc(1vw + 1px);
-		
-	}
-/*
 	background-color: #23282d;
 	color: #fff;
-	background-color: #23282d;
-	color: #fff;
-
 }
-
 
 #mobile-bars-check
 {
@@ -394,7 +372,6 @@ h1
 /* Sidebar begins here */
 #sidebar
 {
-	background: #2b2f30;
 	background-color: #23282d;
 	color: #fff;
 	position: fixed;
@@ -403,7 +380,6 @@ h1
 	z-index: 1;
 	height: 100vh;
 	width: 15vw;
-	overflow: hidden;
 	padding-top: 1.5rem;
 }
 #sidebar #upper
@@ -428,43 +404,20 @@ h1
 
 #sidebar #upper #username
 {
-
-	font-size: 10px;
-	letter-spacing: 3px;
-	color: #535353;
-	font-weight: bold;
-	margin-top: 10px;
-	font-family: Helvetica;
-	line-height: 25px;
-	text-shadow: 1px 1px 3px rgba(2, 2, 2, 0.3);
-	text-transform: uppercase;
-	
-}
-
-/*
-
-#sidebar #hr1, #sidebar #hr2 {
-	border: 0.25px solid rgb(70, 69, 69);
-
 	font-size: 1.7rem;
 	color: #535353;
 }
-
-*/
 
 #sidebar #hr1 {
 	border: 0.25px solid rgb(70, 69, 69);
-	width: 100%;
-	font-size: 1.7rem;
 	width: 80%;
-
 }
 
 #sidebar #lower #hr2 {
 	width: 80%;
-	border: 0.5px solid white;
 	border: 0.5px solid transparent;
 	margin: 0.5rem;
+
 }
 
 #sidebar #lower
@@ -509,21 +462,10 @@ h1
 #sidebar a
 {
 	text-decoration: none;
-	color: #3d3c3c;
-	font-weight: bold;
-
 	font-size: 16px;
 }
 /* AuGhost Touches */
 
-
-
-/* AuGhost Touches */ 
-#sidebar a:hover {
-	background-color: rgb(34, 34, 34);
-	color: #fff;
-	border-left: 3px solid #00aeff;
-}
 
 
 /*
@@ -619,8 +561,6 @@ h1
 
 	#sidebar
 	{
-		position: relative;
-		top: 40px;
 		width: 50vw;
 		left: -100vw;
 		transition: 0.4s ease-out;
