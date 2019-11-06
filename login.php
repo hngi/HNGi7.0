@@ -84,8 +84,10 @@ if (isset($_POST['login'])) {
       </div>
       <button type="submit" onclick="signup()" name="login">LOGIN</button>
       <span class="loginWithGoogle">
+        <br>
         <a href=""><i class="fab fa-goodreads"></i>Login With Google</a>
       </span>
+      <br>
       <span class="swag-daddy">
         <a href="forgotpassword.php" class="small-swag small-text">Forgot Password?</a>
       </span>
