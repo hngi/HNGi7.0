@@ -5,12 +5,12 @@ class InternExperience
 
     public function saveExperience($names,$stack,$fileDe,$experience){
         global $database;
-        $sql = "INSERT INTO intern_experience(names,stack,image,experience,status) VALUES('$names','$stack','$fileDe','$experience','1')";
+        $sql = "INSERT INTO intern_experience(names,stack,image,experience,status) VALUES('$names','$stack','$fileDe','$experience','0')";
         $query = $database->query($sql);
         return $query;
     }
 
-    // new
+   
     public function uploadImage($destination) {
       global $database;
         $sql = "INSERT INTO intern_experience (image) VALUES ('$destination')";
