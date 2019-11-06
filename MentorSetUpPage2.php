@@ -35,6 +35,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  if (!filter_var($_POST['cv_link'], FILTER_VALIDATE_URL)) {
   $error['cv_link'] = "Invalid Url";
  }
+
+ if (!filter_var($_POST['fb_url'], FILTER_VALIDATE_URL)) {
+  $error['fb_url'] = "Invalid Url";
+ }
+ if (!filter_var($_POST['twitter_url'], FILTER_VALIDATE_URL)) {
+  $error['twitter_url'] = "Invalid Url";
+ }
  if (!filter_var($_POST['portfolio_link'], FILTER_VALIDATE_URL)) {
   $error['portfolio_link'] = "Invalid Url";
  }
@@ -94,6 +101,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $mentor->current_state = $database->escape_string($_POST['state']);
       $mentor->employment_status = $database->escape_string($_POST['employment_status']);
       $mentor->timestamp = strftime("%Y-%m-%d %H:%M:%S", time());
+      $mentor->employment_status = $database->escape_string($_POST['fb_url']);
+      $mentor->employment_status = $database->escape_string($_POST['twitter_url']);
 
       if ($mentor->Apply_mentor()) {
        mailMentor($mentor->email, $mentor->name);
@@ -261,7 +270,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                                                                                                      echo $_POST['job'];
                                                                                                                                     } ?>"></div>
       <div class="col-sm-12">
-       <input name="portfolio_link" type="url" class="form-control mt-2" id="validationCustom05" placeholder="Link to you portfolio (github)" required value="<?php if (isset($_POST['portfolio_link'])) {
+       <input name="portfolio_link" type="url" class="form-control mt-2" id="validationCustom05" placeholder="Link to your portfolio" required value="<?php if (isset($_POST['portfolio_link'])) {
                                                                                                                                                       echo $_POST['portfolio_link'];
                                                                                                                                                      } ?>"></div>
       <div class="col-sm-12">
