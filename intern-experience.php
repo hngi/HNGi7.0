@@ -184,7 +184,7 @@
         </section>
 
     </main>
-    </section>
+    </section><br>
     <?php include('fragments/site_footer.php'); ?>
 
 </body>
