@@ -321,6 +321,8 @@ $countDownValues = $countdown->getDate();
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>
+
+    <?php include('fragments/chat.php'); ?>
 </body>
 <script type="text/javascript" src="js/hng6.js"></script>
     <script>

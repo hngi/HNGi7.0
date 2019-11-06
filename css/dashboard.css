@@ -123,6 +123,7 @@ h1
 	.prime-table td:nth-child(9) {
 		display: inline;
 		box-sizing: border-box;
+		border:none;
 	}
 	.btn-success {
 		margin-left: 36%;
