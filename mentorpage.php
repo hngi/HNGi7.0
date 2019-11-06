@@ -89,16 +89,8 @@ $mentors = $mentor->showMentors();
                 ?>
 
 
-
             </div>
         </div>
-
-
-
-
-
-
-
 
 
 
