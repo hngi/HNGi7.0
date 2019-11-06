@@ -401,7 +401,7 @@
                         <div class="mentor-image">
                             <img src="https://res.cloudinary.com/joshuafolorunsho/image/upload/c_scale,w_200/v1572870951/20191103_165148_auawdc-min.jpg">
                             <p class="font-weight-bold">Seyi Onifade</p>
-                            <p>Devops and CEO, HNG Tech</p>
+                            <p>CEO, HNG Tech</p>
                         </div>
                         <div class="mentor-image">
                             <img src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572871094/foutw9umk4hcfntupffn.jpg">
