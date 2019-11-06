@@ -83,7 +83,7 @@ if(isset($_POST['ok'])){
                                 unset($_SESSION['msg']);
                             }
                         ?>
-                        <form action="" method="post" role="form">
+                        <form action="" method="post" role="form" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="">Message Subject</label>
                                 <input type="text" name="subject" class="form-control input-lg" placeholder="Message Subject" required>
