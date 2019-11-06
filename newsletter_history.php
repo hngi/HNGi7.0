@@ -75,7 +75,7 @@ $all_news = $newsletter->fetch_newsletter();
                                             </div>
                                             <div class="heading">
                                                 <h3 style="color: white"><strong><?php echo $all_new['title'];?></strong></h3>
-                                                <p><?php echo $all_new['content'];?> </p>
+                                                <p><?php echo substr(strip_tags($all_new['content']),0,100);?> </p>
                                             </div>
                                             <div class="para">
                                                 <p>Originally published <?php echo $all_new['date_created'];?>, updated <?php echo $all_new['date_updated'];?></p>
