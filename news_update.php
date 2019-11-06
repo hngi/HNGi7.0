@@ -46,6 +46,8 @@ if(isset($_POST['ok'])){
     }else{
         $fileDestination = "";
     }
+
+    $subscriber->saveNewsletter($subject, $message, $fileDestination);
     send_general_email("$subject","no-reply@hng.tech",$message,$email_lists);
 
     $_SESSION['msg'] = "<div class='alert alert-info'>New update sent successfully!</div>";
