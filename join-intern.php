@@ -16,8 +16,19 @@ require_once 'classControllers/init.php';
       $date = $database->escape_string($_POST['date']);
       $insertInterns = $intern->internSignup();
       
-      
+      $interests=($_POST['interest']);
+
+      $the_interest = "";
+      foreach ($interest as $interest) {
+        $the_interest .= " ,$interest";
+      }
+
+      $interest = trim($the_interest);
+      $interest = substr($interest, 1, strlen($interest));
+
     }
+
+    
 ?>
 
 <!DOCTYPE html>
@@ -98,7 +109,7 @@ require_once 'classControllers/init.php';
         <input type="email" name="email" id="email" required placeholder="E-mail Address" />
         <input type="text" name="phoneNo" id="phoneNo" required placeholder="Phone Number" />
         <input type="url" name="linkCV" id="linkCV" required placeholder="Link to your CV (LinkedIn Profile or any other link)" />
-        <select class="interest" name="interest" multiple>
+        <select multiple class="interest" name="interest[]" multiple>
           <option value="" disabled selected hidden>What area are you interested in?</option>
           <option value="Backend">Backend</option>
           <option value="DevOps">DevOps</option>
