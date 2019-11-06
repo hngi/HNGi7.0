@@ -351,7 +351,7 @@
 window.addEventListener("resize", e => 
 {
 	if (screen.width > 860){
-            console.log(screen.width)
+            
             document.getElementById("details-section").classList.remove('activated');
     
     }
