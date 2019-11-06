@@ -42,4 +42,8 @@ class Subscribers
 
         return $result;
     }
+
+    public function saveNewsletter($title, $content, $image){ //Create function to save newsletter
+        global
+    }
 }
