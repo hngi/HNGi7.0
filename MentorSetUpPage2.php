@@ -277,15 +277,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                                                                                                                                          echo $_POST['interest'];
                                                                                                                                                                         } ?>" maxlength="50"></div>
       <div class="col-sm-12">
-       <select class="form-control mt-2" id="validationCustom09" placeholder="What state are you currently in?" required value="<?php if (isset($_POST['state'])) {     echo $_POST['state'];      } ?>">
+       <select class="form-control mt-2" name="state" id="validationCustom09" placeholder="What state are you currently in?" required>
+        <?php
+
+         if (isset($_POST['state'])) {     
+            echo "<option>".$_POST['state']."</option>";
+          }
+
+        ?>
        <option value="state">What state are you currently in? </option>
      <option value="india">Federal Capital Territory</option>
       <option value="Abia">Abia</option>
-      <option value="Adamawa">Adamawa</option>
+      <option value="Adamawa">Adamawa</option> 
       <option value="Akwa Ibom">Akwa Ibom</option>
       <option value="Anambra">Anambra</option>
       <option value="Bauchi">Bauchi</option>
-      <option value=Bayelsa">Bayelsa</option>
+      <option value="Bayelsa">Bayelsa</option>
       <option value="Benue">Benue</option>
       <option value="Borno">Borno</option>
       <option value="Cross River">Cross River</option>
