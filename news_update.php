@@ -20,6 +20,32 @@ if(isset($_POST['ok'])){
         $email_lists[] = $subscription_list['email'];
     }
 
+
+    $file = $_FILES['image'];
+    $fileName = $file['name'];
+    $fileTmpName = $file['tmp_name'];
+    $fileSize = $file['size'];
+    $fileError = $file['error'];
+    $fileType = $file['type'];
+
+    $fileExtension = explode('.', $fileName);
+    $fileActualExtension = strtolower(end($fileExtension));
+
+    $allowed = array('jpg', 'jpeg', 'png');
+
+    if(in_array($fileActualExtension, $allowed)){
+
+        $fileNewName = uniqid('', true).".".$fileActualExtension;
+
+
+        $fileDestination = 'uploads/newsletter/'.$fileNewName;
+        move_uploaded_file($fileTmpName, $fileDestination);
+
+
+
+    }else{
+        $fileDestination = "";
+    }
     send_general_email("$subject","no-reply@hng.tech",$message,$email_lists);
 
     $_SESSION['msg'] = "<div class='alert alert-info'>New update sent successfully!</div>";
