@@ -44,6 +44,9 @@ class Subscribers
     }
 
     public function saveNewsletter($title, $content, $image){ //Create function to save newsletter
-        global
+        global $database;
+
+        $sql = "INSERT INTO newsletter SET title = '$title', content = '$content', $image = '$image'";
+        $database->query($sql);
     }
 }
