@@ -54,10 +54,10 @@ class DB
 
     public function redirect($location){
         $this->db->header("location: $location");
-        
+
     }
 
-   
+
 }
 
 $database = new DB();

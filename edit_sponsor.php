@@ -46,6 +46,7 @@ if (isset($_GET['editSponsorId'])) {
   <title>New Admin</title>
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
   <link rel="stylesheet" href="css/dashboard.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -76,7 +77,7 @@ if (isset($_GET['editSponsorId'])) {
       <br><br>
       <h2>Register a new Sponsor </h2>
       <!-- <section id="intern-section">
-				Populated by `js/dashboard.js` 
+				Populated by `js/dashboard.js`
 			</section> -->
 
       <div class="container">
@@ -169,3 +170,4 @@ if (isset($_GET['editSponsorId'])) {
 </html>
 
 <script type="text/javascript" src="js/dashboard.js"></script>
+<script  type="text/javascript" src="js/sidebar.js"></script>

@@ -99,9 +99,10 @@ const collateByTrack =(element, dataArray, area, title)=>{
     let states = {};
     
     for(let i=1; i<dataArray.length; i++){
-        if(!states.hasOwnProperty(dataArray[i][state])){
-            states[dataArray[i][state]] = 1;
-        }else{ states[dataArray[i][state]] += 1} 
+      
+        if(!states.hasOwnProperty(dataArray[i][state].toUpperCase())){
+            states[dataArray[i][state].toUpperCase()] = 1;
+        }else{ states[dataArray[i][state].toUpperCase()] += 1} 
     }
     
     createCharts(element, "bar", Object.keys(states), Object.values(states), title)

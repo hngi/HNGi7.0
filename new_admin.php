@@ -3,7 +3,7 @@
     $admin = new Admins();
 
     if(!isset($_SESSION["role"])) {
-        header('Location:admin_login'); 
+        header('Location:login.php');
     }
 
     if(isset($_POST["submit"])) {
@@ -25,6 +25,8 @@
 	<link rel="icon" type="img/png" href="images/hng-favicon.png">
 	<link rel="stylesheet" href="css/dashboard.css">
 
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
@@ -41,7 +43,7 @@
 			margin: 15px;
 			padding: 10px;
 			border-radius: 15px;
-			
+
 		}
 	</style>
 
@@ -53,7 +55,7 @@
             <br><br>
 			<h2>Register a new Admin </h2>
 			<!-- <section id="intern-section">
-				Populated by `js/dashboard.js` 
+				Populated by `js/dashboard.js`
 			</section> -->
 
 			<div class="container">
@@ -93,12 +95,12 @@
 
                             <button type="submit" class="btn btn-primary" name="submit">Submit</button>
                         </form>
-                    </div> 
+                    </div>
 				</div>
 			</div>
 
 			<!-- <button id="export">Export to Spreadsheet</button> -->
-		
+
 		</section>
 		<!-- <section id="details-section">
 			<div id="details-back">
@@ -128,10 +130,11 @@
         <div class="stix" id="stik2"></div>
         <div class="stix" id="stik3"></div>
     </label>
-    
+
     <?php include('fragments/sidebar.php'); ?>
 
 </body>
 </html>
 
+<script  type="text/javascript" src="js/sidebar.js"></script>
 <script type="text/javascript" src="js/dashboard.js"></script>

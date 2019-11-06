@@ -132,8 +132,8 @@ if(!isset($_SESSION["role"])) {
 								$fLastUpdated = date_format($lastDate, "l, jS F, Y - g:i:A");
 							?>
 
-								<h5>Start Date : <?php echo $fStartDate; ?></h5>
-								<h5>Start Date : <?php echo $fStartTime; ?></h5>
+								<h5>HNGi7.0 Start Date : <?php echo $fStartDate; ?></h5>
+								<h5>HNGi7.0 Start Time : <?php echo $fStartTime; ?></h5>
 								<h5>Last Updated : <?php echo $fLastUpdated; ?> </h5>
 								<h5>Updated By: <?php echo $countDetails["updatedBy"]; ?> </h5>
 							<?php
