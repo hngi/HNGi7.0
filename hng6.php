@@ -114,48 +114,48 @@ $countDownValues = $countdown->getDate();
 
                         <img
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722589/gallery-second_nkrosi.png">
-                          <p> A cross-section of the last meetup</p> <br>
+                          <p class="caption"> A cross-section of the last meetup</p> <br>
                         <img
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722618/gallery-third_oqgaiv.png">
-                        <p> A cross-section of the last meetup</p> <br>
+                        <p class="caption"> A cross-section of the last meetup</p> <br>
                         <img
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722558/gallery-first_gldujn.png">
-                   <p> A cross-section of the last meetup</p> <br>
+                   <p class="caption"> A cross-section of the last meetup</p> <br>
                         <img
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722589/gallery-second_nkrosi.png">
-                       <p> Some of the HNG mentors & interns at the last meetup</p> <br>
+                       <p class="caption"> Some of the HNG mentors & interns at the last meetup</p> <br>
                         <img
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722618/gallery-third_oqgaiv.png">
-                            <p>Teaching sessions ongoing</p> <br>
+                            <p class="caption">Teaching sessions ongoing</p> <br>
                     </div>
                     <div class="gallery_items" id="hidden_images"  data-aos="fade-up">
                         <img
                             src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng1_rbfvik.jpg">
-                      <p> Some of the HNG interns at the last meetup</p> <br>
+                      <p class="caption"> Some of the HNG interns at the last meetup</p> <br>
                         <img
                             src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng2_rva54w.jpg">
-                         <p> Some of the HNG mentors at the last meetup</p> <br>
+                         <p class="caption"> Some of the HNG mentors at the last meetup</p> <br>
                         <img
                             src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng3_blzemp.jpg">
-                       <p> Two of the female HNG mentors</p> <br>
+                       <p class="caption"> Two of the female HNG mentors</p> <br>
                         <img
                             src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng4_tlrjyf.jpg">
-                       <p> Some of the HNG mentors at the last meetup</p> <br>
+                       <p class="caption"> Some of the HNG mentors at the last meetup</p> <br>
                         <img
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722618/gallery-third_oqgaiv.png">
-                  <p> Teaching sessions ongoing</p> <br>
+                  <p class="caption"> Teaching sessions ongoing</p> <br>
                         <img
                             src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng5_qvzjfy.jpg">
-               <p> Some of the HNG mentors & interns at the last meetup</p> <br>
+               <p class="caption"> Some of the HNG mentors & interns at the last meetup</p> <br>
                         <img
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722558/gallery-first_gldujn.png">
-                  <p> Panel sessions ongoing</p> <br>
+                  <p class="caption"> Panel sessions ongoing</p> <br>
                         <img
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722589/gallery-second_nkrosi.png">
-                  <p> Some of the HNG mentors & interns at the last meetup</p> <br>
+                  <p class="caption"> Some of the HNG mentors & interns at the last meetup</p> <br>
                         <img
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722589/gallery-second_nkrosi.png">
-                  <p> Some of the HNG mentors & interns at the last meetup</p> <br>
+                  <p class="caption"> Some of the HNG mentors & interns at the last meetup</p> <br>
                     </div>
                 </section> <br>
                 <div  data-aos="fade-up">
