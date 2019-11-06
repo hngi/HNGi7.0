@@ -151,6 +151,7 @@ require_once 'classControllers/init.php';
   </div>
    <?php include "fragments/site_footer.php"; ?>
   </section>
+  <?php include('fragments/chat.php'); ?>
 </body>
 
 </html>
