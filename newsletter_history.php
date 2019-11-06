@@ -63,7 +63,30 @@ $all_news = $newsletter->fetch_newsletter();
             <div class="row">
                 <div class="col-md-9">
                     <div class="row">
+                        <?php
+                            if(is_array($all_news)){
+                                foreach ($all_news as $all_new){
+                                    ?>
+                                    <div class="col-md-4 col-sm-6 col-xs-12">
+                                        <div class="cards">
+                                            <div class="image">
+                                                <img src = "uploads/newsletter/<?php echo $all_new['image'];?>" alt="image" class="image img-responsive">
+                                            </div>
+                                            <div class="heading">
+                                                <h3 style="color: white"><strong><?php echo $all_new['title'];?></strong></h3>
+                                                <p><?php echo $all_new['content'];?> </p>
+                                            </div>
+                                            <div class="para">
+                                                <p>Originally published <?php echo $all_new['date_created'];?>, updated <?php echo $all_new['date_updated'];?></p>
+                                                <button> <a href="#" class="button">READ MORE</a></button>
+                                            </div>
 
+                                        </div>
+                                    </div>
+                                    <?php
+                                }
+                            }
+                        ?>
                     </div>
                 </div>
             </div>
