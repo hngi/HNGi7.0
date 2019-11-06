@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3340ae33-6e59-49ef-aaf7-8ef2d89eda61" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/newsletter_history.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newsletter_history.php" beforeDir="false" afterPath="$PROJECT_DIR$/newsletter_history.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,14 +20,14 @@
           <entry key="gitignore" value="2" />
           <entry key="html" value="1" />
           <entry key="js" value="3" />
-          <entry key="php" value="7" />
+          <entry key="php" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="1" />
           <entry key="JavaScript" value="3" />
-          <entry key="PHP" value="7" />
+          <entry key="PHP" value="8" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
@@ -35,13 +35,13 @@
         <counts>
           <entry key="gitignore" value="51" />
           <entry key="js" value="32" />
-          <entry key="php" value="477" />
+          <entry key="php" value="610" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JavaScript" value="32" />
-          <entry key="PHP" value="477" />
+          <entry key="PHP" value="610" />
           <entry key="PLAIN_TEXT" value="51" />
         </counts>
       </usages-collector>
@@ -60,16 +60,28 @@
         <entry file="file://$PROJECT_DIR$/news_update.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="103" column="43" selection-start-line="103" selection-start-column="25" selection-end-line="103" selection-end-column="43" />
+              <caret line="103" column="13" lean-forward="true" selection-end-line="158" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/newsletter_history.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="101" column="30" lean-forward="true" selection-start-line="101" selection-start-column="30" selection-end-line="101" selection-end-column="30" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/newsletter_history.php">
+        <entry file="file://$PROJECT_DIR$/dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
+            <state relative-caret-position="355">
+              <caret line="218" column="22" lean-forward="true" selection-start-line="218" selection-start-column="22" selection-end-line="218" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -95,10 +107,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/newsletter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="65" column="67" lean-forward="true" selection-start-line="65" selection-start-column="2" selection-end-line="65" selection-end-column="67" />
+            <state relative-caret-position="121">
+              <caret line="124" column="14" lean-forward="true" selection-start-line="70" selection-start-column="8" selection-end-line="124" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -189,6 +204,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\freelance\hng6\HNGi7.0" />
       <recent name="C:\wamp\www\freelance\hng6\HNGi7.0\js" />
     </key>
   </component>
@@ -215,12 +231,12 @@
       <option name="presentableId" value="Default" />
       <updated>1572672528055</updated>
       <workItem from="1572672548561" duration="1513000" />
-      <workItem from="1572977101383" duration="4352000" />
+      <workItem from="1572977101383" duration="6902000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6908000" />
+    <option name="totallyTimeSpent" value="9458000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -314,27 +330,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/news_update.php">
+    <entry file="file://$PROJECT_DIR$/newsletter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="103" column="43" selection-start-line="103" selection-start-column="25" selection-end-line="103" selection-end-column="43" />
+        <state relative-caret-position="121">
+          <caret line="124" column="14" lean-forward="true" selection-start-line="70" selection-start-column="8" selection-end-line="124" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/newsletter.php">
+    <entry file="file://$PROJECT_DIR$/news_update.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="65" column="67" lean-forward="true" selection-start-line="65" selection-start-column="2" selection-end-line="65" selection-end-column="67" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="102">
+          <caret line="103" column="13" lean-forward="true" selection-end-line="158" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/newsletter_history.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
+        <state relative-caret-position="20">
+          <caret line="101" column="30" lean-forward="true" selection-start-line="101" selection-start-column="30" selection-end-line="101" selection-end-column="30" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="218" column="22" lean-forward="true" selection-start-line="218" selection-start-column="22" selection-end-line="218" selection-end-column="22" />
         </state>
       </provider>
     </entry>
