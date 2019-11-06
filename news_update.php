@@ -95,6 +95,11 @@ if(isset($_POST['ok'])){
                             </div>
 
                             <div class="form-group">
+                                <label for="">Header Image(Optional)</label>
+                                <input type="file" name="image">
+                            </div>
+
+                            <div class="form-group">
                                 <input type="submit" name="ok" class="btn btn-primary" value="Send Message">
                             </div>
                         </form>
