@@ -1,3 +1,8 @@
+<?php
+require 'classControllers/init.php';
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

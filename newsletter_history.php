@@ -79,7 +79,7 @@ $all_news = $newsletter->fetch_newsletter();
                                             </div>
                                             <div class="para">
                                                 <p>Originally published <?php echo $all_new['date_created'];?>, updated <?php echo $all_new['date_updated'];?></p>
-                                                <button> <a href="read_news.php" class="button">READ MORE</a></button>
+                                                <button> <a href="read_news.php?id=<?php echo $all_new['id'];?>" class="button">READ MORE</a></button>
                                             </div>
 
                                         </div>
