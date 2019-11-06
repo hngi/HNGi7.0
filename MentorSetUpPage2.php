@@ -351,7 +351,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  </form>
  
  <?php include('fragments/site_footer.php'); ?>
-
+<?php include('fragments/chat.php'); ?>
 </body>
 <script src="https://kit.fontawesome.com/85682eb992.js" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

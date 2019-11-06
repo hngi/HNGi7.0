@@ -95,6 +95,7 @@ if (isset($_POST['login'])) {
   </section>
     <?php include('fragments/site_footer.php'); ?>
 
+<?php include('fragments/chat.php'); ?>
 </body>
 
 </html>
