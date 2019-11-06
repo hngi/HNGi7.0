@@ -38,7 +38,10 @@ if($display["hasPic"] == 0) {
 	
 	$noOfInterns = $lockForm->getNoOfInterns();
 	$noOfMentors = $lockForm->getNoOfMentors();
-	$noOfAdmins = $lockForm->getNoOfAdmins();
+  $noOfAdmins = $lockForm->getNoOfAdmins();
+  
+  $sponsorsObj = new sponsors;
+  $noOfSponsors = $sponsorsObj->countSponsor();
 
     if($status == 1) {
         // echo "<p>The form is Open for Registration</p>";
@@ -253,7 +256,7 @@ if($display["hasPic"] == 0) {
                         <a href="registered_sponsors.php">
                           <div class="box">
                             <i class="fas fa-hand-holding-usd"></i>
-                            <h3><?php echo  2 ?></h3>
+                            <h3><?php echo  $noOfSponsors; ?></h3>
                             <p class="lead">Registered Sponsors</p>
                           </div>
                           </a>

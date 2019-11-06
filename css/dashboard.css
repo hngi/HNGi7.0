@@ -32,7 +32,8 @@ h1
 {
     position: absolute;
     left: -35vw;
-    top: 3vh;
+	/* top: 3vh; */
+	top: 14px;
     font-size: 25px;
     color: rgba(0, 0, 0, 0.7);
     line-height: 80px;
@@ -71,7 +72,7 @@ h1
 */
 
 
-/* Table Made Responsive */ 
+/* Table Made Responsive */
 
 
 @media screen and (min-width: 315px) and (max-width: 850px) {
@@ -79,14 +80,14 @@ h1
 		display: none;
 	}
 
-	.prime-table, 
-	.prime-table tbody, 
-	.prime-table tr, 
+	.prime-table,
+	.prime-table tbody,
+	.prime-table tr,
 	.prime-table td {
 		display: block;
 		width: 100%;
-	} 
-	 
+	}
+
 	.prime-table tr {
 		margin-bottom: 15px;
 	}
@@ -106,7 +107,7 @@ h1
 	}
 
 	.prime-table td:nth-last-child(1) {
-		display: inline-block; 
+		display: inline-block;
 	}
 }
 
@@ -116,7 +117,60 @@ h1
 	}
 }
 
+@media screen and (min-width: 315px) and (max-width: 800px) {
+	.prime-table td:nth-child(7),
+	.prime-table td:nth-child(8),
+	.prime-table td:nth-child(9) {
+		display: inline;
+		box-sizing: border-box;
+	}
+	.btn-success {
+		margin-left: 36%;
+	}
+}
 
+@media screen and (min-width: 351px) and (max-width: 400px) {
+	.btn-success {
+		margin-left: 38%;
+	}
+}
+
+@media screen and (device-width: 360px) {
+	.btn-success {
+		margin-left: 39%;
+	}
+}
+@media screen and (device-width: 375px) {
+	.btn-success {
+		margin-left: 44%;
+	}
+}
+@media screen and (min-width: 401px) and (max-width: 475px) {
+	.btn-success {
+		margin-left: 48%;
+	}
+}
+@media screen and (min-width: 476px) and (max-width: 609px) {
+	.btn-success {
+		margin-left: 55%;
+	}
+}
+@media screen and (min-width: 610px) and (max-width: 767px) {
+	.btn-success {
+		margin-left: 65%;
+	}
+}
+
+@media screen and (device-width: 768px) {
+	.btn-success {
+		margin-left: 72%;
+	}
+}
+@media screen and (min-width: 769px) and (max-width: 800px) {
+	.btn-success {
+		margin-left: 72%;
+	}
+}
 
 
 
@@ -137,7 +191,7 @@ h1
 	background-color: #00aeff;
 	border: none;
 	letter-spacing: 3px;
-	
+
 	color: #fff;
 	border-radius: none;
 	margin-bottom: 5em;
@@ -363,7 +417,7 @@ h1
 	width: 80%;
 	border: 0.5px solid transparent;
 	margin: 0.5rem;
-	
+
 }
 
 #sidebar #lower
@@ -377,7 +431,7 @@ h1
 	align-self: flex-start;
 	margin-left: 50px;
 	color: rgb(229, 228, 228);
-	
+
 
 }
 
@@ -410,7 +464,7 @@ h1
 	text-decoration: none;
 	font-size: 16px;
 }
-/* AuGhost Touches */ 
+/* AuGhost Touches */
 
 
 
@@ -427,12 +481,12 @@ h1
 
 */
 @media (min-width:860px) and (max-width:1076px){
-	
+
 	#sidebar .badger #admin-badge{
 		font-size: 10px;
 		text-align: left;
 	}
-	
+
 }
 @media (max-width: 860px)
 {
@@ -443,7 +497,7 @@ h1
 		min-height: 100vh;
 	}
 	.badger{
-		height: 59.5px;
+		height: 56px;
 	}
 	#overview-section
 	{
@@ -495,6 +549,7 @@ h1
 	}
 	#details-section #details-back
 	{
+		margin-top: 3em;
 		display: block;
 	}
 	#details-section #details-return
@@ -558,7 +613,7 @@ h1
     border-radius: 3px;
     overflow: hidden;
     margin-top: 20px;
-    
+
 }
 .menu a{
     text-decoration: none;
@@ -569,7 +624,7 @@ h1
 	color: #00aeff;
 }
 .item{
-	
+
     border-top: 1px solid rgba(225,225,225,0.05);
     overflow: hidden;
     background: rgba(35,40,45,0);
@@ -605,7 +660,7 @@ h1
     content: "\f077";
     font-family: "Font Awesome 5 free";
     font-weight: 900;
-   
+
 }
 .btns i, .submenu i{
     margin-right: 7px;
@@ -642,7 +697,7 @@ h1
 
 .item.active .submenu{
     max-height: 17em !important;
-} 
+}
 
 @media (min-width:860px) and (max-width:1024px){
 	#sidebar a{
@@ -654,3 +709,24 @@ h1
 		font-size: 15px;
 	}
 }
+@media(max-width:767px){
+	.badger{
+		height: 59px;
+	}
+}
+@media(max-width:580px){
+	#sidebar{
+		width: 60vw;
+	}
+}
+@media(max-width:440px){
+	#sidebar{
+		width: 70vw;
+	}
+}
+@media(max-width:360px){
+	#sidebar{
+		width: 75vw;
+	}
+}
+
