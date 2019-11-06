@@ -643,5 +643,6 @@
     })
     }
 </script>
+<?php include('fragments/chat.php'); ?>
 </body>
 </html>
