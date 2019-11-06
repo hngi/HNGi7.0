@@ -208,7 +208,7 @@ $countDownValues = $countdown->getDate();
                             <img
                                 src="https://res.cloudinary.com/memz/image/upload/v1572796363/Mentors/20191103_165148_auawdc.jpg">
                            <p class="mentor-name center-text">Seyi Onifade</p>
-                            <p class="mentor-desc center-text">Devops and CEO, HNG Tech</p>
+                            <p class="mentor-desc center-text">CEO, HNG Tech</p>
                         </div>
                         <div id="mentor-div">
                             <img

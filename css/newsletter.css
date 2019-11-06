@@ -67,9 +67,7 @@ body{
     }
     .button{
        font-size: 25px;
-    }
-
-    
+    }   
 }
  @media only screen and (min-width: 1024px){ 
      .container{
