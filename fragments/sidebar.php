@@ -39,6 +39,8 @@
 				<a href="internreview.php"><i class="fas fa-history"></i>Reviews</a>
 				<a href="updateCountdown.php"><i class="far fa-clock"></i>CountDown</a>
 				<a class="news" href="news_update.php" ><i class="far fa-newspaper"></i>News Update</a>
+				<a class="news" href="newsletter_history.php" ><i class="far fa-newspaper"></i>News History</a>
+
 			</div>
 		</li>
         <?php
