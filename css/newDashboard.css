@@ -547,6 +547,11 @@ i:hover{
 		font-size: 17px;
 		
 	}
+
+	#details-section.activated{
+		left: 0;
+	}
+
 	#details-section #details-back
 	{
 		display: block;
@@ -618,7 +623,7 @@ i:hover{
 	
 	#details-section{
 		font-size: 12px;
-		left: 100vw;
+		
 	}
 	
 	#navigator{
