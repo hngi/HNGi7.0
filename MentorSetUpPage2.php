@@ -261,7 +261,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                                                                                                      echo $_POST['job'];
                                                                                                                                     } ?>"></div>
       <div class="col-sm-12">
-       <input name="portfolio_link" type="url" class="form-control mt-2" id="validationCustom05" placeholder="Link to you portfolio" required value="<?php if (isset($_POST['portfolio_link'])) {
+       <input name="portfolio_link" type="url" class="form-control mt-2" id="validationCustom05" placeholder="Link to you portfolio (github)" required value="<?php if (isset($_POST['portfolio_link'])) {
                                                                                                                                                       echo $_POST['portfolio_link'];
                                                                                                                                                      } ?>"></div>
       <div class="col-sm-12">
@@ -269,9 +269,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                                                                                                                              echo $_POST['linkedin_link'];
                                                                                                                                                             } ?>"></div>
       <div class="col-sm-12">
-       <input name="cv_link" type="url" class="form-control mt-2" id="validationCustom07" placeholder="Link to your cv" required value="<?php if (isset($_POST['cv_link'])) {
+       <input name="cv_link" type="url" class="form-control mt-2" id="validationCustom07" placeholder="Link to your CV" required value="<?php if (isset($_POST['cv_link'])) {
                                                                                                                                          echo $_POST['cv_link'];
                                                                                                                                         } ?>"></div>
+                                                                                                                                        <!-- new inserted inputs-->
+                                                                                                                                        <div class="col-sm-12">
+       <input name="fb_url" type="url" class="form-control mt-2" id="validationCustom07" placeholder="Link to your Facebook account" required value="<?php if (isset($_POST['fb_url'])) {
+                                                                                                                                         echo $_POST['fb_url'];
+                                                                                                                                        } ?>"></div>
+                                                                                                                                        <div class="col-sm-12">
+       <input name="twitter_url" type="url" class="form-control mt-2" id="validationCustom07" placeholder="Link to your Twitter account" required value="<?php if (isset($_POST['twitter_url'])) {
+                                                                                                                                         echo $_POST['twitter_url'];
+                                                                                                                                        } ?>"></div>
+                                                                                                                                        <!-- new inserted inputs-->
+
       <div class="col-sm-12">
        <input name="interest" type="text" class="form-control mt-2" id="validationCustom08" placeholder="Why are you interested in mentoring with HNG?" required value="<?php if (isset($_POST['interest'])) {
                                                                                                                                                                          echo $_POST['interest'];
