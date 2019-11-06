@@ -173,7 +173,6 @@ h1
 }
 
 
-
 .stix
 {
     border-radius: 3px;
@@ -191,13 +190,9 @@ h1
 	background-color: #00aeff;
 	border: none;
 	letter-spacing: 3px;
-<<<<<<< HEAD
 	font-weight: bold;
-	color: rgb(65, 65, 65);
-=======
-
+	color: rgb(65, 65, 65)
 	color: #fff;
->>>>>>> d0ff5cc39c2a42b4779297f7d2c0916c8144f78e
 	border-radius: none;
 	margin-bottom: 5em;
 	position: absolute;
@@ -206,7 +201,6 @@ h1
 }
 
 .nav {
-<<<<<<< HEAD
 	position: relative;
 	top: 50px;
 }
@@ -224,11 +218,14 @@ h1
 		font-size: calc(1vw + 1px);
 		
 	}
-=======
+/*
 	background-color: #23282d;
 	color: #fff;
->>>>>>> d0ff5cc39c2a42b4779297f7d2c0916c8144f78e
+	background-color: #23282d;
+	color: #fff;
+
 }
+
 
 #mobile-bars-check
 {
@@ -398,6 +395,8 @@ h1
 #sidebar
 {
 	background: #2b2f30;
+	background-color: #23282d;
+	color: #fff;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -429,6 +428,7 @@ h1
 
 #sidebar #upper #username
 {
+
 	font-size: 10px;
 	letter-spacing: 3px;
 	color: #535353;
@@ -445,6 +445,7 @@ h1
 
 #sidebar #hr1, #sidebar #hr2 {
 	border: 0.25px solid rgb(70, 69, 69);
+
 	font-size: 1.7rem;
 	color: #535353;
 }
@@ -455,14 +456,15 @@ h1
 	border: 0.25px solid rgb(70, 69, 69);
 	width: 100%;
 	font-size: 1.7rem;
-	
+	width: 80%;
+
 }
 
 #sidebar #lower #hr2 {
 	width: 80%;
 	border: 0.5px solid white;
+	border: 0.5px solid transparent;
 	margin: 0.5rem;
-
 }
 
 #sidebar #lower
@@ -509,9 +511,11 @@ h1
 	text-decoration: none;
 	color: #3d3c3c;
 	font-weight: bold;
+
 	font-size: 16px;
 }
 /* AuGhost Touches */
+
 
 
 /* AuGhost Touches */ 
@@ -603,6 +607,7 @@ h1
 	}
 	#details-section #details-back
 	{
+		margin-top: 3em;
 		display: block;
 	}
 	#details-section #details-return

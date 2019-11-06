@@ -82,12 +82,10 @@ if (isset($_POST['login'])) {
         <i class="fa fa-lock"></i>
         <input type="password" name="password" id="password" placeholder="Password" required>
       </div>
-
       <button type="submit" onclick="signup()" name="login">LOGIN</button>
       <span class="swag-daddy">
         <a href="forgotpassword.php" class="small-swag small-text">Forgot Password?</a>
       </span>
-      
     </form>
   </section>
     <?php include('fragments/site_footer.php'); ?>

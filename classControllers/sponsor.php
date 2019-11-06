@@ -108,4 +108,14 @@ class sponsors
     $data = $database->query("DELETE  FROM " . self::$database_table . " WHERE sponsor_id = '$sponsor_id' ");
     return $data;
   }
+
+  // Written by JohnEbri, 5/11/2019 9:16:20AM
+  public function countSponsor() {
+    global $database;
+    $query = "SELECT * FROM sponsors";
+    $count = $database->affected_rows();
+    return $count;
+  }
+
+
 }
