@@ -61,4 +61,14 @@ class Subscribers
 
         return $result;
     }
+
+    public function fetch_the_newsletter($id){ //function to fetch single newsletter
+        global $database;
+        $sql = "SELECT * FROM newsletter WHERE id = '$id'";
+        $query = $database->query($sql);
+        $result = $query->fetch_assoc();
+
+        return $result;
+    }
+
 }
