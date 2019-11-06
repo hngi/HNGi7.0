@@ -52,4 +52,13 @@ class Subscribers
         $sql = "INSERT INTO newsletter SET title = '$title', content = '$content', image = '$image'";
         $database->query($sql);
     }
+
+    public function fetch_newsletter(){ //function to fetch all newsletter
+        global $database;
+        $sql = "SELECT * FROM newsletter ORDER BY id DESC";
+        $query = $database->query($sql);
+        $result = $query->fetch_all(MYSQLI_ASSOC);
+
+        return $result;
+    }
 }
