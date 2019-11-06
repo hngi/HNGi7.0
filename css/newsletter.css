@@ -4,6 +4,7 @@ body{
     background: white;
     font-family: sans-serif; 
 }
+
 .cards {
     width: 100%;
     background-color: rgb(212, 206, 206);
@@ -65,11 +66,13 @@ body{
     .button{
        font-size: 25px;
     }
+
     
 }
  @media only screen and (min-width: 1024px){ 
      .container{
          display: flex;
+         margin-left: 200px;
      }
      .images2 {
          margin: -40px;
@@ -101,110 +104,3 @@ body{
         font-size: 15px;
      }
 }
-@media only screen and (min-width: 1600px){
-
-} 
-
-/* .heading-text{
-    width: 100%;
-    position: absolute;
-    text-align: center;
-    color: whi te;
-    margin-top: ;
-    top:;
-    bottom: 250;
-    right: 50%;
-    transform: translate(30%, -50%);
-} */
-
-/* p {
-    font-size: .9em;
-    line-height: 1.6em;
-    margin-top: 25px;
-    text-align: left;
-}
-ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-.container {
-    text-align: center;
-    padding: .8em 1.2em;
-    margin-top: 10px;
-}
-.image {
-    width: 100%;
-    margin-top: 50px;
-}
-.images{
-    width: 40%;
-    margin-top: 15px;
-}
-.button{
-    border-radius: 4px;
-    background: black;
-    text-align: center;
-    margin: 2.5em 0;
-    padding: .5em 2.5em;
-    color: white; */
-
-/* @media only screen and (min-width: 450px){
-    .image {
-        width: 90%;
-        margin-top: 50px;
-    }
-    .images{
-        width: 30%;
-        margin-top: 15px;
-    }
-
-}
-@media only screen and (min-width: 600px){
-    .images{
-        width: 60%;
-    }
-    .image{
-        width: 100%;
-        padding-right: .8em;
-        padding-left: .8em;
-    }
-    p{
-        font-size: .7em;
-        margin-bottom: 1em ;
-        padding: .8em 1.2em;
-    }
-    .button{
-        margin: 2.5em 0;
-        padding: .5em 1.5em;
-    }
-    .container ul{
-        display: flex;
-        margin-top: -30px;
-    }
-    .container{
-        padding: 0;
-    } 
-    .container ul li:nth-child(2) .images2 {
-        width: 45%;
-    }
-}
-@media only screen and (min-width: 768px){
-    .container ul li:nth-child(2) .images2 {
-        width: 40%;
-    }
-}
-@media only screen and (min-width: 875px){
-.container ul {
-    margin: 0 0 4% 0;
-}
-p{
-    font-size: .9em;
-    margin-bottom: .5em ;
-    padding: .8em 1.2em;
-}
-.container ul li:nth-child(2) .images2 {
-    width: 50%;
-}
-
-} */
