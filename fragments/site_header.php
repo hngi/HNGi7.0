@@ -1,12 +1,30 @@
 <div class="container">
+ <style type="text/css">
+    .primary-btn{
+        background: #00AEFF;    
+        transition: all 1s;
+        color: #fff;
+    }
+    .primary-btn:hover {
+        opacity: 1;
+        background: #0088C7;
+        color: white;
+    }
+  @media (max-width: 420px) {
+   #hng-logo {
+    max-width: 100% !important;
+    width: 70% !important;
+   }
+  }
+  </style>
     <header id="header">
         <!--Logo-->
         <section id="logo">
             <a href="index.php"><img id="hng-logo"
-                    src="https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png"></a>
+                    src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572768106/hng_logo-min.png" ></a>
         </section>
         <!--ends here-->
-        <section class="nav_button" onclick="toggleMenu()">
+        <section class="nav_button " onclick="toggleMenu()">
             <div class="nav_button_bar"></div>
             <div class="nav_button_bar"></div>
             <div class="nav_button_bar"></div>
@@ -25,7 +43,10 @@
 <script>
     function toggleMenu(){
         let menuBar = $("#navMenu");
-        menuBar.toggle();
+        let closeButton = $(".nav_button");
+        menuBar.slideToggle(700);
+        closeButton.toggleClass("closefunction");
+        
     }
 
 

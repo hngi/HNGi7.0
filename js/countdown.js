@@ -44,5 +44,10 @@ $(document).ready(function () {
       }, 500);
     };
   }(jQuery));
-  $.countdown("January1, 2020 09:00:00");
+  const startDate = document.getElementById("startDate").innerHTML;
+  const startTime = document.getElementById("startTime").innerHTML;
+
+  $.countdown(startDate + " " + startTime);
+  // $.countdown("January1, 2020 09:00:00");
+  
 });

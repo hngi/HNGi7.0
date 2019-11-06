@@ -27,18 +27,23 @@
     .nav_button {
         position: absolute;
         right: 5px;
-        top: 30px;
+        top: 25px;
+        border: 1px solid #00AEFF;
+        padding: 5px;
     }
     .nav_button:hover, .nav-link:hover {
         opacity: .6;
     }
     .nav_button .nav_button_bar {
-        background-color: black;
+        background-color: #00AEFF;
         width: 25px;
         height: 3px;
         margin-bottom: 4px;
     }
-    .menu_bar {
+    .nav_button .nav_button_bar:last-of-type {
+        margin-bottom: 0;
+    }
+        .menu_bar {
         display: none;
         text-align: right;
         width: 100%;
@@ -74,6 +79,25 @@
         color: white;
     }
 
+    .closefunction {
+        border: none;
+        margin-top: 10px;
+    }
+
+    .closefunction .nav_button_bar:first-of-type{
+        transform: rotate(45deg) translateY(5px);
+    }
+
+    .closefunction .nav_button_bar:last-of-type{
+        transform: rotate(-45deg) translateY(-5px);
+
+    }
+
+    .closefunction .nav_button_bar:nth-child(2){
+        display: none;
+    }
+
+
     /*FOOTER STYLING */
         #footer {
             background-color: #FAFAFA;
@@ -89,7 +113,7 @@
 
         }
 
-       
+
 
         .footer-nav h2 {
             font-family: Open Sans;
@@ -116,7 +140,7 @@
             font-style: normal;
             font-weight: normal;
             font-size: 17px;
-            line-height: 28px;        
+            line-height: 28px;
             color: #737373;
         }
 

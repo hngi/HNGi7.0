@@ -25,7 +25,8 @@ if(!isset($_SESSION["role"])) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>Update Countdown</title>
 	<link rel="icon" type="img/png" href="images/hng-favicon.png">
-	<link rel="stylesheet" href="css/dashboard.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+	<link href="css/dashboard.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -83,6 +84,13 @@ if(!isset($_SESSION["role"])) {
 								<strong>Done!</strong> Countdown timer updated Successfully
 							</div>';
 						}
+
+						if(isset($_GET["invalid"])) {
+							echo '
+							<div class="alert alert-danger">
+								<strong>Error! Update Failed. </strong> Selected date and time cannot be in the past.
+							</div>';
+						}
 					?>
 
 					<div class="col-md-5">
@@ -124,8 +132,8 @@ if(!isset($_SESSION["role"])) {
 								$fLastUpdated = date_format($lastDate, "l, jS F, Y - g:i:A");
 							?>
 
-								<h5>Start Date : <?php echo $fStartDate; ?></h5>
-								<h5>Start Date : <?php echo $fStartTime; ?></h5>
+								<h5>HNGi7.0 Start Date : <?php echo $fStartDate; ?></h5>
+								<h5>HNGi7.0 Start Time : <?php echo $fStartTime; ?></h5>
 								<h5>Last Updated : <?php echo $fLastUpdated; ?> </h5>
 								<h5>Updated By: <?php echo $countDetails["updatedBy"]; ?> </h5>
 							<?php
@@ -155,5 +163,5 @@ if(!isset($_SESSION["role"])) {
 
 </body>
 </html>
-
+<script  type="text/javascript" src="js/sidebar.js"></script>
 <script type="text/javascript" src="js/dashboard.js"></script>

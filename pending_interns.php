@@ -76,7 +76,7 @@
         <section id="overview-section">
             <!-- <h1>Dashboard</h1> -->
             <h2>Pending Interns </h2>
-            <div style="margin-bottom : 10px;">
+            <div class="intern-buttons">
                 <a href="registered_interns.php" class="btn btn-default">Active Interns</a>
                 <a href="declined_interns.php" class="btn btn-default">Declined Interns</a>
             </div>
@@ -84,7 +84,7 @@
 				Populated by `js/dashboard.js`
 			</section> -->
 
-            <div class="container">
+            <div>
                 <div class="row">
 
                     <?php
@@ -106,7 +106,7 @@
                         <div id="printablediv">
                             <div class="scroll">
                             <!-- <table id="my-table" class="table table-hover table-bordered mt-3 mb-1"> -->
-                            <table id="my-table" class="table table-hover">
+                            <table id="my-table" class="table table-hover intern-table">
                                 <!-- <thead class="table-primary"> -->
                                 <thead>
                                     <tr>
@@ -172,7 +172,7 @@
 			<p class="details">Email: <span id="email"></span></p>
 			<p class="details">Phone Number: <span id="phone"></span></p>
 			<p class="details">CV Link: <span id="cv"></span></p>
-			<p class="details">Experience: <span id="experience"></span></p>
+			<!-- <p class="details">Experience: <span id="experience"></span></p> -->
             <p class="details">Interest: <span id="interest"></span></p>
             <p class="details">Location: <span id="location"></span></p>
             <p class="details">Employment Status: <span id="employmentStatus"></span></p>
@@ -203,4 +203,5 @@
 <script src="js/jspdf.js"></script>
 <script src="js/jspdf.plugin.autotable.min.js"></script>
 <script src="js/paginator.js"></script>
+<script  type="text/javascript" src="js/sidebar.js"></script>
 <script type="text/javascript" src="js/newDashboard.js"></script>

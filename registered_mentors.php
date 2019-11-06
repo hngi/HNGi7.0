@@ -21,15 +21,15 @@ if (isset($_GET['rejectMentorId'])) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Mentors</title>
+    <title>Registered Mentors</title>
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
     <!--This contains the styling for the side bar -->
     <link href="css/dashboard.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
-    
+
     <link href="css/newDashboard.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
-    
+
 
     <!-- This version required for Pagination -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -39,7 +39,7 @@ if (isset($_GET['rejectMentorId'])) {
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-   
+
     <style type="text/css">
         .card {
             height: 150px;
@@ -61,7 +61,7 @@ if (isset($_GET['rejectMentorId'])) {
             </div>
             <div>
                 <input type="radio" id="pdf" name="exportOptions"><label for="pdf">Export to PDF</label>
-            </div> 
+            </div>
             <p id="message"></p>
             <button type="button" class="exports" id="download">Download</button>
         </div>
@@ -69,15 +69,15 @@ if (isset($_GET['rejectMentorId'])) {
         <section id="overview-section">
             <!-- <h1>Dashboard</h1> -->
             <h2>Active Mentors </h2>
-            <div style="margin-bottom : 10px;">
+            <div class="mentor-buttons">
                 <a href="pending_mentors.php" class="btn btn-default">Pending Mentors</a>
                 <a href="declined_mentors.php" class="btn btn-default">Declined Mentors</a>
             </div>
             <!-- <section id="intern-section">
-				Populated by `js/dashboard.js` 
+				Populated by `js/dashboard.js`
 			</section> -->
 
-            <div class="container">
+            <div>
                 <div class="row">
 
                     <?php
@@ -91,7 +91,7 @@ if (isset($_GET['rejectMentorId'])) {
                         <!--    </a>-->
                         <!--</div>-->
                         <!-- <div class="col-md-3">
-                            
+
                             <a href="#" onclick="javascript:printDiv('printablediv')">
                                 <button type="button" class="btn btn-primary btn-sm" id="export">Export to PDF</button>
                             </a> -->
@@ -100,7 +100,7 @@ if (isset($_GET['rejectMentorId'])) {
                         <div id="printablediv">
                             <div class="scroll">
                             <!-- <table id="my-table" class="table table-hover table-bordered mt-3 mb-1"> -->
-                            <table id="my-table" class="table table-hover">
+                            <table id="my-table" class="table table-hover mentor-table">
                                 <!-- <thead class="table-primary"> -->
                                 <thead>
                                     <tr>
@@ -116,7 +116,7 @@ if (isset($_GET['rejectMentorId'])) {
                                     <th data-heading="state">Current State<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
                                     <th data-heading="employment-status">Employment Status<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
                                     <th data-heading="timeStamp">Timestamp<!--<i class="fas fa-sort-up"></i><i class="fas fa-sort-down"></i>--></th>
-                                        <th>Action</th>
+                                        <th> Action</th>
 
 
                                     </tr>
@@ -141,7 +141,7 @@ if (isset($_GET['rejectMentorId'])) {
                                 <a href="#" >
                                     <button type="button" class="exports" id="exportAs">Export</button>
                                 </a>
-                        </div>            
+                        </div>
                 </div>
             </div>
 
@@ -172,7 +172,7 @@ if (isset($_GET['rejectMentorId'])) {
             <p class="details">Timestamp: <span id="timeStamp"></span></p>
             <!-- <div href="" id="details-return">Back to Overview</div> -->
             <div id="navigator">
-                <i class="fas fa-chevron-left fa-2x left navigator"></i> 
+                <i class="fas fa-chevron-left fa-2x left navigator"></i>
                 <p class="details"><span id="sn"></span></p>
                 <i class="fas fa-chevron-right fa-2x right navigator"></i>
             </div>
@@ -195,4 +195,5 @@ if (isset($_GET['rejectMentorId'])) {
 <script src="js/jspdf.js"></script>
 <script src="js/jspdf.plugin.autotable.min.js"></script>
 <script src="js/paginator.js"></script>
+<script  type="text/javascript" src="js/sidebar.js"></script>
 <script type="text/javascript" src="js/newDashboard.js"></script>

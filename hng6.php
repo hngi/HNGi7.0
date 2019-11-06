@@ -10,8 +10,8 @@ $countDownValues = $countdown->getDate();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>The HNG Internship</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <title>HNGi6.0</title>
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css"
@@ -108,7 +108,7 @@ $countDownValues = $countdown->getDate();
             </section>
 
             <section class="gallery">
-                <h2 class="blue-text"  data-aos="fade-up">How it All Happened</h2>
+                <h2 class="blue-text"  data-aos="fade-up">How It All Happened</h2>
                 <section class="container">
                     <div class="gallery_items"  data-aos="fade-up">
                         <img
@@ -206,15 +206,15 @@ $countDownValues = $countdown->getDate();
                     <div id="mentor-flex">
                         <div id="mentor-div">
                             <img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722683/mentors-first_qlquq9.png">
-                            <p class="mentor-name center-text">Samuel L. Jackson</p>
-                            <p class="mentor-desc center-text">Mentor, HNG 5.0</p>
+                                src="https://res.cloudinary.com/memz/image/upload/v1572796363/Mentors/20191103_165148_auawdc.jpg">
+                           <p class="mentor-name center-text">Seyi Onifade</p>
+                            <p class="mentor-desc center-text">Devops and CEO, HNG Tech</p>
                         </div>
                         <div id="mentor-div">
                             <img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722685/mentors-second_frnhpz.png">
-                            <p class="mentor-name center-text">Taraji P. Henson</p>
-                            <p class="mentor-desc center-text">Mentor, HNG 6.0</p>
+                                src="https://res.cloudinary.com/memz/image/upload/v1572710145/Mentors/Tomisin_olpwrk.jpg">
+                            <p class="mentor-name center-text">Tomisin Lalude</p>
+                            <p class="mentor-desc center-text">Frontend Development</p>
                         </div>
                     </div>
                     <a href="mentorpage.php" class="def-button shadowed">See all Mentors</a>
@@ -239,26 +239,55 @@ $countDownValues = $countdown->getDate();
                 </div>
             </section>
             <section class="section4">
-                <h2 class="center-text blue-text"  data-aos="fade-up">HNG 6.0 Internship Sponsors</h2>
-                <div id="sponsor-flex-top"  data-aos="fade-up">
-                    <a href="#"><img
-                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg"></a>
-                    <a href="#"><img
-                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722780/akwa-ibom-logo_yzz8ny.svg"></a>
-                    <a href="#"><img
-                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722785/imo-logo_rvxpil.svg"></a>
-                    <a href="#"><img
-                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722788/verifi-logo_nfckrw.svg"></a>
+            <div class="sponsor">
+                    <div class="container">
+                        <h2 class="center-text blue-text">HNG 6.0 Internship Sponsors</h2>
+                        <div class="row section-row text-center mx-auto" data-aos="fade-up">
+                            <div class="col-md-3">
+                                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722780/akwa-ibom-logo_yzz8ny.svg">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722785/imo-logo_rvxpil.svg">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722788/verifi-logo_nfckrw.svg">
+                            </div>
+                        </div>
+                    <div class="row second-row text-center mx-auto" data-aos="fade-up">
+                        <div class="col-md-4">
+                            <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570723653/figma-logo_iexfvh.png">                    </div>
+                        <div class="col-md-4">
+                            <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722855/bluechip-logo_rw62cu.svg">                    </div>
+                        <div class="col-md-4">
+                            <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg">                    </div>
+                    </div>
+                    <p class="center-text"  data-aos="fade-up"><a href="donate.php" class="def-button shadowed center">Become a Sponsor</a></p>
+                    </div>
+
+                    <!--
+                    <div id="sponsor-flex-top" data-aos="fade-up">
+                        <a><img
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg"></a>
+                        <a><img
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722780/akwa-ibom-logo_yzz8ny.svg"></a>
+                        <a><img
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722785/imo-logo_rvxpil.svg"></a>
+                        <a><img
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722788/verifi-logo_nfckrw.svg"></a>
+                    </div>
+                    <div id="sponsor-flex-bottom" data-aos="fade-up">
+                        <a><img
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570723653/figma-logo_iexfvh.png"></a>
+                        <a><img
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722855/bluechip-logo_rw62cu.svg"></a>
+                        <a><img
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg"></a>
+                    </div>
+-->
                 </div>
-                <div id="sponsor-flex-bottom"  data-aos="fade-up">
-                    <a href="#"><img
-                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570723653/figma-logo_iexfvh.png"></a>
-                    <a href="#"><img
-                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722855/bluechip-logo_rw62cu.svg"></a>
-                    <a href="#"><img
-                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg"></a>
-                </div>
-                <p class="center-text"  data-aos="fade-up"><a href="donate.php" class="def-button shadowed center">Become a Sponsor</a></p>
             </section>
         </main>
        
@@ -283,12 +312,9 @@ $countDownValues = $countdown->getDate();
 <script type="text/javascript" src="js/hng6.js"></script>
     <script>
         function showImage() {
-            var images = document.getElementById("hidden_images");
-            if (images.style.display === "grid") {
-                images.style.display = "none";
-            } else {
-                images.style.display = "grid";
-            }
+            var images = $("#hidden_images");
+            images.slideToggle(1000).css("display", "grid");
+
         }
 
 

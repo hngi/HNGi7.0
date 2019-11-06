@@ -1,96 +1,106 @@
 body{
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
     background: white;
-    font-family: sans-serif;
+    font-family: sans-serif; 
 }
-p {
-    font-size: .9em;
-    line-height: 1.6em;
-    margin-top: 25px;
-    text-align: left;
+
+.cards {
+    width: 100%;
+    background-color: rgb(212, 206, 206);
+    box-shadow: silver;
+    position: relative; 
+    margin-top: -5px;
+    display: inline-block;
 }
-ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.image{
+    width: 100%;
+    position: relative;
 }
-.container {
+.heading h3 {
+    position: absolute;
+    top: 10%;
+    right: 30%;
+    /* transform: transla te(-50% , -50%); */
+}
+.heading h5{
+    position: absolute;
+    top: 15%;
+    right: 25%;
+}
+.heading {
     text-align: center;
-    padding: .8em 1.2em;
-    margin-top: 10px;
+    /* position: absolute;
+    top: 0; */
 }
-.image {
-    width: 90%;
-    margin-top: 50px;
+.heading p {
+    padding: 10px;
 }
+
 .images{
-    width: 40%;
-    margin-top: 15px;
+    width: 50%;
+    margin-left: 25%;;
+}
+
+.para{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.para p{
+    padding: 10px;
 }
 .button{
-    border-radius: 4px;
-    background: black;
-    text-align: center;
-    margin: 2.5em 0;
-    padding: .5em 2.5em;
+    background-color: black;
     color: white;
+    box-shadow: black;
+    padding: .5em 2em
 }
-@media only screen and (min-width: 450px){
-    .image {
-        width: 90%;
-        margin-top: 50px;
-    }
-    .images{
-        width: 30%;
-        margin-top: 15px;
-    }
 
-}
-@media only screen and (min-width: 600px){
-    .images{
-        width: 60%;
+@media only screen and (min-width: 650px){
+    .heading p, .para p {
+       font-size: 1.6em;
     }
-    .image{
-        width: 100%;
-        padding-right: .8em;
-        padding-left: .8em;
-    }
-    p{
-        font-size: .7em;
-        margin-bottom: 1em ;
-        padding: .8em 1.2em;
+    .heading h3, .heading h5{
+        font-size: 50px;
     }
     .button{
-        margin: 2.5em 0;
-        padding: .5em 1.5em;
+       font-size: 25px;
     }
-    .container ul{
-        display: flex;
-        margin-top: -30px;
-    }
-    .container{
-        padding: 0;
-    } 
-    .container ul li:nth-child(2) .images2 {
-        width: 45%;
-    }
-}
-@media only screen and (min-width: 768px){
-    .container ul li:nth-child(2) .images2 {
-        width: 40%;
-    }
-}
-@media only screen and (min-width: 875px){
-.container ul {
-    margin: 0 0 4% 0;
-}
-p{
-    font-size: .9em;
-    margin-bottom: .5em ;
-    padding: .8em 1.2em;
-}
-.container ul li:nth-child(2) .images2 {
-    width: 50%;
-}
 
+    
+}
+ @media only screen and (min-width: 1024px){ 
+     .container{
+         display: flex;
+         margin-left: 200px;
+     }
+     .images2 {
+         margin: -40px;
+     }
+     .images3 {
+         margin: -10px;
+     }
+    .cards {
+        width: 33%;
+        background-color: rgb(212, 206, 206);
+        display: inline-block;
+        padding: 10px;
+        box-shadow: silver;
+        margin-top: -20px;
+    }
+    .cards .images {
+        width: 50%;
+    }
+    .heading p, .para p {
+        font-size: .9em;
+     }
+     .heading h3, .heading h5{
+         font-size: 20px;
+     }
+     .button{
+        font-size: 25px;
+     }
+     .button{
+        font-size: 15px;
+     }
 }

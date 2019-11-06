@@ -3,17 +3,27 @@
 class InternExperience
 {
 
-    public function saveExperience($names,$stack,$image,$experience){
+    public function saveExperience($names,$stack,$fileDe,$experience){
         global $database;
-        $sql = "INSERT INTO intern_experience(`names`,stack,`image`,experience,status) VALUES('$names','$stack','$image','$experience','1')";
+        $sql = "INSERT INTO intern_experience(names,stack,image,experience,status) VALUES('$names','$stack','$fileDe','$experience','0')";
         $query = $database->query($sql);
+        return $query;
     }
+
+   
+    public function uploadImage($destination) {
+      global $database;
+        $sql = "INSERT INTO intern_experience (image) VALUES ('$destination')";
+        $result = $database->query($sql);
+        return $result;
+    }
+
 
 
     function fetch_experiences(){
         global $database;
         //Method to fetch interns records
-        $sql = "SELECT names,stack,image,experience FROM intern_experience WHERE status = '1' ORDER BY id DESC";
+        $sql = "SELECT * FROM intern_experience WHERE status = '1' ORDER BY id DESC";
         $query = $database->query($sql);
         $result = $query->fetch_all(MYSQLI_ASSOC);
 

@@ -2,33 +2,40 @@
     require 'classControllers/init.php';
     $internExperience = new InternExperience();
     if(isset($_POST['ok'])){
+
+
+      $file = $_FILES['image'];
+      $fileName = $file['name'];
+      $fileTmpName = $file['tmp_name'];
+      $fileSize = $file['size'];
+      $fileError = $file['error'];
+      $fileType = $file['type'];
+
+        $fileExtension = explode('.', $fileName);
+        $fileActualExtension = strtolower(end($fileExtension));
+
+        $allowed = array('jpg', 'jpeg', 'png');
+
+        if(in_array($fileActualExtension, $allowed)){
+
+        $fileNewName = uniqid('', true).".".$fileActualExtension;
+
+
+        $fileDestination = 'uploads/interns/'.$fileNewName;
+        move_uploaded_file($fileTmpName, $fileDestination);
+
+
+
+        // $internExperience->uploadImage($fileDestination);
         $names = $database->escape_string($_POST["names"]);
         $stack = $database->escape_string($_POST["stack"]);
         $experience = $database->escape_string($_POST['experience']);
 
-        if(isset($_FILES['image']['name']) && $_FILES['image']['name'] != ""){
-            $folder = "./uploads/interns/";
-            $ext = strtolower(end(explode(".",$_FILES['image']['name'])));
-            $allowed = array('jpg','jpeg','png');
-            if(in_array($ext,$allowed)){
-                $image_name = uniqid().$_FILES['image']['name'];
-                $destination = $folder."/".$image_name;
-                $source = $_FILES['image']['tmp_name'];
+      }
 
-                if(move_uploaded_file($source,$destination)){
-                    $image = $image_name;
-                }else{
-                    $image = "";
-                }
-            }else{
-                $image = "";
-            }
-
-        }else{
-            $image = "";
-        }
-
-        $internExperience->saveExperience("$names","$stack","$image","$experience");
+          $fileDe = 'uploads/interns/'.$fileNewName;
+          move_uploaded_file($fileTmpName, $fileDe);
+        $internExperience->saveExperience($names,$stack,$fileDe,$experience);
 
         $_SESSION['msg'] = "<div class='alert alert-success'>Your experience has been submitted successfully!</div>";
         header("location:intern-experience.php");
@@ -54,7 +61,22 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="stylesheet" href="css/intern-experience.css">
-    <title>Experience Page</title>
+    <title>Intern Experience</title>
+
+
+    <style>
+        h2.heading {
+          color: #084482;
+          font-weight: bolder;
+          padding: 0 4px;
+        }
+        p.para {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 100px !important;
+          padding: 0 4px;
+        }
+  </style>
 </head>
 
 <body>
@@ -63,20 +85,20 @@
    <?php include('fragments/site_header.php'); ?>
   </section>
 
-  
-    <section class="jumb">  
-            <h2>Past Interns Experience</h2>
-            <p class="para">Testimonies From Ex-HNG Internship Finalists</p>
-            <p class="text-center" onclick="message()"><a href="#" class="experiencetext">Submit Experience</a></p>
+
+    <section class="jumbo">
+            <h2 class="heading">Past Interns Experience</h2>
+            <p class="para">Testimonies From Ex-HNG Internship Finalists<br>
+            <a href="#" onclick="modalForm()" class="experiencetext">Submit Experience</a>
+            </p>
    </section>
 
-    
-    <div class="modal fade" id="modal-id">
+    <div class="submitExperience" id="submitExperience">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Submit Your HNG Internship Experience</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="closeForm()">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form action="" method="post" role="form" enctype="multipart/form-data">
@@ -86,25 +108,38 @@
                         </div>
                         <div class="form-group">
                             <label for="stack">Your Stack</label>
-                            <input type="text" name="stack" class="form-control" required placeholder="Your Stack" id="stack">
+                            
+                            <select class="interest form-control" name="stack" id="stack" required multiple>
+                              <option value="" disabled selected hidden>Your Stack</option>
+                              <option value="Backend">Backend</option>
+                              <option value="DevOps">DevOps</option>
+                              <option value="Digital Marketing">Digital Marketing</option>
+                              <option value="Frontend">Frontend</option>
+                              <option value="Machine Learning">Machine Learning</option>
+                              <option value="Mobile Development">Mobile Development</option>
+                              <option value="UI/UX Design">UI/UX Design</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="exp">Your Experience</label>
                             <textarea name="experience" class="form-control" required placeholder="Your Experience" id="exp" maxlength="300"></textarea>
                         </div>
-                        <div class="form-group">
-                            <label for="image">Your Picture(Optional)</label>
-                            <br>
-                            <input type="file" name="image" accept="image/*">
-                        </div>
+
+
+                          <div class="form-group">
+                              <label for="image">Your Picture </label>
+                              <br>
+                              <input type="file" name="image" required />
+                          </div>
+
 
                         <div class="form-group">
-                            <input type="submit" name="ok" class="btn btn-success" value="Submit Experience">
+                            <input type="submit" name="ok" class="btn btn-success modal-button" value="Submit Experience">
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="closeForm()">Close</button>
                 </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
@@ -130,15 +165,15 @@
                             if($image == ""){
                                 $img_src = "https://via.placeholder.com/150x150.png?text=$names";
                             }else{
-                                $img_src = "uploads/interns/$image";
+                                $img_src = "$image";
                             }
                             ?>
-                            <div class="wrapper-child"  >
-                                <img class="image" src="<?php echo $img_src;?>" alt = "intern img">
-                                <h4 class="name"><?php echo $all_experience['names'];?></h4>
-                                <p class="stack"><?php echo $all_experience['stack'];?></p> <hr>
+                            <div class="wrapper-child col-sm-12"  >
+                                <img class="image" src="<?= $img_src;?>" alt = "intern img">
+                                <h4 class="name"><?= $all_experience['names'];?></h4>
+                                <p class="stack"><?= $all_experience['stack'];?></p> <hr>
                                 <p class="experience">
-                                    <?php echo nl2br($all_experience['experience']);?>
+                                    <?= nl2br($all_experience['experience']);?>
                                 </p>
                             </div>
                             <?php
@@ -149,25 +184,32 @@
         </section>
 
     </main>
-    </section>        
+    </section><br>
     <?php include('fragments/site_footer.php'); ?>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 </body>
- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/countdown.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="js/intern-experience.js">
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>
+
     <script>
-          function message (){
-            alert("Function under construction check back later!");
-        }
+        let formBox = $(".submitExperience");
+            function modalForm (){
+                formBox.slideToggle(100);
+            }
+
+            function closeForm (){
+                formBox.css("display", "none")
+            }
     </script>
 </html>

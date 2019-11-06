@@ -1,3 +1,8 @@
+<?php
+    require 'classControllers/init.php';
+    $countdown = new CountdownTimer();
+    $countDownValues = $countdown->getDate();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,8 +23,11 @@
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
 </head>
 <body>
+    <p id="startDate" style="display: none;"><?php echo $countDownValues["startDate"]; ?></p>
+    <p id="startTime" style="display: none;"><?php echo $countDownValues["startTime"]; ?></p>
+
 <?php include('fragments/site_header.php');?>
-    <section>
+    <section class="body-section">
         <div>
             <img src="https://bit.ly/2OC3tWo" id="corner-circle" alt="Graphic at the top right corner">
 
@@ -29,7 +37,7 @@
                     <div class="main-first-row mobile-view" data-aos="fade-up">
                         <div class="welcome-column">
                             <h1 id="welcome-text" class="text__dark-blue">
-                                Welcome to HNG 7.0 Internship
+                                Welcome to<br>HNG 7.0 Internship
                             </h1>
                             <p id="welcome-story">
                                 The HNG Internship is an ambitious attempt to change the way education is done in Africa.
@@ -40,17 +48,17 @@
                             </button>
                         </div>
                         <div class="image-column desktop-only">
-                            <img id="circles" src="https://bit.ly/2OzWHk7" alt="">
+                            <img id="circles" src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572646825/circles_yknmsg-min.png" alt="">
                         </div>
                     </div>
-                
+
                     <div class="main-second-row1 countdown2" data-aos="fade-up">
                         <h3 class="countdown__heading text_center">
                             Countdown to HNGi7.0
                         </h3>
                         <section id="countdown-container1" class="mt-2 mb-4">
                             <div class="message"></div>
-                            <div class="countdown1 mb-4" data-aos="fade-up">
+                            <div class="countdown1">
                                 <div class="item">
                                     <svg class="d-svg" width="160" height="160">
                                     <circle class="d-outer" r="70" cy="81" cx="81" stroke-width="5" stroke="#d5d5d5" fill="none" />
@@ -99,7 +107,7 @@
                     </div>
                     <div class="main-card__container">
                         <div class=".card__container">
-                            <img class="card1-image" src="https://bit.ly/33gP99W" alt="">
+                            <img class="card1-image" src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572765853/card-image-1_qmzasp-min.jpg" alt="">
                             <h5 class="card1-heading text__dark-blue">Remote Learning</h5>
                             <p class="card1-text">
                                 The HNG internship is a 3-month remote internship designed to find and develop the most
@@ -107,7 +115,7 @@
                             </p>
                         </div>
                         <div class=".card__container">
-                            <img class="card1-image" src="https://bit.ly/2IAGSFN" alt="">
+                            <img class="card1-image" src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572766772/card-image-2_e9bamu-min.jpg" alt="">
                             <h5 class="card1-heading text__dark-blue">Collaborate with Creatives</h5>
                             <p class="card1-text" id="tess">
                                 The HNG internship is a 3-month remote internship designed to find and develop the most
@@ -115,7 +123,7 @@
                             </p>
                         </div>
                         <div class=".card__container">
-                            <img class="card1-image" src="https://bit.ly/2Vug2Vf" alt="">
+                            <img class="card1-image" src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572766774/card-image-3_vqi4zm-min.jpg" alt="">
                             <h5 class="card1-heading text__dark-blue">Build Portfolio</h5>
                             <p class="card1-text">
                                 The HNG internship is a 3-month remote internship designed to find and develop the most
@@ -124,7 +132,7 @@
                         </div>
                     </div>
                 </div>
-                    
+
                 </div>
 
                 <div class="main-fourth-row">
@@ -176,9 +184,7 @@
 
                             <div class="section2">
                                 <div class="half-a-row">
-                                    <img class="intern-meet"
-                                        src="https://res.cloudinary.com/chux/image/upload/v1570646194/Rectangle_4.6_vfbtwb.png"
-                                        alt="interns" />
+                                    <img class="intern-meet" src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572767613/Rectangle_4.6_vfbtwb-min.png" alt="interns" />
                                 </div>
                                 <div class="onboard my-auto mobile-view" data-aos="fade-left">
                                     <h4 class="">Onboard And Connect With Teammates
@@ -216,8 +222,9 @@
                         <div class="">
                             <div>
                                 <img
-                                    src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730626/img1_cpa8nj.png">
+                                    src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572767613/img1_cpa8nj-min.png">
                             </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -229,7 +236,7 @@
                 <h4 class="text-center mt-5">One of the Best Learning Curriculums in the World</h4>
                     <section class="tracks">
                         <div class="track_container">
-                            <div class="row">
+                            <div class="row" data-aos="fade-right">
                                 <div class="col-2">
                                     <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/frontend_hzyzio.png"
                                         width="50px" class="img-fluid">
@@ -241,7 +248,7 @@
                                 </div>
 
                             </div>
-                            <div class="row">
+                            <div class="row" data-aos="fade-right">
                                 <div class="col-2">
                                     <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/backend_orn4az.png"
                                         width="50px" class="img-fluid">
@@ -253,7 +260,7 @@
                                     </P>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row" data-aos="fade-right">
                                 <div class="col-2">
                                     <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/ml_sdviij.png"
                                         width="30px" class="img-fluid ml-2">
@@ -265,7 +272,7 @@
                                     </P>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row" data-aos="fade-right">
                                 <div class="col-2">
                                     <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/ui-ux_xq64bx.png"
                                         width="50px" class="img-fluid">
@@ -276,7 +283,7 @@
                                         exciting User Interfaces for great User Experience.</P>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row" data-aos="fade-right">
                                 <div class="col-2">
                                     <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/dm_bxzzr2.png"
                                         width="50px" class="img-fluid">
@@ -383,7 +390,7 @@
                         </div>
                     </section>
                 </div>
-                    
+
                 </div>
 
 
@@ -393,24 +400,24 @@
                     </h4>
                     <section class="mentor-section" data-aos="fade-up">
                         <div class="mentor-image">
-                            <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730807/IMG2_uiu3fj.png">
-                            <p>Ryan Thompson</p>
-                            <p>web Developer</p>
+                            <img src="https://res.cloudinary.com/joshuafolorunsho/image/upload/c_scale,w_200/v1572870951/20191103_165148_auawdc-min.jpg">
+                            <p class="font-weight-bold">Seyi Onifade</p>
+                            <p>Devops and CEO, HNG Tech</p>
                         </div>
                         <div class="mentor-image">
-                            <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730833/IMG4_kvttgt.png">
-                            <p>Romina Hadid </p>
-                            <p>Marketing Strategist</p>
+                            <img src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572871094/foutw9umk4hcfntupffn.jpg">
+                            <p class="font-weight-bold">Tomisin Lalude </p>
+                            <p>Frontend Development</p>
                         </div>
                         <div class="mentor-image">
-                            <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730816/IMG3_cerrem.png">
-                            <p>Alexander Smith</p>
-                            <p>UI/UX Designer</p>
+                            <img src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572871095/y7kp4jm0rmqolkcmprvc.jpg">
+                            <p class="font-weight-bold">Kevin Chike</p>
+                            <p>Backend Development</p>
                         </div>
                         <div class="mentor-image">
-                            <img src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730816/IMG3_cerrem.png">
-                            <p>John Doe </p>
-                            <p>Founder and CEO</p>
+                            <img src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572871096/zodqqfrro1lwuntitiaw.jpg">
+                            <p class="font-weight-bold">Ephraim Aigbefo</p>
+                            <p>Fullstack Development</p>
                         </div>
                     </section>
                     <div>
@@ -419,7 +426,7 @@
                         </button>
                     </div>
                     </div>
-                    
+
                 </div>
 
                 <div class="main-eighth-row">
@@ -429,7 +436,7 @@
                             <div class="row_8--one mobile-view" data-aos="fade-right">
                                 <h4>HNG 6.0 Internship
                                 </h4>
-                                <p><i>...the journey so far</i></p>
+                                <p class="so-far">...the journey so far</p>
                                 <p>The HNG 6.0 Internship commenced 9th September, 2019 and ended 17th November, 2019.</p>
 
                                 <p>
@@ -451,7 +458,7 @@
                             </div>
                         </div>
                 </div>
-                    
+
                 </div>
 
                 <div class="support"  data-aos="fade-up">
@@ -502,32 +509,59 @@
                         </div>
                     </div>
                 </div>
-                    
+
                 </div>
 
                 <div class="sponsor">
-                    <h2 class="text_center blue-text">HNG 6.0 Internship Sponsors</h2>
-                    <div id="sponsor-flex-top" data-aos="fade-up">
-                        <a href="#"><img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg"></a>
-                        <a href="#"><img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722780/akwa-ibom-logo_yzz8ny.svg"></a>
-                        <a href="#"><img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722785/imo-logo_rvxpil.svg"></a>
-                        <a href="#"><img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722788/verifi-logo_nfckrw.svg"></a>
-                    </div>
-                    <div id="sponsor-flex-bottom" data-aos="fade-up">
-                        <a href="#"><img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570723653/figma-logo_iexfvh.png"></a>
-                        <a href="#"><img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722855/bluechip-logo_rw62cu.svg"></a>
-                        <a href="#"><img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg"></a>
+                    <div class="container">
+                        <h2 class="text_center blue-text">HNG 6.0 Internship Sponsors</h2>
+                        <div class="row section-row text-center mx-auto" data-aos="fade-up">
+                            <div class="col-md-3">
+                                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722780/akwa-ibom-logo_yzz8ny.svg">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722785/imo-logo_rvxpil.svg">
+                            </div>
+                            <div class="col-md-3">
+                                <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722788/verifi-logo_nfckrw.svg">
+                            </div>
+                        </div>
+                    <div class="row second-row text-center mx-auto" data-aos="fade-up">
+                        <div class="col-md-4">
+                            <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570723653/figma-logo_iexfvh.png">                    </div>
+                        <div class="col-md-4">
+                            <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722855/bluechip-logo_rw62cu.svg">                    </div>
+                        <div class="col-md-4">
+                            <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg">                    </div>
                     </div>
                     <button class="cta-button button--midBlue">
                         <a href="donate.php" class="text_center">Become Sponsor</a>
                     </button>
+                    </div>
+
+                    <!--
+                    <div id="sponsor-flex-top" data-aos="fade-up">
+                        <a><img
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg"></a>
+                        <a><img
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722780/akwa-ibom-logo_yzz8ny.svg"></a>
+                        <a><img
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722785/imo-logo_rvxpil.svg"></a>
+                        <a><img
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722788/verifi-logo_nfckrw.svg"></a>
+                    </div>
+                    <div id="sponsor-flex-bottom" data-aos="fade-up">
+                        <a><img
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570723653/figma-logo_iexfvh.png"></a>
+                        <a><img
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722855/bluechip-logo_rw62cu.svg"></a>
+                        <a><img
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg"></a>
+                    </div>
+-->
                 </div>
 
             </main>
@@ -543,21 +577,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
 <script type="text/javascript" src="js/countdown.js"></script>
 <script src="js/script.js"></script>
-</body>
-
-
-
-
-<div id="jumptotop"><em></em></div>
-<script src="./js/scroll-to-top.js"></script>
-
 <script>
     let accord_target = $(".card-header");
     let accord_body = accord_target.next();
@@ -568,5 +591,5 @@
     })
     }
 </script>
-
+</body>
 </html>

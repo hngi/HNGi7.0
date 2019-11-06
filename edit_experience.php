@@ -24,7 +24,7 @@ if(isset($_POST['ok'])){
     $admin->updateExperience("$id","$names","$stack","$experience");
 
     $_SESSION['msg'] = "<div class='alert alert-success'>Experience updated successfully!</div>";
-    header("location:edit_experience.php?id=$id");
+    header("location:internreview.php");
     exit();
 }
 
@@ -42,6 +42,7 @@ $the_experience = $admin->fetchSingleExperience($id);
 
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
     <link rel="stylesheet" href="css/dashboard.css">
+  	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -109,8 +110,21 @@ $the_experience = $admin->fetchSingleExperience($id);
                         </div>
                         <div class="form-group">
                             <label for="stack">Stack</label>
-                            <input type="text" value="<?php echo $the_experience['stack'];?>" name="stack" class="form-control" required placeholder="Your Stack" id="stack">
+
+                            <select class="interest form-control" name="stack" id="stack" required multiple>
+                              <option value="" disabled selected hidden>Your Stack</option>
+                              <option value="Backend">Backend</option>
+                              <option value="DevOps">DevOps</option>
+                              <option value="Digital Marketing">Digital Marketing</option>
+                              <option value="Frontend">Frontend</option>
+                              <option value="Machine Learning">Machine Learning</option>
+                              <option value="Mobile Development">Mobile Development</option>
+                              <option value="UI/UX Design">UI/UX Design</option>
+                            </select>
                         </div>
+
+
+
                         <div class="form-group">
                             <label for="exp">Your Experience</label>
                             <textarea name="experience" class="form-control" required placeholder="Your Experience" id="exp" maxlength="300"><?php echo $the_experience['experience'];?></textarea>
@@ -163,3 +177,5 @@ $the_experience = $admin->fetchSingleExperience($id);
 </body>
 
 </html>
+
+<script  type="text/javascript" src="js/sidebar.js"></script>
