@@ -53,6 +53,7 @@ if(isset($_POST["uploadPicture"])) {
 
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
     <link rel="stylesheet" href="css/dashboard.css">
+  	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -87,13 +88,13 @@ if(isset($_POST["uploadPicture"])) {
 
 <body>
 <main class="reg">
-    
+
     <section id="overview-section">
         <h1>Admin Profile</h1>
         <div class="register-container">
             <br /><br />
             <div class="row" id="table-row">
-                
+
                 <div class="col-md-6">
 
                     <?php
@@ -111,7 +112,7 @@ if(isset($_POST["uploadPicture"])) {
 							</div>';
 						}
                     ?>
-                    
+
                     <form method="post">
                         <div class="form-group">
                             <label for="">First Name: </label>
@@ -162,7 +163,7 @@ if(isset($_POST["uploadPicture"])) {
                             </div>';
                         }
                     ?>
-                       
+
                     <div class="col-md-10" style="margin-bottom: 20px; margin-top: 20px;">
                         <?php
                             if($display["hasPic"] == 0) {
@@ -173,11 +174,11 @@ if(isset($_POST["uploadPicture"])) {
                                 echo '<img src="adminProfilePics/'.$adminId.'.jpg" class="img-circle img-responsive" />';
                             }
                         ?>
-                        
+
                     </div>
-                    
+
                     <div class="row" style="padding-left: 70px;">
-                        <?php   
+                        <?php
                             if($display["hasPic"] == 0) {
                                 // admin has NO picture
                                 echo '
@@ -188,9 +189,9 @@ if(isset($_POST["uploadPicture"])) {
                                 <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Change Profile Picture</button>';
                             }
                         ?>
-                        
+
                     </div>
-                                
+
                 </div>
 
             </div>
@@ -198,7 +199,7 @@ if(isset($_POST["uploadPicture"])) {
         <br /><br />
 
     </section>
-   
+
 </main>
 
 <input type="checkbox" id="mobile-bars-check" />
@@ -227,7 +228,7 @@ if(isset($_POST["uploadPicture"])) {
                 <label for="">First Name: </label>
                 <input type="file" name="image" id="image" required class="form-control">
             </div>
-            
+
 
             <input type="submit" class="btn btn-success" id="submit" name="uploadPicture" value="Submit">
 
@@ -245,3 +246,6 @@ if(isset($_POST["uploadPicture"])) {
 </body>
 
 </html>
+
+<script  type="text/javascript" src="js/sidebar.js"></script>
+<script type="text/javascript" src="js/newDashboard.js"></script>
