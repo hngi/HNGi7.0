@@ -326,7 +326,6 @@
                                         <ul class="accordion_tab">
                                             <li>PHP</li>
                                             <li>Python</li>
-                                            <li>Ruby on Rails</li>
                                             <li>Node.js</li>
                                             <li>Laravel</li>
                                             <li>Apache</li>
