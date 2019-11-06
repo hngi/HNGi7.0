@@ -6,54 +6,9 @@ if(!isset($_SESSION["role"])) {
 }
 
 
-if(isset($_POST['ok'])){
+$newsletter = new Subscribers();
 
-    $subscriber = new Subscribers();
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
-
-    $subscription_lists = $subscriber->fetch_list();
-
-    $email_lists = array();
-
-    foreach ($subscription_lists as $subscription_list){
-        $email_lists[] = $subscription_list['email'];
-    }
-
-
-    $file = $_FILES['image'];
-    $fileName = $file['name'];
-    $fileTmpName = $file['tmp_name'];
-    $fileSize = $file['size'];
-    $fileError = $file['error'];
-    $fileType = $file['type'];
-
-    $fileExtension = explode('.', $fileName);
-    $fileActualExtension = strtolower(end($fileExtension));
-
-    $allowed = array('jpg', 'jpeg', 'png');
-
-    if(in_array($fileActualExtension, $allowed)){
-
-        $fileNewName = uniqid('', true).".".$fileActualExtension;
-
-
-        $fileDestination = 'uploads/newsletter/'.$fileNewName;
-        move_uploaded_file($fileTmpName, $fileDestination);
-
-
-
-    }else{
-        $fileNewName = "";
-    }
-
-    $subscriber->saveNewsletter($subject, $message, $fileNewName);
-    send_general_email("$subject","no-reply@hng.tech",$message,$email_lists);
-
-    $_SESSION['msg'] = "<div class='alert alert-info'>New update sent successfully!</div>";
-    header("location:news_update.php");
-    exit();
-}
+$all_news = $newsletter->fetch_newsletter();
 
 
 ?>
