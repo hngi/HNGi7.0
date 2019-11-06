@@ -11,12 +11,12 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" type="text/css" href="css/learnmore.css">
+    <link rel="stylesheet" type="text/css" href="css/read_news.css">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
 </head>
 <body>    
-<?php include('fragments/site_header.php');?>
+    
 <div class="container">
     <div class="header">
         <img src="images/image 8.png" alt="header">
@@ -36,7 +36,5 @@
     </div>
     <hr>
 </div>
-
-<?php include('fragments/site_footer.php'); ?>
 </body>
 </html>
