@@ -16,7 +16,6 @@
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
 </head>
 <body>    
-<?php include('fragments/site_header.php');?>
 <div class="container">
     <div class="header">
         <img src="images/image 8.png" alt="header">
@@ -36,7 +35,5 @@
     </div>
     <hr>
 </div>
-
-<?php include('fragments/site_footer.php'); ?>
 </body>
 </html>
