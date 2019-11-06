@@ -18,15 +18,17 @@ body{
     position: relative;
 }
 .heading h3 {
+    font-size: 2.2em;
     position: absolute;
     top: 10%;
-    right: 30%;
+    right: 23%;
     /* transform: transla te(-50% , -50%); */
 }
 .heading h5{
+    font-size: 1.5em;
     position: absolute;
-    top: 15%;
-    right: 25%;
+    top: 19%;
+    right: 23%;
 }
 .heading {
     text-align: center;
@@ -97,10 +99,22 @@ body{
      .heading h3, .heading h5{
          font-size: 20px;
      }
+     .heading h3 {
+        position: absolute;
+        top: 10%;
+        right: 30%;
+        /* transform: transla te(-50% , -50%); */
+    }
+    .heading h5{
+        position: absolute;
+        top: 17%;
+        right: 20%;
+    }
      .button{
         font-size: 25px;
      }
      .button{
         font-size: 15px;
+
      }
 }
