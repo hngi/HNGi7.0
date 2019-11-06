@@ -94,7 +94,7 @@
         z-index: 10;
         transform: rotate(-135deg);
     }
-    
+
     #countdown-container {
         width: 50vw;
         margin: 50px auto;
@@ -119,7 +119,7 @@
         background-color: #00AEFF;
         text-decoration: none;
     }
-  
+
     /*COUNT DOWN STYLING ENDS */
 
     /*ABOUT PAGE STARTS*/
@@ -155,7 +155,7 @@
         font-size: 40px;
         line-height: 54px;
     }
-    
+
     #about-container article img {
         position: absolute !important;
         width: 50vw;
@@ -191,6 +191,10 @@
             margin: 15px auto;
             transition: width 2s;
 
+        }
+        .caption{
+          text-align:
+          s
         }
 
          .gallery #hidden_images {
@@ -273,7 +277,7 @@
         background-color: rgb(245, 245, 245);
         margin: 50px auto;
     }
-    
+
     #mentor-section h2 {
         font-weight: bold;
         font-size: 25px;
@@ -368,7 +372,7 @@
         line-height: 34px;
         color: #3C6B9C;
         margin-bottom: 2em;
-    } 
+    }
     .sponsor button {
         margin: 20px auto;
     }
@@ -379,7 +383,7 @@
         padding-left: 0;
         margin-bottom: 4em;
     }
-} 
+}
 
 @media screen and (min-width: 760px){
 
@@ -460,7 +464,7 @@
 @media screen and (min-width : 1200px){
     #about-container article:first-child {
         margin: 0 auto;
-        margin-top: -50px;        
+        margin-top: -50px;
     }
 
     #about-container article img {
@@ -511,12 +515,12 @@
 
     .sponsor h2 {
         margin-bottom: 3em;
-    } 
+    }
 
     .sponsor .second-row {
         margin-top: 0;
         width: 100%;
-        padding: auto;  
+        padding: auto;
     }
 
     .sponsor img {
