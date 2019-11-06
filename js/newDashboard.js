@@ -349,7 +349,7 @@
 
   })
 
-
+/*
 window.addEventListener("resize", e => 
 {
 	if (screen.width >= 860){
@@ -358,8 +358,7 @@ window.addEventListener("resize", e =>
         document.getElementById("details-section").style.left = "105vw"
     }
 })
-
-
+*/
 
 
 

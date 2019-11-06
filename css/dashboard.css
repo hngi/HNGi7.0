@@ -549,6 +549,7 @@ h1
 	}
 	#details-section #details-back
 	{
+		margin-top: 3em;
 		display: block;
 	}
 	#details-section #details-return
