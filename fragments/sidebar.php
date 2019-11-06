@@ -30,6 +30,7 @@
 				<a href="registered_interns.php"> <i class="fas fa-user-graduate"></i>Interns</a>
 				<a href="registered_mentors.php"><i class="fas fa-hands-helping"></i>Mentors</a>
 				<a href="registered_sponsors.php"><i class="fas fa-hand-holding-usd"></i>Sponsors</a>
+				<a href="pending_request.php"><i class="fas fa-hand-holding-usd"></i>Certificate</a>
 			</div>
 		</li>
 
