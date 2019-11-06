@@ -249,9 +249,7 @@
         dataRow = Array.from(dataRow)
     
         if(dataRow.indexOf(e.target.parentElement) >= 0){
-            if (screen.width <= 860){  
-                document.getElementById("details-section").style.left = 0;
-            }
+            document.getElementById("details-section").classList.add('activated');
             document.getElementById("no-intern").innerHTML = "";
             navigator.classList.add('active');
             row = dataRow.indexOf(e.target.parentElement) + 1;
@@ -343,22 +341,21 @@
             }
             
         }else if(e.target.className === "details-back"){
-            document.getElementById("details-section").style.left = "105vw"
+            document.getElementById("details-section").classList.remove('activated');
         }
         
 
   })
 
-/*
+
 window.addEventListener("resize", e => 
 {
-	if (screen.width >= 860){
-        document.getElementById("details-section").style.left = "77vw"
-    }else{
-        document.getElementById("details-section").style.left = "105vw"
+	if (screen.width > 860){
+            console.log(screen.width)
+            document.getElementById("details-section").classList.remove('activated');
+    
     }
 })
-*/
 
 
 
