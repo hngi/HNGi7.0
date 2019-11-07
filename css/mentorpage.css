@@ -28,45 +28,29 @@
       animation: Slide_up 2.1s ease ;
     }
 
-    
-
      #landing-page {
       text-align: center;
       background-color: #D1F0F6;
       position: relative;
       min-height: 40vh;
       width: 100vw !important;
-      font-size: 30px;
      }
 
      #landing-page h2 {
-      font-size: 1em !important;
+      font-size: 40px;
+      line-height: 54px;
       font-weight: bold;
       color: #084482 !important;
       margin-top: 0;
       margin-bottom: 1rem;
-      font-size: 40rem;
     }
 
-  #landing-page  h2 {
-     font-size: 20px;
-  } 
   #landing-page  p {
      padding-bottom:0;
-     font-size: 15px;
      font-weight: normal;
-     font-size: 30px;
-     line-height: 33px;
      text-align: center;
-  }
-
-  #landing-page a {
-    font-size: .7em;
-
-  }
      
-
-
+  }
 
 
 .social-link i {
