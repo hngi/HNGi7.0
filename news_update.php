@@ -20,6 +20,34 @@ if(isset($_POST['ok'])){
         $email_lists[] = $subscription_list['email'];
     }
 
+
+    $file = $_FILES['image'];
+    $fileName = $file['name'];
+    $fileTmpName = $file['tmp_name'];
+    $fileSize = $file['size'];
+    $fileError = $file['error'];
+    $fileType = $file['type'];
+
+    $fileExtension = explode('.', $fileName);
+    $fileActualExtension = strtolower(end($fileExtension));
+
+    $allowed = array('jpg', 'jpeg', 'png');
+
+    if(in_array($fileActualExtension, $allowed)){
+
+        $fileNewName = uniqid('', true).".".$fileActualExtension;
+
+
+        $fileDestination = 'uploads/newsletter/'.$fileNewName;
+        move_uploaded_file($fileTmpName, $fileDestination);
+
+
+
+    }else{
+        $fileNewName = "";
+    }
+
+    $subscriber->saveNewsletter($subject, $message, $fileNewName);
     send_general_email("$subject","no-reply@hng.tech",$message,$email_lists);
 
     $_SESSION['msg'] = "<div class='alert alert-info'>New update sent successfully!</div>";
@@ -72,7 +100,11 @@ if(isset($_POST['ok'])){
 <body>
 	<main>
 		<section id="overview-section">
-			<h1>Send News Update</h1>
+			<h1>Send News Update <span class="pull-right">
+                <a href="newsletter_history.php" class="btn btn-success btn-sm">Newsletter History</a>
+            </span></h1>
+
+            <hr>
 
 			<div class="container">
 				<div class="row">
@@ -83,7 +115,7 @@ if(isset($_POST['ok'])){
                                 unset($_SESSION['msg']);
                             }
                         ?>
-                        <form action="" method="post" role="form">
+                        <form action="" method="post" role="form" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="">Message Subject</label>
                                 <input type="text" name="subject" class="form-control input-lg" placeholder="Message Subject" required>
@@ -92,6 +124,11 @@ if(isset($_POST['ok'])){
                             <div class="form-group">
                                 <label for="">Message</label>
                                 <textarea name="message" id="" class="form-control textarea" placeholder="Message"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="">Header Image</label>
+                                <input type="file" name="image" required>
                             </div>
 
                             <div class="form-group">

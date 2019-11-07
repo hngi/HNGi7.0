@@ -132,7 +132,9 @@ if($display["hasPic"] == 0) {
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My profile <span class="caret"></span></a>
                               <ul class="dropdown-menu">
                                 <li><a href="adminProfile.php"><i class="fas fa-user-circle fw"></i> My account</a></li>
-                                <li><a href="#"><i class="fas fa-envelope fw"></i> My inbox</a></li>
+                                <li><a href="compose_message.php"><i class="fas fa-paper-plane fw"></i> Compose</a></li>
+                                <li><a href="admin_inbox.php"><i class="fas fa-inbox fw"></i> Inbox</a></li>
+                                <li><a href="admin_outbox.php"><i class="far fa-envelope fw"></i> Outbox</a></li>
                                 <!-- <li><a href="#"><i class="fas fa-question-circle fw"></i> Help</a></li> -->
                                 
                                 <li role="separator" class="divider"></li>

@@ -123,6 +123,7 @@ h1
 	.prime-table td:nth-child(9) {
 		display: inline;
 		box-sizing: border-box;
+		border:none;
 	}
 	.btn-success {
 		margin-left: 36%;
@@ -378,7 +379,7 @@ h1
 	left: 0;
 	top: 0;
 	z-index: 1;
-	height: 100vh;
+	min-height: 100vh;
 	width: 15vw;
 	padding-top: 1.5rem;
 }
@@ -566,6 +567,7 @@ h1
 		transition: 0.4s ease-out;
 		z-index: 5;
 		padding-top: 4rem;
+		position: fixed;
 	}
 	#sidebar a
 	{
@@ -673,7 +675,7 @@ h1
 }
 .submenu a{
     display: block;
-    padding: 16px 26px;
+    padding: 10px 26px;
     color: white;
     font-size: 14px;
     margin: 4px 0;
@@ -729,4 +731,3 @@ h1
 		width: 75vw;
 	}
 }
-

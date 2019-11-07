@@ -28,10 +28,19 @@
 
         // $internExperience->uploadImage($fileDestination);
         $names = $database->escape_string($_POST["names"]);
-        $stack = $database->escape_string($_POST["stack"]);
+        $stacks = $_POST["stack"];
         $experience = $database->escape_string($_POST['experience']);
 
       }
+
+
+      $the_stack = "";
+      foreach ($stacks as $stack) {
+        $the_stack .= " ,$stack";
+      }
+
+      $stack = trim($the_stack);
+      $stack = substr($stack, 1, strlen($stack));
 
           $fileDe = 'uploads/interns/'.$fileNewName;
           move_uploaded_file($fileTmpName, $fileDe);
@@ -109,7 +118,7 @@
                         <div class="form-group">
                             <label for="stack">Your Stack</label>
                             
-                            <select class="interest form-control" name="stack" id="stack" required multiple>
+                            <select multiple class="interest form-control" name="stack[]" id="stack" required multiple>
                               <option value="" disabled selected hidden>Your Stack</option>
                               <option value="Backend">Backend</option>
                               <option value="DevOps">DevOps</option>
@@ -137,6 +146,8 @@
                             <input type="submit" name="ok" class="btn btn-success modal-button" value="Submit Experience">
                         </div>
                     </form>
+
+                  
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal" onclick="closeForm()">Close</button>

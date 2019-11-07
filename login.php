@@ -1,12 +1,17 @@
 <?php require 'classControllers/init.php';
+require 'config/googleconfig.php';
 $interns = new Admins;
 if (isset($_POST['login'])) {
   $email = $_POST["email"];
   $password = $_POST["password"];
   $login = $interns->adminLogin($email, $password);
   $errors = '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: #F7CFCF; color: #6A0E0D; width: 98% !important; text-align: center;">Wrong Credentials</p>';
+  
 }
-
+if (isset($_SESSION['lg_error'])) {
+  $errors = $_SESSION['lg_error'];
+  unset($_SESSION['lg_error']);
+}
 
 
 ?>
@@ -26,7 +31,7 @@ if (isset($_POST['login'])) {
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
   <link rel="stylesheet" href="css/loginadmin.css">
   <link rel="stylesheet" type="text/css" href="css/header-footer.css">
-  
+
   <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
   <script>
     function signup() {
@@ -35,7 +40,7 @@ if (isset($_POST['login'])) {
       var password = $('#password').val();
 
       $.post($login.
-          '?login=yes', {
+        '?login=yes', {
           email: email,
           password: password
         },
@@ -44,27 +49,25 @@ if (isset($_POST['login'])) {
         });
     }
   </script>
- 
+
 </head>
 
 <body>
   <?php include('fragments/site_header.php'); ?>
 
- <section class="container-fluid full">
-<h2 class="login-heading">Login as Admin</h2>
+  <section class="container-fluid full">
+    <h2 class="login-heading">Login as Admin</h2>
     <form class="form-container" method="post">
 
-      
+
       <?php
       if (!empty($errors)) {
 
         echo $errors;
       }
-      if(isset($_GET['getmess'])){
+      if (isset($_GET['getmess'])) {
 
-        echo '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: green; color: #fff; width: 98% !important; text-align: center;>'.$_GET['getmess'].'</p>';
-
-        
+        echo '<p style="margin: 5px; padding: 5px 10px 5px 10px; background: green; color: #fff; width: 98% !important; text-align: center;>' . $_GET['getmess'] . '</p>';
       }
 
       if (isset($_GET["blocked"])) {
@@ -74,8 +77,8 @@ if (isset($_POST['login'])) {
       ?>
       <p id="result"></p>
       <div class="inputWithIcon">
-      <i class="fa fa-envelope"></i>
-      <input type="email" name="email" id="email" placeholder="Email" required />
+        <i class="fa fa-envelope"></i>
+        <input type="email" name="email" id="email" placeholder="Email" required />
       </div>
 
       <div class="inputWithIcon">
@@ -83,13 +86,21 @@ if (isset($_POST['login'])) {
         <input type="password" name="password" id="password" placeholder="Password" required>
       </div>
       <button type="submit" onclick="signup()" name="login">LOGIN</button>
+      <div class="g-auth">
+        <div class="auth-icon"><img src="images/googauth.png" alt="auth logo" srcset=""></div>
+        <div class="auth-text">
+         <a href="<?php echo $auth_url; ?>">Sign In With Google</a> 
+        </div>
+      </div>
+      <br>
       <span class="swag-daddy">
         <a href="forgotpassword.php" class="small-swag small-text">Forgot Password?</a>
       </span>
     </form>
   </section>
-    <?php include('fragments/site_footer.php'); ?>
+  <?php include('fragments/site_footer.php'); ?>
 
+<?php include('fragments/chat.php'); ?>
 </body>
 
 </html>

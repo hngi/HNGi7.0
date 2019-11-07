@@ -79,7 +79,7 @@
 
     <section class="women">
       <figure>
-        <img src="https://hng.tech/app/img/support/intro.png" alt="Computer" />
+        <img src="https://res.cloudinary.com/cloud-y/image/upload/v1572988274/images_cq2tcg.jpg" alt="Computer" />
       </figure>
       <div class="text">
         <h3 class="title">Donate to specific groups</h3>
@@ -161,6 +161,7 @@
     </section>     
     <?php include "fragments/site_footer.php" ?>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <?php include('fragments/chat.php'); ?>
   </body>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/main.js"></script>
@@ -175,4 +176,5 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>    <script src="./js/scroll-to-top.js"></script> 
+
 </html>

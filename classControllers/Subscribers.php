@@ -42,4 +42,33 @@ class Subscribers
 
         return $result;
     }
+
+    public function saveNewsletter($title, $content, $image){ //Create function to save newsletter
+        global $database;
+
+        $title = $database->escape_string($title);
+        $content = $database->escape_string($content);
+        $image = $database->escape_string($image);
+        $sql = "INSERT INTO newsletter SET title = '$title', content = '$content', image = '$image'";
+        $database->query($sql);
+    }
+
+    public function fetch_newsletter(){ //function to fetch all newsletter
+        global $database;
+        $sql = "SELECT * FROM newsletter ORDER BY id DESC";
+        $query = $database->query($sql);
+        $result = $query->fetch_all(MYSQLI_ASSOC);
+
+        return $result;
+    }
+
+    public function fetch_the_newsletter($id){ //function to fetch single newsletter
+        global $database;
+        $sql = "SELECT * FROM newsletter WHERE id = '$id'";
+        $query = $database->query($sql);
+        $result = $query->fetch_assoc();
+
+        return $result;
+    }
+
 }
