@@ -12,13 +12,10 @@ if (isset($_POST["certificate-btn"])) {
   if (empty($_POST["name"]) || empty($_POST["email"]) || empty($_POST["slack_username"]) || empty($_POST["year"])) {
     $error = "All feild are required";
   }else {
-    $checkemail = $request->confirmEmail($_POST["email"]);
-    if($checkemail){
+    
       $resp = $request->requestCertificate();
       $request_mess = '<p style="text-align:center;">Application successful. You will be informed when your certificate is ready. Thank you!</a>';
-    }else{
-      $error = "Email does not exist";
-    }
+    
    
     
   }
