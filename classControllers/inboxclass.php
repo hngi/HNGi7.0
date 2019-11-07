@@ -47,7 +47,8 @@ function inboxmessage($receiver_id){
 }
 
 function view_message($msg_id, $user_id){
-    $query = $this->db->query("SELECT * FROM inbox_messages WHERE id = '$msg_id' AND (sender_id = '$sender_id' OR receiver_id = '$receiver_id')");
+    $query = $this->db->query("SELECT * FROM inbox_messages WHERE id = '$msg_id' AND
+     (sender_id = '$user_id' OR receiver_id = '$user_id')");
     $result = $query->fetch_assoc();
     return $result;
 }

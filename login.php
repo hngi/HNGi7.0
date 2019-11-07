@@ -86,10 +86,12 @@ if (isset($_SESSION['lg_error'])) {
         <input type="password" name="password" id="password" placeholder="Password" required>
       </div>
       <button type="submit" onclick="signup()" name="login">LOGIN</button>
-      <span class="loginWithGoogle">
-        <br>
-        <a href="<?php echo $auth_url; ?>"><i class="fab fa-goodreads"></i>Login With Google</a>
-      </span>
+      <div class="g-auth">
+        <div class="auth-icon"><img src="images/googauth.png" alt="auth logo" srcset=""></div>
+        <div class="auth-text">
+         <a href="<?php echo $auth_url; ?>">Sign In With Google</a> 
+        </div>
+      </div>
       <br>
       <span class="swag-daddy">
         <a href="forgotpassword.php" class="small-swag small-text">Forgot Password?</a>

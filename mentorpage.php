@@ -44,8 +44,9 @@ $mentors = $mentor->showMentors();
       <h2>Our Mentors</h2>
       <p class="lead">Our mentors who are experienced in various sector contributes their
         time and knowledge in making sure the interns get the best guide as
-        they begin their journey into the tech industry
+        they begin their journey into the tech industry      
       </p>
+        <a href="MentorSetUpPage2.php">Sign up as Mentor</a>
 
   </div>
   </div>

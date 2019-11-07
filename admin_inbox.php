@@ -4,19 +4,14 @@ require 'classControllers/init.php';
 if(!isset($_SESSION["role"])) {
 	header('Location:login.php'); 
 }
-$inbox = new inboxclass();
-$all_admins = $inbox->fetch_all_admin();
-$admin_id = $_SESSION['admin_id']; //id of logged admin
-if(isset($_POST['ok'])){
-  $receiver_id = $database->escape_string($_POST['receiver_id']);
-  $subject = $database->escape_string($_POST['subject']);
-  $message = $database->escape_string($_POST['message']);
-  $inbox->savemessage($admin_id,$receiver_id,$subject,$message);
 
-  $_SESSION['msg'] = "<div class='alert alert-success'>Message sent successfully</div>";
-  //header("location:admin_inbox.php");
-  //exit();
-}
+
+$inbox = new inboxclass();
+$admin_id = $_SESSION['admin_id'];
+$sent_messages = $inbox->inboxmessage($admin_id);
+
+//var_dump($sent_messages);
+
 
 ?>
 <!DOCTYPE html>
@@ -25,7 +20,7 @@ if(isset($_POST['ok'])){
 	<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<title>Message</title>
+	<title>Inbox - Message</title>
 	<link rel="icon" type="img/png" href="images/hng-favicon.png">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link href="css/dashboard.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
@@ -62,13 +57,13 @@ if(isset($_POST['ok'])){
 <body>
 	<main>
 		<section id="overview-section">
-			<h1>Send Message</h1>
+			<h1>New Messages (Inbox)</h1>
 
             <hr>
 
-			<div class="container">
+			<div class="container-fluid">
 				<div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-12">
                         <?php
                             if(isset($_SESSION['msg'])){
                                 echo $_SESSION['msg'];
@@ -76,40 +71,49 @@ if(isset($_POST['ok'])){
                             }
 
                         ?>
-                        <form action="" method="post" role="form" enctype="multipart/form-data">
-
-                            <div class="form-group">
-                                <label for="">Message Receiver</label>
-                                <select name="receiver_id" id="" class="form-control" required>
-                                    <option value="">Select</option>
-                                    <?php
-                                        foreach ($all_admins as $all_admin){
-                                            if($all_admin['admin_id'] == $admin_id)
-                                                continue;
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Sn</th>
+                                        <th>Subject</th>
+                                        <th>Sender</th>
+                                        <th>Date Received</th>
+                                        <th>Status</th>
+                                        <th>&nbsp;</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <?php
+                                    if(array($sent_messages) && count($sent_messages) > 0){
+                                        $sn = 0;
+                                        foreach ($sent_messages as $sent_message){
                                             ?>
-                                            <option value="<?php echo $all_admin['admin_id'];?>" <?php if(@$_GET['receiver_id'] == $all_admin['admin_id']) echo "selected";?>><?php echo $all_admin['admin_name'];?></option>
+                                            <tr>
+                                                <td><?php echo ++$sn;?></td>
+                                                <td><?php echo $sent_message['subject'];?></td>
+                                                <td><?php echo $sent_message['firstname'] ." ".$sent_message['lastname'];?></td>
+                                                <td><?php echo date("F d Y, h:i a", strtotime($sent_message['date_sent']));?></td>
+                                                <td>
+                                                    <?php echo $sent_message['status'];?>
+                                                </td>
+                                                <td>
+                                                    <a href="view_message.php?id=<?php echo $sent_message['id']; ?>" class="btn btn-sm btn-success">View</a>
+                                                </td>
+                                            </tr>
                                             <?php
                                         }
-                                    ?>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="">Message Subject</label>
-                                <input type="text" name="subject" class="form-control input-lg" placeholder="Message Subject" required value="<?php echo @$_GET['subject'];?>">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="">Message</label>
-                                <textarea name="message" id="" class="form-control textarea" placeholder="Message"></textarea>
-                            </div>
-
-
-
-                            <div class="form-group">
-                                <input type="submit" name="ok" class="btn btn-primary" value="Send Message">
-                            </div>
-                        </form>
+                                    }else{
+                                        ?>
+                                        <tr>
+                                            <td colspan="5">Inbox is empty</td>
+                                        </tr>
+                                        <?php
+                                    }
+                                ?>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
 				</div>
 			</div>
