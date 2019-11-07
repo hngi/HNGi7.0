@@ -69,7 +69,7 @@ $mentors = $mentor->showMentors();
                 <div class="col-xl-3 col-sm-6 mb-3">
                     <div class="bg-white rounded  py-5 px-4"><img
                             src="<?= $ment['photo_url'] ;  ?>"
-                            alt="" width="200px" height="200px" class="img-fluid rounded-circle mb-3  ">
+                            alt="" width="100%" height="auto" class="img-fluid rounded-circle mb-3  ">
                         <h5 class="mb-2"><?= $ment['name']; ?></h5>
                         <span class="text-muted"><?= $ment['area_of_expertise'] ; ?></span>
                         <ul class="social mb-0 list-inline mt-5">
