@@ -3,6 +3,7 @@
 
 body {
 	font-family: 'Open sans', sans-serif;
+	backface-visibility: hidden;
 }
 .form-container {
 	width: 70%;
@@ -158,8 +159,8 @@ button:hover {
 }
 
 .auth-icon img {
-	width: 20px;
-	height: 20px;
+	max-width: 20px;
+	max-height: 20px;
 }
 
 @media screen and (max-width:338px) {
