@@ -36,7 +36,9 @@ if(!is_array($the_news)){
     
 <div class="container">
     <div class="header">
-        <img src="uploads/newsletter/<?php echo $the_news['image'];?>" alt="<?php echo $the_news['title'];?>">
+        <div class="image">
+            <img src="uploads/newsletter/<?php echo $the_news['image'];?>" alt="<?php echo $the_news['title'];?> image">
+        </div>
     </div>   
         <figure>
             <blockquote><strong><?php echo $the_news['title'];?></strong><br> on <?php echo $the_news['date_created'];?></blockquote>
