@@ -40,7 +40,7 @@ if (isset($_POST["certificate-btn"])) {
     <?php include('fragments/site_header.php'); ?>
 
     <div class="container main-header-content">
-      <h1 class="text-center main-heading">Downloa your HNG Certificate</h1>
+      <h1 class="text-center main-heading">Download your HNG Certificate</h1>
       <p class="text-center mt-4 mb-1">Thank you for taking part in the HNG Internship and making it to the end of the program. Congrats!!!</p>
       <p class="text-center">Kindly fill the form below to download your certificate.</p>
 
