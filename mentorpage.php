@@ -61,9 +61,13 @@ $mentors = $mentor->showMentors();
             <div class="row text-center">
 
                 <?php
-
+                    $counter = 1;
                     foreach($mentors as $ment):
-
+                      if($counter % 4 == 0){
+                        $counter = 1;
+                      }else{
+                        $counter = $counter + 1;
+                      }
                 ?>
                 <!-- mentor item 1-->
                 <div class="col-xl-3 col-sm-6 mb-3">
@@ -73,17 +77,17 @@ $mentors = $mentor->showMentors();
                         <h5 class="mb-2"><?= $ment['name']; ?></h5>
                         <span class="text-muted"><?= $ment['area_of_expertise'] ; ?></span>
                         <ul class="social mb-0 list-inline mt-5">
-                            <li class="list-inline-item"><a href="<?= $ment['twitter_url'] ;  ?>" class="social-link s-link1"><i
+                            <li class="list-inline-item"><a href="<?= $ment['twitter_url'] ;  ?>" class="social-link s-link<?= $counter ;?>"><i
                                         class="fab fa-twitter"></i></a>
                             </li>
-                            <li class="list-inline-item"><a href="<?= $ment['fb_url'] ;  ?>" class="social-link s-link1"><i
+                            <li class="list-inline-item"><a href="<?= $ment['fb_url'] ;  ?>" class="social-link s-link<?= $counter ; ?>"><i
                                         class="fab fa-facebook"></i></a></li>
                             <?php
                 
                                 $skills_array = explode('|', $ment['area_of_expertise']);   
 
                             ?>
-                            <li class="list-inline-item"><a href="<?= $ment['link_to_portfolio'] ;  ?>" class="social-link s-link1"><i
+                            <li class="list-inline-item"><a href="<?= $ment['link_to_portfolio'] ;  ?>" class="social-link s-link<?= $counter ;?>"><i
                                         class="fab fa-<?=((in_array(' UI/UX Design', $skills_array, true))? 'dribbble': 'github');?>"></i></a>
                             </li>
                         </ul>
