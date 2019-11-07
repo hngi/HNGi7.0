@@ -128,5 +128,5 @@ $mentors = $mentor->showMentors();
 <!-- <script src="js/mentorpage.js"></script> -->
 
 <div id="jumptotop"><em></em></div>
-<script src="./js/scroll-to-top.js"></script>
+<!-- <script src="./js/scroll-to-top.js"></script> -->
 </html>
