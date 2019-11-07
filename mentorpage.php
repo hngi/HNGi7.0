@@ -35,20 +35,19 @@ $mentors = $mentor->showMentors();
 </head>
 
 <body>
-  <div style="background-color: #D1F0F6 !important;"><?php include('fragments/site_header.php'); ?></div>
+  <div class="header-bgd"><?php include('fragments/site_header.php'); ?></div>
 
   <section >
   
   <div class="jumbotron" id="landing-page">
-    <div class="container">
+    <div class="container mentor-container">
       <h2>Our Mentors</h2>
       <p class="lead">Our mentors who are experienced in various sector contributes their
         time and knowledge in making sure the interns get the best guide as
         they begin their journey into the tech industry      
       </p>
         <a href="MentorSetUpPage2.php">Sign up as Mentor</a>
-
-  </div>
+    </div>
   </div>
 
 </section>  
