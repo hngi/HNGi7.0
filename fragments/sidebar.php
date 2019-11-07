@@ -31,8 +31,7 @@
 				<a href="registered_mentors.php"><i class="fas fa-hands-helping"></i>Mentors</a>
 				<a href="registered_sponsors.php"><i class="fas fa-hand-holding-usd"></i>Sponsors</a>
 			</div>
-			<a href="pending_request.php"><i class="fas fa-hand-holding-usd"></i> Certificate</a>
-
+			
 		</li>
 
 		<li class="item" id="features">
@@ -41,9 +40,11 @@
 				<a href="internreview.php"><i class="fas fa-history"></i>Reviews</a>
 				<a href="updateCountdown.php"><i class="far fa-clock"></i>CountDown</a>
 				<a class="news" href="news_update.php" ><i class="far fa-newspaper"></i>News Update</a>
-				<a class="news" href="newsletter_history.php" ><i class="far fa-newspaper"></i>News History</a>
-
+				<a class="news" href="newsletter_history.php" ><i class="fas fa-newspaper"></i>News History</a>
 			</div>
+		</li>
+		<li class="item" id="certificates">
+			<a href="pending_request.php"  class="btns menu-headings" ><i class="fas fa-certificate"></i>Certificate</a>
 		</li>
         <?php
 			if($_SESSION["role"] == 1) {

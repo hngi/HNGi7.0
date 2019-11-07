@@ -336,6 +336,10 @@
                                             <li>Javascript</li>
                                             <li>Bootstrap</li>
                                             <li>JQuery</li>
+                                            <li>Vue</li>
+                                            <li>ReactJs</li>
+                                            <li>Oracle JET</li>
+                                            <li>Angular</li>
                                         </ul>
                                     </div>
                                 </div>
