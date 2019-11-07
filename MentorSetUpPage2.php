@@ -101,8 +101,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $mentor->current_state = $database->escape_string($_POST['state']);
       $mentor->employment_status = $database->escape_string($_POST['employment_status']);
       $mentor->timestamp = strftime("%Y-%m-%d %H:%M:%S", time());
-      $mentor->employment_status = $database->escape_string($_POST['fb_url']);
-      $mentor->employment_status = $database->escape_string($_POST['twitter_url']);
+      $mentor->fb_url = $database->escape_string($_POST['fb_url']);
+      $mentor->twitter_url = $database->escape_string($_POST['twitter_url']);
 
       if ($mentor->Apply_mentor()) {
        mailMentor($mentor->email, $mentor->name);
