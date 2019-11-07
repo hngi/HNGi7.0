@@ -23,7 +23,10 @@
       animation: Slide_up 2.1s ease ;
     }
 
-    
+    img {
+      max-height: 224px;
+      max-width: 221px
+    }
 
      #landing-page {
       text-align: center;
