@@ -306,7 +306,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         ?>
        <option value="state">What state are you currently in? </option>
-     <option value="india">Federal Capital Territory</option>
+     <option value="FCT">Federal Capital Territory</option>
       <option value="Abia">Abia</option>
       <option value="Adamawa">Adamawa</option> 
       <option value="Akwa Ibom">Akwa Ibom</option>
