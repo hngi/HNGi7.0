@@ -127,8 +127,8 @@ if(isset($_POST['ok'])){
                             </div>
 
                             <div class="form-group">
-                                <label for="">Header Image(Optional)</label>
-                                <input type="file" name="image">
+                                <label for="">Header Image</label>
+                                <input type="file" name="image" required>
                             </div>
 
                             <div class="form-group">

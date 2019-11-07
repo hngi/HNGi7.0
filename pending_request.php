@@ -19,7 +19,7 @@ if ($status) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Registered Sponsors</title>
+  <title>Pending Certificate</title>
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
@@ -67,10 +67,10 @@ if ($status) {
     <section id="overview-section">
       <!-- <h1>Dashboard</h1> -->
 
-      <h2>Pending Certificate Request </h2>
-      <div class="mentor-buttons">
+      <h2 class="cert processing">Pending Certificate Request </h2>
+      <div class="mentor-buttons certificate">
         <a href="finished_request.php" class="btn btn-default">Finished Request</a>
-        <a href="processing_request.php" class="btn btn-default">processing Request</a>
+        <a href="processing_request.php" class="btn btn-default reduce">Processing Request</a>
       </div>
       <!-- <section id="intern-section">
             Populated by `js/dashboard.js`
@@ -84,11 +84,11 @@ if ($status) {
       ?>
 
       <div>
-        <div class="row">
+        <div class="row cert-message">
 
           <?php
           if ($data == "0") {
-            echo "<h2>There are no Request rigth now</h2>";
+            echo "<h2>There are no requests right now</h2>";
           } else {
             ?>
             <!--<div class="col-md-3">-->
@@ -175,7 +175,7 @@ if ($status) {
         <p class="details">Email: <span id="email"></span></p>
         <p class="details">Slack_username: <span id="slack_username"></span></p>
         <p class="details">Year: <span id="year"></span></p>
-        <p class="details" style="margin-left:10%;">File:<span id="file"></span></p>
+        <p class="details">File:<span id="file"></span></p>
         <!-- <div href="" id="details-return">Back to Overview</div> -->
         <div id="navigator">
           <i class="fas fa-chevron-left fa-2x left navigator"></i>

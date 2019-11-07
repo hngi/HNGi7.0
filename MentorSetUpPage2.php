@@ -348,9 +348,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  </div>
                                                                                                                                                         
       <div class="col-sm-12">
-       <input name="employment_status" type="text" class="form-control mt-2" id="validationCustom10" placeholder="What is your current employment status?" required value="<?php if (isset($_POST['employment_status'])) {
+       <select name="employment_status" type="text" class="form-control mt-2" id="validationCustom10" placeholder="What is your current employment status?" required value="<?php if (isset($_POST['employment_status'])) {
                                                                                                                                                                             echo $_POST['employment_status'];
-                                                                                                                                                                           } ?>" maxlength="15"></div>
+                                                                                                                                                                           } ?>" maxlength="15">
+                                                                                                                                                                           <option value="Employee">Employee</option>
+                                                                                                                                                                           <option value="Self-employed">Self-employed</option>
+                                                                                                                                                                           <option value="Freelance">Freelance</option>
+                                                                                                                                                                           <option value="Unemployed">Unemployed</option>                                                                                 </select></div>
       <center><button class="btn btn-primary mt-3" type="submit">Submit</button></center>
 
      </div>

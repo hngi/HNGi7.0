@@ -11,9 +11,7 @@ if (isset($_POST["certificate-btn"])) {
   if (empty($_POST["name"]) || empty($_POST["email"]) || empty($_POST["slack_username"]) || empty($_POST["year"])) {
     $error = "All feild are required";
   }else {
-    $resp = $request->requestCertificate();
-    $request_mess = '<p style="text-align:center;">Application successful. You will be informed when your certificate is ready. Thank you!</a>';
-    
+   
   }
   
 }
@@ -33,7 +31,7 @@ if (isset($_POST["certificate-btn"])) {
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="css/header-footer.css">
-  <link rel="stylesheet" type="text/css" href="css/request_certificate.css">
+  <link rel="stylesheet" type="text/css" href="css/download_certificate.css">
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
 </head>
 
@@ -42,9 +40,9 @@ if (isset($_POST["certificate-btn"])) {
     <?php include('fragments/site_header.php'); ?>
 
     <div class="container main-header-content">
-      <h1 class="text-center main-heading">Request for your HNG Certificate</h1>
-      <p class="text-center mt-4 mb-1">Thanks for taking part in the HNG Internship and making it to the end.</p>
-      <p class="text-center">Kindly fill the form below.</p>
+      <h1 class="text-center main-heading">Download your HNG Certificate</h1>
+      <p class="text-center mt-4 mb-1">Thank you for taking part in the HNG Internship and making it to the end of the program. Congrats!!!</p>
+      <p class="text-center">Kindly fill the form below to download your certificate.</p>
 
     </div>
 
@@ -95,17 +93,6 @@ if (isset($_POST["certificate-btn"])) {
               <input type="text" class=" mx-auto col-md-8 form-control" placeholder="Enter your Slack username" required name="slack_username" id="name">
             </div>
           </div>
-
-          <div class="form-group ">
-            <div class="mx-auto row">
-              <label class="mx-auto col-md-8 pl-0" for="year">What Date did you finish?</label>
-            </div>
-            <div class="row mx-auto">
-              <input type="date" class=" mx-auto col-md-8 form-control" placeholder="Enter the Date you were an intern" required name="year" id="year">
-            </div>
-
-          </div>
-
 
           <input type="submit" class="btn submit-btn px-5 mt-4 mx-auto" value="Submit" name="certificate-btn">
 

@@ -21,7 +21,7 @@ if(!is_array($the_news)){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><?php echo $the_news['title'];?> - Learn More</title>
+    <title>News Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -36,10 +36,12 @@ if(!is_array($the_news)){
     
 <div class="container">
     <div class="header">
-        <img src="uploads/newsletter/<?php echo $the_news['image'];?>" alt="<?php echo $the_news['title'];?>">
+        <div class="image">
+            <img src="uploads/newsletter/<?php echo $the_news['image'];?>" alt="<?php echo $the_news['title'];?> image">
+        </div>
     </div>   
         <figure>
-            <blockquote><strong><?php echo $the_news['title'];?></strong><br> on <?php echo $the_news['date_created'];?></blockquote>
+            <blockquote><strong><?php echo $the_news['title'];?></strong><br> <span class="time-text">on <?php echo $the_news['date_created'];?></span></blockquote>
         </figure>
     <div class="para"> 
         <p>
@@ -48,6 +50,10 @@ if(!is_array($the_news)){
 
     </div>
     <hr>
+    <div>
+        <a href="newsletter_history.php"><h6>Back to News Update Archive</h6></a>
+        
+    </div>
 </div>
 </body>
 </html>
