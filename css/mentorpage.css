@@ -1,6 +1,7 @@
 
     body {
       font-family: 'Open Sans', sans-serif;
+      overflow-x: hidden;
     } 
 
  @keyframes Slide_up{
