@@ -8,6 +8,14 @@ if(!isset($_SESSION["role"])) {
 
 $newsletter = new Subscribers();
 
+if(isset($_POST['del'])){
+    $id = $_POST['id'];
+    if(count($id) > 0){
+        $newsletter->delete_news_update($id);
+        $_SESSION['msg'] = "<div class='alert alert-success'>Selected News deleted successfully</div>";
+    }
+}
+
 $all_news = $newsletter->fetch_newsletter();
 
 
@@ -62,6 +70,12 @@ $all_news = $newsletter->fetch_newsletter();
 
         <div class="container-fluid">
             <div class="row">
+                <?php
+                    if(isset($_SESSION['msg'])){
+                        echo $_SESSION['msg'];
+                        unset($_SESSION['msg']);
+                    }
+                ?>
                 <div class="col-md-12">
                     <form action="" method="post" role="form">
                     <table class="table table-responsive table-bordered">
