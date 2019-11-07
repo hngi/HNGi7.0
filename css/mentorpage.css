@@ -48,6 +48,10 @@
      
   }
 
+  img {
+    max-height: 224px;
+    max-width: 221px;
+    }
 
 .social-link i {
     color: white;
