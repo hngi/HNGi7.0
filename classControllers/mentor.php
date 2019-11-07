@@ -14,6 +14,8 @@ class Mentors
 	public $employment_status;
 	public $status = 0;
 	public $timestamp;
+	public $twitter_url;
+	public $fb_url;
 
 
 	public function Apply_mentor()
