@@ -93,7 +93,7 @@ class Certificate
               <td>$slack_username</td>
               <td>$year</td>
               <td>$file</td>
-               <td>
+              <td>
               <a href='processing_request.php?processingId=$certificate_id' class='btn btn-success btn-sm'>$status</a>
               </td>
             
@@ -184,8 +184,24 @@ class Certificate
       $id = $database->escape_string($_GET['processingId']);
 
       $query = $database->query("UPDATE " . self::$database_table . " SET status = 'processed' WHERE id = '$id' ");
-      return $query;
+      $query2 = $database->query("SELECT * FROM  ". self::$database_table . " WHERE id = '$id' ");
+      $res = $database->query($query);
+      $row = mysqli_fetch_array($query2);
+      $fullname = $row['name'];
+      $email = $row['email'];
+      $count = $database->affected_rows();
+      if($count > 0) {
+          $body = "Hello! Your Certificate is ready.";
+          certificatereadyMail($email, $fullname, $body);
+        header('Location: pending_request.php');
+      } else {
+        
+        return false;
+      }
+
     }
+
+
   }
 
  

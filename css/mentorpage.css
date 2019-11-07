@@ -47,12 +47,17 @@
      font-size: 20px;
   } 
   #landing-page  p {
-     padding-bottom: 25px;
+     padding-bottom:0;
      font-size: 15px;
      font-weight: normal;
      font-size: 30px;
      line-height: 33px;
      text-align: center;
+  }
+
+  #landing-page a {
+    font-size: .7em;
+
   }
      
 
