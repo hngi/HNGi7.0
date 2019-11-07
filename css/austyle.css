@@ -6,7 +6,7 @@
 }
 body {
   overflow-x: hidden;
-  font-family: Poppins, 'Opensettings Sans'
+  font-family: Poppins, 'Open Sans'
 }
 
 main {
@@ -77,6 +77,8 @@ input {
   cursor: pointer;
 }
 
+/* Add rules needed here
+
 .received .dm-text {
 
   
@@ -85,6 +87,9 @@ input {
 .sent .dm-text {
   
 }
+
+*/
+
 
 .date-created, .last-seen {
   font-size: 10px;
@@ -215,12 +220,10 @@ hr {
   color: #fff !important;
 }
 
-.dm ::-webkit-scrollbar {
-  width: 12px;
+::-webkit-scrollbar {
+  width: 22px;
 }
 
 .dm ::-webkit-scrollbar-thumb {
   background-color: dodgerblue;
 }
-
-
