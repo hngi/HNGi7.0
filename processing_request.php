@@ -67,8 +67,8 @@ if ($status) {
     <section id="overview-section">
       <!-- <h1>Dashboard</h1> -->
 
-      <h2>Processing Certificate Request </h2>
-      <div class="mentor-buttons">
+      <h2 class="cert processing">Processing Certificate Request </h2>
+      <div class="mentor-buttons certificate">
         <a href="pending_request.php" class="btn btn-default">Pending Request</a>
         <a href="finished_request.php" class="btn btn-default">Finished Request</a>
       </div>
@@ -84,11 +84,11 @@ if ($status) {
       ?>
 
       <div>
-        <div class="row">
+        <div class="row cert-message">
 
           <?php
           if ($data == "0") {
-            echo "<h2>There are no Request rigth now</h2>";
+            echo "<h2>There are no requests right now</h2>";
           } else {
             ?>
             <!--<div class="col-md-3">-->
@@ -175,7 +175,7 @@ if ($status) {
         <p class="details">Email: <span id="email"></span></p>
         <p class="details">Slack_username: <span id="slack_username"></span></p>
         <p class="details">Year: <span id="year"></span></p>
-        <p class="details" style="margin-left:10%;">File<span id="file"></span></p>
+        <p class="details">File:<span id="file"></span></p>
         <!-- <div href="" id="details-return">Back to Overview</div> -->
         <div id="navigator">
           <i class="fas fa-chevron-left fa-2x left navigator"></i>
