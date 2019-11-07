@@ -567,7 +567,7 @@ h1
 		transition: 0.4s ease-out;
 		z-index: 5;
 		padding-top: 4rem;
-		position: absolute;
+		position: fixed;
 	}
 	#sidebar a
 	{
