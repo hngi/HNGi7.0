@@ -1,11 +1,15 @@
 .cards {
     width: 100%;
+    height: 500px;
+    max-height: auto;
     background-color: rgb(212, 206, 206);
     box-shadow: silver;
     position: relative; 
     margin-top: -5px;
     display: inline-block;
     margin-bottom: 20px;
+    flex: auto;
+
 }
 .image{
     width: 100%;
