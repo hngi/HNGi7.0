@@ -12,7 +12,7 @@ if (isset($_POST["certificate-btn"])) {
     $error = "All feild are required";
   }else {
     $resp = $request->requestCertificate();
-    $request_mess = '<p style="text-align:center;">Application successful , you will be inform when your certificate is ready thank you!</a>';
+    $request_mess = '<p style="text-align:center;">Application successful. You will be informed when your certificate is ready. Thank you!</a>';
     
   }
   
