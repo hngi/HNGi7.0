@@ -112,8 +112,8 @@ class sponsors
   // Written by JohnEbri, 5/11/2019 9:16:20AM
   public function countSponsor() {
     global $database;
-    $query = "SELECT * FROM sponsors";
-    $count = $database->affected_rows();
+    $query = $database->query("SELECT * FROM sponsors");
+    $count = mysqli_num_rows($query);
     return $count;
   }
 
