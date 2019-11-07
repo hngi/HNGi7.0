@@ -75,8 +75,10 @@ class Subscribers
         global $database;
         if(is_array($id)){
             foreach ($id as $the_id){
-                $sql = $database->query("DELETE FROM newsletter WHERE id = '$the_id'"); //Delete multiple news at once
+                $database->query("DELETE FROM newsletter WHERE id = '$the_id'"); //Delete multiple news at once
             }
+        }else{
+            $database->query("DELETE FROM newsletter WHERE id = '$id'"); //Delete single news
         }
     }
 
