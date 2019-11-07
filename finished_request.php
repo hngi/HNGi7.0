@@ -67,7 +67,7 @@ if ($status) {
     <section id="overview-section">
       <!-- <h1>Dashboard</h1> -->
 
-      <h2 class="cert">Finished Certificate Request </h2>
+      <h2 class="cert processing">Finished Certificate Request </h2>
       <div class="mentor-buttons certificate">
         <a href="pending_request.php" class="btn btn-default">Pending Request</a>
         <a href="processing_request.php" class="btn btn-default reduce">Processing Request</a>
