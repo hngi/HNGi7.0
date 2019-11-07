@@ -5,6 +5,7 @@ require_once 'classControllers/init.php';
     $lockForm = new LockRegForm();
     $status = $lockForm->checkStatus();
     if (isset($_POST['submit'])) {
+      $error = '';
       $fullname = $database->escape_string($_POST['fullname']);
       $email = $database->escape_string($_POST['email']);
       $phoneNo = $database->escape_string($_POST['phoneNo']);
@@ -14,17 +15,10 @@ require_once 'classControllers/init.php';
       $empStatus = $database->escape_string($_POST['empStatus']);
       $about = $database->escape_string($_POST['about']);
       $date = $database->escape_string($_POST['date']);
-      $insertInterns = $intern->internSignup();
-      
-      $interests=($_POST['interest']);
-
-      $the_interest = "";
-      foreach ($interest as $interest) {
-        $the_interest .= " ,$interest";
-      }
-
-      $interest = trim($the_interest);
-      $interest = substr($interest, 1, strlen($interest));
+      $interests=$database->escape_string($_POST['interest']);
+      $res = $intern->internSignup();
+      $request_mess = '<p style="text-align:center;">Application successful. Check your mail for registration message. Thank you!</a>';
+     
 
     }
 
@@ -104,12 +98,20 @@ require_once 'classControllers/init.php';
       ?>
       <form class="form-container" action="" method="post" id="myForm">
 
+      <?php
+      if (!empty($request_mess)) {
+        echo "<center><h4 class='text-success text-center success' style='background: #D3ECDB; color: #2B5036; padding: 6px; width:66%;'>" . $request_mess . "</h4></center>";
+      }
+        if (!empty($res)) {
+          echo "<h4 style='text-align:center; color: red;'>$res</h4>";
+        }
+      ?>
 
         <input type="text" name="fullname" id="fullname" required placeholder="Full Name" />
         <input type="email" name="email" id="email" required placeholder="E-mail Address" />
         <input type="text" name="phoneNo" id="phoneNo" required placeholder="Phone Number" />
         <input type="url" name="linkCV" id="linkCV" required placeholder="Link to your CV (LinkedIn Profile or any other link)" />
-        <select multiple class="interest" name="interest[]" multiple>
+        <select multiple class="interest" name="interest" multiple>
           <option value="" disabled selected hidden>What area are you interested in?</option>
           <option value="Backend">Backend</option>
           <option value="DevOps">DevOps</option>
