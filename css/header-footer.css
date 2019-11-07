@@ -97,7 +97,10 @@
         display: none;
     }
 
-
+    .rotate360 {
+        transform: rotate(360deg);
+        transition: transform 1.5s;
+    }
     /*FOOTER STYLING */
         #footer {
             background-color: #FAFAFA;

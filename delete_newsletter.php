@@ -8,6 +8,14 @@ if(!isset($_SESSION["role"])) {
 
 $newsletter = new Subscribers();
 
+if(isset($_POST['del'])){
+    $id = $_POST['id'];
+    if(count($id) > 0){
+        $newsletter->delete_news_update($id);
+        $_SESSION['msg'] = "<div class='alert alert-success'>Selected News deleted successfully</div>";
+    }
+}
+
 $all_news = $newsletter->fetch_newsletter();
 
 
@@ -18,7 +26,7 @@ $all_news = $newsletter->fetch_newsletter();
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>News Update Archive</title>
+    <title>Delete News Update Archive</title>
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link href="css/dashboard.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
@@ -56,39 +64,49 @@ $all_news = $newsletter->fetch_newsletter();
 <body>
 <main>
     <section id="overview-section">
-        <h1>News Update Archive</h1>
-        <p><a href="delete_newsletter" class="btn btn-danger">Delete News</a></p>
+        <h1>Delete News Update Archive</h1>
+
         <hr>
 
         <div class="container-fluid">
             <div class="row">
+                <?php
+                    if(isset($_SESSION['msg'])){
+                        echo $_SESSION['msg'];
+                        unset($_SESSION['msg']);
+                    }
+                ?>
                 <div class="col-md-12">
-                    <div class="row">
+                    <form action="" method="post" role="form">
+                    <table class="table table-responsive table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Date Created</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
                         <?php
                             if(is_array($all_news)){
                                 foreach ($all_news as $all_new){
                                     ?>
-                                    <div class="col-md-4 col-sm-6 col-xs-12">
-                                        <div class="cards">
-                                            <div class="image">
-                                                <img src = "uploads/newsletter/<?php echo $all_new['image'];?>" alt="image" class="image img-responsive">
-                                            </div><br>
-                                            <div class="heading">
-                                                <h3 style="color: white"><strong><?php echo $all_new['title'];?></strong></h3>
-                                                <p><?php echo substr(strip_tags($all_new['content']),0,100);?>... </p>
-                                            </div>
-                                            <div class="para">
-                                                <p>Originally Published <?php echo $all_new['date_created'];?>, Updated <?php echo $all_new['date_updated'];?></p>
-                                                <a href="read_news.php?id=<?php echo $all_new['id'];?>" class="button">READ MORE</a>
-                                            </div>
-
-                                        </div>
-                                    </div>
+                                    <tr>
+                                        <td><strong><?php echo $all_new['title'];?></strong></td>
+                                        <td><?php echo $all_new['date_created'];?></td>
+                                        <td>
+                                            <input type="checkbox" name="id[]" value="<?php echo $all_new['id'];?>">
+                                        </td>
+                                    </tr>
                                     <?php
                                 }
                             }
                         ?>
-                    </div>
+                    </table>
+                        <div class="form-group">
+                            <input type="submit" name="del" class="btn btn-danger" value="Delete Selected News">
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

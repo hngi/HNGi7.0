@@ -24,7 +24,7 @@
                     src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572768106/hng_logo-min.png" ></a>
         </section>
         <!--ends here-->
-        <section class="nav_button " onclick="toggleMenu()">
+        <section class="nav_button rotate" onclick="toggleMenu()">
             <div class="nav_button_bar"></div>
             <div class="nav_button_bar"></div>
             <div class="nav_button_bar"></div>
@@ -46,6 +46,7 @@
         let closeButton = $(".nav_button");
         menuBar.slideToggle(700);
         closeButton.toggleClass("closefunction");
+        closeButton.toggleClass("rotate360")
         
     }
 
