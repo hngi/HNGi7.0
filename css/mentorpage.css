@@ -1,7 +1,6 @@
 
     body {
       font-family: 'Open Sans', sans-serif;
-      overflow-x: hidden !important;
     } 
 
  @keyframes Slide_up{
@@ -17,10 +16,6 @@
     }
     
     header {
-      background-color: #D1F0F6 !important;
-    }
-
-    .header-bgd {
       background-color: #D1F0F6 !important;
     }
 
