@@ -71,4 +71,8 @@ class Subscribers
         return $result;
     }
 
+    public function  delete_news_update($id){ //function to delete news update
+
+    }
+
 }
