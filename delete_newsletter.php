@@ -81,7 +81,7 @@ $all_news = $newsletter->fetch_newsletter();
                     <table class="table table-responsive table-bordered">
                         <thead>
                             <tr>
-                                <th>Subject</th>
+                                <th>Title</th>
                                 <th>Date Created</th>
                                 <th>Delete</th>
                             </tr>
