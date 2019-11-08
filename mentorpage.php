@@ -66,7 +66,7 @@ $mentors = $mentor->showMentors();
 
 
         <!-- mentor details -->
-        <div class="container mt-5 mentor">
+        <div class="container-fluid mt-5 mentor">
             <div class="row text-center">
 
                 <?php
@@ -79,11 +79,11 @@ $mentors = $mentor->showMentors();
                       }
                 ?>
                 <!-- mentor item 1-->
-                <div class="col-xl-3 col-sm-6 mb-3">
-                    <div class="bg-white rounded  py-5 px-4"><img
+                <div class="col-xl-3 col-sm-6 mb-3 mentor_card">
+                    <div class="bg-white rounded  py-4 px-4"><img
                             src="<?= $ment['photo_url'] ;  ?>"
                             alt="" width="100%" height="auto" class="img-fluid rounded-circle mb-3  ">
-                        <h5 class="mb-2 hew"><?= $ment['name']; ?></h5>
+                        <h6 class="mb-2 hew"><?= $ment['name']; ?></h6>
                         <span class="text-muted"><?= $ment['area_of_expertise'] ; ?></span>
                         <ul class="social mb-0 list-inline mt-2">
                             <li class="list-inline-item"><a href="<?= $ment['twitter_url'] ;  ?>" class="social-link s-link<?= $counter ;?>"><i
