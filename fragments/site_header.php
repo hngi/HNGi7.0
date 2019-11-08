@@ -20,7 +20,7 @@
     <header id="header">
         <!--Logo-->
         <section id="logo">
-            <a href="index.php"><img id="hng-logo"
+            <a href="index"><img id="hng-logo"
                     src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572768106/hng_logo-min.png" ></a>
         </section>
         <!--ends here-->
