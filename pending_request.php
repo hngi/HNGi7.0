@@ -47,8 +47,6 @@ if ($status) {
       border-radius: 15px;
     }
 
-<<<<<<< HEAD
-=======
     @media (max-width: 320px){
      .heading{
 
@@ -66,7 +64,7 @@ if ($status) {
       margin-top: 10px;
      }
     }
->>>>>>> upstream/fix-master
+
   </style>
 
 </head>
@@ -76,7 +74,6 @@ if ($status) {
     <div id="overlay"></div>
     <div id="export-modal"> 
       <span class="close">&times;</span>
-
       <div>
         <input type="radio" id="csv" name="exportOptions"><label for="csv">Export to CSV</label>
       </div>

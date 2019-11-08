@@ -77,6 +77,7 @@ if (isset($_GET['rejectMentorId'])) {
     <main class="reg">
     <div id="overlay"></div>
         <div id="export-modal">
+            <span class="close">&times;</span>
             <div>
                 <input type="radio" id="csv" name="exportOptions"><label for="csv">Export to CSV</label>
             </div>

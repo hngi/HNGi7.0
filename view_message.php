@@ -145,7 +145,7 @@ if($receiver_id == $admin_id){
                         <?php
                         if($message['receiver_id'] == $admin_id){
                             ?>
-                            <a href="admin_inbox.php?receiver_id=<?php echo $message['sender_id']; ?>&subject=RE: <?php echo $message['subject']; ?>" class="btn btn-primary">Reply Message</a>
+                            <a href="compose_message.php?receiver_id=<?php echo $message['sender_id']; ?>&subject=RE: <?php echo $message['subject']; ?>" class="btn btn-primary">Reply Message</a>
                             <?php
                         }I
                         ?>
