@@ -88,8 +88,8 @@ if (isset($_GET['rejectMentorId'])) {
             <!-- <h1>Dashboard</h1> -->
             <h2 class="heading">Declined Mentors </h2>
             <div class="mentor-buttons">
-                <a href="registered_mentors.php" class="btn btn-default">Active Mentors</a>
-                <a href="pending_mentors.php" class="btn btn-default">Pending Mentors</a>
+                <a href="registered_mentors" class="btn btn-default">Active Mentors</a>
+                <a href="pending_mentors" class="btn btn-default">Pending Mentors</a>
             </div>
             <!-- <section id="intern-section">
 				Populated by `js/dashboard.js`

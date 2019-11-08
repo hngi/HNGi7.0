@@ -60,7 +60,7 @@
             <h1>4&#128562;4 </h1>
             <h3> 404 - PAGE NOT FOUND</h3>
             <P> <i>The page you are looking for is currently <br> under maintenance. Please come back later.</i> </P>
-            <button><a href="index.php" id="join-hng" class="def-button">HOME</a></button>
+            <button><a href="index" id="join-hng" class="def-button">HOME</a></button>
         </div>
         </section>
     </body>

@@ -112,7 +112,7 @@ if(isset($_POST['ok'])){
 	<main>
 		<section id="overview-section">
 			<h1 class="heading">Send News Update <span class="">
-                <a href="newsletter_history.php" class="news_letter btn btn-success btn-sm">Newsletter History</a>
+                <a href="newsletter_history" class="news_letter btn btn-success btn-sm">Newsletter History</a>
             </span></h1>
 
             <hr>

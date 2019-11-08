@@ -129,7 +129,7 @@ if(isset($_GET["ApproveExperiences"])) {
     <?php
     if ($_SESSION["role"] != 1) {
         echo '<h2><br><br><br>Sorry, You do not have the priviledge to view this page</p>';
-        echo '<h3><a href="dashboard.php">Dashboard</a></h3>';
+        echo '<h3><a href="dashboard">Dashboard</a></h3>';
         exit();
     }
     ?>
@@ -192,7 +192,7 @@ if(isset($_GET["ApproveExperiences"])) {
 
                           </td>
                         <td>
-                            <a href="edit_experience.php?id=<?php echo $item['id']; ?>" class="btn btn-sm btn-info">Edit</a>
+                            <a href="edit_experience?id=<?php echo $item['id']; ?>" class="btn btn-sm btn-info">Edit</a>
                         </td>
                         <td>
                             <a href="?action=delete&id=<?php echo $item['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete the record?')">Delete</a>
