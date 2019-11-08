@@ -9,7 +9,7 @@ class Mentor
 
     global $database;
     $display = '';
-    $query = 'SELECT * FROM mentors WHERE status = 2 ORDER BY mentor_id DESC';
+    $query = 'SELECT * FROM mentors WHERE status = 2 ORDER BY mentor_id ASC';
     $res = $database->query($query);
     $count = $database->affected_rows();
     if ($count > 0) {

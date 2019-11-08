@@ -1,20 +1,27 @@
 <?php
 require_once "classControllers/init.php";
 $request = new Certificate;
+$intern = new Intern;
 
 if (isset($_POST["certificate-btn"])) {
   $error = '';
-  $request->name = $_POST["name"];
-  $request->email = $_POST["email"];
-  $request->slack_username = $_POST["slack_username"];
-  $request->year = $_POST["year"];
+  $name = $database->escape_string($_POST["name"]);
+  $email = $database->escape_string($_POST["email"]);
+  $slack_username =$database->escape_string( $_POST["slack_username"]);
+  $year = $database->escape_string($_POST["year"]);
+
   if (empty($_POST["name"]) || empty($_POST["email"]) || empty($_POST["slack_username"]) || empty($_POST["year"])) {
     $error = "All feild are required";
-  }else {
-    $resp = $request->requestCertificate();
-    $request_mess = '<p style="text-align:center;">Application successful. You will be informed when your certificate is ready. Thank you!</a>';
-    
+  } else {
+    $count = $intern->emailExists($email);
+    if ($count === 1) {
+      $request->requestCertificate($email, $name, $slack_username, $year);
+      $request_mess = '<p style="text-align:center;">Application successful. You will be informed when your certificate is ready. Thank you!</a>';
+    } else {
+      $error = "User not found on the database";
+    }
   }
+    
   
 }
 

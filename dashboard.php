@@ -120,7 +120,7 @@ if($display["hasPic"] == 0) {
                     <nav class="navbar navbar-default">
                       <div class="container-fluid">
                         <div class="navbar-header">
-                                <a class="navbar-brand" href="#">my<span class="main-color">Dashboard</span></a>
+                                <a class="navbar-brand" href="#">Admin Dashboard</a>
                           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                             <i class="fa fa-align-right"></i>
                           </button>
@@ -171,7 +171,17 @@ if($display["hasPic"] == 0) {
                           <div class="col-md-9">
                             <div class="content">
                               <h2>Welcome, <?php echo $_SESSION["fullname"]; ?> !</h2>
-                              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p> -->
+                              <?php
+                                  // format last login 
+                                  if($_SESSION["lastLogin"] == NULL) {
+                                    $fLastLogin = "This is your first login";
+                                  } else {
+                                    $date=date_create($_SESSION["lastLogin"]);
+                                    $fLastLogin =  date_format($date, "l, jS F, Y - g:i:A");
+                                  }
+                                  
+                              ?>
+                              <p style="text-align: center;"><small>Last Login : <?php echo $fLastLogin; ?></small></p>
                             </div>
                             
                           </div>
