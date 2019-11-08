@@ -111,7 +111,7 @@ require_once 'classControllers/init.php';
         <input type="email" name="email" id="email" required placeholder="E-mail Address" />
         <input type="text" name="phoneNo" id="phoneNo" required placeholder="Phone Number" />
         <input type="url" name="linkCV" id="linkCV" required placeholder="Link to your CV (LinkedIn Profile or any other link)" />
-        <select multiple class="interest" name="interest" multiple>
+        <select multiple class="interest" name="interest[]" multiple>
           <option value="" disabled selected hidden>What area are you interested in?</option>
           <option value="Backend">Backend</option>
           <option value="DevOps">DevOps</option>
