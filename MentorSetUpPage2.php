@@ -355,7 +355,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                                                                                                                                            <option value="Self-employed">Self-employed</option>
                                                                                                                                                                            <option value="Freelance">Freelance</option>
                                                                                                                                                                            <option value="Unemployed">Unemployed</option>                                                                                 </select></div>
-      <center><button class="btn btn-primary mt-3" type="submit">Submit</button></center>
+      <div class="action-btn">
+      
+      <button class="btn btn-primary" type="submit">Submit</button>
+      <a class="edit-request" href="#">Submit as Edit Request</a>
+      
+      </div>
 
      </div>
     </div>

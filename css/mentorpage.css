@@ -42,9 +42,11 @@
     }
 
   #landing-page  p {
-     padding-bottom:0;
-     font-weight: normal;
-     text-align: center;
+    font-weight: normal;
+    font-size: 1rem;
+    text-align: center;
+    color: #474747;
+    margin-bottom: 30px;
      
   }
 
