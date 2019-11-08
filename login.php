@@ -94,7 +94,7 @@ if (isset($_SESSION['lg_error'])) {
       </div>
       <br>
       <span class="swag-daddy">
-        <a href="forgotpassword.php" class="small-swag small-text">Forgot Password?</a>
+        <a href="forgotpassword" class="small-swag small-text">Forgot Password?</a>
       </span>
     </form>
   </section>
