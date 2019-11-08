@@ -19,18 +19,29 @@ $mentor = new Mentor();
 
 
 if(isset($_POST['ok'])){
-    $data['name'] = $database->escape_string($_POST["name"]);
-    $data['about'] = $database->escape_string($_POST['about']);
-    $data['phone_no'] = $database->escape_string($_POST['phone_no']);
-    $data['link_to_cv'] = $database->escape_string($_POST['link_to_cv']);
-    $data['interest'] = $database->escape_string($_POST['interest']);
-    $data['employment_status'] = $database->escape_string($_POST['employment_status']);
-    $data['current_location'] = $database->escape_string($_POST['current_location']);
 
-    $intern->updateInterns($id, $data);
+    $data = array();
+    foreach ($_POST as $key => $value){
+        if($key == "area_of_expertise" || $key == "ok")
+            continue;
+        $data[$key] = $database->escape_string($value);
+    }
 
-    $_SESSION['msg'] = "<div class='alert alert-success'>Intern updated successfully!</div>";
-    header("location:edit_interns.php?id=$id");
+    $area_of_expertise = "";
+    $count = count($_POST['area_of_expertise']);
+    foreach ($_POST['area_of_expertise'] as $value) {
+        $area_of_expertise .= $value . " | ";
+    }
+    // for ($i = 0; $i < $count; $i++) {
+    //     $area_of_expertise .= $_POST['area_of_expertise'][$i] . " | ";
+    // }
+    $area_of_expertise = substr($area_of_expertise, 0, -3);
+    $data['area_of_expertise'] = $area_of_expertise;
+
+    $mentor->updateMentors($id, $data);
+
+    $_SESSION['msg'] = "<div class='alert alert-success'>Mentor updated successfully!</div>";
+    header("location:edit_mentor.php?id=$id");
     exit();
 }
 
@@ -151,9 +162,6 @@ foreach ($area_of_expertise as $expertise){
                                                 <input name="name" type="text" class="form-control mt-2" id="validationCustom01" placeholder="Name" required value="<?php echo $the_mentor['name']; ?>"></div>
 
                                             <div class="form-group">
-                                                <label for="">Email Address</label>
-                                                <input name="email" type="email" class="form-control mt-2" id="validationCustom02" placeholder="Email" required value="<?php echo $the_mentor['email']; ?>"></div>
-                                            <div class="form-group">
                                                 <label for="">Phone Number</label>
                                                 <input name="phone_no" type="tel" class="form-control mt-2" id="validationCustom03" placeholder="Phone number" required value="<?php echo $the_mentor['phone_no']; ?>"></div>
                                             <div class="form-group">
@@ -244,7 +252,7 @@ foreach ($area_of_expertise as $expertise){
                                                     <label>Photo URL</label>
                                                     <input type="text" name="photo_url" class="form-control" required="" value="<?php echo $the_mentor['photo_url']; ?>">
                                                 </div>
-                                            <center><button class="btn btn-primary mt-3" type="submit">Submit</button></center>
+                                            <center><button name="ok" value="1" class="btn btn-primary mt-3" type="submit">Submit</button></center>
 
                                         </div>
                                     </div>
