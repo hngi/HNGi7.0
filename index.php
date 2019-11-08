@@ -44,7 +44,7 @@
                                 It’s the bridge between learning to code, and becoming the best in the world.
                             </p>
                             <button class="cta-button button--midBlue" id="buttt">
-                                <a href="join-intern.php" id="butt">Get Started</a>
+                                <a href="join-intern" id="butt">Get Started</a>
                             </button>
                         </div>
                         <div class="image-column desktop-only">
@@ -149,7 +149,7 @@
                                         using their laptop. Each week we give tasks.
                                     </p>
                                     <button class="cta-button button--midBlue" id="">
-                                        <a href="join-intern.php">Get Started</a>
+                                        <a href="join-intern">Get Started</a>
                                     </button>
                                 </div>
                                 <div class="half-a-row">
@@ -195,7 +195,7 @@
                                         (there is no entrance exam). Anyone can log into the internship
                                         using their laptop. Each week we give tasks.</p>
                                     <button class="cta-button button--midBlue" id="buttt">
-                                        <a href="join-intern.php">Get Started</a>
+                                        <a href="join-intern">Get Started</a>
                                     </button>
                                 </div>
                             </div>
@@ -215,7 +215,7 @@
 
 
                             <button class="cta-button button--midBlue">
-                                <a href="join-intern.php">Get Started</a>
+                                <a href="join-intern">Get Started</a>
                             </button>
                         </div>
 
@@ -478,7 +478,7 @@
                     </section>
                     <div>
                         <button class="button--midBlue cta-button" id="mentorButton">
-                            <a href="mentorpage.php">See more</a>
+                            <a href="mentorpage">See more</a>
                         </button>
                     </div>
                     </div>
@@ -531,7 +531,7 @@
                                 </h4>
                                 <span class="support__item-link">
                                     <i class="fa fa-chevron-circle-right"></i>
-                                    <a href="donate.php" class="text-light">Get Started</a>
+                                    <a href="donate" class="text-light">Get Started</a>
                                 </span>
                             </div>
                         </div>
@@ -545,7 +545,7 @@
                                 </h4>
                                 <span class="support__item-link">
                                     <i class="fa fa-chevron-circle-right"></i>
-                                    <a href="donate.php" class="text-light">Get Started</a>
+                                    <a href="donate" class="text-light">Get Started</a>
                                 </span>
                             </div>
                         </div>
@@ -559,7 +559,7 @@
                                 </h4>
                                 <span class="support__item-link">
                                     <i class="fa fa-chevron-circle-right"></i>
-                                    <a href="donate.php" class="text-light">Get Started</a>
+                                    <a href="donate" class="text-light">Get Started</a>
                                 </span>
                             </div>
                         </div>
@@ -594,7 +594,7 @@
                             <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg">                    </div>
                     </div>
                     <button class="cta-button button--midBlue">
-                        <a href="donate.php" class="text_center">Become Sponsor</a>
+                        <a href="donate" class="text_center">Become Sponsor</a>
                     </button>
                     </div>
 
