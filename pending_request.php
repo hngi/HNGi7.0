@@ -46,6 +46,24 @@ if ($status) {
       padding: 10px;
       border-radius: 15px;
     }
+
+    @media (max-width: 320px){
+     .heading{
+
+      width: 200px;
+      margin-left: 50px !important;
+      margin-right: auto !important;
+      text-align: center !important;
+     }
+
+     .searchBox {
+      margin-top: 70px;
+     }
+
+     .fa-search{
+      margin-top: 10px;
+     }
+    }
   </style>
 
 </head>
@@ -67,7 +85,7 @@ if ($status) {
     <section id="overview-section">
       <!-- <h1>Dashboard</h1> -->
 
-      <h2 class="cert processing">Pending Certificate Request </h2>
+      <h2 class="cert processing heading">Pending Certificate Request </h2>
       <div class="mentor-buttons certificate">
         <a href="finished_request.php" class="btn btn-default">Finished Request</a>
         <a href="processing_request.php" class="btn btn-default reduce">Processing Request</a>
