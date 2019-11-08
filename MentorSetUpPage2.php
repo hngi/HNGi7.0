@@ -129,35 +129,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html class="no-js">
 
 <head>
- <meta charset="utf-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <title>Mentor Setup</title>
- <meta name="description" content="mentors">
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu|Pacifico&display=swap" rel="stylesheet">
- <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
- <link rel="stylesheet" type="text/css" href="css/header-footer.css">
- <link href="css/mentorSetuppage.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
- <!-- <link rel="stylesheet" href="css/mentorSetuppage.css"> -->
- <link rel="icon" type="img/png" href="images/hng-favicon.png">
-
- <script>
-
-		function readURL(input) {
-			if (input.files && input.files[0]) {
-				var reader = new FileReader();
-
-				reader.onload = function (e) {
-					$('#previewImage')
-            .attr('src', e.target.result);
-           
-				};
-
-				reader.readAsDataURL(input.files[0]);
-			}
-		}
-
-	</script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Mentor Setup</title>
@@ -203,31 +174,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <?php
             if (!empty($error)) {
 
-<<<<<<< HEAD
-
-        
-
-   <!--Form2-->
-   <div class="row d-flex mt-5 mb-5" id="form-contner">
-    <div class="col-lg-8 m-auto">
-     <div class="second">
-      <center>
-       <div class="image-upload">
-        <label for="file-input">
-          <img id="previewImage" />
-         <div class="circle" id="cam"><i class="fas fa-camera" id="blah"></i></div>
-        </label>
-        <input id="file-input" type="file"/ name="image" onchange="readURL(this);">
-       </div>
-       <div class="click text-center">Click the image above to upload a profile photo</div>
-       <div class="jpg">JPG or PNG. Max size of 400k</div>
-      </center>
-=======
               foreach ($error as $details) {
                 echo  "<div class='alert alert-danger alert-dismissible'><button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button>" . $details . "</div>";
               }
             }
->>>>>>> 6709485cbfde11e3948b25f77160163bff611822
 
             ?>
             <div class="custom-control custom-checkbox mb-1">
