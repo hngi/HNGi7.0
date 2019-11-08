@@ -47,7 +47,7 @@ $(document).ready(function () {
   const startDate = document.getElementById("startDate").innerHTML;
   const startTime = document.getElementById("startTime").innerHTML;
 
-  $.countdown(startDate + " " + startTime);
+  $.countdown(startDate + "T" + startTime);
   // $.countdown("January1, 2020 09:00:00");
   
 });
