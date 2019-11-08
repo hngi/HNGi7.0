@@ -19,6 +19,7 @@
 <?php include('fragments/site_header.php');?>
 <div class ="container my-4">
     <h2>ACTIVE INTERN </h2>
+    <p ><i class="fa fa-search"></i><input type="text"></p>
 <div class="container-scroll">
   
       <table>
@@ -81,7 +82,6 @@
           </tr>
       </table> 
 </div>
-<a href="#" class="button mt-4">SEARCH</a>
 
 </div>
 
