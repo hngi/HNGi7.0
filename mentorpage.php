@@ -48,7 +48,7 @@ $mentors = $mentor->showMentors();
       </p>
         <a href="MentorSetUpPage2.php">Sign up as Mentor</a>
       <!--UPDATE MENTOR PROFILE --= COLLECT EMAIL HERE -->
-        <p class="update_mentor" onclick="modalForm()"> <a>Update Your Profile</a></p>
+      <!--  <p class="update_mentor" onclick="modalForm()"> <a>Update Your Profile</a></p>-->
 
       <section class="form-field">
         <form action="" class="collect_email">

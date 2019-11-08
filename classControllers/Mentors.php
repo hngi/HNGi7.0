@@ -44,7 +44,7 @@ class Mentor
                         <td>' . $row["current_state"] . '</td>
                         <td>' . $row["employment_status"] . '</td>
                         <td>' . $row["timestamp"] . '</td>
-                        <td>' .'<a href="registered_mentors.php?rejectMentorId=' . $row["mentor_id"] . '" class="btn btn-danger btn-sm" style="margin-right: 5px;">Deactivate</a>' . '</td>
+                        <td>' .'<a href="edit_mentor.php?id=' . $row["mentor_id"] . '" class="btn btn-info btn-sm" style="margin-right:5px;">Edit</a> <a href="registered_mentors.php?rejectMentorId=' . $row["mentor_id"] . '" class="btn btn-danger btn-sm" style="margin-right: 5px;">Deactivate</a>' . '</td>
                         
 
                     </tr>';
@@ -219,6 +219,28 @@ class Mentor
   }
 
 
+    public function getMentorInfo($id) {
+        global $database;
+        $query = "SELECT * FROM mentors WHERE mentor_id = ".$id."";
+        $res = $database->query($query);
+        $row = mysqli_fetch_assoc($res);
+        return $row;
+    }
+    //function to update mentors : Written by @Hollyphat. Date: 8/11/2019 1:40PM
+    public function updateMentors($id, $data){
+        global $database;
+
+        $set = "";
+
+        foreach ($data as $item => $value){
+            $set .= "`$item` = '$value', ";
+        }
+
+        $set = trim($set);
+        $set = substr($set, 0, strlen($set) - 1);
+        $sql = "UPDATE mentors SET $set WHERE mentor_id = '$id' ";
+        $database->query("$sql");
+    }
 
 }
 
