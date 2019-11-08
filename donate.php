@@ -100,20 +100,20 @@
        <form action="" id="actualForm">
         <input
           type="text"
-          name="Name"
-          placeholder="Name"
+          name="ame"
+          placeholder="Enter Name"
           required
         />
         <input
           type="email"
           name="email"
-          placeholder="Email address"
+          placeholder="Enter Email address"
           required
         />
         <input
           type="number"
-          name="phone number"
-          placeholder="Phone number"
+          name="phonenumber"
+          placeholder="Enter Phone number"
         />
         <input
           type="number"
@@ -153,19 +153,19 @@
         <input
           type="text"
           name="Name"
-          placeholder="Name"
+          placeholder="Enter Name"
           required
         />
         <input
           type="email"
           name="email"
-          placeholder="Email address"
+          placeholder="Enter Email address"
           required
         />
         <input
           type="number"
-          name="phone number"
-          placeholder="Phone number"
+          name="phonenumber"
+          placeholder="Enter Phone number"
         />
         
         <label for="group">To which group?</label>
