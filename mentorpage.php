@@ -52,6 +52,7 @@ $mentors = $mentor->showMentors();
 
       <section class="form-field">
         <form action="" class="collect_email">
+          <p> Enter your email below to get a link to update your profile </p>
           <input type="email" name="email" placeholder="Enter your registered email" class="mentor_email">
           <input type="submit" value="Submit" class="action_button">
           <input type="button" value="Close" class="action_button action_button--two" onclick="modalForm()">
