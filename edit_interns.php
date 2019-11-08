@@ -16,23 +16,25 @@ $id = $_GET['id'];
 
 $intern = new Intern();
 
-$the_intern = $intern->view($id);
 
 
-/*if(isset($_POST['ok'])){
-    $names = $database->escape_string($_POST["names"]);
-    $stack = $database->escape_string($_POST["stack"]);
-    $experience = $database->escape_string($_POST['experience']);
+if(isset($_POST['ok'])){
+    $data['name'] = $database->escape_string($_POST["name"]);
+    $data['about'] = $database->escape_string($_POST['about']);
+    $data['phone_no'] = $database->escape_string($_POST['phone_no']);
+    $data['link_to_cv'] = $database->escape_string($_POST['link_to_cv']);
+    $data['interest'] = $database->escape_string($_POST['interest']);
+    $data['employment_status'] = $database->escape_string($_POST['employment_status']);
+    $data['current_location'] = $database->escape_string($_POST['current_location']);
 
-    $admin->updateExperience("$id","$names","$stack","$experience");
+    $intern->updateInterns($id, $data);
 
-    $_SESSION['msg'] = "<div class='alert alert-success'>Experience updated successfully!</div>";
-    header("location:internreview.php");
+    $_SESSION['msg'] = "<div class='alert alert-success'>Intern updated successfully!</div>";
+    header("location:edit_interns.php?id=$id");
     exit();
 }
 
-$the_experience = $admin->fetchSingleExperience($id);
-*/
+$the_intern = $intern->view($id);
 
 ?>
 <!DOCTYPE html>
@@ -124,6 +126,7 @@ $the_experience = $admin->fetchSingleExperience($id);
                         <div class="form-group">
                             <label for="interest">Area of Interest</label>
                             <select multiple class="interest form-control" name="interest[]">
+                                <option><?php echo $the_intern['interest'];?></option>
                                 <option value="Backend">Backend</option>
                                 <option value="DevOps">DevOps</option>
                                 <option value="Digital Marketing">Digital Marketing</option>

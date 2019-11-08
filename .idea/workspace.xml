@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3340ae33-6e59-49ef-aaf7-8ef2d89eda61" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/classControllers/Interns.php" beforeDir="false" afterPath="$PROJECT_DIR$/classControllers/Interns.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/edit_interns.php" beforeDir="false" afterPath="$PROJECT_DIR$/edit_interns.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/join-intern.php" beforeDir="false" afterPath="$PROJECT_DIR$/join-intern.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,14 +38,14 @@
           <entry key="css" value="43" />
           <entry key="gitignore" value="51" />
           <entry key="js" value="32" />
-          <entry key="php" value="3039" />
+          <entry key="php" value="3156" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="43" />
           <entry key="JavaScript" value="32" />
-          <entry key="PHP" value="3039" />
+          <entry key="PHP" value="3156" />
           <entry key="PLAIN_TEXT" value="51" />
         </counts>
       </usages-collector>
@@ -81,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classControllers/Interns.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="321" column="46" selection-start-line="321" selection-start-column="46" selection-end-line="321" selection-end-column="46" />
+            <state relative-caret-position="17">
+              <caret line="300" column="9" lean-forward="true" selection-start-line="300" selection-start-column="9" selection-end-line="300" selection-end-column="9" />
               <folding>
                 <element signature="e#756#762#1" expanded="true" />
               </folding>
@@ -93,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/edit_interns.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="200" column="103" selection-start-line="200" selection-start-column="103" selection-end-line="200" selection-end-column="103" />
+            <state relative-caret-position="255">
+              <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -130,6 +128,7 @@
       <find>updateI</find>
       <find>sig</find>
       <find>- 1</find>
+      <find>intere</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -149,9 +148,9 @@
         <option value="$PROJECT_DIR$/classControllers/Subscribers.php" />
         <option value="$PROJECT_DIR$/fragments/sidebar.php" />
         <option value="$PROJECT_DIR$/delete_newsletter.php" />
-        <option value="$PROJECT_DIR$/edit_interns.php" />
         <option value="$PROJECT_DIR$/join-intern.php" />
         <option value="$PROJECT_DIR$/classControllers/Interns.php" />
+        <option value="$PROJECT_DIR$/edit_interns.php" />
       </list>
     </option>
   </component>
@@ -243,12 +242,12 @@
       <workItem from="1573056368276" duration="3051000" />
       <workItem from="1573131028208" duration="760000" />
       <workItem from="1573136350258" duration="499000" />
-      <workItem from="1573199257455" duration="7452000" />
+      <workItem from="1573199257455" duration="7751000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23525000" />
+    <option name="totallyTimeSpent" value="23824000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -427,13 +426,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/edit_interns.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="200" column="103" selection-start-line="200" selection-start-column="103" selection-end-line="200" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/join-intern.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -449,11 +441,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classControllers/Interns.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="321" column="46" selection-start-line="321" selection-start-column="46" selection-end-line="321" selection-end-column="46" />
+        <state relative-caret-position="17">
+          <caret line="300" column="9" lean-forward="true" selection-start-line="300" selection-start-column="9" selection-end-line="300" selection-end-column="9" />
           <folding>
             <element signature="e#756#762#1" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_interns.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
         </state>
       </provider>
     </entry>
