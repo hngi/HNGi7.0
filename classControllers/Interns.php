@@ -44,7 +44,7 @@ class Intern
         $date = $database->escape_string($_POST['date']);
         $check = $database->query("SELECT * FROM interns WHERE email = '$email' ");
         $count = mysqli_num_rows($check);
-        if($count < 0){
+        if($count <= 0){
             $query = "INSERT INTO interns (name, email, phone_no, link_to_cv, interest, current_location, employment_status, about, timestamp)
             VALUES('$fullname', ' $email', '$phoneNo', '$linkCV', '$interest', '$location', '$empStatus', '$about', '$date' )";
             $res = $database->query($query);
