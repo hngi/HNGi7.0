@@ -27,7 +27,17 @@ class Intern
         $email = $database->escape_string($_POST['email']);
         $phoneNo = $database->escape_string($_POST['phoneNo']);
         $linkCV = $database->escape_string($_POST['linkCV']);
-        $interest = $database->escape_string($_POST['interest']);
+        $interests = $_POST['interest'];
+        if(is_array($interests)){
+            $interest = "";
+            foreach ($interests as $int){
+                $interest .= " ,$int";
+            }
+            $interest = trim($interest);
+            $interest = substr($interest, 0, strlen($interest) - 1); //Set interest
+        }else{
+            $interest = $database->escape_string($_POST['interest']);
+        }
         $location = $database->escape_string($_POST['location']);
         $empStatus = $database->escape_string($_POST['empStatus']);
         $about = $database->escape_string($_POST['about']);
