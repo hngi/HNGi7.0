@@ -38,10 +38,8 @@ element.style {
         font-size: 1em;
     }
 }
-@media only screen and (min-width: 800px){
-    .para{
-        font-size: .9em;
-    }
+@media only screen and (min-wid  
+ 
     figure blockquote{
         font-size: 1.5em;
     }
