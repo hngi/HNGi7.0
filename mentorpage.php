@@ -47,7 +47,16 @@ $mentors = $mentor->showMentors();
         they begin their journey into the tech industry      
       </p>
         <a href="MentorSetUpPage2.php">Sign up as Mentor</a>
+      <!--UPDATE MENTOR PROFILE --= COLLECT EMAIL HERE -->
+        <p class="update_mentor" onclick="modalForm()"> <a>Update Your Profile</a></p>
 
+      <section class="form-field">
+        <form action="" class="collect_email">
+          <input type="email" name="email" placeholder="Enter your registered email" class="mentor_email">
+          <input type="submit" value="Submit" class="action_button">
+          <input type="button" value="Close" class="action_button action_button--two" onclick="modalForm()">
+        </form>
+      </section>
   </div>
   </div>
 
@@ -134,4 +143,9 @@ $mentors = $mentor->showMentors();
 
 <div id="jumptotop"><em></em></div>
 <!-- <script src="./js/scroll-to-top.js"></script> -->
+<script>
+  function modalForm (){
+    $(".form-field").fadeToggle(500);
+  }
+</script>
 </html>
