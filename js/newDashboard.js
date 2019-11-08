@@ -1,5 +1,4 @@
         
-        
         const body = document.querySelector('body')
         const mentorTable = document.querySelector(".table.table-hover")
         
@@ -23,9 +22,7 @@
             //Restore orignal HTML
             document.body.innerHTML = oldPage;
             createPages("printablediv")
-        }
-
-        
+        } 
 
         
         // const internTable = document.querySelector("#table_interns table")
@@ -300,8 +297,8 @@
             exportModal.classList.add('visible')
             photo.style.visibility = "hidden";
 
-        }else if(e.target.id === "overlay"){
-            overlay.classList.remove('visible')
+         } else if(e.target.id === "overlay" || e.target.className === 'close'){
+                overlay.classList.remove('visible')
             exportModal.classList.remove('visible')
             photo.style.visibility = "";
            
@@ -356,12 +353,5 @@ window.addEventListener("resize", e =>
     
     }
 })
-
-
-
-
-
-
-
 
 

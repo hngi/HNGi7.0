@@ -46,6 +46,7 @@ if ($status) {
       padding: 10px;
       border-radius: 15px;
     }
+
   </style>
 
 </head>
@@ -53,16 +54,20 @@ if ($status) {
 <body>
   <main class="reg">
     <div id="overlay"></div>
-    <div id="export-modal">
+    <div id="export-modal"> 
+      <span class="close">&times;</span>
+
       <div>
         <input type="radio" id="csv" name="exportOptions"><label for="csv">Export to CSV</label>
       </div>
       <div>
         <input type="radio" id="pdf" name="exportOptions"><label for="pdf">Export to PDF</label>
       </div>
+      
       <p id="message"></p>
       <button type="button" class="exports" id="download">Download</button>
     </div>
+
     <input type="text" class="searchBox"><i class="fas fa-search"></i>
     <section id="overview-section">
       <!-- <h1>Dashboard</h1> -->
@@ -72,6 +77,8 @@ if ($status) {
         <a href="finished_request.php" class="btn btn-default">Finished Request</a>
         <a href="processing_request.php" class="btn btn-default reduce">Processing Request</a>
       </div>
+
+
       <!-- <section id="intern-section">
             Populated by `js/dashboard.js`
         </section> -->
