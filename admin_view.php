@@ -3,7 +3,7 @@ require_once "classControllers/init.php";
 $admin = new Admins();
 
 if (!isset($_SESSION["role"])) {
-    header('Location:login.php');
+    header('Location:login');
 }
 if (isset($_GET["editAdminId"])) {
     $id = $_GET["editAdminId"];
