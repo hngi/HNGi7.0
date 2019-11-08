@@ -54,25 +54,26 @@ header {
 }
 
 .form-field {
-  position: fixed;
-  top: 0;
-  left: 0;
   height: 100%;
   width: 100%;
   z-index: 1;
   border: 1px solid #11CDEF;
   display: none;
   background-color: white;
+  padding: 50px 0;
 }
 
 .form-field .collect_email {
-  width: 50%;
+  width: 80%;
   margin: 0 auto;
-  height: 150px;
-  margin-top: 200px;
-  transform: translateY(-50%);
   padding-top: 20px;
   border: 3px solid #11CDEF;
+}
+
+@media screen and (min-width: 1000px){
+  .form-field .collect_email{
+    width: 40%;
+  }
 }
 
 .collect_email input[type=email] {
