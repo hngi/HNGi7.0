@@ -34,7 +34,7 @@ class Intern
                 $interest .= " ,$int";
             }
             $interest = trim($interest);
-            $interest = substr($interest, 0, strlen($interest) - 1); //Set interest
+            $interest = substr($interest, 1, strlen($interest) - 1); //Set interest
         }else{
             $interest = $database->escape_string($_POST['interest']);
         }
