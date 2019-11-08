@@ -14,7 +14,7 @@ if(!isset($_GET['id'])){
 
 $id = $_GET['id'];
 
-$intern = new Intern();
+$mentor = new Mentor();
 
 
 
@@ -34,7 +34,15 @@ if(isset($_POST['ok'])){
     exit();
 }
 
-//$the_intern = $intern->view($id);
+$the_mentor = $mentor->getMentorInfo($id);
+
+$area_of_expertise = explode("|",$the_mentor['area_of_expertise']);
+
+$c = 0;
+foreach ($area_of_expertise as $expertise){
+    $area_of_expertise[$c] = trim($expertise);
+    $c++;
+}
 
 ?>
 <!DOCTYPE html>
@@ -111,85 +119,76 @@ if(isset($_POST['ok'])){
                                 <div class="form-group">
                                     <label for="">Area of Interest</label>
                                     <div class="row">
+                                        <?php
+                                            $all_interest = array(
+                                                'Frontend',
+                                                'Backend',
+                                                'Machine-learning',
+                                                'UI/UX-Design',
+                                                'Mobile-Development',
+                                                'Digital-marketing'
+                                            );
 
+
+                                            foreach ($all_interest as $item){
+                                                ?>
+                                                <label class="control-label col-md-12">
+                                                    <input type="checkbox" name="area_of_expertise[]" value="<?php echo $item;?>" <?php if(in_array("$item", $area_of_expertise)) echo "checked";?>>
+                                                    <?php echo $item;?>
+                                                </label>
+                                                <br>
+                                                <?php
+                                            }
+                                        ?>
                                     </div>
                                 </div>
 
                                 <div class="row d-flex mt-5 mb-5" id="form-contner">
                                     <div class="col-lg-8 m-auto">
                                         <div class="second">
-                                            <center>
-                                                <div class="image-upload">
-                                                    <label for="file-input">
-                                                        <div class="circle"><i class="fas fa-camera"></i></div>
-                                                    </label>
-                                                    <input id="file-input" type="file"/ name="image">
-                                                </div>
-                                                <div class="click text-center">Click the image above to upload a profile photo</div>
-                                                <div class="jpg">JPG or PNG. Max size of 400k</div>
-                                            </center>
+                                            <div class="form-group">
+                                                <label for="validationCustom01">Name</label>
+                                                <input name="name" type="text" class="form-control mt-2" id="validationCustom01" placeholder="Name" required value="<?php echo $the_mentor['name']; ?>"></div>
 
-                                            <div class="col-sm-12">
-                                                <label for="validationCustom01"></label>
-                                                <input name="name" type="text" class="form-control mt-2" id="validationCustom01" placeholder="Name" required value="<?php if (isset($_POST['name'])) {
-                                                    echo $_POST['name'];
-                                                } ?>"></div>
-                                            <div class="invalid-feedback">
-                                                Please Enter Your Name
-                                            </div>
-                                            <div class="col-sm-12">
-                                                <input name="email" type="email" class="form-control mt-2" id="validationCustom02" placeholder="Email" required value="<?php if (isset($_POST['email'])) {
-                                                    echo $_POST['email'];
-                                                } ?>"></div>
-                                            <div class="col-sm-12">
-                                                <input name="phone" type="tel" class="form-control mt-2" id="validationCustom03" placeholder="Phone number" required value="<?php if (isset($_POST['phone'])) {
-                                                    echo $_POST['phone'];
-                                                } ?>"></div>
-                                            <div class="col-sm-12">
-                                                <input name="linkedin_link" type="url" class="form-control mt-2" id="validationCustom06" placeholder="Link to your Linkedin profile(optional)"  value="<?php if (isset($_POST['linkedin_link'])) {
-                                                    echo $_POST['linkedin_link'];
-                                                } ?>"></div>
-                                            <div class="col-sm-12">
-                                                <input name="github_link" type="url" class="form-control mt-2" id="validationCustom05" placeholder="Github link" value="<?php if (isset($_POST['github_link'])) {
-                                                    echo $_POST['github_link'];
-                                                } ?>">
+                                            <div class="form-group">
+                                                <label for="">Email Address</label>
+                                                <input name="email" type="email" class="form-control mt-2" id="validationCustom02" placeholder="Email" required value="<?php echo $the_mentor['email']; ?>"></div>
+                                            <div class="form-group">
+                                                <label for="">Phone Number</label>
+                                                <input name="phone_no" type="tel" class="form-control mt-2" id="validationCustom03" placeholder="Phone number" required value="<?php echo $the_mentor['phone_no']; ?>"></div>
+                                            <div class="form-group">
+                                                <label for="">Link to LinkedIn</label>
+                                                <input name="link_to_linkedin" type="url" class="form-control mt-2" id="validationCustom06" placeholder="Link to your Linkedin profile(optional)"  value="<?php echo $the_mentor['link_to_linkedin']; ?>"></div>
+                                            <div class="form-group">
+                                                <label>Link to Github</label>
+                                                <input name="link_to_github" type="url" class="form-control mt-2" id="validationCustom05" placeholder="Github link" value="<?php echo $the_mentor['link_to_github']; ?>">
                                             </div>
 
-                                            <div class="col-sm-12">
-                                                <input name="dribble_link" type="text" class="form-control mt-2" id="validationCustom04" placeholder="Dribble link"  value="<?php if (isset($_POST['dribble_link'])) {
-                                                    echo $_POST['dribble_link'];
-                                                } ?>"></div>
+                                            <div class="form-group">
+                                                <label>Dribble Link</label>
+                                                <input name="dribble_link" type="text" class="form-control mt-2" id="validationCustom04" placeholder="Dribble link"  value="<?php echo $the_mentor['dribble_link']; ?>"></div>
 
 
-                                            <div class="col-sm-12">
-                                                <input name="cv_link" type="url" class="form-control mt-2" id="validationCustom07" placeholder="Link to your CV" required value="<?php if (isset($_POST['cv_link'])) {
-                                                    echo $_POST['cv_link'];
-                                                } ?>"></div>
+                                            <div class="form-group">
+                                                <label>Link to CV</label>
+                                                <input name="link_to_cv" type="url" class="form-control mt-2" id="validationCustom07" placeholder="Link to your CV" required value="<?php echo $the_mentor['link_to_cv']; ?>"></div>
                                             <!-- new inserted inputs-->
-                                            <div class="col-sm-12">
-                                                <input name="fb_url" type="url" class="form-control mt-2" id="validationCustom07" placeholder="Link to your Facebook account" required value="<?php if (isset($_POST['fb_url'])) {
-                                                    echo $_POST['fb_url'];
-                                                } ?>"></div>
-                                            <div class="col-sm-12">
-                                                <input name="twitter_url" type="url" class="form-control mt-2" id="validationCustom07" placeholder="Link to your Twitter account" required value="<?php if (isset($_POST['twitter_url'])) {
-                                                    echo $_POST['twitter_url'];
-                                                } ?>"></div>
+                                            <div class="form-group">
+                                                <label>Facebook Url</label>
+                                                <input name="fb_url" type="url" class="form-control mt-2" id="validationCustom07" placeholder="Link to your Facebook account" required value="<?php echo $the_mentor['fb_url']; ?>"></div>
+                                            <div class="form-group">
+                                                <label>Twitter Url</label>
+                                                <input name="twitter_url" type="url" class="form-control mt-2" id="validationCustom07" placeholder="Link to your Twitter account" required value="<?php echo $the_mentor['twitter_url']; ?>"></div>
                                             <!-- new inserted inputs-->
 
-                                            <div class="col-sm-12">
-                                                <input name="interest" type="text" class="form-control mt-2" id="validationCustom08" placeholder="Why are you interested in mentoring with HNG?" required value="<?php if (isset($_POST['interest'])) {
-                                                    echo $_POST['interest'];
-                                                } ?>" maxlength="50"></div>
-                                            <div class="col-sm-12">
-                                                <select class="form-control mt-2" name="state" id="validationCustom09" placeholder="What state are you currently in?" required>
-                                                    <?php
-
-                                                    if (isset($_POST['state'])) {
-                                                        echo "<option>" . $_POST['state'] . "</option>";
-                                                    }
-
-                                                    ?>
-                                                    <option value="state">What state are you currently in? </option>
+                                            <div class="form-group">
+                                                <label>Why are you interested in mentoring with HNG?</label>
+                                                <input name="why_interested" type="text" class="form-control mt-2" id="validationCustom08" placeholder="Why are you interested in mentoring with HNG?" required value="<?php echo $the_mentor['why_interested']; ?>" maxlength="50"></div>
+                                            <div class="form-group">
+                                                <label>Current State</label>
+                                                <select class="form-control mt-2" name="current_state" id="validationCustom09" placeholder="What state are you currently in?" required>
+                                                    <option><?php echo $the_mentor['current_state']; ?></option>
+                                                    <option value="">What state are you currently in? </option>
                                                     <option value="FCT">Federal Capital Territory</option>
                                                     <option value="Abia">Abia</option>
                                                     <option value="Adamawa">Adamawa</option>
@@ -231,15 +230,20 @@ if(isset($_POST['ok'])){
                                                 </select>
                                             </div>
 
-                                            <div class="col-sm-12">
-                                                <select name="employment_status" type="text" class="form-control mt-2" id="validationCustom10" placeholder="What is your current employment status?" required value="<?php if (isset($_POST['employment_status'])) {
-                                                    echo $_POST['employment_status'];
-                                                } ?>" maxlength="15">
+                                            <div class="form-group">
+                                                <label>Employ Status</label>
+                                                <select name="employment_status" type="text" class="form-control mt-2" id="validationCustom10" placeholder="What is your current employment status?" required  maxlength="15">
+                                                    <option><?php echo $the_mentor['employment_status']; ?></option>
                                                     <option value="Employee">Employed</option>
                                                     <option value="Self-employed">Self-employed</option>
                                                     <option value="Freelance">Freelance</option>
                                                     <option value="Unemployed">Unemployed</option>
                                                 </select></div>
+
+                                                <div class="form-group">
+                                                    <label>Photo URL</label>
+                                                    <input type="text" name="photo_url" class="form-control" required="" value="<?php echo $the_mentor['photo_url']; ?>">
+                                                </div>
                                             <center><button class="btn btn-primary mt-3" type="submit">Submit</button></center>
 
                                         </div>
