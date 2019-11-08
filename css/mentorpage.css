@@ -51,8 +51,9 @@
   .rounded img {
     height: 224px;
     width: 221px;
+    object-fit: cover;
     }
-
+  
 .social-link i {
     color: white;
 }
