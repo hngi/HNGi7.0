@@ -44,7 +44,7 @@ class Mentor
                         <td>' . $row["current_state"] . '</td>
                         <td>' . $row["employment_status"] . '</td>
                         <td>' . $row["timestamp"] . '</td>
-                        <td>' .'<a href="registered_mentors.php?rejectMentorId=' . $row["mentor_id"] . '" class="btn btn-danger btn-sm" style="margin-right: 5px;">Deactivate</a>' . '</td>
+                        <td>' .'<a href="edit_mentor.php?id=' . $row["mentor_id"] . '" class="btn btn-info btn-sm" style="margin-right:5px;">Edit</a> <a href="registered_mentors.php?rejectMentorId=' . $row["mentor_id"] . '" class="btn btn-danger btn-sm" style="margin-right: 5px;">Deactivate</a>' . '</td>
                         
 
                     </tr>';
