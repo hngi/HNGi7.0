@@ -141,6 +141,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <!-- <link rel="stylesheet" href="css/mentorSetuppage.css"> -->
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
 </head>
+<script>
+
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      $('#prevImg')
+        .attr('src', e.target.result);
+    };
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+</script>
 
 <body>
 
@@ -231,7 +247,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </div>
         </div>
       </div>
-
+      
       <!--Form2-->
       <div class="row d-flex mt-5 mb-5" id="form-contner">
         <div class="col-lg-8 m-auto">
@@ -239,9 +255,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <center>
               <div class="image-upload">
                 <label for="file-input">
+                 <img id="prevImg" />
                   <div class="circle"><i class="fas fa-camera"></i></div>
                 </label>
-                <input id="file-input" type="file"/ name="image">
+                <input id="file-input" type="file"/ name="image" onchange="readURL(this);" >
               </div>
               <div class="click text-center">Click the image above to upload a profile photo</div>
               <div class="jpg">JPG or PNG. Max size of 400k</div>
