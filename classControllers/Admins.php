@@ -41,6 +41,7 @@ class Admins
           $role = $row["role"];
           $admin_id = $row["admin_id"];
           $block = $row['block'];
+          $lastLogin = $row["lastLogin"];
 
           if ($block == 1) {
             // admin is blocked, cannot login
@@ -50,6 +51,11 @@ class Admins
             $_SESSION["fullname"] = $fullname;
             $_SESSION["role"] = $role;
             $_SESSION["admin_id"] = $admin_id;
+            $_SESSION["lastLogin"] = $lastLogin;
+
+            // update last login
+            $query = "UPDATE admins SET lastLogin = now() WHERE admin_id = ".$admin_id."";
+            $res = $database->query($query);
 
             echo '<script>window.location.href = "dashboard.php"</script>';
           }
@@ -337,11 +343,16 @@ class Admins
   // Written by JohnEbri; 8/11/2019 9:30AM
   public function deleteProfilePic() {
     global $database;
+    //get the image
+ 
     $query = "UPDATE admins SET hasPic = 0 WHERE admin_id = ".$_SESSION["admin_id"]."";
     $res = $database->query($query);
     $count = $database->affected_rows();
     if($count > 0) {
       // has pic value updated, delete pic from folder
+      // $imageName = $_SESSION["admin_id"] . ".jpg";
+      // unlink("uploads/".$imageName);
+
       header("Location:adminProfile.php?picDeleted");
     } else {
       // error
