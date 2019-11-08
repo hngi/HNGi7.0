@@ -8,20 +8,18 @@
         transform: translateY(0);
     }
 }
-
+@media screen and (min-width: 0) {
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
     body {
-        overflow-x: hidden;
         font-family: "Open Sans", segoe UI, sans-serif;
-         
+        overflow-x: hidden; 
     }
     .body-section {
-        overflow-x: hidden;
-        
+        overflow: hidden; 
     }
     .desktop-only {
         display: none;
@@ -84,8 +82,7 @@
         margin-bottom: 15px;
         font-style: normal;
         font-weight: 600;
-        font-size: calc(35px + 1vw);
-
+        font-size: 40px;
         line-height: 54px;
     }
     #welcome-story {
@@ -496,30 +493,6 @@
     }
     
 
-
-
-@media screen and (min-width: 315px) and (max-width: 380px) {
-    #welcome-column {
-        min-width: 320px;
-        
-        
-    }
-   
-    #welcome-text {
-        font-size: 35px;
-    }
-
-    #welcome-story {
-        position: relative;
-        right: 15px; 
-        word-break: normal;
-        font-size: 16px;
-        line-height: 200.5%;
-        padding-right: 40px;
-        overflow-wrap: break-word;
-    }
-
-    
 }
 
 @media screen and (min-width: 760px) {
@@ -535,6 +508,7 @@
         display: block;
         height: auto;
         animation: Slide_up 1.4s ease ;
+        overflow: hidden;
     }
      
     .welcome-column {
@@ -542,7 +516,7 @@
         margin-top: 120px;
         margin-bottom: 20px;
         animation: Slide_up 1.4s ease ;
-        
+        overflow: hidden;
     }
 
     .main-second-row {
@@ -659,7 +633,7 @@
         margin-top: 30px;
     }
 
-    /* sponsor section by hayjay  */ 
+    /* sponsor section by hayjay */
    
 }
 @media screen and (max-width: 502px) {
