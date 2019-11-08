@@ -81,6 +81,13 @@ if(isset($_POST["uploadPicture"])) {
             padding: 0;
             margin: 0;
         }
+
+        @media (max-width: 400px) {
+   .heading {
+    margin-top: 50px !important;
+    font-size: 18px !important;
+   }
+  }
     </style>
 
 
@@ -90,7 +97,7 @@ if(isset($_POST["uploadPicture"])) {
 <main class="reg">
 
     <section id="overview-section">
-        <h1>Admin Profile</h1>
+        <h1 class="heading">Admin Profile</h1>
         <div class="register-container">
             <br /><br />
             <div class="row" id="table-row">

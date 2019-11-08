@@ -55,14 +55,21 @@ if(isset($_POST['ok'])){
 		.card p{
 			font-weight: bolder;
 			font-size: 35px;
-		}
+  }
+  
+  @media (max-width: 400px) {
+   .heading {
+    margin-top: 50px !important;
+    font-size: 18px !important;
+   }
+  }
 	</style>
 
 </head>
 <body>
 	<main>
 		<section id="overview-section">
-			<h1>Send Message</h1>
+			<h1 class="heading">Send Message</h1>
 
             <hr>
 

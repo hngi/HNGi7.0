@@ -50,13 +50,20 @@ $all_news = $newsletter->fetch_newsletter();
             font-weight: bolder;
             font-size: 35px;
         }
+
+        @media (max-width: 400px) {
+   .heading {
+    margin-top: 50px !important;
+    font-size: 18px !important;
+   }
+  }
     </style>
 
 </head>
 <body>
 <main>
     <section id="overview-section">
-        <h1>News Update Archive</h1>
+        <h1 class="heading">News Update Archive</h1>
         <p><a href="delete_newsletter.php" class="btn btn-danger">Delete News</a></p>
         <hr>
 
