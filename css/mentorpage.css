@@ -1,141 +1,142 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+}
 
-    body {
-      font-family: 'Open Sans', sans-serif;
-      overflow-x: hidden;
-    } 
-
- @keyframes Slide_up{
-                0%{
-                    transform: translateY(250px);
-                }
-                100%{
-                    transform: translateY(0);
-                }
-            }
-    a {
-      text-decoration: none;
-    }
-    
-    header {
-      background-color: #D1F0F6 !important;
-    }
-
-    .mentor{
-      animation: Slide_up 2.1s ease ;
-    }
-
-     #landing-page {
-      text-align: center;
-      background-color: #D1F0F6;
-      position: relative;
-      min-height: 40vh;
-      width: 100vw !important;
-     }
-
-     #landing-page h2 {
-      font-size: 40px;
-      line-height: 54px;
-      font-weight: bold;
-      color: #084482 !important;
-      margin-top: 0;
-      margin-bottom: 1rem;
-    }
-
-  #landing-page  p {
-     padding-bottom:0;
-     font-weight: normal;
-     text-align: center;
-     
+@keyframes Slide_up {
+  0% {
+    transform: translateY(250px);
   }
-    .update_mentor {
-      margin-top: 10px;
-      cursor: pointer;
-      color: #5E72E4;
-    }
+  100% {
+    transform: translateY(0);
+  }
+}
 
-    .form-field {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      z-index: 1;
-      border: 1px solid #11CDEF;
-      display: none;        
-      background-color: white;
+a {
+  text-decoration: none;
+}
 
-    }
+header {
+  background-color: #D1F0F6 !important;
+}
 
-    .form-field .collect_email {
-        width: 50%;
-        margin: 0 auto;
-        height: 150px;
-        margin-top: 200px;
-        transform: translateY(-50%);
-        padding-top: 20px;
-        border: 3px solid #11CDEF;
-    }
+.mentor {
+  animation: Slide_up 2.1s ease;
+}
 
-    .collect_email input[type=email] {
-      width: 90%;
-      margin: auto;
-      display: block;
-      padding: 5px  20px;
-    }
+#landing-page {
+  text-align: center;
+  background-color: #D1F0F6;
+  position: relative;
+  min-height: 40vh;
+  width: 100vw !important;
+}
 
-    .collect_email .action_button {
-      margin: 10px;
-      border: none;
-      padding: 10px;
-      color: white;
-      background-color: #11CDEF;
-    }
+#landing-page h2 {
+  font-size: 40px;
+  line-height: 54px;
+  font-weight: bold;
+  color: #084482 !important;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
 
-    .collect_email .action_button--two {
-      background-color: red;
-    }
+#landing-page p {
+  padding-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+}
 
-  .rounded img {
-    height: 224px;
-    width: 221px;
-    object-fit: cover;
-    }
-  
+.update_mentor {
+  margin-top: 10px;
+  cursor: pointer;
+  color: #5E72E4;
+}
+
+.form-field {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  border: 1px solid #11CDEF;
+  display: none;
+  background-color: white;
+}
+
+.form-field .collect_email {
+  width: 50%;
+  margin: 0 auto;
+  height: 150px;
+  margin-top: 200px;
+  transform: translateY(-50%);
+  padding-top: 20px;
+  border: 3px solid #11CDEF;
+}
+
+.collect_email input[type=email] {
+  width: 90%;
+  margin: auto;
+  display: block;
+  padding: 5px 20px;
+}
+
+.collect_email .action_button {
+  margin: 10px;
+  border: none;
+  padding: 10px;
+  color: white;
+  background-color: #11CDEF;
+}
+
+.collect_email .action_button--two {
+  background-color: red;
+}
+
+.rounded img {
+  height: 224px;
+  width: 221px;
+  object-fit: cover;
+}
+
+.mentor_card span {
+  font-size: .8em;
+}
+
 .social-link i {
-    color: white;
+  color: white;
 }
 
 .s-link1 {
-    background-color: #FB6340;
+  background-color: #FB6340;
 }
 
 .s-link2 {
-    background-color: #5E72E4;
+  background-color: #5E72E4;
 }
 
 .s-link3 {
-    background-color: #11CDEF;
+  background-color: #11CDEF;
 }
 
 .s-link4 {
-    background-color: rgb(98, 255, 98);
+  background-color: rgb(98, 255, 98);
 }
-
 
 .social-link {
-    width: 50px;
-    height: 50px;
-    border: 1px solid white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: all 0.3s;
-    font-size: 0.9rem;
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s;
+  font-size: 0.9rem;
 }
 
-.social-link:hover,
-.social-link:focus {
-    opacity: 0.5;
-    text-decoration: none;
+.social-link:hover, .social-link:focus {
+  opacity: 0.5;
+  text-decoration: none;
 }
