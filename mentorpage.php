@@ -47,7 +47,17 @@ $mentors = $mentor->showMentors();
         they begin their journey into the tech industry      
       </p>
         <a href="MentorSetUpPage2.php">Sign up as Mentor</a>
+      <!--UPDATE MENTOR PROFILE --= COLLECT EMAIL HERE -->
+        <p class="update_mentor" onclick="modalForm()"> <a>Update Your Profile</a></p>
 
+      <section class="form-field">
+        <form action="" class="collect_email">
+          <p> Enter your email below for a link to update your profile </p>
+          <input type="email" name="email" placeholder="Enter your registered email" class="mentor_email">
+          <input type="submit" value="Submit" class="action_button">
+          <input type="button" value="Close" class="action_button action_button--two" onclick="modalForm()">
+        </form>
+      </section>
   </div>
   </div>
 
@@ -57,7 +67,7 @@ $mentors = $mentor->showMentors();
 
 
         <!-- mentor details -->
-        <div class="container mt-5 mentor">
+        <div class="container-fluid mt-5 mentor">
             <div class="row text-center">
 
                 <?php
@@ -70,13 +80,13 @@ $mentors = $mentor->showMentors();
                       }
                 ?>
                 <!-- mentor item 1-->
-                <div class="col-xl-3 col-sm-6 mb-3">
-                    <div class="bg-white rounded  py-5 px-4"><img
+                <div class="col-xl-3 col-sm-6 mb-3 mentor_card">
+                    <div class="bg-white rounded  py-4 px-4"><img
                             src="<?= $ment['photo_url'] ;  ?>"
                             alt="" width="100%" height="auto" class="img-fluid rounded-circle mb-3  ">
-                        <h5 class="mb-2"><?= $ment['name']; ?></h5>
+                        <h6 class="mb-2 hew"><?= $ment['name']; ?></h6>
                         <span class="text-muted"><?= $ment['area_of_expertise'] ; ?></span>
-                        <ul class="social mb-0 list-inline mt-5">
+                        <ul class="social mb-0 list-inline mt-2">
                             <li class="list-inline-item"><a href="<?= $ment['twitter_url'] ;  ?>" class="social-link s-link<?= $counter ;?>"><i
                                         class="fab fa-twitter"></i></a>
                             </li>
@@ -84,11 +94,12 @@ $mentors = $mentor->showMentors();
                                         class="fab fa-facebook"></i></a></li>
                             <?php
                 
-                                $skills_array = explode('|', $ment['area_of_expertise']);   
+                                $skills_array = explode('|', $ment['area_of_expertise']);
+                                empty($ment['link_to_github'])? $portfolio_link = $ment['dribble_link'] : $portfolio_link = $ment['link_to_github'];
 
                             ?>
-                            <li class="list-inline-item"><a href="<?= $ment['link_to_portfolio'] ;  ?>" class="social-link s-link<?= $counter ;?>"><i
-                                        class="fab fa-<?=((in_array(' UI/UX Design', $skills_array, true))? 'dribbble': 'github');?>"></i></a>
+                            <li class="list-inline-item"><a href="<?= $portfolio_link;  ?>" class="social-link s-link<?= $counter ;?>"><i
+                                        class="fab fa-<?=((in_array('UI/UX-Design', $skills_array, true))? 'dribbble': 'github');?>"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -133,4 +144,9 @@ $mentors = $mentor->showMentors();
 
 <div id="jumptotop"><em></em></div>
 <!-- <script src="./js/scroll-to-top.js"></script> -->
+<script>
+  function modalForm (){
+    $(".form-field").fadeToggle(500);
+  }
+</script>
 </html>

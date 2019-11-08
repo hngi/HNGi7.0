@@ -6,7 +6,7 @@ class Mentors
 	public $name;
 	public $email;
 	public $phone_no;
-	public $link_to_portfolio;
+	public $link_to_github;
 	public $link_to_linkedin;
 	public $link_to_cv;
 	public $why_interested;
@@ -16,13 +16,14 @@ class Mentors
 	public $timestamp;
 	public $twitter_url;
 	public $fb_url;
+	public $dribble_link;
 
 
 	public function Apply_mentor()
 	{
 		global $database;
 		$res = $database->query("INSERT INTO mentors()
-			VALUES(NULL, '$this->area_of_expertise', '$this->photo_url', '$this->name', '$this->email', '$this->phone_no', '$this->link_to_portfolio', '$this->link_to_linkedin', '$this->link_to_cv', '$this->why_interested', '$this->current_state', '$this->employment_status', '$this->status' ,'$this->timestamp','$this->fb_url','$this->twitter_url')");
+			VALUES(NULL, '$this->area_of_expertise', '$this->photo_url', '$this->name', '$this->email', '$this->phone_no', '$this->link_to_github', '$this->link_to_linkedin', '$this->link_to_cv', '$this->why_interested', '$this->current_state', '$this->employment_status', '$this->status' ,'$this->timestamp','$this->fb_url','$this->twitter_url', '$this->dribble_link')");
 		return $res;
 	}
 	public static function emailExists($email)
@@ -90,7 +91,7 @@ class Mentors
 		return $display;
 	}
 }
-$mentor = new Mentors;
+
 	// $mentor = new Mentors;
 	// $mentor->area_of_expertise= $database->escape_string("web");
 	// $mentor->photo_url= "pic";

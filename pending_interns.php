@@ -55,6 +55,24 @@
             padding: 10px;
             border-radius: 15px;
         }
+
+        @media (max-width: 320px){
+     .heading{
+
+      width: 170px;
+      margin-left: 50px !important;
+      margin-right: auto !important;
+      text-align: center !important;
+     }
+
+     .searchBox {
+      margin-top: 70px;
+     }
+
+     .fa-search{
+      margin-top: 10px;
+     }
+    }
     </style>
 
 </head>
@@ -75,7 +93,7 @@
         <input type="text" class="searchBox"><i class="fas fa-search"></i>
         <section id="overview-section">
             <!-- <h1>Dashboard</h1> -->
-            <h2>Pending Interns </h2>
+            <h2 class="heading">Pending Interns </h2>
             <div class="intern-buttons">
                 <a href="registered_interns.php" class="btn btn-default">Active Interns</a>
                 <a href="declined_interns.php" class="btn btn-default">Declined Interns</a>
