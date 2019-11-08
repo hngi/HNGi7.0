@@ -5,6 +5,7 @@ require_once 'classControllers/init.php';
     $lockForm = new LockRegForm();
     $status = $lockForm->checkStatus();
     if (isset($_POST['submit'])) {
+      $res = '';
       $fullname = $database->escape_string($_POST['fullname']);
       $email = $database->escape_string($_POST['email']);
       $phoneNo = $database->escape_string($_POST['phoneNo']);
@@ -14,10 +15,20 @@ require_once 'classControllers/init.php';
       $empStatus = $database->escape_string($_POST['empStatus']);
       $about = $database->escape_string($_POST['about']);
       $date = $database->escape_string($_POST['date']);
-      $insertInterns = $intern->internSignup();
-      
-      
+      $interests=$database->escape_string($_POST['interest']);
+      $count = $intern->emailExists($email);
+      if($count === 0){
+        $res = $intern->internSignup();
+        $request_mess = '<p style="text-align:center;">Application successful. Check your mail for registration message. Thank you!</a>';
+      }else{
+        $res ="Email has been use by another user";
+      }
+     
+     
+
     }
+
+    
 ?>
 
 <!DOCTYPE html>
@@ -93,12 +104,20 @@ require_once 'classControllers/init.php';
       ?>
       <form class="form-container" action="" method="post" id="myForm">
 
+      <?php
+      if (!empty($request_mess)) {
+        echo "<center><h4 class='text-success text-center success' style='background: #D3ECDB; color: #2B5036; padding: 6px; width:66%;'>" . $request_mess . "</h4></center>";
+      }
+        if (!empty($res)) {
+          echo "<h4 style='text-align:center; color: red;'>$res</h4>";
+        }
+      ?>
 
         <input type="text" name="fullname" id="fullname" required placeholder="Full Name" />
         <input type="email" name="email" id="email" required placeholder="E-mail Address" />
         <input type="text" name="phoneNo" id="phoneNo" required placeholder="Phone Number" />
         <input type="url" name="linkCV" id="linkCV" required placeholder="Link to your CV (LinkedIn Profile or any other link)" />
-        <select class="interest" name="interest" multiple>
+        <select multiple class="interest" name="interest" multiple>
           <option value="" disabled selected hidden>What area are you interested in?</option>
           <option value="Backend">Backend</option>
           <option value="DevOps">DevOps</option>
@@ -108,7 +127,50 @@ require_once 'classControllers/init.php';
           <option value="Mobile Development">Mobile Development</option>
           <option value="UI/UX Design">UI/UX Design</option>
         </select>
-        <input type="text" name="location" id="location" required placeholder="What state are you currently located in?" />
+
+        <!--<input type="text" name="location" id="location" required placeholder="What state are you currently located in?" />-->
+        <select name="location" id="location" required>
+            <option value="state">What state are you currently located? </option>
+            <option value="india">Federal Capital Territory</option>
+             <option value="Abia">Abia</option>
+             <option value="Adamawa">Adamawa</option> 
+             <option value="Akwa Ibom">Akwa Ibom</option>
+             <option value="Anambra">Anambra</option>
+             <option value="Bauchi">Bauchi</option>
+             <option value="Bayelsa">Bayelsa</option>
+             <option value="Benue">Benue</option>
+             <option value="Borno">Borno</option>
+             <option value="Cross River">Cross River</option>
+             <option value="Delta">Delta</option>
+             <option value="Ebonyi">Ebonyi</option>
+             <option value="Edo">Edo</option>
+             <option value="Ekiti">Ekiti</option>
+             <option value="Enugu">Enugu</option>
+             <option value="Gombe">Gombe</option>
+             <option value="Imo">Imo</option>
+             <option value="Jigawa">Jigawa</option>
+             <option value="Kaduna">Kaduna</option>
+             <option value="Kano">Kano</option>
+             <option value="Katsina">Katsina</option>
+             <option value="Kebbi">Kebbi</option>
+             <option value="Kogi">Kogi</option>
+             <option value="Kwara">Kwara</option>
+             <option value="Lagos">Lagos</option>
+             <option value="Nasarawa">Nasarawa</option>
+             <option value="Niger">Niger</option>
+             <option value="Ogun">Ogun</option>
+             <option value="Ondo">Ondo</option>
+             <option value="Osun">Osun</option>
+             <option value="Oyo">Oyo</option>
+             <option value="Borno">Borno</option>
+             <option value="Plateau">Plateau</option>
+             <option value="Rivers">Rivers</option>
+             <option value="Sokoto">Sokoto</option>
+             <option value="Taraba">Taraba</option>
+             <option value="Yobe">Yobe</option>
+             <option value="Zamfara">Zamfara</option>
+        </select>
+
         <select name="empStatus" id="empStatus" class="empStatus" required>
           <option value="" disabled selected hidden>What is your current employment status?</option>
           <option value="Recently Employed (3 months or less)">Recently Employed (3 months or less)</option>
@@ -140,6 +202,7 @@ require_once 'classControllers/init.php';
   </div>
    <?php include "fragments/site_footer.php"; ?>
   </section>
+  <?php include('fragments/chat.php'); ?>
 </body>
 
 </html>

@@ -285,6 +285,29 @@
                             </div>
                             <div class="row" data-aos="fade-right">
                                 <div class="col-2">
+                                    <img src="https://res.cloudinary.com/alfredpison/image/upload/v1573055195/output-onlinepngtools_1_1_jc3fbe.png"
+                                        width="50px" class="img-fluid">
+                                </div>
+                                <div class="col-10">
+                                    <h5>ORACLE JET</h5>
+                                    <P>Develop client-side applications with the powerful Oracle Jet
+                                        interacting with Oracle products and services, especially Oracle Cloud services.
+                                        </P>
+                                </div>
+                            </div>
+                            <div class="row" data-aos="fade-right">
+                                <div class="col-2">
+                                    <img src="https://res.cloudinary.com/alfredpison/image/upload/v1573053633/phone_iphone-24px_1_k9trnt.png"
+                                        width="50px" class="img-fluid">
+                                </div>
+                                <div class="col-10">
+                                    <h5>MOBILE</h5>
+                                    <P>Develop world class Mobile applications and optimize functionality and user experience on mobile devices.
+                                        </P>
+                                </div>
+                            </div>
+                            <div class="row" data-aos="fade-right">
+                                <div class="col-2">
                                     <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/dm_bxzzr2.png"
                                         width="50px" class="img-fluid">
                                 </div>
@@ -313,6 +336,10 @@
                                             <li>Javascript</li>
                                             <li>Bootstrap</li>
                                             <li>JQuery</li>
+                                            <li>Vue</li>
+                                            <li>ReactJs</li>
+                                            <li>Oracle JET</li>
+                                            <li>Angular</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -326,7 +353,6 @@
                                         <ul class="accordion_tab">
                                             <li>PHP</li>
                                             <li>Python</li>
-                                            <li>Ruby on Rails</li>
                                             <li>Node.js</li>
                                             <li>Laravel</li>
                                             <li>Apache</li>
@@ -367,6 +393,36 @@
                                             <li>Framer X</li>
                                             <li>UXPin</li>
                                             <li>Adobe Illustrator</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card" id="card2">
+                                    <h2 class="card-header">
+                                        <img
+                                            src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
+                                        <a> Oracle Jet </a>
+                                    </h2>
+                                    <div class="card-body">
+                                        <ul class="accordion_tab">
+                                            <li>Knockout JS</li>
+                                            <li>Require JS</li>
+                                            <li>Jquery</li>
+                                            <li>Cordova</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card" id="card2">
+                                    <h2 class="card-header">
+                                        <img
+                                            src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
+                                        <a> Mobile </a>
+                                    </h2>
+                                    <div class="card-body">
+                                        <ul class="accordion_tab">
+                                            <li>IOS</li>
+                                            <li>Andriod</li>
+                                            <li>Windows</li>
+                                            
                                         </ul>
                                     </div>
                                 </div>
@@ -591,5 +647,6 @@
     })
     }
 </script>
+<?php include('fragments/chat.php'); ?>
 </body>
 </html>

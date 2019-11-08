@@ -15,6 +15,8 @@
                     <a href="faq.php" class="skyblue-text">FAQ</a>
                     <a href="intern-experience.php" class="skyblue-text">Past Intern Experience</a>
                     <a href="request_certificate.php">Request Certificate</a>
+                   <!-- <a href="download_certificate.php">Download Certificate</a>-->
+
 
                 </div>
             </div>

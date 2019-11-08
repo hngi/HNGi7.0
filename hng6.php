@@ -84,7 +84,7 @@ $countDownValues = $countdown->getDate();
                             <h1 class="blue-text hng6">HNG 6.0 Internship</h1>
 
                             <p class="my-auto">
-                                The HNG 6.0 Internship commenced 23rd April, 2019 and ended 58th October, 2020. <br />
+                                The HNG 6.0 Internship commenced 23rd April, 2019 and ended 11th October, 2020. <br />
                                 <br /> A well-planned, coordinated event where young talented folks from across the globe
                                 participated remotely and were involved in learning
                                 key skills needed to becoming the best globally in programming, design thinking, machine
@@ -104,45 +104,75 @@ $countDownValues = $countdown->getDate();
                         </article>
                     </div>
                 </div>
-                
+
             </section>
 
             <section class="gallery">
                 <h2 class="blue-text"  data-aos="fade-up">How It All Happened</h2>
                 <section class="container">
                     <div class="gallery_items"  data-aos="fade-up">
-                        <img
-                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722558/gallery-first_gldujn.png">
-                        <img
-                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722589/gallery-second_nkrosi.png">
-                        <img
-                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722618/gallery-third_oqgaiv.png">
-                        <img
-                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722558/gallery-first_gldujn.png">
+                        <span>
                         <img
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722589/gallery-second_nkrosi.png">
+                          <p> A cross-section of the last meetup</p></span>
+                          <span>
                         <img
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722618/gallery-third_oqgaiv.png">
+                        <p> A cross-section of the last meetup</p></span>
+                        <span>
+                        <img
+                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722558/gallery-first_gldujn.png">
+                   <p> A cross-section of the last meetup</p></span>
+                   <span>
+                        <img
+                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722589/gallery-second_nkrosi.png">
+                    <p> Some of the HNG mentors & interns at the last meetup</p></span>
+                    <span>
+                        <img
+                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722618/gallery-third_oqgaiv.png">
+                            <p>Teaching sessions ongoing</p></span>
+                    <span>
+                        <img
+                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722618/gallery-third_oqgaiv.png">
+                            <p>Teaching sessions ongoing</p></span>
                     </div>
                     <div class="gallery_items" id="hidden_images"  data-aos="fade-up">
+                        <span>
                         <img
                             src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng1_rbfvik.jpg">
-                        <img
+                      <p> Some of the HNG interns at the last meetup</p></span>
+                      <span>
+                      <img
                             src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng2_rva54w.jpg">
+                         <p> Some of the HNG mentors at the last meetup</p></span>  
+                         <span>
                         <img
                             src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng3_blzemp.jpg">
+                       <p> Two of the female HNG mentors</p></span>
+                       <span>
                         <img
                             src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng4_tlrjyf.jpg">
+                       <p> Some of the HNG mentors at the last meetup</p></span>
+                       <span>
                         <img
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722618/gallery-third_oqgaiv.png">
+                  <p> Teaching sessions ongoing</p></span>
+                  <span>
                         <img
                             src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng5_qvzjfy.jpg">
+                    <p> Some of the HNG mentors & interns at the last meetup</p></span>
+                    <span>
                         <img
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722558/gallery-first_gldujn.png">
+                  <p> Panel sessions ongoing</p></span>
+                  <span>
                         <img
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722589/gallery-second_nkrosi.png">
+                  <p> Some of the HNG mentors & interns at the last meetup</p></span>
+                  <span>
                         <img
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722589/gallery-second_nkrosi.png">
+                  <p> Some of the HNG mentors & interns at the last meetup</p></span>
                     </div>
                 </section> <br>
                 <div  data-aos="fade-up">
@@ -220,7 +250,7 @@ $countDownValues = $countdown->getDate();
                     <a href="mentorpage.php" class="def-button shadowed">See all Mentors</a>
                 </div>
                 </div>
-                
+
             </section>
 
             <section id="slack-channels"  data-aos="fade-up">
@@ -286,11 +316,11 @@ $countDownValues = $countdown->getDate();
                         <a><img
                                 src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg"></a>
                     </div>
--->
+                -->
                 </div>
             </section>
         </main>
-       
+
     </section>
     <?php include('fragments/site_footer.php'); ?>
 
@@ -308,6 +338,8 @@ $countDownValues = $countdown->getDate();
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>
+
+    <?php include('fragments/chat.php'); ?>
 </body>
 <script type="text/javascript" src="js/hng6.js"></script>
     <script>
@@ -327,8 +359,8 @@ $countDownValues = $countdown->getDate();
                   view_btn.text("View more photos")
               }
           })
-         
-        
+
+
 
     </script>
 </html>

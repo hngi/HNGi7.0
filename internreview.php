@@ -19,6 +19,9 @@ if(isset($_GET['action']) && isset($_GET['id'])){
         case 'delete':
             $admin->deleteExperience($_GET['id']);
             break;
+        case 'hide':
+            $admin->hidex($_GET['id']);
+            break;
     }
 
     $_SESSION['msg'] = "<div class='alert alert-success'>Action performed successfully</div>";
@@ -109,6 +112,13 @@ if(isset($_GET["ApproveExperiences"])) {
             padding: 0;
             margin: 0;
         }
+
+        @media (max-width: 400px) {
+   .heading {
+    margin-top: 50px !important;
+    font-size: 18px !important;
+   }
+  }
     </style>
 
 
@@ -124,7 +134,7 @@ if(isset($_GET["ApproveExperiences"])) {
     }
     ?>
     <section id="overview-section">
-        <h1>INTERN REVIEWS</h1>
+        <h1 class="heading">INTERN REVIEWS</h1>
         <div class="register-container">
             <div class="row">
 
@@ -143,61 +153,58 @@ if(isset($_GET["ApproveExperiences"])) {
             </div>
             <br /><br />
             <div class="row" id="table-row">
-                <div class="table-responsive" id="printablediv">
-                    <table class="table table-hover mt-3 mb-1 table-condensed">
-                        <thead class="table-primary">
-                        <tr>
-                            <th>S/N</th>
-                            <th>Names</th>
-                            <th>Track</th>
-                            <th>Experience</th>
-                            <th>Status</th>
-                            <th colspan="2">Action</th>
-                        </tr>
-                        </thead>
-                        <tbody>
+              <div class="table-responsive" id="printablediv">
+                <table class="table table-hover mt-3 mb-1 table-condensed">
+                  <thead class="table-primary">
+                    <tr>
+                      <th>S/N</th>
+                      <th>Names</th>
+                      <th>Track</th>
+                      <th>Experience</th>
+                      <th>Status</th>
+                      <th colspan="2">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+            <?php
+            //echo $display;
+                //var_dump($display);
+                $n = 0;
+                foreach ($display as $item){
+                    ?>
+                    <tr>
+                      <td><?php echo ++$n;?></td>
+                      <td><?php echo $item['names']; ?></td>
+                      <td><?php echo $item['stack']; ?></td>
+                      <td>  <?php echo $item['experience']; ?>  </td>
+                      <td>
                         <?php
-                        //echo $display;
-                            //var_dump($display);
-                            $n = 0;
-                            foreach ($display as $item){
+                            if($item['status'] == 0){
                                 ?>
-                                <tr>
-                                    <td><?php echo ++$n;?></td>
-                                    <td>
-                                        <?php echo $item['names']; ?>
-                                    </td>
-                                    <td>
-                                        <?php echo $item['stack']; ?>
-                                    </td>
-
-                                    <td>
-                                        <?php echo $item['experience']; ?>
-                                    </td>
-
-                                    <td>
-                                        <?php echo $item['status'] == 1 ? "Approved" : "Pending"; ?>
-                                    </td>
-                                    <td>
-                                        <a href="edit_experience.php?id=<?php echo $item['id']; ?>" class="btn btn-sm btn-info">Edit</a>
-                                    </td>
-                                    <td>
-                                        <a href="?action=delete&id=<?php echo $item['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete the record?')">Delete</a>
-                                        <?php
-                                            if($item['status'] == 0){
-                                                ?>
-                                                <a onclick="return confirm('Are you sure you want to approve the experience?')" href="?action=approve&id=<?php echo $item['id']; ?>" class="btn btn-sm btn-info">Approve</a>
-                                                <?php
-                                            }
-                                        ?>
-                                    </td>
-                                </tr>
-                                <?php
+                                <a href="?action=approve&id=<?=$item['id'];?>" class="btn btn-primary btn-sm" style="margin-right: 5px;">Show</a>
+                                    <?php
+                            } else {
+                              ?>
+                              <a href="?action=hide&id=<?=$item['id'];?>" class="btn btn-success btn-sm" style="margin-right: 5px;">Hide</a>
+                              <?php
                             }
-                        ?>
-                        </tbody>
-                    </table>
-                </div>
+                            ?>
+
+                          </td>
+                        <td>
+                            <a href="edit_experience.php?id=<?php echo $item['id']; ?>" class="btn btn-sm btn-info">Edit</a>
+                        </td>
+                        <td>
+                            <a href="?action=delete&id=<?php echo $item['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete the record?')">Delete</a>
+
+                        </td>
+                    </tr>
+                    <?php
+                }
+            ?>
+                      </tbody>
+                  </table>
+              </div>
                 <?php
                 }
                 ?>

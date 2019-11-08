@@ -3,7 +3,21 @@
 
 class Mentor
 {
+  
 
+  public function showMentors(){
+
+    global $database;
+    $display = '';
+    $query = 'SELECT * FROM mentors WHERE status = 2 ORDER BY mentor_id ASC';
+    $res = $database->query($query);
+    $count = $database->affected_rows();
+    if ($count > 0) {
+
+      return $res;
+    }
+
+  }
 
   public function allMentors()
   {

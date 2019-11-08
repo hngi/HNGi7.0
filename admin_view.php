@@ -20,6 +20,7 @@ if (isset($_GET["editAdminId"])) {
 	<title>New Admin</title>
 	<link rel="icon" type="img/png" href="images/hng-favicon.png">
 	<link rel="stylesheet" href="css/dashboard.css">
+	<link rel="stylesheet" href="css/view-admin.css">
 
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
@@ -40,7 +41,13 @@ if (isset($_GET["editAdminId"])) {
 			padding: 10px;
 			border-radius: 15px;
 
-		}
+  }
+  
+  @media (max-width: 400px) {
+   .admin__details {
+    font-size: 25px !important;
+   }
+  }
 	</style>
 
 </head>
@@ -50,61 +57,58 @@ if (isset($_GET["editAdminId"])) {
         <!-- <h1>Dashboard</h1> -->
         <br><br>
 
-          <h2 style="padding-left:15px">Admin Details </h2>
+          <h2 class="col-12 text-center admin__details" style="padding-left:15px">Admin Details
+          <hr class="border__bottom">
+          </h2>
 
         <!-- <section id="intern-section">
             Populated by `js/dashboard.js`
         </section> -->
 
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-sm-12">
+        <div class="col-lg-12 details mt-5">
+<div class="container-fluid">
 
-                    <div class="row">
-                        <div class="col-md-4 col-sm-12">
-                            <h4>Fullname</h4>
-                        </div>
-                        <div class="col-md-6 col-sm-12">
-                            <h4><?php echo $res["firstname"] . ' ' . $res["lastname"]; ?></h4>
-                        </div>
-                    </div>
+ <div class="fullname">
+  <h4 class="contact">Full Name</h4>
+  <h4 class="contact__details">
+   <?php echo $res["firstname"] . ' ' . $res["lastname"]; ?>
+  </h4>
+  <hr class="horizontal__line">
+ </div>
 
-                    <div class="row">
-                        <div class="col-md-4 col-sm-12">
-                            <h4>Email</h4>
-                        </div>
-                        <div class="col-md-6 col-sm-12">
-                            <h4><?php echo $res["email"]; ?></h4>
-                        </div>
-                    </div>
+ <div class="email my-5">
+  <h4 class="contact">Email</h4>
+  <h4 class="contact__details">
+   <?php echo $res["email"]; ?>
+  </h4>
+  <hr class="horizontal__line">
+ </div>
 
-                    <div class="row">
-                        <div class="col-md-4 col-sm-12">
-                            <h4>Role</h4>
-                        </div>
-                        <div class="col-md-6 col-sm-12">
-                            <h4><?php if ($res["role"] == 1) {
-                                    echo "Super Admin";
-                                } else {
-                                    echo "Admin";
-                                } ?></h4>
-                        </div>
-                    </div>
+ <div class="role">
+  <h4 class="contact">Role</h4>
+  <h4 class="contact__details">
+   <?php if ($res["role"] == 1) {
+    echo "Super Admin";
+   } else {
+    echo "Admin";
+   } ?>
+  </h4>
+  <hr class="horizontal__line">
+ </div>
 
-                    <div class="row">
-                        <div class="col-md-4 col-sm-12">
-                            &nbsp;
-                        </div>
-                        <div class="col-md-6 col-sm-12">
-                            <a href="admins.php"><button class="btn btn-primary">All Admins</button></a>
-                            <!--  <a href="deleteAdmin.php?deleteAdminId=<?php echo $id; ?>"><button class="btn btn-danger">Delete</button></a> -->
-                        </div>
-                    </div>
+ <div class="admin__button">
+  
+  <a href="admins.php">
+   <button class="btn btn-lg btn-primary">All Admins</button>
+  </a>
+  <span class="ml-2 badge">
+    <?php echo $id; ?>
+  </span>
 
-                </div>
-            </div>
-        </div>
+ </div>
 
+</div>
+</div>
 
 		</section>
 		<!-- <section id="details-section">
