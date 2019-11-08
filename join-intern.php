@@ -5,7 +5,7 @@ require_once 'classControllers/init.php';
     $lockForm = new LockRegForm();
     $status = $lockForm->checkStatus();
     if (isset($_POST['submit'])) {
-      $error = '';
+      $res = '';
       $fullname = $database->escape_string($_POST['fullname']);
       $email = $database->escape_string($_POST['email']);
       $phoneNo = $database->escape_string($_POST['phoneNo']);
@@ -16,8 +16,14 @@ require_once 'classControllers/init.php';
       $about = $database->escape_string($_POST['about']);
       $date = $database->escape_string($_POST['date']);
       $interests=$database->escape_string($_POST['interest']);
-      $res = $intern->internSignup();
-      $request_mess = '<p style="text-align:center;">Application successful. Check your mail for registration message. Thank you!</a>';
+      $count = $intern->emailExists($email);
+      if($count === 0){
+        $res = $intern->internSignup();
+        $request_mess = '<p style="text-align:center;">Application successful. Check your mail for registration message. Thank you!</a>';
+      }else{
+        $res ="Email has been use by another user";
+      }
+     
      
 
     }
