@@ -4,7 +4,7 @@ require_once 'classControllers/init.php';
 
 
 if(!isset($_SESSION["role"])) {
-    header('Location:admin_login');
+    header('Location:login,php');
 }
 
 if(!isset($_GET['id'])){

@@ -1,7 +1,7 @@
 <?php
     require 'classControllers/init.php';
     if (!isset($_SESSION["role"])) {
-        header('Location:admin_login.php');
+        header('Location:login.php');
     }
     $interns = new Intern;
     $display = $interns->declinedInterns();
