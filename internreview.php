@@ -112,6 +112,13 @@ if(isset($_GET["ApproveExperiences"])) {
             padding: 0;
             margin: 0;
         }
+
+        @media (max-width: 400px) {
+   .heading {
+    margin-top: 50px !important;
+    font-size: 18px !important;
+   }
+  }
     </style>
 
 
@@ -127,7 +134,7 @@ if(isset($_GET["ApproveExperiences"])) {
     }
     ?>
     <section id="overview-section">
-        <h1>INTERN REVIEWS</h1>
+        <h1 class="heading">INTERN REVIEWS</h1>
         <div class="register-container">
             <div class="row">
 

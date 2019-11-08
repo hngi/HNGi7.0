@@ -54,13 +54,20 @@ if(!isset($_SESSION["role"])) {
 			font-weight: bolder;
 			font-size: 35px;
 		}
+
+  @media (max-width: 400px) {
+   .heading {
+    margin-top: 50px !important;
+    font-size: 18px !important;
+   }
+  }
 	</style>
 
 </head>
 <body>
 	<main>
 		<section id="overview-section">
-			<h1>Update Countdown Timer</h1>
+			<h1 class="heading">Update Countdown Timer</h1>
 			<div class="row" id="welcome">
 				<div class="col-md-9"><h2> </h2></div>
 				<div class="col-md-3">

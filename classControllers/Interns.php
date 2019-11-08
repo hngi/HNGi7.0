@@ -7,13 +7,9 @@ class Intern
     public function emailExists($email)
     {
         global $database;
-        $query = $database->query("SELECT * FROM interns WHERE email = '$email' ");
+        $query = $database->query("SELECT * FROM interns WHERE `email` = '$email' ");
         $count = mysqli_num_rows($query);
-        if ($count > 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return $count;
     }
 
 
@@ -32,17 +28,12 @@ class Intern
         $empStatus = $database->escape_string($_POST['empStatus']);
         $about = $database->escape_string($_POST['about']);
         $date = $database->escape_string($_POST['date']);
-        $check = $database->query("SELECT * FROM interns WHERE email = '$email' ");
-        $count = mysqli_num_rows($check);
-        if($count < 0){
-            $query = "INSERT INTO interns (name, email, phone_no, link_to_cv, interest, current_location, employment_status, about, timestamp)
-            VALUES('$fullname', ' $email', '$phoneNo', '$linkCV', '$interest', '$location', '$empStatus', '$about', '$date' )";
-            $res = $database->query($query);
-            $body = "Your registration as an intern on the HNGi7 platform is pendding for an approval kindly hold on, you will recieve an email within 24hrs about your registration status. Thank you";
-            sendInternMail($email, $fullname, $body); 
-        }else{
-            $res = "Email already exist";
-        }
+        $query = "INSERT INTO interns (`name`, `email`, `phone_no`, `link_to_cv`, `interest`, `current_location`, `employment_status`, `about`, `timestamp`)
+        VALUES('$fullname', '$email', '$phoneNo', '$linkCV', '$interest', '$location', '$empStatus', '$about', '$date' )";
+        $res = $database->query($query);
+        $body = "Your registration as an intern on the HNGi7 platform is pendding for an approval kindly hold on, you will recieve an email within 24hrs about your registration status. Thank you";
+        sendInternMail($email, $fullname, $body); 
+       
                
     }
 

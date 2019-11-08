@@ -50,14 +50,21 @@ $sent_messages = $inbox->inboxmessage($admin_id);
 		.card p{
 			font-weight: bolder;
 			font-size: 35px;
-		}
+  }
+  
+  @media (max-width: 400px) {
+   .heading {
+    margin-top: 50px !important;
+    font-size: 18px !important;
+   }
+  }
 	</style>
 
 </head>
 <body>
 	<main>
 		<section id="overview-section">
-			<h1>New Messages (Inbox)</h1>
+			<h1 class="heading">New Messages (Inbox)</h1>
 
             <hr>
 
