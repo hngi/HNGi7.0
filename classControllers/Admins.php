@@ -337,7 +337,16 @@ class Admins
   // Written by JohnEbri; 8/11/2019 9:30AM
   public function deleteProfilePic() {
     global $database;
-    
+    $query = "UPDATE admins SET hasPic = 0 WHERE admin_id = ".$_SESSION["admin_id"]."";
+    $res = $database->query($query);
+    $count = $database->affected_rows();
+    if($count > 0) {
+      // has pic value updated, delete pic from folder
+      header("Location:adminProfile.php?picDeleted");
+    } else {
+      // error
+      header("Location:adminProfile.php?deletePicFailed");
+    }
   }
   
 

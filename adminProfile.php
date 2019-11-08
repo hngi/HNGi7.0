@@ -47,7 +47,7 @@ if(isset($_POST["changePassword"])) {
 }
 
 if(isset($_POST["deleteProfilePicture"])) {
-    
+    $deletePicRes = $admin->deleteProfilePic();
 }
 
 ?>
@@ -329,7 +329,7 @@ if(isset($_POST["deleteProfilePicture"])) {
       <form method="post" enctype="multipart/form-data">
 
             <input type="button" class="btn btn-primary" id="submit" name="" value="No">
-            <input type="button" class="btn btn-danger" id="submit" name="deleteProfilePicture" value="Yes">
+            <input type="submit" class="btn btn-danger" id="submit" name="deleteProfilePicture" value="Yes">
 
         </form>
       </div>
