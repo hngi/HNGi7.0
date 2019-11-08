@@ -125,7 +125,7 @@ if (isset($_GET['editSponsorId'])) {
               <button type="submit" class="btn btn-primary" name="sponsor-update">Submit</button>
 
 
-              <a href="registered_sponsors.php" class="btn mb-4" style="background: gray; color:#fff;">cancle</a>
+              <a href="registered_sponsors.php" class="btn mb-4" style="background: gray; color:#fff;">cancel</a>
             </form>
           </div>
         </div>
