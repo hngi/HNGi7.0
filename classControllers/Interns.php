@@ -2,18 +2,14 @@
 class Intern
 {
 
-    
+
 
     public function emailExists($email)
     {
         global $database;
-        $query = $database->query("SELECT * FROM interns WHERE email = '$email' ");
+        $query = $database->query("SELECT * FROM interns WHERE `email` = '$email' ");
         $count = mysqli_num_rows($query);
-        if ($count > 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return $count;
     }
 
 
@@ -27,35 +23,18 @@ class Intern
         $email = $database->escape_string($_POST['email']);
         $phoneNo = $database->escape_string($_POST['phoneNo']);
         $linkCV = $database->escape_string($_POST['linkCV']);
-        $interests = $_POST['interest'];
-        if(is_array($interests)){
-            $interest = "";
-            foreach ($interests as $int){
-                $interest .= ", $int";
-            }
-            $interest = substr($interest, 1, strlen($interest) - 1); //Set interest
-            $interest = trim($interest);
-        }else{
-            $interest = $database->escape_string($_POST['interest']);
-        }
+        $interest = $database->escape_string($_POST['interest']);
         $location = $database->escape_string($_POST['location']);
         $empStatus = $database->escape_string($_POST['empStatus']);
         $about = $database->escape_string($_POST['about']);
         $date = $database->escape_string($_POST['date']);
-        $check = $database->query("SELECT * FROM interns WHERE email = '$email' ");
-        //$count = mysqli_num_rows($check);
-        $count = $check->num_rows;
+        $query = "INSERT INTO interns (`name`, `email`, `phone_no`, `link_to_cv`, `interest`, `current_location`, `employment_status`, `about`, `timestamp`)
+        VALUES('$fullname', '$email', '$phoneNo', '$linkCV', '$interest', '$location', '$empStatus', '$about', '$date' )";
+        $res = $database->query($query);
+        $body = "Your registration as an intern on the HNGi7 platform is pendding for an approval kindly hold on, you will recieve an email within 24hrs about your registration status. Thank you";
+        sendInternMail($email, $fullname, $body);
 
-        if($count <= 0){
-            $query = "INSERT INTO interns (name, email, phone_no, link_to_cv, interest, current_location, employment_status, about, timestamp)
-            VALUES('$fullname', '$email', '$phoneNo', '$linkCV', '$interest', '$location', '$empStatus', '$about', '$date' )";
-            $res = $database->query($query);
-            $body = "Your registration as an intern on the HNGi7 platform is pending for an approval kindly hold on, you will receive an email within 24hrs about your registration status. Thank you";
-            sendInternMail($email, $fullname, $body); 
-        }else{
-            $res = "Email already exist";
-        }
-               
+
     }
 
     public function allInterns()
@@ -237,35 +216,35 @@ class Intern
         $res = $database->query($query);
         $count = $database->affected_rows();
         if($count > 0) {
-          // admin exists
-          $row = mysqli_fetch_assoc($res);
+            // admin exists
+            $row = mysqli_fetch_assoc($res);
 
-          $data["name"] = $row["name"];
-          $data["email"] = $row["email"];
-          $data["phone"] = $row["phone_no"];
+            $data["name"] = $row["name"];
+            $data["email"] = $row["email"];
+            $data["phone"] = $row["phone_no"];
 
-          return $data;
+            return $data;
         } else {
-          // no admin found
-          return 0;
+            // no admin found
+            return 0;
         }
-      }
+    }
 
-      public function deleteIntern($id) {
+    public function deleteIntern($id) {
         global $database;
         $query = "DELETE FROM interns WHERE intern_id = ".$id."";
         $res = $database->query($query);
         $count = $database->affected_rows();
         if($count > 0) {
-          // deleted
-          return true;
+            // deleted
+            return true;
         } else {
-          // failed
-          return false;
+            // failed
+            return false;
         }
-      }
+    }
 
-      public function RejectIntern($intern_id) {
+    public function RejectIntern($intern_id) {
         global $database;
         $query = "UPDATE interns SET status = 1 WHERE intern_id = '$intern_id'";
         $query2 = $database->query("SELECT * FROM interns WHERE intern_id = '$intern_id' ");
@@ -277,17 +256,17 @@ class Intern
         if($count > 0) {
             $body = "Your registration as an intern on the HNG 7.0 internship has been disapproved. Thank you";
             rejectInternMail($email, $fullname, $body);
-          // updated
-         // $reject_message = 'Intern Rejected Successfully.';
-          //return $message;
-          header('Location: registered_interns.php');
+            // updated
+            // $reject_message = 'Intern Rejected Successfully.';
+            //return $message;
+            header('Location: registered_interns.php');
         } else {
-          // failed
-          return false;
+            // failed
+            return false;
         }
-      }
+    }
 
-      public function AcceptIntern($intern_id) {
+    public function AcceptIntern($intern_id) {
         global $database;
         $query = "UPDATE interns SET status = 2 WHERE intern_id = '$intern_id'";
         $query2 = $database->query("SELECT * FROM interns WHERE intern_id = '$intern_id' ");
@@ -299,22 +278,22 @@ class Intern
         if($count > 0) {
             $body = "Your registration as an intern on the HNG 7.0 platform has been approved . Thank you";
             acceptInternMail($email, $fullname, $body);
-          // updated
-          $accept_message = "Intern Accepted successfully.";
-          //return $message;
-         header('Location: registered_interns.php');
+            // updated
+            $accept_message = "Intern Accepted successfully.";
+            //return $message;
+            header('Location: registered_interns.php');
         } else {
-          // failed
-          return false;
+            // failed
+            return false;
         }
-      }
+    }
 
-      // get pending interns : written by John Ebri. Date : 1/11/2019 6:02PM
-      public function getPendingInterns() {
-          global $database;
-          $query = "SELECT * FROM interns WHERE status = 0";
-          $res = $database->query($query);
-          $count = $database->affected_rows();
-          return $count;
-      }
+    // get pending interns : written by John Ebri. Date : 1/11/2019 6:02PM
+    public function getPendingInterns() {
+        global $database;
+        $query = "SELECT * FROM interns WHERE status = 0";
+        $res = $database->query($query);
+        $count = $database->affected_rows();
+        return $count;
+    }
 }

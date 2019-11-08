@@ -84,11 +84,12 @@ $mentors = $mentor->showMentors();
                                         class="fab fa-facebook"></i></a></li>
                             <?php
                 
-                                $skills_array = explode('|', $ment['area_of_expertise']);   
+                                $skills_array = explode('|', $ment['area_of_expertise']);
+                                empty($ment['link_to_github'])? $portfolio_link = $ment['dribble_link'] : $portfolio_link = $ment['link_to_github'];
 
                             ?>
-                            <li class="list-inline-item"><a href="<?= $ment['link_to_portfolio'] ;  ?>" class="social-link s-link<?= $counter ;?>"><i
-                                        class="fab fa-<?=((in_array(' UI/UX Design', $skills_array, true))? 'dribbble': 'github');?>"></i></a>
+                            <li class="list-inline-item"><a href="<?= $portfolio_link;  ?>" class="social-link s-link<?= $counter ;?>"><i
+                                        class="fab fa-<?=((in_array('UI/UX-Design', $skills_array, true))? 'dribbble': 'github');?>"></i></a>
                             </li>
                         </ul>
                     </div>

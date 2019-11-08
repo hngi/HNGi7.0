@@ -17,7 +17,7 @@ if (isset($_GET['editSponsorId'])) {
     $resp = $sponsor->updateSponsor();
     if ($resp) {
       header("location: registered_sponsors.php");
-      $_SESSION['success'] = "<h3 class='alert alert-success'>Sponsor was updated succefully</h3>";
+      $_SESSION['success'] = "<h6 class='alert alert-success mt-3'>Sponsor was updated succefully</h6>";
     } else {
       $errors[] = "Upload not successful";
     }
