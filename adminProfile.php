@@ -39,10 +39,15 @@ if(isset($_POST["uploadPicture"])) {
     }
 }
 
-
-
+if(isset($_POST["changePassword"])) {
+    $oldPassword = $_POST["oldPassword"];
+    $newPassword = $_POST["newPassword"];
+    $confirmNewPassword = $_POST["confirmNewPassword"];
+    $changePasswordResult = $admin->changePassword($oldPassword, $newPassword, $confirmNewPassword);
+}
 
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -140,9 +145,69 @@ if(isset($_POST["uploadPicture"])) {
                         </div>
 
                         <input type="submit" class="btn btn-success" id="submit" name="update" value="Save Changes">
-
-
                     </form>
+
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="container">
+                            <div class="col-md-6">
+                            <?php
+
+                                if(isset($_GET["shortPassword"])) {
+                                    echo '
+                                    <div class="alert alert-danger">
+                                        <strong>Error! </strong> Your password must have at least 6 characters
+                                    </div>';
+                                }
+
+                                if(isset($_GET["passwordUpdated"])) {
+                                    echo '
+                                    <div class="alert alert-success">
+                                        <strong>Done! </strong> You have successfully updated your password
+                                    </div>';
+                                }
+
+                                if(isset($_GET["passwordUpdateFailed"])) {
+                                    echo '
+                                    <div class="alert alert-danger">
+                                        <strong>Error! </strong> Password Update Failed. Please try again
+                                    </div>';
+                                }
+
+                                if(isset($_GET["matchError"])) {
+                                    echo '
+                                    <div class="alert alert-danger">
+                                        <strong>Error! </strong> Your new passwords do not match
+                                    </div>';
+                                }
+
+                                if(isset($_GET["wrongPassword"])) {
+                                    echo '
+                                    <div class="alert alert-danger">
+                                        <strong>Error! </strong> No account found with the password you entered
+                                    </div>';
+                                }
+
+                            ?>
+
+                            <h3>Change Password</h3>
+                                <form method="post">
+                                    <div class="form-group">
+                                        <label for="">Old Password </label>
+                                        <input type="password" name="oldPassword" id="fname" required class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">New Password </label>
+                                        <input type="password" name="newPassword" id="name" required class="form-control" minlength=6>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Confirm New Password </label>
+                                        <input type="password" name="confirmNewPassword" id="email" required  class="form-control">
+                                    </div>
+                                    <input type="submit" class="btn btn-success" id="submit" name="changePassword" value="Change Password">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
 
@@ -171,7 +236,7 @@ if(isset($_POST["uploadPicture"])) {
                                 echo '<img src="adminProfilePics/default.jpg" />';
                             } else {
                                 // admin has picture
-                                echo '<img src="adminProfilePics/'.$adminId.'.jpg" class="img-circle img-responsive" />';
+                                echo '<img src="adminProfilePics/'.$adminId.'.jpg" class="img-circle img-responsive" style="height: 200px; width: 200px;"/>';
                             }
                         ?>
 
