@@ -1,20 +1,5 @@
 <?php
-require_once "classControllers/init.php";
-$request = new Certificate;
 
-if (isset($_POST["certificate-btn"])) {
-  $error = '';
-  $request->name = $_POST["name"];
-  $request->email = $_POST["email"];
-  $request->slack_username = $_POST["slack_username"];
-  $request->year = $_POST["year"];
-  if (empty($_POST["name"]) || empty($_POST["email"]) || empty($_POST["slack_username"]) || empty($_POST["year"])) {
-    $error = "All feild are required";
-  }else {
-   
-  }
-  
-}
 
 
 ?>
@@ -50,11 +35,11 @@ if (isset($_POST["certificate-btn"])) {
 
   <main class="main">
     <div class="container  pb-5">
-      <form class="main-form" method="post">
+      <form class="main-form" method="post" action="generate_pdf.php">
         <small class="please-note text-center mb-5 ">Kindly note that this Certificate will be issued to only those who completed the
           program.</small>
         <?php
-        
+
         ?>
         <div id="">
           <?php
@@ -64,37 +49,39 @@ if (isset($_POST["certificate-btn"])) {
           if (!empty($error)) {
             echo "<h4 style='text-align:center; color: red;'>$error</h4>";
           }
-         
+
           ?>
         </div>
-          <div class="form-group ">
-            <div class="mx-auto row">
-              <label class="mx-auto col-md-8 pl-0" for="name">Your Full Name</label>
-            </div>
-            <div class="mx-auto row">
-              <input type="text" class=" mx-auto col-md-8 form-control" placeholder="Enter your Name"  required name="name" id="name">
-            </div>
+        <!-- <div class="form-group ">
+          <div class="mx-auto row">
+            <label class="mx-auto col-md-8 pl-0" for="name">Your Full Name</label>
           </div>
-
-          <div class="form-group ">
-            <div class="mx-auto row">
-              <label class="mx-auto col-md-8 pl-0" for="email">Your Email</label>
-            </div>
-            <div class="mx-auto row">
-              <input type="email" class=" mx-auto col-md-8 form-control" placeholder="Enter your email address" required name="email" id="email">
-            </div>
+          <div class="mx-auto row">
+            <input type="text" class=" mx-auto col-md-8 form-control" placeholder="Enter your Name" required name="name" id="name">
           </div>
+        </div> -->
 
-          <div class="form-group ">
-            <div class="mx-auto row">
-              <label class="mx-auto col-md-8 pl-0" for="text">Slack username</label>
-            </div>
-            <div class="mx-auto row">
-              <input type="text" class=" mx-auto col-md-8 form-control" placeholder="Enter your Slack username" required name="slack_username" id="name">
-            </div>
+        <!-- <div class="form-group ">
+          <div class="mx-auto row">
+            <label class="mx-auto col-md-8 pl-0" for="email">Your Email</label>
           </div>
+          <div class="mx-auto row">
+            <input type="email" class=" mx-auto col-md-8 form-control" placeholder="Enter your email address" required name="email" id="email">
+          </div>
+        </div> -->
 
-          <input type="submit" class="btn submit-btn px-5 mt-4 mx-auto" value="Submit" name="certificate-btn">
+        <!-- <div class="form-group ">
+          <div class="mx-auto row">
+            <label class="mx-auto col-md-8 pl-0" for="text">Slack username</label>
+          </div>
+          <div class="mx-auto row">
+            <input type="text" class=" mx-auto col-md-8 form-control" placeholder="Enter your Slack username" required name="slack_username" id="name">
+          </div>
+        </div> -->
+
+        <!-- <input type="submit" class="btn submit-btn px-5 mt-4 mx-auto" value="Submit" name="certificate-btn"> -->
+        <button type="submit" id="pdf" name="generate_pdf" class="btn submit-btn px-5 mt-4 mx-auto"><i class="fa fa-pdf" aria-hidden=" true"></i>
+          Generate PDF</button>
 
       </form>
     </div>
