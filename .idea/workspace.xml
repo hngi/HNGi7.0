@@ -1,46 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3340ae33-6e59-49ef-aaf7-8ef2d89eda61" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MentorSetUpPage2.php" beforeDir="false" afterPath="$PROJECT_DIR$/MentorSetUpPage2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminProfile.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminProfile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminProfilePics/81.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/adminProfilePics/81.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_inbox.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_inbox.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_outbox.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_outbox.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admins.php" beforeDir="false" afterPath="$PROJECT_DIR$/admins.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classControllers/Admins.php" beforeDir="false" afterPath="$PROJECT_DIR$/classControllers/Admins.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classControllers/Interns.php" beforeDir="false" afterPath="$PROJECT_DIR$/classControllers/Interns.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classControllers/certificate.php" beforeDir="false" afterPath="$PROJECT_DIR$/classControllers/certificate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classControllers/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/classControllers/init.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classControllers/mentor.php" beforeDir="false" afterPath="$PROJECT_DIR$/classControllers/mentor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/compose_message.php" beforeDir="false" afterPath="$PROJECT_DIR$/compose_message.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/g-callback.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/declined_interns.php" beforeDir="false" afterPath="$PROJECT_DIR$/declined_interns.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/declined_mentors.php" beforeDir="false" afterPath="$PROJECT_DIR$/declined_mentors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delete_newsletter.php" beforeDir="false" afterPath="$PROJECT_DIR$/delete_newsletter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/donate.php" beforeDir="false" afterPath="$PROJECT_DIR$/donate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/download_certificate.php" beforeDir="false" afterPath="$PROJECT_DIR$/download_certificate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edit_sponsor.php" beforeDir="false" afterPath="$PROJECT_DIR$/edit_sponsor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finished_request.php" beforeDir="false" afterPath="$PROJECT_DIR$/finished_request.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internreview.php" beforeDir="false" afterPath="$PROJECT_DIR$/internreview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/join-intern.php" beforeDir="false" afterPath="$PROJECT_DIR$/join-intern.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mentorpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/mentorpage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/news_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newsletter_history.php" beforeDir="false" afterPath="$PROJECT_DIR$/newsletter_history.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pending_interns.php" beforeDir="false" afterPath="$PROJECT_DIR$/pending_interns.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pending_mentors.php" beforeDir="false" afterPath="$PROJECT_DIR$/pending_mentors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pending_request.php" beforeDir="false" afterPath="$PROJECT_DIR$/pending_request.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/processing_request.php" beforeDir="false" afterPath="$PROJECT_DIR$/processing_request.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registered_interns.php" beforeDir="false" afterPath="$PROJECT_DIR$/registered_interns.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registered_mentors.php" beforeDir="false" afterPath="$PROJECT_DIR$/registered_mentors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registered_sponsors.php" beforeDir="false" afterPath="$PROJECT_DIR$/registered_sponsors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/request_certificate.php" beforeDir="false" afterPath="$PROJECT_DIR$/request_certificate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/updateCountdown.php" beforeDir="false" afterPath="$PROJECT_DIR$/updateCountdown.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view_message.php" beforeDir="false" afterPath="$PROJECT_DIR$/view_message.php" afterDir="false" />
-    </list>
+    <list default="true" id="3340ae33-6e59-49ef-aaf7-8ef2d89eda61" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +19,7 @@
           <entry key="gitignore" value="4" />
           <entry key="html" value="1" />
           <entry key="js" value="3" />
-          <entry key="php" value="19" />
+          <entry key="php" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -66,7 +27,7 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="1" />
           <entry key="JavaScript" value="3" />
-          <entry key="PHP" value="19" />
+          <entry key="PHP" value="20" />
           <entry key="PLAIN_TEXT" value="4" />
         </counts>
       </usages-collector>
@@ -75,14 +36,14 @@
           <entry key="css" value="43" />
           <entry key="gitignore" value="51" />
           <entry key="js" value="32" />
-          <entry key="php" value="2133" />
+          <entry key="php" value="2151" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="43" />
           <entry key="JavaScript" value="32" />
-          <entry key="PHP" value="2133" />
+          <entry key="PHP" value="2151" />
           <entry key="PLAIN_TEXT" value="51" />
         </counts>
       </usages-collector>
@@ -104,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/join-intern.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="207" column="7" selection-start-line="207" selection-start-column="7" selection-end-line="207" selection-end-column="7" />
+            <state relative-caret-position="124">
+              <caret line="199" lean-forward="true" selection-start-line="199" selection-end-line="199" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h4#0;n#center#0;n#!!top" expanded="true" />
@@ -116,11 +77,20 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/registered_interns.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classControllers/Interns.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="299" lean-forward="true" selection-start-line="299" selection-end-line="299" />
+            <state relative-caret-position="201">
+              <caret line="66" column="108" selection-start-line="66" selection-start-column="108" selection-end-line="66" selection-end-column="108" />
               <folding>
                 <element signature="e#756#762#1" expanded="true" />
               </folding>
@@ -264,17 +234,17 @@
       <workItem from="1573056368276" duration="3051000" />
       <workItem from="1573131028208" duration="760000" />
       <workItem from="1573136350258" duration="499000" />
-      <workItem from="1573199257455" duration="5429000" />
+      <workItem from="1573199257455" duration="5674000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21502000" />
+    <option name="totallyTimeSpent" value="21747000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26399395" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26399395" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -287,7 +257,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.37308347" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.37308347" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="RNConsole" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -442,8 +412,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/join-intern.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="207" column="7" selection-start-line="207" selection-start-column="7" selection-end-line="207" selection-end-column="7" />
+        <state relative-caret-position="124">
+          <caret line="199" lean-forward="true" selection-start-line="199" selection-end-line="199" />
           <folding>
             <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h4#0;n#center#0;n#!!top" expanded="true" />
@@ -453,10 +423,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/registered_interns.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/classControllers/Interns.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="299" lean-forward="true" selection-start-line="299" selection-end-line="299" />
+        <state relative-caret-position="201">
+          <caret line="66" column="108" selection-start-line="66" selection-start-column="108" selection-end-line="66" selection-end-column="108" />
           <folding>
             <element signature="e#756#762#1" expanded="true" />
           </folding>
