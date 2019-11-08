@@ -10,12 +10,12 @@ if (isset($_POST['submit'])) {
     $email = $database->escape_string($_POST['email']);
     $phoneNo = $database->escape_string($_POST['phoneNo']);
     $linkCV = $database->escape_string($_POST['linkCV']);
-    $interest = $database->escape_string($_POST['interest']);
+    //$interest = $database->escape_string($_POST['interest']);
     $location = $database->escape_string($_POST['location']);
     $empStatus = $database->escape_string($_POST['empStatus']);
     $about = $database->escape_string($_POST['about']);
     $date = $database->escape_string($_POST['date']);
-    $interests=$database->escape_string($_POST['interest']);
+    //$interests=$database->escape_string($_POST['interest']);
     $count = $intern->emailExists($email);
     if($count === 0){
         $res = $intern->internSignup();
@@ -117,7 +117,7 @@ if (isset($_POST['submit'])) {
                 <input type="email" name="email" id="email" required placeholder="E-mail Address" />
                 <input type="text" name="phoneNo" id="phoneNo" required placeholder="Phone Number" />
                 <input type="url" name="linkCV" id="linkCV" required placeholder="Link to your CV (LinkedIn Profile or any other link)" />
-                <select multiple class="interest" name="interest" multiple>
+                <select class="interest" name="interest[]" multiple>
                     <option value="" disabled selected hidden>What area are you interested in?</option>
                     <option value="Backend">Backend</option>
                     <option value="DevOps">DevOps</option>
@@ -130,8 +130,8 @@ if (isset($_POST['submit'])) {
 
                 <!--<input type="text" name="location" id="location" required placeholder="What state are you currently located in?" />-->
                 <select name="location" id="location" required>
-                    <option value="state">What state are you currently located? </option>
-                    <option value="india">Federal Capital Territory</option>
+                    <option value="">What state are you currently located? </option>
+                    <option>Federal Capital Territory</option>
                     <option value="Abia">Abia</option>
                     <option value="Adamawa">Adamawa</option>
                     <option value="Akwa Ibom">Akwa Ibom</option>

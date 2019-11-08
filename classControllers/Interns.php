@@ -23,11 +23,21 @@ class Intern
         $email = $database->escape_string($_POST['email']);
         $phoneNo = $database->escape_string($_POST['phoneNo']);
         $linkCV = $database->escape_string($_POST['linkCV']);
-        $interest = $database->escape_string($_POST['interest']);
+        //$interest = $database->escape_string($_POST['interest']);
         $location = $database->escape_string($_POST['location']);
         $empStatus = $database->escape_string($_POST['empStatus']);
         $about = $database->escape_string($_POST['about']);
         $date = $database->escape_string($_POST['date']);
+
+        $interests = $_POST['interest'];
+
+        $int = "";
+        foreach ($interests as $interest){
+            $int .= ", $interest";
+        }
+
+        $interest = substr($int, 1, strlen($int));
+        $interest = trim($interest);
         $query = "INSERT INTO interns (`name`, `email`, `phone_no`, `link_to_cv`, `interest`, `current_location`, `employment_status`, `about`, `timestamp`)
         VALUES('$fullname', '$email', '$phoneNo', '$linkCV', '$interest', '$location', '$empStatus', '$about', '$date' )";
         $res = $database->query($query);
@@ -295,5 +305,21 @@ class Intern
         $res = $database->query($query);
         $count = $database->affected_rows();
         return $count;
+    }
+
+    //function to update interns : Written by @Hollyphat. Date: 8/11/2019 1:40PM
+    public function updateInterns($id, $data){
+        global $database;
+
+        $set = "";
+
+        foreach ($data as $item => $value){
+            $set .= "`$item` = '$value', ";
+        }
+
+        $set = trim($set);
+        $set = substr($set, 0, strlen($set) - 1);
+        $sql = "UPDATE interns SET $set WHERE intern_id = '$id' ";
+        $database->query("$sql");
     }
 }

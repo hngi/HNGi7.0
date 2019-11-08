@@ -14,9 +14,12 @@ if(!isset($_GET['id'])){
 
 $id = $_GET['id'];
 
-$admin = new InternExperience();
+$intern = new Intern();
 
-if(isset($_POST['ok'])){
+$the_intern = $intern->view($id);
+
+
+/*if(isset($_POST['ok'])){
     $names = $database->escape_string($_POST["names"]);
     $stack = $database->escape_string($_POST["stack"]);
     $experience = $database->escape_string($_POST['experience']);
@@ -29,7 +32,7 @@ if(isset($_POST['ok'])){
 }
 
 $the_experience = $admin->fetchSingleExperience($id);
-
+*/
 
 ?>
 <!DOCTYPE html>
@@ -38,7 +41,7 @@ $the_experience = $admin->fetchSingleExperience($id);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Dashboard</title>
+    <title>Edit Intern</title>
 
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
     <link rel="stylesheet" href="css/dashboard.css">
@@ -85,7 +88,7 @@ $the_experience = $admin->fetchSingleExperience($id);
     }
     ?>
     <section id="overview-section">
-        <h1>EDIT EXPERIENCES</h1>
+        <h1>Edit Intern</h1>
         <div class="register-container">
             <div class="row">
 
@@ -106,32 +109,96 @@ $the_experience = $admin->fetchSingleExperience($id);
                     <form action="" method="post" role="form" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="name">Full name</label>
-                            <input type="text" name="names" value="<?php echo $the_experience['names'];?>" class="form-control" required placeholder="Full Name" id="name">
+                            <input type="text" name="name" value="<?php echo $the_intern['name'];?>" class="form-control" required placeholder="Full Name" id="name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Phone Number</label>
+                            <input class="form-control" value="<?php echo $the_intern['phone_no'];?>" type="text" name="phone_no" id="phoneNo" required placeholder="Phone Number" />
                         </div>
                         <div class="form-group">
-                            <label for="stack">Stack</label>
+                            <label for="linkCV">Link to CV</label>
+                            <input type="url" name="link_to_cv" id="linkCV" required placeholder="Link to your CV (LinkedIn Profile or any other link)" class="form-control" value="<?php echo $the_intern['link_to_cv'];?>" />
+                        </div>
 
-                            <select class="interest form-control" name="stack" id="stack" required multiple>
-                              <option value="" disabled selected hidden>Your Stack</option>
-                              <option value="Backend">Backend</option>
-                              <option value="DevOps">DevOps</option>
-                              <option value="Digital Marketing">Digital Marketing</option>
-                              <option value="Frontend">Frontend</option>
-                              <option value="Machine Learning">Machine Learning</option>
-                              <option value="Mobile Development">Mobile Development</option>
-                              <option value="UI/UX Design">UI/UX Design</option>
+                        <div class="form-group">
+                            <label for="interest">Area of Interest</label>
+                            <select multiple class="interest form-control" name="interest[]">
+                                <option value="Backend">Backend</option>
+                                <option value="DevOps">DevOps</option>
+                                <option value="Digital Marketing">Digital Marketing</option>
+                                <option value="Frontend">Frontend</option>
+                                <option value="Machine Learning">Machine Learning</option>
+                                <option value="Mobile Development">Mobile Development</option>
+                                <option value="UI/UX Design">UI/UX Design</option>
                             </select>
                         </div>
 
-
-
                         <div class="form-group">
-                            <label for="exp">Your Experience</label>
-                            <textarea name="experience" class="form-control" required placeholder="Your Experience" id="exp" maxlength="300"><?php echo $the_experience['experience'];?></textarea>
+                            <label for="location">Current Location</label>
+                            <select class="form-control" name="current_location" id="location" required>
+                                <option><?php echo $the_intern['current_location'];?></option>
+                            <option>Federal Capital Territory</option>
+                            <option value="Abia">Abia</option>
+                            <option value="Adamawa">Adamawa</option>
+                            <option value="Akwa Ibom">Akwa Ibom</option>
+                            <option value="Anambra">Anambra</option>
+                            <option value="Bauchi">Bauchi</option>
+                            <option value="Bayelsa">Bayelsa</option>
+                            <option value="Benue">Benue</option>
+                            <option value="Borno">Borno</option>
+                            <option value="Cross River">Cross River</option>
+                            <option value="Delta">Delta</option>
+                            <option value="Ebonyi">Ebonyi</option>
+                            <option value="Edo">Edo</option>
+                            <option value="Ekiti">Ekiti</option>
+                            <option value="Enugu">Enugu</option>
+                            <option value="Gombe">Gombe</option>
+                            <option value="Imo">Imo</option>
+                            <option value="Jigawa">Jigawa</option>
+                            <option value="Kaduna">Kaduna</option>
+                            <option value="Kano">Kano</option>
+                            <option value="Katsina">Katsina</option>
+                            <option value="Kebbi">Kebbi</option>
+                            <option value="Kogi">Kogi</option>
+                            <option value="Kwara">Kwara</option>
+                            <option value="Lagos">Lagos</option>
+                            <option value="Nasarawa">Nasarawa</option>
+                            <option value="Niger">Niger</option>
+                            <option value="Ogun">Ogun</option>
+                            <option value="Ondo">Ondo</option>
+                            <option value="Osun">Osun</option>
+                            <option value="Oyo">Oyo</option>
+                            <option value="Borno">Borno</option>
+                            <option value="Plateau">Plateau</option>
+                            <option value="Rivers">Rivers</option>
+                            <option value="Sokoto">Sokoto</option>
+                            <option value="Taraba">Taraba</option>
+                            <option value="Yobe">Yobe</option>
+                            <option value="Zamfara">Zamfara</option>
+                        </select>
                         </div>
 
                         <div class="form-group">
-                            <input type="submit" name="ok" class="btn btn-success" value="Update Experience">
+                            <label for="empStatus">Employment Status</label>
+                            <select name="employment_status" id="empStatus" class="empStatus form-control" required>
+                                <option><?php echo $the_intern['employment_status'];?></option>
+
+                                <option value="Recently Employed (3 months or less)">Recently Employed (3 months or less)</option>
+                                <option value="Employee">Employee</option>
+                                <option value="Self-employed">Self-employed</option>
+                                <option value="Freelance">Freelance</option>
+                                <option value="Unemployed">Unemployed</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="about">About</label>
+                        <textarea name="about" id="about" required cols="30" rows="10" placeholder="Briefly tell us about yourself" class="form-control"><?php echo $the_intern['about'];?></textarea>
+                        </div>
+
+
+                        <div class="form-group">
+                            <input type="submit" name="ok" class="btn btn-success" value="Update Intern">
                         </div>
                     </form>
                 </div>
