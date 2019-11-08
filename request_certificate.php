@@ -2,6 +2,7 @@
 require_once "classControllers/init.php";
 $request = new Certificate;
 
+
 if (isset($_POST["certificate-btn"])) {
   $error = '';
   $request->name = $_POST["name"];
@@ -11,8 +12,11 @@ if (isset($_POST["certificate-btn"])) {
   if (empty($_POST["name"]) || empty($_POST["email"]) || empty($_POST["slack_username"]) || empty($_POST["year"])) {
     $error = "All feild are required";
   }else {
-    $resp = $request->requestCertificate();
-    $request_mess = '<p style="text-align:center;">Application successful. You will be informed when your certificate is ready. Thank you!</a>';
+    
+      $resp = $request->requestCertificate();
+      $request_mess = '<p style="text-align:center;">Application successful. You will be informed when your certificate is ready. Thank you!</a>';
+    
+   
     
   }
   

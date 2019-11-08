@@ -101,8 +101,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $mentor->current_state = $database->escape_string($_POST['state']);
       $mentor->employment_status = $database->escape_string($_POST['employment_status']);
       $mentor->timestamp = strftime("%Y-%m-%d %H:%M:%S", time());
-      $mentor->employment_status = $database->escape_string($_POST['fb_url']);
-      $mentor->employment_status = $database->escape_string($_POST['twitter_url']);
+      $mentor->fb_url = $database->escape_string($_POST['fb_url']);
+      $mentor->twitter_url = $database->escape_string($_POST['twitter_url']);
 
       if ($mentor->Apply_mentor()) {
        mailMentor($mentor->email, $mentor->name);
@@ -306,7 +306,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         ?>
        <option value="state">What state are you currently in? </option>
-     <option value="india">Federal Capital Territory</option>
+     <option value="FCT">Federal Capital Territory</option>
       <option value="Abia">Abia</option>
       <option value="Adamawa">Adamawa</option> 
       <option value="Akwa Ibom">Akwa Ibom</option>
@@ -351,7 +351,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
        <select name="employment_status" type="text" class="form-control mt-2" id="validationCustom10" placeholder="What is your current employment status?" required value="<?php if (isset($_POST['employment_status'])) {
                                                                                                                                                                             echo $_POST['employment_status'];
                                                                                                                                                                            } ?>" maxlength="15">
-                                                                                                                                                                           <option value="Employee">Employee</option>
+                                                                                                                                                                           <option value="Employee">Employed</option>
                                                                                                                                                                            <option value="Self-employed">Self-employed</option>
                                                                                                                                                                            <option value="Freelance">Freelance</option>
                                                                                                                                                                            <option value="Unemployed">Unemployed</option>                                                                                 </select></div>

@@ -13,6 +13,18 @@ class Certificate
     public $id;
     public $status = "pending";
 
+
+    public function confirmEmail($email){
+      global $database;
+      $email = $database->escape_string($this->email);
+      $query = $database->query("SELECT * FROM interns WHERE email = '$email' ");
+      $count = mysqli_num_rows($query);
+      if ($count > 0) {
+        return $count;
+      }
+     
+    }
+
     public function requestCertificate(){
       global $database;
       $error = [];
@@ -52,7 +64,7 @@ class Certificate
               <td>$year</td>
               <td>$file</td>
                <td>
-              <a href='pending_request.php?pendingId=$certificate_id' class='btn btn-warning btn-sm'>$status</a>
+              <a href='pending_request.php?pendingId=$certificate_id' class='btn btn-warning btn-sm'>Awaiting Response</a>
               </td>
             
               
@@ -182,22 +194,16 @@ class Certificate
     global $database;
     if (isset($_GET['processingId'])) {
       $id = $database->escape_string($_GET['processingId']);
-
-      $query = $database->query("UPDATE " . self::$database_table . " SET status = 'processed' WHERE id = '$id' ");
-      $query2 = $database->query("SELECT * FROM  ". self::$database_table . " WHERE id = '$id' ");
-      $res = $database->query($query);
-      $row = mysqli_fetch_array($query2);
-      $fullname = $row['name'];
-      $email = $row['email'];
-      $count = $database->affected_rows();
-      if($count > 0) {
+      $query = $database->query("UPDATE " . self::$database_table . " SET status = 'processed' WHERE id = '$id' "); 
+      if($query) {
+        $query2 = $database->query("SELECT * FROM  " . self::$database_table . " WHERE id = '$id' ");
+        $row = mysqli_fetch_array($query2);
+        $fullname = $row['name'];
+        $email = $row['email'];
           $body = "Hello! Your Certificate is ready.";
           certificatereadyMail($email, $fullname, $body);
-        header('Location: pending_request.php');
-      } else {
-        
-        return false;
-      }
+        header('Location: processing_request.php');
+      } 
 
     }
 
