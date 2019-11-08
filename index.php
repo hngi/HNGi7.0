@@ -503,7 +503,7 @@
                                 </p>
 
                                 <div>
-                                    <a href="hng6.php">
+                                    <a href="hng6">
                                         <i class="fa fa-angle-right "></i>Learn more</a>
                                 </div>
 

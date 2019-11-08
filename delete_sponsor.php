@@ -73,7 +73,7 @@ if (isset($_GET["yesDeleteId"])) {
       <?php
       if ($_SESSION["role"] != 1) {
         echo '<h2><br><br><br>Sorry, You do not have the priviledge to view this page</p>';
-        echo '<h3><a href="dashboard.php">Dashboard</a></h3>';
+        echo '<h3><a href="dashboard">Dashboard</a></h3>';
         exit();
       }
       ?>
@@ -136,7 +136,7 @@ if (isset($_GET["yesDeleteId"])) {
                 &nbsp;
               </div> -->
               <div class="col-md-6">
-                <a href="registered_sponsors.php"><button class="btn btn-primary">No, Cancel</button></a>
+                <a href="registered_sponsors"><button class="btn btn-primary">No, Cancel</button></a>
                 <a href="delete_sponsor.php?yesDeleteId=<?= $sponsor_id; ?>"><button class="btn btn-danger yes">Yes, Delete</button></a>
               </div>
             </div>
