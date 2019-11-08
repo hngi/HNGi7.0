@@ -219,6 +219,21 @@ class Mentor
   }
 
 
+    //function to update mentors : Written by @Hollyphat. Date: 8/11/2019 1:40PM
+    public function updateMentors($id, $data){
+        global $database;
+
+        $set = "";
+
+        foreach ($data as $item => $value){
+            $set .= "`$item` = '$value', ";
+        }
+
+        $set = trim($set);
+        $set = substr($set, 0, strlen($set) - 1);
+        $sql = "UPDATE mentors SET $set WHERE mentor_id = '$id' ";
+        $database->query("$sql");
+    }
 
 }
 
