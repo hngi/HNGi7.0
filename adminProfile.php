@@ -46,6 +46,10 @@ if(isset($_POST["changePassword"])) {
     $changePasswordResult = $admin->changePassword($oldPassword, $newPassword, $confirmNewPassword);
 }
 
+if(isset($_POST["deleteProfilePicture"])) {
+    
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -251,7 +255,10 @@ if(isset($_POST["changePassword"])) {
                             } else {
                                 // admin has picture
                                 echo '
-                                <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Change Profile Picture</button>';
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="margin: 5px;">Change Profile Picture</button>';
+
+                                echo '
+                                <button class="btn btn-danger" data-toggle="modal" data-target="#myModal1" style="margin: 5px;">Delete My Profile Picture</button>';
                             }
                         ?>
 
@@ -296,6 +303,33 @@ if(isset($_POST["changePassword"])) {
 
 
             <input type="submit" class="btn btn-success" id="submit" name="uploadPicture" value="Submit">
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Modal 1 -->
+<div id="myModal1" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Are you sure you want to delete your Profile Picture?</h4>
+      </div>
+      <div class="modal-body">
+      <form method="post" enctype="multipart/form-data">
+
+            <input type="button" class="btn btn-primary" id="submit" name="" value="No">
+            <input type="button" class="btn btn-danger" id="submit" name="deleteProfilePicture" value="Yes">
 
         </form>
       </div>

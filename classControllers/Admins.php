@@ -258,7 +258,7 @@ class Admins
       return $row;
   }
 
-  // Write by JohnEbri; 1/11/2019 6:56PM
+  // Written by JohnEbri; 1/11/2019 6:56PM
   public function updateProfile($firstname, $lastname, $email, $id) {
     global $database;
 
@@ -274,6 +274,7 @@ class Admins
       }
   }
 
+   // Written by JohnEbri; 1/11/2019 6:56PM
   public function imageUPloaded($id) {
     global $database;
     $query = "UPDATE admins SET hasPic = 1 WHERE admin_id = ".$id."";
@@ -288,6 +289,8 @@ class Admins
     } 
   }
 
+  
+  // Written by JohnEbri; 8/11/2019 9:30AM
   public function changePassword($oldPassword, $newPassword, $confirmNewPassword) {
     global $database;
     // get old password
@@ -330,6 +333,13 @@ class Admins
     }
 
   }
+
+  // Written by JohnEbri; 8/11/2019 9:30AM
+  public function deleteProfilePic() {
+    global $database;
+    
+  }
+  
 
 }
 
