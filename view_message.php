@@ -70,13 +70,20 @@ if($receiver_id == $admin_id){
 			font-weight: bolder;
 			font-size: 35px;
 		}
+
+  @media (max-width: 400px) {
+   .heading {
+    margin-top: 50px !important;
+    font-size: 18px !important;
+   }
+  }
 	</style>
 
 </head>
 <body>
 	<main>
 		<section id="overview-section">
-			<h1>View Message - <?php echo $message['subject'];?></h1>
+			<h1 class="heading">View Message - <?php echo $message['subject'];?></h1>
 
             <hr>
 
