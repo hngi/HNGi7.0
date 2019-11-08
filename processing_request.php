@@ -19,7 +19,7 @@ if ($status) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Registered Sponsors</title>
+  <title>Processing Certificate</title>
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
@@ -46,6 +46,24 @@ if ($status) {
       padding: 10px;
       border-radius: 15px;
     }
+
+    @media (max-width: 320px){
+     .heading{
+
+      width: 170px;
+      margin-left: 50px !important;
+      margin-right: auto !important;
+      text-align: center !important;
+     }
+
+     .searchBox {
+      margin-top: 70px;
+     }
+
+     .fa-search{
+      margin-top: 10px;
+     }
+    }
   </style>
 
 </head>
@@ -67,8 +85,8 @@ if ($status) {
     <section id="overview-section">
       <!-- <h1>Dashboard</h1> -->
 
-      <h2>Processing Certificate Request </h2>
-      <div class="mentor-buttons">
+      <h2 class="cert processing heading">Processing Certificate Request </h2>
+      <div class="mentor-buttons certificate">
         <a href="pending_request.php" class="btn btn-default">Pending Request</a>
         <a href="finished_request.php" class="btn btn-default">Finished Request</a>
       </div>
@@ -84,11 +102,11 @@ if ($status) {
       ?>
 
       <div>
-        <div class="row">
+        <div class="row cert-message">
 
           <?php
           if ($data == "0") {
-            echo "<h2>There are no Request rigth now</h2>";
+            echo "<h2>There are no requests right now</h2>";
           } else {
             ?>
             <!--<div class="col-md-3">-->
@@ -175,7 +193,7 @@ if ($status) {
         <p class="details">Email: <span id="email"></span></p>
         <p class="details">Slack_username: <span id="slack_username"></span></p>
         <p class="details">Year: <span id="year"></span></p>
-        <p class="details" style="margin-left:10%;">File<span id="file"></span></p>
+        <p class="details">File:<span id="file"></span></p>
         <!-- <div href="" id="details-return">Back to Overview</div> -->
         <div id="navigator">
           <i class="fas fa-chevron-left fa-2x left navigator"></i>

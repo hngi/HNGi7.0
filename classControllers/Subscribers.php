@@ -61,4 +61,25 @@ class Subscribers
 
         return $result;
     }
+
+    public function fetch_the_newsletter($id){ //function to fetch single newsletter
+        global $database;
+        $sql = "SELECT * FROM newsletter WHERE id = '$id'";
+        $query = $database->query($sql);
+        $result = $query->fetch_assoc();
+
+        return $result;
+    }
+
+    public function  delete_news_update($id){ //function to delete news update
+        global $database;
+        if(is_array($id)){
+            foreach ($id as $the_id){
+                $database->query("DELETE FROM newsletter WHERE id = '$the_id'"); //Delete multiple news at once
+            }
+        }else{
+            $database->query("DELETE FROM newsletter WHERE id = '$id'"); //Delete single news
+        }
+    }
+
 }

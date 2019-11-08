@@ -17,7 +17,7 @@ if (isset($_GET['editSponsorId'])) {
     $resp = $sponsor->updateSponsor();
     if ($resp) {
       header("location: registered_sponsors.php");
-      $_SESSION['success'] = "<h3 class='alert alert-success'>Sponsor was updated succefully</h3>";
+      $_SESSION['success'] = "<h6 class='alert alert-success mt-3'>Sponsor was updated succefully</h6>";
     } else {
       $errors[] = "Upload not successful";
     }
@@ -125,7 +125,7 @@ if (isset($_GET['editSponsorId'])) {
               <button type="submit" class="btn btn-primary" name="sponsor-update">Submit</button>
 
 
-              <a href="registered_sponsors.php" class="btn mb-4" style="background: gray; color:#fff;">cancle</a>
+              <a href="registered_sponsors.php" class="btn mb-4" style="background: gray; color:#fff;">cancel</a>
             </form>
           </div>
         </div>

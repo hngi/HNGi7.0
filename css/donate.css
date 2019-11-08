@@ -191,6 +191,16 @@ a.button-primary:hover,
   padding-left: 18px;
 }
 
+.transparent-btn {
+  background-color: transparent; 
+  color:#007bff; 
+  background-repeat:no-repeat; 
+  border: none; 
+  cursor:pointer; 
+  overflow: hidden; 
+  outline:none;
+}
+
 @media only screen and (min-width: 1140px) {
   .women .text {
     padding: 128px;

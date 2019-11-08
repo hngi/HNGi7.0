@@ -111,51 +111,68 @@ $countDownValues = $countdown->getDate();
                 <h2 class="blue-text"  data-aos="fade-up">How It All Happened</h2>
                 <section class="container">
                     <div class="gallery_items"  data-aos="fade-up">
-
+                        <span>
                         <img
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722589/gallery-second_nkrosi.png">
-                          <p> A cross-section of the last meetup</p> <br>
+                          <p> A cross-section of the last meetup</p></span>
+                          <span>
                         <img
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722618/gallery-third_oqgaiv.png">
-                        <p> A cross-section of the last meetup</p> <br>
+                        <p> A cross-section of the last meetup</p></span>
+                        <span>
                         <img
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722558/gallery-first_gldujn.png">
-                   <p> A cross-section of the last meetup</p> <br>
+                   <p> A cross-section of the last meetup</p></span>
+                   <span>
                         <img
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722589/gallery-second_nkrosi.png">
-                       <p> Some of the HNG mentors & interns at the last meetup</p> <br>
+                    <p> Some of the HNG mentors & interns at the last meetup</p></span>
+                    <span>
                         <img
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722618/gallery-third_oqgaiv.png">
-                            <p>Teaching sessions ongoing</p> <br>
+                            <p>Teaching sessions ongoing</p></span>
+                    <span>
+                        <img
+                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722618/gallery-third_oqgaiv.png">
+                            <p>Teaching sessions ongoing</p></span>
                     </div>
                     <div class="gallery_items" id="hidden_images"  data-aos="fade-up">
+                        <span>
                         <img
                             src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng1_rbfvik.jpg">
-                      <p> Some of the HNG interns at the last meetup</p> <br>
-                        <img
+                      <p> Some of the HNG interns at the last meetup</p></span>
+                      <span>
+                      <img
                             src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng2_rva54w.jpg">
-                         <p> Some of the HNG mentors at the last meetup</p> <br>
+                         <p> Some of the HNG mentors at the last meetup</p></span>  
+                         <span>
                         <img
                             src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng3_blzemp.jpg">
-                       <p> Two of the female HNG mentors</p> <br>
+                       <p> Two of the female HNG mentors</p></span>
+                       <span>
                         <img
                             src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng4_tlrjyf.jpg">
-                       <p> Some of the HNG mentors at the last meetup</p> <br>
+                       <p> Some of the HNG mentors at the last meetup</p></span>
+                       <span>
                         <img
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722618/gallery-third_oqgaiv.png">
-                  <p> Teaching sessions ongoing</p> <br>
+                  <p> Teaching sessions ongoing</p></span>
+                  <span>
                         <img
                             src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng5_qvzjfy.jpg">
-               <p> Some of the HNG mentors & interns at the last meetup</p> <br>
+                    <p> Some of the HNG mentors & interns at the last meetup</p></span>
+                    <span>
                         <img
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722558/gallery-first_gldujn.png">
-                  <p> Panel sessions ongoing</p> <br>
+                  <p> Panel sessions ongoing</p></span>
+                  <span>
                         <img
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722589/gallery-second_nkrosi.png">
-                  <p> Some of the HNG mentors & interns at the last meetup</p> <br>
+                  <p> Some of the HNG mentors & interns at the last meetup</p></span>
+                  <span>
                         <img
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722589/gallery-second_nkrosi.png">
-                  <p> Some of the HNG mentors & interns at the last meetup</p> <br>
+                  <p> Some of the HNG mentors & interns at the last meetup</p></span>
                     </div>
                 </section> <br>
                 <div  data-aos="fade-up">
@@ -299,7 +316,7 @@ $countDownValues = $countdown->getDate();
                         <a><img
                                 src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg"></a>
                     </div>
--->
+                -->
                 </div>
             </section>
         </main>
@@ -321,6 +338,8 @@ $countDownValues = $countdown->getDate();
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>
+
+    <?php include('fragments/chat.php'); ?>
 </body>
 <script type="text/javascript" src="js/hng6.js"></script>
     <script>

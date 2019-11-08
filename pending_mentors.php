@@ -8,10 +8,13 @@ $display = $mentors->pendingMentors();
 if (isset($_GET['acceptMentorId'])) {
     $mentor_id = $_GET['acceptMentorId'];
     $message = $mentors->AcceptMentor($mentor_id);
+
+    $_SESSION['msg'] = "<div class='alert alert-success'>Mentor accepted successfully</div>";
 }
 if (isset($_GET['rejectMentorId'])) {
     $mentor_id = $_GET['rejectMentorId'];
     $message = $mentors->RejectMentor($mentor_id);
+    $_SESSION['msg'] = "<div class='alert alert-info'>Mentor rejected successfully</div>";
 }
 ?>
 <!DOCTYPE html>
@@ -48,6 +51,24 @@ if (isset($_GET['rejectMentorId'])) {
             padding: 10px;
             border-radius: 15px;
         }
+
+        @media (max-width: 320px){
+     .heading{
+
+      width: 170px;
+      margin-left: 50px !important;
+      margin-right: auto !important;
+      text-align: center !important;
+     }
+
+     .searchBox {
+      margin-top: 70px;
+     }
+
+     .fa-search{
+      margin-top: 10px;
+     }
+    }
     </style>
 
 </head>
@@ -68,7 +89,7 @@ if (isset($_GET['rejectMentorId'])) {
         <input type="text" class="searchBox"><i class="fas fa-search"></i>
         <section id="overview-section">
             <!-- <h1>Dashboard</h1> -->
-            <h2>Pending Mentors </h2>
+            <h2 class="heading">Pending Mentors </h2>
             <div class="mentor-buttons">
                 <a href="registered_mentors.php" class="btn btn-default">Active Mentors</a>
                 <a href="declined_mentors.php" class="btn btn-default">Declined Mentors</a>
@@ -81,6 +102,10 @@ if (isset($_GET['rejectMentorId'])) {
                 <div class="row">
 
                     <?php
+                    if(isset($_SESSION['msg'])){
+                        echo $_SESSION['msg'];
+                        unset($_SESSION['msg']);
+                    }
                     if ($display == "0") {
                         echo "<h2>There are no pending mentors</h2>";
                     } else {

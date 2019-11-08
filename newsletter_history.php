@@ -31,7 +31,7 @@ $all_news = $newsletter->fetch_newsletter();
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/newsletter_fixed.css">
+    <link rel="stylesheet" type="text/css" href="css/newsletter_history.css">
 
     <style type="text/css">
         .card {
@@ -50,14 +50,21 @@ $all_news = $newsletter->fetch_newsletter();
             font-weight: bolder;
             font-size: 35px;
         }
+
+        @media (max-width: 400px) {
+   .heading {
+    margin-top: 50px !important;
+    font-size: 18px !important;
+   }
+  }
     </style>
 
 </head>
 <body>
 <main>
     <section id="overview-section">
-        <h1>News Update Archive</h1>
-
+        <h1 class="heading">News Update Archive</h1>
+        <p><a href="delete_newsletter.php" class="btn btn-danger">Delete News</a></p>
         <hr>
 
         <div class="container-fluid">
@@ -72,14 +79,14 @@ $all_news = $newsletter->fetch_newsletter();
                                         <div class="cards">
                                             <div class="image">
                                                 <img src = "uploads/newsletter/<?php echo $all_new['image'];?>" alt="image" class="image img-responsive">
-                                            </div>
+                                            </div><br>
                                             <div class="heading">
                                                 <h3 style="color: white"><strong><?php echo $all_new['title'];?></strong></h3>
-                                                <p><?php echo $all_new['content'];?> </p>
+                                                <p><?php echo substr(strip_tags($all_new['content']),0,100);?>... </p>
                                             </div>
                                             <div class="para">
-                                                <p>Originally published <?php echo $all_new['date_created'];?>, updated <?php echo $all_new['date_updated'];?></p>
-                                                <button> <a href="read_news.php" class="button">READ MORE</a></button>
+                                                <p>Originally Published <?php echo $all_new['date_created'];?>, Updated <?php echo $all_new['date_updated'];?></p>
+                                                <a href="read_news.php?id=<?php echo $all_new['id'];?>" class="button">READ MORE</a>
                                             </div>
 
                                         </div>

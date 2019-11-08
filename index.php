@@ -336,6 +336,10 @@
                                             <li>Javascript</li>
                                             <li>Bootstrap</li>
                                             <li>JQuery</li>
+                                            <li>Vue</li>
+                                            <li>ReactJs</li>
+                                            <li>Oracle JET</li>
+                                            <li>Angular</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -454,7 +458,7 @@
                         <div class="mentor-image">
                             <img src="https://res.cloudinary.com/joshuafolorunsho/image/upload/c_scale,w_200/v1572870951/20191103_165148_auawdc-min.jpg">
                             <p class="font-weight-bold">Seyi Onifade</p>
-                            <p>CEO, HNG Tech</p>
+                            <p> </p>
                         </div>
                         <div class="mentor-image">
                             <img src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572871094/foutw9umk4hcfntupffn.jpg">
@@ -643,5 +647,6 @@
     })
     }
 </script>
+<?php include('fragments/chat.php'); ?>
 </body>
 </html>

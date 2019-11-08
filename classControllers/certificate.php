@@ -13,15 +13,21 @@ class Certificate
     public $id;
     public $status = "pending";
 
-    public function requestCertificate(){
+
+    public function confirmEmail($email){
       global $database;
-      $error = [];
-      $name = $database->escape_string($this->name);
       $email = $database->escape_string($this->email);
-      $slack_username = $database->escape_string($this->slack_username);
-      $year = $database->escape_string($this->year);
-      $status = $database->escape_string($this->status);
+      $query = $database->query("SELECT * FROM interns WHERE email = '$email' ");
+      $count = mysqli_num_rows($query);
+      if ($count > 0) {
+        return $count;
+      }
      
+    }
+
+    public function requestCertificate($email,$name,$slack_username,$year){
+      global $database; 
+      $status = 'pending';
         $query = $database->query("INSERT INTO " . self::$database_table . "(name,email,slack_username,year,status) VALUES('$name','$email','$slack_username','$year','$status') ");
         return $query;
     }
@@ -52,7 +58,7 @@ class Certificate
               <td>$year</td>
               <td>$file</td>
                <td>
-              <a href='pending_request.php?pendingId=$certificate_id' class='btn btn-warning btn-sm'>$status</a>
+              <a href='pending_request.php?pendingId=$certificate_id' class='btn btn-warning btn-sm'>Awaiting Response</a>
               </td>
             
               
@@ -93,7 +99,7 @@ class Certificate
               <td>$slack_username</td>
               <td>$year</td>
               <td>$file</td>
-               <td>
+              <td>
               <a href='processing_request.php?processingId=$certificate_id' class='btn btn-success btn-sm'>$status</a>
               </td>
             
@@ -182,10 +188,20 @@ class Certificate
     global $database;
     if (isset($_GET['processingId'])) {
       $id = $database->escape_string($_GET['processingId']);
+      $query = $database->query("UPDATE " . self::$database_table . " SET status = 'processed' WHERE id = '$id' "); 
+      if($query) {
+        $query2 = $database->query("SELECT * FROM  " . self::$database_table . " WHERE id = '$id' ");
+        $row = mysqli_fetch_array($query2);
+        $fullname = $row['name'];
+        $email = $row['email'];
+          $body = "Hello! Your Certificate is ready.";
+          certificatereadyMail($email, $fullname, $body);
+        header('Location: processing_request.php');
+      } 
 
-      $query = $database->query("UPDATE " . self::$database_table . " SET status = 'processed' WHERE id = '$id' ");
-      return $query;
     }
+
+
   }
 
  
