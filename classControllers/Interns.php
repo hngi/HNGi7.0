@@ -31,10 +31,10 @@ class Intern
         if(is_array($interests)){
             $interest = "";
             foreach ($interests as $int){
-                $interest .= " ,$int";
+                $interest .= ", $int";
             }
-            $interest = trim($interest);
             $interest = substr($interest, 1, strlen($interest) - 1); //Set interest
+            $interest = trim($interest);
         }else{
             $interest = $database->escape_string($_POST['interest']);
         }
