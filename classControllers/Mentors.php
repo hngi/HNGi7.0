@@ -219,6 +219,13 @@ class Mentor
   }
 
 
+    public function getMentorInfo($id) {
+        global $database;
+        $query = "SELECT * FROM mentors WHERE mentor_id = ".$id."";
+        $res = $database->query($query);
+        $row = mysqli_fetch_assoc($res);
+        return $row;
+    }
     //function to update mentors : Written by @Hollyphat. Date: 8/11/2019 1:40PM
     public function updateMentors($id, $data){
         global $database;
