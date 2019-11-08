@@ -255,7 +255,7 @@ function readURL(input) {
             <center>
               <div class="image-upload">
                 <label for="file-input">
-                 <img id="prevImg" />
+                 <img id="prevImg" style="margin-bottom: 15px;" />
                   <div class="circle"><i class="fas fa-camera"></i></div>
                 </label>
                 <input id="file-input" type="file"/ name="image" onchange="readURL(this);" >
