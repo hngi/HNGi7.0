@@ -1,7 +1,7 @@
 <?php
 require 'classControllers/init.php';
 if (!isset($_SESSION["role"])) {
-  header('Location:admin_login.php');
+  header('Location:login');
 }
 $sponsors = new Certificate;
 $data = $sponsors->getAllFinishedRequest();
