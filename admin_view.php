@@ -41,7 +41,13 @@ if (isset($_GET["editAdminId"])) {
 			padding: 10px;
 			border-radius: 15px;
 
-		}
+  }
+  
+  @media (max-width: 400px) {
+   .admin__details {
+    font-size: 25px !important;
+   }
+  }
 	</style>
 
 </head>

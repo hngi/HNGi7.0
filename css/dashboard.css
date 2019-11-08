@@ -547,7 +547,7 @@ div#del-message{
 	}
 	#overview-section
 	{
-		margin: 0 2rem;
+		margin: 0 auto;
 		width: 90vw;
 	}
 	#overview-section h1,#overview-section h2 {
@@ -630,6 +630,8 @@ div#del-message{
         display: block;
         margin-left: 40vw;
         z-index: 10;
+        padding-top: 3px;
+        padding-left: 3px;
     }
     #mobile-bars-check:checked ~ #mobile-bars > #stik1
     {

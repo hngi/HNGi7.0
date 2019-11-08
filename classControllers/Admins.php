@@ -258,7 +258,7 @@ class Admins
       return $row;
   }
 
-  // Write by JohnEbri; 1/11/2019 6:56PM
+  // Written by JohnEbri; 1/11/2019 6:56PM
   public function updateProfile($firstname, $lastname, $email, $id) {
     global $database;
 
@@ -274,6 +274,7 @@ class Admins
       }
   }
 
+   // Written by JohnEbri; 1/11/2019 6:56PM
   public function imageUPloaded($id) {
     global $database;
     $query = "UPDATE admins SET hasPic = 1 WHERE admin_id = ".$id."";
@@ -285,10 +286,70 @@ class Admins
     } else {
       // failed
       header("Location: adminProfile.php?changed");
-    }
+    } 
+  }
+
+  
+  // Written by JohnEbri; 8/11/2019 9:30AM
+  public function changePassword($oldPassword, $newPassword, $confirmNewPassword) {
+    global $database;
+    // get old password
+    $query = "SELECT * FROM admins WHERE admin_id = ".$_SESSION["admin_id"]."";
+    $res = $database->query($query);
+    $row = mysqli_fetch_assoc($res);
+    $adminPassword = $row["password"];
     
+    // unhash the password
+    if(password_verify($oldPassword, $adminPassword)){
+      // old password is correct // check new and and confirm password
+      if($newPassword == $confirmNewPassword) {
+        // new passwords match, // check length of passwords
+        if(strlen($newPassword) < 6 || strlen($confirmNewPassword < 6)) {
+          // password length too short
+          header('Location:adminProfile.php?shortPassword');
+        } else {
+          // password length is ok, hash new password
+          $newPasswordHarshed = password_hash($newPassword, PASSWORD_BCRYPT);          
+          // update newPassword
+          $query = "UPDATE admins SET password = '".$newPasswordHarshed."' WHERE admin_id = ".$_SESSION["admin_id"]."";
+          $res = $database->query($query);
+          $count = $database->affected_rows();
+          if($count > 0) {
+            // password updated
+            header('Location: adminProfile.php?passwordUpdated');
+          } else {
+            // update failed
+            header('Location: adminProfile.php?passwordUpdateFailed');
+          }
+        }
+        
+      } else {
+        // new passwords do not match
+        header('Location: adminProfile.php?matchError');
+      }
+    } else {
+      // old password is wrong
+      header('Location: adminProfile.php?wrongPassword');
+    }
 
   }
+
+  // Written by JohnEbri; 8/11/2019 9:30AM
+  public function deleteProfilePic() {
+    global $database;
+    $query = "UPDATE admins SET hasPic = 0 WHERE admin_id = ".$_SESSION["admin_id"]."";
+    $res = $database->query($query);
+    $count = $database->affected_rows();
+    if($count > 0) {
+      // has pic value updated, delete pic from folder
+      header("Location:adminProfile.php?picDeleted");
+    } else {
+      // error
+      header("Location:adminProfile.php?deletePicFailed");
+    }
+  }
+  
+
 }
 
 if (isset($_GET["login"])) {
