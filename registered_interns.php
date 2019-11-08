@@ -1,7 +1,7 @@
 <?php
     require 'classControllers/init.php';
     if (!isset($_SESSION["role"])) {
-        header('Location:admin_login.php');
+        header('Location:login');
     }
     $interns = new Intern;
     $display = $interns->allInterns();
@@ -55,6 +55,24 @@
             padding: 10px;
             border-radius: 15px;
         }
+
+        @media (max-width: 250px){
+     .heading{
+
+      width: 140px;
+      margin-left: 50px !important;
+      margin-right: auto !important;
+      text-align: center !important;
+     }
+
+     .searchBox {
+      margin-top: 70px;
+     }
+
+     .fa-search{
+      margin-top: 10px;
+     }
+    }
     </style>
 
 </head>
@@ -75,7 +93,7 @@
         <input type="text" class="searchBox"><i class="fas fa-search"></i>
         <section id="overview-section">
             <!-- <h1>Dashboard</h1> -->
-            <h2>Active Interns </h2>
+            <h2 class="heading">Active Interns </h2>
             <div class="intern-buttons">
                 <a href="pending_interns.php" class="btn btn-default">Pending Interns</a>
                 <a href="declined_interns.php" class="btn btn-default">Declined Interns</a>

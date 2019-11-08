@@ -62,10 +62,14 @@ a{
   .mentor-buttons>.btn:nth-child(1){
 	margin-right: 1em;
 }
+
 .row h2{
 	margin-left: 15px;
 }
-
+.mentor-buttons.certificate{
+	margin-top: 6rem;
+}
+/* 
 #mobile-bars 
 {
     position: absolute;
@@ -77,7 +81,7 @@ a{
     margin-right: 40px;
     cursor: pointer;
     display: none;
-}
+} */
 
 .stix 
 {
@@ -446,6 +450,13 @@ i:hover{
 	width: 90%;
 }
 
+
+@media (min-width:860px) and (max-width:992px){
+	#overview-section h2.cert.processing{
+		font-size: 20px;
+		margin-top: 34px;
+	}
+}
 @media (max-width: 860px)
 {
 	main
@@ -465,6 +476,12 @@ i:hover{
 	.mentor-buttons>*{
 		margin-left: 1em;
 	}
+
+	.mentor-buttons.certificate{
+		margin-left: -1em;
+	}
+
+
 	
 	.intern-table th:nth-child(4),
 	.intern-table td:nth-child(4){
@@ -499,8 +516,9 @@ i:hover{
 		text-align: center;
 		margin-top: 15px;
 		font-size: 25px;
-		/* margin-left: 2%; */
 	}
+
+
 	
 .searchBox {
 
@@ -530,6 +548,8 @@ i:hover{
 		
 		justify-self: self-start;
 		align-self: center;
+		margin-top: 3em;
+		zoom: 0.7;
 		/* margin-bottom: 0; */
 	}
 	#details-section
@@ -541,10 +561,15 @@ i:hover{
 		z-index: 5;
 		width: 100vw;
 		transition: 0.4s ease-out;
-		/* left: 100vw; */
+		left: 100vw;
 		font-size: 17px;
 		
 	}
+
+	#details-section.activated{
+		left: 0;
+	}
+
 	#details-section #details-back
 	{
 		display: block;
@@ -558,7 +583,7 @@ i:hover{
 
 	#sidebar
 	{
-		width: 50vw;
+		
 		left: -100vw;
 		transition: 0.4s ease-out;
 		z-index: 5;
@@ -616,9 +641,20 @@ i:hover{
 	
 	#details-section{
 		font-size: 12px;
-		left: 100vw;
+		
 	}
-	
+	#overview-section h2.cert{
+		font-size: 20px;
+		margin-left: 1.5em;
+	}
+
+	#overview-section h2.cert.processing {
+		font-size: 20px;
+		margin-left: 1.5em;
+	}
+	#overview-section .cert-message h2{
+		font-size: 20px;
+	}
 	#navigator{
 		margin-top: 0;
 	}
@@ -661,6 +697,11 @@ i:hover{
 	}
 }
 
+@media(max-width:406px){
+	.certificate-table .btn-sm{
+		margin-top: 0.25em;
+	}
+}
 
 @media (max-width: 375px){
 	#details-section{	
@@ -678,5 +719,17 @@ i:hover{
 	}
 	#overview-section h2.register{
 		font-size: 24px;
+	}
+	#overview-section h2.cert.processing {
+		font-size: 18px;
+		margin-left: 1.5em;
+		margin-top: 18px;
+	}
+}
+
+@media (max-width: 359px){
+	
+  	.mentor-buttons.certificate>.btn:nth-child(1){
+		margin-right: 0;
 	}
 }

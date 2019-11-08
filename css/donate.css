@@ -66,7 +66,6 @@ a.button-primary {
   border-radius: 3px;
   padding: 0.5rem 1rem;
   background-color: var(--blue);
-  margin-right: 10%;
   outline: none;
   border: none;
 }
@@ -190,6 +189,16 @@ a.button-primary:hover,
 
 .women .text .list {
   padding-left: 18px;
+}
+
+.transparent-btn {
+  background-color: transparent; 
+  color:#007bff; 
+  background-repeat:no-repeat; 
+  border: none; 
+  cursor:pointer; 
+  overflow: hidden; 
+  outline:none;
 }
 
 @media only screen and (min-width: 1140px) {

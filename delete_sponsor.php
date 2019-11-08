@@ -3,7 +3,7 @@ require_once "classControllers/init.php";
 $sponsor = new sponsors;
 
 if (!isset($_SESSION["role"])) {
-  header('Location:admin_login.php');
+  header('Location:login');
 }
 
 
@@ -37,10 +37,10 @@ if (isset($_GET["yesDeleteId"])) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Delete Admin</title>
+  <title>Delete Sponsor</title>
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
-  <link rel="stylesheet" href="css/dashboard.css">
-
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link href="css/dashboard.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
@@ -79,49 +79,49 @@ if (isset($_GET["yesDeleteId"])) {
       ?>
       <!-- <h1>Dashboard</h1> -->
       <br><br><br>
-      <h2> Confirm Delete Admin </h2>
+      <h2 class="del-intern-title"> Confirm Delete Sponsor </h2>
       <!-- <section id="intern-section">
                 Populated by `js/dashboard.js` 
             </section> -->
 
-      <div class="container">
+      <div>
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-9 confirm-div">
 
-            <div>
-              <div class="col-md-12 text-warning">
+            <div id="del-message">
+              <div class="col-md-12 confirm text-warning">
                 <h4>Are you sure you want to delete sponsor with the following details?</h4>
               </div>
             </div>
 
-            <div class="row">
+            <div class="row del-intern confirm-name">
               <div class="col-md-3">
-                <h4 id="text-bold">SPONSOR NAME:</h4>
+                <h4 id="text-bold">NAME:</h4>
               </div>
               <div class="col-md-6">
                 <h4><?php echo $name; ?></h4>
               </div>
             </div>
 
-            <div class="row">
+            <div class="row del-intern">
               <div class="col-md-3">
-                <h4 id="text-bold">SPONSOR LOGO:</h4>
+                <h4 id="text-bold">LOGO:</h4>
               </div>
-              <div class="col-md-6">
-                <img src='<?= $logo; ?>' style='width: 100%; height: 200px;'>
+              <div class="col-md-6 image">
+                <img src='<?= $logo; ?>' style='height: 200px;'>
               </div>
             </div>
 
-            <div class="row">
+            <div class="row del-intern">
               <div class="col-md-3">
-                <h4 id="text-bold">ABOUT SPONSOR:</h4>
+                <h4 id="text-bold">ABOUT:</h4>
               </div>
               <div class="col-md-6">
                 <h4><?= $about_you; ?></h4>
               </div>
             </div>
 
-            <div class="row">
+            <div class="row del-intern">
               <div class="col-md-3">
                 <h4 id="text-bold">ADDRESS:</h4>
               </div>
@@ -131,13 +131,13 @@ if (isset($_GET["yesDeleteId"])) {
             </div>
 
 
-            <div class="row">
-              <div class="col-md-3">
+            <div class="row del-intern confirm-buttons">
+              <!-- <div class="col-md-3">
                 &nbsp;
-              </div>
+              </div> -->
               <div class="col-md-6">
                 <a href="registered_sponsors.php"><button class="btn btn-primary">No, Cancel</button></a>
-                <a href="delete_sponsor.php?yesDeleteId=<?= $sponsor_id; ?>"><button class="btn btn-danger">Yes, Delete</button></a>
+                <a href="delete_sponsor.php?yesDeleteId=<?= $sponsor_id; ?>"><button class="btn btn-danger yes">Yes, Delete</button></a>
               </div>
             </div>
 
@@ -182,5 +182,5 @@ if (isset($_GET["yesDeleteId"])) {
 </body>
 
 </html>
-
+<script  type="text/javascript" src="js/sidebar.js"></script>
 <script type="text/javascript" src="js/dashboard.js"></script>

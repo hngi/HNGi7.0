@@ -17,7 +17,7 @@ if (isset($_GET['editSponsorId'])) {
     $resp = $sponsor->updateSponsor();
     if ($resp) {
       header("location: registered_sponsors.php");
-      $_SESSION['success'] = "<h3 class='alert alert-success'>Sponsor was updated succefully</h3>";
+      $_SESSION['success'] = "<h6 class='alert alert-success mt-3'>Sponsor was updated succefully</h6>";
     } else {
       $errors[] = "Upload not successful";
     }
@@ -46,6 +46,7 @@ if (isset($_GET['editSponsorId'])) {
   <title>New Admin</title>
   <link rel="icon" type="img/png" href="images/hng-favicon.png">
   <link rel="stylesheet" href="css/dashboard.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -76,7 +77,7 @@ if (isset($_GET['editSponsorId'])) {
       <br><br>
       <h2>Register a new Sponsor </h2>
       <!-- <section id="intern-section">
-				Populated by `js/dashboard.js` 
+				Populated by `js/dashboard.js`
 			</section> -->
 
       <div class="container">
@@ -124,7 +125,7 @@ if (isset($_GET['editSponsorId'])) {
               <button type="submit" class="btn btn-primary" name="sponsor-update">Submit</button>
 
 
-              <a href="registered_sponsors.php" class="btn mb-4" style="background: gray; color:#fff;">cancle</a>
+              <a href="registered_sponsors.php" class="btn mb-4" style="background: gray; color:#fff;">cancel</a>
             </form>
           </div>
         </div>
@@ -169,3 +170,4 @@ if (isset($_GET['editSponsorId'])) {
 </html>
 
 <script type="text/javascript" src="js/dashboard.js"></script>
+<script  type="text/javascript" src="js/sidebar.js"></script>

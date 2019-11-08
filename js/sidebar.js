@@ -3,6 +3,7 @@ const headings = document.querySelectorAll('.item');
 const chevron = document.querySelectorAll('.chevron')
 
 const toggleMenu =(target)=>{
+    
     target.parentElement.classList.toggle('active')
     for(heading of headings){
         if(!(heading.id === target.parentElement.id)){
@@ -21,5 +22,6 @@ menu.addEventListener('click',(e)=>{
     }else if(e.target.classList.contains('chevron')){
         target = e.target.parentElement;
     }
+    if (!target) return
     toggleMenu(target)
 })

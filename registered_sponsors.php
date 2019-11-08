@@ -1,7 +1,7 @@
 <?php
 require 'classControllers/init.php';
 if (!isset($_SESSION["role"])) {
-    header('Location:admin_login.php');
+    header('Location:login');
 }
 $sponsors = new sponsors;
 $data = $sponsors->getAllSponsor();
@@ -40,6 +40,24 @@ $data = $sponsors->getAllSponsor();
             padding: 10px;
             border-radius: 15px;
         }
+
+        @media (max-width: 320px){
+     .heading{
+
+      width: 170px;
+      margin-left: 50px !important;
+      margin-right: auto !important;
+      text-align: center !important;
+     }
+
+     .searchBox {
+      margin-top: 70px;
+     }
+
+     .fa-search{
+      margin-top: 10px;
+     }
+    }
     </style>
 
 </head>
@@ -60,7 +78,7 @@ $data = $sponsors->getAllSponsor();
         <input type="text" class="searchBox"><i class="fas fa-search"></i>
         <section id="overview-section">
             <!-- <h1>Dashboard</h1> -->
-            <h2 class="register">Registered Sponsors </h2>
+            <h2 class="register heading">Registered Sponsors </h2>
             <!-- <section id="intern-section">
             Populated by `js/dashboard.js`
         </section> -->

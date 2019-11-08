@@ -4,7 +4,7 @@ require_once 'classControllers/init.php';
 
 
 if(!isset($_SESSION["role"])) {
-    header('Location:admin_login');
+    header('Location:login');
 }
 
 $adminId = $_SESSION["admin_id"];
@@ -39,10 +39,19 @@ if(isset($_POST["uploadPicture"])) {
     }
 }
 
+if(isset($_POST["changePassword"])) {
+    $oldPassword = $_POST["oldPassword"];
+    $newPassword = $_POST["newPassword"];
+    $confirmNewPassword = $_POST["confirmNewPassword"];
+    $changePasswordResult = $admin->changePassword($oldPassword, $newPassword, $confirmNewPassword);
+}
 
-
+if(isset($_POST["deleteProfilePicture"])) {
+    $deletePicRes = $admin->deleteProfilePic();
+}
 
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,6 +62,7 @@ if(isset($_POST["uploadPicture"])) {
 
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
     <link rel="stylesheet" href="css/dashboard.css">
+  	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -80,6 +90,13 @@ if(isset($_POST["uploadPicture"])) {
             padding: 0;
             margin: 0;
         }
+
+        @media (max-width: 400px) {
+   .heading {
+    margin-top: 50px !important;
+    font-size: 18px !important;
+   }
+  }
     </style>
 
 
@@ -87,13 +104,13 @@ if(isset($_POST["uploadPicture"])) {
 
 <body>
 <main class="reg">
-    
+
     <section id="overview-section">
-        <h1>Admin Profile</h1>
+        <h1 class="heading">Admin Profile</h1>
         <div class="register-container">
             <br /><br />
             <div class="row" id="table-row">
-                
+
                 <div class="col-md-6">
 
                     <?php
@@ -111,7 +128,7 @@ if(isset($_POST["uploadPicture"])) {
 							</div>';
 						}
                     ?>
-                    
+
                     <form method="post">
                         <div class="form-group">
                             <label for="">First Name: </label>
@@ -139,9 +156,69 @@ if(isset($_POST["uploadPicture"])) {
                         </div>
 
                         <input type="submit" class="btn btn-success" id="submit" name="update" value="Save Changes">
-
-
                     </form>
+
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="container">
+                            <div class="col-md-6">
+                            <?php
+
+                                if(isset($_GET["shortPassword"])) {
+                                    echo '
+                                    <div class="alert alert-danger">
+                                        <strong>Error! </strong> Your password must have at least 6 characters
+                                    </div>';
+                                }
+
+                                if(isset($_GET["passwordUpdated"])) {
+                                    echo '
+                                    <div class="alert alert-success">
+                                        <strong>Done! </strong> You have successfully updated your password
+                                    </div>';
+                                }
+
+                                if(isset($_GET["passwordUpdateFailed"])) {
+                                    echo '
+                                    <div class="alert alert-danger">
+                                        <strong>Error! </strong> Password Update Failed. Please try again
+                                    </div>';
+                                }
+
+                                if(isset($_GET["matchError"])) {
+                                    echo '
+                                    <div class="alert alert-danger">
+                                        <strong>Error! </strong> Your new passwords do not match
+                                    </div>';
+                                }
+
+                                if(isset($_GET["wrongPassword"])) {
+                                    echo '
+                                    <div class="alert alert-danger">
+                                        <strong>Error! </strong> No account found with the password you entered
+                                    </div>';
+                                }
+
+                            ?>
+
+                            <h3>Change Password</h3>
+                                <form method="post">
+                                    <div class="form-group">
+                                        <label for="">Old Password </label>
+                                        <input type="password" name="oldPassword" id="fname" required class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">New Password </label>
+                                        <input type="password" name="newPassword" id="name" required class="form-control" minlength=6>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">Confirm New Password </label>
+                                        <input type="password" name="confirmNewPassword" id="email" required  class="form-control">
+                                    </div>
+                                    <input type="submit" class="btn btn-success" id="submit" name="changePassword" value="Change Password">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
 
@@ -162,7 +239,7 @@ if(isset($_POST["uploadPicture"])) {
                             </div>';
                         }
                     ?>
-                       
+
                     <div class="col-md-10" style="margin-bottom: 20px; margin-top: 20px;">
                         <?php
                             if($display["hasPic"] == 0) {
@@ -170,14 +247,14 @@ if(isset($_POST["uploadPicture"])) {
                                 echo '<img src="adminProfilePics/default.jpg" />';
                             } else {
                                 // admin has picture
-                                echo '<img src="adminProfilePics/'.$adminId.'.jpg" class="img-circle img-responsive" />';
+                                echo '<img src="adminProfilePics/'.$adminId.'.jpg" class="img-circle img-responsive" style="height: 200px; width: 200px;"/>';
                             }
                         ?>
-                        
+
                     </div>
-                    
+
                     <div class="row" style="padding-left: 70px;">
-                        <?php   
+                        <?php
                             if($display["hasPic"] == 0) {
                                 // admin has NO picture
                                 echo '
@@ -185,12 +262,15 @@ if(isset($_POST["uploadPicture"])) {
                             } else {
                                 // admin has picture
                                 echo '
-                                <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Change Profile Picture</button>';
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="margin: 5px;">Change Profile Picture</button>';
+
+                                echo '
+                                <button class="btn btn-danger" data-toggle="modal" data-target="#myModal1" style="margin: 5px;">Delete My Profile Picture</button>';
                             }
                         ?>
-                        
+
                     </div>
-                                
+
                 </div>
 
             </div>
@@ -198,7 +278,7 @@ if(isset($_POST["uploadPicture"])) {
         <br /><br />
 
     </section>
-   
+
 </main>
 
 <input type="checkbox" id="mobile-bars-check" />
@@ -227,9 +307,36 @@ if(isset($_POST["uploadPicture"])) {
                 <label for="">First Name: </label>
                 <input type="file" name="image" id="image" required class="form-control">
             </div>
-            
+
 
             <input type="submit" class="btn btn-success" id="submit" name="uploadPicture" value="Submit">
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Modal 1 -->
+<div id="myModal1" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Are you sure you want to delete your Profile Picture?</h4>
+      </div>
+      <div class="modal-body">
+      <form method="post" enctype="multipart/form-data">
+
+            <input type="button" class="btn btn-primary" id="submit" name="" value="No">
+            <input type="submit" class="btn btn-danger" id="submit" name="deleteProfilePicture" value="Yes">
 
         </form>
       </div>
@@ -245,3 +352,6 @@ if(isset($_POST["uploadPicture"])) {
 </body>
 
 </html>
+
+<script  type="text/javascript" src="js/sidebar.js"></script>
+<script type="text/javascript" src="js/newDashboard.js"></script>

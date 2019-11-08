@@ -249,9 +249,7 @@
         dataRow = Array.from(dataRow)
     
         if(dataRow.indexOf(e.target.parentElement) >= 0){
-            if (screen.width <= 860){  
-                document.getElementById("details-section").style.left = 0;
-            }
+            document.getElementById("details-section").classList.add('activated');
             document.getElementById("no-intern").innerHTML = "";
             navigator.classList.add('active');
             row = dataRow.indexOf(e.target.parentElement) + 1;
@@ -292,7 +290,7 @@
 
 
   body.addEventListener('click',(e)=>{
-      console.log(true)
+     
     const overlay = document.querySelector('#overlay');
     const exportModal = document.querySelector('#export-modal');
     const photo = document.querySelector('#photo')
@@ -320,7 +318,7 @@
                 }, 2000)
             }
         }else if(e.target.tagName === 'TD'){
-            console.log('I came here')
+            
             iterateRow(e)
             
         }else if(e.target.classList.contains("right")){
@@ -343,23 +341,21 @@
             }
             
         }else if(e.target.className === "details-back"){
-            document.getElementById("details-section").style.left = "105vw"
+            document.getElementById("details-section").classList.remove('activated');
         }
-        console.log(e.target.id)
+        
 
   })
 
 
 window.addEventListener("resize", e => 
 {
-	if (screen.width >= 860){
-        document.getElementById("details-section").style.left = "77vw"
-    }else{
-        document.getElementById("details-section").style.left = "105vw"
+	if (screen.width > 860){
+            
+            document.getElementById("details-section").classList.remove('activated');
+    
     }
 })
-
-
 
 
 
