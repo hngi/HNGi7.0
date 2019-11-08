@@ -370,7 +370,7 @@ function readURL(input) {
               <select name="employment_status" type="text" class="form-control mt-2" id="validationCustom10" placeholder="What is your current employment status?" required value="<?php if (isset($_POST['employment_status'])) {
                                                                                                                                                                                       echo $_POST['employment_status'];
                                                                                                                                                                                     } ?>" maxlength="15">
-                <option value="Employee">Employed</option>
+                <option value="Employed">Employed</option>
                 <option value="Self-employed">Self-employed</option>
                 <option value="Freelance">Freelance</option>
                 <option value="Unemployed">Unemployed</option>
