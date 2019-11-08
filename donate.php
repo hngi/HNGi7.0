@@ -97,7 +97,24 @@
 
     <section class="banner form" id="form">
       <h3 class="title">Donate Today</h3>
-      <form action="" id="actualForm">
+       <form action="" id="actualForm">
+        <input
+          type="text"
+          name="ame"
+          placeholder="Enter Name"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter Email address"
+          required
+        />
+        <input
+          type="number"
+          name="phonenumber"
+          placeholder="Enter Phone number"
+        />
         <input
           type="number"
           name="amount"
@@ -110,6 +127,7 @@
           <option value="women">Women</option>
           <option value="disabled">Disabled</option>
         </select>
+        
         <input type="submit" /> <br>
         <form>
           <script src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
@@ -132,7 +150,24 @@
           placeholder="What do you want to donate"
           required
         />
-        <input type="email" name="email" placeholder="Email address" required />
+        <input
+          type="text"
+          name="Name"
+          placeholder="Enter Name"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter Email address"
+          required
+        />
+        <input
+          type="number"
+          name="phonenumber"
+          placeholder="Enter Phone number"
+        />
+        
         <label for="group">To which group?</label>
         <select name="group">
           <option value="all">All</option>
