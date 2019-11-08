@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3340ae33-6e59-49ef-aaf7-8ef2d89eda61" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pending_mentors.php" beforeDir="false" afterPath="$PROJECT_DIR$/pending_mentors.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edit_sponsor.php" beforeDir="false" afterPath="$PROJECT_DIR$/edit_sponsor.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +21,7 @@
           <entry key="gitignore" value="4" />
           <entry key="html" value="1" />
           <entry key="js" value="3" />
-          <entry key="php" value="31" />
+          <entry key="php" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -29,7 +29,7 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="1" />
           <entry key="JavaScript" value="3" />
-          <entry key="PHP" value="31" />
+          <entry key="PHP" value="32" />
           <entry key="PLAIN_TEXT" value="4" />
         </counts>
       </usages-collector>
@@ -38,14 +38,14 @@
           <entry key="css" value="43" />
           <entry key="gitignore" value="51" />
           <entry key="js" value="32" />
-          <entry key="php" value="4093" />
+          <entry key="php" value="4097" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="43" />
           <entry key="JavaScript" value="32" />
-          <entry key="PHP" value="4093" />
+          <entry key="PHP" value="4097" />
           <entry key="PLAIN_TEXT" value="51" />
         </counts>
       </usages-collector>
@@ -121,11 +121,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pending_mentors.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="69" selection-start-line="16" selection-start-column="69" selection-end-line="16" selection-end-column="69" />
+            <state relative-caret-position="127">
+              <caret line="24" column="66" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/edit_sponsor.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="127" column="109" selection-start-line="127" selection-start-column="109" selection-end-line="127" selection-end-column="109" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#form#0;n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -170,10 +182,16 @@
       <find>apply</find>
       <find>email</find>
       <find>updateM</find>
+      <find>canc</find>
+      <find>cancle</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;div class=&quot;form-group&quot;&gt;</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>C:\wamp\www\freelance\hng6\HNGi7.0\classControllers</dir>
+      <dir>C:\wamp\www\freelance\hng6\HNGi7.0</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -199,6 +217,7 @@
         <option value="$PROJECT_DIR$/classControllers/Mentors.php" />
         <option value="$PROJECT_DIR$/edit_mentor.php" />
         <option value="$PROJECT_DIR$/pending_mentors.php" />
+        <option value="$PROJECT_DIR$/edit_sponsor.php" />
       </list>
     </option>
   </component>
@@ -290,17 +309,18 @@
       <workItem from="1573056368276" duration="3051000" />
       <workItem from="1573131028208" duration="760000" />
       <workItem from="1573136350258" duration="499000" />
-      <workItem from="1573199257455" duration="13125000" />
+      <workItem from="1573199257455" duration="13431000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29198000" />
+    <option name="totallyTimeSpent" value="29504000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26399395" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26399395" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -313,7 +333,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.37308347" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.37308347" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="RNConsole" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -552,8 +572,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pending_mentors.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="69" selection-start-line="16" selection-start-column="69" selection-end-line="16" selection-end-column="69" />
+        <state relative-caret-position="127">
+          <caret line="24" column="66" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit_sponsor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="127" column="109" selection-start-line="127" selection-start-column="109" selection-end-line="127" selection-end-column="109" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#form#0;n#div#0;n#div#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
