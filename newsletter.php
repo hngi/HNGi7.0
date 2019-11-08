@@ -38,7 +38,7 @@
         </div> 
         <div class="para">
           <p>Originally published Mar 3, 2019 10:30:00 PM, updated July 23 2019.</p>
-          <button> <a href="learnmore.php" class="button">READ MORE</a></button>
+          <button> <a href="learnmore" class="button">READ MORE</a></button>
         </div>
 
         </div>
@@ -55,7 +55,7 @@
         </div>   
         <div class="para">
                 <p>Originally published Mar 3, 2019 10:30:00 PM, updated July 23 2019.</p>
-                <button> <a href="learnmore.php" class="button">READ MORE</a></button>
+                <button> <a href="learnmore" class="button">READ MORE</a></button>
         </div>
 
         </div>
@@ -73,7 +73,7 @@
         </div>   
         <div class="para">
                 <p>Originally published Mar 3, 2019 10:30:00 PM, updated July 23 2019.</p>
-                <button> <a href="learnmore.php" class="button">READ MORE</a></button>
+                <button> <a href="learnmore" class="button">READ MORE</a></button>
         </div>
         </div>
 
@@ -92,7 +92,7 @@
         </div> 
         <div class="para">
           <p>Originally published Mar 3, 2019 10:30:00 PM, updated July 23 2019.</p>
-          <button> <a href="learnmore.php" class="button">READ MORE</a></button>
+          <button> <a href="learnmore" class="button">READ MORE</a></button>
         </div>
 
         </div>
@@ -109,7 +109,7 @@
         </div>   
         <div class="para">
                 <p>Originally published Mar 3, 2019 10:30:00 PM, updated July 23 2019.</p>
-                 <a href="learnmore.php" class="button">READ MORE</a>
+                 <a href="learnmore" class="button">READ MORE</a>
         </div>
 
         </div>
@@ -127,7 +127,7 @@
         </div>   
         <div class="para">
                 <p>Originally published Mar 3, 2019 10:30:00 PM, updated July 23 2019.</p>
-                <button> <a href="learnmore.php" class="button">READ MORE</a></button>
+                <button> <a href="learnmore" class="button">READ MORE</a></button>
         </div>
         </div>
 

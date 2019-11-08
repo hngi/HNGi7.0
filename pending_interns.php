@@ -95,8 +95,8 @@
             <!-- <h1>Dashboard</h1> -->
             <h2 class="heading">Pending Interns </h2>
             <div class="intern-buttons">
-                <a href="registered_interns.php" class="btn btn-default">Active Interns</a>
-                <a href="declined_interns.php" class="btn btn-default">Declined Interns</a>
+                <a href="registered_interns" class="btn btn-default">Active Interns</a>
+                <a href="declined_interns" class="btn btn-default">Declined Interns</a>
             </div>
             <!-- <section id="intern-section">
 				Populated by `js/dashboard.js`

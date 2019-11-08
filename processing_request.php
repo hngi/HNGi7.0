@@ -87,8 +87,8 @@ if ($status) {
 
       <h2 class="cert processing heading">Processing Certificate Request </h2>
       <div class="mentor-buttons certificate">
-        <a href="pending_request.php" class="btn btn-default">Pending Request</a>
-        <a href="finished_request.php" class="btn btn-default">Finished Request</a>
+        <a href="pending_request" class="btn btn-default">Pending Request</a>
+        <a href="finished_request" class="btn btn-default">Finished Request</a>
       </div>
       <!-- <section id="intern-section">
             Populated by `js/dashboard.js`

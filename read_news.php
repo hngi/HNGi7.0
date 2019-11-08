@@ -51,7 +51,7 @@ if(!is_array($the_news)){
     </div>
     <hr>
     <div>
-        <a href="newsletter_history.php"><h6>Back to News Update Archive</h6></a>
+        <a href="newsletter_history"><h6>Back to News Update Archive</h6></a>
         
     </div>
 </div>

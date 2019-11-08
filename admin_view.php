@@ -98,7 +98,7 @@ if (isset($_GET["editAdminId"])) {
 
  <div class="admin__button">
   
-  <a href="admins.php">
+  <a href="admins">
    <button class="btn btn-lg btn-primary">All Admins</button>
   </a>
   <span class="ml-2 badge">
