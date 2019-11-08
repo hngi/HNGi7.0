@@ -64,7 +64,7 @@ class Intern
                         <td>' . $row["employment_status"] . '</td>
                         <td>' . $row["about"] . '</td>
                         <td>' . $row["timestamp"] . '</td>
-                        <td>'  .'<a href="registered_interns.php?rejectInternId=' . $row["intern_id"] . '" class="btn btn-danger btn-sm" style="margin-right:5px;">Deactivate</a>' . '</td>
+                        <td>'  .'<a href="edit_interns.php?id=' . $row["intern_id"] . '" class="btn btn-info btn-sm" style="margin-right:5px;">Edit</a> <a href="registered_interns.php?rejectInternId=' . $row["intern_id"] . '" class="btn btn-danger btn-sm" style="margin-right:5px;">Deactivate</a>' . '</td>
 
                     </tr>';
             }
