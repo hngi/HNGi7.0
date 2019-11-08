@@ -4,7 +4,7 @@
     $interns = new Intern;
 
     if(!isset($_SESSION["role"])) {
-        header('Location:login.php'); 
+        header('Location:login'); 
     }
 
     if(isset($_GET["deleteInternId"])) {

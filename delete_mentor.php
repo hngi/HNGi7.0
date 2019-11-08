@@ -4,7 +4,7 @@
     $mentors = new Mentor;
 
     if(!isset($_SESSION["role"])) {
-        header('Location:login.php'); 
+        header('Location:login'); 
     }
 
     if(isset($_GET["deleteMentorId"])) {

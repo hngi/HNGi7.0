@@ -4,7 +4,7 @@ require_once 'classControllers/init.php';
 
 
 if(!isset($_SESSION["role"])) {
-    header('Location:login.php');
+    header('Location:login');
 }
 
 $adminId = $_SESSION["admin_id"];

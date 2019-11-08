@@ -3,7 +3,7 @@ require_once "classControllers/init.php";
 $sponsor = new sponsors;
 
 if (!isset($_SESSION["role"])) {
-  header('Location:login.php');
+  header('Location:login');
 }
 
 

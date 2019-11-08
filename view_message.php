@@ -2,7 +2,7 @@
 require 'classControllers/init.php';
 // check if session is set
 if(!isset($_SESSION["role"])) {
-	header('Location:login.php'); 
+	header('Location:login'); 
 }
 
 if(!isset($_GET['id'])){
