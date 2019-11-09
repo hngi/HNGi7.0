@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Open+Sans:400,700,800&display=swap');
+
 
 body {
 	font-family: 'Open sans', sans-serif;
@@ -91,7 +92,7 @@ button {
 	padding: 10px;
 	margin-bottom: 20px;
 	border-radius: 2px;
-	box-shadow: -1px 3px 5px 0px rgb(153, 153, 153);
+	box-shadow: -1px 2px 25px -4px rgb(197, 197, 197);
 	transition: 100ms;
 }
 
@@ -99,11 +100,13 @@ button:hover {
 	color: #00aeff;
 	background-color: #fff;
 	border: 2px solid #00aeff;
+	background-position: 0 0;
 }
+
+/*
 
 .loginWithGoogle {
 	display: block;
-	margin: 15px auto;
 }
 
 .loginWithGoogle a {
@@ -117,6 +120,55 @@ button:hover {
 	padding-right: 10px;
 	font-size: 1.6em;
 }
+
+*/
+
+.g-auth {
+	background-color: #ffffff;
+	display: grid;
+	grid-template-columns: 20% auto;
+	border: 2px solid transparent;
+	width: 100%;
+	cursor: pointer;
+	box-shadow: -1px 2px 25px -4px rgba(209,209,209,1);
+}
+
+.g-auth:hover {
+	box-shadow: -1px 2px 25px -4px rgb(179, 179, 179);
+	color:  rgb(53, 52, 52);
+}
+
+.auth-text {
+	position: relative;
+	top: 8px;
+	color: #d3d3d3;
+	font-family: Roboto;
+}
+
+.auth-text a {
+	color: rgb(134, 134, 134);
+	margin-right: 50px;
+	text-align: center;
+}
+
+.auth-icon {	
+	position: relative;
+	top: 8px;
+	height: 42px;
+	width: 42px;
+}
+
+.auth-icon img {
+	max-width: 20px;
+	max-height: 20px;
+}
+
+@media screen and (max-width:338px) {
+	.auth-text a {
+		font-size: 14px;
+	}
+}
+
 
 @media screen and (min-width: 315px) and (max-width: 700px) {
 	.form-container {

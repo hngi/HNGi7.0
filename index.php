@@ -44,7 +44,7 @@
                                 It’s the bridge between learning to code, and becoming the best in the world.
                             </p>
                             <button class="cta-button button--midBlue" id="buttt">
-                                <a href="join-intern.php" id="butt">Get Started</a>
+                                <a href="join-intern" id="butt">Get Started</a>
                             </button>
                         </div>
                         <div class="image-column desktop-only">
@@ -149,7 +149,7 @@
                                         using their laptop. Each week we give tasks.
                                     </p>
                                     <button class="cta-button button--midBlue" id="">
-                                        <a href="join-intern.php">Get Started</a>
+                                        <a href="join-intern">Get Started</a>
                                     </button>
                                 </div>
                                 <div class="half-a-row">
@@ -195,7 +195,7 @@
                                         (there is no entrance exam). Anyone can log into the internship
                                         using their laptop. Each week we give tasks.</p>
                                     <button class="cta-button button--midBlue" id="buttt">
-                                        <a href="join-intern.php">Get Started</a>
+                                        <a href="join-intern">Get Started</a>
                                     </button>
                                 </div>
                             </div>
@@ -215,7 +215,7 @@
 
 
                             <button class="cta-button button--midBlue">
-                                <a href="join-intern.php">Get Started</a>
+                                <a href="join-intern">Get Started</a>
                             </button>
                         </div>
 
@@ -285,6 +285,29 @@
                             </div>
                             <div class="row" data-aos="fade-right">
                                 <div class="col-2">
+                                    <img src="https://res.cloudinary.com/alfredpison/image/upload/v1573055195/output-onlinepngtools_1_1_jc3fbe.png"
+                                        width="50px" class="img-fluid">
+                                </div>
+                                <div class="col-10">
+                                    <h5>ORACLE JET</h5>
+                                    <P>Develop client-side applications with the powerful Oracle Jet
+                                        interacting with Oracle products and services, especially Oracle Cloud services.
+                                        </P>
+                                </div>
+                            </div>
+                            <div class="row" data-aos="fade-right">
+                                <div class="col-2">
+                                    <img src="https://res.cloudinary.com/alfredpison/image/upload/v1573053633/phone_iphone-24px_1_k9trnt.png"
+                                        width="50px" class="img-fluid">
+                                </div>
+                                <div class="col-10">
+                                    <h5>MOBILE</h5>
+                                    <P>Develop world class Mobile applications and optimize functionality and user experience on mobile devices.
+                                        </P>
+                                </div>
+                            </div>
+                            <div class="row" data-aos="fade-right">
+                                <div class="col-2">
                                     <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/dm_bxzzr2.png"
                                         width="50px" class="img-fluid">
                                 </div>
@@ -313,6 +336,10 @@
                                             <li>Javascript</li>
                                             <li>Bootstrap</li>
                                             <li>JQuery</li>
+                                            <li>Vue</li>
+                                            <li>ReactJs</li>
+                                            <li>Oracle JET</li>
+                                            <li>Angular</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -326,7 +353,6 @@
                                         <ul class="accordion_tab">
                                             <li>PHP</li>
                                             <li>Python</li>
-                                            <li>Ruby on Rails</li>
                                             <li>Node.js</li>
                                             <li>Laravel</li>
                                             <li>Apache</li>
@@ -370,6 +396,36 @@
                                         </ul>
                                     </div>
                                 </div>
+                                <div class="card" id="card2">
+                                    <h2 class="card-header">
+                                        <img
+                                            src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
+                                        <a> Oracle Jet </a>
+                                    </h2>
+                                    <div class="card-body">
+                                        <ul class="accordion_tab">
+                                            <li>Knockout JS</li>
+                                            <li>Require JS</li>
+                                            <li>Jquery</li>
+                                            <li>Cordova</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card" id="card2">
+                                    <h2 class="card-header">
+                                        <img
+                                            src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
+                                        <a> Mobile </a>
+                                    </h2>
+                                    <div class="card-body">
+                                        <ul class="accordion_tab">
+                                            <li>IOS</li>
+                                            <li>Andriod</li>
+                                            <li>Windows</li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
                                 <div class="card" id="card4">
                                     <h2 class="card-header">
                                         <img
@@ -402,7 +458,7 @@
                         <div class="mentor-image">
                             <img src="https://res.cloudinary.com/joshuafolorunsho/image/upload/c_scale,w_200/v1572870951/20191103_165148_auawdc-min.jpg">
                             <p class="font-weight-bold">Seyi Onifade</p>
-                            <p>Devops and CEO, HNG Tech</p>
+                            <p> </p>
                         </div>
                         <div class="mentor-image">
                             <img src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572871094/foutw9umk4hcfntupffn.jpg">
@@ -422,7 +478,7 @@
                     </section>
                     <div>
                         <button class="button--midBlue cta-button" id="mentorButton">
-                            <a href="mentorpage.php">See more</a>
+                            <a href="mentorpage">See more</a>
                         </button>
                     </div>
                     </div>
@@ -447,7 +503,7 @@
                                 </p>
 
                                 <div>
-                                    <a href="hng6.php">
+                                    <a href="hng6">
                                         <i class="fa fa-angle-right "></i>Learn more</a>
                                 </div>
 
@@ -475,7 +531,7 @@
                                 </h4>
                                 <span class="support__item-link">
                                     <i class="fa fa-chevron-circle-right"></i>
-                                    <a href="donate.php" class="text-light">Get Started</a>
+                                    <a href="donate" class="text-light">Get Started</a>
                                 </span>
                             </div>
                         </div>
@@ -489,7 +545,7 @@
                                 </h4>
                                 <span class="support__item-link">
                                     <i class="fa fa-chevron-circle-right"></i>
-                                    <a href="donate.php" class="text-light">Get Started</a>
+                                    <a href="donate" class="text-light">Get Started</a>
                                 </span>
                             </div>
                         </div>
@@ -503,7 +559,7 @@
                                 </h4>
                                 <span class="support__item-link">
                                     <i class="fa fa-chevron-circle-right"></i>
-                                    <a href="donate.php" class="text-light">Get Started</a>
+                                    <a href="donate" class="text-light">Get Started</a>
                                 </span>
                             </div>
                         </div>
@@ -538,7 +594,7 @@
                             <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg">                    </div>
                     </div>
                     <button class="cta-button button--midBlue">
-                        <a href="donate.php" class="text_center">Become Sponsor</a>
+                        <a href="donate" class="text_center">Become Sponsor</a>
                     </button>
                     </div>
 
@@ -591,5 +647,6 @@
     })
     }
 </script>
+<?php include('fragments/chat.php'); ?>
 </body>
 </html>

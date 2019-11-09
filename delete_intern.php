@@ -4,7 +4,7 @@
     $interns = new Intern;
 
     if(!isset($_SESSION["role"])) {
-        header('Location:admin_login.php'); 
+        header('Location:login'); 
     }
 
     if(isset($_GET["deleteInternId"])) {
@@ -31,7 +31,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Delete Intern</title>
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+   
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -42,6 +43,7 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
+    <link href="css/dashboard.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
     <style type="text/css">
         .card {
             height: 150px;
@@ -60,37 +62,37 @@
             <?php 
                 if($_SESSION["role"] != 1) {
                     echo '<h2><br><br><br>Sorry, You do not have the priviledge to view this page</p>';
-                    echo '<h3><a href="dashboard.php">Dashboard</a></h3>';
+                    echo '<h3><a href="dashboard">Dashboard</a></h3>';
                     exit();
                 }
             ?>
             <!-- <h1>Dashboard</h1> -->
             <br><br><br>
-            <h2> Confirm Delete Intern </h2>
+            <h2 class="del-intern-title"> Confirm Delete Intern </h2>
             <!-- <section id="intern-section">
                 Populated by `js/dashboard.js` 
             </section> -->
 
-            <div class="container">
+            <div >
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-9 confirm-div">
 
-                        <div>
-                            <div class="col-md-12">
+                        <div id="del-message">
+                            <div class="col-md-12 confirm text-warning">
                                 <h4>Are you sure you want to delete Intern with the following details?</h4>
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="row del-intern confirm-name">
                             <div class="col-md-3">
                                 <h4>Name</h4>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 ">
                                 <h4><?php echo $res["name"]; ?></h4>
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="row del-intern confirm-email">
                             <div class="col-md-3">
                                 <h4>Email</h4>
                             </div>
@@ -99,7 +101,7 @@
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="row del-intern confirm-phone">
                             <div class="col-md-3">
                                 <h4>Phone</h4>
                             </div>
@@ -108,13 +110,13 @@
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-md-3">
+                        <div class="row del-intern confirm-buttons">
+                            <!-- <div class="col-md-3">
                                 &nbsp;
-                            </div>
+                            </div> -->
                             <div class="col-md-6">
-                                <a href="registered_interns.php"><button class="btn btn-primary">No, Cancel</button></a>
-                                <a href="delete_intern.php?yesDeleteId=<?php echo $id; ?>"><button class="btn btn-danger">Yes, Delete</button></a>
+                                <a href="registered_interns"><button class="btn btn-primary">No, Cancel</button></a>
+                                <a href="delete_intern.php?yesDeleteId=<?php echo $id; ?>"><button class="btn btn-danger yes">Yes, Delete</button></a>
                             </div>
                         </div>
 
@@ -158,5 +160,5 @@
 
 </body>
 </html>
-
+<script  type="text/javascript" src="js/sidebar.js"></script>
 <script type="text/javascript" src="js/dashboard.js"></script>

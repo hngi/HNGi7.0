@@ -1,7 +1,7 @@
 <?php
 require 'classControllers/init.php';
 if (!isset($_SESSION["role"])) {
-    header('Location:admin_login.php');
+    header('Location:login');
 }
 $mentors = new Mentor;
 $display = $mentors->declinedMentors();
@@ -48,6 +48,24 @@ if (isset($_GET['rejectMentorId'])) {
             padding: 10px;
             border-radius: 15px;
         }
+
+        @media (max-width: 320px){
+     .heading{
+
+      width: 180px;
+      margin-left: 50px !important;
+      margin-right: auto !important;
+      text-align: center !important;
+     }
+
+     .searchBox {
+      margin-top: 70px;
+     }
+
+     .fa-search{
+      margin-top: 10px;
+     }
+    }
     </style>
 
 </head>
@@ -68,10 +86,10 @@ if (isset($_GET['rejectMentorId'])) {
         <input type="text" class="searchBox"><i class="fas fa-search"></i>
         <section id="overview-section">
             <!-- <h1>Dashboard</h1> -->
-            <h2>Declined Mentors </h2>
+            <h2 class="heading">Declined Mentors </h2>
             <div class="mentor-buttons">
-                <a href="registered_mentors.php" class="btn btn-default">Active Mentors</a>
-                <a href="pending_mentors.php" class="btn btn-default">Pending Mentors</a>
+                <a href="registered_mentors" class="btn btn-default">Active Mentors</a>
+                <a href="pending_mentors" class="btn btn-default">Pending Mentors</a>
             </div>
             <!-- <section id="intern-section">
 				Populated by `js/dashboard.js`

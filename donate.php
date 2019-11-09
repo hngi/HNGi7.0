@@ -44,7 +44,7 @@
         finding and nurturing talent.
       </p>
       <a href="#form" class="button-primary">Donate</a>
-      <a href="newsponsor.php" class="button-primary">Register as Sponsor(Brand)</a>
+      <a href="newsponsor" class="button-primary">Register as Sponsor(Brand)</a>
 
     </div>
 
@@ -97,7 +97,24 @@
 
     <section class="banner form" id="form">
       <h3 class="title">Donate Today</h3>
-      <form action="" id="actualForm">
+       <form action="" id="actualForm">
+        <input
+          type="text"
+          name="ame"
+          placeholder="Enter Name"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter Email address"
+          required
+        />
+        <input
+          type="number"
+          name="phonenumber"
+          placeholder="Enter Phone number"
+        />
         <input
           type="number"
           name="amount"
@@ -110,9 +127,13 @@
           <option value="women">Women</option>
           <option value="disabled">Disabled</option>
         </select>
+        
         <input type="submit" /> <br>
-        <a href="quickdonation.php">Donate via Flutter</a>
-        <a href="newsponsor.php">Register as Sponsor(Brand)</a>
+        <form>
+          <script src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
+          <button onClick="payWithRave()" class="transparent-btn" style="background-color: transparent; color:#007bff; background-repeat:no-repeat; border: none; cursor:pointer; overflow: hidden; outline:none;">Donate via Flutter</button>
+        </form>
+        <a href="newsponsor">Register as Sponsor(Brand)</a>
        
       </form>
     </section>
@@ -129,7 +150,24 @@
           placeholder="What do you want to donate"
           required
         />
-        <input type="email" name="email" placeholder="Email address" required />
+        <input
+          type="text"
+          name="Name"
+          placeholder="Enter Name"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter Email address"
+          required
+        />
+        <input
+          type="number"
+          name="phonenumber"
+          placeholder="Enter Phone number"
+        />
+        
         <label for="group">To which group?</label>
         <select name="group">
           <option value="all">All</option>
@@ -161,6 +199,7 @@
     </section>     
     <?php include "fragments/site_footer.php" ?>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <?php include('fragments/chat.php'); ?>
   </body>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/main.js"></script>
@@ -175,4 +214,40 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>    <script src="./js/scroll-to-top.js"></script> 
+
+    <!-- rave payment -->
+    <script>
+    const API_publicKey = "FLWPUBK_TEST-2c7dd09d63d44deae5cbf3e9728aa289-X";
+
+    function payWithRave() {
+        var x = getpaidSetup({
+            PBFPubKey: API_publicKey,
+            customer_email: "user@example.com",
+            amount: 2000,
+            customer_phone: "234099940409",
+            currency: "NGN",
+            txref: "rave-123456",
+            meta: [{
+                metaname: "flightID",
+                metavalue: "AP1234"
+            }],
+            onclose: function() {},
+            callback: function(response) {
+                var txref = response.tx.txRef; // collect txRef returned and pass to a          server page to complete status check.
+                console.log("This is the response returned after a charge", response);
+                if (
+                    response.tx.chargeResponseCode == "00" ||
+                    response.tx.chargeResponseCode == "0"
+                ) {
+                    // redirect to a success page
+                } else {
+                    // redirect to a failure page.
+                }
+
+                x.close(); // use this to close the modal immediately after payment.
+            }
+        });
+    }
+</script>
+
 </html>

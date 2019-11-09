@@ -123,6 +123,7 @@ h1
 	.prime-table td:nth-child(9) {
 		display: inline;
 		box-sizing: border-box;
+		border:none;
 	}
 	.btn-success {
 		margin-left: 36%;
@@ -378,7 +379,7 @@ h1
 	left: 0;
 	top: 0;
 	z-index: 1;
-	height: 100vh;
+	min-height: 100vh;
 	width: 15vw;
 	padding-top: 1.5rem;
 }
@@ -464,6 +465,43 @@ h1
 	text-decoration: none;
 	font-size: 16px;
 }
+.col-md-9.confirm-div{
+	
+	/* border: 1px solid red; */
+	margin-left: 10%;
+}
+
+.row.del-intern{
+	margin-bottom: 10px; 
+}
+.row.del-intern .col-md-3 h4,
+.del-intern-title{
+	font-weight: bold;
+	
+}
+div#del-message{
+	margin-bottom: 12px;
+}
+.col-md-12.confirm{
+	padding-left: 0;
+
+}
+
+.del-intern-title{
+	margin-left: 10%;
+	width: 75%;
+}
+
+.row.del-intern:last-child
+{
+	margin-top: 20px;
+	/* border: 1px solid blue; */
+}
+.yes{
+    margin-left: 1em;
+}
+
+
 /* AuGhost Touches */
 
 
@@ -480,6 +518,7 @@ h1
 }
 
 */
+
 @media (min-width:860px) and (max-width:1076px){
 
 	#sidebar .badger #admin-badge{
@@ -487,6 +526,13 @@ h1
 		text-align: left;
 	}
 
+}
+
+@media (max-width:992px){
+	.del-intern-title{
+		text-align: left;
+		
+	}
 }
 @media (max-width: 860px)
 {
@@ -501,7 +547,7 @@ h1
 	}
 	#overview-section
 	{
-		margin: 0 2rem;
+		margin: 0 auto;
 		width: 90vw;
 	}
 	#overview-section h1,#overview-section h2 {
@@ -566,6 +612,7 @@ h1
 		transition: 0.4s ease-out;
 		z-index: 5;
 		padding-top: 4rem;
+		position: fixed;
 	}
 	#sidebar a
 	{
@@ -583,6 +630,8 @@ h1
         display: block;
         margin-left: 40vw;
         z-index: 10;
+        padding-top: 3px;
+        padding-left: 3px;
     }
     #mobile-bars-check:checked ~ #mobile-bars > #stik1
     {
@@ -603,7 +652,47 @@ h1
     #mobile-bars-check:checked ~ #sidebar
     {
         left: 0;
-    }
+	}
+	.col-md-9.confirm-div{
+		margin-left: 0;
+	}
+
+	.row.del-intern{
+		/* border: 1px solid blue; */
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 10px;
+
+	}
+	.row.del-intern .col-md-3 h4,
+	.del-intern-title{
+		font-weight: bold;
+		
+	}
+	div#del-message{
+		margin-bottom: 12px;
+	}
+	.col-md-12.confirm{
+		padding-left: 0;
+		padding-right: 0;
+		
+		display: grid;
+		justify-content: center;
+		
+		/* border: 1px solid green; */
+	}
+	.col-md-12.confirm h4{
+		text-align: center;
+		
+	}
+	.del-intern-title{
+		margin-left: 0%;
+		width: 100%;
+	}
+	
 }
 
 
@@ -673,7 +762,7 @@ h1
 }
 .submenu a{
     display: block;
-    padding: 16px 26px;
+    padding: 10px 26px;
     color: white;
     font-size: 14px;
     margin: 4px 0;
@@ -729,4 +818,3 @@ h1
 		width: 75vw;
 	}
 }
-

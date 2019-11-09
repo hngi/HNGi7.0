@@ -179,16 +179,107 @@
                     </div>
 
                 </div>
+    <div class="card">
+                    <div class="card-header" id="headingSeven">
+                        <h2 class="mb-0">
+                                <button class="btn btn-link collapsed"
+                                data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false"
+                                aria-controls="collapseSeven">
+                                Will i be employed by HNG after the internship?
+                                <span class="fa-stack fa-sm">
+                                        <i class="fas fa-angle-down"></i>
+                                </span>
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+                        <div class="card-body">
+                            <p class="text-muted">
+                            Numerous job opportunities will be offered for those who make it to the final stage.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+    <div class="card">
+                    <div class="card-header" id="headingEight">
+                        <h2 class="mb-0">
+                                <button class="btn btn-link collapsed"
+                                data-toggle="collapse" data-target="#collapseEight" aria-expanded="false"
+                                aria-controls="collapseEight">
+                                Do i get to have a personal mentor?
+                                <span class="fa-stack fa-sm">
+                                        <i class="fas fa-angle-down"></i>
+                                </span>
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+                        <div class="card-body">
+                            <p class="text-muted">
+                            Mentors can be contacted privately for guidance during the internship.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+    <div class="card">
+                    <div class="card-header" id="headingNine">
+                        <h2 class="mb-0">
+                                <button class="btn btn-link collapsed"
+                                data-toggle="collapse" data-target="#collapseNine" aria-expanded="false"
+                                aria-controls="collapseNine">
+                                How often do we build new projects?
+                                <span class="fa-stack fa-sm">
+                                        <i class="fas fa-angle-down"></i>
+                                </span>
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
+                        <div class="card-body">
+                            <p class="text-muted">
+                            Every week new projects are assigned to interns as tasks to complete and present
+                            to be promoted to the next stage.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+    <div class="card">
+                    <div class="card-header" id="headingTen">
+                        <h2 class="mb-0">
+                                <button class="btn btn-link collapsed"
+                                data-toggle="collapse" data-target="#collapseTen" aria-expanded="false"
+                                aria-controls="collapseTen">
+                                Will mentors be available for physical mentorship
+                                <span class="fa-stack fa-sm">
+                                        <i class="fas fa-angle-down"></i>
+                                </span>
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion">
+                        <div class="card-body">
+                            <p class="text-muted">
+                            Meetups will be held where mentors around your region will be available to answer to any question.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
+
+
 
     <section class="freq-n">
         <div class="container">
             <div class="wrap" style="width: 100%;">
                 <div class="header mb-5">
                     <h3 class="text-center contact-heading">not a frequently asked question?<br />
-                        Contact Us <a href="contactform.php" class="btn contact-us">Here</a>
+                        Contact Us <a href="contactform" class="btn contact-us">Here</a>
                     </h3>
                 </div>
                 <!-- <form class="inputs-wrap">
@@ -206,6 +297,7 @@
 
     
     <?php include('fragments/site_footer.php'); ?>
+    <?php include('fragments/chat.php'); ?>
 </body>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/main.js"></script>
