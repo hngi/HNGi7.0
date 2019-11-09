@@ -187,7 +187,9 @@
 
         .gallery_items img {
             width: 100%;
-            height: auto;
+            height: 234px;
+            /* outline: 2px solid red !important; */
+            object-fit: cover;
             margin: 15px auto;
             transition: width 2s;
 

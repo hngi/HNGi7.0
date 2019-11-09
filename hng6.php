@@ -122,19 +122,19 @@ $countDownValues = $countdown->getDate();
                         <span>
                         <img
                             src="https://res.cloudinary.com/jaycodist/image/upload/v1570722558/gallery-first_gldujn.png">
-                   <p> A cross-section of the last meetup</p></span>
+                   <p>Panel sessions ongoing</p></span>
                    <span>
                         <img
-                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722589/gallery-second_nkrosi.png">
+                            src="https://res.cloudinary.com/dzfz6iwon/image/upload/v1573330175/images_2_ocj1df.jpg">
                     <p> Some of the HNG mentors & interns at the last meetup</p></span>
                     <span>
                         <img
-                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722618/gallery-third_oqgaiv.png">
-                            <p>Teaching sessions ongoing</p></span>
+                            src="https://res.cloudinary.com/dzfz6iwon/image/upload/v1573329961/images_6_wpsobk.jpg">
+                            <p>A cross-section of the last meetup</p></span>
                     <span>
                         <img
-                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722618/gallery-third_oqgaiv.png">
-                            <p>Teaching sessions ongoing</p></span>
+                            src="https://res.cloudinary.com/dzfz6iwon/image/upload/v1573329953/images_p4jcm4.jpg">
+                            <p>Some of the HNG mentors & interns at the last meetup</p></span>
                     </div>
                     <div class="gallery_items" id="hidden_images"  data-aos="fade-up">
                         <span>
@@ -155,24 +155,24 @@ $countDownValues = $countdown->getDate();
                        <p> Some of the HNG mentors at the last meetup</p></span>
                        <span>
                         <img
-                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722618/gallery-third_oqgaiv.png">
-                  <p> Teaching sessions ongoing</p></span>
+                            src="https://res.cloudinary.com/dzfz6iwon/image/upload/v1573329832/download_2_tgyq4c.jpg">
+                  <p> Some of the HNG mentors & interns at the last meetup</p></span>
                   <span>
                         <img
                             src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng5_qvzjfy.jpg">
                     <p> Some of the HNG mentors & interns at the last meetup</p></span>
                     <span>
                         <img
-                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722558/gallery-first_gldujn.png">
-                  <p> Panel sessions ongoing</p></span>
+                            src="https://res.cloudinary.com/dzfz6iwon/image/upload/v1573329996/images_1_leavxm.jpg">
+                  <p> Some of the interns at the last meetup</p></span>
                   <span>
                         <img
-                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722589/gallery-second_nkrosi.png">
+                            src="https://res.cloudinary.com/dzfz6iwon/image/upload/v1573329934/images_4_k5hdgs.jpg">
                   <p> Some of the HNG mentors & interns at the last meetup</p></span>
                   <span>
                         <img
-                            src="https://res.cloudinary.com/jaycodist/image/upload/v1570722589/gallery-second_nkrosi.png">
-                  <p> Some of the HNG mentors & interns at the last meetup</p></span>
+                            src="https://res.cloudinary.com/dzfz6iwon/image/upload/v1573329730/download_1_f8zp1i.jpg">
+                  <p> Some of the HNG mentors at the last meetup</p></span>
                     </div>
                 </section> <br>
                 <div  data-aos="fade-up">
