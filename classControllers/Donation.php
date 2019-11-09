@@ -26,4 +26,10 @@ class Donation
         $save = $this->db->query("INSERT INTO payments SET names = '$name', amount = '$amount', email = '$email', phone ='$phone', ref = '$ref'");
         return $ref;
     }
+
+    function all_donations(){ //Function to load all donations
+        $query = $this->db->query("SELECT * FROM payments ORDER BY id DESC");
+        $result = $query->fetch_all(MYSQLI_ASSOC);
+        return $result;
+    }
 }
