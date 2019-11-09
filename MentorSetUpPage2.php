@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($fileSize < 400000) {
           // rename image file
           $fileNameNew = uniqid('', true) . "." . $fileActualExt;
-          $fileDestination = 'uploads/' . $fileNameNew;
+          $fileDestination = '../uploads/' . $fileNameNew;
           if (move_uploaded_file($fileTmpName, $fileDestination)) {
 
             $mentor->area_of_expertise = $database->escape_string($area_of_expertise);
@@ -370,7 +370,7 @@ function readURL(input) {
               <select name="employment_status" type="text" class="form-control mt-2" id="validationCustom10" placeholder="What is your current employment status?" required value="<?php if (isset($_POST['employment_status'])) {
                                                                                                                                                                                       echo $_POST['employment_status'];
                                                                                                                                                                                     } ?>" maxlength="15">
-                <option value="Employee">Employed</option>
+                <option value="Employed">Employed</option>
                 <option value="Self-employed">Self-employed</option>
                 <option value="Freelance">Freelance</option>
                 <option value="Unemployed">Unemployed</option>

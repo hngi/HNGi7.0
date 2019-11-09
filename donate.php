@@ -44,7 +44,7 @@
         finding and nurturing talent.
       </p>
       <a href="#form" class="button-primary">Donate</a>
-      <a href="newsponsor.php" class="button-primary">Register as Sponsor(Brand)</a>
+      <a href="newsponsor" class="button-primary">Register as Sponsor(Brand)</a>
 
     </div>
 
@@ -133,7 +133,7 @@
           <script src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
           <button onClick="payWithRave()" class="transparent-btn" style="background-color: transparent; color:#007bff; background-repeat:no-repeat; border: none; cursor:pointer; overflow: hidden; outline:none;">Donate via Flutter</button>
         </form>
-        <a href="newsponsor.php">Register as Sponsor(Brand)</a>
+        <a href="newsponsor">Register as Sponsor(Brand)</a>
        
       </form>
     </section>

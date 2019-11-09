@@ -81,6 +81,7 @@
     <main class="reg">
     <div id="overlay"></div>
         <div id="export-modal">
+            <span class="close">&times;</span>
             <div>
                 <input type="radio" id="csv" name="exportOptions"><label for="csv">Export to CSV</label>
             </div>
@@ -95,8 +96,8 @@
             <!-- <h1>Dashboard</h1> -->
             <h2 class="heading">Declined Interns </h2>
             <div class="intern-buttons">
-                <a href="registered_interns.php" class="btn btn-default">Active Interns</a>
-                <a href="pending_interns.php" class="btn btn-default">Pending Interns</a>
+                <a href="registered_interns" class="btn btn-default">Active Interns</a>
+                <a href="pending_interns" class="btn btn-default">Pending Interns</a>
             </div>
             <!-- <section id="intern-section">
 				Populated by `js/dashboard.js`

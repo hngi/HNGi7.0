@@ -77,6 +77,7 @@ if (isset($_GET['rejectMentorId'])) {
     <main class="reg">
     <div id="overlay"></div>
         <div id="export-modal">
+            <span class="close">&times;</span>
             <div>
                 <input type="radio" id="csv" name="exportOptions"><label for="csv">Export to CSV</label>
             </div>
@@ -91,8 +92,8 @@ if (isset($_GET['rejectMentorId'])) {
             <!-- <h1>Dashboard</h1> -->
             <h2 class="heading">Pending Mentors </h2>
             <div class="mentor-buttons">
-                <a href="registered_mentors.php" class="btn btn-default">Active Mentors</a>
-                <a href="declined_mentors.php" class="btn btn-default">Declined Mentors</a>
+                <a href="registered_mentors" class="btn btn-default">Active Mentors</a>
+                <a href="declined_mentors" class="btn btn-default">Declined Mentors</a>
             </div>
             <!-- <section id="intern-section">
 				Populated by `js/dashboard.js`

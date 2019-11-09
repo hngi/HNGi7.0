@@ -20,7 +20,7 @@
     <header id="header">
         <!--Logo-->
         <section id="logo">
-            <a href="index.php"><img id="hng-logo"
+            <a href="index"><img id="hng-logo"
                     src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572768106/hng_logo-min.png" ></a>
         </section>
         <!--ends here-->
@@ -30,12 +30,12 @@
             <div class="nav_button_bar"></div>
         </section>
         <nav class="menu_bar" id="navMenu">
-            <a href="index.php" class="nav-link" id="home">Home</a>
-            <a href="hng6.php" class="nav-link">HNGi 6.0</a>
-            <a href="mentorpage.php" class="nav-link">Mentors</a>
-            <a href="contactform.php" class="nav-link">Contact</a>
-            <a href="login.php" class="nav-link">Login</a>
-            <a href="join-intern.php" class="nav-link primary-btn float_right">Join HNGi7.0</a>
+            <a href="index" class="nav-link" id="home">Home</a>
+            <a href="hng6" class="nav-link">HNGi 6.0</a>
+            <a href="mentorpage" class="nav-link">Mentors</a>
+            <a href="contactform" class="nav-link">Contact</a>
+            <a href="login" class="nav-link">Login</a>
+            <a href="join-intern" class="nav-link primary-btn float_right">Join HNGi7.0</a>
         </nav>
     </header>
 </div>

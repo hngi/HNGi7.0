@@ -61,7 +61,7 @@
             <?php 
                 if($_SESSION["role"] != 1) {
                     echo '<h2><br><br><br>Sorry, You do not have the priviledge to view this page</p>';
-                    echo '<h3><a href="dashboard.php">Dashboard</a></h3>';
+                    echo '<h3><a href="dashboard">Dashboard</a></h3>';
                     exit();
                 }
             ?>
@@ -114,7 +114,7 @@
                                 &nbsp;
                             </div> -->
                             <div class="col-md-6">
-                                <a href="registered_mentors.php"><button class="btn btn-primary">No, Cancel</button></a>
+                                <a href="registered_mentors"><button class="btn btn-primary">No, Cancel</button></a>
                                 <a href="delete_mentor.php?yesDeleteId=<?php echo $id; ?>"><button class="btn btn-danger yes">Yes, Delete</button></a>
                             </div>
                         </div>
