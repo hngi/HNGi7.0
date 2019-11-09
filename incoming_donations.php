@@ -89,14 +89,13 @@ if(!isset($_SESSION["role"])) {
             <table>
                 <tr>
                     <th>S/N</th>
-                    <th>NAME</th>
-                    <th>STATUS</th>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Status</th>
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td></td>
-                    <td></td>
-                </tr>
+
             </table>
         </div>
         <br /><br />
