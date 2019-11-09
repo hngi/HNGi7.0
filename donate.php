@@ -11,7 +11,7 @@
 
         $ref = $donation->pay("$amount","$name","$phone","$email");
 
-        $url = $_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST']."/verify_pay.php";
+        $url = "http://hngi7.hng.tech/donate.php";
 
 
         $curl = curl_init();
@@ -26,7 +26,7 @@
 
 
         curl_setopt_array($curl, array(
-            CURLOPT_URL => LIVE_POINT,
+            CURLOPT_URL => 'https://api.ravepay.co/flwv3-pug/getpaidx/api/v2/hosted/pay',
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_CUSTOMREQUEST => "POST",
             CURLOPT_POSTFIELDS => json_encode(
@@ -172,7 +172,7 @@
 
     <section class="banner form" id="form">
       <h3 class="title">Donate Today</h3>
-       <form action="" id="actualForm" method="post">
+       <form action="" id="actualForms" method="post">
         <input
           type="text"
           name="name"
@@ -186,7 +186,8 @@
           required
         />
         <input
-          type="tel"
+                required
+          type="text"
           name="phone"
           placeholder="Enter Phone number"
         />
@@ -197,7 +198,7 @@
           required
         />
         
-        <input type="submit" name="pay" value="1" /> <br>
+        <input type="submit" name="pay" value="Donate Now" /> <br>
         <form>
           <!--<script src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
           <button onClick="payWithRave()" class="transparent-btn" style="background-color: transparent; color:#007bff; background-repeat:no-repeat; border: none; cursor:pointer; overflow: hidden; outline:none;">Donate via Flutter</button>-->
@@ -212,7 +213,7 @@
       <p class="desc">
         Give anything you have that can make an intern's journey easier
       </p>
-      <form action="" id="actualSupportForm" method="post">
+      <form action="" id="actualSupportForms" method="post">
         <input
           type="text"
           name="amount"
@@ -237,7 +238,7 @@
           placeholder="Enter Phone number"
         />
           
-        <input type="submit" name="pay" />
+        <input type="submit" name="pay" value="Donate Now" />
       </form>
       
     </div>
