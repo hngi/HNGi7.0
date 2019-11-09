@@ -448,8 +448,14 @@ i:hover{
 	justify-self: center;
 	word-wrap: break-word;
 	width: 90%;
+	overflow-y: scroll;
+	height: 85%;
+	border: 1px solid red;
 }
 
+#cv a {
+	cursor: pointer;
+}
 
 @media (min-width:860px) and (max-width:992px){
 	#overview-section h2.cert.processing{
@@ -459,6 +465,10 @@ i:hover{
 }
 @media (max-width: 860px)
 {
+	#centralize{
+		height: 100%;
+		border: 1px solid red;
+	}
 	main
 	{
 		margin-left: 0;
