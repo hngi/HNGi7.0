@@ -468,7 +468,7 @@ i:hover{
 	width: 90%;
 	overflow-y: scroll;
 	height: 85%;
-	border: 1px solid red;
+	
 }
 
 #cv a {
@@ -485,7 +485,7 @@ i:hover{
 {
 	#centralize{
 		height: 100%;
-		border: 1px solid red;
+		
 	}
 	main
 	{
