@@ -3,7 +3,7 @@ require_once "classControllers/init.php";
 $admin = new Admins();
 
 if (!isset($_SESSION["role"])) {
-    header('Location:admin_login.php');
+    header('Location:login');
 }
 if (isset($_GET["editAdminId"])) {
     $id = $_GET["editAdminId"];
@@ -41,7 +41,13 @@ if (isset($_GET["editAdminId"])) {
 			padding: 10px;
 			border-radius: 15px;
 
-		}
+  }
+  
+  @media (max-width: 400px) {
+   .admin__details {
+    font-size: 25px !important;
+   }
+  }
 	</style>
 
 </head>
@@ -92,7 +98,7 @@ if (isset($_GET["editAdminId"])) {
 
  <div class="admin__button">
   
-  <a href="admins.php">
+  <a href="admins">
    <button class="btn btn-lg btn-primary">All Admins</button>
   </a>
   <span class="ml-2 badge">

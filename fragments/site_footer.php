@@ -8,14 +8,14 @@
             <div class="col-md-3 pb-3">
                 <h2 class="skyblue-text">Quick Links</h2>
                 <div id="link-list">
-                    <a href="join-intern.php" class="skyblue-text">Join HNG</a>
-                    <a href="about.php" class="skyblue-text">About HNG</a>
-                    <a href="donate.php" class="skyblue-text">Become a Sponsor</a>
-                    <a href="MentorSetUpPage2.php" class="skyblue-text">Sign up as Mentor</a>
-                    <a href="faq.php" class="skyblue-text">FAQ</a>
-                    <a href="intern-experience.php" class="skyblue-text">Past Intern Experience</a>
-                    <a href="request_certificate.php">Request Certificate</a>
-                    <a href="download_certificate.php">Download Certificate</a>
+                    <a href="join-intern" class="skyblue-text">Join HNG</a>
+                    <a href="about" class="skyblue-text">About HNG</a>
+                    <a href="donate" class="skyblue-text">Become a Sponsor</a>
+                    <a href="MentorSetUpPage2" class="skyblue-text">Sign up as Mentor</a>
+                    <a href="faq" class="skyblue-text">FAQ</a>
+                    <a href="intern-experience" class="skyblue-text">Past Intern Experience</a>
+                    <a href="request_certificate">Request Certificate</a>
+                   <!-- <a href="download_certificate.php">Download Certificate</a>-->
 
 
                 </div>

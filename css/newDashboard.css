@@ -417,8 +417,26 @@ i:hover{
 #export-modal .exports:active{
 	transform: scale(0.95)
 }
-
-
+    /* The Close Button */
+	.close {
+		color: blue;
+		float: right;
+		font-size: 28px;
+		font-weight: bold;
+	  }
+	  
+	  .close:hover,
+	  .close:focus {
+		color: #000;
+		text-decoration: none;
+		cursor: pointer;
+	  }
+	  span.close{
+		position: absolute;
+		top: 0;
+		right: 5%;
+	}
+	
 
 #navigator{
 	display: none;
@@ -448,8 +466,14 @@ i:hover{
 	justify-self: center;
 	word-wrap: break-word;
 	width: 90%;
+	overflow-y: scroll;
+	height: 85%;
+	
 }
 
+#cv a {
+	cursor: pointer;
+}
 
 @media (min-width:860px) and (max-width:992px){
 	#overview-section h2.cert.processing{
@@ -459,6 +483,10 @@ i:hover{
 }
 @media (max-width: 860px)
 {
+	#centralize{
+		height: 100%;
+		
+	}
 	main
 	{
 		margin-left: 0;

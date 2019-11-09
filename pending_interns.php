@@ -1,7 +1,7 @@
 <?php
     require 'classControllers/init.php';
     if (!isset($_SESSION["role"])) {
-        header('Location:admin_login.php');
+        header('Location:login');
     }
     $interns = new Intern;
     $display = $interns->pendingInterns();
@@ -55,6 +55,24 @@
             padding: 10px;
             border-radius: 15px;
         }
+
+        @media (max-width: 320px){
+     .heading{
+
+      width: 170px;
+      margin-left: 50px !important;
+      margin-right: auto !important;
+      text-align: center !important;
+     }
+
+     .searchBox {
+      margin-top: 70px;
+     }
+
+     .fa-search{
+      margin-top: 10px;
+     }
+    }
     </style>
 
 </head>
@@ -63,6 +81,7 @@
     <main class="reg">
     <div id="overlay"></div>
         <div id="export-modal">
+        <span class="close">&times;</span>
             <div>
                 <input type="radio" id="csv" name="exportOptions"><label for="csv">Export to CSV</label>
             </div>
@@ -75,10 +94,10 @@
         <input type="text" class="searchBox"><i class="fas fa-search"></i>
         <section id="overview-section">
             <!-- <h1>Dashboard</h1> -->
-            <h2>Pending Interns </h2>
+            <h2 class="heading">Pending Interns </h2>
             <div class="intern-buttons">
-                <a href="registered_interns.php" class="btn btn-default">Active Interns</a>
-                <a href="declined_interns.php" class="btn btn-default">Declined Interns</a>
+                <a href="registered_interns" class="btn btn-default">Active Interns</a>
+                <a href="declined_interns" class="btn btn-default">Declined Interns</a>
             </div>
             <!-- <section id="intern-section">
 				Populated by `js/dashboard.js`

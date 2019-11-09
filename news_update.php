@@ -94,14 +94,25 @@ if(isset($_POST['ok'])){
 			font-weight: bolder;
 			font-size: 35px;
 		}
+
+  @media (max-width: 400px) {
+   .heading {
+    margin-top: 50px !important;
+    font-size: 18px !important;
+   }
+
+   .news_letter {
+    margin-top: 10px;
+   }
+  }
 	</style>
 
 </head>
 <body>
 	<main>
 		<section id="overview-section">
-			<h1>Send News Update <span class="pull-right">
-                <a href="newsletter_history.php" class="btn btn-success btn-sm">Newsletter History</a>
+			<h1 class="heading">Send News Update <span class="">
+                <a href="newsletter_history" class="news_letter btn btn-success btn-sm">Newsletter History</a>
             </span></h1>
 
             <hr>

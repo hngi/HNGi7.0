@@ -25,8 +25,8 @@ $sent_messages = $inbox->outboxmessage($admin_id);
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link href="css/dashboard.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+ <!-- Latest compiled and minified CSS -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -50,14 +50,22 @@ $sent_messages = $inbox->outboxmessage($admin_id);
 		.card p{
 			font-weight: bolder;
 			font-size: 35px;
-		}
+  }
+  
+  @media (max-width: 400px) {
+   .heading {
+    margin-top: 50px !important;
+    font-size: 18px !important;
+   }
+  }
+ 
 	</style>
 
 </head>
 <body>
 	<main>
 		<section id="overview-section">
-			<h1>Sent Messages (Outbox)</h1>
+			<h1 class="heading">Sent Messages (Outbox)</h1>
 
             <hr>
 

@@ -4,7 +4,7 @@ require_once 'classControllers/init.php';
 
 
 if(!isset($_SESSION["role"])) {
-    header('Location:admin_login');
+    header('Location:login');
 }
 
 if(!isset($_GET['id'])){
@@ -80,7 +80,7 @@ $the_experience = $admin->fetchSingleExperience($id);
     <?php
     if ($_SESSION["role"] != 1) {
         echo '<h2><br><br><br>Sorry, You do not have the priviledge to view this page</p>';
-        echo '<h3><a href="dashboard.php">Dashboard</a></h3>';
+        echo '<h3><a href="dashboard">Dashboard</a></h3>';
         exit();
     }
     ?>

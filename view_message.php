@@ -2,7 +2,7 @@
 require 'classControllers/init.php';
 // check if session is set
 if(!isset($_SESSION["role"])) {
-	header('Location:login.php'); 
+	header('Location:login'); 
 }
 
 if(!isset($_GET['id'])){
@@ -70,13 +70,20 @@ if($receiver_id == $admin_id){
 			font-weight: bolder;
 			font-size: 35px;
 		}
+
+  @media (max-width: 400px) {
+   .heading {
+    margin-top: 50px !important;
+    font-size: 18px !important;
+   }
+  }
 	</style>
 
 </head>
 <body>
 	<main>
 		<section id="overview-section">
-			<h1>View Message - <?php echo $message['subject'];?></h1>
+			<h1 class="heading">View Message - <?php echo $message['subject'];?></h1>
 
             <hr>
 
@@ -138,7 +145,7 @@ if($receiver_id == $admin_id){
                         <?php
                         if($message['receiver_id'] == $admin_id){
                             ?>
-                            <a href="admin_inbox.php?receiver_id=<?php echo $message['sender_id']; ?>&subject=RE: <?php echo $message['subject']; ?>" class="btn btn-primary">Reply Message</a>
+                            <a href="compose_message.php?receiver_id=<?php echo $message['sender_id']; ?>&subject=RE: <?php echo $message['subject']; ?>" class="btn btn-primary">Reply Message</a>
                             <?php
                         }I
                         ?>
