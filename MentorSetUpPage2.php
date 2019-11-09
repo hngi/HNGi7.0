@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($fileSize < 400000) {
           // rename image file
           $fileNameNew = uniqid('', true) . "." . $fileActualExt;
-          $fileDestination = 'uploads/' . $fileNameNew;
+          $fileDestination = '../uploads/' . $fileNameNew;
           if (move_uploaded_file($fileTmpName, $fileDestination)) {
 
             $mentor->area_of_expertise = $database->escape_string($area_of_expertise);
