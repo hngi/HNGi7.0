@@ -177,7 +177,7 @@ class Mentor
     $fullname = $row['name'];
     $email = $row['email'];
     if($count > 0) {
-      $body = "Your registration as a mentor on the HNG 7.0 internship has been accepted. Thank you";
+      $body = "Congratulations! Your application to be a mentor in the HNG Internship 7.0 has been accepted. Thank you";
       acceptMentorMail($body,$fullname,$email);
       // updated
       return true;
@@ -198,7 +198,7 @@ class Mentor
         $fullname = $row['name'];
         $email = $row['email'];
     if($count > 0) {
-      $body = "Your registration as a mentor on the HNG 7.0 internship has been disapproved . Thank you";
+      $body = "We appreciate your signing up to be a mentor in the HNG Internsip 7.0 but we would not be accepting you as a mentor. Thank You";
       rejectMentorMail($email, $fullname, $body);
       // updated
       return true;
