@@ -8,6 +8,8 @@ if(!isset($_SESSION["role"])) {
     header('Location:login');
 }
 
+$donation = new Donation();
+$all_donations = $donation->all_donations();
 
 ?>
 <!DOCTYPE html>
@@ -93,8 +95,29 @@ if(!isset($_SESSION["role"])) {
                     <th>Amount</th>
                     <th>Email</th>
                     <th>Phone</th>
+                    <th>Date</th>
                     <th>Status</th>
                 </tr>
+                <?php
+                    if(is_array($all_donations)){
+                        $s = 0;
+                        foreach ($all_donations as $all_donation){
+                            ?>
+                            <tr>
+                                <td><?php echo ++$s;?></td>
+                                <td><?php echo $all_donation['names'];?></td>
+                                <td>&#8358; <?php echo number_format($all_donation['amount'],"2");?></td>
+                                <td><?php echo $all_donation['email'];?></td>
+                                <td><?php echo $all_donation['phone'];?></td>
+                                <td><?php echo $all_donation['date_created'];?></td>
+                                <td><?php echo ucfirst($all_donation['status']);?></td>
+                            </tr>
+                            <?php
+                        }
+                    }else{
+                        echo "<tr><td colspan='7'>No Incoming donation</td></tr>";
+                    }
+                ?>
 
             </table>
         </div>
