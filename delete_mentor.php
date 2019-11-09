@@ -60,7 +60,7 @@
         <section id="overview-section">
             <?php 
                 if($_SESSION["role"] != 1) {
-                    echo '<h2><br><br><br>Sorry, You do not have the priviledge to view this page</p>';
+                    echo '<h2><br><br><br>Sorry, You do not have the privilege to view this page</p>';
                     echo '<h3><a href="dashboard">Dashboard</a></h3>';
                     exit();
                 }
