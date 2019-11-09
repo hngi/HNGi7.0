@@ -40,6 +40,7 @@
 				<a href="internreview"><i class="fas fa-history"></i>Reviews</a>
 				<a href="updateCountdown"><i class="far fa-clock"></i>CountDown</a>
 				<a href="pending_request"><i class="fas fa-certificate"></i>Certificate</a>
+                <a href="incoming_donations"><i class="fas fa-check"></i>Incoming Donation</a>
 			</div>
 		</li>
 		<li class="item" id="news">
