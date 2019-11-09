@@ -261,11 +261,11 @@ function forGetPasswordMail($url, $subject, $email, $body)
                     </tr>
                   <tr>
     <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
-                      <p>You recieve this email because you request for a reset password link, Kindly use the link provided to reset your password.Thank you.</p>
+                      <p>You recieved this mail because you requested for a reset password link. Kindly use the link provided to reset your password. Thank you.</p>
                        
                       <p>$body</p>
 
-                       <p>For security, If you did not request a password reset, please ignore this email or <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
+                       <p>If you did not request a password reset, please ignore this email or <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
 
                        <p>If you’re having trouble clicking the link above, copy and paste the URL below into your web browser.
 
@@ -496,7 +496,7 @@ function sendInternMail($email, $fullname, $body)
                <tr>
                 <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
                 
-                 <p>FOR futher enquiry contact us with the link below and If you’re having trouble clicking the link above, copy and paste the URL below into your web browser. <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
+                 <p>For futher enquiry contact us with the link below and If you’re having trouble clicking the link above, copy and paste the URL below into your web browser. <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
                 </td>
               </tr>
 
@@ -609,7 +609,7 @@ function  rejectInternMail($email, $fullname, $body)
                <tr>
                 <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
                 
-                 <p>FOR futher enquiry contact us with the link below and If you’re having trouble clicking the link above, copy and paste the URL below into your web browser. <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
+                 <p>For futher enquiry contact us with the link below and If you’re having trouble clicking the link above, copy and paste the URL below into your web browser. <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
                 </td>
               </tr>
 
@@ -1056,13 +1056,13 @@ function mailMentor($email, $name)
                 <tr>
                   <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
 
-                    <p> Thank you for applying to be a mentor, your application is being reviewed. We will get back to you shortly.</p>
+                    <p> Thank you for applying to be a Mentor on the HNG Internship 7.0. Your application is being reviewed and we will get back to you shortly.</p>
                   </td>
                 </tr>
                 <tr>
                   <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
 
-                    <p>For futher enquiry contact us with the link below and If you’re having trouble clicking the link above, copy and paste the URL below into your web browser. <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
+                    <p>For futher enquiries click the link below and If you’re having trouble clicking the link above, copy and paste the URL below into your web browser. <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
                   </td>
                 </tr>
                 <tr>
@@ -1103,7 +1103,7 @@ function mailMentor($email, $name)
 </body>
 
 </html>";
-    $mail->AltBody = 'Thank you for applying to be a mentor, your application is being reviewed. We will get back to you shortly.';
+    $mail->AltBody = 'Thank you for applying to be a Mentor on the HNG Internship 7.0. Your application is being reviewed and we will get back to you shortly.';
     $mail->addReplyTo($email, $name);
 
     $mail->send();
