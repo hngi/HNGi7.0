@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3340ae33-6e59-49ef-aaf7-8ef2d89eda61" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/classControllers/Donate.php" beforeDir="false" afterPath="$PROJECT_DIR$/classControllers/Donate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classControllers/Donate.php" beforeDir="false" afterPath="$PROJECT_DIR$/classControllers/Donation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classControllers/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/classControllers/init.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/donate.php" beforeDir="false" afterPath="$PROJECT_DIR$/donate.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +23,7 @@
           <entry key="gitignore" value="4" />
           <entry key="html" value="1" />
           <entry key="js" value="3" />
-          <entry key="php" value="38" />
+          <entry key="php" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -29,7 +31,7 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="1" />
           <entry key="JavaScript" value="3" />
-          <entry key="PHP" value="38" />
+          <entry key="PHP" value="39" />
           <entry key="PLAIN_TEXT" value="4" />
         </counts>
       </usages-collector>
@@ -38,14 +40,14 @@
           <entry key="css" value="43" />
           <entry key="gitignore" value="51" />
           <entry key="js" value="32" />
-          <entry key="php" value="4455" />
+          <entry key="php" value="4681" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="43" />
           <entry key="JavaScript" value="32" />
-          <entry key="PHP" value="4455" />
+          <entry key="PHP" value="4681" />
           <entry key="PLAIN_TEXT" value="51" />
         </counts>
       </usages-collector>
@@ -82,11 +84,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/classControllers/Donate.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classControllers/Donation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
+            <state>
+              <caret lean-forward="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/donate.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+              <folding>
+                <element signature="n#style#0;n#button#0;n#form#0;n#form#0;n#section#3;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,8 +108,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classControllers/init.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+            <state relative-caret-position="252">
+              <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -125,8 +139,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>container</find>
-      <find>interes</find>
       <find>data</find>
       <find>date</find>
       <find>indi</find>
@@ -155,9 +167,12 @@
       <find>fra</find>
       <find>Don</find>
       <find>Edit</find>
+      <find>Group</find>
+      <find>&lt;input type=&quot;submit&quot; /&gt;</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;div class=&quot;form-group&quot;&gt;</replace>
+      <replace>&lt;input type=&quot;submit&quot; name=&quot;pay&quot; /&gt;</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\wamp\www\freelance\hng6\HNGi7.0\classControllers</dir>
@@ -189,10 +204,10 @@
         <option value="$PROJECT_DIR$/edit_mentor.php" />
         <option value="$PROJECT_DIR$/pending_mentors.php" />
         <option value="$PROJECT_DIR$/edit_sponsor.php" />
-        <option value="$PROJECT_DIR$/donate.php" />
         <option value="$PROJECT_DIR$/incoming_donations.php" />
-        <option value="$PROJECT_DIR$/classControllers/init.php" />
         <option value="$PROJECT_DIR$/classControllers/Donate.php" />
+        <option value="$PROJECT_DIR$/classControllers/init.php" />
+        <option value="$PROJECT_DIR$/donate.php" />
       </list>
     </option>
   </component>
@@ -284,18 +299,18 @@
       <workItem from="1573056368276" duration="3051000" />
       <workItem from="1573131028208" duration="760000" />
       <workItem from="1573136350258" duration="499000" />
-      <workItem from="1573199257455" duration="16405000" />
+      <workItem from="1573199257455" duration="16677000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32478000" />
+    <option name="totallyTimeSpent" value="32750000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26399395" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26399395" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -308,7 +323,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.37308347" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.37308347" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="RNConsole" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -545,16 +560,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/donate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="189" column="62" selection-start-line="189" selection-start-column="62" selection-end-line="189" selection-end-column="62" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#form#0;n#form#0;n#section#3;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/intern-experience.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
@@ -587,15 +592,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classControllers/init.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        <state relative-caret-position="252">
+          <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classControllers/Donate.php">
+    <entry file="file://$PROJECT_DIR$/classControllers/Donation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/donate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#form#0;n#form#0;n#section#3;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

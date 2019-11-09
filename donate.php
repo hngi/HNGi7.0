@@ -1,3 +1,13 @@
+<?php
+    require_once "classControllers/init.php";
+
+    $donation = new Donation();
+
+    if(isset($_POST['pay'])){
+
+        exit();
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -97,10 +107,10 @@
 
     <section class="banner form" id="form">
       <h3 class="title">Donate Today</h3>
-       <form action="" id="actualForm">
+       <form action="" id="actualForm" method="post">
         <input
           type="text"
-          name="ame"
+          name="name"
           placeholder="Enter Name"
           required
         />
@@ -111,8 +121,8 @@
           required
         />
         <input
-          type="number"
-          name="phonenumber"
+          type="tel"
+          name="phone"
           placeholder="Enter Phone number"
         />
         <input
@@ -121,17 +131,11 @@
           placeholder="Donation amount"
           required
         />
-        <label for="group">To which group?</label>
-        <select name="group">
-          <option value="all">All</option>
-          <option value="women">Women</option>
-          <option value="disabled">Disabled</option>
-        </select>
         
-        <input type="submit" /> <br>
+        <input type="submit" name="pay" value="1" /> <br>
         <form>
-          <script src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
-          <button onClick="payWithRave()" class="transparent-btn" style="background-color: transparent; color:#007bff; background-repeat:no-repeat; border: none; cursor:pointer; overflow: hidden; outline:none;">Donate via Flutter</button>
+          <!--<script src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
+          <button onClick="payWithRave()" class="transparent-btn" style="background-color: transparent; color:#007bff; background-repeat:no-repeat; border: none; cursor:pointer; overflow: hidden; outline:none;">Donate via Flutter</button>-->
         </form>
         <a href="newsponsor">Register as Sponsor(Brand)</a>
        
@@ -143,16 +147,16 @@
       <p class="desc">
         Give anything you have that can make an intern's journey easier
       </p>
-      <form action="" id="actualSupportForm">
+      <form action="" id="actualSupportForm" method="post">
         <input
           type="text"
-          name="tool"
-          placeholder="What do you want to donate"
+          name="amount"
+          placeholder="How much do you want to donate"
           required
         />
         <input
           type="text"
-          name="Name"
+          name="name"
           placeholder="Enter Name"
           required
         />
@@ -164,17 +168,11 @@
         />
         <input
           type="number"
-          name="phonenumber"
+          name="phone"
           placeholder="Enter Phone number"
         />
-        
-        <label for="group">To which group?</label>
-        <select name="group">
-          <option value="all">All</option>
-          <option value="women">Women</option>
-          <option value="disabled">Disabled</option>
-        </select>
-        <input type="submit" />
+          
+        <input type="submit" name="pay" />
       </form>
       
     </div>
@@ -185,13 +183,13 @@
       form.addEventListener('submit', e => {
         e.preventDefault();
 
-        alert("Thanks, but donations aren't working yet");
+        //alert("Thanks, but donations aren't working yet");
       });
       let SupportForm = document.querySelector('#actualSupportForm');
       SupportForm.addEventListener('submit', e => {
         e.preventDefault();
 
-        alert("Thanks, but donations aren't working yet");
+        //alert("Thanks, but donations aren't working yet");
       });
     </script>
 

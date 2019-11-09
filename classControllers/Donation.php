@@ -6,7 +6,7 @@
  * Time: 8:52 PM
  */
 
-class Donate
+class Donation
 {
 
 
