@@ -812,6 +812,15 @@ div#del-message{
 	#sidebar{
 		width: 70vw;
 	}
+	#username{
+		display: none;
+	}
+	.menu{
+		margin-top: 5px;
+	}
+	#sidebar #upper{
+		margin-top: 40px;
+	}
 }
 @media(max-width:360px){
 	#sidebar{

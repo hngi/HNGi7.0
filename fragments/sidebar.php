@@ -39,14 +39,19 @@
 			<div class="submenu">
 				<a href="internreview"><i class="fas fa-history"></i>Reviews</a>
 				<a href="updateCountdown"><i class="far fa-clock"></i>CountDown</a>
-				<a class="news" href="news_update" ><i class="far fa-newspaper"></i>News Update</a>
-				<a class="news" href="newsletter_history" ><i class="fas fa-newspaper"></i>News History</a>
-                <a class="news" href="delete_newsletter" ><i class="fas fa-newspaper"></i>Delete News</a>
+				<a href="pending_request"><i class="fas fa-certificate"></i>Certificate</a>
 			</div>
 		</li>
-		<li class="item" id="certificates">
-			<a href="pending_request"  class="btns menu-headings" ><i class="fas fa-certificate"></i>Certificate</a>
+		<li class="item" id="news">
+			<a href="#news" class="btns menu-headings"><i class="far fa-newspaper""></i>News<span class="chevron"></span></a>
+			<div class="submenu">
+				<a class="news" href="news_update" ><i class="fas fa-rss-square"></i>Update</a>
+				<a class="news" href="newsletter_history" ><i class="far fa-file-archive"></i></i>History</a>
+                <a class="news" href="delete_newsletter" ><i class="far fa-trash-alt"></i>Delete</a>
+			</div>
+			
 		</li>
+		
         <?php
 			if($_SESSION["role"] == 1) {
 			    '<a href="admins">Admins</a>';
