@@ -456,9 +456,10 @@
                     </h4>
                     <section class="mentor-section" data-aos="fade-up">
                         <div class="mentor-image">
-                            <img src="https://res.cloudinary.com/joshuafolorunsho/image/upload/c_scale,w_200/v1572870951/20191103_165148_auawdc-min.jpg">
-                            <p class="font-weight-bold">Seyi Onifade</p>
-                            <p> </p>
+                        <img
+                                src="https://res.cloudinary.com/dxikrojwn/image/upload/v1554311651/Motun.jpg">
+                           <p class="font-weight-bold">Da-costa Motunrayo</p>
+                            <p>Frontend Development</p>
                         </div>
                         <div class="mentor-image">
                             <img src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572871094/foutw9umk4hcfntupffn.jpg">
