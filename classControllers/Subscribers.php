@@ -28,8 +28,8 @@ class Subscribers
 
     public function send_welcome_email($email){ //function to send welcome message to subscriber!
         $subject = "HNGi7 Internship Subscription";
-        $message = "Hi thank you for subscribing to HNGi7 Internship update!";
-        $message .= "<br>You will be receiving periodic update about the internship";
+        $message = "Thank You for signing up to receive updates on the HNG Internship 7.0";
+        $message .= "<br>You will be receiving periodic updates about the internship";
         send_general_email($subject,$email,$message);
     }
 

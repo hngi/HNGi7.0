@@ -41,7 +41,7 @@ class Intern
         $query = "INSERT INTO interns (`name`, `email`, `phone_no`, `link_to_cv`, `interest`, `current_location`, `employment_status`, `about`, `timestamp`)
         VALUES('$fullname', '$email', '$phoneNo', '$linkCV', '$interest', '$location', '$empStatus', '$about', '$date' )";
         $res = $database->query($query);
-        $body = "Your registration as an intern on the HNGi7 platform is pendding for an approval kindly hold on, you will recieve an email within 24hrs about your registration status. Thank you";
+        $body = "Thank You for registering for the HNG Internship 7.0. You will recieve an email about your registration status.Soon";
         sendInternMail($email, $fullname, $body);
 
 

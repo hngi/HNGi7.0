@@ -163,7 +163,7 @@ class Admins
                         </tr>
                         <tr>
                           <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
-                                            You have been registered as an admin on HNG INTERSHIP site, kindly find your registration details below. We recommend you change your password with link below.<br> Thank you.
+                                            You have been registered as an admin on HNG INTERSHIP site, kindly find your registration details below. We recommend you change your password with the link below.<br> Thank you.
                           </td>
                                         </tr>";
         sendNewAdminMail($email, $subject, $body);
