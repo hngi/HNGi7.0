@@ -16,6 +16,16 @@ class sponsors
   public $sponsor_email;
 
 
+  public function emailExists()
+  {
+    global $database;
+    $sponsor_email = $database->escape_string($this->sponsor_email);
+    $query = $database->query("SELECT * FROM sponsors WHERE sponsor_email = '$sponsor_email' ");
+    $count = mysqli_num_rows($query);
+    return $count;
+  }
+
+
   public function getAllSponsor()
   {
     global $database;

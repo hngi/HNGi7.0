@@ -169,12 +169,12 @@ if ($status) {
       ?>
       <div class="buttonDiv">
         <!--<a href="exports/export-to-pdf-sponsors.php">-->
-        <a href="#" onclick="javascript:printDiv('printablediv')">
+        <!-- <a href="#" onclick="javascript:printDiv('printablediv')">
           <button type="button" class="exports" id="export">Print</button>
         </a>
         <a href="#">
           <button type="button" class="exports" id="exportAs">Export</button>
-        </a>
+        </a> -->
       </div>
       </div>
       </div>

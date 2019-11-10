@@ -72,7 +72,7 @@ if ($status) {
   <main class="reg">
     <div id="overlay"></div>
     <div id="export-modal">
-    <span class="close">&times;</span>
+      <span class="close">&times;</span>
       <div>
         <input type="radio" id="csv" name="exportOptions"><label for="csv">Export to CSV</label>
       </div>
@@ -95,14 +95,16 @@ if ($status) {
             Populated by `js/dashboard.js`
         </section> -->
       <?php
-      if (isset($_SESSION['status'])) {
-        echo $_SESSION['status'];
-        unset($_SESSION['status']);
+      if (isset($_SESSION['file'])) {
+        echo $_SESSION['file'];
+        unset($_SESSION['file']);
       }
 
+     
       ?>
 
       <div>
+       
         <div class="row cert-message">
 
           <?php
@@ -175,6 +177,8 @@ if ($status) {
       </div>
 
       <!-- <button id="export">Export to Spreadsheet</button> -->
+
+
 
     </section>
     <section id="details-section">
