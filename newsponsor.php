@@ -9,7 +9,7 @@ if (isset($_POST["sponsor-btn"])) {
   $sponsor->business_address = $_POST["business_address"];
   $sponsor->about_you = $_POST["about_you"];
   $image = $_FILES['file']['name'];
-  $target_file = '../uploads/sponsor-img/' .  $image;
+  $target_file = '/uploads/sponsor-img/' .  $image;
   // Allow certain file formats
   // if ( $image != "jpeg" &&  $image != "png" &&  $image != "jpg") {
   //   $errors[] = "Sorry, only JPG, JPEG, PNG  files are allowed.";
