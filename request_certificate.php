@@ -15,10 +15,16 @@ if (isset($_POST["certificate-btn"])) {
   } else {
     $count = $intern->emailExists($email);
     if ($count === 1) {
-      $request->requestCertificate($email, $name, $slack_username, $year);
-      $request_mess = '<p style="text-align:center;">Application successful. You will be informed when your certificate is ready. Thank you!</a>';
+       $count2 = $request->confirmEmail($email);
+       if($count2 === 0){
+        $request->requestCertificate($email, $name, $slack_username, $year);
+        $request_mess = '<p style="text-align:center;">Application successful. You will be informed when your certificate is ready. Thank you!</a>';
+       }else{
+         $error = "Email already exist";
+       }
+      
     } else {
-      $error = "User not found on the database";
+      $error = "User can not be found on the database";
     }
   }
     
