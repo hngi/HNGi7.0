@@ -10,7 +10,7 @@ if (isset($_POST["recover-btn"])) {
   $fullname = $row["firstname"] . ' ' . $row["lastname"];
   $count = mysqli_num_rows($query);
   if ($count > 0) {
-     $url = "<a href='http://hngi7.hng.tech/resetpassword.php?code=$code'>Your reset password link</a>";
+     $url = "<a href='http://hngi7.hng.tech/resetpassword?code=$code'>Your reset password link</a>";
     $subject = 'YOUR PASSWORD REST LINK';
     $body = " You recieve this email because you request for a reset password link, Kindly find bellow a link to reset your password.<br> Thank you.";
     $admin->forGetpassword($email, $code);

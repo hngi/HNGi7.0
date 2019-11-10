@@ -16,12 +16,10 @@ class Certificate
 
     public function confirmEmail($email){
       global $database;
-      $email = $database->escape_string($this->email);
-      $query = $database->query("SELECT * FROM interns WHERE email = '$email' ");
+      $query = $database->query("SELECT * FROM certificate_request WHERE email = '$email' ");
       $count = mysqli_num_rows($query);
-      if ($count > 0) {
-        return $count;
-      }
+      return $count;
+      
      
     }
 
@@ -98,9 +96,10 @@ class Certificate
               <td>$email</td>
               <td>$slack_username</td>
               <td>$year</td>
-              <td>$file</td>
+              <td><img src='$file' width='100'></td>
               <td>
-              <a href='processing_request.php?processingId=$certificate_id' class='btn btn-success btn-sm'>$status</a>
+              <a href='certificate_upload.php?fileId=$certificate_id' class='btn btn-primary btn-sm'>Upload file</a>
+               <a href='processing_request.php?processingId=$certificate_id' class='btn btn-success btn-sm'>$status</a>
               </td>
             
               
