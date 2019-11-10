@@ -33,7 +33,7 @@ $data = $sponsors->getAllSponsor();
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
     <style type="text/css">
-        .card {
+        /* .card {
             height: 150px;
             background: #ccc;
             margin: 15px;
@@ -57,7 +57,7 @@ $data = $sponsors->getAllSponsor();
      .fa-search{
       margin-top: 10px;
      }
-    }
+    } */
     </style>
 
 </head>
