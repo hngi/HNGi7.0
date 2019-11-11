@@ -61,7 +61,7 @@ class Admins
           }
 
         }
-               
+
       }
     }
   }
@@ -130,7 +130,7 @@ class Admins
                                 </div>';
     } else {
       // email is available, good, proceed to register
-     
+
       $query = "INSERT INTO admins (firstname, lastname, email, role, timestamp) VALUES ('" . $firstname . "', '" . $lastname . "', '" . $email . "', '" . $role . "', now())";
       $res = $database->query($query);
       $count = $database->affected_rows();
@@ -244,7 +244,7 @@ class Admins
       return false;
     }
   }
-  
+
   public function isAdminExist($email){
     global $database;
     //global $con;
@@ -292,10 +292,10 @@ class Admins
     } else {
       // failed
       header("Location: adminProfile.php?changed");
-    } 
+    }
   }
 
-  
+
   // Written by JohnEbri; 8/11/2019 9:30AM
   public function changePassword($oldPassword, $newPassword, $confirmNewPassword) {
     global $database;
@@ -304,7 +304,7 @@ class Admins
     $res = $database->query($query);
     $row = mysqli_fetch_assoc($res);
     $adminPassword = $row["password"];
-    
+
     // unhash the password
     if(password_verify($oldPassword, $adminPassword)){
       // old password is correct // check new and and confirm password
@@ -315,7 +315,7 @@ class Admins
           header('Location:adminProfile.php?shortPassword');
         } else {
           // password length is ok, hash new password
-          $newPasswordHarshed = password_hash($newPassword, PASSWORD_BCRYPT);          
+          $newPasswordHarshed = password_hash($newPassword, PASSWORD_BCRYPT);
           // update newPassword
           $query = "UPDATE admins SET password = '".$newPasswordHarshed."' WHERE admin_id = ".$_SESSION["admin_id"]."";
           $res = $database->query($query);
@@ -328,7 +328,7 @@ class Admins
             header('Location: adminProfile.php?passwordUpdateFailed');
           }
         }
-        
+
       } else {
         // new passwords do not match
         header('Location: adminProfile.php?matchError');
@@ -344,7 +344,7 @@ class Admins
   public function deleteProfilePic() {
     global $database;
     //get the image
- 
+
     $query = "UPDATE admins SET hasPic = 0 WHERE admin_id = ".$_SESSION["admin_id"]."";
     $res = $database->query($query);
     $count = $database->affected_rows();
@@ -359,7 +359,7 @@ class Admins
       header("Location:adminProfile.php?deletePicFailed");
     }
   }
-  
+
 
 }
 
@@ -367,4 +367,3 @@ if (isset($_GET["login"])) {
   $admin = new Admins();
   $admin->adminLogin();
 }
-
