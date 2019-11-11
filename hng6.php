@@ -242,9 +242,9 @@ $countDownValues = $countdown->getDate();
                         </div>
                         <div id="mentor-div">
                             <img
-                                src="https://res.cloudinary.com/memz/image/upload/v1572710145/Mentors/Tomisin_olpwrk.jpg">
-                            <p class="mentor-name center-text">Tomisin Lalude</p>
-                            <p class="mentor-desc center-text">Frontend Development</p>
+                                src="https://res.cloudinary.com/jeffogah/image/upload/v1573127408/download.jpg">
+                            <p class="mentor-name center-text">Jeffrey Ogah</p>
+                            <p class="mentor-desc center-text">Web Developer</p>
                         </div>
                     </div>
                     <a href="mentorpage" class="def-button shadowed">See all Mentors</a>

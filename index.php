@@ -455,21 +455,22 @@
                     <h4>Our Dedicated Mentors
                     </h4>
                     <section class="mentor-section" data-aos="fade-up">
+                    <div class="mentor-image">
+                            <img src="https://res.cloudinary.com/jeffogah/image/upload/v1573127408/download.jpg">
+                            <p class="font-weight-bold">Jeffrey Ogah</p>
+                            <p>Web Developer</p>
+                        </div>
+                       
+                        <div class="mentor-image">
+                            <img src="https://res.cloudinary.com/do9i9xfku/image/upload/v1554310773/Passport.png">
+                            <p class="font-weight-bold">Tomisin Lalude </p>
+                            <p>Frontend Development</p>
+                        </div>
                         <div class="mentor-image">
                         <img
                                 src="https://res.cloudinary.com/dxikrojwn/image/upload/v1554311651/Motun.jpg">
                            <p class="font-weight-bold">Da-costa Motunrayo</p>
                             <p>Frontend Development</p>
-                        </div>
-                        <div class="mentor-image">
-                            <img src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572871094/foutw9umk4hcfntupffn.jpg">
-                            <p class="font-weight-bold">Tomisin Lalude </p>
-                            <p>Frontend Development</p>
-                        </div>
-                        <div class="mentor-image">
-                            <img src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572871095/y7kp4jm0rmqolkcmprvc.jpg">
-                            <p class="font-weight-bold">Kevin Chike</p>
-                            <p>Backend Development</p>
                         </div>
                         <div class="mentor-image">
                             <img src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572871096/zodqqfrro1lwuntitiaw.jpg">
