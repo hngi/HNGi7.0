@@ -3,30 +3,27 @@ require_once "classControllers/init.php";
 $sponsor = new sponsors;
 
 if (isset($_POST["sponsor-btn"])) {
-  $errors = [];
+  $err = '';
   $sponsor->sponsor_name = $_POST["sponsor_name"];
   $sponsor->sponsor_email = $_POST["sponsor_email"];
   $sponsor->business_address = $_POST["business_address"];
   $sponsor->about_you = $_POST["about_you"];
   $image = $_FILES['file']['name'];
   $target_file = '../uploads/sponsor-img/' .  $image;
-  // Allow certain file formats
-  // if ( $image != "jpeg" &&  $image != "png" &&  $image != "jpg") {
-  //   $errors[] = "Sorry, only JPG, JPEG, PNG  files are allowed.";
-  
-  // }
-/*  if (empty($_POST["sponsor_name"]) || empty($_POST["sponsor_email"]) || empty($_POST["business"]) || empty($_POST["about_you"])) {
-    $errors[] = "All feild are required";
-  }*/
-
-  if (empty($error)) {
-    if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
-      $resp = $sponsor->addSponsors($target_file);
-      $sponsor_mess = '<p style="text-align:center;">Registration Succesful. You will here from us soon thank you!</a>';
-    } 
-  } else {
-    $errors[] = "Upload not successful";
+  $count = $sponsor->emailExists();
+  if($count === 0){
+    if (empty($error)) {
+      if (move_uploaded_file($_FILES["file"]["tmp_name"], $target_file)) {
+        $resp = $sponsor->addSponsors($target_file);
+        $sponsor_mess = '<p style="text-align:center;">Registration Succesful. You will here from us soon thank you!</a>';
+      }
+    } else {
+      $err = "Upload not successful";
+    }
+  }else{
+    $err = "Email already exist";
   }
+ 
   
 }
 ?>
@@ -65,10 +62,10 @@ if (isset($_POST["sponsor-btn"])) {
           if (!empty($sponsor_mess)) {
             echo "<center><h6 class='text-success text-center success' style='background: #D3ECDB; color: #2B5036; padding: 10px;'>" . $sponsor_mess . "</h6></center>";
           }
-          if (!empty($errors)) {
-            foreach ($errors as $error) {
-              echo "<h6 class='text-danger text-center'>" . $error . "</h6>";
-            }
+          if (!empty($err)) {
+            
+              echo "<h6 class='text-danger text-center'>" . $err . "</h6>";
+            
           }
           ?>
         </div>
