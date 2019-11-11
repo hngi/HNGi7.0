@@ -137,7 +137,7 @@ class Admins
 
       if ($count > 0) {
         // success
-        $subject = 'WElCOME TO HNG INTERNSHIP';
+        $subject = 'WELCOME TO HNG INTERNSHIP';
         $body = "<html>
         <head>
         <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
