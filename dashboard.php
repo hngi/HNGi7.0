@@ -343,11 +343,11 @@ if($display["hasPic"] == 0) {
 
                 <div class="options">
                   <label for="internLocation">
-                    <input type="radio" name="byLocation" id="internLocation" value="internLocation" checked /> Interns
+                    <input type="radio" name="byLocation" id="internLocation" value="internLocation"  /> Interns
                   </label>
 
                   <label for="mentorLocation">
-                   <input type="radio" name="byLocation" id="mentorLocation" value="mentorLocation" /> Mentors
+                   <input type="radio" name="byLocation" id="mentorLocation" value="mentorLocation" checked/> Mentors
                   </label>
                </div>
               </div>
@@ -366,11 +366,11 @@ if($display["hasPic"] == 0) {
 
               <div class="options">
                 <label for="internTrack">
-                  <input type="radio" name="byTrack" id="internTrack" value="internTrack" checked/> Interns
+                  <input type="radio" name="byTrack" id="internTrack" value="internTrack" /> Interns
                 </label>
 
                 <label for="mentorTrack">
-                  <input type="radio" name="byTrack" id="mentorTrack" value="mentorTrack" /> Mentors
+                  <input type="radio" name="byTrack" id="mentorTrack" value="mentorTrack" checked/> Mentors
                 </label>
                </div>
               </div>
