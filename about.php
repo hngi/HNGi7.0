@@ -27,8 +27,11 @@
                 <div class="col-md-2 col-lg-3"></div>
                 <div class="col-md-8 col-lg-6">
                     <h2>About HNG</h2>
-                    <p>We find the most talented African developers
-                        and give them the opportunity to excel.</p>
+                    <p>At HNG Tech, we are passionate about seeing young developers grow as we bridge the gap between
+                        learning to code and becoming the best in the world. We find the most talented African
+                        developers and give them the opportunity to excel. With us, there are no limits to achieving
+                        your aim.
+                    </p>
                 </div>
                 <div class="col-md-2 col-lg-3"></div>
             </div>
@@ -52,8 +55,14 @@
                 <div class="container">
                     <div class="extratext">
                         <h2>How the Internship works</h2>
-                        <p>We combine technology with a well proven education system of learning to mentor interns and
-                            help them grow which in turn advances the ecosystem.</p>
+                        <p>Anyone can join by signing up. No exam needed.
+                            <br> <br> Interns are assigned tasks weekly, which helps them learn important concepts
+                            quickly.
+                            <br> <br> Interns are introduced to complex programming frameworks.
+                            <br> <br> Interns get to work on real-world applications that scale.
+                            <br> <br> Finalists are connected to the best tech companies for full-time jobs and
+                            contracts.
+                        </p>
                     </div>
                     <div class="row text-center">
                         <div class="col-md-6 col-lg-3 mb-5 wow animated fadeInLeft">
@@ -83,21 +92,19 @@
                     <div class="col-md-2 col-lg-3"></div>
                     <div class="col-md-8 col-lg-6">
                         <h2>Increased rate of learning</h2>
-                        <p>The interns are given tasks that are more focused with real world experiences. They typically
-                            involve a real world task which aims at identifying the most committed/driven interns and
-                            helping them harness their skills better.</p>
+                        <p>The interns are given tasks that are more focused on real-world experiences, which helps them
+                            gain new knowledge at a faster pace. This also helps identify the most committed and driven
+                            interns while helping them harness their skills better.</p>
                         <hr>
                         <h2>Get paid to learn</h2>
-                        <p>Interns get paid on a weekly basis, they gain experience, learn and earn all at the same
-                            time.</p>
+                        <p>Interns get paid on a weekly basis based on their performance. This is an opportunity to earn while learning and gaining quality experience.
+                            </p>
                         <hr>
                         <h2>Connect and network</h2>
-                        <p>Interns join an online community that will be available 24/7 to network with each other and
-                            discuss.</p>
+                        <p>The HNG Internship also serves as a tech community. It is available 24/7 for participants to discuss and network with each other.</p>
                         <hr>
                         <h2>Technological approach</h2>
-                        <p>We combine technology with a well proven education system of learning to mentor interns and
-                            help them grow which in turn advances the ecosystem.</p>
+                        <p>We combine technology with a well-proven education system of learning to mentor interns and help them grow which in turn advances the ecosystem.</p>
                     </div>
                     <div class="col-md-2 col-lg-3"></div>
                 </div>
@@ -114,8 +121,8 @@
     <script src="js/main.js"></script>
     <script type="text/javascript" src="js/countdown.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
