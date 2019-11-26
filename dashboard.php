@@ -2,7 +2,7 @@
 require 'classControllers/init.php';
 // check if session is set
 if(!isset($_SESSION["role"])) {
-	header('Location:login.php'); 
+	header('Location:login.php');
 }
 
 $adminId = $_SESSION["admin_id"];
@@ -18,7 +18,7 @@ if($display["hasPic"] == 0) {
      $_SESSION["hasPic"] = "yes";
 }
 
-	
+
     $mentors = new Mentor;
     $displaymActive = $mentors->allMentors();
     $displaymPending = $mentors->pendingMentors();
@@ -35,11 +35,11 @@ if($display["hasPic"] == 0) {
 
     $lockForm = new LockRegForm();
 	  $status = $lockForm->checkStatus();
-	
+
 	$noOfInterns = $lockForm->getNoOfInterns();
 	$noOfMentors = $lockForm->getNoOfMentors();
   $noOfAdmins = $lockForm->getNoOfAdmins();
-  
+
   $sponsorsObj = new sponsors;
   $noOfSponsors = $sponsorsObj->countSponsor();
 
@@ -56,12 +56,12 @@ if($display["hasPic"] == 0) {
         } else {
             $sval = 0;
 		}
-        
+
         $lockForm->setStatus($sval);
     }
 
     // get pending interns
-    $pendingInterns = $interns->getPendingInterns();    
+    $pendingInterns = $interns->getPendingInterns();
 
     // get pending mentors
     $pendingMentors = $mentors->getPendingMentors();
@@ -79,10 +79,10 @@ if($display["hasPic"] == 0) {
 	<title>Dashboard</title>
 	<link rel="icon" type="img/png" href="images/hng-favicon.png">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    
+
     <!--This contains the styling for the side bar -->
     <link href="css/dashboard.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
-    
+
     <link href="css/dashboard2910.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
 
 	<!-- Latest compiled and minified CSS -->
@@ -104,7 +104,7 @@ if($display["hasPic"] == 0) {
 			text-align: center;
 			font-size: 20px;
 			box-shadow: 1px 0 4px rgba(0,0,0,0.3);
-			
+
 		}
 
 		.card p{
@@ -124,7 +124,7 @@ if($display["hasPic"] == 0) {
                           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                             <i class="fa fa-align-right"></i>
                           </button>
-                          
+
                         </div>
                         <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                           <ul class="nav navbar-nav">
@@ -136,7 +136,7 @@ if($display["hasPic"] == 0) {
                                 <li><a href="admin_inbox"><i class="fas fa-inbox fw"></i> Inbox</a></li>
                                 <li><a href="admin_outbox"><i class="far fa-envelope fw"></i> Outbox</a></li>
                                 <!-- <li><a href="#"><i class="fas fa-question-circle fw"></i> Help</a></li> -->
-                                
+
                                 <li role="separator" class="divider"></li>
                                 <li><a href="./logout"><i class="fa fa-sign-out"></i> Log out</a></li>
                               </ul>
@@ -153,11 +153,11 @@ if($display["hasPic"] == 0) {
                                       <li><a href="pending_mentors"> New Mentors <?php echo $pendingMentors; ?></a></li>
                                     <?php
                                   }
-                                ?>                                
+                                ?>
                               </ul>
                             </li>
 
-                            
+
                             <!-- <li><a href="#"><i class="fa fa-comments"></i><span>10</span></a></li> -->
                             <!-- <li><a href="#"><i class="fas fa-bell"></i><span>18</span></a></li> -->
                             <!-- <li><a href="#"><i data-show="show-side-navigation1" class="fa fa-bars show-side-btn"></i></a></li> -->
@@ -172,39 +172,39 @@ if($display["hasPic"] == 0) {
                             <div class="content">
                               <h2>Welcome, <?php echo $_SESSION["fullname"]; ?> !</h2>
                               <?php
-                                  // format last login 
+                                  // format last login
                                   if($_SESSION["lastLogin"] == NULL) {
                                     $fLastLogin = "This is your first login";
                                   } else {
                                     $date=date_create($_SESSION["lastLogin"]);
                                     $fLastLogin =  date_format($date, "l, jS F, Y - g:i:A");
                                   }
-                                  
+
                               ?>
                               <p style="text-align: center;"><small>Last Login : <?php echo $fLastLogin; ?></small></p>
                             </div>
-                            
+
                           </div>
-                          
+
                         </div>
                       </div>
                     </div>
             </section>
 		<!-- <section id="overview-section">
-		
+
 			<div class="row" id="welcome">
-				
+
 				<div class="col-md-3">
 					<form method="post">
 															<input type="hidden" name="status" value="close" />
 									<button style="background: #b31329;" type="submit" name="lockopenform" id="export">Registration is Open, Lock Now</button>
-														
+
 					</form>
 				</div>
             </div>
         </section>
        -->
-        
+
         <section id="overview-section">
 			<!-- <h1>Dashboard</h1> -->
 			<div class="row" id="welcome">
@@ -226,7 +226,7 @@ if($display["hasPic"] == 0) {
 								<?php
 							}
 						?>
-						
+
 					</form>
 				</div>
       </div>
@@ -253,7 +253,7 @@ if($display["hasPic"] == 0) {
                           </div>
                           </a>
                         </div>
-                        
+
                         <div class="col-md-3">
                         <a href="admins">
                           <div class="box">
@@ -277,13 +277,13 @@ if($display["hasPic"] == 0) {
                     </div>
                   </section>
 
-		
+
 		</section>
 
-    
+
     <section id="statistics">
         <div class="container-fluid">
-         
+
         <div class="row">
             <div class="col-md-6">
               <div class="charts">
@@ -294,7 +294,7 @@ if($display["hasPic"] == 0) {
                 <canvas id="intern-breakdown-pie" >
 
                 </canvas>
-              
+
                 <div class="options">
                   <label for="intern-breakdown-pie-input">
                     <input type="radio" name="intern-breakdown" id="intern-breakdown-pie-input" value="Pie" checked/> Pie
@@ -308,7 +308,7 @@ if($display["hasPic"] == 0) {
 
             <div class="col-md-6">
               <div class="charts">
-        
+
                 <canvas id="mentor-breakdown-bar" class="active">
 
                 </canvas>
@@ -316,7 +316,7 @@ if($display["hasPic"] == 0) {
                 <canvas id="mentor-breakdown-pie">
 
                 </canvas>
-              
+
               <div class="options">
 
               <label for="mentor-breakdown-pie-input">
@@ -340,14 +340,14 @@ if($display["hasPic"] == 0) {
                 <canvas id="count_by_state2" >
 
                 </canvas>
-              
+
                 <div class="options">
                   <label for="internLocation">
-                    <input type="radio" name="byLocation" id="internLocation" value="internLocation" checked /> Interns
+                    <input type="radio" name="byLocation" id="internLocation" value="internLocation"  /> Interns
                   </label>
-            
+
                   <label for="mentorLocation">
-                   <input type="radio" name="byLocation" id="mentorLocation" value="mentorLocation" /> Mentors
+                   <input type="radio" name="byLocation" id="mentorLocation" value="mentorLocation" checked/> Mentors
                   </label>
                </div>
               </div>
@@ -355,7 +355,7 @@ if($display["hasPic"] == 0) {
 
             <div class="col-md-6">
               <div class="charts">
-        
+
                 <canvas id="count_by_track" class="active">
 
                 </canvas>
@@ -363,14 +363,14 @@ if($display["hasPic"] == 0) {
                 <canvas id="count_by_track2">
 
                 </canvas>
-              
+
               <div class="options">
                 <label for="internTrack">
-                  <input type="radio" name="byTrack" id="internTrack" value="internTrack" checked/> Interns
+                  <input type="radio" name="byTrack" id="internTrack" value="internTrack" /> Interns
                 </label>
-              
+
                 <label for="mentorTrack">
-                  <input type="radio" name="byTrack" id="mentorTrack" value="mentorTrack" /> Mentors
+                  <input type="radio" name="byTrack" id="mentorTrack" value="mentorTrack" checked/> Mentors
                 </label>
                </div>
               </div>
@@ -379,7 +379,7 @@ if($display["hasPic"] == 0) {
       </div>
     </section>
   </main>
-  
+
   <!-- <div class="container-fluid">
                       <div class="row">
                         <div class="col-md-3"> -->
@@ -391,7 +391,7 @@ if($display["hasPic"] == 0) {
         <div class="stix" id="stik3"></div>
     </label>
 	<?php include('fragments/sidebar.php'); ?>
-					
+
 		<!-- <select>
 			<option selected="selected" disabled="disabled">Overview</option>
 			<option value="0">Mentors</option>
@@ -467,7 +467,7 @@ if($display["hasPic"] == 0) {
                 ?>
         </tbody>
       </table>
-      <table class="intern-table"> 
+      <table class="intern-table">
        <thead>
            <tr>
            <th data-heading="sn">SN</th>
@@ -490,7 +490,7 @@ if($display["hasPic"] == 0) {
                ?>
        </tbody>
      </table>
-     <table class="intern-table"> 
+     <table class="intern-table">
        <thead>
            <tr>
            <th data-heading="sn">SN</th>
@@ -513,7 +513,7 @@ if($display["hasPic"] == 0) {
                ?>
        </tbody>
      </table>
-     <table class="intern-table"> 
+     <table class="intern-table">
        <thead>
            <tr>
            <th data-heading="sn">SN</th>

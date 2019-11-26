@@ -56,7 +56,7 @@ a{
   .intern-buttons,
   .mentor-buttons{
 	display: flex;
-	margin: 5rem 0 1rem 0rem;
+	margin: 5.7rem 0 1rem 0rem;
   }
   .intern-buttons>.btn:nth-child(1),
   .mentor-buttons>.btn:nth-child(1){
@@ -480,12 +480,22 @@ i:hover{
 		font-size: 20px;
 		margin-top: 34px;
 	}
+	.mentor-table .btn:not(:last-child){
+		margin-bottom: 0.5em;
+		
+	}
+	.mentor-table .btn{
+		width: 77px;
+	}	
 }
 @media (max-width: 860px)
 {
+	#overview-section h2.register{
+		padding-left: 0.6em;
+		
+	}
 	#centralize{
 		height: 100%;
-		
 	}
 	main
 	{
@@ -729,6 +739,24 @@ i:hover{
 	.certificate-table .btn-sm{
 		margin-top: 0.25em;
 	}
+	.mentor-table .btn:not(:last-child),
+	.intern-table .btn:not(:last-child){
+		margin-bottom: 0.5em;
+	}
+	.mentor-table .btn{
+		width: 77px;
+	}
+	#my-table>thead>tr>th:nth-child(12),
+	.mentor-table td:nth-child(12){
+		text-align: center;
+	}
+	.mentor-table .btn.btn-danger.btn-sm{
+		margin-right: 5px;
+	}
+	/* .intern-table th:nth-child(12),
+	.intern-table td:nth-child(12){
+		text-align: center;
+	} */
 }
 
 @media (max-width: 375px){
@@ -753,11 +781,20 @@ i:hover{
 		margin-left: 1.5em;
 		margin-top: 18px;
 	}
+	
 }
 
 @media (max-width: 359px){
 	
   	.mentor-buttons.certificate>.btn:nth-child(1){
 		margin-right: 0;
+	}
+	.intern-buttons .btn:not(:last-child),
+	.mentor-buttons .btn:not(:last-child){
+		margin-left: 0;
+	}
+	#overview-section .row h2{
+		padding-left: 4px;
+		padding-right: 4px;
 	}
 }
