@@ -27,7 +27,7 @@ function sendNewAdminMail($email, $subject, $body)
     $mail->Port       = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('alisataylorm.m@gmail.com', 'HNG SUPPER ADMIN');
+    $mail->setFrom('alisataylorm.m@gmail.com', 'HNG SUPER ADMIN');
     $mail->addAddress("$email");     // Add a recipient
     // $mail->addAddress('ellen@example.com');               // Name is optional
     $mail->addReplyTo('no-reply@gmail.com', 'No-Reply');
@@ -131,7 +131,7 @@ function contactMail($email, $ticket, $name, $subject, $body)
     <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
     </head>
     <body style='margin: 0; padding: 0;'>
-      <table border='0' cellpadding='0' cellspacing='0' width='100%'>	
+      <table border='0' cellpadding='0' cellspacing='0' width='100%'>
         <tr>
           <td style='padding: 10px 0 30px 0;'>
             <table align='center' border='0' cellpadding='0' cellspacing='0' width='600' style='border: 1px solid #cccccc; border-collapse: collapse;'>
@@ -155,7 +155,7 @@ function contactMail($email, $ticket, $name, $subject, $body)
                       </tr>
                                     <tr>
                       <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
-                      
+
                         $body
                                         </td>
                                     </tr>
@@ -242,7 +242,7 @@ function forGetPasswordMail($url, $subject, $email, $body)
     <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
     </head>
     <body style='margin: 0; padding: 0;'>
-      <table border='0' cellpadding='0' cellspacing='0' width='100%'>	
+      <table border='0' cellpadding='0' cellspacing='0' width='100%'>
         <tr>
           <td style='padding: 10px 0 30px 0;'>
             <table align='center' border='0' cellpadding='0' cellspacing='0' width='600' style='border: 1px solid #cccccc; border-collapse: collapse;'>
@@ -262,7 +262,7 @@ function forGetPasswordMail($url, $subject, $email, $body)
                   <tr>
     <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
                       <p>You recieved this mail because you requested for a reset password link. Kindly use the link provided to reset your password. Thank you.</p>
-                       
+
                       <p>$body</p>
 
                        <p>If you did not request a password reset, please ignore this email or <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
@@ -365,7 +365,7 @@ function send_general_email($subject, $email, $message, $bcc = false) //Add blin
       <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
       </head>
       <body style='margin: 0; padding: 0;'>
-        <table border='0' cellpadding='0' cellspacing='0' width='100%'>	
+        <table border='0' cellpadding='0' cellspacing='0' width='100%'>
           <tr>
             <td style='padding: 10px 0 30px 0;'>
               <table align='center' border='0' cellpadding='0' cellspacing='0' width='600' style='border: 1px solid #cccccc; border-collapse: collapse;'>
@@ -384,7 +384,7 @@ function send_general_email($subject, $email, $message, $bcc = false) //Add blin
                       </tr>
                     <tr>
       <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
-                        
+
                         <p>$message</p>
                         </td>
                     </tr>
@@ -469,7 +469,7 @@ function sendInternMail($email, $fullname, $body)
     <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
     </head>
     <body style='margin: 0; padding: 0;'>
-      <table border='0' cellpadding='0' cellspacing='0' width='100%'>	
+      <table border='0' cellpadding='0' cellspacing='0' width='100%'>
         <tr>
           <td style='padding: 10px 0 30px 0;'>
             <table align='center' border='0' cellpadding='0' cellspacing='0' width='600' style='border: 1px solid #cccccc; border-collapse: collapse;'>
@@ -486,16 +486,16 @@ function sendInternMail($email, $fullname, $body)
                         <b>Dear, $fullname</b>
                       </td>
                     </tr>
-                   
+
               <tr>
                 <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
-                
+
                   <p>$body</p>
                 </td>
               </tr>
                <tr>
                 <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
-                
+
                  <p>For futher enquiry contact us with the link below and If you’re having trouble clicking the link above, copy and paste the URL below into your web browser. <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
                 </td>
               </tr>
@@ -582,7 +582,7 @@ function  rejectInternMail($email, $fullname, $body)
     <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
     </head>
     <body style='margin: 0; padding: 0;'>
-      <table border='0' cellpadding='0' cellspacing='0' width='100%'>	
+      <table border='0' cellpadding='0' cellspacing='0' width='100%'>
         <tr>
           <td style='padding: 10px 0 30px 0;'>
             <table align='center' border='0' cellpadding='0' cellspacing='0' width='600' style='border: 1px solid #cccccc; border-collapse: collapse;'>
@@ -599,16 +599,16 @@ function  rejectInternMail($email, $fullname, $body)
                         <b>Dear, $fullname</b>
                       </td>
                     </tr>
-                   
+
               <tr>
                 <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
-                
+
                   <p>$body</p>
                 </td>
               </tr>
                <tr>
                 <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
-                
+
                  <p>For futher enquiry contact us with the link below and If you’re having trouble clicking the link above, copy and paste the URL below into your web browser. <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
                 </td>
               </tr>
@@ -694,7 +694,7 @@ function acceptInternMail($email, $fullname, $body)
     <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
     </head>
     <body style='margin: 0; padding: 0;'>
-      <table border='0' cellpadding='0' cellspacing='0' width='100%'>	
+      <table border='0' cellpadding='0' cellspacing='0' width='100%'>
         <tr>
           <td style='padding: 10px 0 30px 0;'>
             <table align='center' border='0' cellpadding='0' cellspacing='0' width='600' style='border: 1px solid #cccccc; border-collapse: collapse;'>
@@ -711,16 +711,16 @@ function acceptInternMail($email, $fullname, $body)
                         <b>Dear, User</b>
                       </td>
                     </tr>
-                   
+
               <tr>
                 <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
-                
+
                   <p>$body</p>
                 </td>
               </tr>
                <tr>
                 <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
-                
+
                  <p>FOR futher enquiry contact us with the link below and If you’re having trouble clicking the link above, copy and paste the URL below into your web browser. <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
                 </td>
               </tr>
@@ -811,7 +811,7 @@ function   rejectMentorMail($body, $fullname, $email)
     <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
     </head>
     <body style='margin: 0; padding: 0;'>
-      <table border='0' cellpadding='0' cellspacing='0' width='100%'>	
+      <table border='0' cellpadding='0' cellspacing='0' width='100%'>
         <tr>
           <td style='padding: 10px 0 30px 0;'>
             <table align='center' border='0' cellpadding='0' cellspacing='0' width='600' style='border: 1px solid #cccccc; border-collapse: collapse;'>
@@ -828,16 +828,16 @@ function   rejectMentorMail($body, $fullname, $email)
                         <b>Dear, user</b>
                       </td>
                     </tr>
-                   
+
               <tr>
                 <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
-                
+
                   <p>$body</p>
                 </td>
               </tr>
                <tr>
                 <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
-                
+
                  <p>FOR futher enquiry contact us with the link below and If you’re having trouble clicking the link above, copy and paste the URL below into your web browser. <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
                 </td>
               </tr>
@@ -923,7 +923,7 @@ function   acceptMentorMail($body, $fullname, $email)
     <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
     </head>
     <body style='margin: 0; padding: 0;'>
-      <table border='0' cellpadding='0' cellspacing='0' width='100%'>	
+      <table border='0' cellpadding='0' cellspacing='0' width='100%'>
         <tr>
           <td style='padding: 10px 0 30px 0;'>
             <table align='center' border='0' cellpadding='0' cellspacing='0' width='600' style='border: 1px solid #cccccc; border-collapse: collapse;'>
@@ -940,16 +940,16 @@ function   acceptMentorMail($body, $fullname, $email)
                         <b>Dear, user</b>
                       </td>
                     </tr>
-                   
+
               <tr>
                 <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
-                
+
                   <p>$body</p>
                 </td>
               </tr>
                <tr>
                 <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
-                
+
                  <p>FOR futher enquiry contact us with the link below and If you’re having trouble clicking the link above, copy and paste the URL below into your web browser. <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
                 </td>
               </tr>
@@ -1151,7 +1151,7 @@ function   certificatereadyMail($email, $fullname, $body)
     <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
     </head>
     <body style='margin: 0; padding: 0;'>
-      <table border='0' cellpadding='0' cellspacing='0' width='100%'>	
+      <table border='0' cellpadding='0' cellspacing='0' width='100%'>
         <tr>
           <td style='padding: 10px 0 30px 0;'>
             <table align='center' border='0' cellpadding='0' cellspacing='0' width='600' style='border: 1px solid #cccccc; border-collapse: collapse;'>
@@ -1168,17 +1168,17 @@ function   certificatereadyMail($email, $fullname, $body)
                         <b>Dear, user</b>
                       </td>
                     </tr>
-                   
+
               <tr>
                 <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
-                
+
                   <p>$body</p>
                   <p<a href''></a><p>
                 </td>
               </tr>
                <tr>
                 <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
-                
+
                  <p>FOR futher enquiry contact us with the link below and If you’re having trouble clicking the link above, copy and paste the URL below into your web browser. <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
                 </td>
               </tr>
