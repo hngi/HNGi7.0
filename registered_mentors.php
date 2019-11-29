@@ -41,7 +41,7 @@ if (isset($_GET['rejectMentorId'])) {
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
     <style type="text/css">
-        .card {
+        /* .card {
             height: 150px;
             background: #ccc;
             margin: 15px;
@@ -65,7 +65,7 @@ if (isset($_GET['rejectMentorId'])) {
      .fa-search{
       margin-top: 10px;
      }
-    }
+    } */
     </style>
 
 </head>
@@ -119,7 +119,7 @@ if (isset($_GET['rejectMentorId'])) {
                         <div id="printablediv">
                             <div class="scroll">
                             <!-- <table id="my-table" class="table table-hover table-bordered mt-3 mb-1"> -->
-                            <table id="my-table" class="table table-hover mentor-table">
+                            <table id="my-table" class="table table-hover mentor-table registered">
                                 <!-- <thead class="table-primary"> -->
                                 <thead>
                                     <tr>

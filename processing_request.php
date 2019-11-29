@@ -39,7 +39,7 @@ if ($status) {
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
   <style type="text/css">
-    .card {
+    /* .card {
       height: 150px;
       background: #ccc;
       margin: 15px;
@@ -47,22 +47,22 @@ if ($status) {
       border-radius: 15px;
     }
 
-    @media (max-width: 320px) {
-      .heading {
+    @media (max-width: 320px){
+     .heading{
 
-        width: 170px;
-        margin-left: 50px !important;
-        margin-right: auto !important;
-        text-align: center !important;
-      }
+      width: 170px;
+      margin-left: 50px !important;
+      margin-right: auto !important;
+      text-align: center !important;
+     }
 
-      .searchBox {
-        margin-top: 70px;
-      }
+     .searchBox {
+      margin-top: 70px;
+     }
 
-      .fa-search {
-        margin-top: 10px;
-      }
+     .fa-search{
+      margin-top: 10px;
+     } */
     }
   </style>
 
