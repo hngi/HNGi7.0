@@ -45,7 +45,7 @@ $mentors = $mentor->showMentors();
         <p class="lead">Our mentors who are experienced in various sectors contribute their time and knowledge to ensure
           the interns get the best guide as they begin their journey into the tech industry.
         </p>
-        <a href="MentorSetUpPage2">Sign up as Mentor</a>
+        <a href="mentor-registration">Sign up as Mentor</a>
         <!--UPDATE MENTOR PROFILE --= COLLECT EMAIL HERE -->
         <!--  <p class="update_mentor" onclick="modalForm()"> <a>Update Your Profile</a></p>-->
 

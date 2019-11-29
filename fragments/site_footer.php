@@ -11,7 +11,7 @@
                     <a href="join-intern" class="skyblue-text">Join HNG</a>
                     <a href="about" class="skyblue-text">About HNG</a>
                     <a href="donate" class="skyblue-text">Become a Sponsor</a>
-                    <a href="MentorSetUpPage2" class="skyblue-text">Sign up as Mentor</a>
+                    <a href="mentor-registration" class="skyblue-text">Sign up as Mentor</a>
                     <a href="faq" class="skyblue-text">FAQ</a>
                     <a href="intern-experience" class="skyblue-text">Past Intern Experience</a>
                     <a href="request_certificate">Request Certificate</a>
