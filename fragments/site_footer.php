@@ -30,11 +30,11 @@
                         +234 812 345 6789
                     </a>
                     <br />
-                    <a href="mailto:interns@hng.tech">
+                    <a href="mailto:hngi7@hng.tech">
                         <strong>
                             Email: <br />
                         </strong>
-                        interns@hng.tech
+                        hngi7@hng.tech
                     </a>
                 </div>
             </div>
