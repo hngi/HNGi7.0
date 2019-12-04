@@ -23,13 +23,6 @@
             <div class="col-md-3 pb-3 footer-section">
                 <h2 class="skyblue-text">Contact Us</h2>
                 <div>
-                    <a href="tel:+2348123456789">
-                        <strong>
-                            Phone: <br />
-                        </strong>
-                        +234 812 345 6789
-                    </a>
-                    <br />
                     <a href="mailto:hngi7@hng.tech">
                         <strong>
                             Email: <br />
