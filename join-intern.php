@@ -192,7 +192,7 @@ if (isset($_POST['submit'])) {
         } else {
             ?>
             <div style="width: 100%; margin: 0 auto; text-align: center; padding: 30px; color: #6F0503; ">
-                <h1>Registration is now Closed</h1>
+                <h1>Registration is will Commence Soon!</h1>
             </div>
             <?php
         }
