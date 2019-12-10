@@ -141,16 +141,16 @@ $countDownValues = $countdown->getDate();
                         </span>
                         <span>
                             <img
-                                src="https://res.cloudinary.com/dzfz6iwon/image/upload/v1573330175/images_2_ocj1df.jpg">
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722589/gallery-second_nkrosi.png">
                             <p> Some of the HNG mentors & interns at the last meetup</p>
                         </span>
                         <span>
                             <img
-                                src="https://res.cloudinary.com/dzfz6iwon/image/upload/v1573329961/images_6_wpsobk.jpg">
+                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722558/gallery-first_gldujn.png">
                             <p>A cross-section of the last meetup</p>
                         </span>
                         <span>
-                            <img src="https://res.cloudinary.com/dzfz6iwon/image/upload/v1573329953/images_p4jcm4.jpg">
+                            <img src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng2_rva54w.jpg">
                             <p>Some of the HNG mentors & interns at the last meetup</p>
                         </span>
                     </div>
@@ -177,7 +177,7 @@ $countDownValues = $countdown->getDate();
                         </span>
                         <span>
                             <img
-                                src="https://res.cloudinary.com/dzfz6iwon/image/upload/v1573329832/download_2_tgyq4c.jpg">
+                                src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng2_rva54w.jpg">
                             <p> Some of the HNG mentors & interns at the last meetup</p>
                         </span>
                         <span>
@@ -187,17 +187,17 @@ $countDownValues = $countdown->getDate();
                         </span>
                         <span>
                             <img
-                                src="https://res.cloudinary.com/dzfz6iwon/image/upload/v1573329996/images_1_leavxm.jpg">
+                                src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng2_rva54w.jpg">
                             <p> Some of the interns at the last meetup</p>
                         </span>
                         <span>
                             <img
-                                src="https://res.cloudinary.com/dzfz6iwon/image/upload/v1573329934/images_4_k5hdgs.jpg">
+                                src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng2_rva54w.jpg">
                             <p> Some of the HNG mentors & interns at the last meetup</p>
                         </span>
                         <span>
                             <img
-                                src="https://res.cloudinary.com/dzfz6iwon/image/upload/v1573329730/download_1_f8zp1i.jpg">
+                                src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng2_rva54w.jpg">
                             <p> Some of the HNG mentors at the last meetup</p>
                         </span>
                     </div>

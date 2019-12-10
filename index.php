@@ -682,7 +682,6 @@
         }
     </script>
     <?php include('fragments/chat.php'); ?>
-    <h3>Hello world!</h3>
 </body>
 
 </html>
