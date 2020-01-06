@@ -20,7 +20,7 @@
 //$amount = $amount;
 //$currency = "USD";
         $txref = $ref; // ensure you generate unique references per transaction.
-        $PBFPubKey = "FLWPUBK_TEST-2c7dd09d63d44deae5cbf3e9728aa289-X"; // get your public key from the dashboard.
+        $PBFPubKey = "FLWPUBK_TEST-2632b2661e8fb72e6cce1f4482169959-X"; // get your public key from the dashboard.
         $redirect_url = $url;
 //$payment_plan = "pass the plan id"; // this is only required for recurring payments.
 
@@ -280,8 +280,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>    <script src="./js/scroll-to-top.js"></script> 
 
     <!-- rave payment -->
-    <script>
-    const API_publicKey = "FLWPUBK_TEST-2c7dd09d63d44deae5cbf3e9728aa289-X";
+    <!-- <script>
+    const API_publicKey = "FLWPUBK_TEST-2632b2661e8fb72e6cce1f4482169959-X";
 
     function payWithRave() {
         var x = getpaidSetup({
@@ -312,6 +312,6 @@
             }
         });
     }
-</script>
+</script> -->
 
 </html>
