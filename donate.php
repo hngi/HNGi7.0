@@ -146,7 +146,7 @@
     <section class="banner">
       <h3 class="title">Your Donations Help</h3>
       <p class="desc">
-        During HNGi6.0, we raised a total of ₦2,000,000 naira in total. With
+        During HNGi6.0, we raised a total of ₦2,200,000 plus $10k in AWS credit. With
         your help, we can raise even more.
       </p>
       <a href="#form" class="button-primary">Donate</a>
