@@ -199,10 +199,6 @@
         />
         
         <input type="submit" name="pay" value="Donate Now" /> <br>
-        <form>
-          <!--<script src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
-          <button onClick="payWithRave()" class="transparent-btn" style="background-color: transparent; color:#007bff; background-repeat:no-repeat; border: none; cursor:pointer; overflow: hidden; outline:none;">Donate via Flutter</button>-->
-        </form>
         <a href="newsponsor">Register as Sponsor(Brand)</a>
        
       </form>
@@ -243,23 +239,6 @@
       
     </div>
 
-    <!-- Delete this when form submission is set up -->
-    <script>
-      let form = document.querySelector('#actualForm');
-      form.addEventListener('submit', e => {
-        e.preventDefault();
-
-        //alert("Thanks, but donations aren't working yet");
-      });
-      let SupportForm = document.querySelector('#actualSupportForm');
-      SupportForm.addEventListener('submit', e => {
-        e.preventDefault();
-
-        //alert("Thanks, but donations aren't working yet");
-      });
-    </script>
-
-     <!-- </div> -->
     </section>     
     <?php include "fragments/site_footer.php" ?>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -277,41 +256,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>    <script src="./js/scroll-to-top.js"></script> 
-
-    <!-- rave payment -->
-    <!-- <script>
-    const API_publicKey = "FLWPUBK_TEST-2632b2661e8fb72e6cce1f4482169959-X";
-
-    function payWithRave() {
-        var x = getpaidSetup({
-            PBFPubKey: API_publicKey,
-            customer_email: "user@example.com",
-            amount: 2000,
-            customer_phone: "234099940409",
-            currency: "NGN",
-            txref: "rave-123456",
-            meta: [{
-                metaname: "flightID",
-                metavalue: "AP1234"
-            }],
-            onclose: function() {},
-            callback: function(response) {
-                var txref = response.tx.txRef; // collect txRef returned and pass to a          server page to complete status check.
-                console.log("This is the response returned after a charge", response);
-                if (
-                    response.tx.chargeResponseCode == "00" ||
-                    response.tx.chargeResponseCode == "0"
-                ) {
-                    // redirect to a success page
-                } else {
-                    // redirect to a failure page.
-                }
-
-                x.close(); // use this to close the modal immediately after payment.
-            }
-        });
-    }
-</script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>    
+    <script src="./js/scroll-to-top.js"></script> 
 
 </html>
