@@ -159,8 +159,8 @@
       <div class="text">
         <h3 class="title">Donate to specific groups</h3>
         <p class="desc">
-          You can also donate specifically to groups with special needs or
-          groups that are underrepresented in the tech space like:
+          You can also donate specifically to group with special needs or
+          group that are underrepresented in the tech space like:
         </p>
         <ul class="list">
           <li>Women</li>
