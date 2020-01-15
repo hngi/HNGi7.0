@@ -209,7 +209,7 @@
                             <div class="section2">
                                 <div class="half-a-row">
                                     <img class="intern-meet"
-                                        src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572767613/Rectangle_4.6_vfbtwb-min.png"
+                                        src="https://res.cloudinary.com/dsjn4g5sh/image/upload/v1579056945/HNGi7/DSC_0320_compressed_zban6e.jpg"
                                         alt="interns" />
                                 </div>
                                 <div class="onboard my-auto mobile-view" data-aos="fade-left">
@@ -534,7 +534,7 @@
 
                             <div class="row_8--two">
                                 <img
-                                    src="https://res.cloudinary.com/chibuogwu/image/upload/v1570730841/IMG5_prmueb.png">
+                                    src="https://res.cloudinary.com/dsjn4g5sh/image/upload/v1579056902/HNGi7/DSC_0061_compressed_wyvjvs.jpg">
                             </div>
                         </div>
                     </div>

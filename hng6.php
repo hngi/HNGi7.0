@@ -113,7 +113,7 @@ $countDownValues = $countdown->getDate();
                         </article>
                         <article>
                             <img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722500/home-forum_wmrsfj.png">
+                                src="https://res.cloudinary.com/dsjn4g5sh/image/upload/v1579056902/HNGi7/DSC_0061_compressed_wyvjvs.jpg">
                         </article>
                     </div>
                 </div>
@@ -126,13 +126,13 @@ $countDownValues = $countdown->getDate();
                     <div class="gallery_items" data-aos="fade-up">
                         <span>
                             <img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722589/gallery-second_nkrosi.png">
-                            <p> A cross-section of the last meetup</p>
+                                src="https://res.cloudinary.com/dsjn4g5sh/image/upload/v1579056945/HNGi7/DSC_0320_compressed_zban6e.jpg">
+                            <p>Graduate Interns from HNGi6</p>
                         </span>
                         <span>
                             <img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722618/gallery-third_oqgaiv.png">
-                            <p> A cross-section of the last meetup</p>
+                                src="https://res.cloudinary.com/dsjn4g5sh/image/upload/v1579056936/HNGi7/DSC_0235_compressed_quuops.jpg">
+                            <p> Our Ladies in Tech</p>
                         </span>
                         <span>
                             <img
@@ -141,64 +141,64 @@ $countDownValues = $countdown->getDate();
                         </span>
                         <span>
                             <img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722589/gallery-second_nkrosi.png">
-                            <p> Some of the HNG mentors & interns at the last meetup</p>
+                                src="https://res.cloudinary.com/dsjn4g5sh/image/upload/v1579056951/HNGi7/DSC_0349_compressed_hobsvf.jpg">
+                            <p> Some of the HNG mentors at the HNGi6 Lagos meetup</p>
                         </span>
                         <span>
                             <img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722558/gallery-first_gldujn.png">
-                            <p>A cross-section of the last meetup</p>
+                                src="https://res.cloudinary.com/dsjn4g5sh/image/upload/v1579056912/HNGi7/DSC_0102_compressed_lkdfe5.jpg">
+                            <p>A cross-section of the HNGi6 Lagos meetup handled by Jeffrey Ogah</p>
                         </span>
                         <span>
-                            <img src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng2_rva54w.jpg">
-                            <p>Some of the HNG mentors & interns at the last meetup</p>
+                            <img src="https://res.cloudinary.com/dsjn4g5sh/image/upload/v1579056903/HNGi7/DSC_0066_compressed_gio6ad.jpg">
+                            <p>A cross-section of HNGi6 meetup</p>
                         </span>
                     </div>
                     <div class="gallery_items" id="hidden_images" data-aos="fade-up">
                         <span>
                             <img
-                                src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng1_rbfvik.jpg">
-                            <p> Some of the HNG interns at the last meetup</p>
+                                src="https://res.cloudinary.com/dsjn4g5sh/image/upload/v1579056897/HNGi7/DSC_0017_compressed_jcpliu.jpg">
+                            <p>Interactions between graduate interns</p>
                         </span>
                         <span>
                             <img
-                                src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng2_rva54w.jpg">
-                            <p> Some of the HNG mentors at the last meetup</p>
+                                src="https://res.cloudinary.com/dsjn4g5sh/image/upload/v1579056953/HNGi7/DSC_0379_compressed_liu0nb.jpg">
+                            <p> Some of the HNG male mentors at the HNGi6 meetup</p>
                         </span>
                         <span>
                             <img
-                                src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng3_blzemp.jpg">
-                            <p> Two of the female HNG mentors</p>
+                                src="https://res.cloudinary.com/dsjn4g5sh/image/upload/v1579056935/HNGi7/DSC_0240_compressed_rqryji.jpg">
+                            <p>Few of our beautiful ladies at the last meet up</p>
                         </span>
                         <span>
                             <img
-                                src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng4_tlrjyf.jpg">
-                            <p> Some of the HNG mentors at the last meetup</p>
+                                src="https://res.cloudinary.com/dsjn4g5sh/image/upload/v1579056920/HNGi7/DSC_0176_compressed_rlodtc.jpg">
+                            <p>An ongoing session</p>
                         </span>
                         <span>
                             <img
-                                src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng2_rva54w.jpg">
-                            <p> Some of the HNG mentors & interns at the last meetup</p>
+                                src="https://res.cloudinary.com/dsjn4g5sh/image/upload/v1579056931/HNGi7/DSC_0197_compressed_ju1aio.jpg">
+                            <p>We are happy people</p>
                         </span>
                         <span>
                             <img
-                                src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng5_qvzjfy.jpg">
-                            <p> Some of the HNG mentors & interns at the last meetup</p>
+                                src="https://res.cloudinary.com/dsjn4g5sh/image/upload/v1579056956/HNGi7/DSC_0501_compressed_nl7twm.jpg">
+                            <p>We are serious minded people</p>
                         </span>
                         <span>
                             <img
-                                src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng2_rva54w.jpg">
-                            <p> Some of the interns at the last meetup</p>
+                                src="https://res.cloudinary.com/dsjn4g5sh/image/upload/v1579056910/HNGi7/DSC_0100_compressed_mosuvp.jpg">
+                            <p>An on going session</p>
                         </span>
                         <span>
                             <img
-                                src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng2_rva54w.jpg">
-                            <p> Some of the HNG mentors & interns at the last meetup</p>
+                                src="https://res.cloudinary.com/dsjn4g5sh/image/upload/v1579056937/HNGi7/DSC_0252_compressed_cnwj4c.jpg">
+                            <p>Few of our ladies </p>
                         </span>
                         <span>
                             <img
-                                src="https://res.cloudinary.com/yutee/image/upload/v1571818578/low-quality/startng2_rva54w.jpg">
-                            <p> Some of the HNG mentors at the last meetup</p>
+                                src="https://res.cloudinary.com/dsjn4g5sh/image/upload/v1579056985/HNGi7/DSC_0778_compressed_cbub9t.jpg">
+                            <p>Interactions between mentors</p>
                         </span>
                     </div>
                 </section> <br>
@@ -219,7 +219,7 @@ $countDownValues = $countdown->getDate();
                     <p id="p-link"><a href="join-intern" class="def-button">Join HNGi7.0</a></p>
                 </div>
                 <div> <br>
-                    <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722649/home-geeks_vld6nt.png"
+                    <img src="https://res.cloudinary.com/dsjn4g5sh/image/upload/v1579056895/HNGi7/DSC_0007_compressed_dtapsd.jpg"
                         id="geek-img">
                 </div>
             </section>
