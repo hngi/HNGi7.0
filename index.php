@@ -43,7 +43,7 @@
                             <p id="welcome-story">
                                 The HNG Internship is an ambitious attempt to change the way education is done in
                                 Africa.
-                                It’s the bridge between learning to code, and becoming the best in the world.
+                                It’s the bridge between learning to code and becoming the best in the world.
                             </p>
                             <button class="cta-button button--midBlue" id="buttt">
                                 <a href="join-intern" id="butt">Get Started</a>
@@ -477,24 +477,24 @@
                             <div class="mentor-image">
                                 <img src="https://res.cloudinary.com/jeffogah/image/upload/v1573127408/download.jpg">
                                 <p class="font-weight-bold">Jeffrey Ogah</p>
-                                <p>Web Developer</p>
+                                <p>Frontend Developer</p>
                             </div>
 
                             <div class="mentor-image">
                                 <img src="https://res.cloudinary.com/do9i9xfku/image/upload/v1554310773/Passport.png">
                                 <p class="font-weight-bold">Tomisin Lalude </p>
-                                <p>Frontend Development</p>
+                                <p>Frontend Developer</p>
                             </div>
                             <div class="mentor-image">
                                 <img src="https://res.cloudinary.com/dxikrojwn/image/upload/v1554311651/Motun.jpg">
                                 <p class="font-weight-bold">Da-costa Motunrayo</p>
-                                <p>Frontend Development</p>
+                                <p>Frontend Developer</p>
                             </div>
                             <div class="mentor-image">
                                 <img
                                     src="https://res.cloudinary.com/joshuafolorunsho/image/upload/v1572871096/zodqqfrro1lwuntitiaw.jpg">
                                 <p class="font-weight-bold">Ephraim Aigbefo</p>
-                                <p>Fullstack Development</p>
+                                <p>Fullstack Developer</p>
                             </div>
                         </section>
                         <div>
@@ -628,7 +628,7 @@
                             </div>
                         </div>
                         <button class="cta-button button--midBlue">
-                            <a href="donate" class="text_center">Become Sponsor</a>
+                            <a href="donate" class="text_center">Become a Sponsor</a>
                         </button>
                     </div>
 

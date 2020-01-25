@@ -384,6 +384,7 @@
         right: 0!important;
         max-width: 794px;
         max-height: 711px;
+        object-fit: cover;
     }
 
     .support {
