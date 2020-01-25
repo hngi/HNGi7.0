@@ -162,6 +162,7 @@
         right: 0!important;
         max-width: 794px;
         max-height: 711px;
+        object-fit: cover;
     }
         /*ABOUT PAGE ENDS */
         /*GALLERY STARTS HERE */
@@ -192,6 +193,7 @@
             object-fit: cover;
             margin: 15px auto;
             transition: width 2s;
+            object-position: top;
 
         }
 
