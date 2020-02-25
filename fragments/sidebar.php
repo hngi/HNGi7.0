@@ -8,10 +8,10 @@
 		<?php
 		    if($_SESSION["hasPic"] == "no") {
 		        // admin has NO picture, show default
-		        echo '<img src="adminProfilePics/default.jpg" height="90px" width="90px"/>';
+		        echo '<img src="images/uploads/admin/default.jpg" height="90px" width="90px"/>';
 		    } else if($_SESSION["hasPic"] == "yes"){
 		        // admin has picture
-		        echo '<img src="adminProfilePics/'.$_SESSION["admin_id"].'.jpg" class="img-circle img-responsive" height="90px" width="90px" />';
+		        echo '<img src="images/uploads/admin/'.$_SESSION["admin_id"].'.jpg" class="img-circle img-responsive" height="90px" width="90px" />';
 		    }
 		?>
 

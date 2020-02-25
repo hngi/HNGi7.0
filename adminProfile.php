@@ -32,7 +32,7 @@ if(isset($_POST["update"])) {
 
 if(isset($_POST["uploadPicture"])) {
     $fileName = $adminId. ".jpg";
-    if (move_uploaded_file($_FILES["image"]["tmp_name"], "adminProfilePics/".$fileName."")) {
+    if (move_uploaded_file($_FILES["image"]["tmp_name"], "images/uploads/admin/".$fileName."")) {
         $admin->imageUPloaded($adminId);
     } else {
         echo "Sorry, there was an error uploading your file.";
@@ -247,7 +247,7 @@ if(isset($_POST["deleteProfilePicture"])) {
                                 echo '<img src="adminProfilePics/default.jpg" />';
                             } else {
                                 // admin has picture
-                                echo '<img src="adminProfilePics/'.$adminId.'.jpg" class="img-circle img-responsive" style="height: 200px; width: 200px;"/>';
+                                echo '<img src="images/uploads/admin/'.$adminId.'.jpg" class="img-circle img-responsive" style="height: 200px; width: 200px;"/>';
                             }
                         ?>
 
