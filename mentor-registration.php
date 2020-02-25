@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($fileSize < 400000) {
           // rename image file
           $fileNameNew = uniqid('', true) . "." . $fileActualExt;
-          $fileDestination = 'uploads/' . $fileNameNew;
+          $fileDestination = 'images/uploads/mentors/' . $fileNameNew;
           if (move_uploaded_file($fileTmpName, $fileDestination)) {
 
             $mentor->area_of_expertise = $database->escape_string($area_of_expertise);
@@ -104,7 +104,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($mentor->Apply_mentor()) {
               mailMentor($mentor->email, $mentor->name);
-              header("location:MentorSetUpPage2.php?message=Application Successful");
+              header("location:mentor-registration?message=Your Application has been submitted Successfully");
               //echo "<script>alert('Image uploaded successfully!')</script>";
             }
           } else {
@@ -185,15 +185,18 @@ function readURL(input) {
     <div class="container mt-5">
       <div class="container-fluid">
         <div class="row">
+
+         
+
           <p class=" col-12 text-center area mb-5">Choose an area of expertise</p>
           <div id="wrap" class="text-justify  mb-3 wrap mx-auto">
             <?php
             if (!empty($error)) {
 
               foreach ($error as $details) {
-                echo  "<div class='alert alert-danger alert-dismissible'><button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button>" . $details . "</div>";
-              }
-            }
+                  echo  "<div class='alert alert-danger alert-dismissible'><button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button>" . $details . "</div>";
+                }
+              }          
 
             ?>
             <div class="custom-control custom-checkbox mb-1">
