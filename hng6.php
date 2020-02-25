@@ -103,7 +103,7 @@ $countDownValues = $countdown->getDate();
                                 basis with deadlines for submission. Failure of participants to turn in complete and
                                 accurate tasks at the set deadline resulted in eviction. <br> <br>
 
-                                We had <a href="mentorpage">mentors</a> onboard to guide interns in their respective
+                                We had <a hre="mentorpage">mentors</a> onboard to guide interns in their respective
                                 tracks throughout and also
                                 to properly coordinate the program. <br> <br>
                                 We are looking forward to HNG Internship 7.0, which will commence on the 1st of January,
@@ -278,7 +278,7 @@ $countDownValues = $countdown->getDate();
                                 <p class="mentor-desc center-text">Frontend Developer</p>
                             </div>
                         </div>
-                        <a href="mentorpage" class="def-button shadowed">See all Mentors</a>
+                        <!-- <a href="mentorpage" class="def-button shadowed">See all Mentors</a> -->
                     </div>
                 </div>
 

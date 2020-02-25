@@ -498,9 +498,9 @@
                             </div>
                         </section>
                         <div>
-                            <button class="button--midBlue cta-button" id="mentorButton">
+                            <!-- <button class="button--midBlue cta-button" id="mentorButton">
                                 <a href="mentorpage">See more</a>
-                            </button>
+                            </button> -->
                         </div>
                     </div>
 
