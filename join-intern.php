@@ -76,7 +76,7 @@ if (isset($_POST['submit'])) {
         <h2 class="heading">Join as an Intern</h2>
         <p class="para">
             Complete the form below to begin your journey as an Intern.<br>
-            To become a mentor <a href="mentor-registration">Click here</a>
+            <!-- To become a mentor <a href="mentor-registration">Click here</a> -->
         </p>
     </section>
 
