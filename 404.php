@@ -41,6 +41,7 @@
             }
             a{
                 color: #fff;
+                
             }
             h1{
                 margin-bottom: 20px;
