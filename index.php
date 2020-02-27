@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
+    
 </head>
 
 <body>
