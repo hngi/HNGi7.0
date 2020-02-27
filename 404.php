@@ -13,7 +13,7 @@
             /*navbar styles*/
             header{
                 background-color:#D1F0F6;
-                padding-bottom: 2rem;
+                padding-bottom: 2rem; 
             };
             .navbar-brand img{
                  width: 100%;
