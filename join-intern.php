@@ -202,7 +202,7 @@ if (isset($_POST['submit'])) {
     </div>
     <?php include "fragments/site_footer.php"; ?>
 </section>
-<?php include('fragments/chat.php'); ?>
+<?php // include('fragments/chat.php'); ?>
 </body>
 
 </html>

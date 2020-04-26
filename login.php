@@ -100,7 +100,7 @@ if (isset($_SESSION['lg_error'])) {
   </section>
   <?php include('fragments/site_footer.php'); ?>
 
-<?php include('fragments/chat.php'); ?>
+  <?php // include('fragments/chat.php'); ?>
 </body>
 
 </html>

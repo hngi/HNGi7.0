@@ -1,7 +1,7 @@
 <?php
-    require 'classControllers/init.php';
-    $countdown = new CountdownTimer();
-    $countDownValues = $countdown->getDate();
+require 'classControllers/init.php';
+$countdown = new CountdownTimer();
+$countDownValues = $countdown->getDate();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,14 +21,14 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
-    
+
 </head>
 
 <body>
     <p id="startDate" style="display: none;"><?php echo $countDownValues["startDate"]; ?></p>
     <p id="startTime" style="display: none;"><?php echo $countDownValues["startTime"]; ?></p>
 
-    <?php include('fragments/site_header.php');?>
+    <?php include 'fragments/site_header.php';?>
     <section class="body-section">
         <div>
             <img src="https://bit.ly/2OC3tWo" id="corner-circle" alt="Graphic at the top right corner">
@@ -279,7 +279,7 @@
                                     </div>
                                     <div class="col-10">
                                         <h5>BACK END</h5>
-                                        <P>Build scalable, logic-driven applications with world-class technologies and handle the 'behind-the-scenes' functionality of web applications. 
+                                        <P>Build scalable, logic-driven applications with world-class technologies and handle the 'behind-the-scenes' functionality of web applications.
                                         </P>
                                     </div>
                                 </div>
@@ -595,7 +595,7 @@
 
                 <div class="sponsor">
                     <div class="container">
-                        <h2 class="text_center blue-text">HNG 6.0 Internship Sponsors</h2>
+                        <h2 class="text_center blue-text">HNG 7.0 Internship Sponsors</h2>
                         <div class="row section-row text-center mx-auto" data-aos="fade-up">
                             <div class="col-md-3">
                                 <img
@@ -659,7 +659,7 @@
 
         </div>
     </section>
-    <?php include('fragments/site_footer.php'); ?>
+    <?php include 'fragments/site_footer.php';?>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -682,7 +682,7 @@
             })
         }
     </script>
-    <?php include('fragments/chat.php'); ?>
+    <?php // include('fragments/chat.php'); ?>
 </body>
 
 </html>

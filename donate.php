@@ -242,7 +242,7 @@
     </section>     
     <?php include "fragments/site_footer.php" ?>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <?php include('fragments/chat.php'); ?>
+    <?php // include('fragments/chat.php'); ?>
   </body>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/main.js"></script>
