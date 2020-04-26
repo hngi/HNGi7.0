@@ -136,7 +136,7 @@ $countDownValues = $countdown->getDate();
                         </span>
                         <span>
                             <img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722558/gallery-first_gldujn.png">
+                                src="https://res.cloudinary.com/dsjn4g5sh/image/upload/v1579056902/HNGi7/DSC_0061_compressed_wyvjvs.jpg">
                             <p>Panel sessions ongoing</p>
                         </span>
                         <span>

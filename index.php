@@ -595,7 +595,7 @@ $countDownValues = $countdown->getDate();
 
                 <div class="sponsor">
                     <div class="container">
-                        <h2 class="text_center blue-text">HNG 7.0 Internship Sponsors</h2>
+                        <h2 class="text_center blue-text">HNG i7.0 Internship Sponsors</h2>
                         <div class="row section-row text-center mx-auto" data-aos="fade-up">
                             <div class="col-md-3">
                                 <img

@@ -14,7 +14,7 @@
                     <!-- <a href="mentor-registration" class="skyblue-text">Sign up as Mentor</a> -->
                     <a href="faq" class="skyblue-text">FAQ</a>
                     <a href="intern-experience" class="skyblue-text">Past Intern Experience</a>
-                    <a href="request_certificate">Request Certificate</a>
+                    <a href="https://hng.tech/certificate">Request Certificate</a>
                    <!-- <a href="download_certificate.php">Download Certificate</a>-->
 
 
