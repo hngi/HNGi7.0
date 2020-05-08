@@ -605,9 +605,9 @@ $countDownValues = $countdown->getDate();
                                 <img
                                     src="https://res.cloudinary.com/jaycodist/image/upload/v1570722780/akwa-ibom-logo_yzz8ny.svg">
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3 mt-md-3">
                                 <img
-                                    src="https://res.cloudinary.com/jaycodist/image/upload/v1570722785/imo-logo_rvxpil.svg">
+                                    src="./images//kudaBank.png">
                             </div>
                             <div class="col-md-3">
                                 <img
@@ -615,17 +615,21 @@ $countDownValues = $countdown->getDate();
                             </div>
                         </div>
                         <div class="row second-row text-center mx-auto" data-aos="fade-up">
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <img
                                     src="https://res.cloudinary.com/jaycodist/image/upload/v1570723653/figma-logo_iexfvh.png">
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <img
-                                    src="https://res.cloudinary.com/jaycodist/image/upload/v1570722855/bluechip-logo_rw62cu.svg">
+                                    src="./images/piggyvestLogo.png">
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-3 mt-md-n4">
                                 <img
-                                    src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg">
+                                    src="./images/google-nigeria.png">
+                            </div>
+                            <div class="col-md-3 px-5 px-md-0">
+                                <img
+                                    src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg" width="100%">
                             </div>
                         </div>
                         <button class="cta-button button--midBlue">
