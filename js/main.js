@@ -45,13 +45,13 @@ var hoursLeft = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
 var minutesLeft = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 var secondsLeft = Math.floor((distance % (1000 * 60)) / 1000);
 // Display the results.
-daysElem.innerText = daysLeft;
-hoursElem.innerText = hoursLeft;
-minutesElem.innerText = minutesLeft;
-secondsElem.innerText = secondsLeft;
+// daysElem.innerText = daysLeft;
+// hoursElem.innerText = hoursLeft;
+// minutesElem.innerText = minutesLeft;
+// secondsElem.innerText = secondsLeft;
 // If the count down is finished, write some text
 if (distance < 0) {
-document.getElementById("demo").innerHTML = "EXPIRED";
+// document.getElementById("demo").innerHTML = "EXPIRED";
 return;
 }
 setTimeout(updateClock, 1000);

@@ -173,11 +173,11 @@
                             $image = $all_experience['image'];
                             $names = $all_experience['names'];
 
-                            if($image == ""){
+                            // if($image == ""){
                                 $img_src = "https://via.placeholder.com/150x150.png?text=$names";
-                            }else{
-                                $img_src = "$image";
-                            }
+                            // }else{
+                            //     $img_src = "$image";
+                            // }
                             ?>
                             <div class="wrapper-child col-sm-12"  >
                                 <img class="image" src="<?= $img_src;?>" alt = "intern img">

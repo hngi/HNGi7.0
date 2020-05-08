@@ -62,7 +62,8 @@ section.jumbo {
 }
 
 .wrapper {
-  margin: 25px auto 19.13px auto;
+  margin: 25px auto;
+  padding-bottom: 30px;
   gap: 10px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -93,6 +94,7 @@ section.jumbo {
     margin: auto 0.3rem;
     padding: auto;
     max-height: 3rem;
+    font-weight: 700;
 }
 
 .stack {
@@ -101,9 +103,9 @@ section.jumbo {
   margin: auto;
   text-align: center;
   font-size: 1.1rem;
-  margin-bottom: -12px;
-  color: #007bff;
-  margin-top: -10px;
+  margin-bottom: -20px;
+  color: #084482;
+  margin-top: 0px;
   height: 3rem;
 }
 
@@ -114,7 +116,7 @@ hr {
 
 .experience {
   padding: 10px 0;
-  width: 200px;
+  width: 250px;
   position: relative;
   margin: auto;
   font-size: 1rem;
