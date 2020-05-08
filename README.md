@@ -10,11 +10,11 @@ This process here should be able to guide you on how to contribute effectively t
 - Fork the repository to generate a copy of your own.
 - Clone the repository.
 ```use git command line
-    git clone https://github.com/hngi/HNG6.0.git
+    git clone https://github.com/hngi/HNGi7.0.git
 ```
 - Make the repository (the forked repo) the remote upstream 
 ```use git command line
-    git add remote upstream https://github.com/hngi/HNG6.0.git
+    git add remote upstream https://github.com/hngi/HNGi7.0.git
 ```
 - Create a branch, the branch name should at least be meaningfull e.g if you're working on the footer, your branch name would be;
 ```use git command line
