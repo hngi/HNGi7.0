@@ -23,7 +23,8 @@ input {
 	background-color: transparent;
 	border: none;
 	width: 90%;
-	color: gray;
+	color: #00aeff;
+	border-radius: 5px;
 }
 
 input::placeholder {
@@ -91,16 +92,17 @@ button {
 	background-color: #00aeff;
 	padding: 10px;
 	margin-bottom: 20px;
-	border-radius: 2px;
+	border-radius: 5px;
 	box-shadow: -1px 2px 25px -4px rgb(197, 197, 197);
 	transition: 100ms;
 }
 
 button:hover {
-	color: #00aeff;
-	background-color: #fff;
-	border: 2px solid #00aeff;
+	/* color: #00aeff; */
+	background-color: #1397d4;
+	/* border: 2px solid #00aeff; */
 	background-position: 0 0;
+	transition: all .5s ease-in-out;
 }
 
 /*
@@ -130,7 +132,7 @@ button:hover {
 	border: 2px solid transparent;
 	width: 100%;
 	cursor: pointer;
-	box-shadow: -1px 2px 25px -4px rgba(209,209,209,1);
+	box-shadow: -1px 1px 25px -3px rgba(209,209,209,1);
 }
 
 .g-auth:hover {
