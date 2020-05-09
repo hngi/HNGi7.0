@@ -139,7 +139,7 @@
                               <label for="image">Your Picture </label>
                               <br>
                               <button onclick="selectImage()" class="selectFile" type="button">Select A picture</button>
-                              <input type="file" id="image" name="image" onchange="showSelectedImage(this)" required />
+                              <input type="file" id="image" accept="image/*" name="image" onchange="showSelectedImage(this)" required />
                           </div>
 
 
