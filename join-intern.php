@@ -76,7 +76,7 @@ if (isset($_POST['submit'])) {
         <h2 class="heading">Join as an Intern</h2>
         <p class="para">
             Complete the form below to begin your journey as an Intern.<br>
-            To become a mentor <a href="mentor-registration">Click here</a>
+            <!-- To become a mentor <a href="mentor-registration">Click here</a> -->
         </p>
     </section>
 
@@ -117,7 +117,7 @@ if (isset($_POST['submit'])) {
                 <input type="email" name="email" id="email" required placeholder="E-mail Address" />
                 <input type="text" name="phoneNo" id="phoneNo" required placeholder="Phone Number" />
                 <input type="url" name="linkCV" id="linkCV" required placeholder="Link to your CV (LinkedIn Profile or any other link)" />
-                <select class="interest" name="interest[]" multiple>
+                <select class="interest" value="" name="interest[]" aria-placeholder="What are you interested" multiple>
                     <option value="" disabled selected hidden>What area are you interested in?</option>
                     <option value="Backend">Backend</option>
                     <option value="DevOps">DevOps</option>
@@ -128,10 +128,16 @@ if (isset($_POST['submit'])) {
                     <option value="UI/UX Design">UI/UX Design</option>
                 </select>
 
-                <!--<input type="text" name="location" id="location" required placeholder="What state are you currently located in?" />-->
-                <select name="location" id="location" required>
-                    <option value="">What state are you currently located? </option>
-                    <option>Federal Capital Territory</option>
+                <input type="text" placeholder="Select your Country"  onchange="openState(event)" list="country" id="countrySelect" required>
+                <datalist name="country" id="country" required>
+                    <option value="">What country are you currently located?</option>
+                    <!-- <option value="">Nigeria</option> -->
+                    <!-- List is gotten from the api call -->
+                </datalist>
+                <input type="text" style="display: none;" class="state" name="location" list="state" placeholder="Select your current state" />
+                 <datalist name="country" id="state"  required>
+                    <!-- <option value="">What state are you currently located? </option> -->
+                    <option value="FCT">FCT</option>
                     <option value="Abia">Abia</option>
                     <option value="Adamawa">Adamawa</option>
                     <option value="Akwa Ibom">Akwa Ibom</option>
@@ -169,16 +175,17 @@ if (isset($_POST['submit'])) {
                     <option value="Taraba">Taraba</option>
                     <option value="Yobe">Yobe</option>
                     <option value="Zamfara">Zamfara</option>
-                </select>
-
-                <select name="empStatus" id="empStatus" class="empStatus" required>
-                    <option value="" disabled selected hidden>What is your current employment status?</option>
+                 </datalist>
+               
+                 <input type="text" list="empStatus" placeholder="What is your employment Status?">
+                <datalist name="empStatus" id="empStatus" class="empStatus" required>
+                    <!-- <option value="" disabled selected hidden>What is your current employment status?</option> -->
                     <option value="Recently Employed (3 months or less)">Recently Employed (3 months or less)</option>
                     <option value="Employee">Employee</option>
                     <option value="Self-employed">Self-employed</option>
                     <option value="Freelance">Freelance</option>
                     <option value="Unemployed">Unemployed</option>
-                </select>
+                </datalist>
                 <textarea name="about" id="about" required cols="30" rows="10" placeholder="Briefly tell us about yourself"></textarea>
                 <input type='hidden' name='date' id="date" value='<?= date('Y-m-d H:i:s'); ?>'>
 
@@ -202,7 +209,40 @@ if (isset($_POST['submit'])) {
     </div>
     <?php include "fragments/site_footer.php"; ?>
 </section>
-<?php include('fragments/chat.php'); ?>
+<?php // include('fragments/chat.php'); ?>
 </body>
+<script>
+    let countrySelect = document.querySelector("#country");
+    let stateSelect = document.querySelector(".state");
+    const url = 'https://restcountries.eu/rest/v2/all';
+    let countries = []
+    fetch(url).
+    then(res => res.json())
+    .then(data => {
+        countries = data
+        data.map(country => {
+          if(country && country.name){
+              
+              const option_ = document.createElement("option")
+              const optionText = document.createTextNode(country.alpha3Code)
+              const x = document.createAttribute("value")
+              option_.appendChild(optionText)
+              option_.setAttribute("value",country.name)
+              countrySelect.append(option_)
+          }
+        })
+        console.log(countrySelect)
+
+    })
+
+    function openState(e){
+       if(e.target.value === "Nigeria"){
+         stateSelect.style.display = 'block';
+         stateSelect.focus()
+       }else{
+        stateSelect.style.display = 'none'
+       }
+    }
+</script>
 
 </html>
