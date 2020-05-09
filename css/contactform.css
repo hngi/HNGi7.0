@@ -25,6 +25,10 @@ form input, textarea {
   resize: none;
   border-radius: 4px;
   border: 1px solid #00AEFF;
+  color: #00AEFF;
+}
+form input:focus, textarea:focus{
+  outline: 1px solid #00AEFF;
 }
 
 form input[type=submit]{
@@ -37,11 +41,17 @@ form input[type=submit]{
 }
 form input[type=submit]:hover
 {
-  background-color: rgb(7, 115, 165);
+  background-color: rgb(12, 120, 170);
 }
 @media screen and (min-width : 600px){
   .wrap form {
-    width: 60%;
+    width: 70%;
+    margin: 30px auto;
+  }
+}
+@media screen and (min-width : 900px){
+  .wrap form {
+    max-width: 500px;
     margin: 30px auto;
   }
 }
