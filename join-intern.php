@@ -101,7 +101,7 @@ if (isset($_POST['submit'])) {
         ?>
 
         <?php
-        if ($status == 0) {
+        if ($status == 1) {
             ?>
             <form class="form-container" action="" method="post" id="myForm">
 
