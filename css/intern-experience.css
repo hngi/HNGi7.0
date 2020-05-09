@@ -306,6 +306,18 @@ h4 {
 }
 .experiencetext {
   color: #00AEFF;
+  text-decoration: none;
+  margin-top: 20px;
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.experiencetext:hover{
+  color: #084482;
+  border: 1px solid #084482;
+
 }
 
 /*  .land {
@@ -419,11 +431,12 @@ h4 {
   height: 100vh;
   margin: 0 auto;
   z-index: 2;
-  background-color: transparent;
+  background-color: rgba(128, 128, 128, 0.486);
   padding-top: 100px;
   display: none;
-}
+  overflow: scroll;
 
+}
 .modal-content {
   border: 3px solid #00AEFF;
   box-shadow: 3px 3px 5px grey;

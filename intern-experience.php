@@ -98,7 +98,7 @@
     <section class="jumbo">
             <h2 class="heading">Past Interns Experience</h2>
             <p class="para">Testimonies From Ex-HNG Internship Finalists<br>
-            <a href="#" onclick="modalForm()" class="experiencetext">Submit Experience</a>
+            <span onclick="modalForm()" class="experiencetext">Submit Experience</span>
             </p>
    </section>
 
@@ -216,11 +216,14 @@
     <script>
         let formBox = $(".submitExperience");
             function modalForm (){
+                document.querySelector("body").style.overflow = "hidden";
                 formBox.slideToggle(100);
             }
 
             function closeForm (){
-                formBox.css("display", "none")
+                formBox.css("display", "none");
+                document.querySelector("body").style.overflow = "scroll";
+
             }
     </script>
 </html>
