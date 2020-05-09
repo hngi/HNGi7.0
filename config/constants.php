@@ -5,7 +5,6 @@
     define('DB_PASS', 'wqmtOm6brY');
     define('DB_NAME','XnTQPp4tAK');
 
-
     define('USERNAME', 'alisataylorm.m@gmail.com');
     define('PASSWORD', 'Alisa-1111');
 

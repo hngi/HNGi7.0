@@ -11,6 +11,7 @@ if (isset($_POST['submit'])) {
     $phoneNo = $database->escape_string($_POST['phoneNo']);
     $linkCV = $database->escape_string($_POST['linkCV']);
     //$interest = $database->escape_string($_POST['interest']);
+    $country = $database->escape_string($_POST["country"]);
     $location = $database->escape_string($_POST['location']);
     $empStatus = $database->escape_string($_POST['empStatus']);
     $about = $database->escape_string($_POST['about']);
@@ -128,14 +129,15 @@ if (isset($_POST['submit'])) {
                     <option value="UI/UX Design">UI/UX Design</option>
                 </select>
 
-                <input type="text" placeholder="Select your Country"  onchange="openState(event)" list="country" id="countrySelect" required>
-                <datalist name="country" id="country" required>
+                <div class='text-danger' id="invalidCountry"></div>
+                <input type="text" placeholder="Select your Country"  onchange="openState(event), validateCountry(event)" list="country" name="country" id="countrySelect" required>
+                <datalist id="country" required>
                     <option value="">What country are you currently located?</option>
                     <!-- <option value="">Nigeria</option> -->
                     <!-- List is gotten from the api call -->
                 </datalist>
                 <input type="text" style="display: none;" class="state" name="location" list="state" placeholder="Select your current state" />
-                 <datalist name="country" id="state"  required>
+                 <datalist  id="state"  required>
                     <!-- <option value="">What state are you currently located? </option> -->
                     <option value="FCT">FCT</option>
                     <option value="Abia">Abia</option>
@@ -177,8 +179,8 @@ if (isset($_POST['submit'])) {
                     <option value="Zamfara">Zamfara</option>
                  </datalist>
                
-                 <input type="text" list="empStatus" placeholder="What is your employment Status?">
-                <datalist name="empStatus" id="empStatus" class="empStatus" required>
+                <input type="text" list="empStatus" name="empStatus" placeholder="What is your employment Status?">
+                <datalist id="empStatus" class="empStatus" required>
                     <!-- <option value="" disabled selected hidden>What is your current employment status?</option> -->
                     <option value="Recently Employed (3 months or less)">Recently Employed (3 months or less)</option>
                     <option value="Employee">Employee</option>
@@ -191,7 +193,7 @@ if (isset($_POST['submit'])) {
 
                 <p id="result"></p>
 
-                <button type="submit" name="submit" value="Submit" class="submitBtn btn">
+                <button type="submit" name="submit" value="Submit" class="submitBtn btn" id="submitBtn">
                     Submit
                 </button>
             </form>
@@ -239,7 +241,31 @@ if (isset($_POST['submit'])) {
          stateSelect.focus()
        }else{
         stateSelect.style.display = 'none'
+        // set the state value to null if country is not Nigeria
+        stateSelect.value = ''
        }
+    }
+
+    // validate country selected by the user; makes sure country is in the list; disables button if country is not in the list
+    function validateCountry(e) {
+        let invalidCountry = document.querySelector("#invalidCountry");
+        let submitBtn = document.querySelector('#submitBtn');
+        let valid = false;
+        countries.map(country => {
+            if(country.name === e.target.value) {
+                valid = true;
+            }
+        })
+        if(valid === false) {
+            invalidCountry.style.display = 'block';
+            invalidCountry.textContent = 'Please select a country from the list';
+            countrySelect.value = '';
+            submitBtn.disabled = true;
+        } else {
+            invalidCountry.style.display = 'none';
+            invalidCountry.textContent = '';
+            submitBtn.disabled = false;
+        }
     }
 </script>
 
