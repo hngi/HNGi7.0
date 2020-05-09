@@ -597,37 +597,37 @@ $countDownValues = $countdown->getDate();
                     <div class="container">
                         <h2 class="text_center blue-text">HNG i7.0 Internship Sponsors</h2>
                         <div class="row section-row text-center mx-auto" data-aos="fade-up">
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <img
                                     src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg">
                             </div>
-                            <div class="col-md-3">
+                            <!-- <div class="col-md-3">
                                 <img
                                     src="https://res.cloudinary.com/jaycodist/image/upload/v1570722780/akwa-ibom-logo_yzz8ny.svg">
-                            </div>
-                            <div class="col-md-3 mt-md-3">
+                            </div> -->
+                            <div class="col-md-4 mt-md-3">
                                 <img
                                     src="./images//kudaBank.png">
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <img
                                     src="https://res.cloudinary.com/jaycodist/image/upload/v1570722788/verifi-logo_nfckrw.svg">
                             </div>
                         </div>
                         <div class="row second-row text-center mx-auto" data-aos="fade-up">
-                            <div class="col-md-3">
+                            <!-- <div class="col-md-3">
                                 <img
                                     src="https://res.cloudinary.com/jaycodist/image/upload/v1570723653/figma-logo_iexfvh.png">
-                            </div>
-                            <div class="col-md-3">
+                            </div> -->
+                            <div class="col-md-4">
                                 <img
                                     src="./images/piggyvestLogo.png">
                             </div>
-                            <div class="col-md-3 mt-md-n4">
+                            <div class="col-md-4 mt-md-n4">
                                 <img
                                     src="./images/google-nigeria.png">
                             </div>
-                            <div class="col-md-3 px-5 px-md-0">
+                            <div class="col-md-4 px-5 px-md-0">
                                 <img
                                     src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg" width="100%">
                             </div>
