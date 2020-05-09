@@ -138,7 +138,8 @@
                           <div class="form-group">
                               <label for="image">Your Picture </label>
                               <br>
-                              <input type="file" name="image" required />
+                              <button onclick="selectImage()" class="selectFile" type="button">Select A picture</button>
+                              <input type="file" id="image" name="image" onchange="showSelectedImage(this)" required />
                           </div>
 
 
@@ -224,6 +225,16 @@
                 formBox.css("display", "none");
                 document.querySelector("body").style.overflow = "scroll";
 
+            }
+
+            function selectImage () {
+                const imageFile = document.querySelector("#image");
+                imageFile.click()
+                
+            }
+            function showSelectedImage (e){
+                let button = document.querySelector(".selectFile")
+                button.innerText = "Picture will be uploaded"
             }
     </script>
 </html>

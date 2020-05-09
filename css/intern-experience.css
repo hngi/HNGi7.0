@@ -454,3 +454,14 @@ h4 {
   background-color: #00AEFF;
   border-color: #00AEFF;
 }
+.modal-content .selectFile{
+  border: none;
+  padding: 5px 10px;
+  background-color: rgb(198, 224, 236);
+  color: #084482;
+  border-radius: 5px;
+}
+.modal-content #image{
+  display: none;
+
+}
