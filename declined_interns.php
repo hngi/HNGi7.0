@@ -193,7 +193,8 @@
 			<p class="details">CV Link: <span id="cv"></span></p>
 			<!-- <p class="details">Experience: <span id="experience"></span></p> -->
             <p class="details">Interest: <span id="interest"></span></p>
-            <p class="details">Location: <span id="location"></span></p>
+            <p class="details">Country: <span id="country"></span></p>
+            <p class="details">State: <span id="location"></span></p>
             <p class="details">Employment Status: <span id="employmentStatus"></span></p>
             <p class="details">About: <span id="about"></span></p>
             <p class="details">Registration Date: <span id="timeStamp"></span></p>
