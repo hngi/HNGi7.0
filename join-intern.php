@@ -118,7 +118,7 @@ if (isset($_POST['submit'])) {
                 <input type="text" name="phoneNo" id="phoneNo" required placeholder="Phone Number" />
                 <input type="url" name="linkCV" id="linkCV" required placeholder="Link to your CV (LinkedIn Profile or any other link)" />
                 <select class="interest" value="" name="interest[]" aria-placeholder="What are you interested" multiple>
-                    <option value="" disabled selected hidden>What area are you interested in?</option>
+                    <option value="" disabled>What area are you interested in?</option>
                     <option value="Backend">Backend</option>
                     <option value="DevOps">DevOps</option>
                     <option value="Digital Marketing">Digital Marketing</option>
@@ -222,10 +222,8 @@ if (isset($_POST['submit'])) {
         countries = data
         data.map(country => {
           if(country && country.name){
-              
               const option_ = document.createElement("option")
               const optionText = document.createTextNode(country.alpha3Code)
-              const x = document.createAttribute("value")
               option_.appendChild(optionText)
               option_.setAttribute("value",country.name)
               countrySelect.append(option_)
