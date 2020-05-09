@@ -11,6 +11,7 @@ if (isset($_POST['submit'])) {
     $phoneNo = $database->escape_string($_POST['phoneNo']);
     $linkCV = $database->escape_string($_POST['linkCV']);
     //$interest = $database->escape_string($_POST['interest']);
+    $country = $database->escape_string($_POST["country"]);
     $location = $database->escape_string($_POST['location']);
     $empStatus = $database->escape_string($_POST['empStatus']);
     $about = $database->escape_string($_POST['about']);
@@ -117,8 +118,8 @@ if (isset($_POST['submit'])) {
                 <input type="email" name="email" id="email" required placeholder="E-mail Address" />
                 <input type="text" name="phoneNo" id="phoneNo" required placeholder="Phone Number" />
                 <input type="url" name="linkCV" id="linkCV" required placeholder="Link to your CV (LinkedIn Profile or any other link)" />
-                <select class="interest" name="interest[]" multiple>
-                    <option value="" disabled selected hidden>What area are you interested in?</option>
+                <select class="interest" value="" name="interest[]" aria-placeholder="What are you interested" multiple>
+                    <option value="" disabled>What area are you interested in?</option>
                     <option value="Backend">Backend</option>
                     <option value="DevOps">DevOps</option>
                     <option value="Digital Marketing">Digital Marketing</option>
@@ -128,10 +129,17 @@ if (isset($_POST['submit'])) {
                     <option value="UI/UX Design">UI/UX Design</option>
                 </select>
 
-                <!--<input type="text" name="location" id="location" required placeholder="What state are you currently located in?" />-->
-                <select name="location" id="location" required>
-                    <option value="">What state are you currently located? </option>
-                    <option>Federal Capital Territory</option>
+                <div class='text-danger' id="invalidCountry"></div>
+                <input type="text" placeholder="Select your Country"  onchange="openState(event), validateCountry(event)" list="country" name="country" id="countrySelect" required>
+                <datalist id="country" required>
+                    <option value="">What country are you currently located?</option>
+                    <!-- <option value="">Nigeria</option> -->
+                    <!-- List is gotten from the api call -->
+                </datalist>
+                <input type="text" style="display: none;" class="state" name="location" list="state" placeholder="Select your current state" />
+                 <datalist  id="state"  required>
+                    <!-- <option value="">What state are you currently located? </option> -->
+                    <option value="FCT">FCT</option>
                     <option value="Abia">Abia</option>
                     <option value="Adamawa">Adamawa</option>
                     <option value="Akwa Ibom">Akwa Ibom</option>
@@ -169,22 +177,23 @@ if (isset($_POST['submit'])) {
                     <option value="Taraba">Taraba</option>
                     <option value="Yobe">Yobe</option>
                     <option value="Zamfara">Zamfara</option>
-                </select>
-
-                <select name="empStatus" id="empStatus" class="empStatus" required>
-                    <option value="" disabled selected hidden>What is your current employment status?</option>
+                 </datalist>
+               
+                <input type="text" list="empStatus" name="empStatus" placeholder="What is your employment Status?">
+                <datalist id="empStatus" class="empStatus" required>
+                    <!-- <option value="" disabled selected hidden>What is your current employment status?</option> -->
                     <option value="Recently Employed (3 months or less)">Recently Employed (3 months or less)</option>
                     <option value="Employee">Employee</option>
                     <option value="Self-employed">Self-employed</option>
                     <option value="Freelance">Freelance</option>
                     <option value="Unemployed">Unemployed</option>
-                </select>
+                </datalist>
                 <textarea name="about" id="about" required cols="30" rows="10" placeholder="Briefly tell us about yourself"></textarea>
                 <input type='hidden' name='date' id="date" value='<?= date('Y-m-d H:i:s'); ?>'>
 
                 <p id="result"></p>
 
-                <button type="submit" name="submit" value="Submit" class="submitBtn btn">
+                <button type="submit" name="submit" value="Submit" class="submitBtn btn" id="submitBtn">
                     Submit
                 </button>
             </form>
@@ -204,5 +213,60 @@ if (isset($_POST['submit'])) {
 </section>
 <?php // include('fragments/chat.php'); ?>
 </body>
+<script>
+    let countrySelect = document.querySelector("#country");
+    let stateSelect = document.querySelector(".state");
+    const url = 'https://restcountries.eu/rest/v2/all';
+    let countries = []
+    fetch(url).
+    then(res => res.json())
+    .then(data => {
+        countries = data
+        data.map(country => {
+          if(country && country.name){
+              const option_ = document.createElement("option")
+              const optionText = document.createTextNode(country.alpha3Code)
+              option_.appendChild(optionText)
+              option_.setAttribute("value",country.name)
+              countrySelect.append(option_)
+          }
+        })
+        console.log(countrySelect)
+
+    })
+
+    function openState(e){
+       if(e.target.value === "Nigeria"){
+         stateSelect.style.display = 'block';
+         stateSelect.focus()
+       }else{
+        stateSelect.style.display = 'none'
+        // set the state value to null if country is not Nigeria
+        stateSelect.value = ''
+       }
+    }
+
+    // validate country selected by the user; makes sure country is in the list; disables button if country is not in the list
+    function validateCountry(e) {
+        let invalidCountry = document.querySelector("#invalidCountry");
+        let submitBtn = document.querySelector('#submitBtn');
+        let valid = false;
+        countries.map(country => {
+            if(country.name === e.target.value) {
+                valid = true;
+            }
+        })
+        if(valid === false) {
+            invalidCountry.style.display = 'block';
+            invalidCountry.textContent = 'Please select a country from the list';
+            countrySelect.value = '';
+            submitBtn.disabled = true;
+        } else {
+            invalidCountry.style.display = 'none';
+            invalidCountry.textContent = '';
+            submitBtn.disabled = false;
+        }
+    }
+</script>
 
 </html>

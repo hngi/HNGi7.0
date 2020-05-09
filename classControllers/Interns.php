@@ -24,6 +24,7 @@ class Intern
         $phoneNo = $database->escape_string($_POST['phoneNo']);
         $linkCV = $database->escape_string($_POST['linkCV']);
         //$interest = $database->escape_string($_POST['interest']);
+        $country = $database->escape_string($_POST["country"]);
         $location = $database->escape_string($_POST['location']);
         $empStatus = $database->escape_string($_POST['empStatus']);
         $about = $database->escape_string($_POST['about']);
@@ -38,8 +39,8 @@ class Intern
 
         $interest = substr($int, 1, strlen($int));
         $interest = trim($interest);
-        $query = "INSERT INTO interns (`name`, `email`, `phone_no`, `link_to_cv`, `interest`, `current_location`, `employment_status`, `about`, `timestamp`)
-        VALUES('$fullname', '$email', '$phoneNo', '$linkCV', '$interest', '$location', '$empStatus', '$about', '$date' )";
+        $query = "INSERT INTO interns (`name`, `email`, `phone_no`, `link_to_cv`, `interest`, `country`, `current_location`, `employment_status`, `about`, `timestamp`)
+        VALUES('$fullname', '$email', '$phoneNo', '$linkCV', '$interest', '$country', '$location', '$empStatus', '$about', '$date' )";
         $res = $database->query($query);
         $body = "Thank You for registering for the HNG Internship 7.0. You will recieve an email about your registration status.Soon";
         sendInternMail($email, $fullname, $body);
