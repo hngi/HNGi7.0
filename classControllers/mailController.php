@@ -136,11 +136,6 @@ function contactMail($email, $ticket, $name, $subject, $body)
           <td style='padding: 10px 0 30px 0;'>
             <table align='center' border='0' cellpadding='0' cellspacing='0' width='600' style='border: 1px solid #cccccc; border-collapse: collapse;'>
               <tr>
-                <td align='center' bgcolor='#fff' style='padding: 40px 0 30px 0; color: #153643; font-size: 28px; font-weight: bold; font-family: Arial, sans-serif;'>
-                  <img src='https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png' alt='HNGi 7.0' width='300' height='150' style='display: block;' />
-                </td>
-              </tr>
-              <tr>
                 <td bgcolor='#ffffff' style='padding: 40px 30px 40px 30px;'>
                   <table border='0' cellpadding='0' cellspacing='0' width='100%'>
                     <tr>
@@ -246,11 +241,6 @@ function forGetPasswordMail($url, $subject, $email, $body)
         <tr>
           <td style='padding: 10px 0 30px 0;'>
             <table align='center' border='0' cellpadding='0' cellspacing='0' width='600' style='border: 1px solid #cccccc; border-collapse: collapse;'>
-              <tr>
-                <td align='center' bgcolor='#fff' style='padding: 40px 0 30px 0; color: #153643; font-size: 28px; font-weight: bold; font-family: Arial, sans-serif;'>
-                  <img src='https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png' alt='HNGi 7.0' width='300' height='150' style='display: block;' />
-                </td>
-              </tr>
               <tr>
                 <td bgcolor='#ffffff' style='padding: 40px 30px 40px 30px;'>
                   <table border='0' cellpadding='0' cellspacing='0' width='100%'>
@@ -370,11 +360,6 @@ function send_general_email($subject, $email, $message, $bcc = false) //Add blin
             <td style='padding: 10px 0 30px 0;'>
               <table align='center' border='0' cellpadding='0' cellspacing='0' width='600' style='border: 1px solid #cccccc; border-collapse: collapse;'>
                 <tr>
-                  <td align='center' bgcolor='#fff' style='padding: 40px 0 30px 0; color: #153643; font-size: 28px; font-weight: bold; font-family: Arial, sans-serif;'>
-                    <img src='https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png' alt='HNGi 7.0' width='300' height='150' style='display: block;' />
-                  </td>
-                </tr>
-                <tr>
                   <td bgcolor='#ffffff' style='padding: 40px 30px 40px 30px;'>
                     <table border='0' cellpadding='0' cellspacing='0' width='100%'>
                       <tr>
@@ -473,11 +458,6 @@ function sendInternMail($email, $fullname, $body)
         <tr>
           <td style='padding: 10px 0 30px 0;'>
             <table align='center' border='0' cellpadding='0' cellspacing='0' width='600' style='border: 1px solid #cccccc; border-collapse: collapse;'>
-              <tr>
-                <td align='center' bgcolor='#fff' style='padding: 40px 0 30px 0; color: #153643; font-size: 28px; font-weight: bold; font-family: Arial, sans-serif;'>
-                  <img src='https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png' alt='HNGi 7.0' width='300' height='150' style='display: block;' />
-                </td>
-              </tr>
               <tr>
                 <td bgcolor='#ffffff' style='padding: 40px 30px 40px 30px;'>
                   <table border='0' cellpadding='0' cellspacing='0' width='100%'>
@@ -587,11 +567,6 @@ function  rejectInternMail($email, $fullname, $body)
           <td style='padding: 10px 0 30px 0;'>
             <table align='center' border='0' cellpadding='0' cellspacing='0' width='600' style='border: 1px solid #cccccc; border-collapse: collapse;'>
               <tr>
-                <td align='center' bgcolor='#fff' style='padding: 40px 0 30px 0; color: #153643; font-size: 28px; font-weight: bold; font-family: Arial, sans-serif;'>
-                  <img src='https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png' alt='HNGi 7.0' width='300' height='150' style='display: block;' />
-                </td>
-              </tr>
-              <tr>
                 <td bgcolor='#ffffff' style='padding: 40px 30px 40px 30px;'>
                   <table border='0' cellpadding='0' cellspacing='0' width='100%'>
                     <tr>
@@ -698,11 +673,6 @@ function acceptInternMail($email, $fullname, $body)
         <tr>
           <td style='padding: 10px 0 30px 0;'>
             <table align='center' border='0' cellpadding='0' cellspacing='0' width='600' style='border: 1px solid #cccccc; border-collapse: collapse;'>
-              <tr>
-                <td align='center' bgcolor='#fff' style='padding: 40px 0 30px 0; color: #153643; font-size: 28px; font-weight: bold; font-family: Arial, sans-serif;'>
-                  <img src='https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png' alt='HNGi 7.0' width='300' height='150' style='display: block;' />
-                </td>
-              </tr>
               <tr>
                 <td bgcolor='#ffffff' style='padding: 40px 30px 40px 30px;'>
                   <table border='0' cellpadding='0' cellspacing='0' width='100%'>
@@ -815,11 +785,6 @@ function   rejectMentorMail($body, $fullname, $email)
         <tr>
           <td style='padding: 10px 0 30px 0;'>
             <table align='center' border='0' cellpadding='0' cellspacing='0' width='600' style='border: 1px solid #cccccc; border-collapse: collapse;'>
-              <tr>
-                <td align='center' bgcolor='#fff' style='padding: 40px 0 30px 0; color: #153643; font-size: 28px; font-weight: bold; font-family: Arial, sans-serif;'>
-                  <img src='https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png' alt='HNGi 7.0' width='300' height='150' style='display: block;' />
-                </td>
-              </tr>
               <tr>
                 <td bgcolor='#ffffff' style='padding: 40px 30px 40px 30px;'>
                   <table border='0' cellpadding='0' cellspacing='0' width='100%'>
@@ -1029,21 +994,16 @@ function mailMentor($email, $name)
     $mail->Subject = "Thank you for your application";
     $mail->Body    =  "<html>
 
-<head>
+ <head>
   <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
   <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-</head>
+ </head>
 
-<body style='margin: 0; padding: 0;'>
+ <body style='margin: 0; padding: 0;'>
   <table border='0' cellpadding='0' cellspacing='0' width='100%'>
     <tr>
       <td style='padding: 10px 0 30px 0;'>
         <table align='center' border='0' cellpadding='0' cellspacing='0' width='600' style='border: 1px solid #cccccc; border-collapse: collapse;'>
-          <tr>
-            <td align='center' bgcolor='#fff' style='padding: 40px 0 30px 0; color: #153643; font-size: 28px; font-weight: bold; font-family: Arial, sans-serif;'>
-              <img src='https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png' alt='HNGi 7.0' width='300' height='150' style='display: block;' />
-            </td>
-          </tr>
           <tr>
             <td bgcolor='#ffffff' style='padding: 40px 30px 40px 30px;'>
               <table border='0' cellpadding='0' cellspacing='0' width='100%'>
@@ -1100,9 +1060,9 @@ function mailMentor($email, $name)
       </td>
     </tr>
   </table>
-</body>
+ </body>
 
-</html>";
+ </html>";
     $mail->AltBody = 'Thank you for applying to be a Mentor on the HNG Internship 7.0. Your application is being reviewed and we will get back to you shortly.';
     $mail->addReplyTo($email, $name);
 
@@ -1155,11 +1115,6 @@ function   certificatereadyMail($email, $fullname, $body)
         <tr>
           <td style='padding: 10px 0 30px 0;'>
             <table align='center' border='0' cellpadding='0' cellspacing='0' width='600' style='border: 1px solid #cccccc; border-collapse: collapse;'>
-              <tr>
-                <td align='center' bgcolor='#fff' style='padding: 40px 0 30px 0; color: #153643; font-size: 28px; font-weight: bold; font-family: Arial, sans-serif;'>
-                  <img src='https://res.cloudinary.com/phiileo/image/upload/v1571147073/brand-logo_tx0mdt.png' alt='HNGi 7.0' width='300' height='150' style='display: block;' />
-                </td>
-              </tr>
               <tr>
                 <td bgcolor='#ffffff' style='padding: 40px 30px 40px 30px;'>
                   <table border='0' cellpadding='0' cellspacing='0' width='100%'>
