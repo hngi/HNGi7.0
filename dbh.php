@@ -1,14 +1,26 @@
 <!-- Connection for database -->
-<?php
+<?php require __DIR__ . '/../vendor/autoload.php';
 class Database
     {
-      	var $host="remotemysql.com";
-      	var $user="XnTQPp4tAK";
-      	var $pass="wqmtOm6brY";
-      	var $db="XnTQPp4tAK";
+		public $host;
+		public $user;
+		public $pass;
+		public $db; 
+
+		public function __construct(){
+
+			$env = Dotenv\Dotenv::createImmutable(__DIR__);
+			$env->load();
+
+			 $this->host=getenv('HOST');
+			 $this->user=getenv('USERNAME');
+			 $this->pass=getenv('PASSWORD');
+			 $this->db=getenv('DBNAME'); 
+
+		}
 
       	public function connect()
-      {
+      {		
         	$dbh = mysqli_connect($this->host,$this->user,$this->pass,$this->db);
         	return $dbh;
         }
