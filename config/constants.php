@@ -1,4 +1,4 @@
-<?php
+<?php     
 
     define('DB_HOST', 'remotemysql.com');
     define('DB_USER', 'XnTQPp4tAK');

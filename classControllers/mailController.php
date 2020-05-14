@@ -3,6 +3,7 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+require __DIR__ . '/../vendor/autoload.php';
 require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
@@ -10,6 +11,9 @@ require 'PHPMailer/src/SMTP.php';
 
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer(true);
+
+$env = Dotenv\Dotenv::createImmutable(__DIR__);
+$env->load();
 
 function sendNewAdminMail($email, $subject, $body)
 {
@@ -19,18 +23,18 @@ function sendNewAdminMail($email, $subject, $body)
   try {
     //Server settings
     $mail->isSMTP();                                            // Set mailer to use SMTP
-    $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+    $mail->Host       = getenv('SMTP_HOST');  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username = USERNAME;
-    $mail->Password = PASSWORD;                               // SMTP password
+    $mail->Username = getenv('SMTP_USERNAME');
+    $mail->Password = getenv('SMTP_PASSWORD');                               // SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
-    $mail->Port       = 587;                                    // TCP port to connect to
+    $mail->Port       = getenv('SMTP_PORT');                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('alisataylorm.m@gmail.com', 'HNG SUPER ADMIN');
+    $mail->setFrom('hello@hng.tech', 'HNG Internship ADMIN');
     $mail->addAddress("$email");     // Add a recipient
     // $mail->addAddress('ellen@example.com');               // Name is optional
-    $mail->addReplyTo('no-reply@gmail.com', 'No-Reply');
+    $mail->addReplyTo('no-reply@hng.tech', 'No-Reply');
     // $mail->addCC('cc@example.com');
     // $mail->addBCC('bcc@example.com');
 
@@ -101,19 +105,20 @@ function contactMail($email, $ticket, $name, $subject, $body)
 
   try {
     //Server settings
-    $mail->isSMTP();                                            // Set mailer to use SMTP
-    $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+    $mail->isSMTP();   
+    // Set mailer to use SMTP
+    $mail->Host       = getenv('SMTP_HOST');  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username = USERNAME;
-    $mail->Password = PASSWORD;                              // SMTP password
+    $mail->Username = getenv('SMTP_USERNAME');
+    $mail->Password = getenv('SMTP_PASSWORD');                               // SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
-    $mail->Port       = 587;                                    // TCP port to connect to
+    $mail->Port       = getenv('SMTP_PORT');                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('alisataylorm.m@gmail.com', $name);
+    $mail->setFrom('hello@hng.tech', 'HNG Internship ADMIN');
     $mail->addAddress("$email");     // Add a recipient
     // $mail->addAddress('ellen@example.com');               // Name is optional
-    $mail->addReplyTo('no-reply@gmail.com', 'No-Reply');
+    $mail->addReplyTo('no-reply@hng.tech', 'No-Reply');
       // $mail->addCC('cc@example.com');
       // $mail->addBCC('bcc@example.com');
 
@@ -122,7 +127,7 @@ function contactMail($email, $ticket, $name, $subject, $body)
       // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 
       // Content
-    ;
+
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = $subject;
     $mail->Body    =  "<html>
@@ -208,18 +213,18 @@ function forGetPasswordMail($url, $subject, $email, $body)
   try {
     //Server settings
     $mail->isSMTP();                                            // Set mailer to use SMTP
-    $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+    $mail->Host       = getenv('SMTP_HOST');  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username = USERNAME;
-    $mail->Password = PASSWORD;                               // SMTP password
+    $mail->Username = getenv('SMTP_USERNAME');
+    $mail->Password = getenv('SMTP_PASSWORD');                               // SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
-    $mail->Port       = 587;                                    // TCP port to connect to
+    $mail->Port       = getenv('SMTP_PORT');                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('alisataylorm.m@gmail.com', 'HNG 7.0');
+    $mail->setFrom('hello@hng.tech', 'HNG Internship ADMIN');
     $mail->addAddress("$email");     // Add a recipient
     // $mail->addAddress('ellen@example.com');               // Name is optional
-    $mail->addReplyTo('no-reply@gmail.com', 'No-Reply');
+    $mail->addReplyTo('no-reply@hng.tech', 'No-Reply');
     // $mail->addCC('cc@example.com');
     // $mail->addBCC('bcc@example.com');
 
@@ -318,22 +323,20 @@ function send_general_email($subject, $email, $message, $bcc = false) //Add blin
   try {
     //Server settings
     $mail->isSMTP();                                            // Set mailer to use SMTP
-    $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+    $mail->Host       = getenv('SMTP_HOST');  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username = USERNAME;
-    $mail->Password = PASSWORD;                            // SMTP password
+    $mail->Username = getenv('SMTP_USERNAME');
+    $mail->Password = getenv('SMTP_PASSWORD');                               // SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
-    $mail->Port       = 587;                                    // TCP port to connect to
-
-    $url = "https://" . $_SERVER['HTTP_HOST'];
+    $mail->Port       = getenv('SMTP_PORT');                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('alisataylorm.m@gmail.com', "HNGi7");
+    $mail->setFrom('hello@hng.tech', 'HNG Internship ADMIN');
     $mail->addAddress("$email");     // Add a recipient
     // $mail->addAddress('ellen@example.com');               // Name is optional
-    $mail->addReplyTo('no-reply@gmail.com', 'No-Reply');
-    // $mail->addCC('cc@example.com');
-    // $mail->addBCC('bcc@example.com');
+    $mail->addReplyTo('no-reply@hng.tech', 'No-Reply');
+    
+    $url = "https://" . $_SERVER['HTTP_HOST'];
 
     if (is_array($bcc)) {
       foreach ($bcc as $bc) {
@@ -425,20 +428,18 @@ function sendInternMail($email, $fullname, $body)
   try {
     //Server settings
     $mail->isSMTP();                                            // Set mailer to use SMTP
-    $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+    $mail->Host       = getenv('SMTP_HOST');  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username = USERNAME;
-    $mail->Password = PASSWORD;                             // SMTP password
+    $mail->Username = getenv('SMTP_USERNAME');
+    $mail->Password = getenv('SMTP_PASSWORD');                               // SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
-    $mail->Port       = 587;                                    // TCP port to connect to
+    $mail->Port       = getenv('SMTP_PORT');                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('alisataylorm.m@gmail.com', 'HNGi7');
+    $mail->setFrom('hello@hng.tech', 'HNG Internship ADMIN');
     $mail->addAddress("$email");     // Add a recipient
     // $mail->addAddress('ellen@example.com');               // Name is optional
-    $mail->addReplyTo('no-reply@gmail.com', 'No-Reply');
-      // $mail->addCC('cc@example.com');
-      // $mail->addBCC('bcc@example.com');
+    $mail->addReplyTo('no-reply@hng.tech', 'No-Reply');
 
       // Attachments
       // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
@@ -533,18 +534,18 @@ function  rejectInternMail($email, $fullname, $body)
   try {
     //Server settings
     $mail->isSMTP();                                            // Set mailer to use SMTP
-    $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+    $mail->Host       = getenv('SMTP_HOST');  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username = USERNAME;
-    $mail->Password = PASSWORD;                              // SMTP password
+    $mail->Username = getenv('SMTP_USERNAME');
+    $mail->Password = getenv('SMTP_PASSWORD');                               // SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
-    $mail->Port       = 587;                                    // TCP port to connect to
+    $mail->Port       = getenv('SMTP_PORT');                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('alisataylorm.m@gmail.com', 'HNGi7');
+    $mail->setFrom('hello@hng.tech', 'HNG Internship ADMIN');
     $mail->addAddress("$email");     // Add a recipient
     // $mail->addAddress('ellen@example.com');               // Name is optional
-    $mail->addReplyTo('no-reply@gmail.com', 'No-Reply');
+    $mail->addReplyTo('no-reply@hng.tech', 'No-Reply');
       // $mail->addCC('cc@example.com');
       // $mail->addBCC('bcc@example.com');
 
@@ -640,18 +641,18 @@ function acceptInternMail($email, $fullname, $body)
   try {
     //Server settings
     $mail->isSMTP();                                            // Set mailer to use SMTP
-    $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+    $mail->Host       = getenv('SMTP_HOST');  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username = USERNAME;
-    $mail->Password = PASSWORD;                             // SMTP password
+    $mail->Username = getenv('SMTP_USERNAME');
+    $mail->Password = getenv('SMTP_PASSWORD');                               // SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
-    $mail->Port       = 587;                                    // TCP port to connect to
+    $mail->Port       = getenv('SMTP_PORT');                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('alisataylorm.m@gmail.com', 'HNGi7');
+    $mail->setFrom('hello@hng.tech', 'HNG Internship ADMIN');
     $mail->addAddress("$email");     // Add a recipient
     // $mail->addAddress('ellen@example.com');               // Name is optional
-    $mail->addReplyTo('no-reply@gmail.com', 'No-Reply');
+    $mail->addReplyTo('no-reply@hng.tech', 'No-Reply');
       // $mail->addCC('cc@example.com');
       // $mail->addBCC('bcc@example.com');
 
@@ -749,19 +750,18 @@ function   rejectMentorMail($body, $fullname, $email)
   try {
     //Server settings
     $mail->isSMTP();                                            // Set mailer to use SMTP
-    $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+    $mail->Host       = getenv('SMTP_HOST');  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username = USERNAME;
-    $mail->Password = PASSWORD;                               // SMTP password
+    $mail->Username = getenv('SMTP_USERNAME');
+    $mail->Password = getenv('SMTP_PASSWORD');                               // SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
-    $mail->Port       = 587;                                    // TCP port to connect to
+    $mail->Port       = getenv('SMTP_PORT');                                    // TCP port to connect to
 
     //Recipients
-
-    $mail->setFrom('alisataylorm.m@gmail.com', "HNG INTERNSHIP");
-    $mail->addAddress($email);     // Add a recipient
+    $mail->setFrom('hello@hng.tech', 'HNG Internship ADMIN');
+    $mail->addAddress("$email");     // Add a recipient
     // $mail->addAddress('ellen@example.com');               // Name is optional
-    $mail->addReplyTo('no-reply@gmail.com', 'No-Reply');
+    $mail->addReplyTo('no-reply@hng.tech', 'No-Reply');
       // $mail->addCC('cc@example.com');
       // $mail->addBCC('bcc@example.com');
 
@@ -859,18 +859,18 @@ function   acceptMentorMail($body, $fullname, $email)
   try {
     //Server settings
     $mail->isSMTP();                                            // Set mailer to use SMTP
-    $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+    $mail->Host       = getenv('SMTP_HOST');  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username = USERNAME;
-    $mail->Password = PASSWORD;                              // SMTP password
+    $mail->Username = getenv('SMTP_USERNAME');
+    $mail->Password = getenv('SMTP_PASSWORD');                               // SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
-    $mail->Port       = 587;                                    // TCP port to connect to
+    $mail->Port       = getenv('SMTP_PORT');                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('alisataylorm.m@gmail.com', 'HNGi7');
+    $mail->setFrom('hello@hng.tech', 'HNG Internship ADMIN');
     $mail->addAddress("$email");     // Add a recipient
     // $mail->addAddress('ellen@example.com');               // Name is optional
-    $mail->addReplyTo('no-reply@gmail.com', 'No-Reply');
+    $mail->addReplyTo('no-reply@hng.tech', 'No-Reply');
       // $mail->addCC('cc@example.com');
       // $mail->addBCC('bcc@example.com');
 
@@ -969,18 +969,18 @@ function mailMentor($email, $name)
   try {
     //Server settings
     $mail->isSMTP();                                            // Set mailer to use SMTP
-    $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+    $mail->Host       = getenv('SMTP_HOST');  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username = USERNAME;
-    $mail->Password = PASSWORD;                               // SMTP password
+    $mail->Username = getenv('SMTP_USERNAME');
+    $mail->Password = getenv('SMTP_PASSWORD');                               // SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
-    $mail->Port       = 587;                                    // TCP port to connect to
+    $mail->Port       = getenv('SMTP_PORT');                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('alisataylorm.m@gmail.com', "HNG INTERNSHIP");
-    $mail->addAddress($email);     // Add a recipient
+    $mail->setFrom('hello@hng.tech', 'HNG Internship ADMIN');
+    $mail->addAddress("$email");     // Add a recipient
     // $mail->addAddress('ellen@example.com');               // Name is optional
-    $mail->addReplyTo('no-reply@gmail.com', 'No-Reply');
+    $mail->addReplyTo('no-reply@hng.tech', 'No-Reply');
       // $mail->addCC('cc@example.com');
       // $mail->addBCC('bcc@example.com');
 
@@ -1082,18 +1082,18 @@ function   certificatereadyMail($email, $fullname, $body)
   try {
     //Server settings
     $mail->isSMTP();                                            // Set mailer to use SMTP
-    $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+    $mail->Host       = getenv('SMTP_HOST');  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username = USERNAME;
-    $mail->Password = PASSWORD;                              // SMTP password
+    $mail->Username = getenv('SMTP_USERNAME');
+    $mail->Password = getenv('SMTP_PASSWORD');                               // SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
-    $mail->Port       = 587;                                    // TCP port to connect to
+    $mail->Port       = getenv('SMTP_PORT');                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('alisataylorm.m@gmail.com', 'HNGi7');
+    $mail->setFrom('hello@hng.tech', 'HNG Internship ADMIN');
     $mail->addAddress("$email");     // Add a recipient
     // $mail->addAddress('ellen@example.com');               // Name is optional
-    $mail->addReplyTo('no-reply@gmail.com', 'No-Reply');
+    $mail->addReplyTo('no-reply@hng.tech', 'No-Reply');
       // $mail->addCC('cc@example.com');
       // $mail->addBCC('bcc@example.com');
 
