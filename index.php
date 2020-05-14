@@ -1,4 +1,7 @@
 <?php
+
+return "down for maintainance";
+
 require 'classControllers/init.php';
 $countdown = new CountdownTimer();
 $countDownValues = $countdown->getDate();
