@@ -10,7 +10,7 @@
                 <div id="link-list">
                     <a href="join-intern" class="skyblue-text">Join HNG</a>
                     <a href="about" class="skyblue-text">About HNG</a>
-                    <a href="donate" class="skyblue-text">Become a Sponsor</a>
+                    <a href="donate" class="skyblue-text">Donate to HNG</a>
                     <!-- <a href="mentor-registration" class="skyblue-text">Sign up as Mentor</a> -->
                     <a href="faq" class="skyblue-text">FAQ</a>
                     <a href="intern-experience" class="skyblue-text">Past Intern Experience</a>
@@ -53,7 +53,7 @@
             </div>
         </div>
     </nav>
-    <p class="copyright">&copy; 2019, HNG Internship. All rights reserved.</p>
+    <p class="copyright">&copy; 2020, HNG Internship. All rights reserved.</p>
     </div>
     
 </footer>

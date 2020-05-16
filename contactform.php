@@ -66,8 +66,8 @@ if (isset($_POST['contact-btn'])) {
   <section class="container-fluid">
     <div class="wrap">
       <div class="header">
-        <h1>Not a Frequently Asked Question?</h1>
-        <h1> contact us below</h1>
+        <!-- <h1>Not a Frequently Asked Question?</h1> -->
+        <h3>SEND US A MESSAGE</h3>
       </div>
 
 
