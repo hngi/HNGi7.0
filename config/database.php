@@ -29,7 +29,7 @@ class DB
 
     public function get_connection()
     {
-        echo 'host get_connection' . $this->host;
+        
         $this->db = new mysqli($this->host, $this->user, $this->pass, $this->dbname);
         if ($this->db->connect_errno) {
             die("Database connection failed" . $this->db->connect_error);
