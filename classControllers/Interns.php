@@ -22,7 +22,7 @@ class Intern
         $fullname = $database->escape_string($_POST['fullname']);
         $email = $database->escape_string($_POST['email']);
         $phoneNo = $database->escape_string($_POST['phoneNo']);
-        $linkCV = $database->escape_string($_POST['linkCV']);
+        $linkCV = 'blank';
         //$interest = $database->escape_string($_POST['interest']);
         $country = $database->escape_string($_POST["country"]);
         $location = $database->escape_string($_POST['location']);
@@ -30,19 +30,19 @@ class Intern
         $about = $database->escape_string($_POST['about']);
         $date = $database->escape_string($_POST['date']);
 
-        $interests = $_POST['interest'];
+        $interest = $_POST['interest'];
 
-        $int = "";
-        foreach ($interests as $interest){
-            $int .= ", $interest";
-        }
+        // $int = "";
+        // foreach ($interests as $interest){
+        //     $int .= ", $interest";
+        // }
 
-        $interest = substr($int, 1, strlen($int));
-        $interest = trim($interest);
+        // $interest = substr($int, 1, strlen($int));
+        // $interest = trim($interest);
         $query = "INSERT INTO interns (`name`, `email`, `phone_no`, `link_to_cv`, `interest`, `country`, `current_location`, `employment_status`, `about`, `timestamp`)
         VALUES('$fullname', '$email', '$phoneNo', '$linkCV', '$interest', '$country', '$location', '$empStatus', '$about', '$date' )";
         $res = $database->query($query);
-        $body = "Thank You for registering for the HNG Internship 7.0. You will recieve an email about your registration status.Soon";
+        $body = "Thank You for registering for the HNG Internship 7.0. You will recieve an email about your registration status soon.";
         sendInternMail($email, $fullname, $body);
 
 

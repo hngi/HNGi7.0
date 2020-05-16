@@ -4,12 +4,13 @@ require_once 'classControllers/init.php';
 $intern = new Intern;
 $lockForm = new LockRegForm();
 $status = $lockForm->checkStatus();
+
 if (isset($_POST['submit'])) {
     $res = '';
     $fullname = $database->escape_string($_POST['fullname']);
     $email = $database->escape_string($_POST['email']);
     $phoneNo = $database->escape_string($_POST['phoneNo']);
-    $linkCV = $database->escape_string($_POST['linkCV']);
+    $linkCV = "blank";
     //$interest = $database->escape_string($_POST['interest']);
     $country = $database->escape_string($_POST["country"]);
     $location = $database->escape_string($_POST['location']);
@@ -117,11 +118,10 @@ if (isset($_POST['submit'])) {
                 <input type="text" name="fullname" id="fullname" required placeholder="Full Name" />
                 <input type="email" name="email" id="email" required placeholder="E-mail Address" />
                 <input type="text" name="phoneNo" id="phoneNo" required placeholder="Phone Number" />
-                <input type="url" name="linkCV" id="linkCV" required placeholder="Link to your CV (LinkedIn Profile or any other link)" />
-                <select class="interest" value="" name="interest[]" aria-placeholder="What are you interested" multiple>
-                    <option value="" disabled>What area are you interested in?</option>
-                    <option value="Backend">Backend</option>
-                    <option value="DevOps">DevOps</option>
+                <!-- <input type="url" name="linkCV" id="linkCV" required placeholder="Link to your CV (LinkedIn Profile or any other link)" /> -->
+                <select class="interest" value="" name="interest" aria-placeholder="What is your main interest?">
+                    <option value="" disabled>What is your main interest?</option>
+                    <option value="Backend">Backend</option>                   
                     <option value="Digital Marketing">Digital Marketing</option>
                     <option value="Frontend">Frontend</option>
                     <option value="Machine Learning">Machine Learning</option>
@@ -183,10 +183,11 @@ if (isset($_POST['submit'])) {
                 <datalist id="empStatus" class="empStatus" required>
                     <!-- <option value="" disabled selected hidden>What is your current employment status?</option> -->
                     <option value="Recently Employed (3 months or less)">Recently Employed (3 months or less)</option>
-                    <option value="Employee">Employee</option>
+                    <option value="Employeed">Employeed</option>
                     <option value="Self-employed">Self-employed</option>
                     <option value="Freelance">Freelance</option>
                     <option value="Unemployed">Unemployed</option>
+                    <option value="student">Student</option>
                 </datalist>
                 <textarea name="about" id="about" required cols="30" rows="10" placeholder="Briefly tell us about yourself"></textarea>
                 <input type='hidden' name='date' id="date" value='<?= date('Y-m-d H:i:s'); ?>'>
