@@ -199,7 +199,7 @@
         />
         
         <input type="submit" name="pay" value="Donate Now" /> <br>
-        <h5>Want to be a Sponsor ?</h5>
+        <h5>Want to become a sponsor ?</h5>
         <a href="contactform">Send Us Message</a>        
 
        
