@@ -1,8 +1,8 @@
-<?php
+<?php session_start();
 
-require_once "constants.php";
+// require_once "constants.php";
 require __DIR__ . '/../vendor/autoload.php';
-session_start();
+
 
 class DB
 {
@@ -15,21 +15,21 @@ class DB
     
     function __construct()
     {
-
-        $this->get_connection();
-
         $env = Dotenv\Dotenv::createImmutable(__DIR__);
         $env->load();
+        
+        $this->host=getenv('DB_HOST');
+        $this->user=getenv('DB_USERNAME');
+        $this->pass=getenv('DB_PASSWORD');
+        $this->dbname=getenv('DB_NAME'); 
 
-        $this->host=getenv('HOST');
-        $this->user=getenv('USERNAME');
-        $this->pass=getenv('PASSWORD');
-        $this->dbname=getenv('DBNAME'); 
+        $this->get_connection();
     }
 
 
     public function get_connection()
     {
+        echo 'host get_connection' . $this->host;
         $this->db = new mysqli($this->host, $this->user, $this->pass, $this->dbname);
         if ($this->db->connect_errno) {
             die("Database connection failed" . $this->db->connect_error);
