@@ -424,8 +424,6 @@ function sendInternMail($email, $fullname, $body)
 {
   global $mail;
 
-  echo "intern mail" . getenv('SMTP_HOST');
-
   try {
     //Server settings
     $mail->isSMTP();                                            // Set mailer to use SMTP
