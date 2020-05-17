@@ -27,7 +27,7 @@
                         <strong>
                             Email: <br />
                         </strong>
-                        hngi7@hng.tech
+                        hello@hng.tech
                     </a>
                 </div>
             </div>

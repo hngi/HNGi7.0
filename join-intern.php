@@ -88,6 +88,7 @@ if (isset($_POST['submit'])) {
 $errMsg = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 if (strpos($errMsg, 'join-intern.php?successful') !== false) {
     echo '<script type="text/javascript">
+            sessionStorage.hng_ref = true
             window.location = "http://www.google.com/"
        </script>';
     // echo '<div style="margin:auto 30vw; background: green; padding: 5px 10px 5px 10px; width: 40vw !important; text-align: center; color: white; ">
@@ -110,7 +111,9 @@ if ($status !== 1) {
                 <?php
 if (!empty($request_mess)) {
         echo '<script type="text/javascript">
-                    window.location = "reg-successful"
+                    sessionStorage.hng_reg = true
+                    window.location.assign("reg-successful")
+
                </script>';
         // echo "<center><h4 class='text-success text-center success' style='background: #D3ECDB; color: #2B5036; padding: 6px; width:66%;'>" . $request_mess . "</h4></center>";
     }
