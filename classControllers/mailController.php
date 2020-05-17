@@ -57,7 +57,7 @@ function sendNewAdminMail($email, $subject, $body)
   <table border='0' cellpadding='0' cellspacing='0' width='100%'>
     <tr>
       <td style='color: #ffffff; font-family: Arial, sans-serif; font-size: 14px;' width='75%'>
-        &reg; HNGi 7.0, 2019<br/>
+        &reg; HNGi 7.0, 2020<br/>
         </td>
       <td align='right' width='25%'>
         <table border='0' cellpadding='0' cellspacing='0'>
@@ -164,7 +164,7 @@ function contactMail($email, $ticket, $name, $subject, $body)
                   <table border='0' cellpadding='0' cellspacing='0' width='100%'>
                     <tr>
                       <td style='color: #ffffff; font-family: Arial, sans-serif; font-size: 14px;' width='75%'>
-                        &reg; HNGi 7.0, 2019<br/>
+                        &reg; HNGi 7.0, 2020<br/>
                         </td>
                       <td align='right' width='25%'>
                         <table border='0' cellpadding='0' cellspacing='0'>
@@ -275,7 +275,7 @@ function forGetPasswordMail($url, $subject, $email, $body)
   <table border='0' cellpadding='0' cellspacing='0' width='100%'>
     <tr>
       <td style='color: #ffffff; font-family: Arial, sans-serif; font-size: 14px;' width='75%'>
-        &reg; HNGi 7.0, 2019<br/>
+        &reg; HNGi 7.0, 2020<br/>
         </td>
       <td align='right' width='25%'>
         <table border='0' cellpadding='0' cellspacing='0'>
@@ -381,7 +381,7 @@ function send_general_email($subject, $email, $message, $bcc = false) //Add blin
   <table border='0' cellpadding='0' cellspacing='0' width='100%'>
     <tr>
       <td style='color: #ffffff; font-family: Arial, sans-serif; font-size: 14px;' width='75%'>
-        &reg; HNGi 7.0, 2019<br/>
+        &reg; HNGi 7.0, 2020<br/>
         </td>
       <td align='right' width='25%'>
         <table border='0' cellpadding='0' cellspacing='0'>
@@ -485,7 +485,7 @@ function sendInternMail($email, $fullname, $body)
                   <table border='0' cellpadding='0' cellspacing='0' width='100%'>
                     <tr>
                       <td style='color: #ffffff; font-family: Arial, sans-serif; font-size: 14px;' width='75%'>
-                        &reg; HNGi 7.0, 2019<br/>
+                        &reg; HNGi 7.0, 2020<br/>
                         </td>
                       <td align='right' width='25%'>
                         <table border='0' cellpadding='0' cellspacing='0'>
@@ -593,7 +593,7 @@ function  rejectInternMail($email, $fullname, $body)
                   <table border='0' cellpadding='0' cellspacing='0' width='100%'>
                     <tr>
                       <td style='color: #ffffff; font-family: Arial, sans-serif; font-size: 14px;' width='75%'>
-                        &reg; HNGi 7.0, 2019<br/>
+                        &reg; HNGi 7.0, 2020<br/>
                         </td>
                       <td align='right' width='25%'>
                         <table border='0' cellpadding='0' cellspacing='0'>
@@ -700,7 +700,7 @@ function acceptInternMail($email, $fullname, $body)
                   <table border='0' cellpadding='0' cellspacing='0' width='100%'>
                     <tr>
                       <td style='color: #ffffff; font-family: Arial, sans-serif; font-size: 14px;' width='75%'>
-                        &reg; HNGi 7.0, 2019<br/>
+                        &reg; HNGi 7.0, 2020<br/>
                         </td>
                       <td align='right' width='25%'>
                         <table border='0' cellpadding='0' cellspacing='0'>
@@ -811,7 +811,7 @@ function   rejectMentorMail($body, $fullname, $email)
                   <table border='0' cellpadding='0' cellspacing='0' width='100%'>
                     <tr>
                       <td style='color: #ffffff; font-family: Arial, sans-serif; font-size: 14px;' width='75%'>
-                        &reg; HNGi 7.0, 2019<br/>
+                        &reg; HNGi 7.0, 2020<br/>
                         </td>
                       <td align='right' width='25%'>
                         <table border='0' cellpadding='0' cellspacing='0'>
@@ -922,7 +922,7 @@ function   acceptMentorMail($body, $fullname, $email)
                   <table border='0' cellpadding='0' cellspacing='0' width='100%'>
                     <tr>
                       <td style='color: #ffffff; font-family: Arial, sans-serif; font-size: 14px;' width='75%'>
-                        &reg; HNGi 7.0, 2019<br/>
+                        &reg; HNGi 7.0, 2020<br/>
                         </td>
                       <td align='right' width='25%'>
                         <table border='0' cellpadding='0' cellspacing='0'>
@@ -1029,7 +1029,7 @@ function mailMentor($email, $name)
                     <table border='0' cellpadding='0' cellspacing='0' width='100%'>
                       <tr>
                         <td style='color: #ffffff; font-family: Arial, sans-serif; font-size: 14px;' width='75%'>
-                          &reg; HNGi 7.0, 2019<br />
+                          &reg; HNGi 7.0, 2020<br />
                         </td>
                         <td align='right' width='25%'>
                           <table border='0' cellpadding='0' cellspacing='0'>
@@ -1141,7 +1141,7 @@ function   certificatereadyMail($email, $fullname, $body)
                   <table border='0' cellpadding='0' cellspacing='0' width='100%'>
                     <tr>
                       <td style='color: #ffffff; font-family: Arial, sans-serif; font-size: 14px;' width='75%'>
-                        &reg; HNGi 7.0, 2019<br/>
+                        &reg; HNGi 7.0, 2020<br/>
                         </td>
                       <td align='right' width='25%'>
                         <table border='0' cellpadding='0' cellspacing='0'>
