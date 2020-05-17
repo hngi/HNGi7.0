@@ -119,7 +119,7 @@
         finding and nurturing talent.
       </p>
       <a href="#form" class="button-primary">Donate</a>
-      <a href="newsponsor" class="button-primary">Register as Sponsor(Brand)</a>
+      <!-- <a href="newsponsor" class="button-primary">Register as Sponsor(Brand)</a> -->
 
     </div>
 
@@ -199,7 +199,9 @@
         />
         
         <input type="submit" name="pay" value="Donate Now" /> <br>
-        <a href="newsponsor">Register as Sponsor(Brand)</a>
+        <h5>Want to become a sponsor ?</h5>
+        <a href="contactform">Send Us Message</a>        
+
        
       </form>
     </section>
