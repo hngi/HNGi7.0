@@ -184,7 +184,7 @@ if (isset($_POST['submit'])) {
                 </datalist>
 
                 <select class="interest" value="" name="interest" aria-placeholder="What is your main interest?">
-                    <option value="">Select Interested Track ?</option>
+                    <option value="">Select Interested Track</option>
                     <option value="Backend">Backend</option>
                     <!-- <option value="Digital Marketing">Digital Marketing</option> -->
                     <option value="Frontend">Frontend</option>
@@ -194,7 +194,7 @@ if (isset($_POST['submit'])) {
                 </select>
 
                 <select name="professional_status" id="" value="">
-                    <option value="new_bie">Select Professional Status on interested track ?</option>
+                    <option value="new_bie">Select Professional Status on Interested Track</option>
                     <option value="new_bie">Beginner</option>
                     <option value="junior_dev">Junior Developer</option>
                     <option value="intermediate_dev">Intermediate Developer</option>
@@ -203,7 +203,7 @@ if (isset($_POST['submit'])) {
 
                 
 
-                <input type="text" list="empStatus" name="empStatus" placeholder="What is your employment Status?">
+                <input type="text" list="empStatus" name="empStatus" placeholder="What is your Employment Status?">
                 <datalist id="empStatus" class="empStatus" required>
                     <!-- <option value="" disabled selected hidden>What is your current employment status?</option> -->
                     <option value="Recently Employed (3 months or less)">Recently Employed (3 months or less)</option>
