@@ -438,7 +438,7 @@ $countDownValues = $countdown->getDate();
                                         </h2>
                                         <div class="card-body">
                                             <ul class="accordion_tab">
-                                                <li>IOS</li>
+                                                <li>iOS</li>
                                                 <li>Android</li>
                                                 <li>Windows</li>
 
