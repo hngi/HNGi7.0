@@ -198,7 +198,7 @@ if (!empty($request_mess)) {
                     <option value="Backend">Backend</option>
                     <!-- <option value="Digital Marketing">Digital Marketing</option> -->
                     <option value="Frontend">Frontend</option>
-                    <option value="Machine Learning">Machine Learning</option>
+                    <!-- <option value="Machine Learning">Machine Learning</option> -->
                     <option value="Mobile Development">Mobile Development</option>
                     <option value="UI/UX Design">UI/UX Design</option>
                 </select>
