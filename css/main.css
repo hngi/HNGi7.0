@@ -252,6 +252,7 @@
     .main-sixth-row .table_accord .card-header{
         padding: 30px 20px;
         font-size: 15px;
+        cursor: pointer;
     }
 
     .card-header img {

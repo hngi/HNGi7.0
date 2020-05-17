@@ -26,7 +26,7 @@ $countDownValues = $countdown->getDate();
 </head>
 
 <body>
-    <?php include('fragments/site_header.php'); ?>
+    <?php include 'fragments/site_header.php';?>
 
     <p id="startDate" style="display: none;"><?php echo $countDownValues["startDate"]; ?></p>
     <p id="startTime" style="display: none;"><?php echo $countDownValues["startTime"]; ?></p>
@@ -150,7 +150,8 @@ $countDownValues = $countdown->getDate();
                             <p>A cross-section of the HNGi6 Lagos meetup handled by Jeffrey Ogah</p>
                         </span>
                         <span>
-                            <img src="https://res.cloudinary.com/dsjn4g5sh/image/upload/v1579056903/HNGi7/DSC_0066_compressed_gio6ad.jpg">
+                            <img
+                                src="https://res.cloudinary.com/dsjn4g5sh/image/upload/v1579056903/HNGi7/DSC_0066_compressed_gio6ad.jpg">
                             <p>A cross-section of HNGi6 meetup</p>
                         </span>
                     </div>
@@ -254,14 +255,14 @@ $countDownValues = $countdown->getDate();
                     <div class="mentor-text" data-aos="fade-right">
                         <h2 class="blue-text">HNG 6.0 Internship Mentors</h2>
                         <p>
-                            <p> Mentors are responsible for the day-to-day running of the HNG Internship program.</p>
-                            <p> They are usually finalists from previous editions of the Internship who volunteer to be
-                                involved in the organization and planning of subsequent editions.
-                            </p>
-                            <p> They oversee all activities in the program and ensure interns adhere to the rules and
-                                regulations while guiding them
-                                through their tasks.
-                            </p>
+                        <p> Mentors are responsible for the day-to-day running of the HNG Internship program.</p>
+                        <p> They are usually finalists from previous editions of the Internship who volunteer to be
+                            involved in the organization and planning of subsequent editions.
+                        </p>
+                        <p> They oversee all activities in the program and ensure interns adhere to the rules and
+                            regulations while guiding them
+                            through their tasks.
+                        </p>
 
                         </p>
                     </div>
@@ -304,36 +305,30 @@ $countDownValues = $countdown->getDate();
                     <div class="container">
                         <h2 class="center-text blue-text">HNG 6.0 Internship Sponsors</h2>
                         <div class="row section-row text-center mx-auto" data-aos="fade-up">
-                            <div class="col-md-3">
-                                <img
-                                    src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg">
+                            <div class="col-md-4">
+                                <a href="https://hotels.ng"><img
+                                        src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg">
+                                </a>
                             </div>
-                            <div class="col-md-3">
-                                <img
-                                    src="https://res.cloudinary.com/jaycodist/image/upload/v1570722780/akwa-ibom-logo_yzz8ny.svg">
-                            </div>
-                            <div class="col-md-3">
-                                <img
-                                    src="https://res.cloudinary.com/jaycodist/image/upload/v1570722785/imo-logo_rvxpil.svg">
-                            </div>
-                            <div class="col-md-3">
-                                <img
-                                    src="https://res.cloudinary.com/jaycodist/image/upload/v1570722788/verifi-logo_nfckrw.svg">
-                            </div>
+                            <div class="col-md-4">
+                                <a href="https://kudabank.com/"><img src="./images//kudaBank.png">
+                                </a>                            </div>
+                            <div class="col-md-4">
+                                <a href="https://www.verifi.ng/pay/">
+                                    <img
+                                        src="https://res.cloudinary.com/jaycodist/image/upload/v1570722788/verifi-logo_nfckrw.svg"></a>                            </div>
                         </div>
                         <div class="row second-row text-center mx-auto" data-aos="fade-up">
                             <div class="col-md-4">
-                                <img
-                                    src="https://res.cloudinary.com/jaycodist/image/upload/v1570723653/figma-logo_iexfvh.png">
+                                <a href="https://www.piggyvest.com/"><img src="./images/piggyvestLogo.png"></a>
                             </div>
                             <div class="col-md-4">
-                                <img
-                                    src="https://res.cloudinary.com/jaycodist/image/upload/v1570722855/bluechip-logo_rw62cu.svg">
+                                <a href="https://blog.google/around-the-globe/google-africa/google-nigeria/"><img src="./images/google-nigeria.png"></a>
                             </div>
                             <div class="col-md-4">
-                                <img
-                                    src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg">
-                            </div>
+                                <a href="https://flutterwave.com/ng/"> <img
+                                    src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg"
+                                    width="100%"></a>                            </div>
                         </div>
                         <p class="center-text" data-aos="fade-up"><a href="donate"
                                 class="def-button shadowed center">Become a Sponsor</a></p>
@@ -364,7 +359,7 @@ $countDownValues = $countdown->getDate();
         </main>
 
     </section>
-    <?php include('fragments/site_footer.php'); ?>
+    <?php include 'fragments/site_footer.php';?>
 
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
