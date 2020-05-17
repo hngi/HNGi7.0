@@ -682,9 +682,14 @@ $countDownValues = $countdown->getDate();
     <script>
         let accord_target = $(".card-header");
         let accord_body = accord_target.next();
+
+        let allbody = $(".card-body")
+        console.log(allbody)
         for (let i = 0; i < accord_target.length; i++) {
             $(accord_target[i]).on("click", function () {
-                $(this).next().toggle();
+                $(allbody).css("display","none");
+                $(accord_target).removeClass("activeHomepageDrop");
+                $(this).next().slideToggle();
                 $(this).toggleClass("activeHomepageDrop")
             })
         }
