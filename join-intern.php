@@ -19,17 +19,14 @@ if (isset($_POST['submit'])) {
     $date = $database->escape_string($_POST['date']);
     //$interests=$database->escape_string($_POST['interest']);
     $count = $intern->emailExists($email);
-    if($count === 0){
+    if ($count === 0) {
         $res = $intern->internSignup();
         $request_mess = '<p style="text-align:center;">Application successful. Check your mail for registration message. Thank you!</a>';
-    }else{
-        $res ="Email has been use by another user";
+    } else {
+        $res = "Email has been use by another user";
     }
 
-
-
 }
-
 
 ?>
 
@@ -72,7 +69,7 @@ if (isset($_POST['submit'])) {
 
 <body>
     <section class="navigation">
-        <?php include('fragments/site_header.php'); ?>
+        <?php include 'fragments/site_header.php';?>
     </section>
 
     <section class="container-fluid1">
@@ -88,35 +85,39 @@ if (isset($_POST['submit'])) {
         <div class="form-area">
 
             <?php
-        $errMsg = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-        if (strpos($errMsg, 'join-intern.php?successful') !== false) {
-            // echo "<div style='text-align:center; font-size:1.3em; color:#084482'>Thank You for completing the form, we will get back to You soon!</div>";
-            echo '<div style="margin:auto 30vw; background: green; padding: 5px 10px 5px 10px; width: 40vw !important; text-align: center; color: white; ">
-                Your registration was  successful and an email has been sent to your mail. We will get back to you as soon as possible.
-            </div>';
-        }
-        $errMsg = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-        if (strpos($errMsg, 'join-intern.php?failed') !== false) {
-            // echo "<div style='text-align:center; font-size:1.3em; color:#084482'>Thank You for completing the form, we will get back to You soon!</div>";
-            echo '<div style="margin:auto 30vw; background: red; padding: 5px 10px 5px 10px; width: 40vw !important; text-align: center; color: white; ">
+$errMsg = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+if (strpos($errMsg, 'join-intern.php?successful') !== false) {
+    echo '<script type="text/javascript">
+            window.location = "http://www.google.com/"
+       </script>';
+    // echo '<div style="margin:auto 30vw; background: green; padding: 5px 10px 5px 10px; width: 40vw !important; text-align: center; color: white; ">
+    //     Your registration was  successful and an email has been sent to your mail. We will get back to you as soon as possible.
+    // </div>';
+}
+$errMsg = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+if (strpos($errMsg, 'join-intern.php?failed') !== false) {
+    echo '<div style="margin:auto 30vw; background: red; padding: 5px 10px 5px 10px; width: 40vw !important; text-align: center; color: white; ">
                 Your registration failed because Email already exist.
             </div>';
-        }
-        ?>
+}
+?>
 
             <?php
-        if ($status !== 1) {
-            ?>
+if ($status !== 1) {
+    ?>
             <form class="form-container" action="" method="post" id="myForm">
 
                 <?php
-                if (!empty($request_mess)) {
-                    echo "<center><h4 class='text-success text-center success' style='background: #D3ECDB; color: #2B5036; padding: 6px; width:66%;'>" . $request_mess . "</h4></center>";
-                }
-                if (!empty($res)) {
-                    echo "<h4 style='text-align:center; color: red;'>$res</h4>";
-                }
-                ?>
+if (!empty($request_mess)) {
+        echo '<script type="text/javascript">
+                    window.location = "reg-successful"
+               </script>';
+        // echo "<center><h4 class='text-success text-center success' style='background: #D3ECDB; color: #2B5036; padding: 6px; width:66%;'>" . $request_mess . "</h4></center>";
+    }
+    if (!empty($res)) {
+        echo "<h4 style='text-align:center; color: red;'>$res</h4>";
+    }
+    ?>
                 <!-- Name, Email and phone number -->
                 <input type="text" name="fullname" id="fullname" required placeholder="Full Name" />
                 <input type="email" name="email" id="email" required placeholder="E-mail Address" />
@@ -233,27 +234,27 @@ if (isset($_POST['submit'])) {
                 <!-- Brief Descriotion -->
                 <textarea name="about" id="about" required cols="30" rows="10"
                     placeholder="Briefly tell us about yourself (not more than 100 words)"></textarea>
-                <input type='hidden' name='date' id="date" value='<?= date('Y-m-d H:i:s'); ?>'>
+                <input type='hidden' name='date' id="date" value='<?=date('Y-m-d H:i:s');?>'>
                 <p id="result"></p>
 
                 <button type="submit" name="submit" value="Submit" class="submitBtn btn" id="submitBtn">
                     Submit
                 </button>
-                
+
             </form>
             <?php
-        } else {
-            ?>
+} else {
+    ?>
             <div style="width: 100%; margin: 0 auto; text-align: center; padding: 30px; color: #6F0503; ">
                 <h1>Registration will commence soon! Check back.</h1>
             </div>
             <?php
-        }
-        ?>
+}
+?>
 
 
         </div>
-        <?php include "fragments/site_footer.php"; ?>
+        <?php include "fragments/site_footer.php";?>
     </section>
     <?php // include('fragments/chat.php'); ?>
 </body>
