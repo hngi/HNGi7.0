@@ -27,7 +27,7 @@ class Intern
         $country = $database->escape_string($_POST["country"]);
         $location = $database->escape_string($_POST['location']);
         $empStatus = $database->escape_string($_POST['empStatus']);
-        $about = $database->escape_string($_POST['about']);
+        $about = $database->escape_string($_POST['about'] ?? '');
         $date = $database->escape_string($_POST['date']);
 
         $interest = $_POST['interest'];
