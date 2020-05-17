@@ -269,7 +269,8 @@ $countDownValues = $countdown->getDate();
                                     </div>
                                     <div class="col-10">
                                         <h5>FRONT END</h5>
-                                        <P>Put your knowledge of HTML, CSS, and JavaScript into practice and sharpen it further as you turn exciting UI Designs into stunning web pages.</P>
+                                        <P>Put your knowledge of HTML, CSS, and JavaScript into practice and sharpen it
+                                            further as you turn exciting UI Designs into stunning web pages.</P>
                                     </div>
 
                                 </div>
@@ -280,7 +281,8 @@ $countDownValues = $countdown->getDate();
                                     </div>
                                     <div class="col-10">
                                         <h5>BACK END</h5>
-                                        <P>Build scalable, logic-driven applications with world-class technologies and handle the 'behind-the-scenes' functionality of web applications.
+                                        <P>Build scalable, logic-driven applications with world-class technologies and
+                                            handle the 'behind-the-scenes' functionality of web applications.
                                         </P>
                                     </div>
                                 </div>
@@ -302,7 +304,8 @@ $countDownValues = $countdown->getDate();
                                     </div>
                                     <div class="col-10">
                                         <h5>UI / UX DESIGN</h5>
-                                        <P>Put your UI/UX Design skills to test and sharpen it as you design exciting User Interfaces for great User Experience.</P>
+                                        <P>Put your UI/UX Design skills to test and sharpen it as you design exciting
+                                            User Interfaces for great User Experience.</P>
                                     </div>
                                 </div>
                                 <!-- <div class="row" data-aos="fade-right">
@@ -323,7 +326,8 @@ $countDownValues = $countdown->getDate();
                                     </div>
                                     <div class="col-10">
                                         <h5>MOBILE</h5>
-                                        <P>Develop world-class Mobile applications and optimize functionality and user experience on mobile devices.
+                                        <P>Develop world-class Mobile applications and optimize functionality and user
+                                            experience on mobile devices.
                                         </P>
                                     </div>
                                 </div>
@@ -438,11 +442,11 @@ $countDownValues = $countdown->getDate();
                                         </h2>
                                         <div class="card-body">
                                             <ul class="accordion_tab">
-                                            <li>Java</li>
-                                            <li>Flutter</li>
-                                            <li>Kotlin</li>
-                                            <li>Golang</li>
-                                            <!-- <li>iOS</li> -->
+                                                <li>Java</li>
+                                                <li>Flutter</li>
+                                                <li>Kotlin</li>
+                                                <li>Golang</li>
+                                                <!-- <li>iOS</li> -->
                                                 <!-- <li>Android</li> -->
                                                 <!-- <li>Windows</li> -->
 
@@ -469,7 +473,6 @@ $countDownValues = $countdown->getDate();
                             </div>
                         </section>
                     </div>
-
                 </div>
 
 
@@ -601,38 +604,31 @@ $countDownValues = $countdown->getDate();
                         <h2 class="text_center blue-text">HNG i7.0 Internship Sponsors</h2>
                         <div class="row section-row text-center mx-auto" data-aos="fade-up">
                             <div class="col-md-4">
-                                <img
-                                    src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg">
+                                <a href="https://hotels.ng"><img
+                                        src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg">
+                                </a>
                             </div>
-                            <!-- <div class="col-md-3">
-                                <img
-                                    src="https://res.cloudinary.com/jaycodist/image/upload/v1570722780/akwa-ibom-logo_yzz8ny.svg">
-                            </div> -->
                             <div class="col-md-4 mt-md-3">
-                                <img
-                                    src="./images//kudaBank.png">
+                                <a href="https://kudabank.com/"><img src="./images//kudaBank.png">
+                                </a>
                             </div>
                             <div class="col-md-4">
-                                <img
-                                    src="https://res.cloudinary.com/jaycodist/image/upload/v1570722788/verifi-logo_nfckrw.svg">
+                                <a href="https://www.verifi.ng/pay/">
+                                    <img
+                                        src="https://res.cloudinary.com/jaycodist/image/upload/v1570722788/verifi-logo_nfckrw.svg"></a>
                             </div>
                         </div>
                         <div class="row second-row text-center mx-auto" data-aos="fade-up">
-                            <!-- <div class="col-md-3">
-                                <img
-                                    src="https://res.cloudinary.com/jaycodist/image/upload/v1570723653/figma-logo_iexfvh.png">
-                            </div> -->
                             <div class="col-md-4">
-                                <img
-                                    src="./images/piggyvestLogo.png">
+                                <a href="https://www.piggyvest.com/"><img src="./images/piggyvestLogo.png"></a>
                             </div>
                             <div class="col-md-4 mt-md-n4">
-                                <img
-                                    src="./images/google-nigeria.png">
+                                <a href="https://blog.google/around-the-globe/google-africa/google-nigeria/"><img src="./images/google-nigeria.png"></a>
                             </div>
                             <div class="col-md-4 px-5 px-md-0">
-                                <img
-                                    src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg" width="100%">
+                                <a href="https://flutterwave.com/ng/"> <img
+                                        src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg"
+                                        width="100%"></a>
                             </div>
                         </div>
                         <button class="cta-button button--midBlue">
@@ -640,26 +636,6 @@ $countDownValues = $countdown->getDate();
                         </button>
                     </div>
 
-                    <!--
-                    <div id="sponsor-flex-top" data-aos="fade-up">
-                        <a><img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg"></a>
-                        <a><img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722780/akwa-ibom-logo_yzz8ny.svg"></a>
-                        <a><img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722785/imo-logo_rvxpil.svg"></a>
-                        <a><img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722788/verifi-logo_nfckrw.svg"></a>
-                    </div>
-                    <div id="sponsor-flex-bottom" data-aos="fade-up">
-                        <a><img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570723653/figma-logo_iexfvh.png"></a>
-                        <a><img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722855/bluechip-logo_rw62cu.svg"></a>
-                        <a><img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg"></a>
-                    </div>
--->
                 </div>
 
             </main>
@@ -679,15 +655,15 @@ $countDownValues = $countdown->getDate();
     <script src="js/main.js"></script>
     <script type="text/javascript" src="js/countdown.js"></script>
     <script src="js/script.js"></script>
+
     <script>
+        // Handle Accordion
         let accord_target = $(".card-header");
         let accord_body = accord_target.next();
-
         let allbody = $(".card-body")
-        console.log(allbody)
         for (let i = 0; i < accord_target.length; i++) {
             $(accord_target[i]).on("click", function () {
-                $(allbody).css("display","none");
+                $(allbody).css("display", "none");
                 $(accord_target).removeClass("activeHomepageDrop");
                 $(this).next().slideToggle();
                 $(this).toggleClass("activeHomepageDrop")
