@@ -348,8 +348,6 @@ $countDownValues = $countdown->getDate();
                                                 src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
                                             <a> Frontend Development </a>
                                         </h2>
-
-
                                         <div class="card-body">
                                             <ul class="accordion_tab">
                                                 <li>HTML</li>
@@ -359,7 +357,7 @@ $countDownValues = $countdown->getDate();
                                                 <li>JQuery</li>
                                                 <li>Vue</li>
                                                 <li>ReactJs</li>
-                                                <li>Oracle JET</li>
+                                                <!-- <li>Oracle JET</li> -->
                                                 <li>Angular</li>
                                             </ul>
                                         </div>
@@ -417,7 +415,7 @@ $countDownValues = $countdown->getDate();
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="card" id="card2">
+                                    <!-- <div class="card" id="card2">
                                         <h2 class="card-header">
                                             <img
                                                 src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
@@ -431,7 +429,7 @@ $countDownValues = $countdown->getDate();
                                                 <li>Cordova</li>
                                             </ul>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="card" id="card2">
                                         <h2 class="card-header">
                                             <img
@@ -441,13 +439,13 @@ $countDownValues = $countdown->getDate();
                                         <div class="card-body">
                                             <ul class="accordion_tab">
                                                 <li>IOS</li>
-                                                <li>Andriod</li>
+                                                <li>Android</li>
                                                 <li>Windows</li>
 
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="card" id="card4">
+                                    <!-- <div class="card" id="card4">
                                         <h2 class="card-header">
                                             <img
                                                 src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
@@ -462,7 +460,7 @@ $countDownValues = $countdown->getDate();
                                                 <li>Google Adwords</li>
                                             </ul>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </section>
