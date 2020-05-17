@@ -44,9 +44,11 @@ if (isset($_POST['submit'])) {
     <link rel="shortcut icon" href="https://res.cloudinary.com/dekillerj/image/upload/v1570648980/brand-logo.png" />
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/header-footer.css">
     <link rel="stylesheet" href="css/join-intern.css">
     <link rel="icon" type="img/png" href="images/hng-favicon.png">
@@ -58,6 +60,7 @@ if (isset($_POST['submit'])) {
             font-weight: bolder;
             margin-top: 50px;
         }
+
         p.para {
             width: 100%;
             text-align: center;
@@ -68,23 +71,23 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-<section class="navigation">
-    <?php include('fragments/site_header.php'); ?>
-</section>
-
-<section class="container-fluid1">
-    <section class="jumbo">
-
-        <h2 class="heading">Join as an Intern</h2>
-        <p class="para">
-            Complete the form below to begin your journey as an Intern.<br>
-            <!-- To become a mentor <a href="mentor-registration">Click here</a> -->
-        </p>
+    <section class="navigation">
+        <?php include('fragments/site_header.php'); ?>
     </section>
 
-    <div class="form-area">
+    <section class="container-fluid1">
+        <section class="jumbo">
 
-        <?php
+            <h2 class="heading">Join as an Intern</h2>
+            <p class="para">
+                Complete the form below to begin your journey as an Intern.<br>
+                <!-- To become a mentor <a href="mentor-registration">Click here</a> -->
+            </p>
+        </section>
+
+        <div class="form-area">
+
+            <?php
         $errMsg = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
         if (strpos($errMsg, 'join-intern.php?successful') !== false) {
             // echo "<div style='text-align:center; font-size:1.3em; color:#084482'>Thank You for completing the form, we will get back to You soon!</div>";
@@ -101,7 +104,7 @@ if (isset($_POST['submit'])) {
         }
         ?>
 
-        <?php
+            <?php
         if ($status !== 1) {
             ?>
             <form class="form-container" action="" method="post" id="myForm">
@@ -119,25 +122,26 @@ if (isset($_POST['submit'])) {
                 <input type="email" name="email" id="email" required placeholder="E-mail Address" />
                 <input type="text" name="phoneNo" id="phoneNo" required placeholder="Phone Number" />
                 <!-- <input type="url" name="linkCV" id="linkCV" required placeholder="Link to your CV (LinkedIn Profile or any other link)" /> -->
-                <select class="interest" value="" name="interest" aria-placeholder="What is your main interest?">
-                    <option value="" disabled>What is your main interest?</option>
-                    <option value="Backend">Backend</option>                   
-                    <option value="Digital Marketing">Digital Marketing</option>
-                    <option value="Frontend">Frontend</option>
-                    <option value="Machine Learning">Machine Learning</option>
-                    <option value="Mobile Development">Mobile Development</option>
-                    <option value="UI/UX Design">UI/UX Design</option>
+                <!-- <input type="text" list="gender" name="gender" placeholder="Select your gender"> -->
+                <select id="gender" value="" aria-placeholder="Gender" class="gender" required>
+                    <!-- <option value="" disabled selected hidden>What is your current employment status?</option> -->
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
                 </select>
-
+                
                 <div class='text-danger' id="invalidCountry"></div>
-                <input type="text" placeholder="Select your Country"  onchange="openState(event), validateCountry(event)" list="country" name="country" id="countrySelect" required>
+                <input type="text" placeholder="Select Country" onchange="openState(event), validateCountry(event)"
+                    list="country" name="country" id="countrySelect" required>
                 <datalist id="country" required>
                     <option value="">What country are you currently located?</option>
                     <!-- <option value="">Nigeria</option> -->
                     <!-- List is gotten from the api call -->
                 </datalist>
-                <input type="text" style="display: none;" class="state" name="location" list="state" placeholder="Select your current state" />
-                 <datalist  id="state"  required>
+                <input type="text" style="display: none;" class="state" name="location" list="state"
+                    placeholder="Select your current state" />
+                <datalist id="state" required>
                     <!-- <option value="">What state are you currently located? </option> -->
                     <option value="FCT">FCT</option>
                     <option value="Abia">Abia</option>
@@ -177,8 +181,28 @@ if (isset($_POST['submit'])) {
                     <option value="Taraba">Taraba</option>
                     <option value="Yobe">Yobe</option>
                     <option value="Zamfara">Zamfara</option>
-                 </datalist>
-               
+                </datalist>
+
+                <select class="interest" value="" name="interest" aria-placeholder="What is your main interest?">
+                    <option value="">Select Interested Track ?</option>
+                    <option value="Backend">Backend</option>
+                    <!-- <option value="Digital Marketing">Digital Marketing</option> -->
+                    <option value="Frontend">Frontend</option>
+                    <option value="Machine Learning">Machine Learning</option>
+                    <option value="Mobile Development">Mobile Development</option>
+                    <option value="UI/UX Design">UI/UX Design</option>
+                </select>
+
+                <select name="professional_status" id="" value="">
+                    <option value="new_bie">Select Professional Status on interested track ?</option>
+                    <option value="new_bie">Beginner</option>
+                    <option value="junior_dev">Junior Developer</option>
+                    <option value="intermediate_dev">Intermediate Developer</option>
+                    <option value="senior_dev">Senior Developer</option>
+                </select>
+
+                
+
                 <input type="text" list="empStatus" name="empStatus" placeholder="What is your employment Status?">
                 <datalist id="empStatus" class="empStatus" required>
                     <!-- <option value="" disabled selected hidden>What is your current employment status?</option> -->
@@ -189,7 +213,20 @@ if (isset($_POST['submit'])) {
                     <option value="Unemployed">Unemployed</option>
                     <option value="student">Student</option>
                 </datalist>
-                <textarea name="about" id="about" required cols="30" rows="10" placeholder="Briefly tell us about yourself (not more than 100 words)"></textarea>
+
+
+                <select name="income_amount" id="" value="lt500">
+                    <option value="">What is your income range from tech?</option>
+                    <option value="lt30">Less than ₦30,000</option>
+                    <option value="lt60">Between ₦30,000 to ₦60,000</option>
+                    <option value="lt100">Between ₦60,001 to ₦100,000</option>
+                    <option value="lt300">Between ₦100,001 to ₦300,000</option>
+                    <option value="lt500">Between ₦300,001 to ₦500,000</option>
+                    <option value="ab500">Above ₦500,001</option>
+                </select>
+
+                <textarea name="about" id="about" required cols="30" rows="10"
+                    placeholder="Briefly tell us about yourself (not more than 100 words)"></textarea>
                 <input type='hidden' name='date' id="date" value='<?= date('Y-m-d H:i:s'); ?>'>
 
                 <p id="result"></p>
@@ -209,10 +246,10 @@ if (isset($_POST['submit'])) {
         ?>
 
 
-    </div>
-    <?php include "fragments/site_footer.php"; ?>
-</section>
-<?php // include('fragments/chat.php'); ?>
+        </div>
+        <?php include "fragments/site_footer.php"; ?>
+    </section>
+    <?php // include('fragments/chat.php'); ?>
 </body>
 <script>
     let countrySelect = document.querySelector("#country");
@@ -220,31 +257,31 @@ if (isset($_POST['submit'])) {
     const url = 'https://restcountries.eu/rest/v2/all';
     let countries = []
     fetch(url).
-    then(res => res.json())
-    .then(data => {
-        countries = data
-        data.map(country => {
-          if(country && country.name){
-              const option_ = document.createElement("option")
-              const optionText = document.createTextNode(country.alpha3Code)
-              option_.appendChild(optionText)
-              option_.setAttribute("value",country.name)
-              countrySelect.append(option_)
-          }
+        then(res => res.json())
+        .then(data => {
+            countries = data
+            data.map(country => {
+                if (country && country.name) {
+                    const option_ = document.createElement("option")
+                    const optionText = document.createTextNode(country.alpha3Code)
+                    option_.appendChild(optionText)
+                    option_.setAttribute("value", country.name)
+                    countrySelect.append(option_)
+                }
+            })
+            console.log(countrySelect)
+
         })
-        console.log(countrySelect)
 
-    })
-
-    function openState(e){
-       if(e.target.value === "Nigeria"){
-         stateSelect.style.display = 'block';
-         stateSelect.focus()
-       }else{
-        stateSelect.style.display = 'none'
-        // set the state value to null if country is not Nigeria
-        stateSelect.value = ''
-       }
+    function openState(e) {
+        if (e.target.value === "Nigeria") {
+            stateSelect.style.display = 'block';
+            stateSelect.focus()
+        } else {
+            stateSelect.style.display = 'none'
+            // set the state value to null if country is not Nigeria
+            stateSelect.value = ''
+        }
     }
 
     // validate country selected by the user; makes sure country is in the list; disables button if country is not in the list
@@ -253,11 +290,11 @@ if (isset($_POST['submit'])) {
         let submitBtn = document.querySelector('#submitBtn');
         let valid = false;
         countries.map(country => {
-            if(country.name === e.target.value) {
+            if (country.name === e.target.value) {
                 valid = true;
             }
         })
-        if(valid === false) {
+        if (valid === false) {
             invalidCountry.style.display = 'block';
             invalidCountry.textContent = 'Please select a country from the list';
             countrySelect.value = '';
