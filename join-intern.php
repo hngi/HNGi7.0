@@ -183,7 +183,7 @@ if (isset($_POST['submit'])) {
                 <datalist id="empStatus" class="empStatus" required>
                     <!-- <option value="" disabled selected hidden>What is your current employment status?</option> -->
                     <option value="Recently Employed (3 months or less)">Recently Employed (3 months or less)</option>
-                    <option value="Employeed">Employeed</option>
+                    <option value="Employed">Employed</option>
                     <option value="Self-employed">Self-employed</option>
                     <option value="Freelance">Freelance</option>
                     <option value="Unemployed">Unemployed</option>
