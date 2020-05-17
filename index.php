@@ -284,7 +284,7 @@ $countDownValues = $countdown->getDate();
                                         </P>
                                     </div>
                                 </div>
-                                <div class="row" data-aos="fade-right">
+                                <!-- <div class="row" data-aos="fade-right">
                                     <div class="col-2">
                                         <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/ml_sdviij.png"
                                             width="30px" class="img-fluid ml-2">
@@ -294,7 +294,7 @@ $countDownValues = $countdown->getDate();
                                         <P>Artificial intelligence is the future. Develop programs that can access data and utilize it to automatically learn and improve from experience.
                                         </P>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="row" data-aos="fade-right">
                                     <div class="col-2">
                                         <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/ui-ux_xq64bx.png"
@@ -305,7 +305,7 @@ $countDownValues = $countdown->getDate();
                                         <P>Put your UI/UX Design skills to test and sharpen it as you design exciting User Interfaces for great User Experience.</P>
                                     </div>
                                 </div>
-                                <div class="row" data-aos="fade-right">
+                                <!-- <div class="row" data-aos="fade-right">
                                     <div class="col-2">
                                         <img src="https://res.cloudinary.com/alfredpison/image/upload/v1573055195/output-onlinepngtools_1_1_jc3fbe.png"
                                             width="50px" class="img-fluid">
@@ -315,7 +315,7 @@ $countDownValues = $countdown->getDate();
                                         <P>Develop client-side applications with the powerful Oracle Jet interacting with Oracle products and services, especially Oracle Cloud services.
                                         </P>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="row" data-aos="fade-right">
                                     <div class="col-2">
                                         <img src="https://res.cloudinary.com/alfredpison/image/upload/v1573053633/phone_iphone-24px_1_k9trnt.png"
@@ -327,7 +327,7 @@ $countDownValues = $countdown->getDate();
                                         </P>
                                     </div>
                                 </div>
-                                <div class="row" data-aos="fade-right">
+                                <!-- <div class="row" data-aos="fade-right">
                                     <div class="col-2">
                                         <img src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/dm_bxzzr2.png"
                                             width="50px" class="img-fluid">
@@ -337,7 +337,7 @@ $countDownValues = $countdown->getDate();
                                         <P>Marketing has evolved over the years from print to digital. Get more familiar with how to market using SEO, content marketing, paid advertising or email marketing through digital technologies.
                                         </P>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
 
                             <div class="table_accord">
@@ -355,10 +355,10 @@ $countDownValues = $countdown->getDate();
                                                 <li>Javascript</li>
                                                 <li>Bootstrap</li>
                                                 <li>JQuery</li>
-                                                <li>Vue</li>
+                                                <!-- <li>Vue</li> -->
                                                 <li>ReactJs</li>
                                                 <!-- <li>Oracle JET</li> -->
-                                                <li>Angular</li>
+                                                <!-- <li>Angular</li> -->
                                             </ul>
                                         </div>
                                     </div>
@@ -370,17 +370,17 @@ $countDownValues = $countdown->getDate();
                                         </h2>
                                         <div class="card-body">
                                             <ul class="accordion_tab">
+                                                <li>NodeJs</li>
                                                 <li>PHP</li>
                                                 <li>Python</li>
-                                                <li>Node.js</li>
-                                                <li>Laravel</li>
                                                 <li>Apache</li>
                                                 <li>NGINX</li>
+                                                <li>C#</li>
                                             </ul>
                                         </div>
 
                                     </div>
-                                    <div class="card" id="card2">
+                                    <!-- <div class="card" id="card2">
                                         <h2 class="card-header">
                                             <img
                                                 src="https://res.cloudinary.com/oderinde5/image/upload/v1570573242/samples/arrow_lmoyy2.png">
@@ -397,7 +397,7 @@ $countDownValues = $countdown->getDate();
                                                 <li>Shogun</li>
                                             </ul>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="card" id="card3">
                                         <h2 class="card-header">
                                             <img
@@ -407,10 +407,10 @@ $countDownValues = $countdown->getDate();
                                         <div class="card-body">
                                             <ul class="accordion_tab">
                                                 <li>FIGMA</li>
-                                                <li>InVision Studio</li>
+                                                <!-- <li>InVision Studio</li> -->
                                                 <li>Adobe XD</li>
-                                                <li>Framer X</li>
-                                                <li>UXPin</li>
+                                                <!-- <li>Framer X</li> -->
+                                                <!-- <li>UXPin</li> -->
                                                 <li>Adobe Illustrator</li>
                                             </ul>
                                         </div>
@@ -438,9 +438,13 @@ $countDownValues = $countdown->getDate();
                                         </h2>
                                         <div class="card-body">
                                             <ul class="accordion_tab">
-                                                <li>iOS</li>
-                                                <li>Android</li>
-                                                <li>Windows</li>
+                                            <li>Java</li>
+                                            <li>Flutter</li>
+                                            <li>Kotlin</li>
+                                            <li>Golang</li>
+                                            <!-- <li>iOS</li> -->
+                                                <!-- <li>Android</li> -->
+                                                <!-- <li>Windows</li> -->
 
                                             </ul>
                                         </div>
