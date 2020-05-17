@@ -117,30 +117,35 @@ if (isset($_POST['submit'])) {
                     echo "<h4 style='text-align:center; color: red;'>$res</h4>";
                 }
                 ?>
-
+                <!-- Name, Email and phone number -->
                 <input type="text" name="fullname" id="fullname" required placeholder="Full Name" />
                 <input type="email" name="email" id="email" required placeholder="E-mail Address" />
                 <input type="text" name="phoneNo" id="phoneNo" required placeholder="Phone Number" />
-                <!-- <input type="url" name="linkCV" id="linkCV" required placeholder="Link to your CV (LinkedIn Profile or any other link)" /> -->
-                <!-- <input type="text" list="gender" name="gender" placeholder="Select your gender"> -->
-                <select id="gender" value="" aria-placeholder="Gender" class="gender" required>
-                    <!-- <option value="" disabled selected hidden>What is your current employment status?</option> -->
+
+                <!-- Gender -->
+                <select id="gender" value="" class="gender" required>
                     <option value="">Select Gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="other">Other</option>
                 </select>
-                
+
+                <!-- Country -->
                 <div class='text-danger' id="invalidCountry"></div>
                 <input type="text" placeholder="Select Country" onchange="openState(event), validateCountry(event)"
                     list="country" name="country" id="countrySelect" required>
+                <!-- Country Data list -->
                 <datalist id="country" required>
                     <option value="">What country are you currently located?</option>
                     <!-- <option value="">Nigeria</option> -->
                     <!-- List is gotten from the api call -->
                 </datalist>
+
+                <!-- State, Optional -->
                 <input type="text" style="display: none;" class="state" name="location" list="state"
                     placeholder="Select your current state" />
+
+                <!-- State Data list -->
                 <datalist id="state" required>
                     <!-- <option value="">What state are you currently located? </option> -->
                     <option value="FCT">FCT</option>
@@ -183,6 +188,7 @@ if (isset($_POST['submit'])) {
                     <option value="Zamfara">Zamfara</option>
                 </datalist>
 
+                <!-- Interest -->
                 <select class="interest" value="" name="interest" aria-placeholder="What is your main interest?">
                     <option value="">Select Interested Track</option>
                     <option value="Backend">Backend</option>
@@ -193,6 +199,7 @@ if (isset($_POST['submit'])) {
                     <option value="UI/UX Design">UI/UX Design</option>
                 </select>
 
+                <!-- Professional Status -->
                 <select name="professional_status" id="" value="">
                     <option value="new_bie">Select Professional Status on Interested Track</option>
                     <option value="new_bie">Beginner</option>
@@ -201,11 +208,9 @@ if (isset($_POST['submit'])) {
                     <option value="senior_dev">Senior Developer</option>
                 </select>
 
-                
-
+                <!-- Employment Status -->
                 <input type="text" list="empStatus" name="empStatus" placeholder="What is your Employment Status?">
                 <datalist id="empStatus" class="empStatus" required>
-                    <!-- <option value="" disabled selected hidden>What is your current employment status?</option> -->
                     <option value="Recently Employed (3 months or less)">Recently Employed (3 months or less)</option>
                     <option value="Employed">Employed</option>
                     <option value="Self-employed">Self-employed</option>
@@ -214,7 +219,7 @@ if (isset($_POST['submit'])) {
                     <option value="student">Student</option>
                 </datalist>
 
-
+                <!-- Current income Amount -->
                 <select name="income_amount" id="" value="lt500">
                     <option value="">What is your income range from tech?</option>
                     <option value="lt30">Less than ₦30,000</option>
@@ -225,15 +230,16 @@ if (isset($_POST['submit'])) {
                     <option value="ab500">Above ₦500,001</option>
                 </select>
 
+                <!-- Brief Descriotion -->
                 <textarea name="about" id="about" required cols="30" rows="10"
                     placeholder="Briefly tell us about yourself (not more than 100 words)"></textarea>
                 <input type='hidden' name='date' id="date" value='<?= date('Y-m-d H:i:s'); ?>'>
-
                 <p id="result"></p>
 
                 <button type="submit" name="submit" value="Submit" class="submitBtn btn" id="submitBtn">
                     Submit
                 </button>
+                
             </form>
             <?php
         } else {
