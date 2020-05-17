@@ -118,7 +118,7 @@
         access to them. They keep the internship going and help us keep
         finding and nurturing talent.
       </p>
-      <a href="#form" class="button-primary">Donate</a>
+      <a href="https://dashboard.flutterwave.com/donate/rbazqm2uou8y" class="button-primary">Donate</a>
       <!-- <a href="newsponsor" class="button-primary">Register as Sponsor(Brand)</a> -->
 
     </div>
@@ -139,7 +139,7 @@
           <li>Prizes</li>
           <li>Meetups</li>
         </ul>
-        <a href="#form" class="button-primary">Donate</a>
+        <a href="https://dashboard.flutterwave.com/donate/rbazqm2uou8y" class="button-primary">Donate</a>
       </div>
     </section>
 
@@ -149,7 +149,7 @@
         During HNGi6.0, we raised a total of ₦2,200,000 plus $10k in AWS credit. With
         your help, we can raise even more.
       </p>
-      <a href="#form" class="button-primary">Donate</a>
+      <a href="https://dashboard.flutterwave.com/donate/rbazqm2uou8y" class="button-primary">Donate</a>
     </section>
 
     <section class="women">
@@ -166,13 +166,13 @@
           <li>Women</li>
           <li>People with disabilities</li>
         </ul>
-        <a href="#form" class="button-primary">Donate</a>
+        <a href="https://flutterwave.com/pay/se5mtah7yl3o" class="button-primary">Donate</a>
       </div>
     </section>
 
-    <section class="banner form" id="form">
-      <h3 class="title">Donate Today</h3>
-       <form action="" id="actualForms" method="post">
+    <!-- <section class="banner form" id="form"> -->
+      <!-- <h3 class="title">Donate Today</h3> -->
+       <!-- <form action="" id="actualForms" method="post">
         <input
           type="text"
           name="name"
@@ -203,15 +203,15 @@
         <a href="contactform">Send Us Message</a>        
 
        
-      </form>
-    </section>
+      </form> -->
+    <!-- </section> -->
 
     <div class="banner form" id="supportForm">
       <h3 class="title">Support via software or tool</h3>
       <p class="desc">
         Give anything you have that can make an intern's journey easier
       </p>
-      <form action="" id="actualSupportForms" method="post">
+      <!-- <form action="" id="actualSupportForms" method="post">
         <input
           type="text"
           name="amount"
@@ -234,9 +234,9 @@
           type="number"
           name="phone"
           placeholder="Enter Phone number"
-        />
+        /> -->
           
-        <input type="submit" name="pay" value="Donate Now" />
+        <a href="https://hngi7.hng.tech/contactform" class="button-primary">Contact Us</a>
       </form>
       
     </div>
