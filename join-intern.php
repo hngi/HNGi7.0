@@ -145,8 +145,8 @@ if (!empty($request_mess)) {
                 </select>
 
                 <!-- Country -->
-                <div class='text-danger' id="invalidCountry"></div>
-                <input type="text" placeholder="Select Country" onchange="openState(event), validateCountry(event)"
+                <div class='text-danger ' style="width:100%; text-align:center" id="invalidCountry"></div>
+                <input type="text" placeholder="Select Country" oninput="openState(event), validateCountry(event)"
                     list="country" name="country" id="countrySelect" required>
                 <!-- Country Data list -->
                 <datalist id="country" required>
@@ -316,7 +316,7 @@ if (!empty($request_mess)) {
         })
         if (valid === false) {
             invalidCountry.style.display = 'block';
-            invalidCountry.textContent = 'Please select a country from the list';
+            invalidCountry.textContent = 'Please select a country from the list or type your country name without trailing spaces';
             countrySelect.value = '';
             submitBtn.disabled = true;
         } else {
