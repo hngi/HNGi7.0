@@ -376,10 +376,9 @@ $countDownValues = $countdown->getDate();
                                             <ul class="accordion_tab">
                                                 <li>NodeJs</li>
                                                 <li>PHP</li>
-                                                <li>Python</li>
-                                                <li>Apache</li>
-                                                <li>NGINX</li>
+                                                <li>Python</li>                                             
                                                 <li>C#</li>
+                                                <li>Golang</li>
                                             </ul>
                                         </div>
 
@@ -445,7 +444,7 @@ $countDownValues = $countdown->getDate();
                                                 <li>Java</li>
                                                 <li>Flutter</li>
                                                 <li>Kotlin</li>
-                                                <li>Golang</li>
+                                               
                                                 <!-- <li>iOS</li> -->
                                                 <!-- <li>Android</li> -->
                                                 <!-- <li>Windows</li> -->
