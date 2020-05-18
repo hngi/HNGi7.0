@@ -234,7 +234,7 @@ if (!empty($request_mess)) {
                 </datalist>
 
                 <!-- Current income Amount -->
-                <select name="income_amount" id="" value="lt500">
+                <select name="income_amount" id="" value="lt500" required>
                     <option value="">What is your income range from tech?</option>
                     <option value="lt30">Less than ₦30,000</option>
                     <option value="lt60">Between ₦30,000 to ₦60,000</option>
@@ -245,7 +245,7 @@ if (!empty($request_mess)) {
                 </select>
 
                 <!-- Brief Descriotion -->
-                <textarea name="about" id="about" maxlength="100" required cols="30" rows="2"
+                <textarea name="about" id="about" maxlength="90" required cols="30" rows="2"
                     placeholder="Briefly tell us about yourself (not more than 100 words)"></textarea>
                 <input type='hidden' name='date' id="date" value='<?=date('Y-m-d H:i:s');?>'>
                 <p id="result"></p>
