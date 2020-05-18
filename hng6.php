@@ -106,7 +106,7 @@ $countDownValues = $countdown->getDate();
                                 We had <a href="mentorpage">mentors</a> onboard to guide interns in their respective
                                 tracks throughout and also
                                 to properly coordinate the program. <br> <br>
-                                We are looking forward to HNG Internship 7.0, which will commence on the 1st of January,
+                                We are looking forward to HNG Internship 7.0, which will commence on the 1st of June,
                                 2020. We look forward to seeing you onboard.
 
                             </p>
@@ -305,55 +305,49 @@ $countDownValues = $countdown->getDate();
                     <div class="container">
                         <h2 class="center-text blue-text">HNG 6.0 Internship Sponsors</h2>
                         <div class="row section-row text-center mx-auto" data-aos="fade-up">
-                            <div class="col-md-4">
-                                <a href="https://hotels.ng"><img
-                                        src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg">
+                            <div class="col-md-3">
+                                <a>                                
+                                    <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg" />                                
+                                </a>   
+                            </div>
+                            <div class="col-md-3">
+                                <a>
+                                    <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722780/akwa-ibom-logo_yzz8ny.svg" />
                                 </a>
                             </div>
-                            <div class="col-md-4">
-                                <a href="https://kudabank.com/"><img src="./images//kudaBank.png">
-                                </a>                            </div>
-                            <div class="col-md-4">
+                            <div class="col-md-3">
                                 <a href="https://www.verifi.ng/pay/">
-                                    <img
-                                        src="https://res.cloudinary.com/jaycodist/image/upload/v1570722788/verifi-logo_nfckrw.svg"></a>                            </div>
+                                    <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722788/verifi-logo_nfckrw.svg">
+                                </a>                            
+                            </div>
+                            <div class="col-md-3">
+                                <a>
+                                    <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722785/imo-logo_rvxpil.svg" />
+                                </a>                          
+                            </div>
+
                         </div>
                         <div class="row second-row text-center mx-auto" data-aos="fade-up">
                             <div class="col-md-4">
-                                <a href="https://www.piggyvest.com/"><img src="./images/piggyvestLogo.png"></a>
+                                <a>
+                                    <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570723653/figma-logo_iexfvh.png" />
+                                </a>
                             </div>
                             <div class="col-md-4">
-                                <a href="https://blog.google/around-the-globe/google-africa/google-nigeria/"><img src="./images/google-nigeria.png"></a>
+                                <a>
+                                    <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722855/bluechip-logo_rw62cu.svg" />
+                                </a>
                             </div>
                             <div class="col-md-4">
-                                <a href="https://flutterwave.com/ng/"> <img
-                                    src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg"
-                                    width="100%"></a>                            </div>
+                                <a>
+                                    <img src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg">
+                                </a>                           
+                            </div>
                         </div>
                         <p class="center-text" data-aos="fade-up"><a href="donate"
                                 class="def-button shadowed center">Become a Sponsor</a></p>
                     </div>
-
-                    <!--
-                    <div id="sponsor-flex-top" data-aos="fade-up">
-                        <a><img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722782/hotels-logo_x3icbw.svg"></a>
-                        <a><img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722780/akwa-ibom-logo_yzz8ny.svg"></a>
-                        <a><img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722785/imo-logo_rvxpil.svg"></a>
-                        <a><img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722788/verifi-logo_nfckrw.svg"></a>
-                    </div>
-                    <div id="sponsor-flex-bottom" data-aos="fade-up">
-                        <a><img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570723653/figma-logo_iexfvh.png"></a>
-                        <a><img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722855/bluechip-logo_rw62cu.svg"></a>
-                        <a><img
-                                src="https://res.cloudinary.com/jaycodist/image/upload/v1570722784/flutterwave-logo_nyv9ue.svg"></a>
-                    </div>
-                -->
+               
                 </div>
             </section>
         </main>
