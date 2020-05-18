@@ -106,7 +106,7 @@ $countDownValues = $countdown->getDate();
                                 We had <a href="mentorpage">mentors</a> onboard to guide interns in their respective
                                 tracks throughout and also
                                 to properly coordinate the program. <br> <br>
-                                We are looking forward to HNG Internship 7.0, which will commence on the 1st of January,
+                                We are looking forward to HNG Internship 7.0, which will commence on the 1st of June,
                                 2020. We look forward to seeing you onboard.
 
                             </p>
