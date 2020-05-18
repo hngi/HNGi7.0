@@ -217,9 +217,9 @@ if (!empty($request_mess)) {
                 <select name="professional_status" id="" value="">
                     <option value="new_bie">Select Professional Status on Interested Track</option>
                     <option value="new_bie">Beginner</option>
-                    <option value="junior_dev">Junior Developer</option>
-                    <option value="intermediate_dev">Intermediate Developer</option>
-                    <option value="senior_dev">Senior Developer</option>
+                    <option value="junior_dev">Junior</option>
+                    <option value="intermediate_dev">Intermediate</option>
+                    <option value="senior_dev">Senior</option>
                 </select>
 
                 <!-- Employment Status -->
