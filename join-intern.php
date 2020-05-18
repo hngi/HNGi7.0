@@ -1,4 +1,5 @@
-<?php
+<?php 
+
 date_default_timezone_set('Africa/Lagos');
 require_once 'classControllers/init.php';
 $intern = new Intern;
@@ -117,6 +118,8 @@ if ($status !== 1) {
 
                 <?php
 if (!empty($request_mess)) {
+    $_SESSION['FROM_INTERN_REGISTRATION'] = true;
+
         echo '<script type="text/javascript">
                     sessionStorage.hng_reg = true
                     window.location.assign("reg-successful")

@@ -1,3 +1,13 @@
+<?php session_start();
+
+if(!$_SESSION['FROM_INTERN_REGISTRATION']){
+ header('location: join-intern');
+}else{
+    $_SESSION['FROM_INTERN_REGISTRATION'] = false;
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
