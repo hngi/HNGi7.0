@@ -476,7 +476,7 @@ function sendInternMail($email, $fullname, $body)
                <tr>
                 <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
 
-                 <p>For futher enquiry contact us with the link below and If you’re having trouble clicking the link above, copy and paste the URL below into your web browser. <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
+                 <p>For further enquiry contact us with the link below and If you’re having trouble clicking the link above, copy and paste the URL below into your web browser. <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
                 </td>
               </tr>
 
@@ -584,7 +584,7 @@ function  rejectInternMail($email, $fullname, $body)
                <tr>
                 <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
 
-                 <p>For futher enquiry contact us with the link below and If you’re having trouble clicking the link above, copy and paste the URL below into your web browser. <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
+                 <p>For further enquiry contact us with the link below and If you’re having trouble clicking the link above, copy and paste the URL below into your web browser. <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
                 </td>
               </tr>
 
@@ -691,7 +691,7 @@ function acceptInternMail($email, $fullname, $body)
                <tr>
                 <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
 
-                 <p>FOR futher enquiry contact us with the link below and If you’re having trouble clicking the link above, copy and paste the URL below into your web browser. <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
+                 <p>FOR further enquiry contact us with the link below and If you’re having trouble clicking the link above, copy and paste the URL below into your web browser. <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
                 </td>
               </tr>
 
@@ -802,7 +802,7 @@ function   rejectMentorMail($body, $fullname, $email)
                <tr>
                 <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
 
-                 <p>FOR futher enquiry contact us with the link below and If you’re having trouble clicking the link above, copy and paste the URL below into your web browser. <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
+                 <p>FOR further enquiry contact us with the link below and If you’re having trouble clicking the link above, copy and paste the URL below into your web browser. <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
                 </td>
               </tr>
 
@@ -914,7 +914,7 @@ function   acceptMentorMail($body, $fullname, $email)
                <tr>
                 <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
 
-                 <p>FOR futher enquiry contact us with the link below and If you’re having trouble clicking the link above, copy and paste the URL below into your web browser. <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
+                 <p>FOR further enquiry contact us with the link below and If you’re having trouble clicking the link above, copy and paste the URL below into your web browser. <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
                 </td>
               </tr>
               <tr>
@@ -1021,7 +1021,7 @@ function mailMentor($email, $name)
                 <tr>
                   <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
 
-                    <p>For futher enquiries click the link below and If you’re having trouble clicking the link above, copy and paste the URL below into your web browser. <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
+                    <p>For further enquiries click the link below and If you’re having trouble clicking the link above, copy and paste the URL below into your web browser. <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
                   </td>
                 </tr>
                 <tr>
@@ -1133,7 +1133,7 @@ function   certificatereadyMail($email, $fullname, $body)
                <tr>
                 <td style='padding: 20px 0 30px 0; color: #153643; font-family: Arial, sans-serif; font-size: 16px; line-height: 20px;'>
 
-                 <p>FOR futher enquiry contact us with the link below and If you’re having trouble clicking the link above, copy and paste the URL below into your web browser. <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
+                 <p>FOR further enquiry contact us with the link below and If you’re having trouble clicking the link above, copy and paste the URL below into your web browser. <a href='http://hngi7.hng.tech/contactform.php'> Contact support</a> if you have questions.</p>
                 </td>
               </tr>
               <tr>
