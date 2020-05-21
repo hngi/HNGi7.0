@@ -245,8 +245,9 @@ if (!empty($request_mess)) {
                 </select>
 
                 <!-- Brief Descriotion -->
+                <!-- maxlength = 300 meaans 300 characters not words -->
                 <textarea name="about" id="about" maxlength="300" required cols="30" rows="2"
-                    placeholder="Briefly tell us about yourself (not more than 100 words)"></textarea>
+                    placeholder="Briefly tell us about yourself (not more than 90 words)"></textarea>
                 <input type='hidden' name='date' id="date" value='<?=date('Y-m-d H:i:s');?>'>
                 <p id="result"></p>
 
