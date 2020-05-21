@@ -146,22 +146,19 @@ if (!empty($request_mess)) {
 
                 <!-- Country -->
                 <div class='text-danger ' style="width:100%; text-align:center" id="invalidCountry"></div>
-                <input type="text" placeholder="Select Country" oninput="openState(event), validateCountry(event)"
-                    list="country" name="country" id="countrySelect" required>
+
                 <!-- Country Data list -->
-                <datalist id="country" required>
+                <select id="country" name="country" id="countrySelect" onchange="openState(event)" required>
                     <option value="">What country are you currently located?</option>
                     <!-- <option value="">Nigeria</option> -->
                     <!-- List is gotten from the api call -->
-                </datalist>
+                </select>
 
                 <!-- State, Optional -->
-                <input type="text" style="display: none;" class="state" name="location" list="state"
-                    placeholder="Select your current state" />
 
                 <!-- State Data list -->
-                <datalist id="state" required>
-                    <!-- <option value="">What state are you currently located? </option> -->
+                <select id="state" class="state" name="location" style="display: none;" value="">
+                    <option value="">What state are you currently located? </option>
                     <option value="FCT">FCT</option>
                     <option value="Abia">Abia</option>
                     <option value="Adamawa">Adamawa</option>
@@ -200,10 +197,11 @@ if (!empty($request_mess)) {
                     <option value="Taraba">Taraba</option>
                     <option value="Yobe">Yobe</option>
                     <option value="Zamfara">Zamfara</option>
-                </datalist>
+                </select>
 
                 <!-- Interest -->
-                <select class="interest" value="" name="interest" aria-placeholder="What is your main interest?">
+                <select class="interest" value="" name="interest" aria-placeholder="What is your main interest?"
+                    required>
                     <option value="">Select Interested Track</option>
                     <option value="Backend">Backend</option>
                     <!-- <option value="Digital Marketing">Digital Marketing</option> -->
@@ -214,8 +212,8 @@ if (!empty($request_mess)) {
                 </select>
 
                 <!-- Professional Status -->
-                <select name="professional_status" id="" value="">
-                    <option value="new_bie">Select Professional Status on Interested Track</option>
+                <select name="professional_status" id="" value="" required>
+                    <option value="">Select Professional Status on Interested Track</option>
                     <option value="new_bie">Beginner</option>
                     <option value="junior_dev">Junior</option>
                     <option value="intermediate_dev">Intermediate</option>
@@ -223,15 +221,17 @@ if (!empty($request_mess)) {
                 </select>
 
                 <!-- Employment Status -->
-                <input type="text" list="empStatus" name="empStatus" placeholder="What is your Employment Status?">
-                <datalist id="empStatus" class="empStatus" required>
+                <!-- <input type="text" list="empStatus" name="empStatus" placeholder="What is your Employment Status?"
+                    required> -->
+                <select id="empStatus" name="empStatus" class="empStatus" required>
+                    <option value="">What is your Employment Status?</option>
                     <option value="Recently Employed (3 months or less)">Recently Employed (3 months or less)</option>
                     <option value="Employed">Employed</option>
                     <option value="Self-employed">Self-employed</option>
                     <option value="Freelance">Freelance</option>
                     <option value="Unemployed">Unemployed</option>
                     <option value="student">Student</option>
-                </datalist>
+                </select>
 
                 <!-- Current income Amount -->
                 <select name="income_amount" id="" value="lt500" required>
@@ -245,7 +245,7 @@ if (!empty($request_mess)) {
                 </select>
 
                 <!-- Brief Descriotion -->
-                <textarea name="about" id="about" maxlength="90" required cols="30" rows="2"
+                <textarea name="about" id="about" maxlength="300" required cols="30" rows="2"
                     placeholder="Briefly tell us about yourself (not more than 100 words)"></textarea>
                 <input type='hidden' name='date' id="date" value='<?=date('Y-m-d H:i:s');?>'>
                 <p id="result"></p>
@@ -283,7 +283,7 @@ if (!empty($request_mess)) {
             data.map(country => {
                 if (country && country.name) {
                     const option_ = document.createElement("option")
-                    const optionText = document.createTextNode(country.alpha3Code)
+                    const optionText = document.createTextNode(country.name)
                     option_.appendChild(optionText)
                     option_.setAttribute("value", country.name)
                     countrySelect.append(option_)
@@ -303,6 +303,8 @@ if (!empty($request_mess)) {
             stateSelect.value = ''
         }
     }
+
+
 
     // validate country selected by the user; makes sure country is in the list; disables button if country is not in the list
     function validateCountry(e) {
