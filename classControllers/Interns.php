@@ -35,6 +35,9 @@ class Intern
         $gender = $database->escape_string($_POST['gender']);
         $incomeAmount = $database->escape_string($_POST['income_amount']);
 
+        if( !isset ($location) || $location == "" || $location == NULL ){
+            $location = "not Nigerian";
+        }
    
         $query = "INSERT INTO interns (`name`, `email`, `phone_no`, `link_to_cv`, `interest`, `country`, `current_location`, `employment_status`, `about`, `timestamp`,`empStatus`,`professionalStatus`,`gender`,`incomeAmount`)
         VALUES('$fullname', '$email', '$phoneNo', '$linkCV', '$interest', '$country', '$location', '$empStatus', '$about', '$date', '$empStatus', '$professionalStatus', '$gender', '$incomeAmount' )";
