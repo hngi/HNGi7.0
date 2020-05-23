@@ -150,7 +150,75 @@ if (!empty($request_mess)) {
                 <!-- Country Data list -->
                 <select id="country" name="country" id="countrySelect" onchange="openState(event)" required>
                     <option value="">What country are you currently located?</option>
-                    <!-- <option value="">Nigeria</option> -->
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="Algeria">Algeria</option>
+                    <option value="Angola">Angola</option>
+                    <option value="Cameroon">Cameroon</option>
+                    <option value="Chad">Chad</option>
+                    <option value="China">China</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Congo">Congo</option>
+                    <option value="Czech Republic">Czech Republic</option>
+                    <option value="Egypt">Egypt</option>
+                    <option value="Ethiopia">Ethiopia</option>
+                    <option value="Gambia">Gambia</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Ghana">Ghana</option>
+                    <option value="Greece">Greece</option>
+                    <option value="India">India</option>
+                    <option value="Israel">Israel</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Kenya">Kenya</option>
+                    <option value="Kuwait">Kuwait</option>
+                    <option value="Lithuania">Lithuania</option>
+                    <option value="Madagascar">Madagascar</option>
+                    <option value="Malawi">Malawi</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Mali">Mali</option>
+                    <option value="Malta">Malta</option>
+                    <option value="Mauritania">Mauritania</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Morocco">Morocco</option>
+                    <option value="Mozambique">Mozambique</option>
+                    <option value="Namibia">Namibia</option>
+                    <option value="Netherlands">Netherlands</option>
+                    <option value="Niger">Niger</option>
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="Korea">Korea</option>
+                    <option value="Norway">Norway</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Qatar">Qatar</option>
+                    <option value="Romania">Romania</option>
+                    <option value="Rwanda">Rwanda</option>
+                    <option value="Senegal">Senegal</option>
+                    <option value="Serbia">Serbia</option>
+                    <option value="Seychelles">Seychelles</option>
+                    <option value="Sierra Leone">Sierra Leone</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Slovakia">Slovakia</option>
+                    <option value="Slovenia">Slovenia</option>
+                    <option value="South Africa">South Africa</option>
+                    <option value="South Sudan">South Sudan</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="Tanzania">Tanzania</option>
+                    <option value="Thailand">Thailand</option>
+                    <option value="Togo">Togo</option>
+                    <option value="Tunisia">Tunisia</option>
+                    <option value="Turkey">Turkey</option>
+                    <option value="Uganda">Uganda</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="UAE">United Arab Emirates</option>
+                    <option value="USA">United States of America</option>
+                    <option value="Uruguay">Uruguay</option>
+                    <option value="Venezuela">Venezuela</option>
+                    <option value="Yemen">Yemen</option>
+                    <option value="Zambia">Zambia</option>
+                    <option value="Zealand">Zealand</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
                     <!-- List is gotten from the api call -->
                 </select>
 
@@ -277,11 +345,12 @@ if (!empty($request_mess)) {
     let stateSelect = document.querySelector(".state");
     const url = 'https://restcountries.eu/rest/v2/all';
     let countries = []
-    fetch(url).
+/*    fetch(url).
         then(res => res.json())
         .then(data => {
             countries = data
             data.map(country => {
+                console.log(country.name)
                 if (country && country.name) {
                     const option_ = document.createElement("option")
                     const optionText = document.createTextNode(country.name)
@@ -290,10 +359,10 @@ if (!empty($request_mess)) {
                     countrySelect.append(option_)
                 }
             })
-            console.log(countrySelect)
+            // console.log(countries)
 
         })
-
+*/
     function openState(e) {
         if (e.target.value === "Nigeria") {
             stateSelect.style.display = 'block';
