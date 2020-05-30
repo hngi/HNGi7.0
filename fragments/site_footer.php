@@ -8,7 +8,7 @@
             <div class="col-md-3 pb-3">
                 <h2 class="skyblue-text">Quick Links</h2>
                 <div id="link-list">
-                    <a href="join-intern" class="skyblue-text">Join HNG</a>
+                    <!-- <a href="join-intern" class="skyblue-text">Join HNG</a> -->
                     <a href="about" class="skyblue-text">About HNG</a>
                     <a href="donate" class="skyblue-text">Donate to HNG</a>
                     <!-- <a href="mentor-registration" class="skyblue-text">Sign up as Mentor</a> -->

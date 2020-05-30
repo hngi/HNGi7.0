@@ -112,7 +112,7 @@ if (strpos($errMsg, 'join-intern.php?failed') !== false) {
 ?>
 
             <?php
-if ($status !== 1) {
+if ($status == 1 && false) {
     ?>
             <form class="form-container" action="" method="post" id="myForm">
 
@@ -328,7 +328,8 @@ if (!empty($request_mess)) {
 } else {
     ?>
             <div style="width: 100%; margin: 0 auto; text-align: center; padding: 30px; color: #6F0503; ">
-                <h1>Registration will commence soon! Check back.</h1>
+                <h1>Registration has closed.</h1>
+                <p>HNGi7 is currently running. <a href="welcome">Join the workspace</a></p>
             </div>
             <?php
 }
@@ -345,24 +346,24 @@ if (!empty($request_mess)) {
     let stateSelect = document.querySelector(".state");
     const url = 'https://restcountries.eu/rest/v2/all';
     let countries = []
-/*    fetch(url).
-        then(res => res.json())
-        .then(data => {
-            countries = data
-            data.map(country => {
-                console.log(country.name)
-                if (country && country.name) {
-                    const option_ = document.createElement("option")
-                    const optionText = document.createTextNode(country.name)
-                    option_.appendChild(optionText)
-                    option_.setAttribute("value", country.name)
-                    countrySelect.append(option_)
-                }
+    /*    fetch(url).
+            then(res => res.json())
+            .then(data => {
+                countries = data
+                data.map(country => {
+                    console.log(country.name)
+                    if (country && country.name) {
+                        const option_ = document.createElement("option")
+                        const optionText = document.createTextNode(country.name)
+                        option_.appendChild(optionText)
+                        option_.setAttribute("value", country.name)
+                        countrySelect.append(option_)
+                    }
+                })
+                // console.log(countries)
+    
             })
-            // console.log(countries)
-
-        })
-*/
+    */
     function openState(e) {
         if (e.target.value === "Nigeria") {
             stateSelect.style.display = 'block';
