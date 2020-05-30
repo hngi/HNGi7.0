@@ -2,8 +2,6 @@
 class Intern
 {
 
-
-
     public function emailExists($email)
     {
         global $database;
