@@ -54,7 +54,7 @@
 
 
             <div style="width: 100%; margin: 0 auto; text-align: center; padding: 30px; color: #6F0503; ">
-               To Join the workspace, <a href="https://clip.ng/H2uW" target="_blank">click here</a>.
+               To Join the workspace, <a href="https://clip.ng/XqEi" target="_blank">click here</a>.
             </div>
            
         
